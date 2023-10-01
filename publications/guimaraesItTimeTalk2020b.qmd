@@ -1,0 +1,43 @@
+---
+title: "Is it time to talk about the end of social distancing? A joinpoint analysis of COVID-19 time series in Brazilian capitals"
+author:
+  - Raphael Guimarães
+  - Monica Magalhães
+  - Diego Xavier
+  - Raphael Saldanha
+  - Rafael Catão
+date: 2020-09-21
+categories: 
+  - "SARS-CoV-2"
+  - "COVID-19"
+  - "Social Distance"
+  - "Time series"
+  - "Brazil"
+bibliography: publications.bib
+csl: abnt.csl
+---
+
+---
+nocite: |
+  @guimaraesItTimeTalk2020b
+---
+
+## Reference
+
+::: {#refs}
+:::
+
+## Abstract
+
+### Introduction
+Monitoring coronavirus disease (COVID-19)-related infections and deaths in Brazil is controversial, with increasing pressure to ease social distance measures. However, no evidence of a sustained, widespread fall in cases exists. 
+
+### Methods
+We used segmented (joinpoint) regression analysis to describe the behavior of COVID-19 infections in Brazilian capital cities. 
+
+### Results
+All capitals showed an exponential or a near-exponential increase in cases through May. A decline in reported cases was subsequently noted in 20 cities but was only significant for 8 (29.6%) and was followed in two by a renewed increase. 
+
+### Conclusions
+Caution is warranted when considering the relaxation of restrictions.
+

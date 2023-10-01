@@ -1,0 +1,13 @@
+---
+title: "PMM"
+subtitle: "Projeto Mais Médicos."
+---
+
+![PMM main webpage.](images/pmm-1400.webp){fig-align="center"}
+
+"Projeto Mais Médicos" was the first project that I got involved with at Fiocruz, through the PCDaS initiative. I was in charge of developing a data dashboard and to coordinate a team with other research assistants.
+
+The project aimed to present data about a federal project called "Mais Médicos", where a public health policy encouraged MDs to work in less developed regions in Brazil and also contracted foreign MDs from Cuba and other countries to work on those regions.
+
+The project has been discontinued.
+

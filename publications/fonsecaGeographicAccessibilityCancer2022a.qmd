@@ -1,0 +1,52 @@
+---
+title: "Geographic accessibility to cancer treatment in Brazil: A network analysis"
+author:
+  - Bruna Fonseca
+  - Priscila Albuquerque
+  - Raphael Saldanha
+  - Fabio Zicker
+  
+date: 2022-03-01
+categories: 
+  - Health services access
+  - Cancer treatment
+  - Geographic accessibility
+  - Brazil
+  - Social network analysis
+bibliography: publications.bib
+csl: abnt.csl
+---
+
+---
+nocite: |
+  @fonsecaGeographicAccessibilityCancer2022a
+---
+
+## Reference
+
+::: {#refs}
+:::
+
+## Abstract
+
+### Background
+
+Geographic accessibility to healthcare services is a fundamental component in achieving universal health coverage, the central commitment of the Brazilian Unified Health System (SUS). For cancer patients, poor accessibility has been associated with inadequate treatment, worse prognosis, and poorer quality of life.
+
+### Methods
+
+We explored nationwide healthcare data from the SUS health information systems, and mapped the geographic accessibility to cancer treatment in two time-frames: 2009–2010 and 2017–2018. We applied social network analysis (SNA) to estimate the commuting route, flow, and distances travelled by cancer patients to undergo surgical, radiotherapy, and chemotherapy treatment.
+
+### Findings
+
+A total of 12,751,728 treatment procedures were analyzed. Overall, more than half of the patients (49·2 to 60·7%) needed to travel beyond their municipality of residence for treatment, a fact that did not change over time. Marked regional differences were observed, as patients living in the northern and midwestern regions of the country had to travel longer distances (weighted average of 296 to 870 km). Cancer care hubs and attraction poles were mostly identified in the southeast and northeast regions, with Barretos being the main hub for all types of treatment throughout time.
+
+### Interpretation
+
+Important regional disparities in the accessibility to cancer treatment in Brazil were revealed, suggesting the need to review the distribution of specialized care in the country. The data presented here contribute to ongoing research on improving access to cancer care and can provide reference to other countries, offering relevant data for oncological and healthcare service evaluation, monitoring, and strategic planning.
+
+### Funding
+
+This work was funded by the Oswaldo Cruz Foundation - Fiocruz (Inova - no. 8451635123 to BPF) and the National Council for Scientific and Technological Development - CNPq (no. 407060/2018–9 to BPF); Coordination for the Improvement of Higher Education Personnel – CAPES (scholarship to PCA, Finance Code 001); and Instituto Nacional de Ciência e Tecnologia de Inovação em Doenças de Populações Negligenciadas (INCT-IDPN).
+
+

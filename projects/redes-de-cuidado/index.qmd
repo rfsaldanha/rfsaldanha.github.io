@@ -1,0 +1,13 @@
+---
+title: "Redes de Cuidado"
+subtitle: "Cancer patients displacement and network analysis."
+---
+
+![Commuting networks of patients that received cancer treatment within SUS, from article http://dx.doi.org/10.1016/j.lana.2021.100153.](images/redescuidado-1400.webp){fig-align="center"}
+
+This project was a partnership with PCDaS and CDTS. The project studied the flow of cancer patients receiving treatment in Brazil between municipalities.
+
+I was in charge to handle the large datasets about hospitalizations and treatments and perform some network analysis.
+
+This work was supported by Inova Fiocruz and resulted in a published paper: http://dx.doi.org/10.1016/j.lana.2021.100153.
+

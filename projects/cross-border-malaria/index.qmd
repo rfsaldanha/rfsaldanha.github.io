@@ -1,0 +1,27 @@
+---
+title: "Cross-border malaria"
+subtitle: "In partnership with IRD."
+---
+
+![Cross-border malaria main webpage.](images/malaria-1400.webp){fig-align="center"}
+
+This was the second project that I got involved at Fiocruz with the Climate and Health Observatory. It was a project in partnership with the French IRD (Institute de Recherche pour le Développement).
+
+I was in charge to provide knowledge about the malaria databases in Brazil (SIVEP-Malária) and developing a data dashboard showing cross-border malaria transmission on the French Guiana and Brazil (Amapá) frontier. This was an especially difficult task considering that the dashboard needed to be present in English, French, and Portuguese. The dashboard was developed with R and Shiny technology.
+
+This project involved a whole month trip to Montpellier, France to engage with other team members and also a trip to Cayenne, the French Guiana capital to learn firsthand how data was collected and handled.
+
+This project resulted in two published papers: http://dx.doi.org/10.1186/s12879-020-05086-4 and http://dx.doi.org/10.2196/15409.
+
+This work was supported by a grant from Bill & Mellinda Gates Foundation.
+
+![IRD](images/montpellier3-1400-02.webp){fig-align="center"}
+
+![Maison de la Télédétection](images/montpellier2-1400-01.webp){fig-align="center"}
+
+![Project first sketches on board (Montpellier, France).](images/montpellier1-1400-01.webp){fig-align="center"}
+
+![Project presentation at Cayenne by Dr. Emmanuel Roux, coordinator.](images/cayenne2-1400-01.webp){fig-align="center"}
+
+![Some leisure time at Cayenne.](images/cayenne1-1400-01.webp){fig-align="center"}
+

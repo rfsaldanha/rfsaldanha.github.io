@@ -1,0 +1,40 @@
+---
+title: "Neonatal mortality rates in Brazilian municipalities: from 1996 to 2017"
+author:
+  - Lais Baroni
+  - Rebecca Sales
+  - Samella Sales
+  - Marcel Pedroso
+  - Jefferson Lima
+  - Igor Morais
+  - Lucas Carraro
+  - Raphael Saldanha
+  - Carlos Sousa
+  - Carlos Cardoso
+  - Balthazar Paixão
+  - Sérgio Cruz
+  - Eduardo Ogasawara
+  - Patricia Boccolini
+  - Cristiano Boccolini
+date: 2021-09-01
+categories: 
+  - Neonatal mortality rate
+  - Time series data
+  - Brazilian municipalities
+bibliography: publications.bib
+csl: abnt.csl
+---
+
+---
+nocite: |
+  @baroniNeonatalMortalityRates2021b
+---
+
+## Reference
+
+::: {#refs}
+:::
+
+## Abstract
+
+Neonatal mortality is a global public health problem, and the efforts to reduce child mortality is one of the goals of the 2030 Agenda for Sustainable Development, launched in 2015 by the United Nations. The availability of historical neonatal mortality rates (NMR) data in Brazilian municipalities is crucial to evaluate trends at local, regional and national level, identifying gaps and vulnerable territories. Therefore, the objective of this article is to offer an integrated dataset containing monthly data in a historical series from 1996 to 2017 with information on all births, neonatal deaths, and NMR (total, early and late components) enriched with information related to the municipality.

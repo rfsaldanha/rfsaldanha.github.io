@@ -1,0 +1,15 @@
+---
+title: "PNS"
+subtitle: "Pesquisa Nacional de Saúde."
+---
+
+![PNS main webpage.](images/pns-1400.webp){fig-align="center"}
+
+This project is a partnership between PCDaS and other researchers at Fiocruz and IBGE. The PNS is a national inquiry about the population health conditions with two editions: 2013 and 2019. Its results cover major aspects of populations' health and involve special techniques for complex samples.
+
+I oversee the team at PCDaS responsible to create reproducible code notebooks about sample expansion and developing and maintain a website with project documentation and a data dashboard.
+
+Project website address: https://www.pns.icict.fiocruz.br
+
+This work is supported by Brazilian Health Ministry.
+

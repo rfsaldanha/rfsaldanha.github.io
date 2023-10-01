@@ -1,0 +1,51 @@
+---
+title: "Increasing impact of COVID-19 on young adults: evidence from hospitalisations in Brazil"
+author:
+  - Raphael Guimarães
+  - Daniel Vilela
+  - Diego Xavier
+  - Raphael Saldanha
+  - Christovam Barcellos
+  - Carlos Freitas
+  - Margareth Portela
+  
+date: 2021-09-01
+categories: 
+  - "COVID-19"
+  - Age structure 
+  - Rejuvenation trend
+  - Brazil
+bibliography: publications.bib
+csl: abnt.csl
+---
+
+---
+nocite: |
+  @guimaraesIncreasingImpactCOVID192021b
+---
+
+## Reference
+
+::: {#refs}
+:::
+
+## Abstract
+
+### Objectives
+Concerns about the increasing impact of severe COVID-19 in younger individuals in Brazil came after a recent synchronised country-wide wave of cases in Brazil. This communication analyses how hospitalisations due to COVID-19 changed in the age groups 18–49 years and ≥70 years.
+
+###Study design
+Longitudinal study based on secondary data.
+
+### Methods
+Data from SIVEP-Gripe, a public and open-access database of Severe Acute Respiratory Illness records (including COVID-19 notifications), were used in this study. Statistical control charts examined changes in the magnitude and variation of younger (18–49 years) and older (≥70 years) adults who were hospitalised between 15th March 2020 and 19th June 2021.
+
+### Results
+During the few first weeks of the pandemic in Brazil, the number of COVID-19 hospitalisations increased in older adults but decreased in younger adults. Subsequently, hospitalisations reached statistical control zones in epidemiological weeks (EW) 19–48 of 2020 (EW 19-48/2020) and EW 03-05/2021 (18–49 y, mean = 26.1%; ≥70 y, mean = 32.8%). Between EW 49/2020 and EW 02/2021, the number of hospitalisations of younger adults dropped to levels below the lower control limit. In contrast, the number of hospitalisations of older adults surpassed the upper limit of the corresponding statistical control zones. However, from EW 06/2021, numbers of hospitalisations changed from statistical control zones, with hospitalisations of younger adults increasing and reaching 44.9% in EW 24/2021 and hospitalisations of older adults decreasing until EW 19/2021 (14.1%) and reaching 17.3% in EW 24/2021.
+
+### Conclusions
+An increasing number of COVID-19 hospitalisations were observed in younger adults from EW 06/2021. This could be a result of the successful vaccination programme in older adults, who were initially prioritised, and possibly an increased exposure to highly transmissible variants of COVID-19 in younger adults who had to go to work in the absence of social protection (i.e. government financial support). Potential consequences of COVID-19 hospitalisations in younger adults could include a reduced life expectancy of the population and an increased number of people unable to perform daily activities due to post-COVID-19 conditions.
+
+
+
+

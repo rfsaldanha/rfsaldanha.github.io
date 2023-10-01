@@ -1,0 +1,21 @@
+project:
+  type: website
+
+website:
+  title: "Raphael Saldanha"
+  navbar:
+    right:
+      - projects.qmd
+      - code.qmd
+      - publications.qmd
+      - cv.qmd
+      - blog.qmd
+
+format:
+  html:
+    theme:
+      - cosmo
+      - custom.scss
+
+editor: visual
+

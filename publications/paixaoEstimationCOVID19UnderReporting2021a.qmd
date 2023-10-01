@@ -1,0 +1,42 @@
+---
+title: "Estimation of COVID-19 Under-Reporting in the Brazilian States Through SARI"
+author:
+  - Balthazar Paixão
+  - Lais Baroni
+  - Marcel Pedroso
+  - Rebecca Sales
+  - Luciana Escobar
+  - Carlos Sousa
+  - Raphael Saldanha
+  - Jorge Soares
+  - Rafaelli Coutinho
+  - Fabio Porto
+  - Eduardo Ogasawara
+  
+date: 2021-11-01
+categories: 
+  - "COVID-19"
+  - Under-reporting
+  - SARI
+  - Time series modeling
+  - Data analytics
+bibliography: publications.bib
+csl: abnt.csl
+---
+
+---
+nocite: |
+  @paixaoEstimationCOVID19UnderReporting2021a
+---
+
+## Reference
+
+::: {#refs}
+:::
+
+## Abstract
+
+Due to its impact, COVID-19 has been stressing the academy to search for curing, mitigating, or controlling it. It is believed that under-reporting is a relevant factor in determining the actual mortality rate and, if not considered, can cause significant misinformation. Therefore, this work aims to estimate the under-reporting of cases and deaths of COVID-19 in Brazilian states using data from the InfoGripe. InfoGripe targets notifications of Severe Acute Respiratory Infection (SARI). The methodology is based on the combination of data analytics (event detection methods) and time series modeling (inertia and novelty concepts) over hospitalized SARI cases. The estimate of real cases of the disease, called novelty, is calculated by comparing the difference in SARI cases in 2020 (after COVID-19) with the total expected cases in recent years (2016–2019). The expected cases are derived from a seasonal exponential moving average. The results show that under-reporting rates vary significantly between states and that there are no general patterns for states in the same region in Brazil. The states of Minas Gerais and Mato Grosso have the highest rates of under-reporting of cases. The rate of under-reporting of deaths is high in the Rio Grande do Sul and the Minas Gerais. This work can be highlighted for the combination of data analytics and time series modeling. Our calculation of under-reporting rates based on SARI is conservative and better characterized by deaths than for cases.
+
+
+

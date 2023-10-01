@@ -1,0 +1,16 @@
+---
+title: "Onde estão nossas doenças?"
+subtitle: "Museum exhibition."
+---
+
+![Exhibition visitors using the interactive map.](images/cavalarica2-1400.webp){fig-align="center"}
+
+This was a very special project, where we were invited to develop a museum exhibition at Fiocruz. On this set, we present to the visitors the relationship between health and space by using interactive maps in a wide display and also with printed and tactile special maps for visually impaired visitors.
+
+The exhibition is permanent and located at the Fiocruz Maré Campus.
+
+The interactive map can also be accessed here: https://rfsaldanha.github.io/app_cavalarica/
+
+![Tactile map for visually impaired visitors.](images/cavalarica3-1400.webp){fig-align="center"}
+
+![Fiocruz president, Dra. Nisia Trindade, contemplating the exhibition.](images/cavalarica1-1400.webp){fig-align="center"}

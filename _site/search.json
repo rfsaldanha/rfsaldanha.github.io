@@ -1,0 +1,478 @@
+[
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Post With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nSep 30, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nSep 27, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nSubset modelling: A domain partitioning strategy for data-efficient machine-learning\n\n\n\n\n\n\n\nmachine learning\n\n\n\n\n\n\n\n\n\n\n\nSep 25, 2023\n\n\nVitor Ribeiro, Eduardo Pena, Raphael Saldanha, Reza Akbarinia, Patrick Valduriez, Falaah Khan, Julia Stoyanovich, Fabio Porto\n\n\n\n\n\n\n  \n\n\n\n\nBook review: A pesquisa científica na era do Big data: cinco maneiras que mostram como o Big data prejudica a ciência, e como podemos salvá-la\n\n\n\n\n\n\n\nBook Review\n\n\n\n\n\n\n\n\n\n\n\nSep 30, 2022\n\n\nRaphael Saldanha\n\n\n\n\n\n\n  \n\n\n\n\nTemporal and spatial distribution trends of polio vaccine coverage in children in Brazil, 2011-2021\n\n\n\n\n\n\n\nPoliovirus Vaccines\n\n\nEcological studies\n\n\nSpatial analysis\n\n\nImmunization Programs\n\n\nImmunization Schedule\n\n\n\n\n\n\n\n\n\n\n\nAug 29, 2022\n\n\nTércia Silva, Ana Carolina de Sá, Elton Prates, Raphael Saldanha, Thales Silva, Antonia Teixeira, Mark Beinner, Suelen Oliveira, Anonio de Sá, Fernanda Matozinhos, Ed Vieira\n\n\n\n\n\n\n  \n\n\n\n\nComparison of sampling designs from the two editions of the Brazilian National Health Survey, 2013 and 2019\n\n\n\n\n\n\n\nhealth surveys\n\n\nsampling studies\n\n\nepidemiologic research design\n\n\n\n\n\n\n\n\n\n\n\nJul 13, 2022\n\n\nPaulo Souza Júnior, Celia Szwarcwald, Wanessa Almeida, Giseli Damacena, Marcel Pedroso, Carlos Sousa, Igor Morais, Raphael Saldanha, Jefferson Lima, Sheila Stopa\n\n\n\n\n\n\n  \n\n\n\n\nHow to overcome the stagnation of the first dose vaccine coverage curve against coronavirus disease 2019 in Brazil?\n\n\n\n\n\n\n\nVaccination\n\n\nCOVID-19\n\n\nSpatial analysis\n\n\nHealth management\n\n\nCoronavirus infections\n\n\nTime series analysis\n\n\n\n\n\n\n\n\n\n\n\nJun 6, 2022\n\n\nRaphael Guimarães, Diego Xavier, Raphael Saldanha, Monica Magalhães\n\n\n\n\n\n\n  \n\n\n\n\nGeographic accessibility to cancer treatment in Brazil: A network analysis\n\n\n\n\n\n\n\nHealth services access\n\n\nCancer treatment\n\n\nGeographic accessibility\n\n\nBrazil\n\n\nSocial network analysis\n\n\n\n\n\n\n\n\n\n\n\nMar 1, 2022\n\n\nBruna Fonseca, Priscila Albuquerque, Raphael Saldanha, Fabio Zicker\n\n\n\n\n\n\n  \n\n\n\n\nCiência de dados e big data: o que isso significa para estudos populacionais e da saúde?\n\n\n\n\n\n\n\npublic health\n\n\ndemography\n\n\ndata science\n\n\nbig data\n\n\n\n\n\n\n\n\n\n\n\nNov 26, 2021\n\n\nRaphael Saldanha, Christovam Barcellos, Marcel Pedroso\n\n\n\n\n\n\n  \n\n\n\n\nEstimation of COVID-19 Under-Reporting in the Brazilian States Through SARI\n\n\n\n\n\n\n\nCOVID-19\n\n\nUnder-reporting\n\n\nSARI\n\n\nTime series modeling\n\n\nData analytics\n\n\n\n\n\n\n\n\n\n\n\nNov 1, 2021\n\n\nBalthazar Paixão, Lais Baroni, Marcel Pedroso, Rebecca Sales, Luciana Escobar, Carlos Sousa, Raphael Saldanha, Jorge Soares, Rafaelli Coutinho, Fabio Porto, Eduardo Ogasawara\n\n\n\n\n\n\n  \n\n\n\n\nIncreasing impact of COVID-19 on young adults: evidence from hospitalisations in Brazil\n\n\n\n\n\n\n\nCOVID-19\n\n\nAge structure\n\n\nRejuvenation trend\n\n\nBrazil\n\n\n\n\n\n\n\n\n\n\n\nSep 1, 2021\n\n\nRaphael Guimarães, Daniel Vilela, Diego Xavier, Raphael Saldanha, Christovam Barcellos, Carlos Freitas, Margareth Portela\n\n\n\n\n\n\n  \n\n\n\n\nNeonatal mortality rates in Brazilian municipalities: from 1996 to 2017\n\n\n\n\n\n\n\nNeonatal mortality rate\n\n\nTime series data\n\n\nBrazilian municipalities\n\n\n\n\n\n\n\n\n\n\n\nSep 1, 2021\n\n\nLais Baroni, Rebecca Sales, Samella Sales, Marcel Pedroso, Jefferson Lima, Igor Morais, Lucas Carraro, Raphael Saldanha, Carlos Sousa, Carlos Cardoso, Balthazar Paixão, Sérgio Cruz, Eduardo Ogasawara, Patricia Boccolini, Cristiano Boccolini\n\n\n\n\n\n\n  \n\n\n\n\nAdesão às medidas de restrição de contato físico e disseminação da COVID-19 no Brasil\n\n\n\n\n\n\n\nCOVID-19\n\n\nQuarentene\n\n\nPandemics\n\n\nEpidemiology\n\n\nBrazil\n\n\n\n\n\n\n\n\n\n\n\nNov 6, 2020\n\n\nCelia Szwarcwald, Paulo Souza Junior, Deborah Malta, Marilisa Barros, Raphael Saldanha, Giseli Damascena, Luiz Azevedo, Margareth Lima, Dalia Romero, Ísis Machado, Crizian Gomes, André Werneck, Danilo Silva, Renata Gracie, Maria Pina\n\n\n\n\n\n\n  \n\n\n\n\nIs it time to talk about the end of social distancing? A joinpoint analysis of COVID-19 time series in Brazilian capitals\n\n\n\n\n\n\n\nNeonatal mortality rate\n\n\nTime series data\n\n\nBrazilian municipalities\n\n\n\n\n\n\n\n\n\n\n\nSep 21, 2020\n\n\nRaphael Guimarães, Monica Magalhães, Diego Xavier, Raphael Saldanha, Rafael Catão\n\n\n\n\n\n\n  \n\n\n\n\nResurgence risk for malaria, and the characterization of a recent outbreak in an Amazonian border area between French Guiana and Brazil\n\n\n\n\n\n\n\nPlasmodium vivax\n\n\nAnopheles darlingi\n\n\nFrench Guiana\n\n\nBrazil\n\n\nTransnational\n\n\nOutbreak investigation\n\n\nIndigenous south Americans\n\n\nMalaria\n\n\nAmazonia\n\n\n\n\n\n\n\n\n\n\n\nMay 26, 2020\n\n\nEmilie Mosnier, Isabelle Dusfour, Guillaume Lacour, Raphael Saldanha, Amandine Guidez, Margaret Gomes, Alice Sanna, Yanouk Epelboin, Johana Restrepo, Damien Davy, Magalie Demar, Félix Djossou, Maylis Douine, Vanessa Ardillon, Mathieu Nacher, Lise Musset, Emmanuel Roux\n\n\n\n\n\n\n  \n\n\n\n\nFatores associados ao letramento funcional em saúde de mulheres atendidas pela Estratégia de Saúde da Família\n\n\n\n\n\n\n\nWoman\n\n\nHealth\n\n\nSocioeconomic factors\n\n\n\n\n\n\n\n\n\n\n\nApr 9, 2020\n\n\nAngélica Campos, Felipe Neves, Raphael Saldanha, Kristiane Duque, Maximiliano Guerra, Isabel Leite, Maria Teixeira\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Água & Saúde\n\n\nIn partneship with ANA.\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nHarmonize\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nRedes de Cuidado\n\n\nCancer patients displacement and network analysis.\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nOnde estão nossas doenças?\n\n\nMuseum exhibition.\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nCross-border malaria\n\n\nIn partnership with IRD.\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nPNS\n\n\nPesquisa Nacional de Saúde.\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nArboAlvo\n\n\nStratifying arboviruses risk.\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nMauro\n\n\na Metadata Automatic Retrieval system for Updated References and cited Objects from Scielo.\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nCidade & Saúde\n\n\nAccessible health information about Brazilian municipalities.\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nMonitoraCovid-19\n\n\nCovid-19 monitoring.\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nPMM\n\n\nProjeto Mais Médicos.\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nOuvSUS\n\n\nOuvidoria do SUS.\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/pmm/index.html",
+    "href": "projects/pmm/index.html",
+    "title": "PMM",
+    "section": "",
+    "text": "PMM main webpage.\n\n\n“Projeto Mais Médicos” was the first project that I got involved with at Fiocruz, through the PCDaS initiative. I was in charge of developing a data dashboard and to coordinate a team with other research assistants.\nThe project aimed to present data about a federal project called “Mais Médicos”, where a public health policy encouraged MDs to work in less developed regions in Brazil and also contracted foreign MDs from Cuba and other countries to work on those regions.\nThe project has been discontinued."
+  },
+  {
+    "objectID": "projects/cidade-e-saude/index.html",
+    "href": "projects/cidade-e-saude/index.html",
+    "title": "Cidade & Saúde",
+    "section": "",
+    "text": "Cidade & Saúde main webpage.\n\n\n“Cidade & Saúde” is a self-funded Project that I started just after my master’s and before my Ph.D.\nThe project objective is to collect and aggregate health data at the municipality level and provide simple and visually compelling access with satellite images and graphs. The user is asked to type a city name and the system presents a webpage with the satellite image of that city and several socio-demographic and health information with graphs.\nThe satellite image is used to put the socio-demographic and health data in context, with graphs and indicators definitions covering demographic aspects, mortality, hospital admissions, health units, and health budget.\nThe project website is accessible by this address: https://cidadesaude.io. The project data is out of date, and waiting for financing."
+  },
+  {
+    "objectID": "projects/arboalvo/index.html",
+    "href": "projects/arboalvo/index.html",
+    "title": "ArboAlvo",
+    "section": "",
+    "text": "ArboAlvo dashboard.\n\n\nConducted at the Instituto Oswaldo Cruz (IOC), the project ArboAlvo’s objective is to stratify arboviruses risk into national and intra-municipal levels, considering epidemiolocal, entomological, and socio-demographic dimensions.\nI participated in this project by creating, reviewing, and optimizing code in the project data analysis, and developing data dashboards.\n\n\n\nArboAlvo dashboard running on Natal local server.\n\n\n\n\n\nWith the Natal IT team, August 8, 2022."
+  },
+  {
+    "objectID": "projects/cross-border-malaria/index.html",
+    "href": "projects/cross-border-malaria/index.html",
+    "title": "Cross-border malaria",
+    "section": "",
+    "text": "Cross-border malaria main webpage.\n\n\nThis was the second project that I got involved at Fiocruz with the Climate and Health Observatory. It was a project in partnership with the French IRD (Institute de Recherche pour le Développement).\nI was in charge to provide knowledge about the malaria databases in Brazil (SIVEP-Malária) and developing a data dashboard showing cross-border malaria transmission on the French Guiana and Brazil (Amapá) frontier. This was an especially difficult task considering that the dashboard needed to be present in English, French, and Portuguese. The dashboard was developed with R and Shiny technology.\nThis project involved a whole month trip to Montpellier, France to engage with other team members and also a trip to Cayenne, the French Guiana capital to learn firsthand how data was collected and handled.\nThis project resulted in two published papers: http://dx.doi.org/10.1186/s12879-020-05086-4 and http://dx.doi.org/10.2196/15409.\nThis work was supported by a grant from Bill & Mellinda Gates Foundation.\n\n\n\nIRD\n\n\n\n\n\nMaison de la Télédétection\n\n\n\n\n\nProject first sketches on board (Montpellier, France).\n\n\n\n\n\nProject presentation at Cayenne by Dr. Emmanuel Roux, coordinator.\n\n\n\n\n\nSome leisure time at Cayenne."
+  },
+  {
+    "objectID": "projects/redes-de-cuidado/index.html",
+    "href": "projects/redes-de-cuidado/index.html",
+    "title": "Redes de Cuidado",
+    "section": "",
+    "text": "Commuting networks of patients that received cancer treatment within SUS, from article http://dx.doi.org/10.1016/j.lana.2021.100153.\n\n\nThis project was a partnership with PCDaS and CDTS. The project studied the flow of cancer patients receiving treatment in Brazil between municipalities.\nI was in charge to handle the large datasets about hospitalizations and treatments and perform some network analysis.\nThis work was supported by Inova Fiocruz and resulted in a published paper: http://dx.doi.org/10.1016/j.lana.2021.100153."
+  },
+  {
+    "objectID": "projects/agua-saude/index.html",
+    "href": "projects/agua-saude/index.html",
+    "title": "Água & Saúde",
+    "section": "",
+    "text": "Água & Saúde main webpage.\n\n\nÁgua & Saúde was the first project that I got involved at Fiocruz with the Climate and Health Observatory. It was a project in partnership with ANA (Agência Nacional das Águas).\nI was in charge to create a database of health and water indicators and a data dashboard. The project was fully developed with R, Shiny, and SQLite technologies.\nThe project has been discontinued."
+  },
+  {
+    "objectID": "publications/szwarcwaldAdesaoMedidasRestricao2020a.html",
+    "href": "publications/szwarcwaldAdesaoMedidasRestricao2020a.html",
+    "title": "Adesão às medidas de restrição de contato físico e disseminação da COVID-19 no Brasil",
+    "section": "",
+    "text": "SZWARCWALD, C. L. et al. Adesão às medidas de restrição de contato físico e disseminação da COVID-19 no Brasil. Epidemiologia e Serviços de Saúde, v. 29, p. e2020432, Nov. 2020."
+  },
+  {
+    "objectID": "publications/szwarcwaldAdesaoMedidasRestricao2020a.html#reference",
+    "href": "publications/szwarcwaldAdesaoMedidasRestricao2020a.html#reference",
+    "title": "Adesão às medidas de restrição de contato físico e disseminação da COVID-19 no Brasil",
+    "section": "",
+    "text": "SZWARCWALD, C. L. et al. Adesão às medidas de restrição de contato físico e disseminação da COVID-19 no Brasil. Epidemiologia e Serviços de Saúde, v. 29, p. e2020432, Nov. 2020."
+  },
+  {
+    "objectID": "publications/szwarcwaldAdesaoMedidasRestricao2020a.html#abstract",
+    "href": "publications/szwarcwaldAdesaoMedidasRestricao2020a.html#abstract",
+    "title": "Adesão às medidas de restrição de contato físico e disseminação da COVID-19 no Brasil",
+    "section": "Abstract",
+    "text": "Abstract\nObjetivo: Analisar a adesão da população às medidas de restrição de contato físico e disseminação da COVID-19 no Brasil. Métodos: Inquérito de saúde, realizado pela internet, com amostragem em cadeia, no período de 24 de abril a 24 de maio de 2020. A intensidade da adesão à restrição de contato físico foi analisada segundo características sociodemográficas, utilizando-se modelos de regressão logística para investigar associações com ‘Nenhuma/pouca adesão’. Resultados: Dos 45.161 participantes, 74,2% (73,8-74,6%) relataram intensa adesão às medidas. O grupo que não aderiu às medidas foi composto homens (31,7%), com idade de 30 a 49 anos (36,4%), baixa escolaridade (33,0%), trabalhando durante a pandemia (81,3%), residentes nas regiões Norte (28,1%) e Centro-Oeste (28,5%) do país. Houve importante redução das taxas de crescimento diário, de 45,4 para 5,0%. Conclusão: Grande parte da população brasileira aderiu às medidas de restrição de contato físico, o que, possivelmente, contribuiu para reduzir a disseminação da COVID-19."
+  },
+  {
+    "objectID": "publications/saldanhaCienciaDadosBig2021a.html",
+    "href": "publications/saldanhaCienciaDadosBig2021a.html",
+    "title": "Ciência de dados e big data: o que isso significa para estudos populacionais e da saúde?",
+    "section": "",
+    "text": "SALDANHA, R. DE F.; BARCELLOS, C.; PEDROSO, M. DE M. Ciência de dados e big data: o que isso significa para estudos populacionais e da saúde? Cadernos Saúde Coletiva, v. 29, p. 51–58, Nov. 2021."
+  },
+  {
+    "objectID": "publications/saldanhaCienciaDadosBig2021a.html#reference",
+    "href": "publications/saldanhaCienciaDadosBig2021a.html#reference",
+    "title": "Ciência de dados e big data: o que isso significa para estudos populacionais e da saúde?",
+    "section": "",
+    "text": "SALDANHA, R. DE F.; BARCELLOS, C.; PEDROSO, M. DE M. Ciência de dados e big data: o que isso significa para estudos populacionais e da saúde? Cadernos Saúde Coletiva, v. 29, p. 51–58, Nov. 2021."
+  },
+  {
+    "objectID": "publications/saldanhaCienciaDadosBig2021a.html#abstract",
+    "href": "publications/saldanhaCienciaDadosBig2021a.html#abstract",
+    "title": "Ciência de dados e big data: o que isso significa para estudos populacionais e da saúde?",
+    "section": "Abstract",
+    "text": "Abstract\n\nBackground\nThe term big data is no longer new in the academic environment and has become more common in scientific publications and research grants, leading to a profound revision of the way science is being made and taught.\n\n\nObjective\nTo reflect on the possible changes that data science can induce in population and health related studies\n\n\nMethod\nTo foster this debate, scientific articles selected from the big data field in health and demography were contrasted with books and other scientific productions.\n\n\nResults\nIt is argued that volume is not the most promising characteristic of big data for population and health related studies, but rather the complexity of data and the possibilities of integration with traditional studies by means of interdisciplinary teams.\n\n\nConclusion\nIn population and health related studies, the possibilities of integration between new and traditional methods are broad, and include new toolboxes for analysis, monitoring, prediction of events (cases) and health-disease processes in the population, and for the study of sociodemographic and environmental determinants."
+  },
+  {
+    "objectID": "publications/silvaTemporalSpatialDistribution2022.html",
+    "href": "publications/silvaTemporalSpatialDistribution2022.html",
+    "title": "Temporal and spatial distribution trends of polio vaccine coverage in children in Brazil, 2011-2021",
+    "section": "",
+    "text": "SILVA, T. M. R. D. et al. Temporal and spatial distribution trends of polio vaccine coverage in children in Brazil, 2011-2021. [s.l.] In Review, Aug. 2022. Acesso em: 30 sep. 2023."
+  },
+  {
+    "objectID": "publications/silvaTemporalSpatialDistribution2022.html#reference",
+    "href": "publications/silvaTemporalSpatialDistribution2022.html#reference",
+    "title": "Temporal and spatial distribution trends of polio vaccine coverage in children in Brazil, 2011-2021",
+    "section": "",
+    "text": "SILVA, T. M. R. D. et al. Temporal and spatial distribution trends of polio vaccine coverage in children in Brazil, 2011-2021. [s.l.] In Review, Aug. 2022. Acesso em: 30 sep. 2023."
+  },
+  {
+    "objectID": "publications/silvaTemporalSpatialDistribution2022.html#abstract",
+    "href": "publications/silvaTemporalSpatialDistribution2022.html#abstract",
+    "title": "Temporal and spatial distribution trends of polio vaccine coverage in children in Brazil, 2011-2021",
+    "section": "Abstract",
+    "text": "Abstract\nBackground: Low polio vaccine coverage can result in the spread of Poliovirus to areas free from viral circulation. This study analyzed the temporal trends and spatial distribution of polio vaccine coverage for children under five years of age in Brazil, between 2011 and 2021. Methods: This is an ecological, time-series study (2011 to 2021) with annual vaccine coverages against poliomyelitis, extracted from the Information System of the National Immunization Program from regions of the 27 Brazilian states. The percentage reductions in vaccination coverage in Brazil and in the Regions were calculated. Prais-Winsten regression models were used to analyze time series for the Regions and States, and spatial analysis identified the distribution of clusters (high-high; low-low; high-low and lowhigh) of vaccination coverages across Brazilian municipalities, using a 5% significance level. Results: From 2011 to 2021, the coverage of polio vaccines decreased by 46.1%. There was a progressive increase observed in clusters resulting in low vaccination coverages (136 low-low Brazilian municipalities in 2011 vs 614 in 2021), mostly reported in the North and Northeast regions of the country. There was a downward trend in vaccination coverages in 8 of the 27 States (p ≤ 0.05). Conclusions: The reduction in polio vaccine coverage, as observed in the North and Northeast regions of Brazil, may favor the spread of Poliovirus. Therefore, vaccination strategies should be prioritized for children residing in areas with sharp and recurrent declines in vaccination coverages, including travelers, migrants and refugees."
+  },
+  {
+    "objectID": "publications/fonsecaGeographicAccessibilityCancer2022a.html",
+    "href": "publications/fonsecaGeographicAccessibilityCancer2022a.html",
+    "title": "Geographic accessibility to cancer treatment in Brazil: A network analysis",
+    "section": "",
+    "text": "FONSECA, B. DE P. et al. Geographic accessibility to cancer treatment in Brazil: A network analysis. The Lancet Regional Health - Americas, v. 7, p. 100153, Mar. 2022."
+  },
+  {
+    "objectID": "publications/fonsecaGeographicAccessibilityCancer2022a.html#reference",
+    "href": "publications/fonsecaGeographicAccessibilityCancer2022a.html#reference",
+    "title": "Geographic accessibility to cancer treatment in Brazil: A network analysis",
+    "section": "",
+    "text": "FONSECA, B. DE P. et al. Geographic accessibility to cancer treatment in Brazil: A network analysis. The Lancet Regional Health - Americas, v. 7, p. 100153, Mar. 2022."
+  },
+  {
+    "objectID": "publications/fonsecaGeographicAccessibilityCancer2022a.html#abstract",
+    "href": "publications/fonsecaGeographicAccessibilityCancer2022a.html#abstract",
+    "title": "Geographic accessibility to cancer treatment in Brazil: A network analysis",
+    "section": "Abstract",
+    "text": "Abstract\n\nBackground\nGeographic accessibility to healthcare services is a fundamental component in achieving universal health coverage, the central commitment of the Brazilian Unified Health System (SUS). For cancer patients, poor accessibility has been associated with inadequate treatment, worse prognosis, and poorer quality of life.\n\n\nMethods\nWe explored nationwide healthcare data from the SUS health information systems, and mapped the geographic accessibility to cancer treatment in two time-frames: 2009–2010 and 2017–2018. We applied social network analysis (SNA) to estimate the commuting route, flow, and distances travelled by cancer patients to undergo surgical, radiotherapy, and chemotherapy treatment.\n\n\nFindings\nA total of 12,751,728 treatment procedures were analyzed. Overall, more than half of the patients (49·2 to 60·7%) needed to travel beyond their municipality of residence for treatment, a fact that did not change over time. Marked regional differences were observed, as patients living in the northern and midwestern regions of the country had to travel longer distances (weighted average of 296 to 870 km). Cancer care hubs and attraction poles were mostly identified in the southeast and northeast regions, with Barretos being the main hub for all types of treatment throughout time.\n\n\nInterpretation\nImportant regional disparities in the accessibility to cancer treatment in Brazil were revealed, suggesting the need to review the distribution of specialized care in the country. The data presented here contribute to ongoing research on improving access to cancer care and can provide reference to other countries, offering relevant data for oncological and healthcare service evaluation, monitoring, and strategic planning.\n\n\nFunding\nThis work was funded by the Oswaldo Cruz Foundation - Fiocruz (Inova - no. 8451635123 to BPF) and the National Council for Scientific and Technological Development - CNPq (no. 407060/2018–9 to BPF); Coordination for the Improvement of Higher Education Personnel – CAPES (scholarship to PCA, Finance Code 001); and Instituto Nacional de Ciência e Tecnologia de Inovação em Doenças de Populações Negligenciadas (INCT-IDPN)."
+  },
+  {
+    "objectID": "publications/guimaraesHowOvercomeStagnation2022a.html",
+    "href": "publications/guimaraesHowOvercomeStagnation2022a.html",
+    "title": "How to overcome the stagnation of the first dose vaccine coverage curve against coronavirus disease 2019 in Brazil?",
+    "section": "",
+    "text": "GUIMARÃES, R. M. et al. How to overcome the stagnation of the first dose vaccine coverage curve against coronavirus disease 2019 in Brazil? Revista da Sociedade Brasileira de Medicina Tropical, v. 55, p. e0722, Jun. 2022."
+  },
+  {
+    "objectID": "publications/guimaraesHowOvercomeStagnation2022a.html#reference",
+    "href": "publications/guimaraesHowOvercomeStagnation2022a.html#reference",
+    "title": "How to overcome the stagnation of the first dose vaccine coverage curve against coronavirus disease 2019 in Brazil?",
+    "section": "",
+    "text": "GUIMARÃES, R. M. et al. How to overcome the stagnation of the first dose vaccine coverage curve against coronavirus disease 2019 in Brazil? Revista da Sociedade Brasileira de Medicina Tropical, v. 55, p. e0722, Jun. 2022."
+  },
+  {
+    "objectID": "publications/guimaraesHowOvercomeStagnation2022a.html#abstract",
+    "href": "publications/guimaraesHowOvercomeStagnation2022a.html#abstract",
+    "title": "How to overcome the stagnation of the first dose vaccine coverage curve against coronavirus disease 2019 in Brazil?",
+    "section": "Abstract",
+    "text": "Abstract\nBackground: A large percentage of the population has not yet started vaccination, for which the increase in coverage is almost null. Methods: We used segmented regression analysis to estimate trends in the first dose coverage curve. Results: There has been a slowdown in the application of the first doses in Brazil since epidemiological week 36 (average percent change [APC] 0.83%, 95% confidence interval [CI] 0.75-0.91%), with a trend close to stagnation. Conclusions: It is important to develop strategies to increase access to vaccination posts. Furthermore, it is recommended to expand vaccination to children, thereby increasing the eligible population."
+  },
+  {
+    "objectID": "publications/souzajuniorComparisonSamplingDesigns2022b.html",
+    "href": "publications/souzajuniorComparisonSamplingDesigns2022b.html",
+    "title": "Comparison of sampling designs from the two editions of the Brazilian National Health Survey, 2013 and 2019",
+    "section": "",
+    "text": "SOUZA JÚNIOR, P. R. B. DE et al. Comparison of sampling designs from the two editions of the Brazilian National Health Survey, 2013 and 2019. Cadernos de Saúde Pública, v. 38, p. e00164321, Jul. 2022."
+  },
+  {
+    "objectID": "publications/souzajuniorComparisonSamplingDesigns2022b.html#reference",
+    "href": "publications/souzajuniorComparisonSamplingDesigns2022b.html#reference",
+    "title": "Comparison of sampling designs from the two editions of the Brazilian National Health Survey, 2013 and 2019",
+    "section": "",
+    "text": "SOUZA JÚNIOR, P. R. B. DE et al. Comparison of sampling designs from the two editions of the Brazilian National Health Survey, 2013 and 2019. Cadernos de Saúde Pública, v. 38, p. e00164321, Jul. 2022."
+  },
+  {
+    "objectID": "publications/souzajuniorComparisonSamplingDesigns2022b.html#abstract",
+    "href": "publications/souzajuniorComparisonSamplingDesigns2022b.html#abstract",
+    "title": "Comparison of sampling designs from the two editions of the Brazilian National Health Survey, 2013 and 2019",
+    "section": "Abstract",
+    "text": "Abstract\nOur objective is to describe the differences in the sampling plans of the two editions of the Brazilian National Health Survey (PNS 2013 and 2019) and to evaluate how the changes affected the coefficient of variation (CV) and the design effect (Deff) of some estimated indicators. Variables from different parts of the questionnaire were analyzed to cover proportions with different magnitudes. The prevalence of obesity was included in the analysis since anthropometry measurement in the 2019 survey was performed in a subsample. The value of the point estimate, CV, and the Deff were calculated for each indicator, considering the stratification of the primary sampling units, the weighting of the sampling units, and the clustering effect. The CV and the Deff were lower in the 2019 estimates for most indicators. Concerning the questionnaire indicators of all household members, the Deffs were high and reached values greater than 18 for having a health insurance plan. Regarding the indicators of the individual questionnaire, for the prevalence of obesity, the Deff ranged from 2.7 to 4.2, in 2013, and from 2.7 to 10.2, in 2019. The prevalence of hypertension and diabetes per Federative Unit had a higher CV and lower Deff. Expanding the sample size to meet the diverse health objectives and the high Deff are significant challenges for developing probabilistic household-based national survey. New probabilistic sampling strategies should be considered to reduce costs and clustering effects."
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "code.html#selected-repos",
+    "href": "code.html#selected-repos",
+    "title": "Code",
+    "section": "Selected repos",
+    "text": "Selected repos"
+  },
+  {
+    "objectID": "publications/paixaoEstimationCOVID19UnderReporting2021a.html",
+    "href": "publications/paixaoEstimationCOVID19UnderReporting2021a.html",
+    "title": "Estimation of COVID-19 Under-Reporting in the Brazilian States Through SARI",
+    "section": "",
+    "text": "PAIXÃO, B. et al. Estimation of COVID-19 Under-Reporting in the Brazilian States Through SARI. New Generation Computing, v. 39, n. 3, p. 623–645, Nov. 2021."
+  },
+  {
+    "objectID": "publications/paixaoEstimationCOVID19UnderReporting2021a.html#reference",
+    "href": "publications/paixaoEstimationCOVID19UnderReporting2021a.html#reference",
+    "title": "Estimation of COVID-19 Under-Reporting in the Brazilian States Through SARI",
+    "section": "",
+    "text": "PAIXÃO, B. et al. Estimation of COVID-19 Under-Reporting in the Brazilian States Through SARI. New Generation Computing, v. 39, n. 3, p. 623–645, Nov. 2021."
+  },
+  {
+    "objectID": "publications/paixaoEstimationCOVID19UnderReporting2021a.html#abstract",
+    "href": "publications/paixaoEstimationCOVID19UnderReporting2021a.html#abstract",
+    "title": "Estimation of COVID-19 Under-Reporting in the Brazilian States Through SARI",
+    "section": "Abstract",
+    "text": "Abstract\nDue to its impact, COVID-19 has been stressing the academy to search for curing, mitigating, or controlling it. It is believed that under-reporting is a relevant factor in determining the actual mortality rate and, if not considered, can cause significant misinformation. Therefore, this work aims to estimate the under-reporting of cases and deaths of COVID-19 in Brazilian states using data from the InfoGripe. InfoGripe targets notifications of Severe Acute Respiratory Infection (SARI). The methodology is based on the combination of data analytics (event detection methods) and time series modeling (inertia and novelty concepts) over hospitalized SARI cases. The estimate of real cases of the disease, called novelty, is calculated by comparing the difference in SARI cases in 2020 (after COVID-19) with the total expected cases in recent years (2016–2019). The expected cases are derived from a seasonal exponential moving average. The results show that under-reporting rates vary significantly between states and that there are no general patterns for states in the same region in Brazil. The states of Minas Gerais and Mato Grosso have the highest rates of under-reporting of cases. The rate of under-reporting of deaths is high in the Rio Grande do Sul and the Minas Gerais. This work can be highlighted for the combination of data analytics and time series modeling. Our calculation of under-reporting rates based on SARI is conservative and better characterized by deaths than for cases."
+  },
+  {
+    "objectID": "publications/mosnierResurgenceRiskMalaria2020a.html",
+    "href": "publications/mosnierResurgenceRiskMalaria2020a.html",
+    "title": "Resurgence risk for malaria, and the characterization of a recent outbreak in an Amazonian border area between French Guiana and Brazil",
+    "section": "",
+    "text": "MOSNIER, E. et al. Resurgence risk for malaria, and the characterization of a recent outbreak in an Amazonian border area between French Guiana and Brazil. BMC Infectious Diseases, v. 20, n. 1, p. 373, May 2020."
+  },
+  {
+    "objectID": "publications/mosnierResurgenceRiskMalaria2020a.html#reference",
+    "href": "publications/mosnierResurgenceRiskMalaria2020a.html#reference",
+    "title": "Resurgence risk for malaria, and the characterization of a recent outbreak in an Amazonian border area between French Guiana and Brazil",
+    "section": "",
+    "text": "MOSNIER, E. et al. Resurgence risk for malaria, and the characterization of a recent outbreak in an Amazonian border area between French Guiana and Brazil. BMC Infectious Diseases, v. 20, n. 1, p. 373, May 2020."
+  },
+  {
+    "objectID": "publications/mosnierResurgenceRiskMalaria2020a.html#abstract",
+    "href": "publications/mosnierResurgenceRiskMalaria2020a.html#abstract",
+    "title": "Resurgence risk for malaria, and the characterization of a recent outbreak in an Amazonian border area between French Guiana and Brazil",
+    "section": "Abstract",
+    "text": "Abstract\n\nBackground\nIn 2017, inhabitants along the border between French Guiana and Brazil were affected by a malaria outbreak primarily due to Plasmodium vivax (Pv). While malaria cases have steadily declined between 2005 and 2016 in this Amazonian region, a resurgence was observed in 2017.\n\n\nMethods\nTwo investigations were performed according to different spatial scales and information details: (1) a local study on the French Guiana border, which enabled a thorough investigation of malaria cases treated at a local village health center and the entomological circumstances in the most affected neighborhood, and (2) a regional and cross-border study, which enabled exploration of the regional spatiotemporal epidemic dynamic. Number and location of malaria cases were estimated using French and Brazilian surveillance systems.\n\n\nResults\nOn the French Guianese side of the border in Saint-Georges de l’Oyapock, the attack rate was 5.5% (n = 4000), reaching 51.4% (n = 175) in one Indigenous neighborhood. Entomological findings suggest a peak of Anopheles darlingi density in August and September. Two female An. darlingi (n = 1104, 0.18%) were found to be Pvpositive during this peak. During the same period, aggregated data from passive surveillance conducted by Brazilian and French Guianese border health centers identified 1566 cases of Pv infection. Temporal distribution during the 2007–2018 period displayed seasonal patterns with a peak in November 2017. Four clusters were identified among epidemic profiles of cross-border area localities. All localities of the first two clusters were Brazilian. The localization of the first cluster suggests an onset of the outbreak in an Indigenous reservation, subsequently expanding to French Indigenous neighborhoods and non-Native communities.\n\n\nConclusions\nThe current findings demonstrate a potential increase in malaria cases in an area with otherwise declining numbers. This is a transborder region where human mobility and remote populations challenge malaria control programs. This investigation illustrates the importance of international border surveillance and collaboration for malaria control, particularly in Indigenous villages and mobile populations."
+  },
+  {
+    "objectID": "publications/victor2023.html",
+    "href": "publications/victor2023.html",
+    "title": "Subset modelling: A domain partitioning strategy for data-efficient machine-learning",
+    "section": "",
+    "text": "RIBEIRO, V. et al. Subset modelling: A domain partitioning strategy for data-efficient machine-learning. Anais do XXXVIII simpósio brasileiro de bancos de dados. Anais...Porto Alegre, RS, Brasil: SBC, 2023."
+  },
+  {
+    "objectID": "publications/victor2023.html#reference",
+    "href": "publications/victor2023.html#reference",
+    "title": "Subset modelling: A domain partitioning strategy for data-efficient machine-learning",
+    "section": "",
+    "text": "RIBEIRO, V. et al. Subset modelling: A domain partitioning strategy for data-efficient machine-learning. Anais do XXXVIII simpósio brasileiro de bancos de dados. Anais...Porto Alegre, RS, Brasil: SBC, 2023."
+  },
+  {
+    "objectID": "publications/victor2023.html#abstract",
+    "href": "publications/victor2023.html#abstract",
+    "title": "Subset modelling: A domain partitioning strategy for data-efficient machine-learning",
+    "section": "Abstract",
+    "text": "Abstract\nThe success of machine learning (ML) systems depends on data availability, volume, quality, and efficient computing resources. A challenge in this context is to reduce computational costs while maintaining adequate accuracy of the models. This paper presents a framework to address this challenge. The idea is to identify “subdomains” within the input space, train local models that produce better predictions for samples from that specific subdomain, instead of training a single global model on the full dataset. We experimentally evaluate our approach on two real-world datasets. Our results indicate that subset modelling (i) improves the predictive performance compared to a single global model and (ii) allows data-efficient training."
+  },
+  {
+    "objectID": "publications/guimaraesIncreasingImpactCOVID192021b.html",
+    "href": "publications/guimaraesIncreasingImpactCOVID192021b.html",
+    "title": "Increasing impact of COVID-19 on young adults: evidence from hospitalisations in Brazil",
+    "section": "",
+    "text": "GUIMARÃES, R. et al. Increasing impact of COVID-19 on young adults: Evidence from hospitalisations in Brazil. Public Health, v. 198, p. 297–300, Sep. 2021."
+  },
+  {
+    "objectID": "publications/guimaraesIncreasingImpactCOVID192021b.html#reference",
+    "href": "publications/guimaraesIncreasingImpactCOVID192021b.html#reference",
+    "title": "Increasing impact of COVID-19 on young adults: evidence from hospitalisations in Brazil",
+    "section": "",
+    "text": "GUIMARÃES, R. et al. Increasing impact of COVID-19 on young adults: Evidence from hospitalisations in Brazil. Public Health, v. 198, p. 297–300, Sep. 2021."
+  },
+  {
+    "objectID": "publications/guimaraesIncreasingImpactCOVID192021b.html#abstract",
+    "href": "publications/guimaraesIncreasingImpactCOVID192021b.html#abstract",
+    "title": "Increasing impact of COVID-19 on young adults: evidence from hospitalisations in Brazil",
+    "section": "Abstract",
+    "text": "Abstract\n\nObjectives\nConcerns about the increasing impact of severe COVID-19 in younger individuals in Brazil came after a recent synchronised country-wide wave of cases in Brazil. This communication analyses how hospitalisations due to COVID-19 changed in the age groups 18–49 years and ≥70 years.\n###Study design Longitudinal study based on secondary data.\n\n\nMethods\nData from SIVEP-Gripe, a public and open-access database of Severe Acute Respiratory Illness records (including COVID-19 notifications), were used in this study. Statistical control charts examined changes in the magnitude and variation of younger (18–49 years) and older (≥70 years) adults who were hospitalised between 15th March 2020 and 19th June 2021.\n\n\nResults\nDuring the few first weeks of the pandemic in Brazil, the number of COVID-19 hospitalisations increased in older adults but decreased in younger adults. Subsequently, hospitalisations reached statistical control zones in epidemiological weeks (EW) 19–48 of 2020 (EW 19-48/2020) and EW 03-05/2021 (18–49 y, mean = 26.1%; ≥70 y, mean = 32.8%). Between EW 49/2020 and EW 02/2021, the number of hospitalisations of younger adults dropped to levels below the lower control limit. In contrast, the number of hospitalisations of older adults surpassed the upper limit of the corresponding statistical control zones. However, from EW 06/2021, numbers of hospitalisations changed from statistical control zones, with hospitalisations of younger adults increasing and reaching 44.9% in EW 24/2021 and hospitalisations of older adults decreasing until EW 19/2021 (14.1%) and reaching 17.3% in EW 24/2021.\n\n\nConclusions\nAn increasing number of COVID-19 hospitalisations were observed in younger adults from EW 06/2021. This could be a result of the successful vaccination programme in older adults, who were initially prioritised, and possibly an increased exposure to highly transmissible variants of COVID-19 in younger adults who had to go to work in the absence of social protection (i.e. government financial support). Potential consequences of COVID-19 hospitalisations in younger adults could include a reduced life expectancy of the population and an increased number of people unable to perform daily activities due to post-COVID-19 conditions."
+  },
+  {
+    "objectID": "publications/saldanhaPesquisaCientificaNa2022.html",
+    "href": "publications/saldanhaPesquisaCientificaNa2022.html",
+    "title": "Book review: A pesquisa científica na era do Big data: cinco maneiras que mostram como o Big data prejudica a ciência, e como podemos salvá-la",
+    "section": "",
+    "text": "SALDANHA, R. D. F. A pesquisa científica na era do Big data: cinco maneiras que mostram como o Big data prejudica a ciência, e como podemos salvá-la. Revista Eletrônica de Comunicação, Informação & Inovação em Saúde, v. 16, n. 3, p. 742–745, Sep. 2022."
+  },
+  {
+    "objectID": "publications/saldanhaPesquisaCientificaNa2022.html#reference",
+    "href": "publications/saldanhaPesquisaCientificaNa2022.html#reference",
+    "title": "Book review: A pesquisa científica na era do Big data: cinco maneiras que mostram como o Big data prejudica a ciência, e como podemos salvá-la",
+    "section": "",
+    "text": "SALDANHA, R. D. F. A pesquisa científica na era do Big data: cinco maneiras que mostram como o Big data prejudica a ciência, e como podemos salvá-la. Revista Eletrônica de Comunicação, Informação & Inovação em Saúde, v. 16, n. 3, p. 742–745, Sep. 2022."
+  },
+  {
+    "objectID": "publications/saldanhaPesquisaCientificaNa2022.html#abstract",
+    "href": "publications/saldanhaPesquisaCientificaNa2022.html#abstract",
+    "title": "Book review: A pesquisa científica na era do Big data: cinco maneiras que mostram como o Big data prejudica a ciência, e como podemos salvá-la",
+    "section": "Abstract",
+    "text": "Abstract\nThe book titled A pesquisa científica na era do Big Data: cinco maneiras que mostram como o Big Data prejudica a ciência, e como podemos salvá-la [The scientific research in the age of Big Data: five ways that show how the Big Data harms the science, and how we can save it], by Sabina Leonelli, published in 2002, by Editora Fiocruz, explores in its chapters the definitions of Big Data and its negative impacts on scientific research. Then, the author reveals a new epistemological approach to Big data and finally she presents a set of proposals for developing a good scientific research. The literature review and updating of definitions as well as the important reflections and questions for a conscious use of Big data in scientific research make the work an important contribution to the researcher’s library of the information and communication about health."
+  },
+  {
+    "objectID": "projects/harmonize/index.html",
+    "href": "projects/harmonize/index.html",
+    "title": "Harmonize",
+    "section": "",
+    "text": "Harmonizing multi-scale spatiotemporal data for health in climate change hotspots.\nHarmonize is a project in partnership with the Health and Climate Observatory and several international partners, including the Barcelona Supercomputing Center (BSC).\nThe project’s objective is to collect, organize and analyze multi-scale spatiotemporal data for health in climate hotspots.\nI am working on this project to provide expert knowledge on Brazilian health data collection and analysis.\nThis work is supported by the Wellcome Trust grant number 224694/Z/21/Z."
+  },
+  {
+    "objectID": "projects/onde-estao-nossas-doencas/index.html",
+    "href": "projects/onde-estao-nossas-doencas/index.html",
+    "title": "Onde estão nossas doenças?",
+    "section": "",
+    "text": "Exhibition visitors using the interactive map.\n\n\nThis was a very special project, where we were invited to develop a museum exhibition at Fiocruz. On this set, we present to the visitors the relationship between health and space by using interactive maps in a wide display and also with printed and tactile special maps for visually impaired visitors.\nThe exhibition is permanent and located at the Fiocruz Maré Campus.\nThe interactive map can also be accessed here: https://rfsaldanha.github.io/app_cavalarica/\n\n\n\nTactile map for visually impaired visitors.\n\n\n\n\n\nFiocruz president, Dra. Nisia Trindade, contemplating the exhibition."
+  },
+  {
+    "objectID": "projects/pns/index.html",
+    "href": "projects/pns/index.html",
+    "title": "PNS",
+    "section": "",
+    "text": "PNS main webpage.\n\n\nThis project is a partnership between PCDaS and other researchers at Fiocruz and IBGE. The PNS is a national inquiry about the population health conditions with two editions: 2013 and 2019. Its results cover major aspects of populations’ health and involve special techniques for complex samples.\nI oversee the team at PCDaS responsible to create reproducible code notebooks about sample expansion and developing and maintain a website with project documentation and a data dashboard.\nProject website address: https://www.pns.icict.fiocruz.br\nThis work is supported by Brazilian Health Ministry."
+  },
+  {
+    "objectID": "projects/mauro/index.html",
+    "href": "projects/mauro/index.html",
+    "title": "Mauro",
+    "section": "",
+    "text": "Mauro main webpage.\n\n\n“Mauro” was a research project that I initiated during my Ph.D. at Fiocruz, when I was taking some courses about technological information on health.\nThe objectives of the project were (1) to download and organize bibliometric information available at “Scielo” from the Public Health, and Brazil collections. (2) Provide a simple and intuitive way for researchers to access its data through filters and visualize information.\nThe ETL process and dashboard were developed with R and Shiny. The project is now deactivated."
+  },
+  {
+    "objectID": "projects/monitoracovid19/index.html",
+    "href": "projects/monitoracovid19/index.html",
+    "title": "MonitoraCovid-19",
+    "section": "",
+    "text": "MonitoraCovid-19 dashboard.\n\n\nMonitoraCovid-19 project is an institutional response from Fiocruz to the Covid-19 pandemic.\nThe project started in March 2020, when the first cases of Covid-19 occurred in Brazil. Since then, we monitored the pandemic daily, unifying more than 10 data sources into a unique data dashboard with several graphs and maps.\nI am responsible to the ETL process and data dashboard. The project website was accessed more than 700,000 times by more than 300,000 users worldwide.\nWe published 25 technical notes and 12 brief texts about the pandemic, along with papers and a book chapter.\nThis work was supported by the Fiocruz Inova and received the ENAP prize.\nThe dashboard address: https://bigdata-covid19.icict.fiocruz.br\nInterview at Fantástico (Rede Globo, May 2020): https://g1.globo.com/fantastico/noticia/2020/05/10/com-medidas-mais-rigorosas-paises-vizinhos-ao-brasil-dao-exemplo-no-combate-a-covid-19.ghtml\nTalk at ICICT Centro de Estudos, with Atila Iamarino and Diego Xavier (August 19, 2022): https://www.youtube.com/watch?v=GeyPs9yMzSk&t=3867s"
+  },
+  {
+    "objectID": "projects/ouvsus/index.html",
+    "href": "projects/ouvsus/index.html",
+    "title": "OuvSUS",
+    "section": "",
+    "text": "Manifestações dashboard.\n\n\nThis project is a partnership between PCDaS, Instituto Aggeu Magalhães – Fiocruz Pernambuco, and the Brazilian Ministry of Health ombudsman. The project aims to collect, organize and present data about population inquiries and information requisitions.\nI oversee the team at PCDaS responsible for the ETL (extraction, transform and load) process and data dashboard.\nThe project website address: https://www.gov.br/saude/pt-br/canais-de-atendimento/ouvidoria-do-sus/ouvidoria-em-numeros/paineis-de-dados\nThis work is supported by Brazilian Health Ministry."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Raphael Saldanha",
+    "section": "",
+    "text": "Postdoctoral researcher at Inria and LNCC, research assistant at Fiocruz.\nHealth geographer and health data scientist. Undergraduate in Geography, specialization in Statistics, master's in public health, and Ph.D. in Health Information.\nBrazilian from Nova Friburgo (RJ), lived for several years on Minas Gerais and Rio de Janeiro. Currently based on Montpellier, France.\nLoves to code and crunch huge health datasets with R."
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
+    "section": "",
+    "text": "Full name: Raphael de Freitas Saldanha\nDate of birth: April 18, 1985\nLanguages: Portuguese, English"
+  },
+  {
+    "objectID": "cv.html#general-information",
+    "href": "cv.html#general-information",
+    "title": "CV",
+    "section": "",
+    "text": "Full name: Raphael de Freitas Saldanha\nDate of birth: April 18, 1985\nLanguages: Portuguese, English"
+  },
+  {
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "CV",
+    "section": "Education",
+    "text": "Education\n\n2022 - current. Postdoc at Inria and LNCC. Artificial intelligence applications on public health.\n2017 - 2021. PhD at Fiocruz, PPGICS. Information and Communication in Health.\n2015 - 2017. Graduate Degree (Master) at UFJF - PPGSC. Public Health.\n2008 - 2009. Specialization at UFJF. Computational Statistical Methods\n2003 - 2007. Undergraduate Degree at UFJF - ICHL-DG. Geography."
+  },
+  {
+    "objectID": "cv.html#academic-interests",
+    "href": "cv.html#academic-interests",
+    "title": "CV",
+    "section": "Academic interests",
+    "text": "Academic interests\n\nData science\n\nR\nShiny apps\nQuarto\nPlotly\nPython\nJupyter Hub\nduckdb, SQLite\nElasticSearch\nKibana\n\n\n\nGIS\n\nQGIS\nESRI ArcGIS\nGeoserver\n\n\n\nOther\n\nGephi\nLaTeX\nLinux\nMacOS"
+  },
+  {
+    "objectID": "cv.html#work-and-teaching-experience",
+    "href": "cv.html#work-and-teaching-experience",
+    "title": "CV",
+    "section": "Work and teaching experience",
+    "text": "Work and teaching experience\n\n2017 - current. Research assistant at Fiocruz, ICICT, PCDaS.\n2017 - current. Research assistant at Fiocruz, ICICT, Observatório de Clima e Saúde.\n2021 - 2022 Research assistant at Fiocruz, IOC, Lathema Lab (ArboAlvo).\n2017 - 2018 Research assistant at IRD, Maison de la Télédétection (Montpellier, FR).\n2017 - current. Workshop teacher of R.\n2017 - current. Workshop teacher of Introduction to Spatial Econometry with R.\n2013 Teaching Assistant, Scientific Methodology at UFJF, CRITT.\n2023 Distance learning supervisor at Unibanco Institute.\n2005 - 2016 GIS and statistics analyst at Plangeo.\n2012 Approved for substitute teacher position of Thematic Cartograph.\n2012 Distance learning supervisor of Statistics, course of Public Management.\n2011 Distance learning tutor for Business Statistics (Curso de Administração Pública à Distância – PNAP), UFJF.\n2010 Teacher of Technologies for Environmental Planning, FAFISM."
+  },
+  {
+    "objectID": "cv.html#additional-training",
+    "href": "cv.html#additional-training",
+    "title": "CV",
+    "section": "Additional training",
+    "text": "Additional training\n\n2022 Public Health Disparities Geocoding Project 2.0. Harvard School of Public Health\n2022 Developing the SIR Model. Imperial College (Coursera)\n2022 Algoritmos e Modelos de Programação para Big Data. Laboratório Nacional de Computação Científica\n2022 Machine Learning, Curso-R.\n2022 R Deploy, Curso-R.\n2021 QBA/On-line - Sensibilização em Gestão da Qualidade, Biossegurança e Ambiente, Fiocruz.\n2020 Comunicação, Mídia e Saúde em Contexto de Emergências Sanitárias, UFAL.\n2018 Anthropological and Historical Approaches of Visualising Epidemics, COC, Fiocruz.\n2018 Information Visualization, Foundations and Applied Perception, NYU Tandon School of Engineering (Coursera).\n2017 Practical Machine Learning, Johns Hopkins University (Coursera).\n2016 Harvard - Brazil Collaborative Public Health Course, Harvard School of Public Health.\n2015 Introduction to Big Data, University of California, San Diego (Coursera).\n2011 Geoestatística com o uso do R, UFJF.\n2007 Workshop em modelagem em estudos longitudinais, UFJF.\n2007 Geomarketing - Conceitos e aplicações, Centro Universitário Senac.\n2004 Geografia e movimentos sociais, A América Latina, AGB.\n2003 Introdução à Gestão Ambiental Urbana, UFJF.\n2003 Flash Mx, CRITT, UFJF."
+  },
+  {
+    "objectID": "cv.html#hobbies",
+    "href": "cv.html#hobbies",
+    "title": "CV",
+    "section": "Hobbies",
+    "text": "Hobbies\n\nCycling\nWood working"
+  },
+  {
+    "objectID": "publications/baroniNeonatalMortalityRates2021b.html#abstract",
+    "href": "publications/baroniNeonatalMortalityRates2021b.html#abstract",
+    "title": "Neonatal mortality rates in Brazilian municipalities: from 1996 to 2017",
+    "section": "Abstract",
+    "text": "Abstract\nNeonatal mortality is a global public health problem, and the efforts to reduce child mortality is one of the goals of the 2030 Agenda for Sustainable Development, launched in 2015 by the United Nations. The availability of historical neonatal mortality rates (NMR) data in Brazilian municipalities is crucial to evaluate trends at local, regional and national level, identifying gaps and vulnerable territories. Therefore, the objective of this article is to offer an integrated dataset containing monthly data in a historical series from 1996 to 2017 with information on all births, neonatal deaths, and NMR (total, early and late components) enriched with information related to the municipality."
+  },
+  {
+    "objectID": "publications/baroniNeonatalMortalityRates2021b.html",
+    "href": "publications/baroniNeonatalMortalityRates2021b.html",
+    "title": "Neonatal mortality rates in Brazilian municipalities: from 1996 to 2017",
+    "section": "",
+    "text": "BARONI, L. et al. Neonatal mortality rates in Brazilian municipalities: From 1996 to 2017. BMC Research Notes, v. 14, n. 1, p. 55, Feb. 2021."
+  },
+  {
+    "objectID": "publications/baroniNeonatalMortalityRates2021b.html#reference",
+    "href": "publications/baroniNeonatalMortalityRates2021b.html#reference",
+    "title": "Neonatal mortality rates in Brazilian municipalities: from 1996 to 2017",
+    "section": "",
+    "text": "BARONI, L. et al. Neonatal mortality rates in Brazilian municipalities: From 1996 to 2017. BMC Research Notes, v. 14, n. 1, p. 55, Feb. 2021."
+  },
+  {
+    "objectID": "publications/guimaraesItTimeTalk2020b.html",
+    "href": "publications/guimaraesItTimeTalk2020b.html",
+    "title": "Is it time to talk about the end of social distancing? A joinpoint analysis of COVID-19 time series in Brazilian capitals",
+    "section": "",
+    "text": "GUIMARÃES, R. M. et al. Is it time to talk about the end of social distancing? A joinpoint analysis of COVID-19 time series in Brazilian capitals. Revista da Sociedade Brasileira de Medicina Tropical, v. 53, p. e20200469, Sep. 2020."
+  },
+  {
+    "objectID": "publications/guimaraesItTimeTalk2020b.html#reference",
+    "href": "publications/guimaraesItTimeTalk2020b.html#reference",
+    "title": "Is it time to talk about the end of social distancing? A joinpoint analysis of COVID-19 time series in Brazilian capitals",
+    "section": "",
+    "text": "GUIMARÃES, R. M. et al. Is it time to talk about the end of social distancing? A joinpoint analysis of COVID-19 time series in Brazilian capitals. Revista da Sociedade Brasileira de Medicina Tropical, v. 53, p. e20200469, Sep. 2020."
+  },
+  {
+    "objectID": "publications/guimaraesItTimeTalk2020b.html#abstract",
+    "href": "publications/guimaraesItTimeTalk2020b.html#abstract",
+    "title": "Is it time to talk about the end of social distancing? A joinpoint analysis of COVID-19 time series in Brazilian capitals",
+    "section": "Abstract",
+    "text": "Abstract\n\nIntroduction\nMonitoring coronavirus disease (COVID-19)-related infections and deaths in Brazil is controversial, with increasing pressure to ease social distance measures. However, no evidence of a sustained, widespread fall in cases exists.\n\n\nMethods\nWe used segmented (joinpoint) regression analysis to describe the behavior of COVID-19 infections in Brazilian capital cities.\n\n\nResults\nAll capitals showed an exponential or a near-exponential increase in cases through May. A decline in reported cases was subsequently noted in 20 cities but was only significant for 8 (29.6%) and was followed in two by a renewed increase.\n\n\nConclusions\nCaution is warranted when considering the relaxation of restrictions."
+  },
+  {
+    "objectID": "publications/camposFatoresAssociadosAo2020b.html",
+    "href": "publications/camposFatoresAssociadosAo2020b.html",
+    "title": "Fatores associados ao letramento funcional em saúde de mulheres atendidas pela Estratégia de Saúde da Família",
+    "section": "",
+    "text": "CAMPOS, A. A. L. et al. Fatores associados ao letramento funcional em saúde de mulheres atendidas pela Estratégia de Saúde da Família. Cadernos Saúde Coletiva, v. 28, p. 66–76, Apr. 2020."
+  },
+  {
+    "objectID": "publications/camposFatoresAssociadosAo2020b.html#reference",
+    "href": "publications/camposFatoresAssociadosAo2020b.html#reference",
+    "title": "Fatores associados ao letramento funcional em saúde de mulheres atendidas pela Estratégia de Saúde da Família",
+    "section": "",
+    "text": "CAMPOS, A. A. L. et al. Fatores associados ao letramento funcional em saúde de mulheres atendidas pela Estratégia de Saúde da Família. Cadernos Saúde Coletiva, v. 28, p. 66–76, Apr. 2020."
+  },
+  {
+    "objectID": "publications/camposFatoresAssociadosAo2020b.html#abstract",
+    "href": "publications/camposFatoresAssociadosAo2020b.html#abstract",
+    "title": "Fatores associados ao letramento funcional em saúde de mulheres atendidas pela Estratégia de Saúde da Família",
+    "section": "Abstract",
+    "text": "Abstract\nIntrodução. O letramento funcional em saúde (LFS) diz respeito à habilidade dos indivíduos em compreender as informações relacionadas à saúde e está relacionado a diversos desfechos de saúde. Objetivo. Investigar a associação do LFS com fatores sociodemográficos, apoio social, autoavaliação do estado de saúde e perfil de acesso aos serviços de saúde em mulheres assistidas pela Estratégia de Saúde da Família (ESF). Método. Estudo transversal, conduzido em 2015-2016, em duas Unidades de Atenção Primária à Saúde cobertas pela ESF, de um município da região Sudeste do Brasil. A amostra foi composta por 439 mulheres, entre 25 e 64 anos. O LFS foi avaliado por meio do Brief Test of Functional Health Literacy in Adults (B-TOFHLA). Efetuaram-se cálculos da razão de prevalência (RP). Posteriormente, construiu-se um modelo de regressão de Poisson de variância robusta, sendo admitida significância estatística quando p ≤0,05. Resultados. Foi constatado que 53,5% das mulheres apresentaram um baixo LFS, o qual associou-se à idade superior aos 40 anos (RP = 1,18; IC 95%: 1,07-1,31), ao grau de instrução inferior ao ensino médio completo (RP = 1,26; IC 95%: 1,15-1,38), à baixa renda (RP = 1,13; IC 95%: 1,04-1,23) e à autodeclaração da cor parda ou preta (RP= 1,06; IC 95%: 1,01-1,12). Conclusão. Os resultados acentuaram a importância do LFS como estratégia para a abordagem de populações com maior vulnerabilidade socioeconômica."
+  }
+]

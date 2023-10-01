@@ -1,0 +1,23 @@
+---
+title: "MonitoraCovid-19"
+subtitle: "Covid-19 monitoring."
+---
+
+![MonitoraCovid-19 dashboard.](images/monitoracovid19-1400.webp){fig-align="center"}
+
+MonitoraCovid-19 project is an institutional response from Fiocruz to the Covid-19 pandemic.
+
+The project started in March 2020, when the first cases of Covid-19 occurred in Brazil. Since then, we monitored the pandemic daily, unifying more than 10 data sources into a unique data dashboard with several graphs and maps.
+
+I am responsible to the ETL process and data dashboard. The project website was accessed more than 700,000 times by more than 300,000 users worldwide.
+
+We published 25 technical notes and 12 brief texts about the pandemic, along with papers and a book chapter.
+
+This work was supported by the Fiocruz Inova and received the [ENAP prize](https://www.enap.gov.br/pt/acontece/noticias/sairam-os-vencedores-do-desafios-covid-19).
+
+The dashboard address: https://bigdata-covid19.icict.fiocruz.br
+
+Interview at Fantástico (Rede Globo, May 2020): https://g1.globo.com/fantastico/noticia/2020/05/10/com-medidas-mais-rigorosas-paises-vizinhos-ao-brasil-dao-exemplo-no-combate-a-covid-19.ghtml
+
+Talk at ICICT Centro de Estudos, with Atila Iamarino and Diego Xavier (August 19, 2022): https://www.youtube.com/watch?v=GeyPs9yMzSk&t=3867s
+

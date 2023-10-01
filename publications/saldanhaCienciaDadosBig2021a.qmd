@@ -1,0 +1,51 @@
+---
+title: "Ciência de dados e big data: o que isso significa para estudos populacionais e da saúde?"
+author:
+  - Raphael Saldanha
+  - Christovam Barcellos
+  - Marcel Pedroso
+  
+date: 2021-11-26
+categories: 
+  - public health
+  - demography
+  - data science
+  - big data
+bibliography: publications.bib
+csl: abnt.csl
+---
+
+---
+nocite: |
+  @saldanhaCienciaDadosBig2021a
+---
+
+## Reference
+
+::: {#refs}
+:::
+
+## Abstract
+
+### Background
+
+The term big data is no longer new in the academic environment and has become more common in scientific publications and research grants, leading to a profound revision of the way science is being made and taught. 
+
+### Objective
+
+To reflect on the possible changes that data science can induce in population and health related studies
+
+### Method
+
+To foster this debate, scientific articles selected from the big data field in health and demography were contrasted with books and other scientific productions. 
+
+### Results
+
+It is argued that volume is not the most promising characteristic of big data for population and health related studies, but rather the complexity of data and the possibilities of integration with traditional studies by means of interdisciplinary teams. 
+
+### Conclusion
+
+In population and health related studies, the possibilities of integration between new and traditional methods are broad, and include new toolboxes for analysis, monitoring, prediction of events (cases) and health-disease processes in the population, and for the study of sociodemographic and environmental determinants.
+
+
+

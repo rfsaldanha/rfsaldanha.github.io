@@ -1,0 +1,8 @@
+---
+title: "Projects"
+listing:
+  contents: projects
+  sort: false
+  sort-ui: false
+  filter-ui: false
+---

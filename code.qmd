@@ -1,0 +1,15 @@
+---
+title: "Code"
+---
+
+[![](https://github-readme-stats.vercel.app/api?username=rfsaldanha&show_icons=true&theme:transparent)](https://github.com/rfsaldanha)
+
+## Selected repos
+
+[![](https://gh-card.dev/repos/rfsaldanha/microdatasus.svg?fullname=)](https://github.com/rfsaldanha/microdatasus)
+
+[![](https://gh-card.dev/repos/rfsaldanha/brpop.svg?fullname=)](https://github.com/rfsaldanha/brpop)
+
+[![](https://gh-card.dev/repos/rfsaldanha/brclimr.svg?fullname=)](https://github.com/rfsaldanha/brlimr)
+
+[![](https://gh-card.dev/repos/rfsaldanha/opendenguedata.svg?fullname=)](https://github.com/rfsaldanha/opendenguedata)

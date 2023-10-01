@@ -1,0 +1,35 @@
+---
+title: "How to overcome the stagnation of the first dose vaccine coverage curve against coronavirus disease 2019 in Brazil?"
+author:
+  - Raphael Guimarães
+  - Diego Xavier
+  - Raphael Saldanha
+  - Monica Magalhães
+  
+date: 2022-06-06
+categories: 
+  - Vaccination
+  - "COVID-19"
+  - Spatial analysis
+  - Health management
+  - Coronavirus infections
+  - Time series analysis
+bibliography: publications.bib
+csl: abnt.csl
+---
+
+---
+nocite: |
+  @guimaraesHowOvercomeStagnation2022a
+---
+
+## Reference
+
+::: {#refs}
+:::
+
+## Abstract
+
+Background: A large percentage of the population has not yet started vaccination, for which the increase in coverage is almost null. Methods: We used segmented regression analysis to estimate trends in the first dose coverage curve. Results: There has been a slowdown in the application of the first doses in Brazil since epidemiological week 36 (average percent change [APC] 0.83%, 95% confidence interval [CI] 0.75-0.91%), with a trend close to stagnation. Conclusions: It is important to develop strategies to increase access to vaccination posts. Furthermore, it is recommended to expand vaccination to children, thereby increasing the eligible population.
+
+

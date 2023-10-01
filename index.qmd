@@ -1,0 +1,31 @@
+---
+image: profile.jpg
+about:
+  template: trestles
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/rfsaldanha
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/rfsaldanhario
+    - icon: mastodon
+      text: Mastodon
+      href: https://fosstodon.org/@rfsaldanha
+    - text: "{{< ai orcid >}} Orcid"
+      href: https://orcid.org/0000-0003-0652-8466
+    - text: "{{< ai google-scholar >}} Google Scholar"
+      href: https://scholar.google.com/citations?user=UiXjYXsAAAAJ
+    - text: "{{< ai lattes >}} Lattes"
+      href: http://lattes.cnpq.br/4545189714279226
+    - text: "@ e-mail"
+      href: "mailto:raphael.de-freitas-saldanha@inria.fr"
+---
+
+Postdoctoral researcher at [Inria](https://www.inria.fr/fr) and [LNCC](https://www.gov.br/lncc/pt-br), research assistant at [Fiocruz](https://portal.fiocruz.br/).
+
+Health geographer and health data scientist. Undergraduate in Geography, specialization in Statistics, master\'s in public health, and Ph.D. in Health Information.
+
+Brazilian from Nova Friburgo (RJ), lived for several years on Minas Gerais and Rio de Janeiro. Currently based on Montpellier, France.
+
+Loves to code and crunch huge health datasets with R.

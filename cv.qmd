@@ -1,0 +1,122 @@
+---
+title: "CV"
+---
+
+## General information
+
+-   Full name: Raphael de Freitas Saldanha
+
+-   Date of birth: April 18, 1985
+
+-   Languages: Portuguese, English
+
+## Education
+
+-   2022 - current. **Postdoc** at Inria and LNCC. Artificial intelligence applications on public health.
+
+-   2017 - 2021. **PhD** at Fiocruz, PPGICS. Information and Communication in Health.
+
+-   2015 - 2017. Graduate Degree (**Master**) at UFJF - PPGSC. Public Health.
+
+-   2008 - 2009. **Specialization** at UFJF. Computational Statistical Methods
+
+-   2003 - 2007. **Undergraduate** Degree at UFJF - ICHL-DG. Geography.
+
+## Academic interests
+
+### Data science
+
+-   R
+-   Shiny apps
+-   Quarto
+-   Plotly
+-   Python
+-   Jupyter Hub
+-   duckdb, SQLite
+-   ElasticSearch
+-   Kibana
+
+### GIS
+
+-   QGIS
+-   ESRI ArcGIS
+-   Geoserver
+
+### Other
+
+-   Gephi
+-   LaTeX
+-   Linux
+-   MacOS
+
+## Work and teaching experience
+
+-   2017 - current. Research assistant at Fiocruz, ICICT, PCDaS.
+
+-   2017 - current. Research assistant at Fiocruz, ICICT, Observatório de Clima e Saúde.
+
+-   2021 - 2022 Research assistant at Fiocruz, IOC, Lathema Lab (ArboAlvo).
+
+-   2017 - 2018 Research assistant at IRD, Maison de la Télédétection (Montpellier, FR).
+
+-   2017 - current. Workshop teacher of R.
+
+-   2017 - current. Workshop teacher of Introduction to Spatial Econometry with R.
+
+-   2013 Teaching Assistant, Scientific Methodology at UFJF, CRITT.
+
+-   2023 Distance learning supervisor at Unibanco Institute.
+
+-   2005 - 2016 GIS and statistics analyst at Plangeo.
+
+-   2012 Approved for substitute teacher position of Thematic Cartograph.
+
+-   2012 Distance learning supervisor of Statistics, course of Public Management.
+
+-   2011 Distance learning tutor for Business Statistics (Curso de Administração Pública à Distância -- PNAP), UFJF.
+
+-   2010 Teacher of Technologies for Environmental Planning, FAFISM.
+
+## Additional training
+
+-   2022 Public Health Disparities Geocoding Project 2.0. Harvard School of Public Health
+
+-   2022 Developing the SIR Model. Imperial College (Coursera)
+
+-   2022 Algoritmos e Modelos de Programação para Big Data. Laboratório Nacional de Computação Científica
+
+-   2022 Machine Learning, Curso-R.
+
+-   2022 R Deploy, Curso-R.
+
+-   2021 QBA/On-line - Sensibilização em Gestão da Qualidade, Biossegurança e Ambiente, Fiocruz.
+
+-   2020 Comunicação, Mídia e Saúde em Contexto de Emergências Sanitárias, UFAL.
+
+-   2018 Anthropological and Historical Approaches of Visualising Epidemics, COC, Fiocruz.
+
+-   2018 Information Visualization, Foundations and Applied Perception, NYU Tandon School of Engineering (Coursera).
+
+-   2017 Practical Machine Learning, Johns Hopkins University (Coursera).
+
+-   2016 Harvard - Brazil Collaborative Public Health Course, Harvard School of Public Health.
+
+-   2015 Introduction to Big Data, University of California, San Diego (Coursera).
+
+-   2011 Geoestatística com o uso do R, UFJF.
+
+-   2007 Workshop em modelagem em estudos longitudinais, UFJF.
+
+-   2007 Geomarketing - Conceitos e aplicações, Centro Universitário Senac.
+
+-   2004 Geografia e movimentos sociais, A América Latina, AGB.
+
+-   2003 Introdução à Gestão Ambiental Urbana, UFJF.
+
+-   2003 Flash Mx, CRITT, UFJF.
+
+## Hobbies
+
+-   Cycling
+
+-   Wood working

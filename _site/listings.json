@@ -1,0 +1,45 @@
+[
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/posts/post-with-code/index.html",
+      "/posts/welcome/index.html"
+    ]
+  },
+  {
+    "listing": "/publications.html",
+    "items": [
+      "/publications/victor2023.html",
+      "/publications/saldanhaPesquisaCientificaNa2022.html",
+      "/publications/silvaTemporalSpatialDistribution2022.html",
+      "/publications/souzajuniorComparisonSamplingDesigns2022b.html",
+      "/publications/guimaraesHowOvercomeStagnation2022a.html",
+      "/publications/fonsecaGeographicAccessibilityCancer2022a.html",
+      "/publications/saldanhaCienciaDadosBig2021a.html",
+      "/publications/paixaoEstimationCOVID19UnderReporting2021a.html",
+      "/publications/guimaraesIncreasingImpactCOVID192021b.html",
+      "/publications/baroniNeonatalMortalityRates2021b.html",
+      "/publications/szwarcwaldAdesaoMedidasRestricao2020a.html",
+      "/publications/guimaraesItTimeTalk2020b.html",
+      "/publications/mosnierResurgenceRiskMalaria2020a.html",
+      "/publications/camposFatoresAssociadosAo2020b.html"
+    ]
+  },
+  {
+    "listing": "/projects.html",
+    "items": [
+      "/projects/agua-saude/index.html",
+      "/projects/harmonize/index.html",
+      "/projects/redes-de-cuidado/index.html",
+      "/projects/onde-estao-nossas-doencas/index.html",
+      "/projects/cross-border-malaria/index.html",
+      "/projects/pns/index.html",
+      "/projects/arboalvo/index.html",
+      "/projects/mauro/index.html",
+      "/projects/cidade-e-saude/index.html",
+      "/projects/monitoracovid19/index.html",
+      "/projects/pmm/index.html",
+      "/projects/ouvsus/index.html"
+    ]
+  }
+]

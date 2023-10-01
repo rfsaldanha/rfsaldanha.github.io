@@ -1,0 +1,9 @@
+---
+title: "Publications"
+listing:
+  contents: publications
+  categories: true
+  sort: "date desc"
+  sort-ui: TRUE
+  filter-ui: TRUE
+---
