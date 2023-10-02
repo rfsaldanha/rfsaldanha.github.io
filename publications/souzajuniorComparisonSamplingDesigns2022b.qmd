@@ -21,6 +21,8 @@ bibliography: publications.bib
 csl: abnt.csl
 ---
 
+![](images/Screenshot from 2023-10-02 13-13-38.png)
+
 ---
 nocite: |
   @souzajuniorComparisonSamplingDesigns2022b
@@ -34,4 +36,3 @@ nocite: |
 ## Abstract
 
 Our objective is to describe the differences in the sampling plans of the two editions of the Brazilian National Health Survey (PNS 2013 and 2019) and to evaluate how the changes affected the coefficient of variation (CV) and the design effect (Deff) of some estimated indicators. Variables from different parts of the questionnaire were analyzed to cover proportions with different magnitudes. The prevalence of obesity was included in the analysis since anthropometry measurement in the 2019 survey was performed in a subsample. The value of the point estimate, CV, and the Deff were calculated for each indicator, considering the stratification of the primary sampling units, the weighting of the sampling units, and the clustering effect. The CV and the Deff were lower in the 2019 estimates for most indicators. Concerning the questionnaire indicators of all household members, the Deffs were high and reached values greater than 18 for having a health insurance plan. Regarding the indicators of the individual questionnaire, for the prevalence of obesity, the Deff ranged from 2.7 to 4.2, in 2013, and from 2.7 to 10.2, in 2019. The prevalence of hypertension and diabetes per Federative Unit had a higher CV and lower Deff. Expanding the sample size to meet the diverse health objectives and the high Deff are significant challenges for developing probabilistic household-based national survey. New probabilistic sampling strategies should be considered to reduce costs and clustering effects.
-

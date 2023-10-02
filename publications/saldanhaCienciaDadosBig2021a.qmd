@@ -20,6 +20,8 @@ nocite: |
   @saldanhaCienciaDadosBig2021a
 ---
 
+![](images/Screenshot from 2023-10-02 13-17-24.png)
+
 ## Reference
 
 ::: {#refs}
@@ -29,7 +31,7 @@ nocite: |
 
 ### Background
 
-The term big data is no longer new in the academic environment and has become more common in scientific publications and research grants, leading to a profound revision of the way science is being made and taught. 
+The term big data is no longer new in the academic environment and has become more common in scientific publications and research grants, leading to a profound revision of the way science is being made and taught.
 
 ### Objective
 
@@ -37,15 +39,12 @@ To reflect on the possible changes that data science can induce in population an
 
 ### Method
 
-To foster this debate, scientific articles selected from the big data field in health and demography were contrasted with books and other scientific productions. 
+To foster this debate, scientific articles selected from the big data field in health and demography were contrasted with books and other scientific productions.
 
 ### Results
 
-It is argued that volume is not the most promising characteristic of big data for population and health related studies, but rather the complexity of data and the possibilities of integration with traditional studies by means of interdisciplinary teams. 
+It is argued that volume is not the most promising characteristic of big data for population and health related studies, but rather the complexity of data and the possibilities of integration with traditional studies by means of interdisciplinary teams.
 
 ### Conclusion
 
 In population and health related studies, the possibilities of integration between new and traditional methods are broad, and include new toolboxes for analysis, monitoring, prediction of events (cases) and health-disease processes in the population, and for the study of sociodemographic and environmental determinants.
-
-
-

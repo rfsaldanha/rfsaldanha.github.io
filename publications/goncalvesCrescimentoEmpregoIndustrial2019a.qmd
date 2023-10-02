@@ -1,0 +1,33 @@
+---
+title: "Crescimento do emprego industrial local no Brasil: o grau de especialização por intensidade tecnológica importa?"
+author:
+  - Eduardo Gonçalves
+  - Raphael Saldanha
+  - Eduardo Almeida
+  - André Silva
+date: 2019-06-13
+categories: 
+  - specialization
+  - diversification
+  - industrial technological intensity
+  - inter-sectoral and spatial spillovers
+  - Brazil
+bibliography: publications.bib
+csl: abnt.csl
+---
+
+---
+nocite: |
+  @goncalvesCrescimentoEmpregoIndustrial2019a
+---
+
+![](images/Screenshot from 2023-10-02 13-26-36.png)
+
+## Reference
+
+::: {#refs}
+:::
+
+## Abstract
+
+The aim of this paper is to revisit the debate on the degree of specialization and industrial diversification and the growth of local manufacturing employment in Brazil. A matrix of sectoral spillovers is built in which it is verified whether sectors, grouped by technological intensity, influence the performance of disaggregated manufacturing groups. Spatial data panel techniques are used to control non-observed local effects and possible spatial dependence over the period 1995-2014. The results show that specializations in low-technology manufacturing groups create stimulus for several other manufacturing groups regardless of the level of technological intensity. The spillovers coming from high technology manufacturing industries are less frequent, though they also occur depending on the industrial manufacturing group considered. In general, sectors of higher and lower technological intensity flourish with the presence of MAR externalities. We conclude that the diversification/specialization debate can vary considerably, requiring specific industrial and regional policies by manufacturing industries.

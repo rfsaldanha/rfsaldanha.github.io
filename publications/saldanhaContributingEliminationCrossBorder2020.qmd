@@ -1,0 +1,58 @@
+---
+title: "Contributing to Elimination of Cross-Border Malaria Through a Standardized Solution for Case Surveillance, Data Sharing, and Data Interpretation: Development of a Cross-Border Monitoring System"
+author:
+  - Raphael Saldanha
+  - Émilie Mosnier
+  - Christovam Barcellos
+  - Aurel Carbunar
+  - Christophe Charron
+  - Jean-Christophe Desconnets
+  - Basma Guarmit
+  - Margarete Gomes
+  - Théophile Mandon
+  - Anapaula Mendes
+  - Paulo Peiter
+  - Lise Musset
+  - Alice Sanna
+  - Benoît Van Gastel
+  - Emmanuel Roux
+date: 2019-06-13
+categories: 
+  - specialization
+  - diversification
+  - industrial technological intensity
+  - inter-sectoral and spatial spillovers
+  - Brazil
+bibliography: publications.bib
+csl: abnt.csl
+---
+
+---
+nocite: |
+  @saldanhaContributingEliminationCrossBorder2020
+---
+
+![](images/Screenshot from 2023-10-02 13-21-07.png)
+
+## Reference
+
+::: {#refs}
+:::
+
+## Abstract
+
+### Background
+
+Cross-border malaria is a significant obstacle to achieving malaria control and elimination worldwide. Objective: This study aimed to build a cross-border surveillance system that can make comparable and qualified data available to all parties involved in malaria control between French Guiana and Brazil.
+
+### Methods
+
+Data reconciliation rules based on expert knowledge were defined and applied to the heterogeneous data provided by the existing malaria surveillance systems of both countries. Visualization dashboards were designed to facilitate progressive data exploration, analysis, and interpretation. Dedicated advanced open source and robust software solutions were chosen to facilitate solution sharing and reuse.
+
+### Results
+
+A database gathering the harmonized data on cross-border malaria epidemiology is updated monthly with new individual malaria cases from both countries. Online dashboards permit a progressi ve and user-friendly visualization of raw data and epidemiological indicators, in the form of time series, maps, and data quality indexes. The monitoring system was shown to be able to identify changes in time series that are related to control actions, as well as differentiated changes according to space and to population subgroups.
+
+### Conclusions
+
+This cross-border monitoring tool could help produce new scientific evidence on cross-border malaria dynamics, implementing cross-border cooperation for malaria control and elimination, and can be quickly adapted to other cross-border contexts.

@@ -1,0 +1,51 @@
+---
+title: "A comprehensive integrated dataset on Brazilian health facilities: from 2005 to 2021"
+author:
+  - Rebecca Salles
+  - Victor Dornella
+  - Raquel Gritz
+  - Carlos Cardoso
+  - Sérgio Cruz
+  - Vinicius Kreischer
+  - Carmen Bonifácio
+  - Raphael Saldanha
+  - Gabriel Souto
+  - Matheus Miloski
+  - Leandro Zirondi
+  - Gizelton Alencar
+  - Ariane Alves
+  - Nelson Nieiro Neto
+  - Jefferson Lima
+  - Marcel Pedroso
+  - Ronaldo Alves
+  - Cristiano Boccolini
+date: 2023-07-20
+categories: 
+  - Health facilities
+  - Data integration
+  - Healthcare system
+bibliography: publications.bib
+csl: abnt.csl
+---
+
+---
+nocite: |
+  @sallesComprehensiveIntegratedDataset2023a
+---
+
+![](images/Screenshot from 2023-10-02 13-41-28.png)
+
+## Reference
+
+::: {#refs}
+:::
+
+## Abstract
+
+### Objectives
+
+The National Registry of Healthcare Facilities is a system with the registry of every healthcare facility in Brazil with information on the capacity building and healthcare workforce regarding its public or private nature. Despite being publicly available, it can only be accessed in separated disjoint tables, with different primary units of analysis. The objective is to offer an interoperable dataset containing monthly data from 2005 to 2021 with information on healthcare facilities, including their physical and human resources, services and teams, enriched with municipal information.
+
+### Data description
+
+Database with historical data and geographic information for each health facility in Brazil. It is composed by 5 distinct tables, organized according to combinations of time, space, and types of resources, services and teams. This database opens up a range of possibilities for research topics, from case studies in a single health facility and period, analysis of a group of health facilities with characteristics of interest, to a broader study using the entire dataset and aggregated data by municipality. Furthermore, the fact that there is a row for each health facility/month/ year facilitates the integration with other datasets from the Brazilian healthcare system. In addition to being a potential object of study in the health area, the dataset is also convenient in data science, especially for studies focused on time series.

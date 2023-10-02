@@ -22,6 +22,8 @@ nocite: |
   @guimaraesItTimeTalk2020b
 ---
 
+![](images/Screenshot from 2023-10-02 13-22-34.png)
+
 ## Reference
 
 ::: {#refs}
@@ -30,14 +32,17 @@ nocite: |
 ## Abstract
 
 ### Introduction
-Monitoring coronavirus disease (COVID-19)-related infections and deaths in Brazil is controversial, with increasing pressure to ease social distance measures. However, no evidence of a sustained, widespread fall in cases exists. 
+
+Monitoring coronavirus disease (COVID-19)-related infections and deaths in Brazil is controversial, with increasing pressure to ease social distance measures. However, no evidence of a sustained, widespread fall in cases exists.
 
 ### Methods
-We used segmented (joinpoint) regression analysis to describe the behavior of COVID-19 infections in Brazilian capital cities. 
+
+We used segmented (joinpoint) regression analysis to describe the behavior of COVID-19 infections in Brazilian capital cities.
 
 ### Results
-All capitals showed an exponential or a near-exponential increase in cases through May. A decline in reported cases was subsequently noted in 20 cities but was only significant for 8 (29.6%) and was followed in two by a renewed increase. 
+
+All capitals showed an exponential or a near-exponential increase in cases through May. A decline in reported cases was subsequently noted in 20 cities but was only significant for 8 (29.6%) and was followed in two by a renewed increase.
 
 ### Conclusions
-Caution is warranted when considering the relaxation of restrictions.
 
+Caution is warranted when considering the relaxation of restrictions.

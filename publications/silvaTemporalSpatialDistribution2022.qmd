@@ -24,6 +24,8 @@ bibliography: publications.bib
 csl: abnt.csl
 ---
 
+![](images/Screenshot from 2023-10-02 13-14-39.png)
+
 ---
 nocite: |
   @silvaTemporalSpatialDistribution2022
@@ -36,9 +38,4 @@ nocite: |
 
 ## Abstract
 
-Background: Low polio vaccine coverage can result in the spread of Poliovirus to areas free from viral circulation. This study analyzed the temporal trends and spatial distribution of polio vaccine coverage for children under five years of age in Brazil, between 2011 and 2021.
-Methods: This is an ecological, time-series study (2011 to 2021) with annual vaccine coverages against poliomyelitis, extracted from the Information System of the National Immunization Program from regions of the 27 Brazilian states. The percentage reductions in vaccination coverage in Brazil and in the Regions were calculated. Prais-Winsten regression models were used to analyze time series for the Regions and States, and spatial analysis identified the distribution of clusters (high-high; low-low; high-low and lowhigh) of vaccination coverages across Brazilian municipalities, using a 5% significance level.
-Results: From 2011 to 2021, the coverage of polio vaccines decreased by 46.1%. There was a progressive increase observed in clusters resulting in low vaccination coverages (136 low-low Brazilian municipalities in 2011 vs 614 in 2021), mostly reported in the North and Northeast regions of the country. There was a downward trend in vaccination coverages in 8 of the 27 States (p ≤ 0.05).
-Conclusions: The reduction in polio vaccine coverage, as observed in the North and Northeast regions of Brazil, may favor the spread of Poliovirus. Therefore, vaccination strategies should be prioritized for children residing in areas with sharp and recurrent declines in vaccination coverages, including travelers, migrants and refugees.
-
-
+Background: Low polio vaccine coverage can result in the spread of Poliovirus to areas free from viral circulation. This study analyzed the temporal trends and spatial distribution of polio vaccine coverage for children under five years of age in Brazil, between 2011 and 2021. Methods: This is an ecological, time-series study (2011 to 2021) with annual vaccine coverages against poliomyelitis, extracted from the Information System of the National Immunization Program from regions of the 27 Brazilian states. The percentage reductions in vaccination coverage in Brazil and in the Regions were calculated. Prais-Winsten regression models were used to analyze time series for the Regions and States, and spatial analysis identified the distribution of clusters (high-high; low-low; high-low and lowhigh) of vaccination coverages across Brazilian municipalities, using a 5% significance level. Results: From 2011 to 2021, the coverage of polio vaccines decreased by 46.1%. There was a progressive increase observed in clusters resulting in low vaccination coverages (136 low-low Brazilian municipalities in 2011 vs 614 in 2021), mostly reported in the North and Northeast regions of the country. There was a downward trend in vaccination coverages in 8 of the 27 States (p ≤ 0.05). Conclusions: The reduction in polio vaccine coverage, as observed in the North and Northeast regions of Brazil, may favor the spread of Poliovirus. Therefore, vaccination strategies should be prioritized for children residing in areas with sharp and recurrent declines in vaccination coverages, including travelers, migrants and refugees.

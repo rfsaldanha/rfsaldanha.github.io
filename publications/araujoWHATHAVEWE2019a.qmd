@@ -1,0 +1,31 @@
+---
+title: "What have we learned from Mariana? The importance of names, places and affections"
+author:
+  - Nadja Araújo
+  - Keila Carnavalli
+  - Nathalia Barbosa
+  - Patricia Barcelos
+  - Raphael Saldanha
+  - Teresa Neves
+  - Vinicius Klein
+  - Maria Guimarães
+date: 2019-05-16
+categories: 
+  - Mariana
+  - Disaster
+bibliography: publications.bib
+csl: abnt.csl
+---
+
+---
+nocite: |
+  @araujoWHATHAVEWE2019a
+---
+
+## Reference
+
+::: {#refs}
+:::
+
+Naming is an ambitious task. Naming an object or event means recognizing, distinguishing and giving importance to it. Whoever names acquires power over what was previously indescribable. The name is sign and meaning, skewed in origin and use. Naming and understanding the complexity of what occurred in the city of Mariana and its causes and consequences represents a challenge for which disciplinary approaches centered on scientific knowledge are insufficient. Thus, our search for studies on what happened in Mariana after the failure of the Fundão Dam in November 2015 should be complemented by the stories of residents of that place, by their knowledge. We recognize that this approach to examining such an issue would only be a limited contribution and thus constitutes the primary condition for an interdisciplinary exercise.
+

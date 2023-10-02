@@ -22,6 +22,8 @@ nocite: |
   @fonsecaGeographicAccessibilityCancer2022a
 ---
 
+![](images/Screenshot from 2023-10-02 13-16-46.png)
+
 ## Reference
 
 ::: {#refs}
@@ -35,7 +37,7 @@ Geographic accessibility to healthcare services is a fundamental component in ac
 
 ### Methods
 
-We explored nationwide healthcare data from the SUS health information systems, and mapped the geographic accessibility to cancer treatment in two time-frames: 2009–2010 and 2017–2018. We applied social network analysis (SNA) to estimate the commuting route, flow, and distances travelled by cancer patients to undergo surgical, radiotherapy, and chemotherapy treatment.
+We explored nationwide healthcare data from the SUS health information systems, and mapped the geographic accessibility to cancer treatment in two time-frames: 2009--2010 and 2017--2018. We applied social network analysis (SNA) to estimate the commuting route, flow, and distances travelled by cancer patients to undergo surgical, radiotherapy, and chemotherapy treatment.
 
 ### Findings
 
@@ -47,6 +49,4 @@ Important regional disparities in the accessibility to cancer treatment in Brazi
 
 ### Funding
 
-This work was funded by the Oswaldo Cruz Foundation - Fiocruz (Inova - no. 8451635123 to BPF) and the National Council for Scientific and Technological Development - CNPq (no. 407060/2018–9 to BPF); Coordination for the Improvement of Higher Education Personnel – CAPES (scholarship to PCA, Finance Code 001); and Instituto Nacional de Ciência e Tecnologia de Inovação em Doenças de Populações Negligenciadas (INCT-IDPN).
-
-
+This work was funded by the Oswaldo Cruz Foundation - Fiocruz (Inova - no. 8451635123 to BPF) and the National Council for Scientific and Technological Development - CNPq (no. 407060/2018--9 to BPF); Coordination for the Improvement of Higher Education Personnel -- CAPES (scholarship to PCA, Finance Code 001); and Instituto Nacional de Ciência e Tecnologia de Inovação em Doenças de Populações Negligenciadas (INCT-IDPN).

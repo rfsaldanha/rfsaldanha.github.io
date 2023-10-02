@@ -40,6 +40,8 @@ nocite: |
   @mosnierResurgenceRiskMalaria2020a
 ---
 
+![](images/Screenshot from 2023-10-02 13-21-58.png)
+
 ## Reference
 
 ::: {#refs}
@@ -49,15 +51,15 @@ nocite: |
 
 ### Background
 
-In 2017, inhabitants along the border between French Guiana and Brazil were affected by a malaria outbreak primarily due to Plasmodium vivax (Pv). While malaria cases have steadily declined between 2005 and 2016 in this Amazonian region, a resurgence was observed in 2017. 
+In 2017, inhabitants along the border between French Guiana and Brazil were affected by a malaria outbreak primarily due to Plasmodium vivax (Pv). While malaria cases have steadily declined between 2005 and 2016 in this Amazonian region, a resurgence was observed in 2017.
 
 ### Methods
 
-Two investigations were performed according to different spatial scales and information details: (1) a local study on the French Guiana border, which enabled a thorough investigation of malaria cases treated at a local village health center and the entomological circumstances in the most affected neighborhood, and (2) a regional and cross-border study, which enabled exploration of the regional spatiotemporal epidemic dynamic. Number and location of malaria cases were estimated using French and Brazilian surveillance systems. 
+Two investigations were performed according to different spatial scales and information details: (1) a local study on the French Guiana border, which enabled a thorough investigation of malaria cases treated at a local village health center and the entomological circumstances in the most affected neighborhood, and (2) a regional and cross-border study, which enabled exploration of the regional spatiotemporal epidemic dynamic. Number and location of malaria cases were estimated using French and Brazilian surveillance systems.
 
 ### Results
 
-On the French Guianese side of the border in Saint-Georges de l’Oyapock, the attack rate was 5.5% (n = 4000), reaching 51.4% (n = 175) in one Indigenous neighborhood. Entomological findings suggest a peak of Anopheles darlingi density in August and September. Two female An. darlingi (n = 1104, 0.18%) were found to be Pvpositive during this peak. During the same period, aggregated data from passive surveillance conducted by Brazilian and French Guianese border health centers identified 1566 cases of Pv infection. Temporal distribution during the 2007–2018 period displayed seasonal patterns with a peak in November 2017. Four clusters were identified among epidemic profiles of cross-border area localities. All localities of the first two clusters were Brazilian. The localization of the first cluster suggests an onset of the outbreak in an Indigenous reservation, subsequently expanding to French Indigenous neighborhoods and non-Native communities.
+On the French Guianese side of the border in Saint-Georges de l'Oyapock, the attack rate was 5.5% (n = 4000), reaching 51.4% (n = 175) in one Indigenous neighborhood. Entomological findings suggest a peak of Anopheles darlingi density in August and September. Two female An. darlingi (n = 1104, 0.18%) were found to be Pvpositive during this peak. During the same period, aggregated data from passive surveillance conducted by Brazilian and French Guianese border health centers identified 1566 cases of Pv infection. Temporal distribution during the 2007--2018 period displayed seasonal patterns with a peak in November 2017. Four clusters were identified among epidemic profiles of cross-border area localities. All localities of the first two clusters were Brazilian. The localization of the first cluster suggests an onset of the outbreak in an Indigenous reservation, subsequently expanding to French Indigenous neighborhoods and non-Native communities.
 
 ### Conclusions
 

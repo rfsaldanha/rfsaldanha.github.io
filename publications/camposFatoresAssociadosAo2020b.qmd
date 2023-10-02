@@ -22,6 +22,8 @@ nocite: |
   @camposFatoresAssociadosAo2020b
 ---
 
+![](images/Screenshot from 2023-10-02 13-23-15.png)
+
 ## Reference
 
 ::: {#refs}
@@ -30,4 +32,3 @@ nocite: |
 ## Abstract
 
 Introdução. O letramento funcional em saúde (LFS) diz respeito à habilidade dos indivíduos em compreender as informações relacionadas à saúde e está relacionado a diversos desfechos de saúde. Objetivo. Investigar a associação do LFS com fatores sociodemográficos, apoio social, autoavaliação do estado de saúde e perfil de acesso aos serviços de saúde em mulheres assistidas pela Estratégia de Saúde da Família (ESF). Método. Estudo transversal, conduzido em 2015-2016, em duas Unidades de Atenção Primária à Saúde cobertas pela ESF, de um município da região Sudeste do Brasil. A amostra foi composta por 439 mulheres, entre 25 e 64 anos. O LFS foi avaliado por meio do Brief Test of Functional Health Literacy in Adults (B-TOFHLA). Efetuaram-se cálculos da razão de prevalência (RP). Posteriormente, construiu-se um modelo de regressão de Poisson de variância robusta, sendo admitida significância estatística quando p ≤0,05. Resultados. Foi constatado que 53,5% das mulheres apresentaram um baixo LFS, o qual associou-se à idade superior aos 40 anos (RP = 1,18; IC 95%: 1,07-1,31), ao grau de instrução inferior ao ensino médio completo (RP = 1,26; IC 95%: 1,15-1,38), à baixa renda (RP = 1,13; IC 95%: 1,04-1,23) e à autodeclaração da cor parda ou preta (RP= 1,06; IC 95%: 1,01-1,12). Conclusão. Os resultados acentuaram a importância do LFS como estratégia para a abordagem de populações com maior vulnerabilidade socioeconômica.
-

@@ -30,6 +30,8 @@ nocite: |
   @baroniNeonatalMortalityRates2021b
 ---
 
+![](images/Screenshot from 2023-10-02 13-19-41.png)
+
 ## Reference
 
 ::: {#refs}
