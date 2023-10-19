@@ -17,7 +17,7 @@ website:
       - data.qmd
       - publications.qmd
       - cv.qmd
-      - blog.qmd
+      #- blog.qmd
 
 format:
   html:
