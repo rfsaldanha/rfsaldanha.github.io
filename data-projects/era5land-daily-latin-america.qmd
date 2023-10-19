@@ -65,16 +65,16 @@ The resulting NetCDF files are available for download at Zenodo.
 | 1978 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10022060-green.svg)](https://doi.org/10.5281/zenodo.10022060) |
 | 1979 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10022144-green.svg)](https://doi.org/10.5281/zenodo.10022144) |
 | 1980 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10022314-green.svg)](https://doi.org/10.5281/zenodo.10022314) |
-| 1981 |                                                                                                                    |
-| 1982 |                                                                                                                    |
-| 1983 |                                                                                                                    |
-| 1984 |                                                                                                                    |
-| 1985 |                                                                                                                    |
-| 1986 |                                                                                                                    |
-| 1987 |                                                                                                                    |
-| 1988 |                                                                                                                    |
-| 1989 |                                                                                                                    |
-| 1990 |                                                                                                                    |
+| 1981 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10022535-green.svg)](https://doi.org/10.5281/zenodo.10022535) |
+| 1982 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10022545-green.svg)](https://doi.org/10.5281/zenodo.10022545) |
+| 1983 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10022560-green.svg)](https://doi.org/10.5281/zenodo.10022560) |
+| 1984 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10022570-green.svg)](https://doi.org/10.5281/zenodo.10022570) |
+| 1985 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10022578-green.svg)](https://doi.org/10.5281/zenodo.10022578) |
+| 1986 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10022588-green.svg)](https://doi.org/10.5281/zenodo.10022588) |
+| 1987 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10022592-green.svg)](https://doi.org/10.5281/zenodo.10022592) |
+| 1988 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10022606-green.svg)](https://doi.org/10.5281/zenodo.10022606) |
+| 1989 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10022631-green.svg)](https://doi.org/10.5281/zenodo.10022631) |
+| 1990 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10022640-green.svg)](https://doi.org/10.5281/zenodo.10022640) |
 | 1991 |                                                                                                                    |
 | 1992 |                                                                                                                    |
 | 1993 |                                                                                                                    |
