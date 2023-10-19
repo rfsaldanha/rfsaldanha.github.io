@@ -1,0 +1,46 @@
+---
+title: "Zonal statististics of climate indicators for Brazilian municipalities"
+bibliography: references.bib
+---
+
+![](images/zonal_brdwgd-01.png)
+
+## Introduction
+
+Climate indicators are used on several statistical models for many research areas and are specially important for modelling Climate Sensitive Diseases (CSD) incidence. Those models usually adopts a lattice structure, where its data is aggregated at administrative boundaries (e.g. disease incidence), but climate indicators are usually presented in a continuous regular grid format.
+
+To make climate indicators compatible with lattice structures, zonal statistics may be adopted. Zonal statistics are descriptive statistics calculated using a set of cells that spatially intersects a given spatial boundary. For each boundary in a map, statistics like average, maximum value, minimum value, standard deviation, and sum are obtained to represent the cell's values that intersect the boundary.
+
+I created some zonal statistics of climate indicators datasets for Brazilian municipalities from some climate data products and a R package called [brclimr](https://rfsaldanha.github.io/brclimr) to retrieve this data.
+
+## Zonal BR-DWGD
+
+[![](https://img.shields.io/badge/doi-10.5281/zenodo.7824920-green.svg)](https://doi.org/10.5281/zenodo.7824920)
+
+The BR-DWGD dataset [@xavier2022] presents daily meteorological data interpolated to a grid with 0.1° × 0.1° of spatial resolution for the Brazilian territory, with daily data from January 1, 1961, to July 31, 2020. It used data from 1,252 weather stations and 11,473 rain gauges in its interpolation methods, cross-validated to the selection of the best method for each weather indicator.
+
+The following weather indicators are available from the BR-DWGD study: precipitation (mm), minimum temperature (°C), maximum temperature (°C), solar radiation (MJ⋅m−2 ), wind speed at 2m height (m⋅s−1) and relative humidity (%).
+
+The following zonal statistics were computed.
+
+```{r}
+brclimr::product_info(product = "brdwgd")
+```
+
+The results are availabe as parquet files, available at [Zenodo](https://zenodo.org/records/7824920).
+
+## Zonal TerraClimate
+
+[![](https://img.shields.io/badge/doi-10.5281/zenodo.7825777-green.svg)](https://doi.org/10.5281/zenodo.7825777)
+
+The TerraClimate [@abatzoglou2018] dataset presents monthly meteorological data interpolated to a grid with 0.04° × 0.04° (1/24th degree) of spatial resolution with world cover, with monthly data from January, 1958, to December, 2021.
+
+The following weather indicators are available from the TerraClimate study: Actual Evapotranspiration (mm), Climate Water Deficit (mm), Potential evapotranspiration(mm), Precipitation (mm), Runoff (mm), Soil Moisture (mm), Downward surface shortwave radiation (W/m2), Snow water equivalent (mm), Minimum temperature (°C), Maximum temperature (°C), Vapor pressure (kPa), Wind speed (m/s), Vapor Pressure Deficit (kpa) and Palmer Drought Severity Index.
+
+The following zonal statistics were computed.
+
+```{r}
+brclimr::product_info(product = "terraclimate")
+```
+
+The results are availabe as parquet files, available at [Zenodo](https://zenodo.org/records/7825777).

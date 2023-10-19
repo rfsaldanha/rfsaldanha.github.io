@@ -1,21 +1,27 @@
 project:
   type: website
+  output-dir: docs/
 
 website:
   title: "Raphael Saldanha"
+  page-navigation: true
+  back-to-top-navigation: true
+  #google-analytics: "G-ZMP18L536K"
+  page-footer:
+    left: "Website made with [Quarto](https://quarto.org/)."
   navbar:
-    right:
+    search: true
+    left:
       - projects.qmd
       - code.qmd
+      - data.qmd
       - publications.qmd
       - cv.qmd
       - blog.qmd
 
 format:
   html:
-    theme:
-      - cosmo
-      - custom.scss
+    theme: cosmo
+    toc: true
 
 editor: visual
-

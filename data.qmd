@@ -1,0 +1,10 @@
+---
+title: "Data"
+listing:
+  contents:
+    - data-projects/era5land-daily-latin-america.qmd
+    - data-projects/brazil-climate-zonal-indicators.qmd
+  sort: false
+  sort-ui: false
+  filter-ui: false
+---
