@@ -1,7 +1,19 @@
 ---
 title: "Projects"
 listing:
-  contents: projects
+  contents:
+    - projects/harmonize.qmd
+    - projects/monitoracovid19.qmd
+    - projects/ouvsus.qmd
+    - projects/pns.qmd
+    - projects/cross-border-malaria.qmd
+    - projects/redes-de-cuidado.qmd
+    - projects/arboalvo.qmd
+    - projects/onde-estao-nossas-doencas.qmd
+    - projects/pmm.qmd
+    - projects/agua-saude.qmd
+    - projects/mauro.qmd
+    - projects/cidade-e-saude.qmd
   sort: false
   sort-ui: false
   filter-ui: false

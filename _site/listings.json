@@ -2,18 +2,18 @@
   {
     "listing": "/projects.html",
     "items": [
-      "/projects/mauro/index.html",
-      "/projects/harmonize/index.html",
-      "/projects/cidade-e-saude/index.html",
-      "/projects/cross-border-malaria/index.html",
-      "/projects/ouvsus/index.html",
-      "/projects/agua-saude/index.html",
-      "/projects/monitoracovid19/index.html",
-      "/projects/redes-de-cuidado/index.html",
-      "/projects/arboalvo/index.html",
-      "/projects/pmm/index.html",
-      "/projects/pns/index.html",
-      "/projects/onde-estao-nossas-doencas/index.html"
+      "/projects/harmonize.html",
+      "/projects/monitoracovid19.html",
+      "/projects/ouvsus.html",
+      "/projects/pns.html",
+      "/projects/cross-border-malaria.html",
+      "/projects/redes-de-cuidado.html",
+      "/projects/arboalvo.html",
+      "/projects/onde-estao-nossas-doencas.html",
+      "/projects/pmm.html",
+      "/projects/agua-saude.html",
+      "/projects/mauro.html",
+      "/projects/cidade-e-saude.html"
     ]
   },
   {
