@@ -6,7 +6,7 @@ website:
   title: "Raphael Saldanha"
   page-navigation: true
   back-to-top-navigation: true
-  #google-analytics: "G-ZMP18L536K"
+  google-analytics: "G-2M7VLSRDCB"
   page-footer:
     left: "Website made with [Quarto](https://quarto.org/)."
   navbar:
