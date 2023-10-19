@@ -1,15 +1,14 @@
 ---
 title: "OuvSUS"
-subtitle: "Ouvidoria do SUS."
+subtitle: "SUS Ombudsman."
 ---
 
 ![Manifestações dashboard.](images/ouvsus-1400.webp){fig-align="center"}
 
-This project is a partnership between PCDaS, Instituto Aggeu Magalhães -- Fiocruz Pernambuco, and the Brazilian Ministry of Health ombudsman. The project aims to collect, organize and present data about population inquiries and information requisitions.
+A partnership between PCDaS, Instituto Aggeu Magalhães -- Fiocruz Pernambuco, and the Brazilian Ministry of Health ombudsman. The project aims to collect, organize and present data about population inquiries and information requisitions.
 
 I oversee the team at PCDaS responsible for the ETL (extraction, transform and load) process and data dashboard.
 
 The project website address: https://www.gov.br/saude/pt-br/canais-de-atendimento/ouvidoria-do-sus/ouvidoria-em-numeros/paineis-de-dados
 
 This work is supported by Brazilian Health Ministry.
-

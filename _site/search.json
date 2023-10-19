@@ -4,7 +4,7 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Harmonize\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nMonitoraCovid-19\n\n\nCovid-19 monitoring.\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nOuvSUS\n\n\nOuvidoria do SUS.\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nPNS\n\n\nPesquisa Nacional de Saúde.\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nCross-border malaria\n\n\nIn partnership with IRD.\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nRedes de Cuidado\n\n\nCancer patients displacement and network analysis.\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nArboAlvo\n\n\nStratifying arboviruses risk.\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nOnde estão nossas doenças?\n\n\nMuseum exhibition.\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nPMM\n\n\nProjeto Mais Médicos.\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nÁgua & Saúde\n\n\nIn partneship with ANA.\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nMauro\n\n\na Metadata Automatic Retrieval system for Updated References and cited Objects from Scielo.\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nCidade & Saúde\n\n\nAccessible health information about Brazilian municipalities.\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+    "text": "Harmonize\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nMonitoraCovid-19\n\n\nCovid-19 monitoring.\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nOuvSUS\n\n\nSUS Ombudsman.\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nPNS\n\n\nPesquisa Nacional de Saúde.\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nCross-border malaria\n\n\nIn partnership with IRD.\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nRedes de Cuidado\n\n\nCancer patients displacement and network analysis.\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nArboAlvo\n\n\nStratifying arboviruses risk.\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nOnde estão nossas doenças?\n\n\nMuseum exhibition.\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nPMM\n\n\nProjeto Mais Médicos.\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nÁgua & Saúde\n\n\nIn partneship with ANA.\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nMauro\n\n\na Metadata Automatic Retrieval system for Updated References and cited Objects from Scielo.\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nCidade & Saúde\n\n\nAccessible health information about Brazilian municipalities.\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
   },
   {
     "objectID": "blog.html",
@@ -14,46 +14,46 @@
     "text": "Post With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nSep 30, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nSep 27, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "projects/pns/index.html",
-    "href": "projects/pns/index.html",
-    "title": "PNS",
+    "objectID": "projects/agua-saude.html",
+    "href": "projects/agua-saude.html",
+    "title": "Água & Saúde",
     "section": "",
-    "text": "PNS main webpage.\n\n\nThis project is a partnership between PCDaS and other researchers at Fiocruz and IBGE. The PNS is a national inquiry about the population health conditions with two editions: 2013 and 2019. Its results cover major aspects of populations’ health and involve special techniques for complex samples.\nI oversee the team at PCDaS responsible to create reproducible code notebooks about sample expansion and developing and maintain a website with project documentation and a data dashboard.\nProject website address: https://www.pns.icict.fiocruz.br\nThis work is supported by Brazilian Health Ministry."
+    "text": "Água & Saúde main webpage.\n\n\nThe first project that I got involved at Fiocruz with the Climate and Health Observatory. It was a project in partnership with ANA (Agência Nacional das Águas).\nI was in charge to create a database of health and water indicators and a data dashboard. The project was fully developed with R, Shiny, and SQLite technologies.\nThe project has been discontinued."
   },
   {
-    "objectID": "projects/arboalvo/index.html",
-    "href": "projects/arboalvo/index.html",
+    "objectID": "projects/arboalvo.html",
+    "href": "projects/arboalvo.html",
     "title": "ArboAlvo",
     "section": "",
     "text": "ArboAlvo dashboard.\n\n\nConducted at the Instituto Oswaldo Cruz (IOC), the project ArboAlvo’s objective is to stratify arboviruses risk into national and intra-municipal levels, considering epidemiolocal, entomological, and socio-demographic dimensions.\nI participated in this project by creating, reviewing, and optimizing code in the project data analysis, and developing data dashboards.\n\n\n\nArboAlvo dashboard running on Natal local server.\n\n\n\n\n\nWith the Natal IT team, August 8, 2022."
   },
   {
-    "objectID": "projects/monitoracovid19/index.html",
-    "href": "projects/monitoracovid19/index.html",
-    "title": "MonitoraCovid-19",
-    "section": "",
-    "text": "MonitoraCovid-19 dashboard.\n\n\nMonitoraCovid-19 project is an institutional response from Fiocruz to the Covid-19 pandemic.\nThe project started in March 2020, when the first cases of Covid-19 occurred in Brazil. Since then, we monitored the pandemic daily, unifying more than 10 data sources into a unique data dashboard with several graphs and maps.\nI am responsible to the ETL process and data dashboard. The project website was accessed more than 700,000 times by more than 300,000 users worldwide.\nWe published 25 technical notes and 12 brief texts about the pandemic, along with papers and a book chapter.\nThis work was supported by the Fiocruz Inova and received the ENAP prize.\nThe dashboard address: https://bigdata-covid19.icict.fiocruz.br\nInterview at Fantástico (Rede Globo, May 2020): https://g1.globo.com/fantastico/noticia/2020/05/10/com-medidas-mais-rigorosas-paises-vizinhos-ao-brasil-dao-exemplo-no-combate-a-covid-19.ghtml\nTalk at ICICT Centro de Estudos, with Atila Iamarino and Diego Xavier (August 19, 2022): https://www.youtube.com/watch?v=GeyPs9yMzSk&t=3867s"
-  },
-  {
-    "objectID": "projects/ouvsus/index.html",
-    "href": "projects/ouvsus/index.html",
+    "objectID": "projects/ouvsus.html",
+    "href": "projects/ouvsus.html",
     "title": "OuvSUS",
     "section": "",
-    "text": "Manifestações dashboard.\n\n\nThis project is a partnership between PCDaS, Instituto Aggeu Magalhães – Fiocruz Pernambuco, and the Brazilian Ministry of Health ombudsman. The project aims to collect, organize and present data about population inquiries and information requisitions.\nI oversee the team at PCDaS responsible for the ETL (extraction, transform and load) process and data dashboard.\nThe project website address: https://www.gov.br/saude/pt-br/canais-de-atendimento/ouvidoria-do-sus/ouvidoria-em-numeros/paineis-de-dados\nThis work is supported by Brazilian Health Ministry."
+    "text": "Manifestações dashboard.\n\n\nA partnership between PCDaS, Instituto Aggeu Magalhães – Fiocruz Pernambuco, and the Brazilian Ministry of Health ombudsman. The project aims to collect, organize and present data about population inquiries and information requisitions.\nI oversee the team at PCDaS responsible for the ETL (extraction, transform and load) process and data dashboard.\nThe project website address: https://www.gov.br/saude/pt-br/canais-de-atendimento/ouvidoria-do-sus/ouvidoria-em-numeros/paineis-de-dados\nThis work is supported by Brazilian Health Ministry."
   },
   {
-    "objectID": "projects/cidade-e-saude/index.html",
-    "href": "projects/cidade-e-saude/index.html",
-    "title": "Cidade & Saúde",
+    "objectID": "projects/onde-estao-nossas-doencas.html",
+    "href": "projects/onde-estao-nossas-doencas.html",
+    "title": "Onde estão nossas doenças?",
     "section": "",
-    "text": "Cidade & Saúde main webpage.\n\n\n“Cidade & Saúde” is a self-funded Project that I started just after my master’s and before my Ph.D.\nThe project objective is to collect and aggregate health data at the municipality level and provide simple and visually compelling access with satellite images and graphs. The user is asked to type a city name and the system presents a webpage with the satellite image of that city and several socio-demographic and health information with graphs.\nThe satellite image is used to put the socio-demographic and health data in context, with graphs and indicators definitions covering demographic aspects, mortality, hospital admissions, health units, and health budget.\nThe project website is accessible by this address: https://cidadesaude.io. The project data is out of date, and waiting for financing."
+    "text": "Exhibition visitors using the interactive map.\n\n\nThis was a very special project, where we were invited to develop a museum exhibition at Fiocruz. On this set, we present to the visitors the relationship between health and space by using interactive maps in a wide display and also with printed and tactile special maps for visually impaired visitors.\nThe exhibition is permanent and located at the Fiocruz Maré Campus.\nThe interactive map can also be accessed here: https://rfsaldanha.github.io/app_cavalarica/\n\n\n\nTactile map for visually impaired visitors.\n\n\n\n\n\nFiocruz president, Dra. Nisia Trindade, contemplating the exhibition."
   },
   {
-    "objectID": "projects/mauro/index.html",
-    "href": "projects/mauro/index.html",
+    "objectID": "projects/mauro.html",
+    "href": "projects/mauro.html",
     "title": "Mauro",
     "section": "",
     "text": "Mauro main webpage.\n\n\n“Mauro” was a research project that I initiated during my Ph.D. at Fiocruz, when I was taking some courses about technological information on health.\nThe objectives of the project were (1) to download and organize bibliometric information available at “Scielo” from the Public Health, and Brazil collections. (2) Provide a simple and intuitive way for researchers to access its data through filters and visualize information.\nThe ETL process and dashboard were developed with R and Shiny. The project is now deactivated."
+  },
+  {
+    "objectID": "projects/monitoracovid19.html",
+    "href": "projects/monitoracovid19.html",
+    "title": "MonitoraCovid-19",
+    "section": "",
+    "text": "MonitoraCovid-19 dashboard.\n\n\nMonitoraCovid-19 project is an institutional response from Fiocruz to the Covid-19 pandemic.\nThe project started in March 2020, when the first cases of Covid-19 occurred in Brazil. Since then, we monitored the pandemic daily, unifying more than 10 data sources into a unique data dashboard with several graphs and maps.\nI am responsible to the ETL process and data dashboard. The project website was accessed more than 700,000 times by more than 300,000 users worldwide.\nWe published 25 technical notes and 12 brief texts about the pandemic, along with papers and a book chapter.\nThis work was supported by the Fiocruz Inova and received the ENAP prize.\nThe dashboard address: https://bigdata-covid19.icict.fiocruz.br\nInterview at Fantástico (Rede Globo, May 2020): https://g1.globo.com/fantastico/noticia/2020/05/10/com-medidas-mais-rigorosas-paises-vizinhos-ao-brasil-dao-exemplo-no-combate-a-covid-19.ghtml\nTalk at ICICT Centro de Estudos, with Atila Iamarino and Diego Xavier (August 19, 2022): https://www.youtube.com/watch?v=GeyPs9yMzSk&t=3867s"
   },
   {
     "objectID": "posts/post-with-code/index.html",
@@ -469,104 +469,6 @@
     "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   },
   {
-    "objectID": "projects/harmonize/index.html",
-    "href": "projects/harmonize/index.html",
-    "title": "Harmonize",
-    "section": "",
-    "text": "Harmonizing multi-scale spatiotemporal data for health in climate change hotspots.\nHarmonize is a project in partnership with the Health and Climate Observatory and several international partners, including the Barcelona Supercomputing Center (BSC).\nThe project’s objective is to collect, organize and analyze multi-scale spatiotemporal data for health in climate hotspots.\nI am working on this project to provide expert knowledge on Brazilian health data collection and analysis.\nThis work is supported by the Wellcome Trust grant number 224694/Z/21/Z."
-  },
-  {
-    "objectID": "projects/cross-border-malaria/index.html",
-    "href": "projects/cross-border-malaria/index.html",
-    "title": "Cross-border malaria",
-    "section": "",
-    "text": "Cross-border malaria main webpage.\n\n\nThis was the second project that I got involved at Fiocruz with the Climate and Health Observatory. It was a project in partnership with the French IRD (Institute de Recherche pour le Développement).\nI was in charge to provide knowledge about the malaria databases in Brazil (SIVEP-Malária) and developing a data dashboard showing cross-border malaria transmission on the French Guiana and Brazil (Amapá) frontier. This was an especially difficult task considering that the dashboard needed to be present in English, French, and Portuguese. The dashboard was developed with R and Shiny technology.\nThis project involved a whole month trip to Montpellier, France to engage with other team members and also a trip to Cayenne, the French Guiana capital to learn firsthand how data was collected and handled.\nThis project resulted in two published papers: http://dx.doi.org/10.1186/s12879-020-05086-4 and http://dx.doi.org/10.2196/15409.\nThis work was supported by a grant from Bill & Mellinda Gates Foundation.\n\n\n\nIRD\n\n\n\n\n\nMaison de la Télédétection\n\n\n\n\n\nProject first sketches on board (Montpellier, France).\n\n\n\n\n\nProject presentation at Cayenne by Dr. Emmanuel Roux, coordinator.\n\n\n\n\n\nSome leisure time at Cayenne."
-  },
-  {
-    "objectID": "projects/agua-saude/index.html",
-    "href": "projects/agua-saude/index.html",
-    "title": "Água & Saúde",
-    "section": "",
-    "text": "Água & Saúde main webpage.\n\n\nÁgua & Saúde was the first project that I got involved at Fiocruz with the Climate and Health Observatory. It was a project in partnership with ANA (Agência Nacional das Águas).\nI was in charge to create a database of health and water indicators and a data dashboard. The project was fully developed with R, Shiny, and SQLite technologies.\nThe project has been discontinued."
-  },
-  {
-    "objectID": "projects/redes-de-cuidado/index.html",
-    "href": "projects/redes-de-cuidado/index.html",
-    "title": "Redes de Cuidado",
-    "section": "",
-    "text": "Commuting networks of patients that received cancer treatment within SUS, from article http://dx.doi.org/10.1016/j.lana.2021.100153.\n\n\nThis project was a partnership with PCDaS and CDTS. The project studied the flow of cancer patients receiving treatment in Brazil between municipalities.\nI was in charge to handle the large datasets about hospitalizations and treatments and perform some network analysis.\nThis work was supported by Inova Fiocruz and resulted in a published paper: http://dx.doi.org/10.1016/j.lana.2021.100153."
-  },
-  {
-    "objectID": "projects/pmm/index.html",
-    "href": "projects/pmm/index.html",
-    "title": "PMM",
-    "section": "",
-    "text": "PMM main webpage.\n\n\n“Projeto Mais Médicos” was the first project that I got involved with at Fiocruz, through the PCDaS initiative. I was in charge of developing a data dashboard and to coordinate a team with other research assistants.\nThe project aimed to present data about a federal project called “Mais Médicos”, where a public health policy encouraged MDs to work in less developed regions in Brazil and also contracted foreign MDs from Cuba and other countries to work on those regions.\nThe project has been discontinued."
-  },
-  {
-    "objectID": "projects/onde-estao-nossas-doencas/index.html",
-    "href": "projects/onde-estao-nossas-doencas/index.html",
-    "title": "Onde estão nossas doenças?",
-    "section": "",
-    "text": "Exhibition visitors using the interactive map.\n\n\nThis was a very special project, where we were invited to develop a museum exhibition at Fiocruz. On this set, we present to the visitors the relationship between health and space by using interactive maps in a wide display and also with printed and tactile special maps for visually impaired visitors.\nThe exhibition is permanent and located at the Fiocruz Maré Campus.\nThe interactive map can also be accessed here: https://rfsaldanha.github.io/app_cavalarica/\n\n\n\nTactile map for visually impaired visitors.\n\n\n\n\n\nFiocruz president, Dra. Nisia Trindade, contemplating the exhibition."
-  },
-  {
-    "objectID": "code.html#selected-repos",
-    "href": "code.html#selected-repos",
-    "title": "Code",
-    "section": "Selected repos",
-    "text": "Selected repos"
-  },
-  {
-    "objectID": "projects/00-harmonize/index.html",
-    "href": "projects/00-harmonize/index.html",
-    "title": "Harmonize",
-    "section": "",
-    "text": "Harmonizing multi-scale spatiotemporal data for health in climate change hotspots.\nHarmonize is a project in partnership with the Health and Climate Observatory and several international partners, including the Barcelona Supercomputing Center (BSC).\nThe project’s objective is to collect, organize and analyze multi-scale spatiotemporal data for health in climate hotspots.\nI am working on this project to provide expert knowledge on Brazilian health data collection and analysis.\nThis work is supported by the Wellcome Trust grant number 224694/Z/21/Z."
-  },
-  {
-    "objectID": "projects/agua-saude.html",
-    "href": "projects/agua-saude.html",
-    "title": "Água & Saúde",
-    "section": "",
-    "text": "Água & Saúde main webpage.\n\n\nÁgua & Saúde was the first project that I got involved at Fiocruz with the Climate and Health Observatory. It was a project in partnership with ANA (Agência Nacional das Águas).\nI was in charge to create a database of health and water indicators and a data dashboard. The project was fully developed with R, Shiny, and SQLite technologies.\nThe project has been discontinued."
-  },
-  {
-    "objectID": "projects/arboalvo.html",
-    "href": "projects/arboalvo.html",
-    "title": "ArboAlvo",
-    "section": "",
-    "text": "ArboAlvo dashboard.\n\n\nConducted at the Instituto Oswaldo Cruz (IOC), the project ArboAlvo’s objective is to stratify arboviruses risk into national and intra-municipal levels, considering epidemiolocal, entomological, and socio-demographic dimensions.\nI participated in this project by creating, reviewing, and optimizing code in the project data analysis, and developing data dashboards.\n\n\n\nArboAlvo dashboard running on Natal local server.\n\n\n\n\n\nWith the Natal IT team, August 8, 2022."
-  },
-  {
-    "objectID": "projects/ouvsus.html",
-    "href": "projects/ouvsus.html",
-    "title": "OuvSUS",
-    "section": "",
-    "text": "Manifestações dashboard.\n\n\nThis project is a partnership between PCDaS, Instituto Aggeu Magalhães – Fiocruz Pernambuco, and the Brazilian Ministry of Health ombudsman. The project aims to collect, organize and present data about population inquiries and information requisitions.\nI oversee the team at PCDaS responsible for the ETL (extraction, transform and load) process and data dashboard.\nThe project website address: https://www.gov.br/saude/pt-br/canais-de-atendimento/ouvidoria-do-sus/ouvidoria-em-numeros/paineis-de-dados\nThis work is supported by Brazilian Health Ministry."
-  },
-  {
-    "objectID": "projects/onde-estao-nossas-doencas.html",
-    "href": "projects/onde-estao-nossas-doencas.html",
-    "title": "Onde estão nossas doenças?",
-    "section": "",
-    "text": "Exhibition visitors using the interactive map.\n\n\nThis was a very special project, where we were invited to develop a museum exhibition at Fiocruz. On this set, we present to the visitors the relationship between health and space by using interactive maps in a wide display and also with printed and tactile special maps for visually impaired visitors.\nThe exhibition is permanent and located at the Fiocruz Maré Campus.\nThe interactive map can also be accessed here: https://rfsaldanha.github.io/app_cavalarica/\n\n\n\nTactile map for visually impaired visitors.\n\n\n\n\n\nFiocruz president, Dra. Nisia Trindade, contemplating the exhibition."
-  },
-  {
-    "objectID": "projects/mauro.html",
-    "href": "projects/mauro.html",
-    "title": "Mauro",
-    "section": "",
-    "text": "Mauro main webpage.\n\n\n“Mauro” was a research project that I initiated during my Ph.D. at Fiocruz, when I was taking some courses about technological information on health.\nThe objectives of the project were (1) to download and organize bibliometric information available at “Scielo” from the Public Health, and Brazil collections. (2) Provide a simple and intuitive way for researchers to access its data through filters and visualize information.\nThe ETL process and dashboard were developed with R and Shiny. The project is now deactivated."
-  },
-  {
-    "objectID": "projects/monitoracovid19.html",
-    "href": "projects/monitoracovid19.html",
-    "title": "MonitoraCovid-19",
-    "section": "",
-    "text": "MonitoraCovid-19 dashboard.\n\n\nMonitoraCovid-19 project is an institutional response from Fiocruz to the Covid-19 pandemic.\nThe project started in March 2020, when the first cases of Covid-19 occurred in Brazil. Since then, we monitored the pandemic daily, unifying more than 10 data sources into a unique data dashboard with several graphs and maps.\nI am responsible to the ETL process and data dashboard. The project website was accessed more than 700,000 times by more than 300,000 users worldwide.\nWe published 25 technical notes and 12 brief texts about the pandemic, along with papers and a book chapter.\nThis work was supported by the Fiocruz Inova and received the ENAP prize.\nThe dashboard address: https://bigdata-covid19.icict.fiocruz.br\nInterview at Fantástico (Rede Globo, May 2020): https://g1.globo.com/fantastico/noticia/2020/05/10/com-medidas-mais-rigorosas-paises-vizinhos-ao-brasil-dao-exemplo-no-combate-a-covid-19.ghtml\nTalk at ICICT Centro de Estudos, with Atila Iamarino and Diego Xavier (August 19, 2022): https://www.youtube.com/watch?v=GeyPs9yMzSk&t=3867s"
-  },
-  {
     "objectID": "projects/pmm.html",
     "href": "projects/pmm.html",
     "title": "PMM",
@@ -607,5 +509,12 @@
     "title": "Cidade & Saúde",
     "section": "",
     "text": "Cidade & Saúde main webpage.\n\n\n“Cidade & Saúde” is a self-funded Project that I started just after my master’s and before my Ph.D.\nThe project objective is to collect and aggregate health data at the municipality level and provide simple and visually compelling access with satellite images and graphs. The user is asked to type a city name and the system presents a webpage with the satellite image of that city and several socio-demographic and health information with graphs.\nThe satellite image is used to put the socio-demographic and health data in context, with graphs and indicators definitions covering demographic aspects, mortality, hospital admissions, health units, and health budget.\nThe project website is accessible by this address: https://cidadesaude.io. The project data is out of date, and waiting for financing."
+  },
+  {
+    "objectID": "code.html#selected-repos",
+    "href": "code.html#selected-repos",
+    "title": "Code",
+    "section": "Selected repos",
+    "text": "Selected repos"
   }
 ]

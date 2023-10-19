@@ -5,9 +5,8 @@ subtitle: "In partneship with ANA."
 
 ![Água & Saúde main webpage.](images/aguasaude-1400.webp){fig-align="center"}
 
-Água & Saúde was the first project that I got involved at Fiocruz with the Climate and Health Observatory. It was a project in partnership with ANA (Agência Nacional das Águas).
+The first project that I got involved at Fiocruz with the Climate and Health Observatory. It was a project in partnership with ANA (Agência Nacional das Águas).
 
 I was in charge to create a database of health and water indicators and a data dashboard. The project was fully developed with R, Shiny, and SQLite technologies.
 
 The project has been discontinued.
-
