@@ -1,0 +1,153 @@
+---
+title: "Some tips to work with SQLite database"
+date: "2023-10-19"
+categories: [database, sqlite]
+---
+
+SQLite database are very popular and make a great job for its simplicity and practicity. I have been using it for a while and would like to organize some tips.
+
+## Dates and extended types
+
+Natively, SQLite databases does not handle dates.
+
+Let's create and example with some data from flights
+
+```{r}
+library(dplyr)
+library(lubridate)
+library(DBI)
+library(nycflights13)
+
+flights <- flights %>% 
+  select(year, month, day, hour, minute) %>% 
+  mutate(departure = make_date(year, month, day))
+
+head(flights)
+```
+The data is ready to store at the database.
+
+```{r}
+database_file <- tempfile()
+
+conn <- dbConnect(RSQLite::SQLite(), database_file)
+
+dbWriteTable(conn, name = "flights_table", value = flights)
+```
+
+Let's take a look how the data was stored.
+
+```{r}
+tbl(conn, "flights_table") %>% head() %>% collect()
+```
+The departure variable seems a confusing text. But we have a savior called `extended_types`.
+
+First, lets close the connection with the database.
+
+```{r}
+dbDisconnect(conn)
+```
+
+And recreate the table with a new connection
+
+```{r}
+conn2 <- dbConnect(RSQLite::SQLite(), database_file, extended_types = TRUE)
+dbWriteTable(conn2, name = "flights_table", value = flights, overwrite = TRUE)
+```
+
+Let's see the difference...
+
+```{r}
+tbl(conn2, "flights_table") %>% head() %>% collect()
+```
+
+And voilà! We have the dates.
+
+But if you need to store this variable as character with a human readable value? There is a trick.
+
+First, you need to create a temporary table with the same schema but the date as `varchar`.
+
+```{r}
+dbExecute(conn2, "CREATE TABLE 'flights_table_2'(year bigint, month bigint, day bigint, hour float, minute float, departure varchar)")
+```
+
+And then copy the data from the original table to this empty table.
+
+```{r}
+dbExecute(conn2, "INSERT INTO 'flights_table_2' SELECT year, month, day, hour, minute, strftime('%Y-%m-%d', departure*24*60*60, 'unixepoch') FROM 'flights_table'")
+```
+
+Let's see the new table
+
+```{r}
+tbl(conn2, "flights_table_2") %>% head() %>% collect()
+```
+That's it! Let's close the connection, its a good practice.
+
+```{r}
+dbDisconnect(conn2)
+```
+
+
+
+## Parallel write
+
+One nice thing about databases is parallel writing. Imagine a function being executed by various processor workers and writing the results at the same database and even at the same table.
+
+There are some nice tricks to allow it with SQLite. Basically, those are the options that I use.
+
+```{r}
+conn <- DBI::dbConnect(RSQLite::SQLite(), database_file, extended_types = TRUE, synchronous = NULL)
+dbExecute(conn, "PRAGMA busy_timeout = 5000")
+dbExecute(conn, "BEGIN IMMEDIATE TRANSACTION")
+dbWriteTable(conn = conn, name = "flights_table", value = flights, append = TRUE)
+dbExecute(conn, "COMMIT TRANSACTION")
+dbDisconnect(conn)
+```
+
+Basically, if you use these commands in a function to be executed in parallel, you should not have problems with concurrent writes. 
+
+## Delete table
+
+One odd thing, after you delete a table in a database you need to vacuum it to get the free space.
+
+Lets delete the file database and do some testing.
+
+```{r}
+unlink(database_file)
+```
+
+We will create the database with two equal tables.
+
+```{r}
+conn <- dbConnect(RSQLite::SQLite(), database_file, extended_types = TRUE)
+dbWriteTable(conn = conn, name = "flights_table_1", value = flights)
+dbWriteTable(conn = conn, name = "flights_table_2", value = flights)
+dbDisconnect(conn)
+```
+
+What's is the size of the file?
+
+```{r}
+fs::file_size(database_file)
+```
+
+Now, lets delete one of the tables.
+
+```{r}
+conn <- dbConnect(RSQLite::SQLite(), database_file, extended_types = TRUE)
+dbRemoveTable(conn = conn, name = "flights_table_1")
+dbDisconnect(conn)
+
+fs::file_size(database_file)
+```
+Same size... so, lets vacuum it!
+
+```{r}
+conn <- dbConnect(RSQLite::SQLite(), database_file, extended_types = TRUE)
+dbExecute(conn, "VACUUM;")
+dbDisconnect(conn)
+
+fs::file_size(database_file)
+```
+
+And we have a smaller size!

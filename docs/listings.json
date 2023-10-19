@@ -19,8 +19,14 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/post-with-code/index.html",
-      "/posts/welcome/index.html"
+      "/posts/some-tips-for-sqlite.html"
+    ]
+  },
+  {
+    "listing": "/data.html",
+    "items": [
+      "/data-projects/era5land-daily-latin-america.html",
+      "/data-projects/brazil-climate-zonal-indicators.html"
     ]
   },
   {
@@ -50,13 +56,6 @@
       "/publications/araujoWHATHAVEWE2019a.html",
       "/publications/marinhoBurdenDiseaseBrazil2018.html",
       "/publications/saldanhaPropostaUmObservatorio2017.html"
-    ]
-  },
-  {
-    "listing": "/data.html",
-    "items": [
-      "/data-projects/era5land-daily-latin-america.html",
-      "/data-projects/brazil-climate-zonal-indicators.html"
     ]
   }
 ]
