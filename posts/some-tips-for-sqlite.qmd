@@ -4,94 +4,94 @@ date: "2023-10-19"
 categories: [database, sqlite]
 ---
 
-SQLite database are very popular and make a great job for its simplicity and practicity. I have been using it for a while and would like to organize some tips.
+Databases are very useful for handling large-than-memory datasets, a common problem in Data Science. Several database engines work very well with R and Posit has a nice [guide overview](https://solutions.posit.co/connections/db/) of them.
 
-## Dates and extended types
+[SQLite](https://www.sqlite.org/index.html) is a very popular engine due its simplicity. You do not need to install a database server on your environment because SQLite stores the database in a simple single file that you can modify, copy, store at Google Drive etc.
 
-Natively, SQLite databases does not handle dates.
+I have been using it for some time and collected some practical tips for some practical situations.
 
-Let's create and example with some data from flights
+First, lets have some data to use at the examples.
 
 ```{r}
+#| message: false
 library(dplyr)
 library(lubridate)
-library(DBI)
 library(nycflights13)
 
 flights <- flights %>% 
   select(year, month, day, hour, minute) %>% 
   mutate(departure = make_date(year, month, day))
 
-head(flights)
+glimpse(flights)
 ```
-The data is ready to store at the database.
+
+I specifically created a variable called `departure` to have a date type on our example dataset.
+
+## Dates
+
+Natively, SQLite databases does not handle dates and this may be difficult in the beginning. Let's explore some options to handle dates with SQLite.
+
+First, we need to create a database in a temporary file using two packages: `DBI` and `RSQLite`.
 
 ```{r}
+library(DBI)
+library(RSQLite)
+
 database_file <- tempfile()
-
 conn <- dbConnect(RSQLite::SQLite(), database_file)
+```
 
+Observe that the `conn` object is NOT the database, is just a connection instruction to the database stored in a file.
+
+Lets write the `flights` tibble to the database.
+
+```{r}
 dbWriteTable(conn, name = "flights_table", value = flights)
 ```
 
-Let's take a look how the data was stored.
+Now, let's take a look how the tibble was stored.
 
 ```{r}
-tbl(conn, "flights_table") %>% head() %>% collect()
+tbl(conn, "flights_table") %>%
+  head() %>% 
+  collect()
 ```
-The departure variable seems a confusing text. But we have a savior called `extended_types`.
 
-First, lets close the connection with the database.
+The departure variable is no more a human-readable date, it is now a integer value in Unix time. That means: "the number of seconds since 1970-01-01 00:00:00 UTC". Now very practical...
+
+Thus, there as two options for this: you may convert your date variable to a string variable (`as.character(...)`) or use an argument called [`extended_types`](https://rsqlite.r-dbi.org/reference/sqlite) with the `dbConnect` command.
+
+If you store the date variable as string, you will need to reconvert it to date wherever your collect data from your database, what is not very practical. Let's see how the `extented_types` option works.
+
+First, let's close our connection.
 
 ```{r}
 dbDisconnect(conn)
 ```
 
-And recreate the table with a new connection
+We will modify our connection using this argument.
 
 ```{r}
-conn2 <- dbConnect(RSQLite::SQLite(), database_file, extended_types = TRUE)
-dbWriteTable(conn2, name = "flights_table", value = flights, overwrite = TRUE)
+conn <- dbConnect(RSQLite::SQLite(), database_file, extended_types = TRUE)
 ```
 
-Let's see the difference...
+And now we will overwrite the data at the same table.
 
 ```{r}
-tbl(conn2, "flights_table") %>% head() %>% collect()
+dbWriteTable(conn, name = "flights_table", value = flights, overwrite = TRUE)
 ```
 
-And voilà! We have the dates.
-
-But if you need to store this variable as character with a human readable value? There is a trick.
-
-First, you need to create a temporary table with the same schema but the date as `varchar`.
+Let's see the result.
 
 ```{r}
-dbExecute(conn2, "CREATE TABLE 'flights_table_2'(year bigint, month bigint, day bigint, hour float, minute float, departure varchar)")
+tbl(conn, "flights_table") %>% head() %>% collect()
 ```
 
-And then copy the data from the original table to this empty table.
-
-```{r}
-dbExecute(conn2, "INSERT INTO 'flights_table_2' SELECT year, month, day, hour, minute, strftime('%Y-%m-%d', departure*24*60*60, 'unixepoch') FROM 'flights_table'")
-```
-
-Let's see the new table
-
-```{r}
-tbl(conn2, "flights_table_2") %>% head() %>% collect()
-```
-That's it! Let's close the connection, its a good practice.
-
-```{r}
-dbDisconnect(conn2)
-```
-
-
+Voilà! Now we can now see human-readable dates with a UNIX time variable.
 
 ## Parallel write
 
-One nice thing about databases is parallel writing. Imagine a function being executed by various processor workers and writing the results at the same database and even at the same table.
+One nice thing about databases is parallel writing. Imagine a [function being executed in parallel](https://furrr.futureverse.org) and writing the results at the same database and even at the same table.
 
 There are some nice tricks to allow it with SQLite. Basically, those are the options that I use.
 
@@ -104,19 +104,19 @@ dbExecute(conn, "COMMIT TRANSACTION")
 dbDisconnect(conn)
 ```
 
-Basically, if you use these commands in a function to be executed in parallel, you should not have problems with concurrent writes. 
+These options will secure that your connection waits other connections to conclude and immediately [commit](https://en.wikipedia.org/wiki/Commit_(data_management)) the transaction to the database.
 
-## Delete table
+## Delete table and vacuum
 
-One odd thing, after you delete a table in a database you need to vacuum it to get the free space.
+When you delete a table inside a database, the physical space used by this table is not automatically made available. The database will still have the same size in disk. To free this space, we need to vacuum the database.
 
-Lets delete the file database and do some testing.
+Lets delete out last example database and do some testing.
 
 ```{r}
 unlink(database_file)
 ```
 
-We will create the database with two equal tables.
+We will create a new database with two equal tables.
 
 ```{r}
 conn <- dbConnect(RSQLite::SQLite(), database_file, extended_types = TRUE)
@@ -140,7 +140,8 @@ dbDisconnect(conn)
 
 fs::file_size(database_file)
 ```
-Same size... so, lets vacuum it!
+
+Same size... Let's vacuum it!
 
 ```{r}
 conn <- dbConnect(RSQLite::SQLite(), database_file, extended_types = TRUE)
@@ -150,4 +151,10 @@ dbDisconnect(conn)
 fs::file_size(database_file)
 ```
 
-And we have a smaller size!
+And we have a smaller size now!
+
+## Session info
+
+```{r}
+sessionInfo()
+```

@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs/
+  render: 
+    - "!posts_draft/"
 
 website:
   title: "Raphael Saldanha"

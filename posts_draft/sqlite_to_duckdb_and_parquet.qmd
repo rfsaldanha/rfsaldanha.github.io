@@ -1,0 +1,37 @@
+---
+title: "SQLite database conversion to DuckDB and Parquet files"
+date: "2023-10-19"
+categories: [database, duckdb, parquet]
+---
+
+## SQLite conversion to DuckDB and parquet files
+
+Some time ago, I was working with a very big table that had a UNIX date variable in a SQLite database, and I wanted to convert this database to the [DuckDB](https://duckdb.org) format and the table to a [parquet file](https://parquet.apache.org).
+
+For this, I planned to use the
+
+This variable is stored as a UNIX time.
+
+First, you need to create a temporary table with the same schema but the date as `varchar`.
+
+```{r}
+dbExecute(conn2, "CREATE TABLE 'flights_table_2'(year bigint, month bigint, day bigint, hour float, minute float, departure varchar)")
+```
+
+And then copy the data from the original table to this empty table.
+
+```{r}
+dbExecute(conn2, "INSERT INTO 'flights_table_2' SELECT year, month, day, hour, minute, strftime('%Y-%m-%d', departure*24*60*60, 'unixepoch') FROM 'flights_table'")
+```
+
+Let's see the new table
+
+```{r}
+tbl(conn2, "flights_table_2") %>% head() %>% collect()
+```
+
+That's it! Let's close the connection, its a good practice.
+
+```{r}
+dbDisconnect(conn2)
+```
