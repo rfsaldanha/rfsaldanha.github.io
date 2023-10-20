@@ -1,6 +1,6 @@
 ---
 title: "Some tips to work with SQLite database"
-date: "2023-10-19"
+date: "2023-10-20"
 categories: [database, sqlite]
 ---
 

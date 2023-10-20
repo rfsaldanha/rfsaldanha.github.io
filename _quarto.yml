@@ -2,6 +2,7 @@ project:
   type: website
   output-dir: docs/
   render: 
+    - "*.qmd"
     - "!posts_draft/"
 
 website:

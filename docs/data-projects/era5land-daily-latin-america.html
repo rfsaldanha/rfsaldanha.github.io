@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.163">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Raphael Saldanha - ERA5-Land selected indicators daily aggregates for Latin America</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2M7VLSRDCB"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
+</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Raphael Saldanha</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../projects.html" rel="" target="">
+ <span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../code.html" rel="" target="">
+ <span class="menu-text">Packages &amp; Code</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../data.html" rel="" target="">
+ <span class="menu-text">Data</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../publications.html" rel="" target="">
+ <span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../cv.html" rel="" target="">
+ <span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">ERA5-Land selected indicators daily aggregates for Latin America</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/era5-land-daily-aggregates.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Maximum temperature (k)</figcaption>
+</figure>
+</div>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>The <a href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land?tab=overview">ERA5-Land</a> reanalysis from The Copernicus Programme is an incredible source of climate data with global coverage of land areas from 1950 to the present, at 10km spatial resolution. Its original data is at hourly interval, and monthly aggregates are also available at the <a href="https://cds.climate.copernicus.eu">Copernicus Data Store</a> (CDS).</p>
+<p>For some applications like Climate-Sensitive Diseases (CSD) modelling, the hourly interval may be too much detailed, but the monthly aggregation is too coarse.</p>
+<p>For this reason, I created daily aggregates from some ERA5-Land indicators for the Latin America region.</p>
+</section>
+<section id="methodology" class="level2">
+<h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
+<p>I developed an <a href="https://github.com/rfsaldanha/era5daily">R script</a> using the KrigR package <span class="citation" data-cites="kusch2022">(<a href="#ref-kusch2022" role="doc-biblioref">Kusch and Davy 2022</a>)</span>. The script downloads a set of indicators, starting on 1950, for a geographical bounding box covering the Latin America region (coordinates -118.47,-34.1,-56.65, 33.28), and aggregates the data from hourly to daily, saving its results as NetCDF files. Each resulting file covers a year’s month and presents data layers for each day of the respective month.</p>
+<p>The table bellow contains the time aggregation functions applied to each climate indicator.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Indicator</th>
+<th>Daily aggregation function</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2m temperature</td>
+<td>mean, max, min</td>
+</tr>
+<tr class="even">
+<td>2m dewpoint temperature</td>
+<td>mean</td>
+</tr>
+<tr class="odd">
+<td>u component of wind</td>
+<td>mean</td>
+</tr>
+<tr class="even">
+<td>v component of wind</td>
+<td>mean</td>
+</tr>
+<tr class="odd">
+<td>surface temperature</td>
+<td>mean</td>
+</tr>
+<tr class="even">
+<td>total precipitation</td>
+<td>sum</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<p>The resulting NetCDF files are available for download at Zenodo.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Year</th>
+<th>Zenodo deposit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1950</td>
+<td><a href="https://doi.org/10.5281/zenodo.10013254"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10013254-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="even">
+<td>1951</td>
+<td><a href="https://doi.org/10.5281/zenodo.10013695"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10013695-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="odd">
+<td>1952</td>
+<td><a href="https://doi.org/10.5281/zenodo.10013780"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10013780-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="even">
+<td>1953</td>
+<td><a href="https://doi.org/10.5281/zenodo.10014197"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10014197-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="odd">
+<td>1954</td>
+<td><a href="https://doi.org/10.5281/zenodo.10014368"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10014368-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="even">
+<td>1955</td>
+<td><a href="https://doi.org/10.5281/zenodo.10014473"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10014473-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="odd">
+<td>1956</td>
+<td><a href="https://doi.org/10.5281/zenodo.10014692"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10014692-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="even">
+<td>1957</td>
+<td><a href="https://doi.org/10.5281/zenodo.10014721"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10014721-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="odd">
+<td>1958</td>
+<td><a href="https://doi.org/10.5281/zenodo.10014753"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10014753-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="even">
+<td>1959</td>
+<td><a href="https://doi.org/10.5281/zenodo.10014770"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10014770-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="odd">
+<td>1960</td>
+<td><a href="https://doi.org/10.5281/zenodo.10014789"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10014789-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="even">
+<td>1961</td>
+<td><a href="https://doi.org/10.5281/zenodo.10020496"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10020496-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="odd">
+<td>1962</td>
+<td><a href="https://doi.org/10.5281/zenodo.10020519"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10020519-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="even">
+<td>1963</td>
+<td><a href="https://doi.org/10.5281/zenodo.10020529"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10020529-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="odd">
+<td>1964</td>
+<td><a href="https://doi.org/10.5281/zenodo.10020538"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10020538-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="even">
+<td>1965</td>
+<td><a href="https://doi.org/10.5281/zenodo.10020551"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10020551-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="odd">
+<td>1966</td>
+<td><a href="https://doi.org/10.5281/zenodo.10020599"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10020599-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="even">
+<td>1967</td>
+<td><a href="https://doi.org/10.5281/zenodo.10020662"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10020662-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="odd">
+<td>1968</td>
+<td><a href="https://doi.org/10.5281/zenodo.10020678"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10020678-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="even">
+<td>1969</td>
+<td><a href="https://doi.org/10.5281/zenodo.10020689"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10020689-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="odd">
+<td>1970</td>
+<td><a href="https://doi.org/10.5281/zenodo.10020858"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10020858-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="even">
+<td>1971</td>
+<td><a href="https://doi.org/10.5281/zenodo.10021121"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10021121-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="odd">
+<td>1972</td>
+<td><a href="https://doi.org/10.5281/zenodo.10021299"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10021299-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="even">
+<td>1973</td>
+<td><a href="https://doi.org/10.5281/zenodo.10021666"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10021666-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="odd">
+<td>1974</td>
+<td><a href="https://doi.org/10.5281/zenodo.10021705"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10021705-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="even">
+<td>1975</td>
+<td><a href="https://doi.org/10.5281/zenodo.10021942"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10021942-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="odd">
+<td>1976</td>
+<td><a href="https://doi.org/10.5281/zenodo.10021942"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10021942-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="even">
+<td>1977</td>
+<td><a href="https://doi.org/10.5281/zenodo.10022016"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10022016-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="odd">
+<td>1978</td>
+<td><a href="https://doi.org/10.5281/zenodo.10022060"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10022060-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="even">
+<td>1979</td>
+<td><a href="https://doi.org/10.5281/zenodo.10022144"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10022144-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="odd">
+<td>1980</td>
+<td><a href="https://doi.org/10.5281/zenodo.10022314"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10022314-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="even">
+<td>1981</td>
+<td><a href="https://doi.org/10.5281/zenodo.10022535"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10022535-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="odd">
+<td>1982</td>
+<td><a href="https://doi.org/10.5281/zenodo.10022545"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10022545-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="even">
+<td>1983</td>
+<td><a href="https://doi.org/10.5281/zenodo.10022560"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10022560-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="odd">
+<td>1984</td>
+<td><a href="https://doi.org/10.5281/zenodo.10022570"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10022570-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="even">
+<td>1985</td>
+<td><a href="https://doi.org/10.5281/zenodo.10022578"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10022578-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="odd">
+<td>1986</td>
+<td><a href="https://doi.org/10.5281/zenodo.10022588"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10022588-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="even">
+<td>1987</td>
+<td><a href="https://doi.org/10.5281/zenodo.10022592"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10022592-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="odd">
+<td>1988</td>
+<td><a href="https://doi.org/10.5281/zenodo.10022606"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10022606-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="even">
+<td>1989</td>
+<td><a href="https://doi.org/10.5281/zenodo.10022631"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10022631-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="odd">
+<td>1990</td>
+<td><a href="https://doi.org/10.5281/zenodo.10022640"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.10022640-green.svg" class="img-fluid"></a></td>
+</tr>
+<tr class="even">
+<td>1991</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1992</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>1993</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1994</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>1995</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1996</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>1997</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1998</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>1999</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2000</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2001</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2002</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2003</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2004</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2005</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2006</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2007</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2008</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2009</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2010</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2011</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2012</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2013</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2014</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2015</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2016</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2017</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2018</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2019</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2020</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2021</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2022</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-kusch2022" class="csl-entry" role="listitem">
+Kusch, Erik, and Richard Davy. 2022. <span>“KrigR<span></span>a Tool for Downloading and Statistically Downscaling Climate Reanalysis Data.”</span> <em>Environmental Research Letters</em> 17 (2): 024005. <a href="https://doi.org/10.1088/1748-9326/ac48b3">https://doi.org/10.1088/1748-9326/ac48b3</a>.
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    if (id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
+        }
+        return container.innerHTML
+      } else {
+        return note.innerHTML;
+      }
+    } else {
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      try { hash = new URL(url).hash; } catch {}
+      const id = hash.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note !== null) {
+        try {
+          const html = processXRef(id, note);
+          instance.setContent(html);
+        } finally {
+          instance.enable();
+          instance.show();
+        }
+      } else {
+        // See if we can fetch this
+        fetch(url.split('#')[0])
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.getElementById(id);
+          if (note !== null) {
+            const html = processXRef(id, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Website made with <a href="https://quarto.org/">Quarto</a>.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
