@@ -33,7 +33,7 @@ The table bellow contains the time aggregation functions applied to each climate
 The resulting NetCDF files are available for download at Zenodo.
 
 | Year | Zenodo deposit                                                                                                     |
-|----------------|--------------------------------------------------------|
+|------------------|------------------------------------------------------|
 | 1950 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10013254-green.svg)](https://doi.org/10.5281/zenodo.10013254) |
 | 1951 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10013695-green.svg)](https://doi.org/10.5281/zenodo.10013695) |
 | 1952 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10013780-green.svg)](https://doi.org/10.5281/zenodo.10013780) |
@@ -75,16 +75,16 @@ The resulting NetCDF files are available for download at Zenodo.
 | 1988 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10022606-green.svg)](https://doi.org/10.5281/zenodo.10022606) |
 | 1989 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10022631-green.svg)](https://doi.org/10.5281/zenodo.10022631) |
 | 1990 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10022640-green.svg)](https://doi.org/10.5281/zenodo.10022640) |
-| 1991 |                                                                                                                    |
-| 1992 |                                                                                                                    |
-| 1993 |                                                                                                                    |
-| 1994 |                                                                                                                    |
-| 1995 |                                                                                                                    |
-| 1996 |                                                                                                                    |
-| 1997 |                                                                                                                    |
-| 1998 |                                                                                                                    |
-| 1999 |                                                                                                                    |
-| 2000 |                                                                                                                    |
+| 1991 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10032813-green.svg)](https://doi.org/10.5281/zenodo.10032813) |
+| 1992 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10032858-green.svg)](https://doi.org/10.5281/zenodo.10032858) |
+| 1993 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10033250-green.svg)](https://doi.org/10.5281/zenodo.10033250) |
+| 1994 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10033275-green.svg)](https://doi.org/10.5281/zenodo.10033275) |
+| 1995 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10033305-green.svg)](https://doi.org/10.5281/zenodo.10033305) |
+| 1996 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10033352-green.svg)](https://doi.org/10.5281/zenodo.10033352) |
+| 1997 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10033754-green.svg)](https://doi.org/10.5281/zenodo.10033754) |
+| 1998 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10033834-green.svg)](https://doi.org/10.5281/zenodo.10033834) |
+| 1999 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10033982-green.svg)](https://doi.org/10.5281/zenodo.10033982) |
+| 2000 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10033994-green.svg)](https://doi.org/10.5281/zenodo.10033994) |
 | 2001 |                                                                                                                    |
 | 2002 |                                                                                                                    |
 | 2003 |                                                                                                                    |
