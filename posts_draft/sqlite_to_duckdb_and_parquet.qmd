@@ -26,19 +26,19 @@ library(RSQLite)
 
 sqlite_database_file <- tempfile()
 
-conn <- dbConnect(
+conn_sqlite <- dbConnect(
   RSQLite::SQLite(), 
   sqlite_database_file, 
   extended_types = TRUE
 )
 
-dbWriteTable(conn, name = "mtcars_table", value = mtcars, overwrite = TRUE)
+dbWriteTable(conn_sqlite, name = "mtcars_table", value = mtcars, overwrite = TRUE)
 ```
 
 Let's take a look.
 
 ```{r}
-tbl(conn, "mtcars_table") %>% head() %>% collect()
+tbl(conn_sqlite, "mtcars_table") %>% head() %>% collect()
 ```
 
 ::: callout-note
@@ -81,9 +81,12 @@ parquet_file <- tempfile()
 dbExecute(conn_duckdb, glue::glue("COPY (SELECT * FROM 'mtcars_table') TO '{parquet_file}' (FORMAT 'PARQUET')"))
 ```
 
-And that's it!
+And that's it! Let's close the connections.
 
-
+```{r}
+dbDisconnect(conn_sqlite)
+dbDisconnect(conn_duckdb, shutdown = TRUE)
+```
 
 ## From SQLite to DuckDB, a not so simple example
 
@@ -98,50 +101,50 @@ Let´s see how to use this second option. For this example, I will use the `flig
 
 ```{r}
 library(nycflights13)
+
+glimpse(flights)
 ```
 
+The `time_hour` variable is datetime.
 
+### SQLite database
 
-
-
-
-
-This shoul work, but we have an erron being caused by the `departure` variable. The problem is that the DuckDB extension does not know how to handle with the POSIX date format.
-
-To make it work, I developed one approach.
+Let's store this at a SQLite database.
 
 ```{r}
-dbExecute(conn_duckdb, "SET GLOBAL sqlite_all_varchar=true;")
+sqlite_database_file <- tempfile()
 
-dbExecute(conn_duckdb, "CREATE TABLE 'flights_table'(year bigint, month bigint, day bigint, hour float, minute float, departure varchar)")
+conn_sqlite <- dbConnect(
+  RSQLite::SQLite(), 
+  sqlite_database_file, 
+  extended_types = TRUE
+)
 
-dbExecute(conn2, "INSERT INTO 'flights_table_2' SELECT year, month, day, hour, minute, strftime('%Y-%m-%d', departure*24*60*60, 'unixepoch') FROM 'flights_table'")
+dbWriteTable(conn_sqlite, name = "flights_table", value = flights, overwrite = TRUE)
 ```
 
-For this, I planned to use the
+### From SQLite to DuckDB
 
-This variable is stored as a UNIX time.
-
-First, you need to create a temporary table with the same schema but the date as `varchar`.
+Ideally, we could use the same steps from the last example. Let's try it.
 
 ```{r}
-dbExecute(conn2, "CREATE TABLE 'flights_table_2'(year bigint, month bigint, day bigint, hour float, minute float, departure varchar)")
+duckdb_database_file <- tempfile()
+
+conn_duckdb <- dbConnect(
+  duckdb::duckdb(), 
+  duckdb_database_file
+)
+
+dbExecute(conn_duckdb, "INSTALL sqlite;")
+dbExecute(conn_duckdb, "LOAD sqlite;")
+
+dbExecute(conn_duckdb, glue::glue("CREATE TABLE flights_table AS SELECT * FROM sqlite_scan('{sqlite_database_file}', 'flights_table');"))
 ```
 
-And then copy the data from the original table to this empty table.
+And we have an error... after long hours investigating this, I created the following procedure.
+
+First, we need to create a copy of the SQLite table with the same schema.
 
 ```{r}
-dbExecute(conn2, "INSERT INTO 'flights_table_2' SELECT year, month, day, hour, minute, strftime('%Y-%m-%d', departure*24*60*60, 'unixepoch') FROM 'flights_table'")
-```
-
-Let's see the new table
-
-```{r}
-tbl(conn2, "flights_table_2") %>% head() %>% collect()
-```
-
-That's it! Let's close the connection, its a good practice.
-
-```{r}
-dbDisconnect(conn2)
+dbExecute(conn_sqlite, "CREATE TABLE 'flights_table_2'(code_muni bigint, date varchar, name varchar, value float)")
 ```
