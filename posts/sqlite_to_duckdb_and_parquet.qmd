@@ -86,3 +86,9 @@ And that's it! Let's close the connections.
 DBI::dbDisconnect(conn_sqlite)
 DBI::dbDisconnect(conn_duckdb, shutdown = TRUE)
 ```
+
+## Session info
+
+```{r}
+sessionInfo()
+```
