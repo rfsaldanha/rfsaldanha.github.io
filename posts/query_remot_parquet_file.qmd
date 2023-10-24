@@ -57,12 +57,10 @@ res <- DBI::dbGetQuery(
 dplyr::glimpse(res)
 ```
 
-This query selects all data from the parquet file and return the first 100 rows.
-
-The query is carried out by DuckDB accessing the remote parquet file, but the file is not downloaded.
+This query selects some variables and filter the year, returning the first 100 rows. The query is carried out by DuckDB accessing the remote parquet file, but the file is not downloaded. That's great!!
 
 ::: callout-tip
-Queries that needs more data and return more rows takes longer to run, specially transmitting data over the Internet. Craft carefully your queries with this in mind.
+Queries that needs more data and return more rows takes longer to run, especially transmitting data over the Internet. Craft carefully your queries with this in mind.
 :::
 
 Now we can close the connection.
