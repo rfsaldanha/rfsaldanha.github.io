@@ -1,14 +1,16 @@
 ---
 title: "SQLite database conversion to DuckDB and Parquet files"
-date: "2023-10-19"
-categories: [database, duckdb, parquet]
+date: "2023-10-24"
+categories: [database, sqlite, duckdb, parquet]
 ---
 
-I will try to cover on this post some steps to convert a SQLite database to [DuckDB](https://duckdb.org) and then export it to [parquet](https://parquet.apache.org).
+[DuckDB](https://duckdb.org) is a relatively new database that works in a file, just like SQLite, but is very fast and designed for data science workflows.
+
+I am writing this post to cover the following scenario: you already have a SQLite database and want to convert it to DuckDB, and also export it to a [parquet](https://parquet.apache.org) file.
 
 ## SQLite database
 
-Let's use the `mtcars` dataset.
+We need a SQLite database example to later convert it to DuckDB. Let's use the `mtcars` dataset.
 
 ```{r}
 #| message: false
@@ -18,21 +20,18 @@ library(lubridate)
 glimpse(mtcars)
 ```
 
-And write it to an SQLite table.
+And write `mtcars` in a SQLite database.
 
 ```{r}
-library(DBI)
-library(RSQLite)
-
 sqlite_database_file <- tempfile()
 
-conn_sqlite <- dbConnect(
+conn_sqlite <- DBI::dbConnect(
   RSQLite::SQLite(), 
   sqlite_database_file, 
   extended_types = TRUE
 )
 
-dbWriteTable(conn_sqlite, name = "mtcars_table", value = mtcars, overwrite = TRUE)
+DBI::dbWriteTable(conn_sqlite, name = "mtcars_table", value = mtcars, overwrite = TRUE)
 ```
 
 Let's take a look.
@@ -52,99 +51,38 @@ First, we need to create our DuckDB database.
 ```{r}
 duckdb_database_file <- tempfile()
 
-conn_duckdb <- dbConnect(
+conn_duckdb <- DBI::dbConnect(
   duckdb::duckdb(), 
   duckdb_database_file
 )
 ```
 
-To import our data, we can use a DuckDB extension to read SQLite databases.
+To import our data, we can use a [DuckDB extension to read SQLite databases](https://duckdb.org/docs/guides/import/query_sqlite.html).
 
 ```{r}
-dbExecute(conn_duckdb, "INSTALL sqlite;")
-dbExecute(conn_duckdb, "LOAD sqlite;")
+DBI::dbExecute(conn_duckdb, "INSTALL sqlite;")
+DBI::dbExecute(conn_duckdb, "LOAD sqlite;")
 ```
 
 ```{r}
-dbExecute(conn_duckdb, glue::glue("CREATE TABLE mtcars_table AS SELECT * FROM sqlite_scan('{sqlite_database_file}', 'mtcars_table');"))
+DBI::dbExecute(conn_duckdb, glue::glue("CREATE TABLE mtcars_table AS SELECT * FROM sqlite_scan('{sqlite_database_file}', 'mtcars_table');"))
 ```
 
 Great! Now we have the same database on DuckDB.
 
 ## From DuckDB to Parquet
 
-It is very simple to export a DuckDB table to a parquet file.
+It is very simple to [export](https://duckdb.org/docs/guides/import/parquet_export) a DuckDB table to a parquet file.
 
 ```{r}
 parquet_file <- tempfile()
 
-dbExecute(conn_duckdb, glue::glue("COPY (SELECT * FROM 'mtcars_table') TO '{parquet_file}' (FORMAT 'PARQUET')"))
+DBI::dbExecute(conn_duckdb, glue::glue("COPY (SELECT * FROM 'mtcars_table') TO '{parquet_file}' (FORMAT 'PARQUET')"))
 ```
 
 And that's it! Let's close the connections.
 
 ```{r}
-dbDisconnect(conn_sqlite)
-dbDisconnect(conn_duckdb, shutdown = TRUE)
-```
-
-## From SQLite to DuckDB, a not so simple example
-
-On the last example, we had a very simple table without dates. But, if we have a table with date or datetime variables, a problem may arise because DuckDB's SQLite extension does not know how to handle with POSIX variables.
-
-We have two solutions:
-
-1.  Convert the date/datetime variable to string before writing it to SQLite, or
-2.  Manually convert the POSIX variable in a way that DuckDB can interpret.
-
-Let´s see how to use this second option. For this example, I will use the `flights` dataset.
-
-```{r}
-library(nycflights13)
-
-glimpse(flights)
-```
-
-The `time_hour` variable is datetime.
-
-### SQLite database
-
-Let's store this at a SQLite database.
-
-```{r}
-sqlite_database_file <- tempfile()
-
-conn_sqlite <- dbConnect(
-  RSQLite::SQLite(), 
-  sqlite_database_file, 
-  extended_types = TRUE
-)
-
-dbWriteTable(conn_sqlite, name = "flights_table", value = flights, overwrite = TRUE)
-```
-
-### From SQLite to DuckDB
-
-Ideally, we could use the same steps from the last example. Let's try it.
-
-```{r}
-duckdb_database_file <- tempfile()
-
-conn_duckdb <- dbConnect(
-  duckdb::duckdb(), 
-  duckdb_database_file
-)
-
-dbExecute(conn_duckdb, "INSTALL sqlite;")
-dbExecute(conn_duckdb, "LOAD sqlite;")
-
-dbExecute(conn_duckdb, glue::glue("CREATE TABLE flights_table AS SELECT * FROM sqlite_scan('{sqlite_database_file}', 'flights_table');"))
-```
-
-And we have an error... after long hours investigating this, I created the following procedure.
-
-First, we need to create a copy of the SQLite table with the same schema.
-
-```{r}
-dbExecute(conn_sqlite, "CREATE TABLE 'flights_table_2'(code_muni bigint, date varchar, name varchar, value float)")
+DBI::dbDisconnect(conn_sqlite)
+DBI::dbDisconnect(conn_duckdb, shutdown = TRUE)
 ```

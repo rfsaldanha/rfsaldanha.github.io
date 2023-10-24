@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2023-10-19">
+<meta name="dcterms.date" content="2023-10-24">
 
 <title>SQLite database conversion to DuckDB and Parquet files</title>
 <style>
@@ -83,6 +83,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1 class="title">SQLite database conversion to DuckDB and Parquet files</h1>
   <div class="quarto-categories">
     <div class="quarto-category">database</div>
+    <div class="quarto-category">sqlite</div>
     <div class="quarto-category">duckdb</div>
     <div class="quarto-category">parquet</div>
   </div>
@@ -96,7 +97,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 19, 2023</p>
+      <p class="date">October 24, 2023</p>
     </div>
   </div>
   
@@ -106,10 +107,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>I will try to cover on this post some steps to convert a SQLite database to <a href="https://duckdb.org">DuckDB</a> and then export it to <a href="https://parquet.apache.org">parquet</a>.</p>
+<p><a href="https://duckdb.org">DuckDB</a> is a relatively new database that works in a file, just like SQLite, but is very fast and designed for data science workflows.</p>
+<p>I am writing this post to cover the following scenario: you already have a SQLite database and want to convert it to DuckDB, and also export it to a <a href="https://parquet.apache.org">parquet</a> file.</p>
 <section id="sqlite-database" class="level2">
 <h2 class="anchored" data-anchor-id="sqlite-database">SQLite database</h2>
-<p>Let’s use the <code>mtcars</code> dataset.</p>
+<p>We need a SQLite database example to later convert it to DuckDB. Let’s use the <code>mtcars</code> dataset.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
@@ -131,24 +133,21 @@ $ gear &lt;dbl&gt; 4, 4, 4, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 4, 4, 4, 3
 $ carb &lt;dbl&gt; 4, 4, 1, 1, 2, 1, 4, 2, 2, 4, 4, 3, 3, 3, 4, 4, 4, 1, 2, 1, 1, 2,…</code></pre>
 </div>
 </div>
-<p>And write it to an SQLite table.</p>
+<p>And write <code>mtcars</code> in a SQLite database.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DBI)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RSQLite)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>sqlite_database_file <span class="ot">&lt;-</span> <span class="fu">tempfile</span>()</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>conn <span class="ot">&lt;-</span> <span class="fu">dbConnect</span>(</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  RSQLite<span class="sc">::</span><span class="fu">SQLite</span>(), </span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  sqlite_database_file, </span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">extended_types =</span> <span class="cn">TRUE</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="fu">dbWriteTable</span>(conn, <span class="at">name =</span> <span class="st">"mtcars_table"</span>, <span class="at">value =</span> mtcars, <span class="at">overwrite =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>sqlite_database_file <span class="ot">&lt;-</span> <span class="fu">tempfile</span>()</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>conn_sqlite <span class="ot">&lt;-</span> DBI<span class="sc">::</span><span class="fu">dbConnect</span>(</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  RSQLite<span class="sc">::</span><span class="fu">SQLite</span>(), </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  sqlite_database_file, </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">extended_types =</span> <span class="cn">TRUE</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>DBI<span class="sc">::</span><span class="fu">dbWriteTable</span>(conn_sqlite, <span class="at">name =</span> <span class="st">"mtcars_table"</span>, <span class="at">value =</span> mtcars, <span class="at">overwrite =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Let’s take a look.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl</span>(conn, <span class="st">"mtcars_table"</span>) <span class="sc">%&gt;%</span> <span class="fu">head</span>() <span class="sc">%&gt;%</span> <span class="fu">collect</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl</span>(conn_sqlite, <span class="st">"mtcars_table"</span>) <span class="sc">%&gt;%</span> <span class="fu">head</span>() <span class="sc">%&gt;%</span> <span class="fu">collect</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 11
     mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
@@ -181,24 +180,24 @@ Note
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>duckdb_database_file <span class="ot">&lt;-</span> <span class="fu">tempfile</span>()</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>conn_duckdb <span class="ot">&lt;-</span> <span class="fu">dbConnect</span>(</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>conn_duckdb <span class="ot">&lt;-</span> DBI<span class="sc">::</span><span class="fu">dbConnect</span>(</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  duckdb<span class="sc">::</span><span class="fu">duckdb</span>(), </span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  duckdb_database_file</span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>To import our data, we can use a DuckDB extension to read SQLite databases.</p>
+<p>To import our data, we can use a <a href="https://duckdb.org/docs/guides/import/query_sqlite.html">DuckDB extension to read SQLite databases</a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dbExecute</span>(conn_duckdb, <span class="st">"INSTALL sqlite;"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>DBI<span class="sc">::</span><span class="fu">dbExecute</span>(conn_duckdb, <span class="st">"INSTALL sqlite;"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dbExecute</span>(conn_duckdb, <span class="st">"LOAD sqlite;"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>DBI<span class="sc">::</span><span class="fu">dbExecute</span>(conn_duckdb, <span class="st">"LOAD sqlite;"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dbExecute</span>(conn_duckdb, glue<span class="sc">::</span><span class="fu">glue</span>(<span class="st">"CREATE TABLE mtcars_table AS SELECT * FROM sqlite_scan('{sqlite_database_file}', 'mtcars_table');"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>DBI<span class="sc">::</span><span class="fu">dbExecute</span>(conn_duckdb, glue<span class="sc">::</span><span class="fu">glue</span>(<span class="st">"CREATE TABLE mtcars_table AS SELECT * FROM sqlite_scan('{sqlite_database_file}', 'mtcars_table');"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 32</code></pre>
 </div>
@@ -207,59 +206,20 @@ Note
 </section>
 <section id="from-duckdb-to-parquet" class="level2">
 <h2 class="anchored" data-anchor-id="from-duckdb-to-parquet">From DuckDB to Parquet</h2>
-<p>It is very simple to export a DuckDB table to a parquet file.</p>
+<p>It is very simple to <a href="https://duckdb.org/docs/guides/import/parquet_export">export</a> a DuckDB table to a parquet file.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>parquet_file <span class="ot">&lt;-</span> <span class="fu">tempfile</span>()</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dbExecute</span>(conn_duckdb, glue<span class="sc">::</span><span class="fu">glue</span>(<span class="st">"COPY (SELECT * FROM 'mtcars_table') TO '{parquet_file}' (FORMAT 'PARQUET')"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>DBI<span class="sc">::</span><span class="fu">dbExecute</span>(conn_duckdb, glue<span class="sc">::</span><span class="fu">glue</span>(<span class="st">"COPY (SELECT * FROM 'mtcars_table') TO '{parquet_file}' (FORMAT 'PARQUET')"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 32</code></pre>
 </div>
 </div>
-<p>And that’s it!</p>
-</section>
-<section id="from-sqlite-to-duckdb-a-not-so-simple-example" class="level2">
-<h2 class="anchored" data-anchor-id="from-sqlite-to-duckdb-a-not-so-simple-example">From SQLite to DuckDB, a not so simple example</h2>
-<p>On the last example, we had a very simple table without dates. But, if we have a table with date or datetime variables, a problem may arise because DuckDB’s SQLite extension does not know how to handle with POSIX variables.</p>
-<p>We have two solutions:</p>
-<ol type="1">
-<li>Convert the date/datetime variable to string before writing it to SQLite, or</li>
-<li>Manually convert the POSIX variable in a way that DuckDB can interpret.</li>
-</ol>
-<p>Let´s see how to use this second option. For this example, I will use the <code>flights</code> dataset.</p>
+<p>And that’s it! Let’s close the connections.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(nycflights13)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(flights)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Rows: 336,776
-Columns: 19
-$ year           &lt;int&gt; 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2…
-$ month          &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…
-$ day            &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…
-$ dep_time       &lt;int&gt; 517, 533, 542, 544, 554, 554, 555, 557, 557, 558, 558, …
-$ sched_dep_time &lt;int&gt; 515, 529, 540, 545, 600, 558, 600, 600, 600, 600, 600, …
-$ dep_delay      &lt;dbl&gt; 2, 4, 2, -1, -6, -4, -5, -3, -3, -2, -2, -2, -2, -2, -1…
-$ arr_time       &lt;int&gt; 830, 850, 923, 1004, 812, 740, 913, 709, 838, 753, 849,…
-$ sched_arr_time &lt;int&gt; 819, 830, 850, 1022, 837, 728, 854, 723, 846, 745, 851,…
-$ arr_delay      &lt;dbl&gt; 11, 20, 33, -18, -25, 12, 19, -14, -8, 8, -2, -3, 7, -1…
-$ carrier        &lt;chr&gt; "UA", "UA", "AA", "B6", "DL", "UA", "B6", "EV", "B6", "…
-$ flight         &lt;int&gt; 1545, 1714, 1141, 725, 461, 1696, 507, 5708, 79, 301, 4…
-$ tailnum        &lt;chr&gt; "N14228", "N24211", "N619AA", "N804JB", "N668DN", "N394…
-$ origin         &lt;chr&gt; "EWR", "LGA", "JFK", "JFK", "LGA", "EWR", "EWR", "LGA",…
-$ dest           &lt;chr&gt; "IAH", "IAH", "MIA", "BQN", "ATL", "ORD", "FLL", "IAD",…
-$ air_time       &lt;dbl&gt; 227, 227, 160, 183, 116, 150, 158, 53, 140, 138, 149, 1…
-$ distance       &lt;dbl&gt; 1400, 1416, 1089, 1576, 762, 719, 1065, 229, 944, 733, …
-$ hour           &lt;dbl&gt; 5, 5, 5, 5, 6, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 5, 6, 6, 6…
-$ minute         &lt;dbl&gt; 15, 29, 40, 45, 0, 58, 0, 0, 0, 0, 0, 0, 0, 0, 0, 59, 0…
-$ time_hour      &lt;dttm&gt; 2013-01-01 05:00:00, 2013-01-01 05:00:00, 2013-01-01 0…</code></pre>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>DBI<span class="sc">::</span><span class="fu">dbDisconnect</span>(conn_sqlite)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>DBI<span class="sc">::</span><span class="fu">dbDisconnect</span>(conn_duckdb, <span class="at">shutdown =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<p>The <code>time_hour</code> variable is datetime.</p>
-<section id="sqlite-database-1" class="level3">
-<h3 class="anchored" data-anchor-id="sqlite-database-1">SQLite database</h3>
-<p>Let’s store this at a SQLite database.</p>
-</section>
 </section>
 
 </main>
