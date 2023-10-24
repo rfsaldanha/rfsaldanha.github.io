@@ -1,0 +1,19 @@
+---
+title: "Raster animation"
+date: "2023-10-24"
+categories: [netcdf, terra]
+---
+
+## Import files
+
+```{r}
+tmax <- terra::rast(x = "/media/raphael/lacie/era5land_daily_latin_america/2m_temperature_max/2m_temperature_2022-12-01_2022-12-31_day_max.nc")
+
+terra::plot(tmax[[1:3]], col = rev(heat.colors(7)))
+```
+```{r}
+countries <- rnaturalearth::ne_countries(returnclass = "sf")
+
+plot(countries)
+```
+
