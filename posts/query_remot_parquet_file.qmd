@@ -1,0 +1,78 @@
+---
+title: "Query remote parquet files with DuckDB"
+date: "2023-10-24"
+categories: [database, duckdb, parquet]
+---
+
+DuckDB has a very interesting extension called [httpfs](https://duckdb.org/docs/extensions/httpfs.html) that allows to query CSV and parquet files remotely, including S3 storage.
+
+I will gave here an example about how to query a parquet file stored in a GitHub repository release.
+
+## Remote parquet file
+
+First, I recommend to create an object with the URL of the parquet file. On the example bellow, the parquet file contains the `nycflights13` flights database.
+
+```{r}
+parquet_url <- "https://github.com/rfsaldanha/releases/releases/download/v1/flights.parquet"
+```
+
+This is a real URL. If you try to open it with your browser, a download will start.
+
+## DuckDB database on memory
+
+Next, we create a DuckDB connection. Considering that the data is stored remotely, we can create this DuckDB database on memory and not on disk.
+
+```{r}
+conn <- DBI::dbConnect(
+  duckdb::duckdb(),
+  dbdir = ":memory:"
+)
+```
+
+## httpfs extension
+
+Now, we need to load the `httpfs` extension.
+
+```{r}
+DBI::dbExecute(conn, "INSTALL httpfs;")
+DBI::dbExecute(conn, "LOAD httpfs;")
+```
+
+::: callout-warning
+## Windows users
+
+The last time I checked, the `httpfs` extension was not working on Windows.
+:::
+
+## Query
+
+We are ready to execute a query over the parquet file!
+
+```{r}
+res <- DBI::dbGetQuery(
+  conn, 
+  glue::glue("SELECT carrier, flight, tailnum, year FROM '{parquet_url}' WHERE year = 2013 LIMIT 100")
+)
+
+dplyr::glimpse(res)
+```
+
+This query selects all data from the parquet file and return the first 100 rows.
+
+The query is carried out by DuckDB accessing the remote parquet file, but the file is not downloaded.
+
+::: callout-tip
+Queries that needs more data and return more rows takes longer to run, specially transmitting data over the Internet. Craft carefully your queries with this in mind.
+:::
+
+Now we can close the connection.
+
+```{r}
+DBI::dbDisconnect(conn, shutdown = TRUE)
+```
+
+## Session info
+
+```{r}
+sessionInfo()
+```

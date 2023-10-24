@@ -29,17 +29,18 @@
     ]
   },
   {
-    "listing": "/blog.html",
-    "items": [
-      "/posts/sqlite_to_duckdb_and_parquet.html",
-      "/posts/some-tips-for-sqlite.html"
-    ]
-  },
-  {
     "listing": "/data.html",
     "items": [
       "/data-projects/era5land-daily-latin-america.html",
       "/data-projects/brazil-climate-zonal-indicators.html"
+    ]
+  },
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/posts/query_remot_parquet_file.html",
+      "/posts/sqlite_to_duckdb_and_parquet.html",
+      "/posts/some-tips-for-sqlite.html"
     ]
   },
   {

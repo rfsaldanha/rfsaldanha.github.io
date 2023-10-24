@@ -4,6 +4,8 @@ date: "2023-10-24"
 categories: [netcdf, terra]
 ---
 
+https://r-tmap.github.io/tmap-book/nutshell.html#map-modes
+
 ## Import files
 
 ```{r}
