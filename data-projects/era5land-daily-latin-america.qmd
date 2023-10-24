@@ -33,7 +33,7 @@ The table bellow contains the time aggregation functions applied to each climate
 The resulting NetCDF files are available for download at Zenodo.
 
 | Year | Zenodo deposit                                                                                                     |
-|-------------------|-----------------------------------------------------|
+|------------|------------------------------------------------------------|
 | 1950 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10013254-green.svg)](https://doi.org/10.5281/zenodo.10013254) |
 | 1951 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10013695-green.svg)](https://doi.org/10.5281/zenodo.10013695) |
 | 1952 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10013780-green.svg)](https://doi.org/10.5281/zenodo.10013780) |
@@ -85,25 +85,25 @@ The resulting NetCDF files are available for download at Zenodo.
 | 1998 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10033834-green.svg)](https://doi.org/10.5281/zenodo.10033834) |
 | 1999 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10033982-green.svg)](https://doi.org/10.5281/zenodo.10033982) |
 | 2000 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10033994-green.svg)](https://doi.org/10.5281/zenodo.10033994) |
-| 2001 |                                                                                                                    |
-| 2002 |                                                                                                                    |
-| 2003 |                                                                                                                    |
-| 2004 |                                                                                                                    |
-| 2005 |                                                                                                                    |
-| 2006 |                                                                                                                    |
-| 2007 |                                                                                                                    |
-| 2008 |                                                                                                                    |
-| 2009 |                                                                                                                    |
-| 2010 |                                                                                                                    |
-| 2011 |                                                                                                                    |
-| 2012 |                                                                                                                    |
-| 2013 |                                                                                                                    |
-| 2014 |                                                                                                                    |
-| 2015 |                                                                                                                    |
-| 2016 |                                                                                                                    |
-| 2017 |                                                                                                                    |
-| 2018 |                                                                                                                    |
-| 2019 |                                                                                                                    |
-| 2020 |                                                                                                                    |
-| 2021 |                                                                                                                    |
-| 2022 |                                                                                                                    |
+| 2001 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10034035-green.svg)](https://doi.org/10.5281/zenodo.10034035) |
+| 2002 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10034076-green.svg)](https://doi.org/10.5281/zenodo.10034076) |
+| 2003 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10034109-green.svg)](https://doi.org/10.5281/zenodo.10034109) |
+| 2004 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10034144-green.svg)](https://doi.org/10.5281/zenodo.10034144) |
+| 2005 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10034178-green.svg)](https://doi.org/10.5281/zenodo.10034178) |
+| 2006 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10034203-green.svg)](https://doi.org/10.5281/zenodo.10034203) |
+| 2007 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10034282-green.svg)](https://doi.org/10.5281/zenodo.10034282) |
+| 2008 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10034321-green.svg)](https://doi.org/10.5281/zenodo.10034321) |
+| 2009 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10034369-green.svg)](https://doi.org/10.5281/zenodo.10034369) |
+| 2010 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10034385-green.svg)](https://doi.org/10.5281/zenodo.10034385) |
+| 2011 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10034411-green.svg)](https://doi.org/10.5281/zenodo.10034411) |
+| 2012 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10034442-green.svg)](https://doi.org/10.5281/zenodo.10034442) |
+| 2013 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10034493-green.svg)](https://doi.org/10.5281/zenodo.10034493) |
+| 2014 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10034522-green.svg)](https://doi.org/10.5281/zenodo.10034522) |
+| 2015 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10034540-green.svg)](https://doi.org/10.5281/zenodo.10034540) |
+| 2016 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10034597-green.svg)](https://doi.org/10.5281/zenodo.10034597) |
+| 2017 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10034629-green.svg)](https://doi.org/10.5281/zenodo.10034629) |
+| 2018 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10036122-green.svg)](https://doi.org/10.5281/zenodo.10036122) |
+| 2019 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10036131-green.svg)](https://doi.org/10.5281/zenodo.10036131) |
+| 2020 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10036152-green.svg)](https://doi.org/10.5281/zenodo.10036152) |
+| 2021 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10036161-green.svg)](https://doi.org/10.5281/zenodo.10036161) |
+| 2022 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10036167-green.svg)](https://doi.org/10.5281/zenodo.10036167) |
