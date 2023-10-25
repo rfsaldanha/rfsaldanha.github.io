@@ -63,10 +63,47 @@ This query selects some variables and filter the year, returning the first 100 r
 Queries that needs more data and return more rows takes longer to run, especially transmitting data over the Internet. Craft carefully your queries with this in mind.
 :::
 
+If you want to use `dplyr` verbs with the connection, you can create a view query.
+
+```{r}
+DBI::dbExecute(conn, glue::glue("CREATE VIEW flights AS SELECT * FROM PARQUET_SCAN('{parquet_url}')"))
+```
+
+```{r}
+DBI::dbListTables(conn)
+```
+
+```{r}
+#| message: false
+library(dplyr)
+
+tbl(conn, "flights") %>%
+  group_by(month) %>%
+  summarise(freq = n()) %>%
+  ungroup() %>%
+  collect()
+```
+
 Now we can close the connection.
 
 ```{r}
 DBI::dbDisconnect(conn, shutdown = TRUE)
+```
+
+## Extra: `duckdbfs` package
+
+The [duckdbfs](https://cboettig.github.io/duckdbfs/) offers a neat way to connect to remote parquet files and other connections. The same example using the package:
+
+```{r}
+ds <- duckdbfs::open_dataset(parquet_url)
+```
+
+```{r}
+ds %>%
+  group_by(month) %>%
+  summarise(freq = n()) %>%
+  ungroup() %>%
+  collect()
 ```
 
 ## Session info
@@ -74,3 +111,4 @@ DBI::dbDisconnect(conn, shutdown = TRUE)
 ```{r}
 sessionInfo()
 ```
+
