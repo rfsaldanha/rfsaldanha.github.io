@@ -8,6 +8,8 @@ title: "Packages & Code"
 
 [![](https://gh-card.dev/repos/rfsaldanha/microdatasus.svg?fullname=)](https://github.com/rfsaldanha/microdatasus)
 
+[![](https://gh-card.dev/repos/rfsaldanha/tidyrates.svg?fullname=)](https://github.com/rfsaldanha/tidyrates)
+
 [![](https://gh-card.dev/repos/rfsaldanha/brpop.svg?fullname=)](https://github.com/rfsaldanha/brpop)
 
 [![](https://gh-card.dev/repos/rfsaldanha/brclimr.svg?fullname=)](https://github.com/rfsaldanha/brlimr)
