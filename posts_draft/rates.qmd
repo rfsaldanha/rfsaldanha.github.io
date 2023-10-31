@@ -1,0 +1,185 @@
+---
+title: "Crude and adjusted rates computation in a tidy way"
+date: "2023-10-31"
+categories: [tidyrates]
+---
+
+## Introduction
+
+Rates allow the comparison between the number of counts between multiple classes with different population sizes. For example, 10 disease cases that occur in 100 population region have a different proportional importance than 10 cases in a 1,000 population region.
+
+In epidemiology, those overall rates may be compared if both populations are similar. If the populations have different constitutions, the comparison between overall rates may be misleading as the disease may affect the age groups differently.
+
+## Available packages
+
+Some R packages, such as `epitools` and `epiR`, allow the computation of crude and adjusted rates. Those packages use as input, vectors or matrices containing the events count and population per age group.
+
+The downside of them is that you need to use the rates function repeatedly times if you are going to compute rates for several regions.
+
+## `tidyrates` package
+
+I created the `tidyrates` to compute direct and indirect adjusted rates for several regions, years, and other keys that you might use. Internally, the package wraps the `epitools` functions and applies them to each group.
+
+<https://rfsaldanha.github.io/tidyrates/>
+
+## Practical example: General mortality rates in Brazilian states, from 2010 to 2021
+
+### Mortality data
+
+The dataset bellow presents the total number of deaths by any cause (general mortality) for the Brazilian states per age group, from 2010 to 2021. I collected the data from the [PCDaS](https://pcdas.icict.fiocruz.br/) platform.
+
+```{r}
+gm_br_uf <- readRDS(file = "gm_br_uf.rds")
+
+DT::datatable(gm_br_uf)
+```
+
+### Population data
+
+To compute rates, we will need the state population size per age group each year. The `brpop` package present estimates for this. We just need to do some adaptations.
+
+```{r}
+#| message: false
+library(dplyr)
+library(tidyr)
+library(brpop)
+
+pop_uf <- uf_pop() %>% #<1>
+  filter(year %in% 2010:2021) %>% #<2>
+  rename(population = pop) %>% #<3>
+  filter(age_group != "Total") %>% #<4>
+  mutate(year = as.character(year)) #<5>
+```
+
+1.  Get population table from `brpop` package.
+2.  Filter the desired years
+3.  Rename the population variable
+4.  Remove population totals, keeping only the population per age group
+5.  Change year variable from numeric to character.
+
+```{r}
+DT::datatable(pop_uf)
+```
+
+### Reference population
+
+To compute standardized rates, we need a reference population. We may use the SEER reference population (which is a corrected version from the WHO reference population) that is present in the `tidyrates` package. We need to use the same age group labels and also merge the population from 80 years or more to make it compatible with our data.
+
+```{r}
+seer2 <- tidyrates::seer_std_pop %>%
+  mutate(age_group = case_when(
+    age_group == "0-4" ~ "From 0 to 4 years",
+    age_group == "5-9" ~ "From 5 to 9 years",
+    age_group == "10-14" ~ "From 10 to 14 years",
+    age_group == "15-19" ~ "From 15 to 19 years",
+    age_group == "20-24" ~ "From 20 to 24 years",
+    age_group == "25-29" ~ "From 25 to 29 years",
+    age_group == "30-34" ~ "From 30 to 34 years",
+    age_group == "35-39" ~ "From 35 to 39 years",
+    age_group == "40-44" ~ "From 40 to 44 years",
+    age_group == "45-49" ~ "From 45 to 49 years",
+    age_group == "50-54" ~ "From 50 to 54 years",
+    age_group == "55-59" ~ "From 55 to 59 years",
+    age_group == "60-64" ~ "From 60 to 64 years",
+    age_group == "65-69" ~ "From 65 to 69 years",
+    age_group == "70-74" ~ "From 70 to 74 years",
+    age_group == "75-79" ~ "From 75 to 79 years",
+    age_group == "80-84" ~ "From 80 years or more",
+    age_group == "85-89" ~ "From 80 years or more",
+    age_group == "90-94" ~ "From 80 years or more",
+    age_group == "95-99" ~ "From 80 years or more",
+    age_group == "100+" ~ "From 80 years or more",
+    .default = age_group
+  )) %>%
+  group_by(age_group) %>%
+  summarise(population = sum(population)) %>%
+  ungroup()
+```
+
+### Crude and direct adjusted rates
+
+Now, we can join the mortality dataset with the population dataset by uf, year, and age groups.
+
+```{r}
+gm_pop <- left_join(gm_br_uf, pop_uf, by = c("uf", "year", "age_group")) %>%
+  pivot_longer(cols = c("events", "population"))
+
+DT::datatable(gm_pop)
+```
+
+With the data ready, we can compute the direct adjusted rates with the `tidyrates` package.
+
+```{r}
+library(tidyrates)
+
+rates <- rate_adj_direct(.data = gm_pop, .std = seer2, .keys = c("year", "uf"))
+
+DT::datatable(rates)
+```
+
+### Plot
+
+To make some plots, let's make some modifications and pivot the data.
+
+```{r}
+library(ggplot2)
+library(geofacet)
+
+rates_for_plot <- rates %>%
+  mutate(year = as.numeric(year)) %>%
+  pivot_longer(cols = c("crude.rate", "adj.rate", "lci", "uci")) %>%
+  filter(name %in% c("crude.rate", "adj.rate")) %>%
+  mutate(value = value * 100000)
+
+ci_for_plot <- rates %>%
+  mutate(year = as.numeric(year)) %>%
+  select(year, uf, lci, uci) %>%
+  mutate(
+    lci = lci * 100000,
+    uci = uci * 100000
+  )
+
+br_grid <- br_states_grid1 %>%
+  mutate(code_num = case_when(
+    code == "RO" ~ 11,
+    code == "AC" ~ 12,
+    code == "AM" ~ 13,
+    code == "RR" ~ 14,
+    code == "PA" ~ 15,
+    code == "AP" ~ 16,
+    code == "TO" ~ 17,
+    code == "MA" ~ 21,
+    code == "PI" ~ 22,
+    code == "CE" ~ 23,
+    code == "RN" ~ 24,
+    code == "PB" ~ 25,
+    code == "PE" ~ 26,
+    code == "AL" ~ 27,
+    code == "SE" ~ 28,
+    code == "BA" ~ 29,
+    code == "MG" ~ 31,
+    code == "ES" ~ 32,
+    code == "RJ" ~ 33,
+    code == "SP" ~ 35,
+    code == "PR" ~ 41,
+    code == "SC" ~ 42,
+    code == "RS" ~ 43,
+    code == "MS" ~ 50,
+    code == "MT" ~ 51,
+    code == "GO" ~ 52,
+    code == "DF" ~ 53,
+  ))
+```
+
+```{r}
+#| message: false
+#| fig-height: 10
+#| fig-width: 7
+ggplot(data = rates_for_plot) +
+  geom_line(aes(x = year, y = value, color = name)) +
+  geom_ribbon(data = ci_for_plot, aes(x = year, ymin = lci, ymax = uci), alpha=0.3, fill = "lightpink", color = "pink") +
+  facet_geo(~uf, grid = br_grid, label = "name") +
+  theme_bw() +
+  theme(legend.position = "bottom", legend.direction = "horizontal") +
+  labs(color = "Rate", x = "Year", y = "Rate per 100,000 inhab.")
+```
