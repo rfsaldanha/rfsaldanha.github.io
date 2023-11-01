@@ -1,5 +1,5 @@
 ---
-title: "Crude and adjusted rates computation in a tidy way"
+title: "Crude and adjusted rates in a tidy way"
 date: "2023-11-01"
 categories: [rates, epidemiology, tidyrates]
 ---
