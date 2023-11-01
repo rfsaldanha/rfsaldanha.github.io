@@ -1,7 +1,7 @@
 ---
 title: "Crude and adjusted rates computation in a tidy way"
-date: "2023-10-31"
-categories: [tidyrates]
+date: "2023-11-01"
+categories: [rates, epidemiology, tidyrates]
 ---
 
 ## Introduction
@@ -14,7 +14,7 @@ In epidemiology, those overall rates may be compared if both populations are sim
 
 Some R packages, such as `epitools` and `epiR`, allow the computation of crude and adjusted rates. Those packages use as input, vectors or matrices containing the events count and population per age group.
 
-The downside of them is that you need to use the rates function repeatedly times if you are going to compute rates for several regions.
+The downside of them is that you need to use the rates function manually repeatedly times if you are going to compute rates for several regions.
 
 ## `tidyrates` package
 
@@ -22,7 +22,7 @@ I created the `tidyrates` to compute direct and indirect adjusted rates for seve
 
 <https://rfsaldanha.github.io/tidyrates/>
 
-## Practical example: General mortality rates in Brazilian states, from 2010 to 2021
+## Example: General mortality rates in Brazilian states, from 2010 to 2021
 
 ### Mortality data
 
@@ -36,7 +36,7 @@ DT::datatable(gm_br_uf)
 
 ### Population data
 
-To compute rates, we will need the state population size per age group each year. The `brpop` package present estimates for this. We just need to do some adaptations.
+To compute rates, we will need the state population size per age group for each year. The `brpop` package present estimates for this. We just need to do some adaptations.
 
 ```{r}
 #| message: false
@@ -96,6 +96,10 @@ seer2 <- tidyrates::seer_std_pop %>%
   ungroup()
 ```
 
+```{r}
+DT::datatable(seer2)
+```
+
 ### Crude and direct adjusted rates
 
 Now, we can join the mortality dataset with the population dataset by uf, year, and age groups.
@@ -107,7 +111,7 @@ gm_pop <- left_join(gm_br_uf, pop_uf, by = c("uf", "year", "age_group")) %>%
 DT::datatable(gm_pop)
 ```
 
-With the data ready, we can compute the direct adjusted rates with the `tidyrates` package.
+With the data ready, we can compute the direct adjusted rates with the `tidyrates` package for all UFs and years.
 
 ```{r}
 library(tidyrates)
@@ -119,7 +123,7 @@ DT::datatable(rates)
 
 ### Plot
 
-To make some plots, let's make some modifications and pivot the data.
+To make a plot, let's do some modifications and pivot the data.
 
 ```{r}
 library(ggplot2)
@@ -182,4 +186,10 @@ ggplot(data = rates_for_plot) +
   theme_bw() +
   theme(legend.position = "bottom", legend.direction = "horizontal") +
   labs(color = "Rate", x = "Year", y = "Rate per 100,000 inhab.")
+```
+
+## Session info
+
+```{r}
+sessionInfo()
 ```
