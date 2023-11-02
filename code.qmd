@@ -6,12 +6,12 @@ title: "Packages & Code"
 
 ## Selected repos
 
-[![](https://gh-card.dev/repos/rfsaldanha/microdatasus.svg?fullname=)](https://github.com/rfsaldanha/microdatasus)
+[![](https://gh-card.dev/repos/rfsaldanha/microdatasus.svg?fullname=)](https://rfsaldanha.github.io/microdatasus/)
 
-[![](https://gh-card.dev/repos/rfsaldanha/tidyrates.svg?fullname=)](https://github.com/rfsaldanha/tidyrates)
+[![](https://gh-card.dev/repos/rfsaldanha/tidyrates.svg?fullname=)](https://rfsaldanha.github.io/tidyrates/)
 
-[![](https://gh-card.dev/repos/rfsaldanha/brpop.svg?fullname=)](https://github.com/rfsaldanha/brpop)
+[![](https://gh-card.dev/repos/rfsaldanha/brpop.svg?fullname=)](https://rfsaldanha.github.io/brpop/)
 
-[![](https://gh-card.dev/repos/rfsaldanha/brclimr.svg?fullname=)](https://github.com/rfsaldanha/brlimr)
+[![](https://gh-card.dev/repos/rfsaldanha/brclimr.svg?fullname=)](https://rfsaldanha.github.io/brclimr/)
 
-[![](https://gh-card.dev/repos/rfsaldanha/opendenguedata.svg?fullname=)](https://github.com/rfsaldanha/opendenguedata)
+[![](https://gh-card.dev/repos/rfsaldanha/opendenguedata.svg?fullname=)](https://rfsaldanha.github.io/opendenguedata/)
