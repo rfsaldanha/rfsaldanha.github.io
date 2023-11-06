@@ -1,0 +1,190 @@
+---
+title: "Counting consecutive sequences of events: run length encoding and warm spell occurence example"
+date: "2023-11-06"
+categories: [rle, warm spell, sequences]
+---
+
+Some days ago I was trying to count how many times consecutive sequences with values higher than a reference appears in a data frame.
+
+For example:
+
+$x = {2,2,3,4,4,5,6,7,3,7,7,1,6,7,8}$
+
+On $x$, how many times values higher than four appears in consecutive sequences with three or more elements?
+
+Two times: the sequences $5,6,7$ and $6,7,8$.
+
+But how to figure this out with R?
+
+## Run length encoding
+
+Base R has an interesting function called Run Length Encoding: `rle(x)`. Let's see how this works with our example.
+
+```{r}
+x <- c(2,2,3,4,4,5,6,7,3,7,7,1,6,7,8)
+
+rle(x)
+```
+
+The `rle` function returns a list of lengths and values. The "lengths" says how many times the "values" appears. The number two appears two times in sequence, then the number three appears one time, followed by a fours appearing two times, and so on...
+
+## Count consecutive sequences
+
+I created a little function (`trle`) to perform the following task: with a vector `x`, count consecutive sequences of length equal or higher than `l` that contains values equal or higher than `v`.
+
+```{r}
+trle <- function(x, l, v){
+  x_logical <- x >= v #<1>
+  
+  rle_list <- rle(x_logical) #<2>
+
+  rle_df <- data.frame(        #<3>
+    length = rle_list$lengths, #<3>
+    value = rle_list$values    #<3>
+  )                            #<3>
+
+  res_df <- subset(rle_df, value == TRUE & length >= l) #<4>
+  
+  res <- nrow(res_df) #<5>
+
+  return(res)         #<5>
+}
+```
+
+1.  Check if each element of `x` is higher or equal to `v`. This will return a vector of true and false values.
+2.  Run the `rle` function over the sequence of true/false values.
+3.  Convert the list in a data frame object.
+4.  Filter rows where the `value` is equal to `TRUE` AND (`&`) have length higher than `l`.
+5.  Count the rows. That's the result!
+
+Let's test it with our example.
+
+```{r}
+trle(x, l = 3, v = 4)
+```
+
+::: callout-note
+There are probably better and faster ways to implement this. I focused on being simple and readable.
+:::
+
+## Warm spell example
+
+In climatology there is an indicator called Warm Spell Duration Index (WSDI). A warm spell consist of at least six consecutive days with maximum temperatures higher than the climatological normal maximum temperature. A more formal definition can be found [here](https://www.climdex.org/learn/indices/#index-WSDI).
+
+We can get some temperature values with the `brclimr` package for Rio de Janeiro, Brazil.
+
+```{r}
+rio <- brclimr::fetch_data(
+  code_muni = 3304557,
+  product = "brdwgd", 
+  indicator = "tmax", 
+  statistics = "mean", 
+  date_start = as.Date("2020-01-01"),
+  date_end = as.Date("2020-12-31")
+)
+
+head(rio, 10)
+```
+
+Let's assume the reference value as 30 Celsius degrees. How many sequences of six days or more had temperatures equal or higher than 30?
+
+```{r}
+trle(x = rio$value, l = 6, v = 30)
+```
+
+This happened three times on 2020. Try to find them at the graph bellow:
+
+```{r}
+library(ggplot2)
+library(scales)
+
+ggplot(data = rio, aes(x = date, y = value)) +
+  geom_line(color = "purple", alpha = .7) +
+  geom_point(color = "purple", alpha = .7) +
+  geom_hline(yintercept = 30, color = "red", alpha = .7) +
+  theme_classic()
+```
+
+## Length and positions of consecutive events
+
+Would be nice if the function returned also when those sequences happened, right? We can change our little function a little bit to return the dates and actual lengths of those sequences, adding an index vector `i` as argument.
+
+```{r}
+trle2 <- function(x, i, l, v){
+  x_logical <- x >= v #<1>
+  
+  rle_list <- rle(x_logical) #<2>
+
+  rle_df <- data.frame(        #<3>
+    length = rle_list$lengths, #<3>
+    value = rle_list$values    #<3>
+  )                            #<3>
+
+  rle_df$pos_2 <- cumsum(rle_df$length)            #<4>
+  rle_df$pos_1 <- rle_df$pos_2 - rle_df$length + 1 #<4>
+
+  rle_df <- data.frame(       #<5>
+    pos_1 = i[rle_df$pos_1],  #<5>
+    pos_2 = i[rle_df$pos_2],  #<5>
+    length = rle_df$length,   #<5>
+    value = rle_df$value      #<5>
+  )                           #<5>
+
+  res <- subset(rle_df, value == TRUE & length >= l) #<6>
+  res$value <- NULL     #<7>
+  rownames(res) <- NULL #<8>
+
+  return(res)           #<9>
+}
+```
+
+1.  Check if each element of `x` is higher or equal to `v`. This will return a vector of true and false values.
+2.  Run the `rle` function over the sequence of true/false values.
+3.  Convert the list in a data frame object.
+4.  Establish the start (`pos_1`) and end (`pos_2`) positions of each sequence. The end position is the cumulative sum of the lengths. The start position is equivalent to the end position minus the length plus one.
+5.  Create a data frame with the equivalent positions on the vector `i` and the length and values of the sequences
+6.  Filter rows where the `value` is equal to `TRUE` AND (`&`) have length higher than `l`.
+7.  Remove the `value` variable.
+8.  Remove row names.
+9.  Return the data frame as result.
+
+```{r}
+res <- trle2(x = rio$value, i = rio$date, l = 6, v = 30)
+
+res
+```
+
+To see that on the graph, we can use some `lubridate` functions. First, we create a list of date intervals.
+
+```{r}
+#| message: false
+library(lubridate)
+
+intervals <- as.list(lubridate::interval(res$pos_1, res$pos_2))
+```
+
+Then, we check if the dates are within those intervals.
+
+```{r}
+rio$test <- rio$date %within% intervals
+
+head(rio, 10)
+```
+
+And plot it!
+
+```{r}
+ggplot(data = rio, aes(x = date, y = value)) +
+  geom_line(color = "purple", alpha = .7) +
+  geom_point(aes(color = test), alpha = .7) +
+  geom_hline(yintercept = 30, color = "red", alpha = .7) +
+  scale_color_manual(values=c("#999999", "#E69F00")) +
+  theme_classic() +
+  theme(legend.position = "bottom", legend.direction = "horizontal")
+```
+
+## Session info
+
+```{r}
+sessionInfo()
+```
