@@ -11,3 +11,12 @@ title-block-banner: true
 comments:
   giscus:
     repo: rfsaldanha/rfsaldanha.github.io
+    repo-id: R_kgDOKaluJA
+    category: Announcements
+    category-id: DIC_kwDOKaluJM4CauUS
+    mapping: pathname
+    reactions-enabled: true
+    loading: lazy
+    input-position: bottom
+    theme: light
+    language: en
