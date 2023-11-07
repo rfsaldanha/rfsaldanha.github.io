@@ -336,27 +336,27 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-4" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-lines="1" data-code-cell="annotated-cell-4" data-code-annotation="1">Bind the <code>sim</code> objects into a single data frame.</span>
+<span data-code-annotation="1" data-code-lines="1" data-code-cell="annotated-cell-4">Bind the <code>sim</code> objects into a single data frame.</span>
 </dd>
 <dt data-target-cell="annotated-cell-4" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-lines="2" data-code-cell="annotated-cell-4" data-code-annotation="2">Filter the records where the basic cause of death is COVID-19 (ICD-10 code B342).</span>
+<span data-code-annotation="2" data-code-lines="2" data-code-cell="annotated-cell-4">Filter the records where the basic cause of death is COVID-19 (ICD-10 code B342).</span>
 </dd>
 <dt data-target-cell="annotated-cell-4" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-lines="3" data-code-cell="annotated-cell-4" data-code-annotation="3">Filter the records keeping only the deaths that occurred between 2019 and 2022.</span>
+<span data-code-annotation="3" data-code-lines="3" data-code-cell="annotated-cell-4">Filter the records keeping only the deaths that occurred between 2019 and 2022.</span>
 </dd>
 <dt data-target-cell="annotated-cell-4" data-target-annotation="4">4</dt>
 <dd>
-<span data-code-lines="4" data-code-cell="annotated-cell-4" data-code-annotation="4">Select the date of death (<code>DTOBITO</code>) and date of birth (<code>DTNASC</code>) to compute the age and the municipality code of residence (<code>CODMUNRES</code>).</span>
+<span data-code-annotation="4" data-code-lines="4" data-code-cell="annotated-cell-4">Select the date of death (<code>DTOBITO</code>) and date of birth (<code>DTNASC</code>) to compute the age and the municipality code of residence (<code>CODMUNRES</code>).</span>
 </dd>
 <dt data-target-cell="annotated-cell-4" data-target-annotation="5">5</dt>
 <dd>
-<span data-code-lines="5" data-code-cell="annotated-cell-4" data-code-annotation="5">Omit rows with missing data.</span>
+<span data-code-annotation="5" data-code-lines="5" data-code-cell="annotated-cell-4">Omit rows with missing data.</span>
 </dd>
 <dt data-target-cell="annotated-cell-4" data-target-annotation="6">6</dt>
 <dd>
-<span data-code-lines="7" data-code-cell="annotated-cell-4" data-code-annotation="6">Remove the <code>sim*</code> objects as we will no longer need them.</span>
+<span data-code-annotation="6" data-code-lines="7" data-code-cell="annotated-cell-4">Remove the <code>sim*</code> objects as we will no longer need them.</span>
 </dd>
 </dl>
 </div>
@@ -424,19 +424,19 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-6" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-lines="3" data-code-cell="annotated-cell-6" data-code-annotation="1">Compute the age based on the date of birth and date of death. For this, I used some functions from the <code>{lubridate}</code> package.</span>
+<span data-code-annotation="1" data-code-lines="3" data-code-cell="annotated-cell-6">Compute the age based on the date of birth and date of death. For this, I used some functions from the <code>{lubridate}</code> package.</span>
 </dd>
 <dt data-target-cell="annotated-cell-6" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-lines="4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22" data-code-cell="annotated-cell-6" data-code-annotation="2">Label the age groups.</span>
+<span data-code-annotation="2" data-code-lines="4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22" data-code-cell="annotated-cell-6">Label the age groups.</span>
 </dd>
 <dt data-target-cell="annotated-cell-6" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-lines="23,24,25,26,27,28,29,30,31,32,33,34" data-code-cell="annotated-cell-6" data-code-annotation="3">Convert <code>age_group</code> to an ordered factor variable.</span>
+<span data-code-annotation="3" data-code-lines="23,24,25,26,27,28,29,30,31,32,33,34" data-code-cell="annotated-cell-6">Convert <code>age_group</code> to an ordered factor variable.</span>
 </dd>
 <dt data-target-cell="annotated-cell-6" data-target-annotation="4">4</dt>
 <dd>
-<span data-code-lines="36" data-code-cell="annotated-cell-6" data-code-annotation="4">Select and rename the desired variables.</span>
+<span data-code-annotation="4" data-code-lines="36" data-code-cell="annotated-cell-6">Select and rename the desired variables.</span>
 </dd>
 </dl>
 </div>
@@ -501,19 +501,19 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-9" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-lines="2,3,4" data-code-cell="annotated-cell-9" data-code-annotation="1">First, we aggregate the COVID-19 per municipality of residence, age group and date. But this aggregation have some gaps on date and age groups, as there are no deaths at some specific dates and age groups.</span>
+<span data-code-annotation="1" data-code-lines="2,3,4" data-code-cell="annotated-cell-9">First, we aggregate the COVID-19 per municipality of residence, age group and date. But this aggregation have some gaps on date and age groups, as there are no deaths at some specific dates and age groups.</span>
 </dd>
 <dt data-target-cell="annotated-cell-9" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-lines="5,6,7,8,9,10,11" data-code-cell="annotated-cell-9" data-code-annotation="2">We can complete these gaps using the <code>tidyr::complete</code>, supplying the dates interval and age groups. We will fill the <code>events</code> variables with zero values.</span>
+<span data-code-annotation="2" data-code-lines="5,6,7,8,9,10,11" data-code-cell="annotated-cell-9">We can complete these gaps using the <code>tidyr::complete</code>, supplying the dates interval and age groups. We will fill the <code>events</code> variables with zero values.</span>
 </dd>
 <dt data-target-cell="annotated-cell-9" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-lines="12,13,14,15" data-code-cell="annotated-cell-9" data-code-annotation="3">With the complete dataset, we compute the epidemiological year and week.</span>
+<span data-code-annotation="3" data-code-lines="12,13,14,15" data-code-cell="annotated-cell-9">With the complete dataset, we compute the epidemiological year and week.</span>
 </dd>
 <dt data-target-cell="annotated-cell-9" data-target-annotation="4">4</dt>
 <dd>
-<span data-code-lines="16,17,18" data-code-cell="annotated-cell-9" data-code-annotation="4">And aggregate by municipality code, year, week and age_group.</span>
+<span data-code-annotation="4" data-code-lines="16,17,18" data-code-cell="annotated-cell-9">And aggregate by municipality code, year, week and age_group.</span>
 </dd>
 </dl>
 </div>
