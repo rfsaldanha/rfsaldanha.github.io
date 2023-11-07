@@ -4,7 +4,9 @@ date: "2023-11-07"
 categories: [covid19, tidyrates]
 ---
 
-To compute the adjusted rates for the Brazilian municipalities, we will use the `{tidyverse}` and other packages that I will call later.
+On this post, we will compute crude and age-adjusted COVID-19 mortality rates for Brazilian municipalities, from 2020 to 2022 per epidemiological weeks.
+
+We will use the `{tidyverse}` and other packages that I will call later.
 
 ```{r}
 #| message: false

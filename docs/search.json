@@ -221,7 +221,7 @@
     "href": "posts/std_br_covid_rates.html",
     "title": "Age-adjusted COVID-19 mortality rates for Brazilian municipalities",
     "section": "",
-    "text": "To compute the adjusted rates for the Brazilian municipalities, we will use the {tidyverse} and other packages that I will call later.\nlibrary(tidyverse)"
+    "text": "On this post, we will compute crude and age-adjusted COVID-19 mortality rates for Brazilian municipalities, from 2020 to 2022 per epidemiological weeks.\nWe will use the {tidyverse} and other packages that I will call later.\nlibrary(tidyverse)"
   },
   {
     "objectID": "posts/std_br_covid_rates.html#covid-19-mortality-data",
