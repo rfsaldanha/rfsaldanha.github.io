@@ -42,6 +42,7 @@
   {
     "listing": "/data.html",
     "items": [
+      "/data-projects/std_br_covid_rates_data.html",
       "/data-projects/era5land-daily-latin-america.html",
       "/data-projects/brazil-climate-zonal-indicators.html"
     ]

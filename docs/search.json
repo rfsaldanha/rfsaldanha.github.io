@@ -354,7 +354,7 @@
     "href": "data-projects/std_br_covid_rates_data.html",
     "title": "Age-adjusted COVID-19 mortality rates for Brazilian municipalities",
     "section": "",
-    "text": "Download:\n\n\n\n\n\nThis dataset present crude and age-adjusted COVID-19 mortality rates for Brazilian municipalities, from 2020 to 2022 per epidemiological weeks.\nMore details about the methodology are available at this blog post.\n\n\n\n Back to top"
+    "text": "This dataset present crude and age-adjusted COVID-19 mortality rates for Brazilian municipalities, from 2020 to 2022 per epidemiological weeks.\nMore details about the methodology are available at this blog post.\nDownload:\n\n\n\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "data-projects/brazil-climate-zonal-indicators.html#introduction",
@@ -473,7 +473,7 @@
     "href": "data.html",
     "title": "Data",
     "section": "",
-    "text": "ERA5-Land selected indicators daily aggregates for Latin America\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nZonal statististics of climate indicators for Brazilian municipalities\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Age-adjusted COVID-19 mortality rates for Brazilian municipalities\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nERA5-Land selected indicators daily aggregates for Latin America\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nZonal statististics of climate indicators for Brazilian municipalities\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "posts/query_remot_parquet_file.html",
