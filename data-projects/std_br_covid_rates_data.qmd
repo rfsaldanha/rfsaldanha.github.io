@@ -1,0 +1,13 @@
+---
+title: "Age-adjusted COVID-19 mortality rates for Brazilian municipalities"
+---
+
+![](images/unnamed-chunk-18-1.png)
+
+Download:
+
+[![](https://img.shields.io/badge/doi-10.5281/zenodo.10078882-green.svg){fig-align="center"}](https://doi.org/10.5281/zenodo.10078882)
+
+This dataset present crude and age-adjusted COVID-19 mortality rates for Brazilian municipalities, from 2020 to 2022 per epidemiological weeks.
+
+More details about the methodology are available at this blog post.

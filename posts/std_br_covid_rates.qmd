@@ -1,0 +1,389 @@
+---
+title: "Age-adjusted COVID-19 mortality rates for Brazilian municipalities"
+date: "2023-11-07"
+categories: [covid19, tidyrates]
+---
+
+To compute the adjusted rates for the Brazilian municipalities, we will use the `{tidyverse}` and other packages that I will call later.
+
+```{r}
+#| message: false
+library(tidyverse)
+```
+
+```{r}
+#| echo: false
+options(dplyr.summarise.inform = FALSE)
+```
+
+## COVID-19 mortality data
+
+The Brazilian official source of mortality data is a health information system called "Sistema de Informações de Mortalidade -- SIM". This system receives mortality data from the municipalities and states and consolidates it.
+
+The SIM dataset is published yearly, with a year lag. This time is needed to consolidate all the data and perform checks. The SIM datasets of 2019, 2020, and 2021 are officially published and the 2022 dataset is published as "preliminary", which means that modifications and updates are possible.
+
+The datasets are publicly available on the [OpenDataSUS website](https://opendatasus.saude.gov.br/dataset/sim) as CSV files. I downloaded the datasets from 2019 to 2023, as the 2023 may have some death records that occurred in 2022.
+
+The code chunk below has the CSV column types specification to read these files with the `{readr}` package. The chunk is folded to save screen space ;-)
+
+```{r}
+#| code-fold: true
+date_format <- "%d%m%Y"
+
+cols_spec <- cols(
+  ORIGEM = col_double(),
+  TIPOBITO = col_double(),
+  DTOBITO = col_date(format = date_format),
+  HORAOBITO = col_character(),
+  NATURAL = col_character(),
+  CODMUNNATU = col_double(),
+  DTNASC = col_date(format = date_format),
+  IDADE = col_double(),
+  SEXO = col_double(),
+  RACACOR = col_double(),
+  ESTCIV = col_double(),
+  ESC = col_double(),
+  ESC2010 = col_double(),
+  SERIESCFAL = col_double(),
+  OCUP = col_character(),
+  CODMUNRES = col_double(),
+  LOCOCOR = col_double(),
+  CODESTAB = col_character(),
+  ESTABDESCR = col_character(),
+  CODMUNOCOR = col_double(),
+  IDADEMAE = col_double(),
+  ESCMAE = col_double(),
+  ESCMAE2010 = col_double(),
+  SERIESCMAE = col_double(),
+  OCUPMAE = col_double(),
+  QTDFILVIVO = col_character(),
+  QTDFILMORT = col_character(),
+  GRAVIDEZ = col_double(),
+  SEMAGESTAC = col_double(),
+  GESTACAO = col_double(),
+  PARTO = col_double(),
+  OBITOPARTO = col_double(),
+  PESO = col_character(),
+  TPMORTEOCO = col_double(),
+  OBITOGRAV = col_double(),
+  OBITOPUERP = col_double(),
+  ASSISTMED = col_double(),
+  EXAME = col_character(),
+  CIRURGIA = col_character(),
+  NECROPSIA = col_double(),
+  LINHAA = col_character(),
+  LINHAB = col_character(),
+  LINHAC = col_character(),
+  LINHAD = col_character(),
+  LINHAII = col_character(),
+  CAUSABAS = col_character(),
+  CB_PRE = col_character(),
+  COMUNSVOIM = col_character(),
+  DTATESTADO = col_date(format = date_format),
+  CIRCOBITO = col_double(),
+  ACIDTRAB = col_double(),
+  FONTE = col_double(),
+  NUMEROLOTE = col_double(),
+  TPPOS = col_character(),
+  DTINVESTIG = col_date(format = date_format),
+  CAUSABAS_O = col_character(),
+  DTCADASTRO = col_date(format = date_format),
+  ATESTANTE = col_double(),
+  STCODIFICA = col_character(),
+  CODIFICADO = col_character(),
+  VERSAOSIST = col_number(),
+  VERSAOSCB = col_number(),
+  FONTEINV = col_double(),
+  DTRECEBIM = col_date(format = date_format),
+  ATESTADO = col_character(),
+  DTRECORIGA = col_date(format = date_format),
+  CAUSAMAT = col_character(),
+  ESCMAEAGR1 = col_character(),
+  ESCFALAGR1 = col_character(),
+  STDOEPIDEM = col_double(),
+  STDONOVA = col_double(),
+  DIFDATA = col_character(),
+  NUDIASOBCO = col_double(),
+  NUDIASOBIN = col_character(),
+  DTCADINV = col_date(format = date_format),
+  TPOBITOCOR = col_double(),
+  DTCONINV = col_date(format = date_format),
+  FONTES = col_character(),
+  TPRESGINFO = col_double(),
+  TPNIVELINV = col_character(),
+  NUDIASINF = col_character(),
+  DTCADINF = col_date(format = date_format),
+  MORTEPARTO = col_double(),
+  DTCONCASO = col_date(format = date_format),
+  FONTESINF = col_character(),
+  ALTCAUSA = col_double(),
+  CONTADOR = col_double()
+)
+```
+
+The code chunk bellow reads the CSV file with the column types specification from above.
+
+```{r}
+#| warning: false
+sim19 <- readr::read_csv2(file = "../../covidbr/Mortalidade_Geral_2019.csv", col_types = cols_spec)
+sim20 <- readr::read_csv2(file = "../../covidbr/Mortalidade_Geral_2020.csv", col_types = cols_spec)
+sim21 <- readr::read_csv2(file = "../../covidbr/Mortalidade_Geral_2021.csv", col_types = cols_spec)
+sim22 <- readr::read_csv2(file = "../../covidbr/DO22OPEN.csv", col_types = cols_spec)
+sim23 <- readr::read_csv2(file = "../../covidbr/DO23OPEN.csv", col_types = cols_spec)
+```
+
+After reading the files, let's create one single data frame with the variables we will use.
+
+```{r}
+covid <- bind_rows(sim19, sim20, sim21, sim22, sim23) %>% #<1>
+  filter(CAUSABAS == "B342") %>% #<2>
+  filter(DTOBITO >= as.Date("2020-01-01") & DTOBITO <= as.Date("2022-12-31")) %>% #<3>
+  select(DTOBITO, DTNASC, CODMUNRES) %>% #<4>
+  na.omit() #<5>
+
+rm(sim19, sim20, sim21, sim22, sim23, cols_spec, date_format) #<6>
+```
+
+1.  Bind the `sim` objects into a single data frame.
+
+2.  Filter the records where the basic cause of death is COVID-19 (ICD-10 code B342).
+
+3.  Filter the records keeping only the deaths that occurred between 2019 and 2022.
+
+4.  Select the date of death (`DTOBITO`) and date of birth (`DTNASC`) to compute the age and the municipality code of residence (`CODMUNRES`).
+
+5.  Omit rows with missing data.
+
+6.  Remove the `sim*` objects as we will no longer need them.
+
+Our dataset has `r nrow(covid)` records.
+
+```{r}
+head(covid, 10)
+```
+
+### Age groups
+
+Now we need to label the records into age groups.
+
+```{r}
+covid <- covid %>%
+  mutate(
+    age = year(as.period(interval(start = DTNASC, end = DTOBITO))), #<1>
+    age_group = case_when( #<2>
+      age <= 4 ~ "From 0 to 4 years", #<2>
+      age >= 5 & age <= 9 ~ "From 5 to 9 years", #<2>
+      age >= 10 & age <= 14 ~ "From 10 to 14 years", #<2>
+      age >= 15 & age <= 19 ~ "From 15 to 19 years", #<2>
+      age >= 20 & age <= 24 ~ "From 20 to 24 years", #<2>
+      age >= 25 & age <= 29 ~ "From 25 to 29 years", #<2>
+      age >= 30 & age <= 34 ~ "From 30 to 34 years", #<2>
+      age >= 35 & age <= 39 ~ "From 35 to 39 years", #<2>
+      age >= 40 & age <= 44 ~ "From 40 to 44 years", #<2>
+      age >= 45 & age <= 49 ~ "From 45 to 49 years", #<2>
+      age >= 50 & age <= 54 ~ "From 50 to 54 years", #<2>
+      age >= 55 & age <= 59 ~ "From 55 to 59 years", #<2>
+      age >= 60 & age <= 64 ~ "From 60 to 64 years", #<2>
+      age >= 65 & age <= 69 ~ "From 65 to 69 years", #<2>
+      age >= 70 & age <= 74 ~ "From 70 to 74 years", #<2>
+      age >= 75 & age <= 79 ~ "From 75 to 79 years", #<2>
+      age >= 80 ~ "From 80 years or more" #<2>
+    ), #<2>
+    age_group = fct_relevel( #<3>
+      age_group, #<3>
+      "From 0 to 4 years", "From 5 to 9 years",     #<3>
+      "From 10 to 14 years", "From 15 to 19 years", #<3>
+      "From 20 to 24 years", "From 25 to 29 years", #<3>
+      "From 30 to 34 years", "From 35 to 39 years", #<3>
+      "From 40 to 44 years", "From 45 to 49 years", #<3>
+      "From 50 to 54 years", "From 55 to 59 years", #<3>
+      "From 60 to 64 years", "From 65 to 69 years", #<3>
+      "From 70 to 74 years", "From 75 to 79 years", #<3>
+      "From 80 years or more"                       #<3>
+    )  #<3>
+  ) %>%
+  select(date = DTOBITO, code_muni = CODMUNRES, age_group) #<4>
+```
+
+1.  Compute the age based on the date of birth and date of death. For this, I used some functions from the `{lubridate}` package.
+2.  Label the age groups.
+3.  Convert `age_group` to an ordered factor variable.
+4.  Select and rename the desired variables.
+
+```{r}
+head(covid, 10)
+```
+
+Let's take a look at the epidemiological curves per date and age group.
+
+```{r}
+covid %>%
+  group_by(date, age_group) %>%
+  summarise(events = n()) %>%
+  ungroup() %>%
+  ggplot(aes(x = date, y = events)) +
+  geom_line() +
+  facet_wrap(~age_group) +
+  theme_bw()
+```
+
+It is pretty clear that COVID-19 mortality incidence is related to age. Thus, to compare mortality rates of different regions, we need to compute age-adjusted rates.
+
+### Aggregate data
+
+Let's aggregate our dataset by municipality of residence, epidemiological and epidemiological week.
+
+```{r}
+covid_agg <- covid %>%
+  group_by(code_muni, date, age_group) %>%       #<1>
+  summarise(events = n()) %>%                    #<1>
+  ungroup() %>%                                  #<1>
+  group_by(code_muni) %>%                        #<2>
+  complete(                                      #<2>
+    date = seq.Date(as.Date("2020-01-01"), as.Date("2022-12-31"), by = "day"), #<2>
+    age_group = unique(covid$age_group),         #<2>
+    fill = list(events = 0)                      #<2>
+  ) %>%                                          #<2>
+  ungroup() %>%                                  #<2>
+  mutate(                                        #<3>
+    year = epiyear(date),                        #<3>
+    week = epiweek(date)                         #<3>
+  ) %>%                                          #<3>
+  group_by(code_muni, year, week, age_group) %>% #<4>
+  summarise(events = sum(events)) %>%            #<4>
+  ungroup()                                      #<4>
+```
+
+1.  First, we aggregate the COVID-19 per municipality of residence, age group and date. But this aggregation have some gaps on date and age groups, as there are no deaths at some specific dates and age groups.
+2.  We can complete these gaps using the `tidyr::complete`, supplying the dates interval and age groups. We will fill the `events` variables with zero values.
+3.  With the complete dataset, we compute the epidemiological year and week.
+4.  And aggregate by municipality code, year, week and age_group.
+
+## Population data
+
+We need to add the population data to compute the rates. Let's prepare our population data using the `brpop` package.
+
+```{r}
+mun_pop <- brpop::mun_pop() %>%
+  filter(year %in% 2020:2022) %>%
+  rename(population = pop) %>%
+  filter(age_group != "Total") %>%
+  rename(code_muni = mun)
+```
+
+As there is no population estimates for 2022 yet, we will repeat the population from 2021.
+
+```{r}
+mun_pop_2022 <- mun_pop %>%
+  filter(year == 2021) %>%
+  mutate(year = 2022)
+
+mun_pop <- bind_rows(mun_pop, mun_pop_2022)
+rm(mun_pop_2022)
+```
+
+Let's join this population data with the COVID-19 data.
+
+```{r}
+covid_agg <- right_join(covid_agg, mun_pop, by = c("code_muni", "year", "age_group")) %>% 
+  pivot_longer(cols = c("events", "population"))
+
+head(covid_agg, 10)
+```
+
+## Reference population
+
+We will use as reference population, the year of 2020.
+
+```{r}
+pop_ref <- mun_pop %>%
+  filter(year == 2020) %>%
+  group_by(age_group) %>%
+  summarise(population = sum(population)) %>%
+  ungroup()
+
+print(pop_ref)
+```
+
+## Crude and adjusted rates
+
+To compute the crude and age-adjusted rates, we will use the `{tidyrates}` package.
+
+```{r}
+rates <- tidyrates::rate_adj_direct(
+  .data = covid_agg, 
+  .std = pop_ref, 
+  .keys = c("code_muni", "year", "week"), 
+  .progress = FALSE
+) %>%
+  mutate(
+    crude.rate = crude.rate * 100000,
+    adj.rate = adj.rate * 100000,
+    lci = lci * 100000,
+    uci = uci * 100000,
+  )
+```
+
+That's it! Let's take a look at the rates for Rio de Janeiro, RJ on 2022.
+
+```{r}
+rates %>%
+  filter(code_muni == 330455) %>%
+  filter(year == 2022)
+```
+
+Let's save the `rates` data frame as a parquet and CSV file.
+
+```{r}
+arrow::write_parquet(x = rates, sink = "../../covidbr/covid19_adj_rates.parquet")
+write_csv2(x = rates, file = "../../covidbr/covid19_adj_rates.csv")
+```
+
+These files are available for download at Zenodo: [![](https://img.shields.io/badge/doi-10.5281/zenodo.10078882-green.svg)](https://doi.org/10.5281/zenodo.10078882)
+
+## Mortality rates graph for capitals
+
+The graph bellow present the crude and adjusted rates at the Brazilian capitals.
+
+```{r}
+#| message: false
+
+capitals <- geobr::read_capitals(as_sf = TRUE, showProgress = FALSE) %>%
+  mutate(
+    code_muni = ifelse(code_muni == 2803203, 2800308, code_muni),
+    name_muni = ifelse(code_muni == 2800308, "Aracaju", name_muni)
+  ) %>%
+  mutate(code_muni = as.numeric(substr(code_muni, 0, 6))) %>%
+  select(-year) %>%
+  sf::st_drop_geometry()
+
+rates_for_plot <- rates %>%
+  right_join(capitals, by = "code_muni") %>%
+  mutate(week = paste0(year, "-", str_pad(week, 2, pad = "0"))) %>%
+  select(week, name_muni, crude.rate, adj.rate) %>%
+  pivot_longer(cols = c("crude.rate", "adj.rate")) 
+
+ggplot() +
+  geom_line(data = rates_for_plot, aes(x = week, y = value, group = name, color = name)) +
+  facet_wrap(~name_muni) +
+  theme_bw() +
+  theme(
+    legend.position = "bottom", 
+    legend.direction = "horizontal", 
+    axis.text.x=element_blank(),
+    axis.ticks.x=element_blank()
+  ) +
+  labs(
+    title = "Age standardized COVID-19 mortality rates for Brazilian capitals", 
+    x = "Epi Week", 
+    y = "Rate per 100,000 inhab.", 
+    color = NULL
+  )
+
+```
+
+## Session info
+
+```{r}
+sessionInfo()
+```
