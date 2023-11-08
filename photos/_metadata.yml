@@ -1,6 +1,0 @@
-title-block-banner: true
-freeze: true
-filters:
-   - lightbox
-lightbox: auto
-echo: false

@@ -1,10 +1,8 @@
 {
-  "hash": "f4bd33c2c353a12a601be262bca26bd9",
+  "hash": "5ced7f6027bee814011cb6cd93175d4e",
   "result": {
-    "markdown": "---\ntitle: \"Photos\"\n---\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n:::\n\n\n## Montpellier, FR\n\n::: {style=\"display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));grid-gap: 1em;\"}\n![Le Peyrou](images/20231105_0054.JPG){description=\"SONY ILCE-6400 Lens E PZ 16-50mm F3.5-5.6 OSS <br>\n22mm f/5.6 1/800 ISO 100 <br>\n2023-11-05 09:00:50 UTC 19°C\" desc-position=\"left\" group=\"montpellier\"}\n\n![Arc de triomphe](images/20231105_0037.JPG){description=\"SONY ILCE-6400 Lens E PZ 16-50mm F3.5-5.6 OSS <br>\n16mm f/9 1/200 ISO 100 <br>\n2023-11-05 08:51:52 UTC 17°C \"desc-position=\"left\" group=\"montpellier\"}\n\n![Les Arceaux](images/20231105_0069.JPG){description=\"SONY ILCE-6400 Lens E PZ 16-50mm F3.5-5.6 OSS <br>\n34mm f/16 1/60 ISO 100 <br>\n2023-11-05 09:12:28 UTC 19°C \"desc-position=\"left\" group=\"montpellier\"}\n:::\n\n\n\n",
-    "supporting": [
-      "photos_files"
-    ],
+    "markdown": "---\ntitle: \"Photos\"\ntitle-block-banner: true\nfreeze: true\nfilters:\n   - lightbox\nlightbox: auto\necho: false\n---\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n:::\n\n\n## Montpellier, FR\n\n::: {style=\"display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));grid-gap: 1em;\"}\n![Le Peyrou](images/20231105_0054.JPG){description=\"SONY ILCE-6400 Lens E PZ 16-50mm F3.5-5.6 OSS <br>\n22mm f/5.6 1/800 ISO 100 <br>\n2023-11-05 09:00:50 UTC 19°C\" desc-position=\"left\" group=\"montpellier\"}\n\n![Arc de triomphe](images/20231105_0037.JPG){description=\"SONY ILCE-6400 Lens E PZ 16-50mm F3.5-5.6 OSS <br>\n16mm f/9 1/200 ISO 100 <br>\n2023-11-05 08:51:52 UTC 17°C \"desc-position=\"left\" group=\"montpellier\"}\n\n![Les Arceaux](images/20231105_0069.JPG){description=\"SONY ILCE-6400 Lens E PZ 16-50mm F3.5-5.6 OSS <br>\n34mm f/16 1/60 ISO 100 <br>\n2023-11-05 09:12:28 UTC 19°C \"desc-position=\"left\" group=\"montpellier\"}\n:::\n\n\n\n",
+    "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],
