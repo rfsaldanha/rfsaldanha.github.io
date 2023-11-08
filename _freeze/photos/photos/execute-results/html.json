@@ -1,0 +1,16 @@
+{
+  "hash": "26874c074aeea55c8f0d2374c0da439f",
+  "result": {
+    "markdown": "---\ntitle: \"Photos\"\n---\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n:::\n\n\n## Montpellier, FR\n\n![Le Peyrou](images/20231105_0054.JPG){description=\"SONY ILCE-6400 Lens E PZ 16-50mm F3.5-5.6 OSS <br>\n22mm f/5.6 1/800 ISO 100 <br>\n2023-11-05 09:00:50 UTC 19°C\"desc-position=\"left\"}\n\n![Arc de triomphe](images/20231105_0037.JPG){description=\"SONY ILCE-6400 Lens E PZ 16-50mm F3.5-5.6 OSS <br>\n16mm f/9 1/200 ISO 100 <br>\n2023-11-05 08:51:52 UTC 17°C\"desc-position=\"left\"}\n\n![Les Arceaux](images/20231105_0069.JPG){description=\"SONY ILCE-6400 Lens E PZ 16-50mm F3.5-5.6 OSS <br>\n34mm f/16 1/60 ISO 100 <br>\n2023-11-05 09:12:28 UTC 19°C\"desc-position=\"left\"}\n\n\n\n\n",
+    "supporting": [
+      "photos_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,46 @@
+---
+title: "Photos"
+---
+
+```{r}
+prepare_photos <- function(source_path, dest_path, geometry = "1600"){
+  for(f in list.files(source_path, full.names = TRUE)){
+    magick::image_read(path = f) |>
+      magick::image_resize(geometry = geometry) |>
+      magick::image_write(path = paste0("images/", basename(f)))
+  }
+}
+
+descrip_exif <- function(x){
+  exif <- exifr::read_exif(
+    path = x, 
+    tags = c("Make" ,"Model", "FocalLength", "FNumber", "ExposureTime", 
+             "ISO", "LensModel", "AmbientTemperature", "BatteryTemperature", 
+             "BatteryLevel", "SelfTimer", "DateTimeOriginal", "OffsetTime")
+  )
+  
+  glue::glue("{exif$Make} {exif$Model} Lens {exif$LensModel} <br>
+             {exif$FocalLength}mm f/{exif$FNumber} 1/{round(1/exif$ExposureTime)} ISO {exif$ISO} <br>
+             {lubridate::as_datetime(glue::glue('{exif$DateTimeOriginal} {exif$OffsetTime}'))} UTC {exif$AmbientTemperature}°C")
+}
+```
+
+```{r}
+#| eval: false
+prepare_photos(
+  source_path = "~/Downloads/macbook-air-m1-de-raphael_2021_11_28-11-8-10-49-57/", 
+  dest_path = "images/"
+)
+```
+
+## Montpellier, FR
+
+![Le Peyrou](images/20231105_0054.JPG){description="`r descrip_exif('images/20231105_0054.JPG')`"desc-position="left"}
+
+![Arc de triomphe](images/20231105_0037.JPG){description="`r descrip_exif('images/20231105_0037.JPG')`"desc-position="left"}
+
+![Les Arceaux](images/20231105_0069.JPG){description="`r descrip_exif('images/20231105_0069.JPG')`"desc-position="left"}
+
+
+
+

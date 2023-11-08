@@ -1,7 +1,7 @@
 project:
   type: website
   output-dir: docs/
-  render: 
+  render:
     - "*.qmd"
     - "!posts_draft/"
 
@@ -20,6 +20,7 @@ website:
       - data.qmd
       - publications.qmd
       - cv.qmd
+      - photos/photos.qmd
       - blog.qmd
 
 format:
