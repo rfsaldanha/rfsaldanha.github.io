@@ -6,6 +6,7 @@ project:
     - "!posts_draft/"
 
 website:
+  favicon: logo.png
   title: "Raphael Saldanha"
   page-navigation: true
   back-to-top-navigation: true
@@ -19,6 +20,8 @@ website:
       - icon: mastodon
         href: https://fosstodon.org/@rfsaldanha
   navbar:
+    logo: logo.png
+    logo-alt: Raphael Saldanha
     search: true
     left:
       - projects.qmd
