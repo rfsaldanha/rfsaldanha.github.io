@@ -11,7 +11,13 @@ website:
   back-to-top-navigation: true
   google-analytics: "G-2M7VLSRDCB"
   page-footer:
-    left: "Website made with [Quarto](https://quarto.org/)."
+    background: light
+    left: "Copyright 2023, Raphael Saldanha"
+    right:
+      - icon: github
+        href: https://github.com/rfsaldanha
+      - icon: mastodon
+        href: https://fosstodon.org/@rfsaldanha
   navbar:
     search: true
     left:
@@ -25,7 +31,9 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme:
+      - styles.scss
+    mainfont: Nunito
     toc: true
 
 editor: visual

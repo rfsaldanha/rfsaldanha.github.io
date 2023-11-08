@@ -1,0 +1,29 @@
+/*-- scss:defaults --*/
+
+// Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+
+// Colors
+$dark: #413f3d;
+$light: #ffffff;
+$cream: #d8cfd0;
+$code: #f2f1ef;
+$gray: #64605f;
+$purple: #697184;
+$orange: #ad7237;
+
+// Base document colors
+$navbar-bg: $cream; // navbar
+$navbar-fg: $dark; // navbar foreground elements
+$navbar-hl: $purple; // highlight color when hovering over navbar links
+$body-bg: $light; // page background
+$body-color: $gray; // page text
+$footer-bg: $cream; // footer
+$link-color: $purple; // hyperlinks
+
+// Inline code
+$code-bg: $code; // inline code background color
+$code-color: $purple; // inline code text color
+
+// Code blocks
+$code-block-bg: $code; // code block background color

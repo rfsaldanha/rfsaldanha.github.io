@@ -2,6 +2,7 @@
 image: profile.jpg
 about:
   template: trestles
+  image-shape: rounded
   links:
     - icon: github
       text: Github
