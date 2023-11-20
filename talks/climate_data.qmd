@@ -13,7 +13,6 @@ format:
     logo: inria_logo.png
     transition: fade
     background-transition: fade
-    highlight-style: ayu-mirage
 code-link: true
 ---
 
@@ -202,4 +201,3 @@ ggplot(data = temp, aes(x = date, y = value, group = year, color = year)) +
 ## Thanks!
 
 Contact, data links, R packages and short tutorials available at [rfsaldanha.github.io](https://rfsaldanha.github.io/)
-
