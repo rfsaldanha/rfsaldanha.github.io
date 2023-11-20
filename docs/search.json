@@ -873,5 +873,12 @@
     "title": "Subset modelling: A domain partitioning strategy for data-efficient machine-learning",
     "section": "Abstract",
     "text": "Abstract\nThe success of machine learning (ML) systems depends on data availability, volume, quality, and efficient computing resources. A challenge in this context is to reduce computational costs while maintaining adequate accuracy of the models. This paper presents a framework to address this challenge. The idea is to identify “subdomains” within the input space, train local models that produce better predictions for samples from that specific subdomain, instead of training a single global model on the full dataset. We experimentally evaluate our approach on two real-world datasets. Our results indicate that subset modelling (i) improves the predictive performance compared to a single global model and (ii) allows data-efficient training."
+  },
+  {
+    "objectID": "presentations/climate_data.html#teste",
+    "href": "presentations/climate_data.html#teste",
+    "title": "Title",
+    "section": "Teste",
+    "text": "Teste\n\nTeste"
   }
 ]
