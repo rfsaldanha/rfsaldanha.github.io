@@ -1,5 +1,5 @@
 ---
-image: profile.jpg
+image: profile2.jpg
 about:
   template: trestles
   image-shape: rounded
