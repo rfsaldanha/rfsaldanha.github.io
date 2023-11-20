@@ -146,6 +146,7 @@ mun --> zs(Zonal statistics)
 
 ```{r}
 #| message: false
+#| eval: false
 library(dplyr)
 library(arrow)
 library(ggplot2)
@@ -191,7 +192,6 @@ ggplot(data = temp, aes(x = date, y = value, group = year, color = year)) +
   labs(x = "Month", y = "Mean temperature (K)", color = "Year")
 ```
 
-
 ## Next steps...
 
 -   Continuous update
@@ -202,3 +202,4 @@ ggplot(data = temp, aes(x = date, y = value, group = year, color = year)) +
 ## Thanks!
 
 Contact, data links, R packages and short tutorials available at [rfsaldanha.github.io](https://rfsaldanha.github.io/)
+
