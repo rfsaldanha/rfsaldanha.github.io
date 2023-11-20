@@ -23,11 +23,12 @@ website:
     logo: logo.png
     logo-alt: Raphael Saldanha
     search: true
-    left:
+    right:
       - projects.qmd
       - code.qmd
       - data.qmd
       - publications.qmd
+      - talks.qmd
       - cv.qmd
       - photos/photos.qmd
       - blog.qmd

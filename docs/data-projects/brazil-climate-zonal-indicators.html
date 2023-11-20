@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.163">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -100,11 +100,6 @@ div.csl-indent {
   "panel-placement": "end",
   "type": "overlay",
   "limit": 20,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -128,6 +123,8 @@ gtag('js', new Date());
 gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 </script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -137,7 +134,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
+      <div class="navbar-brand-container">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
     <img src="../logo.png" alt="Raphael Saldanha" class="navbar-logo">
     </a>
@@ -150,7 +147,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="../projects.html" rel="" target="">
  <span class="menu-text">Projects</span></a>
@@ -168,6 +165,10 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
  <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../talks.html" rel="" target="">
+ <span class="menu-text">Talks</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../cv.html" rel="" target="">
  <span class="menu-text">CV</span></a>
   </li>  
@@ -180,9 +181,9 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
  <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
+          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -212,6 +213,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
    
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#zonal-era5-land" id="toc-zonal-era5-land" class="nav-link" data-scroll-target="#zonal-era5-land">Zonal ERA5-Land</a></li>
   <li><a href="#zonal-br-dwgd" id="toc-zonal-br-dwgd" class="nav-link" data-scroll-target="#zonal-br-dwgd">Zonal BR-DWGD</a></li>
   <li><a href="#zonal-terraclimate" id="toc-zonal-terraclimate" class="nav-link" data-scroll-target="#zonal-terraclimate">Zonal TerraClimate</a></li>
   </ul>
@@ -228,13 +230,71 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>Climate indicators are used on several statistical models for many research areas and are specially important for modelling Climate Sensitive Diseases (CSD) incidence. Those models usually adopts a lattice structure, where its data is aggregated at administrative boundaries (e.g.&nbsp;disease incidence), but climate indicators are usually presented in a continuous regular grid format.</p>
 <p>To make climate indicators compatible with lattice structures, zonal statistics may be adopted. Zonal statistics are descriptive statistics calculated using a set of cells that spatially intersects a given spatial boundary. For each boundary in a map, statistics like average, maximum value, minimum value, standard deviation, and sum are obtained to represent the cell’s values that intersect the boundary.</p>
-<p>I created some zonal statistics of climate indicators datasets for Brazilian municipalities from some climate data products and a R package called <a href="https://rfsaldanha.github.io/brclimr">brclimr</a> to retrieve this data.</p>
+<p>I created some zonal statistics of climate indicators datasets for Brazilian municipalities from some climate data products.</p>
+</section>
+<section id="zonal-era5-land" class="level2">
+<h2 class="anchored" data-anchor-id="zonal-era5-land">Zonal ERA5-Land</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://doi.org/10.5281/zenodo.10036211"><img src="https://img.shields.io/badge/download-10.5281/zenodo.10036211-green.svg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>The ERA5-Land data <span class="citation" data-cites="muñoz-sabater2021">(<a href="#ref-muñoz-sabater2021" role="doc-biblioref">Muñoz-Sabater et al. 2021</a>)</span> presents hourly climate indicators at 0.1° × 0.1° horizontal resolution with global coverage, from 1950 to present.</p>
+<p>Selected indicators hourly data were <a href="http://localhost:6732/data-projects/era5land-daily-latin-america.html">downloaded and aggregated at daily basis</a> to compute zonal statistics for the Brazilian municipalities.</p>
+<p>The following indicators and aggregations were computed.</p>
+<table class="table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 39%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>ERA5-Land indicators</th>
+<th>Daily time-aggregating functions</th>
+<th>Spatial zonal statistics</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Temperature (2m)</td>
+<td>mean, max, min</td>
+<td>max, min, stdev, count</td>
+</tr>
+<tr class="even">
+<td>Dewpoint temp. (2m)</td>
+<td>mean</td>
+<td>max, min, stdev, count</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(u\)</span> component of wind</td>
+<td>mean</td>
+<td>max, min, stdev, count</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(v\)</span> component of wind</td>
+<td>mean</td>
+<td>max, min, stdev, count</td>
+</tr>
+<tr class="odd">
+<td>Surface pressure</td>
+<td>mean</td>
+<td>max, min, stdev, count</td>
+</tr>
+<tr class="even">
+<td>Total precipitation</td>
+<td>sum</td>
+<td>max, min, stdev, count, sum</td>
+</tr>
+</tbody>
+</table>
+<p><em>A data paper with full methodology description was submitted to peer review.</em></p>
 </section>
 <section id="zonal-br-dwgd" class="level2">
 <h2 class="anchored" data-anchor-id="zonal-br-dwgd">Zonal BR-DWGD</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://doi.org/10.5281/zenodo.7824920"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.7824920-green.svg" class="img-fluid figure-img"></a></p>
+<p><a href="https://doi.org/10.5281/zenodo.7824920"><img src="https://img.shields.io/badge/download-10.5281/zenodo.7824920-green.svg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>The BR-DWGD dataset <span class="citation" data-cites="xavier2022">(<a href="#ref-xavier2022" role="doc-biblioref">Xavier et al. 2022</a>)</span> presents daily meteorological data interpolated to a grid with 0.1° × 0.1° of spatial resolution for the Brazilian territory, with daily data from January 1, 1961, to July 31, 2020. It used data from 1,252 weather stations and 11,473 rain gauges in its interpolation methods, cross-validated to the selection of the best method for each weather indicator.</p>
@@ -311,13 +371,13 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
     └─sd: "u2_sd"</code></pre>
 </div>
 </div>
-<p>The results are availabe as parquet files, available at <a href="https://zenodo.org/records/7824920">Zenodo</a>.</p>
+<p>The results are availabe as parquet files, available at <a href="https://zenodo.org/records/7824920">Zenodo</a> and can be also accessed with the <a href="https://rfsaldanha.github.io/brclimr">brclimr</a> R package.</p>
 </section>
 <section id="zonal-terraclimate" class="level2">
 <h2 class="anchored" data-anchor-id="zonal-terraclimate">Zonal TerraClimate</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://doi.org/10.5281/zenodo.7825777"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.7825777-green.svg" class="img-fluid figure-img"></a></p>
+<p><a href="https://doi.org/10.5281/zenodo.7825777"><img src="https://img.shields.io/badge/download-10.5281/zenodo.7825777-green.svg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>The TerraClimate <span class="citation" data-cites="abatzoglou2018">(<a href="#ref-abatzoglou2018" role="doc-biblioref">Abatzoglou et al. 2018</a>)</span> dataset presents monthly meteorological data interpolated to a grid with 0.04° × 0.04° (1/24th degree) of spatial resolution with world cover, with monthly data from January, 1958, to December, 2021.</p>
@@ -476,7 +536,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
     └─sd: "ws_sd"</code></pre>
 </div>
 </div>
-<p>The results are availabe as parquet files, available at <a href="https://zenodo.org/records/7825777">Zenodo</a>.</p>
+<p>The results are availabe as parquet files, available at <a href="https://zenodo.org/records/7825777">Zenodo</a> and can be also accessed with the <a href="https://rfsaldanha.github.io/brclimr">brclimr</a> R package.</p>
 
 
 
@@ -485,6 +545,9 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-abatzoglou2018" class="csl-entry" role="listitem">
 Abatzoglou, John T., Solomon Z. Dobrowski, Sean A. Parks, and Katherine C. Hegewisch. 2018. <span>“<span>TerraClimate</span>, a High-Resolution Global Dataset of Monthly Climate and Climatic Water Balance from 1958-2015.”</span> <em>Scientific Data</em> 5 (January). <a href="https://doi.org/10.1038/sdata.2017.191">https://doi.org/10.1038/sdata.2017.191</a>.
+</div>
+<div id="ref-muñoz-sabater2021" class="csl-entry" role="listitem">
+Muñoz-Sabater, Joaquín, Emanuel Dutra, Anna Agustí-Panareda, Clément Albergel, Gabriele Arduini, Gianpaolo Balsamo, Souhail Boussetta, et al. 2021. <span>“ERA5-Land: A State-of-the-Art Global Reanalysis Dataset for Land Applications.”</span> <em>Earth System Science Data</em> 13 (9): 4349–83. <a href="https://doi.org/10.5194/essd-13-4349-2021">https://doi.org/10.5194/essd-13-4349-2021</a>.
 </div>
 <div id="ref-xavier2022" class="csl-entry" role="listitem">
 Xavier, Alexandre C., Bridget R. Scanlon, Carey W. King, and Aline I. Alves. 2022. <span>“New Improved <span>Brazilian</span> Daily Weather Gridded Data (1961).”</span> <em>International Journal of Climatology</em>, December. <a href="https://doi.org/10.1002/joc.7731">https://doi.org/10.1002/joc.7731</a>.
@@ -569,9 +632,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+  function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
+      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -581,17 +645,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start',
+      placement: 'bottom-start'
     };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -604,60 +659,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    if (id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
-        }
-        return container.innerHTML
-      } else {
-        return note.innerHTML;
-      }
-    } else {
-      return note.innerHTML;
-    }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      try { hash = new URL(url).hash; } catch {}
-      const id = hash.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note !== null) {
-        try {
-          const html = processXRef(id, note);
-          instance.setContent(html);
-        } finally {
-          instance.enable();
-          instance.show();
-        }
-      } else {
-        // See if we can fetch this
-        fetch(url.split('#')[0])
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.getElementById(id);
-          if (note !== null) {
-            const html = processXRef(id, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -701,7 +702,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
-            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -788,14 +788,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <script src="https://giscus.app/client.js" data-repo="rfsaldanha/rfsaldanha.github.io" data-repo-id="R_kgDOKaluJA" data-category="Announcements" data-category-id="DIC_kwDOKaluJM4CauUS" data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light" data-lang="en" crossorigin="anonymous" data-loading="lazy" async="">
 </script>
-<input type="hidden" id="giscus-base-theme" value="light">
-<input type="hidden" id="giscus-alt-theme" value="light">
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">
-<p>Copyright 2023, Raphael Saldanha</p>
-</div>   
+    <div class="nav-footer-left">Copyright 2023, Raphael Saldanha</div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
@@ -817,7 +813,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-
 
 
 

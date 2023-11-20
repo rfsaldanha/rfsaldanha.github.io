@@ -64,5 +64,11 @@
       "/projects/mauro.html",
       "/projects/cidade-e-saude.html"
     ]
+  },
+  {
+    "listing": "/talks.html",
+    "items": [
+      "/talks/climate_data.html"
+    ]
   }
 ]
