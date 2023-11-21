@@ -1,0 +1,17 @@
+---
+title: "Climate & Health Hub"
+subtitle: "Upcoming events"
+listing:
+  contents: climate_health_hub
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: true
+  filter-ui: true
+page-layout: full
+title-block-banner: true
+---
+
+A hub for upcoming events on Climate and Health research.
+
+Do you know about an event not listed here? [Please send me a message!](mailto:raphael.de-freitas-saldanha@inria.fr) Conferences, talks, workshops, courses, etc., small or big, free or paid, any language. All are welcome ;-)

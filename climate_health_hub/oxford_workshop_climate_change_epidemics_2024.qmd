@@ -1,0 +1,25 @@
+---
+title: "Workshop on Climate Change and Epidemics"
+author: "University of Oxford, Mathematical Institute"
+date: 2024-01-10
+categories: [workshop, in person, free, 2024]
+---
+
+## Description
+
+Climate change is the key threat to this and future generations. With the Earth warming faster than ever before, we face inter-linked migration, infrastructure and public health challenges. In 2023, parts of Europe saw their hottest summer on record while other places have experienced unprecedented levels of rainfall and devastating floods.
+
+Many infectious diseases are climate-sensitive. For example, the locations and sizes of mosquito populations are linked to climate, which in turn affects the transmission of mosquito-borne diseases such as dengue and malaria. Therefore, changes in climate are altering the spatial and seasonal patterns of infections over time, putting millions of people at risk. In order to be more resilient to the health challenges posed by climate change, it is critical to understand its impacts on infectious diseases, both in the UK and globally.
+
+The aim of this workshop is to bring together mathematical modellers, epidemiologists, climate scientists and public health specialists to identify key open challenges in our understanding of how climate change affects infectious diseases. The one-day workshop will consist of a series of talks and sessions covering the following themes:
+
+-   Changes to infectious disease threats under a changing climate and regions most affected
+-   Measures and initiatives to mitigate and build resilience in the UK and globally
+-   Knowledge gaps that need to be filled to limit the impact of climate-sensitive infectious diseases
+-   Challenges presented by climate-sensitive infectious diseases that provide opportunities to improve public health
+
+The main aim of this event is to catalyse discussion between individuals in the research areas of climate science, infectious disease modelling and public health, fostering collaborations that address key challenges relating to climate-sensitive infectious diseases. Please note: this workshop is in-person only.
+
+## Links
+
+-   <https://www.maths.ox.ac.uk/node/65901>

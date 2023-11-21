@@ -70,5 +70,31 @@
     "items": [
       "/talks/climate_data.html"
     ]
+  },
+  {
+    "listing": "/climate_health_calendar.html",
+    "items": [
+      "/ch_calendar/astmh_meeting_2024.html",
+      "/ch_calendar/eccmid_2024.html",
+      "/ch_calendar/winter_school_climate_change_epidemiology_2023.html",
+      "/ch_calendar/oxford_workshop_climate_change_epidemics_2024.html",
+      "/ch_calendar/isntd_connect_dengue_2023.html",
+      "/ch_calendar/isntd_climate_health_2023.html",
+      "/ch_calendar/ccmi_webinar_climate_change_health_2023.html"
+    ]
+  },
+  {
+    "listing": "/climate_health_hub.html",
+    "items": [
+      "/climate_health_hub/astmh_meeting_2024.html",
+      "/climate_health_hub/eccmid_2024.html",
+      "/climate_health_hub/winter_school_climate_change_epidemiology_2023.html",
+      "/climate_health_hub/oxford_workshop_climate_change_epidemics_2024.html",
+      "/climate_health_hub/enbel_workshop_forest_fires_2023.html",
+      "/climate_health_hub/isntd_connect_dengue_2023.html",
+      "/climate_health_hub/isntd_climate_health_2023.html",
+      "/climate_health_hub/ccmi_webinar_climate_change_health_2023.html",
+      "/climate_health_hub/enbel_conference_2023.html"
+    ]
   }
 ]

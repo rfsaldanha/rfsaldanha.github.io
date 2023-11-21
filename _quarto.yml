@@ -24,13 +24,14 @@ website:
     logo-alt: Raphael Saldanha
     search: true
     right:
+      - cv.qmd
       - projects.qmd
+      - photos/photos.qmd
       - code.qmd
       - data.qmd
       - publications.qmd
       - talks.qmd
-      - cv.qmd
-      - photos/photos.qmd
+      - climate_health_hub.qmd
       - blog.qmd
 
 format:

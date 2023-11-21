@@ -1,0 +1,14 @@
+---
+title: "Advanced Methods in Climate Change Epidemiology Winter School"
+author: "Swiss Epidemiology Winter School"
+date: 2024-01-15
+categories: [winter school, in person, paid, 2023]
+---
+
+## Description
+
+Climate change is the defining public health challenge of the century. The assessment of its health impacts at different geographical and temporal scales, and the identification of the potential mechanisms and the main vulnerable populations are key priorities in today's epidemiological research. During the last years, novel approaches in environmental epidemiology have emerged, boosted by the urgency to provide reliable scientific evidence to protect populations from climate change. These new techniques combine advanced statistical methods andepidemiological designs, new data sources and interdisciplinary methods to address increasingly complex research questions. This course aims to provide a comprehensive, hands-on, up-to-date overview of the latest developments in environmental epidemiology applied to climate change\> research. In particular, the course will cover the state-of-the-art study designs such as multi-location time series analyses and small-area assements, advanced methodologies such as distributed lag models and GIS data linkage, and applications such as health impact projection studies and health attribution analysis. The course will provide fully documented material on the statistical and epidemiological bases with small lectures, real-data demos, and the corresponding R code.
+
+## Links
+
+-   <https://www.epi-winterschool.org/program/course-3-advanced-methods-in-climate-change-epidemiology/>
