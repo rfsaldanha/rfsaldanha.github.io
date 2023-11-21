@@ -4,7 +4,7 @@
     "href": "talks/climate_data.html#climate-sensitive-diseases",
     "title": "Disease and climate data fusion for modelling",
     "section": "Climate sensitive diseases",
-    "text": "Climate sensitive diseases\n\nDirect relationship: floods, droughts, heat waves…\nIndirect relationship\n\n\n\n\n\n%%{\n  init: {\n    'theme': 'base',\n    'themeVariables': {\n      'fontSize': '30px'\n    }\n  }\n}%%\nflowchart LR\n\nclimate(Climate) --&gt; vector(Disease vectors) --&gt; health(Human health)\nclimate --&gt; health\n\n\n\n\n\n\nClimate necessary conditions to vector viability, reproduction and disease transmission efficiency\n\nClimate indicators may act as proxy variables to vector distribution on statistical models"
+    "text": "Climate sensitive diseases\n\nDirect relationship: floods, droughts, heat waves…\nIndirect relationship\n\n\n\n\n\n%%{\n  init: {\n    'theme': 'base',\n    'themeVariables': {\n      'fontSize': '30px'\n    }\n  }\n}%%\nflowchart LR\n\nclimate(Climate) --&gt; vector(Disease vectors) --&gt; health(Human health)\nclimate --&gt; health\nclimate --&gt; social(Social & economic \\n determinants) --&gt; health\n\n\n\n\n\n\nClimate necessary conditions to vector viability, reproduction and disease transmission efficiency\n\nClimate indicators may act as proxy variables to vector distribution on statistical models"
   },
   {
     "objectID": "talks/climate_data.html#a-time-lagged-relationship",
@@ -971,5 +971,12 @@
     "title": "Talks",
     "section": "",
     "text": "Disease and climate data fusion for modelling\n\n\nAn application case for Brazil\n\n\n\n\nisntd\n\n\nclimate\n\n\ndata\n\n\n\n\nTalk at the ISNTD Climate & Health Conference, Global Health Resilience panel\n\n\n\n\n\n\nNov 22, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "talks/climate_data.html#introduction",
+    "href": "talks/climate_data.html#introduction",
+    "title": "Disease and climate data fusion for modelling",
+    "section": "Introduction",
+    "text": "Introduction\n\nPostdoc researcher at Inria, a French research institute for digital science and technology\nBSC, Global Health Resilience collaborator\nFiocruz, Climate and Health Observatory"
   }
 ]

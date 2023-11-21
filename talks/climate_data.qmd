@@ -2,7 +2,7 @@
 title: "Disease and climate data fusion for modelling"
 subtitle: "An application case for Brazil"
 author: "Raphael Saldanha"
-institute: "Inria"
+institute: "Inria, GHR collaborator"
 date: "2023-11-22"
 description: "Talk at the ISNTD Climate & Health Conference, Global Health Resilience panel"
 categories: [isntd, climate, data]
@@ -15,6 +15,12 @@ format:
     background-transition: fade
 code-link: true
 ---
+
+## Introduction
+
+-  Postdoc researcher at Inria, a French research institute for digital science and technology
+-  BSC, Global Health Resilience collaborator
+-  Fiocruz, Climate and Health Observatory
 
 ## Climate sensitive diseases
 
@@ -35,6 +41,7 @@ flowchart LR
 
 climate(Climate) --> vector(Disease vectors) --> health(Human health)
 climate --> health
+climate --> social(Social & economic \n determinants) --> health
 ```
 
 -   Climate necessary conditions to vector viability, reproduction and **disease transmission efficiency**
@@ -145,7 +152,7 @@ mun --> zs(Zonal statistics)
 
 ```{r}
 #| message: false
-#| eval: false
+#| eval: true
 library(dplyr)
 library(arrow)
 library(ggplot2)
