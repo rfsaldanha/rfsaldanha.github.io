@@ -1,0 +1,16 @@
+---
+title: "Spreading of infectious agents and risk asessment couse"
+author: "Institut Pasteur"
+date: 2024-01-15
+categories: [course, in person, free, 2024]
+---
+
+## Description
+
+The different modes of transmission of infectious agents, the eco-epidemiological consequences of changes in their environments related to human activities and the principles of surveillance and prevention of infectious diseases for which they are responsible are presented. Epidemiological situations, chosen from infectious diseases, are developed in a multidisciplinary perspective.
+
+This four-week course is for physicians, pharmacists, veterinarians, scientists and engineers who want to specialize in the relationships between infectious agents, their hosts and the environment.
+
+## Links
+
+-   <https://www.pasteur.fr/en/education/programs-and-courses/pasteur-courses?id_cours=32306>
