@@ -6,8 +6,29 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Marcel Pedroso">
+<meta name="author" content="Rebecca Salles">
+<meta name="author" content="Raphael Saldanha">
+<meta name="author" content="Vinicius Kreischer de Almeida">
+<meta name="author" content="Gabriel Souto">
+<meta name="author" content="Balthazar Paixão">
+<meta name="author" content="Victor Ribeiro">
+<meta name="author" content="Raquel Gritz">
+<meta name="author" content="Carmen Bonifácio">
+<meta name="author" content="Matheus Miloski">
+<meta name="author" content="Carlos Augusto de Sousa">
+<meta name="author" content="Gizelton Pereira Alencar">
+<meta name="author" content="Ariane Alves">
+<meta name="author" content="Nelson Niero Neto">
+<meta name="author" content="Letícia Sabbadini">
+<meta name="author" content="Eduardo Ogasawara">
+<meta name="author" content="Christovam Barcellos">
+<meta name="author" content="Fabio Porto">
+<meta name="author" content="Lucas Zinato Carraro">
+<meta name="author" content="Jefferson Lima">
+<meta name="dcterms.date" content="2023-09-01">
 
-<title>Raphael Saldanha - Talks</title>
+<title>Raphael Saldanha - Data Science Platform Applied to Health in Contribution to the Brazilian Unified Health System</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,28 +41,46 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 1em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./logo.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,35 +106,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2M7VLSRDCB"></script>
 
 <script type="text/javascript">
@@ -106,8 +116,6 @@ gtag('js', new Date());
 gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -118,10 +126,10 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./logo.png" alt="Raphael Saldanha" class="navbar-logo">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../logo.png" alt="Raphael Saldanha" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Raphael Saldanha</span>
     </a>
   </div>
@@ -132,39 +140,39 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html" rel="" target="">
+    <a class="nav-link" href="../cv.html" rel="" target="">
  <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html" rel="" target="">
+    <a class="nav-link" href="../projects.html" rel="" target="">
  <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./photos/photos.html" rel="" target="">
+    <a class="nav-link" href="../photos/photos.html" rel="" target="">
  <span class="menu-text">Photos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./code.html" rel="" target="">
+    <a class="nav-link" href="../code.html" rel="" target="">
  <span class="menu-text">Packages &amp; Code</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./data.html" rel="" target="">
+    <a class="nav-link" href="../data.html" rel="" target="">
  <span class="menu-text">Data</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./publications.html" rel="" target="">
+    <a class="nav-link" href="../publications.html" rel="" target="">
  <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./talks.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../talks.html" rel="" target="">
  <span class="menu-text">Talks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./climate_health_hub.html" rel="" target="">
+    <a class="nav-link" href="../climate_health_hub.html" rel="" target="">
  <span class="menu-text">Climate &amp; Health Hub</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html" rel="" target="">
+    <a class="nav-link" href="../blog.html" rel="" target="">
  <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
@@ -175,86 +183,88 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Talks</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-page-left">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="climate">climate <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data">data <span class="quarto-category-count">(1)</span></div><div class="category" data-category="isntd">isntd <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#reference" id="toc-reference" class="nav-link active" data-scroll-target="#reference">Reference</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Data Science Platform Applied to Health in Contribution to the Brazilian Unified Health System</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Public Health</div>
+    <div class="quarto-category">PaaS</div>
+    <div class="quarto-category">Data Science</div>
+    <div class="quarto-category">Data Ecosystem</div>
+  </div>
+  </div>
 
 
 
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-contents">
+             <p>Marcel Pedroso </p>
+             <p>Rebecca Salles </p>
+             <p>Raphael Saldanha </p>
+             <p>Vinicius Kreischer de Almeida </p>
+             <p>Gabriel Souto </p>
+             <p>Balthazar Paixão </p>
+             <p>Victor Ribeiro </p>
+             <p>Raquel Gritz </p>
+             <p>Carmen Bonifácio </p>
+             <p>Matheus Miloski </p>
+             <p>Carlos Augusto de Sousa </p>
+             <p>Gizelton Pereira Alencar </p>
+             <p>Ariane Alves </p>
+             <p>Nelson Niero Neto </p>
+             <p>Letícia Sabbadini </p>
+             <p>Eduardo Ogasawara </p>
+             <p>Christovam Barcellos </p>
+             <p>Fabio Porto </p>
+             <p>Lucas Zinato Carraro </p>
+             <p>Jefferson Lima </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 1, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="reference" class="level2">
+<h2 class="anchored" data-anchor-id="reference">Reference</h2>
+<div id="refs" class="references csl-bib-body" data-entry-spacing="1" role="list">
+<div id="ref-pedrosoDataSciencePlatform2023" class="csl-entry" role="listitem">
+PEDROSO, M. et al. <a href="https://ceur-ws.org/Vol-3462/DEco2.pdf">Data <span>Science Platform Applied</span> to <span>Health</span> in <span>Contribution</span> to the <span>Brazilian Unified Health System</span></a>. <strong>49ª International Conference on Very Large Data Bases</strong>, 2023.
+</div>
+</div>
+<p>The Data Science Platform Applied to Health (PCDaS) is a research and technological development project that aims to develop and apply novel data analysis methods to public health data. It fills a technological gap between the variety of data sources available in legacy and unstandardized formats and the current needs and possibilities of Data Science applications to consume and explore data for the benefit of the Brazilian Health System. PCDaS provides democratic access to health-related datasets and information by requiring fewer technological abilities from its users while maintaining a continuously updated stack of technologies. As a data ecosystem, our primary goal is to provide secure and remote access to health data, technological tools, and a robust infrastructure provided by our platform to process and analyze a large amount of data that generally demand computational power often unavailable to researchers. The infrastructure consists of multi-region on-premise and cloud servers prepared to deal with the heavy analysis of Big Data from anywhere from multiple users simultaneously. Providing secure and remote access to health databases, whether in their original form or processed, is a daily breakthrough for a public health researcher. Knowing that there is a place where they can access integrated data in a standard format makes the research process much more manageable. To ensure quality, our data engineering and governance teams process these data sources following a gold standard based on cross-tables provided by the Health Ministry (the TabNET system) and decoding the original variables into meaningful names provided by the sources. It is very relevant to emphasize the comprehensive documentation of metadata, attributes, and the ETL (Extract, Transform, Load) process for databases. Every part of these steps is described in detail on the PCDaS website, ensuring the comprehension and reproducibility of the process. These features ensure that PCDaS users can effectively leverage the platform’s resources and capabilities, enabling them to conduct research, perform data analysis, and collaborate within a secure and supportive environment to contribute to the Brazilian Health System.</p>
 
 
+</section>
 
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="isntd,climate,data" data-listing-date-sort="1700607600000" data-listing-file-modified-sort="1700589211689" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
-<div class="thumbnail">
-<p><a href="./talks/climate_data.html"> <img src="./talks/images/temp.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./talks/climate_data.html">
-<h3 class="no-anchor listing-title">
-Disease and climate data fusion for modelling
-</h3>
-<div class="listing-subtitle">
-An application case for Brazil
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('isntd'); return false;">
-isntd
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('climate'); return false;">
-climate
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('data'); return false;">
-data
-</div>
-</div>
-<a href="./talks/climate_data.html">
-<div class="listing-description">
-<p>Talk at the ISNTD Climate &amp; Health Conference, Global Health Resilience panel</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./talks/climate_data.html">
-<div class="listing-date">
-Nov 22, 2023
-</div>
-<div class="listing-author">
-Raphael Saldanha
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

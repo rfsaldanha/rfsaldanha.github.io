@@ -1,0 +1,45 @@
+---
+title: "Data Science Platform Applied to Health in Contribution to the Brazilian Unified Health System"
+author:
+  - Marcel Pedroso
+  - Rebecca Salles
+  - Raphael Saldanha
+  - Vinicius Kreischer de Almeida
+  - Gabriel Souto 
+  - Balthazar Paixão
+  - Victor Ribeiro
+  - Raquel Gritz 
+  - Carmen Bonifácio
+  - Matheus Miloski 
+  - Carlos Augusto de Sousa
+  - Gizelton Pereira Alencar
+  - Ariane Alves 
+  - Nelson Niero Neto 
+  - Letícia Sabbadini
+  - Eduardo Ogasawara
+  - Christovam Barcellos
+  - Fabio Porto 
+  - Lucas Zinato Carraro
+  - Jefferson Lima
+date: 2023-09-01
+categories: 
+  - Public Health
+  - PaaS
+  - Data Science
+  - Data Ecosystem
+bibliography: publications.bib
+csl: abnt.csl
+---
+
+---
+nocite: |
+  @pedrosoDataSciencePlatform2023
+---
+
+## Reference
+
+::: {#refs}
+:::
+
+The Data Science Platform Applied to Health (PCDaS) is a research and technological development project that aims to develop and apply novel data analysis methods to public health data. It fills a technological gap between the variety of data sources available in legacy and unstandardized formats and the current needs and possibilities of Data Science applications to consume and explore data for the benefit of the Brazilian Health System. PCDaS provides democratic access to health-related datasets and information by requiring fewer technological abilities from its users while maintaining a continuously updated stack of technologies. As a data ecosystem, our primary goal is to provide secure and remote access to health data, technological tools, and a robust infrastructure provided by our platform to process and analyze a large amount of data that generally demand computational power often unavailable to researchers. The infrastructure consists of multi-region on-premise and cloud servers prepared to deal with the heavy analysis of Big Data from anywhere from multiple users simultaneously. Providing secure and remote access to health databases, whether in their original form or processed, is a daily breakthrough for a public health researcher. Knowing that there is a place where they can access integrated data in a standard format makes the research process much more manageable. To ensure quality, our data engineering and governance teams process these data sources following a gold standard based on cross-tables provided by the Health Ministry (the TabNET system) and decoding the original variables into meaningful names provided by the sources. It is very relevant to emphasize the comprehensive documentation of metadata, attributes, and the ETL (Extract, Transform, Load) process for databases. Every part of these steps is described in detail on the PCDaS website, ensuring the comprehension and reproducibility of the process. These features ensure that PCDaS users can effectively leverage the platform’s resources and capabilities, enabling them to conduct research, perform data analysis, and collaborate within a secure and supportive environment to contribute to the Brazilian Health System.
+
