@@ -36,7 +36,7 @@ nocite: |
   @pedrosoDataSciencePlatform2023
 ---
 
-![](images/Captura de Tela 2023-11-21 às 19.57.06.png)
+![](images/pedrosoDataSciencePlatform2023_img.png)
 
 ## Reference
 
