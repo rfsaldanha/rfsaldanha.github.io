@@ -1,5 +1,61 @@
 [
   {
+    "listing": "/projects.html",
+    "items": [
+      "/projects/harmonize.html",
+      "/projects/monitoracovid19.html",
+      "/projects/ouvsus.html",
+      "/projects/pns.html",
+      "/projects/cross-border-malaria.html",
+      "/projects/redes-de-cuidado.html",
+      "/projects/arboalvo.html",
+      "/projects/onde-estao-nossas-doencas.html",
+      "/projects/pmm.html",
+      "/projects/agua-saude.html",
+      "/projects/mauro.html",
+      "/projects/cidade-e-saude.html"
+    ]
+  },
+  {
+    "listing": "/data.html",
+    "items": [
+      "/data-projects/std_br_covid_rates_data.html",
+      "/data-projects/era5land-daily-latin-america.html",
+      "/data-projects/brazil-climate-zonal-indicators.html"
+    ]
+  },
+  {
+    "listing": "/climate_health_hub.html",
+    "items": [
+      "/climate_health_hub/astmh_meeting_2024.html",
+      "/climate_health_hub/columbia_climate_change_and_health_bootcamp_2024.html",
+      "/climate_health_hub/pasteur_modeling_infectious_diseases_course_2024.html",
+      "/climate_health_hub/eccmid_2024.html",
+      "/climate_health_hub/pasteur_spreading_infectious_agents_risk_assessment_2024.html",
+      "/climate_health_hub/winter_school_climate_change_epidemiology_2023.html",
+      "/climate_health_hub/oxford_workshop_climate_change_epidemics_2024.html",
+      "/climate_health_hub/enbel_workshop_forest_fires_2023.html",
+      "/climate_health_hub/isntd_connect_dengue_2023.html",
+      "/climate_health_hub/lancet_countdown_report_2023.html",
+      "/climate_health_hub/isntd_climate_health_2023.html",
+      "/climate_health_hub/ms_mudancas_climaticas_saude_2023.html",
+      "/climate_health_hub/ccmi_webinar_climate_change_health_2023.html",
+      "/climate_health_hub/enbel_conference_2023.html"
+    ]
+  },
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/posts/time_series_clustering.html",
+      "/posts/std_br_covid_rates.html",
+      "/posts/run_length_encoding.html",
+      "/posts/rates.html",
+      "/posts/query_remot_parquet_file.html",
+      "/posts/sqlite_to_duckdb_and_parquet.html",
+      "/posts/some-tips-for-sqlite.html"
+    ]
+  },
+  {
     "listing": "/publications.html",
     "items": [
       "/publications/victor2023.html",
@@ -27,61 +83,6 @@
       "/publications/araujoWHATHAVEWE2019a.html",
       "/publications/marinhoBurdenDiseaseBrazil2018.html",
       "/publications/saldanhaPropostaUmObservatorio2017.html"
-    ]
-  },
-  {
-    "listing": "/climate_health_hub.html",
-    "items": [
-      "/climate_health_hub/astmh_meeting_2024.html",
-      "/climate_health_hub/columbia_climate_change_and_health_bootcamp_2024.html",
-      "/climate_health_hub/pasteur_modeling_infectious_diseases_course_2024.html",
-      "/climate_health_hub/eccmid_2024.html",
-      "/climate_health_hub/pasteur_spreading_infectious_agents_risk_assessment_2024.html",
-      "/climate_health_hub/winter_school_climate_change_epidemiology_2023.html",
-      "/climate_health_hub/oxford_workshop_climate_change_epidemics_2024.html",
-      "/climate_health_hub/enbel_workshop_forest_fires_2023.html",
-      "/climate_health_hub/isntd_connect_dengue_2023.html",
-      "/climate_health_hub/lancet_countdown_report_2023.html",
-      "/climate_health_hub/isntd_climate_health_2023.html",
-      "/climate_health_hub/ccmi_webinar_climate_change_health_2023.html",
-      "/climate_health_hub/enbel_conference_2023.html"
-    ]
-  },
-  {
-    "listing": "/blog.html",
-    "items": [
-      "/posts/time_series_clustering.html",
-      "/posts/std_br_covid_rates.html",
-      "/posts/run_length_encoding.html",
-      "/posts/rates.html",
-      "/posts/query_remot_parquet_file.html",
-      "/posts/sqlite_to_duckdb_and_parquet.html",
-      "/posts/some-tips-for-sqlite.html"
-    ]
-  },
-  {
-    "listing": "/data.html",
-    "items": [
-      "/data-projects/std_br_covid_rates_data.html",
-      "/data-projects/era5land-daily-latin-america.html",
-      "/data-projects/brazil-climate-zonal-indicators.html"
-    ]
-  },
-  {
-    "listing": "/projects.html",
-    "items": [
-      "/projects/harmonize.html",
-      "/projects/monitoracovid19.html",
-      "/projects/ouvsus.html",
-      "/projects/pns.html",
-      "/projects/cross-border-malaria.html",
-      "/projects/redes-de-cuidado.html",
-      "/projects/arboalvo.html",
-      "/projects/onde-estao-nossas-doencas.html",
-      "/projects/pmm.html",
-      "/projects/agua-saude.html",
-      "/projects/mauro.html",
-      "/projects/cidade-e-saude.html"
     ]
   },
   {
