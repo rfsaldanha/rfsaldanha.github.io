@@ -1,0 +1,14 @@
+---
+title: "E-Vigilância 2023"
+author: "E-Vigilância"
+date: 2023-12-07
+categories: [symposium, in person, paid, 2023]
+---
+
+## Description
+
+Welcome to E-Vigilancia 2023, a symposium dedicated to uniting and strengthening the global community of researchers, students, health professionals, and entrepreneurs from different sectors. Our primary focus is to share innovative initiatives for monitoring and controlling communicable diseases under the theme\"Innovations for a Comprehensive One Health\", As public health administration faces significant challenges, such as the continuous demand for surveillance of outbreaks and epidemics, E-Vigilancia 2023 aims to address these challenges and seek rapid responses to reduce morbidity and mortality from communicable diseases.
+
+## Links
+
+-   <https://e-vigilancia.dengue.mat.br/>
