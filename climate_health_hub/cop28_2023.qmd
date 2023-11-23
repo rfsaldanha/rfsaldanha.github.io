@@ -1,0 +1,22 @@
+---
+title: "COP28"
+author: "United Nations"
+date: 2023-12-01
+categories: [conference, hybrid, 2023]
+---
+
+## Description
+
+-   COP28 UAE will be a milestone moment when the world will take stock of its progress on the Paris Agreement.
+
+-   COP28 UAE Presidency, in collaboration with WHO, the Wellcome Trust and partners, is hosting the first-ever Health Day at the COP28 UN Climate Conference, taking place in Dubai, the UAE from 30 November to 12 December 2023.
+
+## Links
+
+-   <https://www.cop28.com/>
+
+-   <https://www.who.int/news-room/events/detail/2023/12/03/default-calendar/cop28-health-day>
+
+-   <https://cop-resilience-hub.org/>
+
+-   <https://cop-resilience-hub.org/live-stream/>
