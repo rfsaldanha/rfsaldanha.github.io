@@ -1,0 +1,18 @@
+---
+title: "Health Data Research UK Conference 2024: The Grand Challenges in Health Data"
+author: "Health Data Research UK"
+date: 2024-03-05
+categories: [conference, in person, free, 2023]
+---
+
+## Description
+
+-   Health Data Research UK\'s annual conference will be a free two-day, hybrid event to celebrate progress and bring people together to accelerate the trustworthy use of health data for public benefit.
+
+-   The UK is in a unique position to realise the potential of health data, thanks to the NHS and its cradle-to-grave records for a population of over 65 million people. The last few years have demonstrated the enormous power of data to advance medical knowledge and deliver radical improvements to people\'s lives. But there is much more that can be done through large-scale data, advanced analytics and innovative developments in data governance.
+
+-   Health Data Research UK\'s annual conference will be a free two-day, hybrid event to celebrate this progress and allow us to come together and continue to build momentum in the health data research revolution.
+
+## Links
+
+-   <https://www.hdruk.ac.uk/hdruk-conference-2024/>
