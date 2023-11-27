@@ -448,144 +448,305 @@
     "text": "Session info\n\nsessionInfo()\n\nR version 4.3.2 (2023-10-31)\nPlatform: x86_64-pc-linux-gnu (64-bit)\nRunning under: Ubuntu 22.04.3 LTS\n\nMatrix products: default\nBLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.10.0 \nLAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.10.0\n\nlocale:\n [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              \n [3] LC_TIME=en_CA.UTF-8        LC_COLLATE=en_US.UTF-8    \n [5] LC_MONETARY=en_CA.UTF-8    LC_MESSAGES=en_US.UTF-8   \n [7] LC_PAPER=en_CA.UTF-8       LC_NAME=C                 \n [9] LC_ADDRESS=C               LC_TELEPHONE=C            \n[11] LC_MEASUREMENT=en_CA.UTF-8 LC_IDENTIFICATION=C       \n\ntime zone: Europe/Paris\ntzcode source: system (glibc)\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nother attached packages:\n[1] geofacet_0.2.0  ggplot2_3.4.4   tidyrates_0.0.1 brpop_0.3.0    \n[5] tidyr_1.3.0     dplyr_1.1.3    \n\nloaded via a namespace (and not attached):\n [1] gtable_0.3.4        xfun_0.41           bslib_0.5.1        \n [4] htmlwidgets_1.6.2   ggrepel_0.9.4       processx_3.8.2     \n [7] lattice_0.22-5      RApiSerialize_0.1.2 callr_3.7.3        \n[10] vctrs_0.6.4         tools_4.3.2         crosstalk_1.2.0    \n[13] ps_1.7.5            generics_0.1.3      parallel_4.3.2     \n[16] tibble_3.2.1        proxy_0.4-27        fansi_1.0.5        \n[19] pkgconfig_2.0.3     KernSmooth_2.23-22  checkmate_2.3.0    \n[22] RcppParallel_5.1.7  lifecycle_1.0.3     farver_2.1.1       \n[25] compiler_4.3.2      multidplyr_0.1.3    munsell_0.5.0      \n[28] qs_0.25.5           codetools_0.2-19    imguR_1.0.3        \n[31] htmltools_0.5.7     class_7.3-22        sass_0.4.7         \n[34] yaml_2.3.7          pillar_1.9.0        jquerylib_0.1.4    \n[37] ellipsis_0.3.2      epitools_0.5-10.1   classInt_0.4-10    \n[40] DT_0.30             cachem_1.0.8        parallelly_1.36.0  \n[43] tidyselect_1.2.0    digest_0.6.33       future_1.33.0      \n[46] sf_1.0-14           purrr_1.0.2         listenv_0.9.0      \n[49] labeling_0.4.3      forcats_1.0.0       rnaturalearth_0.3.4\n[52] geogrid_0.1.2       fastmap_1.1.1       grid_4.3.2         \n[55] colorspace_2.1-0    cli_3.6.1           magrittr_2.0.3     \n[58] utf8_1.2.4          e1071_1.7-13        withr_2.5.2        \n[61] scales_1.2.1        backports_1.4.1     sp_2.1-1           \n[64] httr_1.4.7          rmarkdown_2.25      jpeg_0.1-10        \n[67] globals_0.16.2      gridExtra_2.3       png_0.1-8          \n[70] stringfish_0.15.8   evaluate_0.23       knitr_1.45         \n[73] rlang_1.1.2         Rcpp_1.0.11         glue_1.6.2         \n[76] DBI_1.1.3           rstudioapi_0.15.0   jsonlite_1.8.7     \n[79] R6_2.5.1            units_0.8-4"
   },
   {
-    "objectID": "photos/photos.html",
-    "href": "photos/photos.html",
-    "title": "Photos",
+    "objectID": "posts/hot_2023.html",
+    "href": "posts/hot_2023.html",
+    "title": "How 2023 was hot in different Brazilian municipalities?",
     "section": "",
-    "text": "Le Peyrou\n\n\n\n\n\nArc de triomphe\n\n\n\n\n\nLes Arceaux"
+    "text": "According to the last Copernicus report, 2023 was exceptional hot year. The image bellow from this report circulated a lot at the social media.\nClearly, 2023 temperatures are the highest in comparison to other years and the temperature difference to the previous years is unmatched.\nIt is important to comprehend that this graph used data from all the globe surface, including the oceans, giving us an overall picture. At some places this temperature anomaly may be different, with weaker or even stronger differences.\nBut how are 2023 temperatures at the local level, where I live?\nTo answer this question, first we need to have specific data by location. One way to produce this specific data is with zonal statistics.\nI created a dataset with zonal statistics for the Brazilian municipalities, with data from 1950 to 2022 using data from the ERA5-Land reanalysis.\nThus, to make similar graphs to Brazilian municipalities, I used the same methodology with the available 2023 ERA5-Land data (from January to October).\nThe data is ready, let’s make some plots! First, load the necessary packages.\nlibrary(arrow)\nlibrary(dplyr)\nlibrary(lubridate)\nlibrary(timetk)\nlibrary(ggplot2)\nlibrary(directlabels)\nlibrary(viridis)\nlibrary(ggdark)\nNow, we will read the data from the 1950-2022 period. This parquet file is available to download at Zenodo with daily data to all Brazilian municipalities, from 1950 to 2022.\n1temp &lt;- open_dataset(sources = \"../../brclim2/output_data/parquet/2m_temperature_mean.parquet\") %&gt;%\n2  filter(name == \"2m_temperature_mean_mean\") %&gt;%\n3  filter(date &gt;= as.Date(\"1990-01-01\")) %&gt;%\n4  collect() %&gt;%\n  mutate(\n5    year = year(date),\n6    date = update(date, year = 2023),\n7    value = value - 273.15\n  )\n\n\n1\n\nOpen the parquet dataset without loading it all to the memory.\n\n2\n\nFilter the desired indicator, on this case, the average temperature.\n\n3\n\nKeep the data only after 1990 to produce a cleaner graph.\n\n4\n\nCollect the data from the parquet file to memory.\n\n5\n\nCreate a new variable with the year.\n\n6\n\nChange the year of all dates to 2023. This will make easer to overlay the time series of each year.\n\n7\n\nThe original values are in Kelvin. Let’s convert it to Celsius Degrees.\nAnd now load the 2023 data. I will share this parquet file later…\ntemp_23 &lt;- open_dataset(sources = \"../../brclim2/output_data/data_2023/parquet/2m_temperature_mean.parquet\") %&gt;%\n  filter(name == \"2m_temperature_mean_mean\") %&gt;%\n  collect() %&gt;%\n  mutate(value = value - 273.15)\nTo make a graph, we can set a municipality code for reference (e.g. Rio de Janeiro, RJ) and create a list object with all the necessary data. Then, we create a simple and nice ggplot ;-)\nCode\ncode_ref &lt;- 3304557\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Rio de Janeiro, RJ\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )\nFollowing the global trend, the temperature at Rio Janeiro, RJ at 2023 has been exceptional hot after September.\nBellow, the same plot for the Brazilian capitals and some selected municipalities. You will see that at some municipalities the 2023 temperatures are higher than other years, but at some others places the values are lower. This is the climate change effect, leading climate indicators to different extremes, increasing its variabilities."
   },
   {
-    "objectID": "photos/photos.html#montpellier-fr",
-    "href": "photos/photos.html#montpellier-fr",
-    "title": "Photos",
-    "section": "",
-    "text": "Le Peyrou\n\n\n\n\n\nArc de triomphe\n\n\n\n\n\nLes Arceaux"
+    "objectID": "posts/hot_2023.html#porto-velho-ro",
+    "href": "posts/hot_2023.html#porto-velho-ro",
+    "title": "How 2023 was hot in different Brazilian municipalities?",
+    "section": "Porto Velho, RO",
+    "text": "Porto Velho, RO\n\n\nCode\ncode_ref &lt;- 1100205\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Porto Velho, RO\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
   },
   {
-    "objectID": "data.html",
-    "href": "data.html",
-    "title": "Data",
-    "section": "",
-    "text": "Age-adjusted COVID-19 mortality rates for Brazilian municipalities\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nERA5-Land selected indicators daily aggregates for Latin America\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nZonal statististics of climate indicators for Brazilian municipalities\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items\n\n Back to top"
+    "objectID": "posts/hot_2023.html#manaus-am",
+    "href": "posts/hot_2023.html#manaus-am",
+    "title": "How 2023 was hot in different Brazilian municipalities?",
+    "section": "Manaus, AM",
+    "text": "Manaus, AM\n\n\nCode\ncode_ref &lt;- 1302603\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Manaus, AM\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
   },
   {
-    "objectID": "data-projects/era5land-daily-latin-america.html",
-    "href": "data-projects/era5land-daily-latin-america.html",
-    "title": "ERA5-Land selected indicators daily aggregates for Latin America",
-    "section": "",
-    "text": "Maximum temperature (k)"
+    "objectID": "posts/hot_2023.html#rio-branco-ac",
+    "href": "posts/hot_2023.html#rio-branco-ac",
+    "title": "How 2023 was hot in different Brazilian municipalities?",
+    "section": "Rio Branco, AC",
+    "text": "Rio Branco, AC\n\n\nCode\ncode_ref &lt;- 1200401\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Rio Branco, AC\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
   },
   {
-    "objectID": "data-projects/era5land-daily-latin-america.html#introduction",
-    "href": "data-projects/era5land-daily-latin-america.html#introduction",
-    "title": "ERA5-Land selected indicators daily aggregates for Latin America",
+    "objectID": "posts/hot_2023.html#campo-grande-ms",
+    "href": "posts/hot_2023.html#campo-grande-ms",
+    "title": "How 2023 was hot in different Brazilian municipalities?",
+    "section": "Campo Grande, MS",
+    "text": "Campo Grande, MS\n\n\nCode\ncode_ref &lt;- 5002704\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Campo Grande, MS\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
+  },
+  {
+    "objectID": "posts/hot_2023.html#macapá-ap",
+    "href": "posts/hot_2023.html#macapá-ap",
+    "title": "How 2023 was hot in different Brazilian municipalities?",
+    "section": "Macapá, AP",
+    "text": "Macapá, AP\n\n\nCode\ncode_ref &lt;- 1600303\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Macapá, AP\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
+  },
+  {
+    "objectID": "posts/hot_2023.html#brasília-df",
+    "href": "posts/hot_2023.html#brasília-df",
+    "title": "How 2023 was hot in different Brazilian municipalities?",
+    "section": "Brasília, DF",
+    "text": "Brasília, DF\n\n\nCode\ncode_ref &lt;- 5300108\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Brasília, DF\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
+  },
+  {
+    "objectID": "posts/hot_2023.html#boa-vista-rr",
+    "href": "posts/hot_2023.html#boa-vista-rr",
+    "title": "How 2023 was hot in different Brazilian municipalities?",
+    "section": "Boa Vista, RR",
+    "text": "Boa Vista, RR\n\n\nCode\ncode_ref &lt;- 1400100\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Boa Vista, RR\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
+  },
+  {
+    "objectID": "posts/hot_2023.html#cuiabá-mt",
+    "href": "posts/hot_2023.html#cuiabá-mt",
+    "title": "How 2023 was hot in different Brazilian municipalities?",
+    "section": "Cuiabá, MT",
+    "text": "Cuiabá, MT\n\n\nCode\ncode_ref &lt;- 5103403\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Cuiabá, MT\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
+  },
+  {
+    "objectID": "posts/hot_2023.html#palmas-to",
+    "href": "posts/hot_2023.html#palmas-to",
+    "title": "How 2023 was hot in different Brazilian municipalities?",
+    "section": "Palmas, TO",
+    "text": "Palmas, TO\n\n\nCode\ncode_ref &lt;- 1721000\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Palmas, TO\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
+  },
+  {
+    "objectID": "posts/hot_2023.html#são-paulo-sp",
+    "href": "posts/hot_2023.html#são-paulo-sp",
+    "title": "How 2023 was hot in different Brazilian municipalities?",
+    "section": "São Paulo, SP",
+    "text": "São Paulo, SP\n\n\nCode\ncode_ref &lt;- 3550308\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"São Paulo, SP\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
+  },
+  {
+    "objectID": "posts/hot_2023.html#teresina-pi",
+    "href": "posts/hot_2023.html#teresina-pi",
+    "title": "How 2023 was hot in different Brazilian municipalities?",
+    "section": "Teresina, PI",
+    "text": "Teresina, PI\n\n\nCode\ncode_ref &lt;- 2211001\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Teresina, PI\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
+  },
+  {
+    "objectID": "posts/hot_2023.html#rio-de-janeiro-rj",
+    "href": "posts/hot_2023.html#rio-de-janeiro-rj",
+    "title": "How 2023 was hot in different Brazilian municipalities?",
+    "section": "Rio de Janeiro, RJ",
+    "text": "Rio de Janeiro, RJ\n\n\nCode\ncode_ref &lt;- 3304557\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Rio de Janeiro, RJ\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
+  },
+  {
+    "objectID": "posts/hot_2023.html#belém-pa",
+    "href": "posts/hot_2023.html#belém-pa",
+    "title": "How 2023 was hot in different Brazilian municipalities?",
+    "section": "Belém, PA",
+    "text": "Belém, PA\n\n\nCode\ncode_ref &lt;- 1501402\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Belém, PA\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
+  },
+  {
+    "objectID": "posts/hot_2023.html#goiânia-go",
+    "href": "posts/hot_2023.html#goiânia-go",
+    "title": "How 2023 was hot in different Brazilian municipalities?",
+    "section": "Goiânia, GO",
+    "text": "Goiânia, GO\n\n\nCode\ncode_ref &lt;- 5208707\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Goiânia, GO\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
+  },
+  {
+    "objectID": "posts/hot_2023.html#salvador-ba",
+    "href": "posts/hot_2023.html#salvador-ba",
+    "title": "How 2023 was hot in different Brazilian municipalities?",
+    "section": "Salvador, BA",
+    "text": "Salvador, BA\n\n\nCode\ncode_ref &lt;- 2927408\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Salvador, BA\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
+  },
+  {
+    "objectID": "posts/hot_2023.html#florianópolis-sc",
+    "href": "posts/hot_2023.html#florianópolis-sc",
+    "title": "How 2023 was hot in different Brazilian municipalities?",
+    "section": "Florianópolis, SC",
+    "text": "Florianópolis, SC\n\n\nCode\ncode_ref &lt;- 4205407\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Florianópolis, SC\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
+  },
+  {
+    "objectID": "posts/hot_2023.html#são-luiz-ma",
+    "href": "posts/hot_2023.html#são-luiz-ma",
+    "title": "How 2023 was hot in different Brazilian municipalities?",
+    "section": "São Luiz, MA",
+    "text": "São Luiz, MA\n\n\nCode\ncode_ref &lt;- 2111300\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"São Luiz, MA\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
+  },
+  {
+    "objectID": "posts/hot_2023.html#maceió-al",
+    "href": "posts/hot_2023.html#maceió-al",
+    "title": "How 2023 was hot in different Brazilian municipalities?",
+    "section": "Maceió, AL",
+    "text": "Maceió, AL\n\n\nCode\ncode_ref &lt;- 2704302\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Maceió, AL\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
+  },
+  {
+    "objectID": "posts/hot_2023.html#porto-alegre-rs",
+    "href": "posts/hot_2023.html#porto-alegre-rs",
+    "title": "How 2023 was hot in different Brazilian municipalities?",
+    "section": "Porto Alegre, RS",
+    "text": "Porto Alegre, RS\n\n\nCode\ncode_ref &lt;- 4314902\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Porto Alegre, RS\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
+  },
+  {
+    "objectID": "posts/hot_2023.html#curitiba-pr",
+    "href": "posts/hot_2023.html#curitiba-pr",
+    "title": "How 2023 was hot in different Brazilian municipalities?",
+    "section": "Curitiba, PR",
+    "text": "Curitiba, PR\n\n\nCode\ncode_ref &lt;- 4106902\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Curitiba, PR\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
+  },
+  {
+    "objectID": "posts/hot_2023.html#belo-horizonte-mg",
+    "href": "posts/hot_2023.html#belo-horizonte-mg",
+    "title": "How 2023 was hot in different Brazilian municipalities?",
+    "section": "Belo Horizonte, MG",
+    "text": "Belo Horizonte, MG\n\n\nCode\ncode_ref &lt;- 3106200\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Belo Horizonte, MG\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
+  },
+  {
+    "objectID": "posts/hot_2023.html#fortaleza-ce",
+    "href": "posts/hot_2023.html#fortaleza-ce",
+    "title": "How 2023 was hot in different Brazilian municipalities?",
+    "section": "Fortaleza, CE",
+    "text": "Fortaleza, CE\n\n\nCode\ncode_ref &lt;- 2304400\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Fortaleza, CE\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
+  },
+  {
+    "objectID": "posts/hot_2023.html#recife-pe",
+    "href": "posts/hot_2023.html#recife-pe",
+    "title": "How 2023 was hot in different Brazilian municipalities?",
+    "section": "Recife, PE",
+    "text": "Recife, PE\n\n\nCode\ncode_ref &lt;- 2611606\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Recife, PE\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
+  },
+  {
+    "objectID": "posts/hot_2023.html#joão-pessoa-pb",
+    "href": "posts/hot_2023.html#joão-pessoa-pb",
+    "title": "How 2023 was hot in different Brazilian municipalities?",
+    "section": "João Pessoa, PB",
+    "text": "João Pessoa, PB\n\n\nCode\ncode_ref &lt;- 2507507\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"João Pessoa, PB\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
+  },
+  {
+    "objectID": "posts/hot_2023.html#aracaju-se",
+    "href": "posts/hot_2023.html#aracaju-se",
+    "title": "How 2023 was hot in different Brazilian municipalities?",
+    "section": "Aracaju, SE",
+    "text": "Aracaju, SE\n\n\nCode\ncode_ref &lt;- 2800308\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Aracaju, SE\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
+  },
+  {
+    "objectID": "posts/hot_2023.html#natal-rn",
+    "href": "posts/hot_2023.html#natal-rn",
+    "title": "How 2023 was hot in different Brazilian municipalities?",
+    "section": "Natal, RN",
+    "text": "Natal, RN\n\n\nCode\ncode_ref &lt;- 2408102\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Natal, RN\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
+  },
+  {
+    "objectID": "posts/hot_2023.html#vitória-es",
+    "href": "posts/hot_2023.html#vitória-es",
+    "title": "How 2023 was hot in different Brazilian municipalities?",
+    "section": "Vitória, ES",
+    "text": "Vitória, ES\n\n\nCode\ncode_ref &lt;- 3205309\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Vitória, ES\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
+  },
+  {
+    "objectID": "posts/hot_2023.html#nova-friburgo-rj",
+    "href": "posts/hot_2023.html#nova-friburgo-rj",
+    "title": "How 2023 was hot in different Brazilian municipalities?",
+    "section": "Nova Friburgo, RJ",
+    "text": "Nova Friburgo, RJ\n\n\nCode\ncode_ref &lt;- 3303401\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Nova Friburgo, RJ\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
+  },
+  {
+    "objectID": "posts/hot_2023.html#juiz-de-fora-mg",
+    "href": "posts/hot_2023.html#juiz-de-fora-mg",
+    "title": "How 2023 was hot in different Brazilian municipalities?",
+    "section": "Juiz de Fora, MG",
+    "text": "Juiz de Fora, MG\n\n\nCode\ncode_ref &lt;- 3136702\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Juiz de Fora, MG\",\n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Raphael Saldanha",
+    "section": "",
+    "text": "Postdoctoral researcher at Inria and LNCC, research assistant at Fiocruz.\nHealth geographer and health data scientist. Undergraduate in Geography, specialization in Statistics, master’s in Public Health, and Ph.D. in Health Information.\nBrazilian from Nova Friburgo (RJ), lived for several years on Minas Gerais and Rio de Janeiro. Currently based on Montpellier, France.\nLoves to code and crunch huge health and climate datasets with R.\n\n\n Back to top"
+  },
+  {
+    "objectID": "data-projects/std_br_covid_rates_data.html",
+    "href": "data-projects/std_br_covid_rates_data.html",
+    "title": "Age-adjusted COVID-19 mortality rates for Brazilian municipalities",
+    "section": "",
+    "text": "This dataset present crude and age-adjusted COVID-19 mortality rates for Brazilian municipalities, from 2020 to 2022 per epidemiological weeks.\nMore details about the methodology are available at this blog post.\nDownload:\n\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "data-projects/brazil-climate-zonal-indicators.html#introduction",
+    "href": "data-projects/brazil-climate-zonal-indicators.html#introduction",
+    "title": "Zonal statististics of climate indicators for Brazilian municipalities",
     "section": "Introduction",
-    "text": "Introduction\nThe ERA5-Land reanalysis from The Copernicus Programme is an incredible source of climate data with global coverage of land areas from 1950 to the present, at 10km spatial resolution. Its original data is at hourly interval, and monthly aggregates are also available at the Copernicus Data Store (CDS).\nFor some applications like Climate-Sensitive Diseases (CSD) modelling, the hourly interval may be too much detailed, but the monthly aggregation is too coarse.\nFor this reason, I created daily aggregates from some ERA5-Land indicators for the Latin America region."
+    "text": "Introduction\nClimate indicators are used on several statistical models for many research areas and are specially important for modelling Climate Sensitive Diseases (CSD) incidence. Those models usually adopts a lattice structure, where its data is aggregated at administrative boundaries (e.g. disease incidence), but climate indicators are usually presented in a continuous regular grid format.\nTo make climate indicators compatible with lattice structures, zonal statistics may be adopted. Zonal statistics are descriptive statistics calculated using a set of cells that spatially intersects a given spatial boundary. For each boundary in a map, statistics like average, maximum value, minimum value, standard deviation, and sum are obtained to represent the cell’s values that intersect the boundary.\nI created some zonal statistics of climate indicators datasets for Brazilian municipalities from some climate data products."
   },
   {
-    "objectID": "data-projects/era5land-daily-latin-america.html#methodology",
-    "href": "data-projects/era5land-daily-latin-america.html#methodology",
-    "title": "ERA5-Land selected indicators daily aggregates for Latin America",
-    "section": "Methodology",
-    "text": "Methodology\nI developed an R script using the KrigR package (Kusch and Davy 2022). The script downloads a set of indicators, starting on 1950, for a geographical bounding box covering the Latin America region (coordinates -118.47,-34.1,-56.65, 33.28), and aggregates the data from hourly to daily, saving its results as NetCDF files. Each resulting file covers a year’s month and presents data layers for each day of the respective month.\nThe table bellow contains the time aggregation functions applied to each climate indicator.\n\n\n\nIndicator\nDaily aggregation function\n\n\n\n\n2m temperature\nmean, max, min\n\n\n2m dewpoint temperature\nmean\n\n\nu component of wind\nmean\n\n\nv component of wind\nmean\n\n\nsurface pressure\nmean\n\n\ntotal precipitation\nsum"
+    "objectID": "data-projects/brazil-climate-zonal-indicators.html#zonal-era5-land",
+    "href": "data-projects/brazil-climate-zonal-indicators.html#zonal-era5-land",
+    "title": "Zonal statististics of climate indicators for Brazilian municipalities",
+    "section": "Zonal ERA5-Land",
+    "text": "Zonal ERA5-Land\n\n\n\n\n\nThe ERA5-Land data (Muñoz-Sabater et al. 2021) presents hourly climate indicators at 0.1° × 0.1° horizontal resolution with global coverage, from 1950 to present.\nSelected indicators hourly data were downloaded and aggregated at daily basis to compute zonal statistics for the Brazilian municipalities.\nThe following indicators and aggregations were computed.\n\n\n\n\n\n\n\n\nERA5-Land indicators\nDaily time-aggregating functions\nSpatial zonal statistics\n\n\n\n\nTemperature (2m)\nmean, max, min\nmax, min, stdev, count\n\n\nDewpoint temp. (2m)\nmean\nmax, min, stdev, count\n\n\n\\(u\\) component of wind\nmean\nmax, min, stdev, count\n\n\n\\(v\\) component of wind\nmean\nmax, min, stdev, count\n\n\nSurface pressure\nmean\nmax, min, stdev, count\n\n\nTotal precipitation\nsum\nmax, min, stdev, count, sum\n\n\n\nA data paper with full methodology description was submitted to peer review."
   },
   {
-    "objectID": "data-projects/era5land-daily-latin-america.html#data",
-    "href": "data-projects/era5land-daily-latin-america.html#data",
-    "title": "ERA5-Land selected indicators daily aggregates for Latin America",
-    "section": "Data",
-    "text": "Data\nThe resulting NetCDF files are available for download at Zenodo.\n\n\n\nYear\nZenodo deposit\n\n\n\n\n1950\n\n\n\n1951\n\n\n\n1952\n\n\n\n1953\n\n\n\n1954\n\n\n\n1955\n\n\n\n1956\n\n\n\n1957\n\n\n\n1958\n\n\n\n1959\n\n\n\n1960\n\n\n\n1961\n\n\n\n1962\n\n\n\n1963\n\n\n\n1964\n\n\n\n1965\n\n\n\n1966\n\n\n\n1967\n\n\n\n1968\n\n\n\n1969\n\n\n\n1970\n\n\n\n1971\n\n\n\n1972\n\n\n\n1973\n\n\n\n1974\n\n\n\n1975\n\n\n\n1976\n\n\n\n1977\n\n\n\n1978\n\n\n\n1979\n\n\n\n1980\n\n\n\n1981\n\n\n\n1982\n\n\n\n1983\n\n\n\n1984\n\n\n\n1985\n\n\n\n1986\n\n\n\n1987\n\n\n\n1988\n\n\n\n1989\n\n\n\n1990\n\n\n\n1991\n\n\n\n1992\n\n\n\n1993\n\n\n\n1994\n\n\n\n1995\n\n\n\n1996\n\n\n\n1997\n\n\n\n1998\n\n\n\n1999\n\n\n\n2000\n\n\n\n2001\n\n\n\n2002\n\n\n\n2003\n\n\n\n2004\n\n\n\n2005\n\n\n\n2006\n\n\n\n2007\n\n\n\n2008\n\n\n\n2009\n\n\n\n2010\n\n\n\n2011\n\n\n\n2012\n\n\n\n2013\n\n\n\n2014\n\n\n\n2015\n\n\n\n2016\n\n\n\n2017\n\n\n\n2018\n\n\n\n2019\n\n\n\n2020\n\n\n\n2021\n\n\n\n2022"
+    "objectID": "data-projects/brazil-climate-zonal-indicators.html#zonal-br-dwgd",
+    "href": "data-projects/brazil-climate-zonal-indicators.html#zonal-br-dwgd",
+    "title": "Zonal statististics of climate indicators for Brazilian municipalities",
+    "section": "Zonal BR-DWGD",
+    "text": "Zonal BR-DWGD\n\n\n\n\n\nThe BR-DWGD dataset (Xavier et al. 2022) presents daily meteorological data interpolated to a grid with 0.1° × 0.1° of spatial resolution for the Brazilian territory, with daily data from January 1, 1961, to July 31, 2020. It used data from 1,252 weather stations and 11,473 rain gauges in its interpolation methods, cross-validated to the selection of the best method for each weather indicator.\nThe following weather indicators are available from the BR-DWGD study: precipitation (mm), minimum temperature (°C), maximum temperature (°C), solar radiation (MJ⋅m−2 ), wind speed at 2m height (m⋅s−1) and relative humidity (%).\nThe following zonal statistics were computed.\n\nbrclimr::product_info(product = \"brdwgd\")\n\n&lt;list&gt;\n├─tmax: &lt;list&gt;\n│ ├─name: \"Maximum temperature\"\n│ ├─unit: \"Degree Celsius\"\n│ ├─date_range: \"Daily, 1961-01-01 to 2020-07-31\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"Tmax_min\"\n│   ├─max: \"Tmax_max\"\n│   ├─mean: \"Tmax_mean\"\n│   └─sd: \"Tmax_sd\"\n├─tmin: &lt;list&gt;\n│ ├─name: \"Minimum temperature\"\n│ ├─unit: \"Degree Celsius\"\n│ ├─date_range: \"Daily, 1961-01-01 to 2020-07-31\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"Tmin_min\"\n│   ├─max: \"Tmin_max\"\n│   ├─mean: \"Tmin_mean\"\n│   └─sd: \"Tmin_sd\"\n├─pr: &lt;list&gt;\n│ ├─name: \"Precipitation\"\n│ ├─unit: \"mm\"\n│ ├─date_range: \"Daily, 1961-01-01 to 2020-07-31\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"pr_min\"\n│   ├─max: \"pr_max\"\n│   ├─mean: \"pr_mean\"\n│   ├─sd: \"pr_sd\"\n│   └─sum: \"pr_sum\"\n├─eto: &lt;list&gt;\n│ ├─name: \"Evapotranspiration\"\n│ ├─unit: \"mm\"\n│ ├─date_range: \"Daily, 1961-01-01 to 2020-07-31\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"ETo_min\"\n│   ├─max: \"ETo_max\"\n│   ├─mean: \"ETo_mean\"\n│   ├─sd: \"ETo_sd\"\n│   └─sum: \"ETo_sd\"\n├─rh: &lt;list&gt;\n│ ├─name: \"Relative humidity\"\n│ ├─unit: \"Percentage\"\n│ ├─date_range: \"Daily, 1961-01-01 to 2020-07-31\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"RH_min\"\n│   ├─max: \"RH_max\"\n│   ├─mean: \"RH_mean\"\n│   └─sd: \"RH_sd\"\n├─rs: &lt;list&gt;\n│ ├─name: \"Solar radiation\"\n│ ├─unit: \"MJ/m2\"\n│ ├─date_range: \"Daily, 1961-01-01 to 2020-07-31\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"Rs_min\"\n│   ├─max: \"Rs_max\"\n│   ├─mean: \"Rs_mean\"\n│   └─sd: \"Rs_sd\"\n└─u2: &lt;list&gt;\n  ├─name: \"Wind speed\"\n  ├─unit: \"m/2\"\n  ├─date_range: \"Daily, 1961-01-01 to 2020-07-31\"\n  └─stats: &lt;list&gt;\n    ├─min: \"u2_min\"\n    ├─max: \"u2_max\"\n    ├─mean: \"u2_mean\"\n    └─sd: \"u2_sd\"\n\n\nThe results are availabe as parquet files, available at Zenodo and can be also accessed with the brclimr R package."
   },
   {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "CV",
+    "objectID": "data-projects/brazil-climate-zonal-indicators.html#zonal-terraclimate",
+    "href": "data-projects/brazil-climate-zonal-indicators.html#zonal-terraclimate",
+    "title": "Zonal statististics of climate indicators for Brazilian municipalities",
+    "section": "Zonal TerraClimate",
+    "text": "Zonal TerraClimate\n\n\n\n\n\nThe TerraClimate (Abatzoglou et al. 2018) dataset presents monthly meteorological data interpolated to a grid with 0.04° × 0.04° (1/24th degree) of spatial resolution with world cover, with monthly data from January, 1958, to December, 2021.\nThe following weather indicators are available from the TerraClimate study: Actual Evapotranspiration (mm), Climate Water Deficit (mm), Potential evapotranspiration(mm), Precipitation (mm), Runoff (mm), Soil Moisture (mm), Downward surface shortwave radiation (W/m2), Snow water equivalent (mm), Minimum temperature (°C), Maximum temperature (°C), Vapor pressure (kPa), Wind speed (m/s), Vapor Pressure Deficit (kpa) and Palmer Drought Severity Index.\nThe following zonal statistics were computed.\n\nbrclimr::product_info(product = \"terraclimate\")\n\n&lt;list&gt;\n├─tmax: &lt;list&gt;\n│ ├─name: \"Maximum temperature\"\n│ ├─detail: \"Average for month\"\n│ ├─unit: \"Degree Celsius\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"tmax_min\"\n│   ├─max: \"tmax_max\"\n│   ├─mean: \"tmax_mean\"\n│   └─sd: \"tmax_sd\"\n├─tmin: &lt;list&gt;\n│ ├─name: \"Minimum temperature\"\n│ ├─detail: \"Average for month\"\n│ ├─unit: \"Degree Celsius\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"tmin_min\"\n│   ├─max: \"tmin_max\"\n│   ├─mean: \"tmin_mean\"\n│   └─sd: \"tmin_sd\"\n├─ppt: &lt;list&gt;\n│ ├─name: \"Precipitation\"\n│ ├─detail: \"Monthly total\"\n│ ├─unit: \"mm\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"ppt_min\"\n│   ├─max: \"ppt_max\"\n│   ├─mean: \"ppt_mean\"\n│   ├─sd: \"ppt_sd\"\n│   └─sum: \"ppt_sum\"\n├─aet: &lt;list&gt;\n│ ├─name: \"Actual Evapotranspiration\"\n│ ├─detail: \"Monthly total\"\n│ ├─unit: \"mm\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"aet_min\"\n│   ├─max: \"aet_max\"\n│   ├─mean: \"aet_mean\"\n│   ├─sd: \"aet_sd\"\n│   └─sum: \"aet_sum\"\n├─def: &lt;list&gt;\n│ ├─name: \"Climate Water Deficit\"\n│ ├─detail: \"Monthly total\"\n│ ├─unit: \"mm\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"def_min\"\n│   ├─max: \"def_max\"\n│   ├─mean: \"def_mean\"\n│   ├─sd: \"def_sd\"\n│   └─sum: \"def_sum\"\n├─pdsi: &lt;list&gt;\n│ ├─name: \"Palmer Drought Severity Index\"\n│ ├─detail: \"At end of month\"\n│ ├─unit: \"unitless\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"PDSI_min\"\n│   ├─max: \"PDSI_max\"\n│   ├─mean: \"PDSI_mean\"\n│   └─sd: \"PDSI_sd\"\n├─pet: &lt;list&gt;\n│ ├─name: \"Potential evapotranspiration\"\n│ ├─detail: \"Monthly total\"\n│ ├─unit: \"mm\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"pet_min\"\n│   ├─max: \"pet_max\"\n│   ├─mean: \"pet_mean\"\n│   ├─sd: \"pet_sd\"\n│   └─sum: \"pet_sum\"\n├─q: &lt;list&gt;\n│ ├─name: \"Runoff\"\n│ ├─detail: \"Monthly total\"\n│ ├─unit: \"mm\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"q_min\"\n│   ├─max: \"q_max\"\n│   ├─mean: \"q_mean\"\n│   ├─sd: \"q_sd\"\n│   └─sum: \"q_sum\"\n├─soil: &lt;list&gt;\n│ ├─name: \"Soil Moisture\"\n│ ├─detail: \"Total column, at end of month\"\n│ ├─unit: \"mm\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"soil_min\"\n│   ├─max: \"soil_max\"\n│   ├─mean: \"soil_mean\"\n│   ├─sd: \"soil_sd\"\n│   └─sum: \"soil_sum\"\n├─srad: &lt;list&gt;\n│ ├─name: \"Downward surface shortwave radia...\"\n│ ├─unit: \"W/m2\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"srad_min\"\n│   ├─max: \"srad_max\"\n│   ├─mean: \"srad_mean\"\n│   ├─sd: \"srad_sd\"\n│   └─sum: \"srad_sum\"\n├─swe: &lt;list&gt;\n│ ├─name: \"Snow water equivalent\"\n│ ├─detail: \"At end of month\"\n│ ├─unit: \"mm\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"swe_min\"\n│   ├─max: \"swe_max\"\n│   ├─mean: \"swe_mean\"\n│   ├─sd: \"swe_sd\"\n│   └─sum: \"swe_sum\"\n├─vap: &lt;list&gt;\n│ ├─name: \"Vapor pressure\"\n│ ├─detail: \"Average for month\"\n│ ├─unit: \"kPa\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"vap_min\"\n│   ├─max: \"vap_max\"\n│   ├─mean: \"vap_mean\"\n│   └─sd: \"vap_sd\"\n├─vpd: &lt;list&gt;\n│ ├─name: \"Vapor Pressure Deficit\"\n│ ├─detail: \"Average for month\"\n│ ├─unit: \"kPa\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"vpd_min\"\n│   ├─max: \"vpd_max\"\n│   ├─mean: \"vpd_mean\"\n│   └─sd: \"vpd_sd\"\n└─ws: &lt;list&gt;\n  ├─name: \"Wind speed\"\n  ├─detail: \"Average for month\"\n  ├─unit: \"m/s\"\n  ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n  └─stats: &lt;list&gt;\n    ├─min: \"ws_min\"\n    ├─max: \"ws_max\"\n    ├─mean: \"ws_mean\"\n    └─sd: \"ws_sd\"\n\n\nThe results are availabe as parquet files, available at Zenodo and can be also accessed with the brclimr R package."
+  },
+  {
+    "objectID": "code.html#selected-repos",
+    "href": "code.html#selected-repos",
+    "title": "Packages & Code",
+    "section": "Selected repos",
+    "text": "Selected repos"
+  },
+  {
+    "objectID": "climate_health_hub/pasteur_spreading_infectious_agents_risk_assessment_2024.html",
+    "href": "climate_health_hub/pasteur_spreading_infectious_agents_risk_assessment_2024.html",
+    "title": "Spreading of infectious agents and risk asessment couse",
     "section": "",
-    "text": "Full name: Raphael de Freitas Saldanha\nDate of birth: April 18, 1985\nLanguages: Portuguese, English"
+    "text": "The different modes of transmission of infectious agents, the eco-epidemiological consequences of changes in their environments related to human activities and the principles of surveillance and prevention of infectious diseases for which they are responsible are presented. Epidemiological situations, chosen from infectious diseases, are developed in a multidisciplinary perspective.\nThis four-week course is for physicians, pharmacists, veterinarians, scientists and engineers who want to specialize in the relationships between infectious agents, their hosts and the environment."
   },
   {
-    "objectID": "cv.html#general-information",
-    "href": "cv.html#general-information",
-    "title": "CV",
+    "objectID": "climate_health_hub/pasteur_spreading_infectious_agents_risk_assessment_2024.html#description",
+    "href": "climate_health_hub/pasteur_spreading_infectious_agents_risk_assessment_2024.html#description",
+    "title": "Spreading of infectious agents and risk asessment couse",
     "section": "",
-    "text": "Full name: Raphael de Freitas Saldanha\nDate of birth: April 18, 1985\nLanguages: Portuguese, English"
+    "text": "The different modes of transmission of infectious agents, the eco-epidemiological consequences of changes in their environments related to human activities and the principles of surveillance and prevention of infectious diseases for which they are responsible are presented. Epidemiological situations, chosen from infectious diseases, are developed in a multidisciplinary perspective.\nThis four-week course is for physicians, pharmacists, veterinarians, scientists and engineers who want to specialize in the relationships between infectious agents, their hosts and the environment."
   },
   {
-    "objectID": "cv.html#education",
-    "href": "cv.html#education",
-    "title": "CV",
-    "section": "Education",
-    "text": "Education\n\n2022 - current. Postdoc at Inria and LNCC. Artificial intelligence applications on public health.\n2017 - 2021. PhD at Fiocruz, PPGICS. Information and Communication in Health.\n2015 - 2017. Graduate Degree (Master) at UFJF - PPGSC. Public Health.\n2008 - 2009. Specialization at UFJF. Computational Statistical Methods\n2003 - 2007. Undergraduate Degree at UFJF - ICHL-DG. Geography."
-  },
-  {
-    "objectID": "cv.html#academic-interests",
-    "href": "cv.html#academic-interests",
-    "title": "CV",
-    "section": "Academic interests",
-    "text": "Academic interests\n\nData science\n\nR\nShiny apps\nQuarto\nPlotly\nPython\nJupyter Hub\nduckdb, SQLite\nElasticSearch\nKibana\n\n\n\nGIS\n\nQGIS\nESRI ArcGIS\nGeoserver\n\n\n\nOther\n\nGephi\nLaTeX\nLinux\nMacOS"
-  },
-  {
-    "objectID": "cv.html#work-and-teaching-experience",
-    "href": "cv.html#work-and-teaching-experience",
-    "title": "CV",
-    "section": "Work and teaching experience",
-    "text": "Work and teaching experience\n\n2017 - current. Research assistant at Fiocruz, ICICT, PCDaS.\n2017 - current. Research assistant at Fiocruz, ICICT, Observatório de Clima e Saúde.\n2021 - 2022 Research assistant at Fiocruz, IOC, Lathema Lab (ArboAlvo).\n2017 - 2018 Research assistant at IRD, Maison de la Télédétection (Montpellier, FR).\n2017 - current. Workshop teacher of R.\n2017 - current. Workshop teacher of Introduction to Spatial Econometry with R.\n2013 Teaching Assistant, Scientific Methodology at UFJF, CRITT.\n2023 Distance learning supervisor at Unibanco Institute.\n2005 - 2016 GIS and statistics analyst at Plangeo.\n2012 Approved for substitute teacher position of Thematic Cartograph.\n2012 Distance learning supervisor of Statistics, course of Public Management.\n2011 Distance learning tutor for Business Statistics (Curso de Administração Pública à Distância – PNAP), UFJF.\n2010 Teacher of Technologies for Environmental Planning, FAFISM."
-  },
-  {
-    "objectID": "cv.html#additional-training",
-    "href": "cv.html#additional-training",
-    "title": "CV",
-    "section": "Additional training",
-    "text": "Additional training\n\n2022 Public Health Disparities Geocoding Project 2.0. Harvard School of Public Health\n2022 Developing the SIR Model. Imperial College (Coursera)\n2022 Algoritmos e Modelos de Programação para Big Data. Laboratório Nacional de Computação Científica\n2022 Machine Learning, Curso-R.\n2022 R Deploy, Curso-R.\n2021 QBA/On-line - Sensibilização em Gestão da Qualidade, Biossegurança e Ambiente, Fiocruz.\n2020 Comunicação, Mídia e Saúde em Contexto de Emergências Sanitárias, UFAL.\n2018 Anthropological and Historical Approaches of Visualising Epidemics, COC, Fiocruz.\n2018 Information Visualization, Foundations and Applied Perception, NYU Tandon School of Engineering (Coursera).\n2017 Practical Machine Learning, Johns Hopkins University (Coursera).\n2016 Harvard - Brazil Collaborative Public Health Course, Harvard School of Public Health.\n2015 Introduction to Big Data, University of California, San Diego (Coursera).\n2011 Geoestatística com o uso do R, UFJF.\n2007 Workshop em modelagem em estudos longitudinais, UFJF.\n2007 Geomarketing - Conceitos e aplicações, Centro Universitário Senac.\n2004 Geografia e movimentos sociais, A América Latina, AGB.\n2003 Introdução à Gestão Ambiental Urbana, UFJF.\n2003 Flash Mx, CRITT, UFJF."
-  },
-  {
-    "objectID": "cv.html#hobbies",
-    "href": "cv.html#hobbies",
-    "title": "CV",
-    "section": "Hobbies",
-    "text": "Hobbies\n\nCycling\nWood working"
-  },
-  {
-    "objectID": "climate_health_hub/winter_school_climate_change_epidemiology_2023.html",
-    "href": "climate_health_hub/winter_school_climate_change_epidemiology_2023.html",
-    "title": "Advanced Methods in Climate Change Epidemiology Winter School",
-    "section": "",
-    "text": "Climate change is the defining public health challenge of the century. The assessment of its health impacts at different geographical and temporal scales, and the identification of the potential mechanisms and the main vulnerable populations are key priorities in today’s epidemiological research. During the last years, novel approaches in environmental epidemiology have emerged, boosted by the urgency to provide reliable scientific evidence to protect populations from climate change. These new techniques combine advanced statistical methods andepidemiological designs, new data sources and interdisciplinary methods to address increasingly complex research questions. This course aims to provide a comprehensive, hands-on, up-to-date overview of the latest developments in environmental epidemiology applied to climate change&gt; research. In particular, the course will cover the state-of-the-art study designs such as multi-location time series analyses and small-area assements, advanced methodologies such as distributed lag models and GIS data linkage, and applications such as health impact projection studies and health attribution analysis. The course will provide fully documented material on the statistical and epidemiological bases with small lectures, real-data demos, and the corresponding R code."
-  },
-  {
-    "objectID": "climate_health_hub/winter_school_climate_change_epidemiology_2023.html#description",
-    "href": "climate_health_hub/winter_school_climate_change_epidemiology_2023.html#description",
-    "title": "Advanced Methods in Climate Change Epidemiology Winter School",
-    "section": "",
-    "text": "Climate change is the defining public health challenge of the century. The assessment of its health impacts at different geographical and temporal scales, and the identification of the potential mechanisms and the main vulnerable populations are key priorities in today’s epidemiological research. During the last years, novel approaches in environmental epidemiology have emerged, boosted by the urgency to provide reliable scientific evidence to protect populations from climate change. These new techniques combine advanced statistical methods andepidemiological designs, new data sources and interdisciplinary methods to address increasingly complex research questions. This course aims to provide a comprehensive, hands-on, up-to-date overview of the latest developments in environmental epidemiology applied to climate change&gt; research. In particular, the course will cover the state-of-the-art study designs such as multi-location time series analyses and small-area assements, advanced methodologies such as distributed lag models and GIS data linkage, and applications such as health impact projection studies and health attribution analysis. The course will provide fully documented material on the statistical and epidemiological bases with small lectures, real-data demos, and the corresponding R code."
-  },
-  {
-    "objectID": "climate_health_hub/winter_school_climate_change_epidemiology_2023.html#links",
-    "href": "climate_health_hub/winter_school_climate_change_epidemiology_2023.html#links",
-    "title": "Advanced Methods in Climate Change Epidemiology Winter School",
+    "objectID": "climate_health_hub/pasteur_spreading_infectious_agents_risk_assessment_2024.html#links",
+    "href": "climate_health_hub/pasteur_spreading_infectious_agents_risk_assessment_2024.html#links",
+    "title": "Spreading of infectious agents and risk asessment couse",
     "section": "Links",
-    "text": "Links\n\nhttps://www.epi-winterschool.org/program/course-3-advanced-methods-in-climate-change-epidemiology/"
+    "text": "Links\n\nhttps://www.pasteur.fr/en/education/programs-and-courses/pasteur-courses?id_cours=32306"
   },
   {
-    "objectID": "climate_health_hub/pasteur_modeling_infectious_diseases_course_2024.html",
-    "href": "climate_health_hub/pasteur_modeling_infectious_diseases_course_2024.html",
-    "title": "Modeling of infectious diseases course",
+    "objectID": "climate_health_hub/oxford_workshop_climate_change_epidemics_2024.html",
+    "href": "climate_health_hub/oxford_workshop_climate_change_epidemics_2024.html",
+    "title": "Workshop on Climate Change and Epidemics",
     "section": "",
-    "text": "Mathematical modeling has become an essential tool for the study of infectious disease epidemics, making it possible to better characterize the complex transmission dynamics inherent to the spread of pathogens in human populations. Mathematical models are now commonly used to address a variety of questions that can inform policy making, for example, the optimal allocation of control measures, the planning and evaluation of vaccination programmes, nowcasting and forecasting of epidemics and real-time risk assessment during epidemics.\nThis one-week course aims at introducing the main modeling techniques and applications to students and professionals in science, medicine and public health. The main learning objectives of the course are that participants:\n1) understand the key theoretical concepts and techniques of infectious disease modeling;\n2) can read modeling papers, understand the strengths and limits of modeling approaches; and are able to use modeling results in their own research and effectively interact with modelers. To achieve these objectives, the course will be partitioned in three types of sessions: a set of lectures introducing key theoretical concepts and techniques, a seminar series illustrating how these concepts are being used to tackle major Public Health challenges, and practical sessions during which participants will learn to implement, run and use models.\nA Masters or BSc degree is required, as well as basic math knowledge (high school-level knowledge on derivatives, basics of probabilities and statistics)."
+    "text": "Climate change is the key threat to this and future generations. With the Earth warming faster than ever before, we face inter-linked migration, infrastructure and public health challenges. In 2023, parts of Europe saw their hottest summer on record while other places have experienced unprecedented levels of rainfall and devastating floods.\nMany infectious diseases are climate-sensitive. For example, the locations and sizes of mosquito populations are linked to climate, which in turn affects the transmission of mosquito-borne diseases such as dengue and malaria. Therefore, changes in climate are altering the spatial and seasonal patterns of infections over time, putting millions of people at risk. In order to be more resilient to the health challenges posed by climate change, it is critical to understand its impacts on infectious diseases, both in the UK and globally.\nThe aim of this workshop is to bring together mathematical modellers, epidemiologists, climate scientists and public health specialists to identify key open challenges in our understanding of how climate change affects infectious diseases. The one-day workshop will consist of a series of talks and sessions covering the following themes:\n\nChanges to infectious disease threats under a changing climate and regions most affected\nMeasures and initiatives to mitigate and build resilience in the UK and globally\nKnowledge gaps that need to be filled to limit the impact of climate-sensitive infectious diseases\nChallenges presented by climate-sensitive infectious diseases that provide opportunities to improve public health\n\nThe main aim of this event is to catalyse discussion between individuals in the research areas of climate science, infectious disease modelling and public health, fostering collaborations that address key challenges relating to climate-sensitive infectious diseases. Please note: this workshop is in-person only."
   },
   {
-    "objectID": "climate_health_hub/pasteur_modeling_infectious_diseases_course_2024.html#description",
-    "href": "climate_health_hub/pasteur_modeling_infectious_diseases_course_2024.html#description",
-    "title": "Modeling of infectious diseases course",
+    "objectID": "climate_health_hub/oxford_workshop_climate_change_epidemics_2024.html#description",
+    "href": "climate_health_hub/oxford_workshop_climate_change_epidemics_2024.html#description",
+    "title": "Workshop on Climate Change and Epidemics",
     "section": "",
-    "text": "Mathematical modeling has become an essential tool for the study of infectious disease epidemics, making it possible to better characterize the complex transmission dynamics inherent to the spread of pathogens in human populations. Mathematical models are now commonly used to address a variety of questions that can inform policy making, for example, the optimal allocation of control measures, the planning and evaluation of vaccination programmes, nowcasting and forecasting of epidemics and real-time risk assessment during epidemics.\nThis one-week course aims at introducing the main modeling techniques and applications to students and professionals in science, medicine and public health. The main learning objectives of the course are that participants:\n1) understand the key theoretical concepts and techniques of infectious disease modeling;\n2) can read modeling papers, understand the strengths and limits of modeling approaches; and are able to use modeling results in their own research and effectively interact with modelers. To achieve these objectives, the course will be partitioned in three types of sessions: a set of lectures introducing key theoretical concepts and techniques, a seminar series illustrating how these concepts are being used to tackle major Public Health challenges, and practical sessions during which participants will learn to implement, run and use models.\nA Masters or BSc degree is required, as well as basic math knowledge (high school-level knowledge on derivatives, basics of probabilities and statistics)."
+    "text": "Climate change is the key threat to this and future generations. With the Earth warming faster than ever before, we face inter-linked migration, infrastructure and public health challenges. In 2023, parts of Europe saw their hottest summer on record while other places have experienced unprecedented levels of rainfall and devastating floods.\nMany infectious diseases are climate-sensitive. For example, the locations and sizes of mosquito populations are linked to climate, which in turn affects the transmission of mosquito-borne diseases such as dengue and malaria. Therefore, changes in climate are altering the spatial and seasonal patterns of infections over time, putting millions of people at risk. In order to be more resilient to the health challenges posed by climate change, it is critical to understand its impacts on infectious diseases, both in the UK and globally.\nThe aim of this workshop is to bring together mathematical modellers, epidemiologists, climate scientists and public health specialists to identify key open challenges in our understanding of how climate change affects infectious diseases. The one-day workshop will consist of a series of talks and sessions covering the following themes:\n\nChanges to infectious disease threats under a changing climate and regions most affected\nMeasures and initiatives to mitigate and build resilience in the UK and globally\nKnowledge gaps that need to be filled to limit the impact of climate-sensitive infectious diseases\nChallenges presented by climate-sensitive infectious diseases that provide opportunities to improve public health\n\nThe main aim of this event is to catalyse discussion between individuals in the research areas of climate science, infectious disease modelling and public health, fostering collaborations that address key challenges relating to climate-sensitive infectious diseases. Please note: this workshop is in-person only."
   },
   {
-    "objectID": "climate_health_hub/pasteur_modeling_infectious_diseases_course_2024.html#links",
-    "href": "climate_health_hub/pasteur_modeling_infectious_diseases_course_2024.html#links",
-    "title": "Modeling of infectious diseases course",
+    "objectID": "climate_health_hub/oxford_workshop_climate_change_epidemics_2024.html#links",
+    "href": "climate_health_hub/oxford_workshop_climate_change_epidemics_2024.html#links",
+    "title": "Workshop on Climate Change and Epidemics",
     "section": "Links",
-    "text": "Links\n\nhttps://www.pasteur.fr/en/education/programs-and-courses/pasteur-courses?id_cours=32329"
+    "text": "Links\n\nhttps://www.maths.ox.ac.uk/node/65901"
   },
   {
     "objectID": "climate_health_hub/ms_mudancas_climaticas_saude_2023.html",
@@ -623,53 +784,88 @@
     "text": "Links\n\nhttps://www.isntd.org/isntd-connect"
   },
   {
-    "objectID": "climate_health_hub/enbel_workshop_forest_fires_2023.html",
-    "href": "climate_health_hub/enbel_workshop_forest_fires_2023.html",
-    "title": "Forest fires, health and climate concerns workshop",
+    "objectID": "climate_health_hub/hdr_uk_2024.html",
+    "href": "climate_health_hub/hdr_uk_2024.html",
+    "title": "Health Data Research UK Conference 2024: The Grand Challenges in Health Data",
     "section": "",
-    "text": "The University of Tartu, Umea University, Finnish Meteorological Institute (FMI), the Swedish meteorological and hydrological institute (SMHI) and CICERO Center for International Climate Research organise a workshop addressing health concerns of forest fires in perspective of climate change. We will discover the latest research findings and mitigation strategies to address health challenges from those disasters."
+    "text": "Health Data Research UK's annual conference will be a free two-day, hybrid event to celebrate progress and bring people together to accelerate the trustworthy use of health data for public benefit.\nThe UK is in a unique position to realise the potential of health data, thanks to the NHS and its cradle-to-grave records for a population of over 65 million people. The last few years have demonstrated the enormous power of data to advance medical knowledge and deliver radical improvements to people's lives. But there is much more that can be done through large-scale data, advanced analytics and innovative developments in data governance.\nHealth Data Research UK's annual conference will be a free two-day, hybrid event to celebrate this progress and allow us to come together and continue to build momentum in the health data research revolution."
   },
   {
-    "objectID": "climate_health_hub/enbel_workshop_forest_fires_2023.html#description",
-    "href": "climate_health_hub/enbel_workshop_forest_fires_2023.html#description",
-    "title": "Forest fires, health and climate concerns workshop",
+    "objectID": "climate_health_hub/hdr_uk_2024.html#description",
+    "href": "climate_health_hub/hdr_uk_2024.html#description",
+    "title": "Health Data Research UK Conference 2024: The Grand Challenges in Health Data",
     "section": "",
-    "text": "The University of Tartu, Umea University, Finnish Meteorological Institute (FMI), the Swedish meteorological and hydrological institute (SMHI) and CICERO Center for International Climate Research organise a workshop addressing health concerns of forest fires in perspective of climate change. We will discover the latest research findings and mitigation strategies to address health challenges from those disasters."
+    "text": "Health Data Research UK's annual conference will be a free two-day, hybrid event to celebrate progress and bring people together to accelerate the trustworthy use of health data for public benefit.\nThe UK is in a unique position to realise the potential of health data, thanks to the NHS and its cradle-to-grave records for a population of over 65 million people. The last few years have demonstrated the enormous power of data to advance medical knowledge and deliver radical improvements to people's lives. But there is much more that can be done through large-scale data, advanced analytics and innovative developments in data governance.\nHealth Data Research UK's annual conference will be a free two-day, hybrid event to celebrate this progress and allow us to come together and continue to build momentum in the health data research revolution."
   },
   {
-    "objectID": "climate_health_hub/enbel_workshop_forest_fires_2023.html#links",
-    "href": "climate_health_hub/enbel_workshop_forest_fires_2023.html#links",
-    "title": "Forest fires, health and climate concerns workshop",
+    "objectID": "climate_health_hub/hdr_uk_2024.html#links",
+    "href": "climate_health_hub/hdr_uk_2024.html#links",
+    "title": "Health Data Research UK Conference 2024: The Grand Challenges in Health Data",
     "section": "Links",
-    "text": "Links\n\nhttps://www.enbel-project.eu/events-page/workshop-forest-fires-health-and-climate-concerns"
+    "text": "Links\n\nhttps://www.hdruk.ac.uk/hdruk-conference-2024/"
   },
   {
-    "objectID": "climate_health_hub/eccmid_2024.html",
-    "href": "climate_health_hub/eccmid_2024.html",
-    "title": "European Congress of Clinical Microbiology and Infectious Diseases 2024",
+    "objectID": "climate_health_hub/evigilancia_2023.html",
+    "href": "climate_health_hub/evigilancia_2023.html",
+    "title": "E-Vigilância 2023",
     "section": "",
-    "text": "ECCMID 2024 will follow the successful format introduced in 2022, offering a comprehensive hybrid congress. While we encourage the majority of our faculty, abstract presenters, and attendees, to participate on-site and benefit from the scientific, educational and networking experiences, provided by ECCMID, our seamless hybrid solution allows remote attendance for those unable to travel for any reason. Whether you come and join us in Barcelona, Spain or sign in online from your living room or office, you will be able to fully enjoy what ECCMID 2024 has to offer."
+    "text": "Welcome to E-Vigilancia 2023, a symposium dedicated to uniting and strengthening the global community of researchers, students, health professionals, and entrepreneurs from different sectors. Our primary focus is to share innovative initiatives for monitoring and controlling communicable diseases under the theme\"Innovations for a Comprehensive One Health\", As public health administration faces significant challenges, such as the continuous demand for surveillance of outbreaks and epidemics, E-Vigilancia 2023 aims to address these challenges and seek rapid responses to reduce morbidity and mortality from communicable diseases."
   },
   {
-    "objectID": "climate_health_hub/eccmid_2024.html#description",
-    "href": "climate_health_hub/eccmid_2024.html#description",
-    "title": "European Congress of Clinical Microbiology and Infectious Diseases 2024",
+    "objectID": "climate_health_hub/evigilancia_2023.html#description",
+    "href": "climate_health_hub/evigilancia_2023.html#description",
+    "title": "E-Vigilância 2023",
     "section": "",
-    "text": "ECCMID 2024 will follow the successful format introduced in 2022, offering a comprehensive hybrid congress. While we encourage the majority of our faculty, abstract presenters, and attendees, to participate on-site and benefit from the scientific, educational and networking experiences, provided by ECCMID, our seamless hybrid solution allows remote attendance for those unable to travel for any reason. Whether you come and join us in Barcelona, Spain or sign in online from your living room or office, you will be able to fully enjoy what ECCMID 2024 has to offer."
+    "text": "Welcome to E-Vigilancia 2023, a symposium dedicated to uniting and strengthening the global community of researchers, students, health professionals, and entrepreneurs from different sectors. Our primary focus is to share innovative initiatives for monitoring and controlling communicable diseases under the theme\"Innovations for a Comprehensive One Health\", As public health administration faces significant challenges, such as the continuous demand for surveillance of outbreaks and epidemics, E-Vigilancia 2023 aims to address these challenges and seek rapid responses to reduce morbidity and mortality from communicable diseases."
   },
   {
-    "objectID": "climate_health_hub/eccmid_2024.html#climate-change-and-the-spectrum-of-infectious-consequences-2h-symposium",
-    "href": "climate_health_hub/eccmid_2024.html#climate-change-and-the-spectrum-of-infectious-consequences-2h-symposium",
-    "title": "European Congress of Clinical Microbiology and Infectious Diseases 2024",
-    "section": "Climate change and the spectrum of infectious consequences (2h Symposium)",
-    "text": "Climate change and the spectrum of infectious consequences (2h Symposium)\n\nAncient viruses revived from permafrost. Jean-Michel Claverie (Marseille, France)\nMonitoring the effects of climate change on the distribution of infectious diseases. Rachel Lowe (Barcelona, Spain)\nClimate change and AMR: challenges in a moving world. Sabiha Essack (Durban, South Africa)\nClimate change and cholera. TBA\n\nCo-organised with: Deutsche Gesellschaft für Infektiologie, ESCMID Professional Affairs Subcommittee, ESCMID Study Group for Infections in Travellers and Migrants (ESGITM), Trainee Association of ESCMID (TAE) Steering Committee."
-  },
-  {
-    "objectID": "climate_health_hub/eccmid_2024.html#links",
-    "href": "climate_health_hub/eccmid_2024.html#links",
-    "title": "European Congress of Clinical Microbiology and Infectious Diseases 2024",
+    "objectID": "climate_health_hub/evigilancia_2023.html#links",
+    "href": "climate_health_hub/evigilancia_2023.html#links",
+    "title": "E-Vigilância 2023",
     "section": "Links",
-    "text": "Links\n\nhttps://www.eccmid.org/"
+    "text": "Links\n\nhttps://e-vigilancia.dengue.mat.br/"
+  },
+  {
+    "objectID": "climate_health_hub/enbel_conference_2023.html",
+    "href": "climate_health_hub/enbel_conference_2023.html",
+    "title": "Connecting Health and Climate Change Conference",
+    "section": "",
+    "text": "Climate change is already impacting health in multiple ways and is undermining determinants for good health, such as clean air and water, food, safe shelter, and economic opportunities. The transdisciplinary conference on Connecting Health and Climate Change brings together researchers, experts, policy makers, and NGO and private sector representatives, from all career stages. It provides an arena to present research findings and discuss climate change effects on health, adaptation, societal consequences,and opportunities for climate resilient development.\nThe hybrid conference is organized by ENBEL - Enhancing Belmont Research Action to support EU policy making on climate change and health. ENBEL coordinates a network of international health and climate researchers under the Belmont Forum’s Collaborative Research Action on Climate, Environment and Health and similar EU research programs. Through this conference ENBEL aims at help strengthening the health argument for climate action."
+  },
+  {
+    "objectID": "climate_health_hub/enbel_conference_2023.html#description",
+    "href": "climate_health_hub/enbel_conference_2023.html#description",
+    "title": "Connecting Health and Climate Change Conference",
+    "section": "",
+    "text": "Climate change is already impacting health in multiple ways and is undermining determinants for good health, such as clean air and water, food, safe shelter, and economic opportunities. The transdisciplinary conference on Connecting Health and Climate Change brings together researchers, experts, policy makers, and NGO and private sector representatives, from all career stages. It provides an arena to present research findings and discuss climate change effects on health, adaptation, societal consequences,and opportunities for climate resilient development.\nThe hybrid conference is organized by ENBEL - Enhancing Belmont Research Action to support EU policy making on climate change and health. ENBEL coordinates a network of international health and climate researchers under the Belmont Forum’s Collaborative Research Action on Climate, Environment and Health and similar EU research programs. Through this conference ENBEL aims at help strengthening the health argument for climate action."
+  },
+  {
+    "objectID": "climate_health_hub/enbel_conference_2023.html#links",
+    "href": "climate_health_hub/enbel_conference_2023.html#links",
+    "title": "Connecting Health and Climate Change Conference",
+    "section": "Links",
+    "text": "Links\n\nhttp://enbel2023.se"
+  },
+  {
+    "objectID": "climate_health_hub/cop28_2023.html",
+    "href": "climate_health_hub/cop28_2023.html",
+    "title": "COP28",
+    "section": "",
+    "text": "COP28 UAE will be a milestone moment when the world will take stock of its progress on the Paris Agreement.\nCOP28 UAE Presidency, in collaboration with WHO, the Wellcome Trust and partners, is hosting the first-ever Health Day at the COP28 UN Climate Conference, taking place in Dubai, the UAE from 30 November to 12 December 2023."
+  },
+  {
+    "objectID": "climate_health_hub/cop28_2023.html#description",
+    "href": "climate_health_hub/cop28_2023.html#description",
+    "title": "COP28",
+    "section": "",
+    "text": "COP28 UAE will be a milestone moment when the world will take stock of its progress on the Paris Agreement.\nCOP28 UAE Presidency, in collaboration with WHO, the Wellcome Trust and partners, is hosting the first-ever Health Day at the COP28 UN Climate Conference, taking place in Dubai, the UAE from 30 November to 12 December 2023."
+  },
+  {
+    "objectID": "climate_health_hub/cop28_2023.html#links",
+    "href": "climate_health_hub/cop28_2023.html#links",
+    "title": "COP28",
+    "section": "Links",
+    "text": "Links\n\nhttps://www.cop28.com/\nhttps://www.who.int/news-room/events/detail/2023/12/03/default-calendar/cop28-health-day\nhttps://cop-resilience-hub.org/\nhttps://cop-resilience-hub.org/live-stream/"
   },
   {
     "objectID": "climate_health_hub/ccmi_webinar_climate_change_health_2023.html",
@@ -749,25 +945,74 @@
     "text": "Links\n\nhttps://www.publichealth.columbia.edu/academics/non-degree-special-programs/professional-non-degree-programs/skills-health-research-professionals-sharp-training/climate-change-health\nhttps://columbia.us15.list-manage.com/subscribe?u=60d3eb536eacd93ffd4c56c08&id=59acf40352"
   },
   {
-    "objectID": "climate_health_hub/enbel_conference_2023.html",
-    "href": "climate_health_hub/enbel_conference_2023.html",
-    "title": "Connecting Health and Climate Change Conference",
+    "objectID": "climate_health_hub/eccmid_2024.html",
+    "href": "climate_health_hub/eccmid_2024.html",
+    "title": "European Congress of Clinical Microbiology and Infectious Diseases 2024",
     "section": "",
-    "text": "Climate change is already impacting health in multiple ways and is undermining determinants for good health, such as clean air and water, food, safe shelter, and economic opportunities. The transdisciplinary conference on Connecting Health and Climate Change brings together researchers, experts, policy makers, and NGO and private sector representatives, from all career stages. It provides an arena to present research findings and discuss climate change effects on health, adaptation, societal consequences,and opportunities for climate resilient development.\nThe hybrid conference is organized by ENBEL - Enhancing Belmont Research Action to support EU policy making on climate change and health. ENBEL coordinates a network of international health and climate researchers under the Belmont Forum’s Collaborative Research Action on Climate, Environment and Health and similar EU research programs. Through this conference ENBEL aims at help strengthening the health argument for climate action."
+    "text": "ECCMID 2024 will follow the successful format introduced in 2022, offering a comprehensive hybrid congress. While we encourage the majority of our faculty, abstract presenters, and attendees, to participate on-site and benefit from the scientific, educational and networking experiences, provided by ECCMID, our seamless hybrid solution allows remote attendance for those unable to travel for any reason. Whether you come and join us in Barcelona, Spain or sign in online from your living room or office, you will be able to fully enjoy what ECCMID 2024 has to offer."
   },
   {
-    "objectID": "climate_health_hub/enbel_conference_2023.html#description",
-    "href": "climate_health_hub/enbel_conference_2023.html#description",
-    "title": "Connecting Health and Climate Change Conference",
+    "objectID": "climate_health_hub/eccmid_2024.html#description",
+    "href": "climate_health_hub/eccmid_2024.html#description",
+    "title": "European Congress of Clinical Microbiology and Infectious Diseases 2024",
     "section": "",
-    "text": "Climate change is already impacting health in multiple ways and is undermining determinants for good health, such as clean air and water, food, safe shelter, and economic opportunities. The transdisciplinary conference on Connecting Health and Climate Change brings together researchers, experts, policy makers, and NGO and private sector representatives, from all career stages. It provides an arena to present research findings and discuss climate change effects on health, adaptation, societal consequences,and opportunities for climate resilient development.\nThe hybrid conference is organized by ENBEL - Enhancing Belmont Research Action to support EU policy making on climate change and health. ENBEL coordinates a network of international health and climate researchers under the Belmont Forum’s Collaborative Research Action on Climate, Environment and Health and similar EU research programs. Through this conference ENBEL aims at help strengthening the health argument for climate action."
+    "text": "ECCMID 2024 will follow the successful format introduced in 2022, offering a comprehensive hybrid congress. While we encourage the majority of our faculty, abstract presenters, and attendees, to participate on-site and benefit from the scientific, educational and networking experiences, provided by ECCMID, our seamless hybrid solution allows remote attendance for those unable to travel for any reason. Whether you come and join us in Barcelona, Spain or sign in online from your living room or office, you will be able to fully enjoy what ECCMID 2024 has to offer."
   },
   {
-    "objectID": "climate_health_hub/enbel_conference_2023.html#links",
-    "href": "climate_health_hub/enbel_conference_2023.html#links",
-    "title": "Connecting Health and Climate Change Conference",
+    "objectID": "climate_health_hub/eccmid_2024.html#climate-change-and-the-spectrum-of-infectious-consequences-2h-symposium",
+    "href": "climate_health_hub/eccmid_2024.html#climate-change-and-the-spectrum-of-infectious-consequences-2h-symposium",
+    "title": "European Congress of Clinical Microbiology and Infectious Diseases 2024",
+    "section": "Climate change and the spectrum of infectious consequences (2h Symposium)",
+    "text": "Climate change and the spectrum of infectious consequences (2h Symposium)\n\nAncient viruses revived from permafrost. Jean-Michel Claverie (Marseille, France)\nMonitoring the effects of climate change on the distribution of infectious diseases. Rachel Lowe (Barcelona, Spain)\nClimate change and AMR: challenges in a moving world. Sabiha Essack (Durban, South Africa)\nClimate change and cholera. TBA\n\nCo-organised with: Deutsche Gesellschaft für Infektiologie, ESCMID Professional Affairs Subcommittee, ESCMID Study Group for Infections in Travellers and Migrants (ESGITM), Trainee Association of ESCMID (TAE) Steering Committee."
+  },
+  {
+    "objectID": "climate_health_hub/eccmid_2024.html#links",
+    "href": "climate_health_hub/eccmid_2024.html#links",
+    "title": "European Congress of Clinical Microbiology and Infectious Diseases 2024",
     "section": "Links",
-    "text": "Links\n\nhttp://enbel2023.se"
+    "text": "Links\n\nhttps://www.eccmid.org/"
+  },
+  {
+    "objectID": "climate_health_hub/enbel_workshop_forest_fires_2023.html",
+    "href": "climate_health_hub/enbel_workshop_forest_fires_2023.html",
+    "title": "Forest fires, health and climate concerns workshop",
+    "section": "",
+    "text": "The University of Tartu, Umea University, Finnish Meteorological Institute (FMI), the Swedish meteorological and hydrological institute (SMHI) and CICERO Center for International Climate Research organise a workshop addressing health concerns of forest fires in perspective of climate change. We will discover the latest research findings and mitigation strategies to address health challenges from those disasters."
+  },
+  {
+    "objectID": "climate_health_hub/enbel_workshop_forest_fires_2023.html#description",
+    "href": "climate_health_hub/enbel_workshop_forest_fires_2023.html#description",
+    "title": "Forest fires, health and climate concerns workshop",
+    "section": "",
+    "text": "The University of Tartu, Umea University, Finnish Meteorological Institute (FMI), the Swedish meteorological and hydrological institute (SMHI) and CICERO Center for International Climate Research organise a workshop addressing health concerns of forest fires in perspective of climate change. We will discover the latest research findings and mitigation strategies to address health challenges from those disasters."
+  },
+  {
+    "objectID": "climate_health_hub/enbel_workshop_forest_fires_2023.html#links",
+    "href": "climate_health_hub/enbel_workshop_forest_fires_2023.html#links",
+    "title": "Forest fires, health and climate concerns workshop",
+    "section": "Links",
+    "text": "Links\n\nhttps://www.enbel-project.eu/events-page/workshop-forest-fires-health-and-climate-concerns"
+  },
+  {
+    "objectID": "climate_health_hub/geoenv_2024.html",
+    "href": "climate_health_hub/geoenv_2024.html",
+    "title": "GeoENV 2024: The 15th International Conference on Geostatistics for Environmental Applications",
+    "section": "",
+    "text": "geoENV, the Conference on Geostatistics for Environmental Applications, shows the state of the art of geostatistics in environmental applications with new cases, results and relevant discussions from leading researchers and practitioners around the world. Novel and outstanding theoretical and practical developments of geostatistics in the environmental field have been compiled from three main areas: that of Hydrology, another regarding Groundwater and Groundwater Contamination, and a third on Soil Contamination and Site Remediation Air Pollution, Ecology and Other Applications."
+  },
+  {
+    "objectID": "climate_health_hub/geoenv_2024.html#description",
+    "href": "climate_health_hub/geoenv_2024.html#description",
+    "title": "GeoENV 2024: The 15th International Conference on Geostatistics for Environmental Applications",
+    "section": "",
+    "text": "geoENV, the Conference on Geostatistics for Environmental Applications, shows the state of the art of geostatistics in environmental applications with new cases, results and relevant discussions from leading researchers and practitioners around the world. Novel and outstanding theoretical and practical developments of geostatistics in the environmental field have been compiled from three main areas: that of Hydrology, another regarding Groundwater and Groundwater Contamination, and a third on Soil Contamination and Site Remediation Air Pollution, Ecology and Other Applications."
+  },
+  {
+    "objectID": "climate_health_hub/geoenv_2024.html#links",
+    "href": "climate_health_hub/geoenv_2024.html#links",
+    "title": "GeoENV 2024: The 15th International Conference on Geostatistics for Environmental Applications",
+    "section": "Links",
+    "text": "Links\n\nhttps://2024.geoenvia.org/"
   },
   {
     "objectID": "climate_health_hub/isntd_climate_health_2023.html",
@@ -812,95 +1057,165 @@
     "text": "Links\n\nhttps://event.eu.on24.com/wcc/r/8000058838/A6C84071F91ECCD8CE9C737B4D79A148\nhttps://www.lancetcountdown.org/2023-report/"
   },
   {
-    "objectID": "climate_health_hub/oxford_workshop_climate_change_epidemics_2024.html",
-    "href": "climate_health_hub/oxford_workshop_climate_change_epidemics_2024.html",
-    "title": "Workshop on Climate Change and Epidemics",
+    "objectID": "climate_health_hub/okumu_2023.html",
+    "href": "climate_health_hub/okumu_2023.html",
+    "title": "Climate, Mosquitoes and Disease: a Masterclass with World Leading Experts",
     "section": "",
-    "text": "Climate change is the key threat to this and future generations. With the Earth warming faster than ever before, we face inter-linked migration, infrastructure and public health challenges. In 2023, parts of Europe saw their hottest summer on record while other places have experienced unprecedented levels of rainfall and devastating floods.\nMany infectious diseases are climate-sensitive. For example, the locations and sizes of mosquito populations are linked to climate, which in turn affects the transmission of mosquito-borne diseases such as dengue and malaria. Therefore, changes in climate are altering the spatial and seasonal patterns of infections over time, putting millions of people at risk. In order to be more resilient to the health challenges posed by climate change, it is critical to understand its impacts on infectious diseases, both in the UK and globally.\nThe aim of this workshop is to bring together mathematical modellers, epidemiologists, climate scientists and public health specialists to identify key open challenges in our understanding of how climate change affects infectious diseases. The one-day workshop will consist of a series of talks and sessions covering the following themes:\n\nChanges to infectious disease threats under a changing climate and regions most affected\nMeasures and initiatives to mitigate and build resilience in the UK and globally\nKnowledge gaps that need to be filled to limit the impact of climate-sensitive infectious diseases\nChallenges presented by climate-sensitive infectious diseases that provide opportunities to improve public health\n\nThe main aim of this event is to catalyse discussion between individuals in the research areas of climate science, infectious disease modelling and public health, fostering collaborations that address key challenges relating to climate-sensitive infectious diseases. Please note: this workshop is in-person only."
+    "text": "Confirmed Experts\n\nProf. Erin Mordecai (Stanford)\nProf. Abdisalan Noor (Harvard)\nProf. Leah Johnson (Virginia Tech)\nDr. Kimbely Fornace (Glasgow/)\nProf. Sadie Ryan (Florida)\nProf. Madeleine Thompson (Wellcome Trust)"
   },
   {
-    "objectID": "climate_health_hub/oxford_workshop_climate_change_epidemics_2024.html#description",
-    "href": "climate_health_hub/oxford_workshop_climate_change_epidemics_2024.html#description",
-    "title": "Workshop on Climate Change and Epidemics",
+    "objectID": "climate_health_hub/okumu_2023.html#description",
+    "href": "climate_health_hub/okumu_2023.html#description",
+    "title": "Climate, Mosquitoes and Disease: a Masterclass with World Leading Experts",
     "section": "",
-    "text": "Climate change is the key threat to this and future generations. With the Earth warming faster than ever before, we face inter-linked migration, infrastructure and public health challenges. In 2023, parts of Europe saw their hottest summer on record while other places have experienced unprecedented levels of rainfall and devastating floods.\nMany infectious diseases are climate-sensitive. For example, the locations and sizes of mosquito populations are linked to climate, which in turn affects the transmission of mosquito-borne diseases such as dengue and malaria. Therefore, changes in climate are altering the spatial and seasonal patterns of infections over time, putting millions of people at risk. In order to be more resilient to the health challenges posed by climate change, it is critical to understand its impacts on infectious diseases, both in the UK and globally.\nThe aim of this workshop is to bring together mathematical modellers, epidemiologists, climate scientists and public health specialists to identify key open challenges in our understanding of how climate change affects infectious diseases. The one-day workshop will consist of a series of talks and sessions covering the following themes:\n\nChanges to infectious disease threats under a changing climate and regions most affected\nMeasures and initiatives to mitigate and build resilience in the UK and globally\nKnowledge gaps that need to be filled to limit the impact of climate-sensitive infectious diseases\nChallenges presented by climate-sensitive infectious diseases that provide opportunities to improve public health\n\nThe main aim of this event is to catalyse discussion between individuals in the research areas of climate science, infectious disease modelling and public health, fostering collaborations that address key challenges relating to climate-sensitive infectious diseases. Please note: this workshop is in-person only."
+    "text": "Confirmed Experts\n\nProf. Erin Mordecai (Stanford)\nProf. Abdisalan Noor (Harvard)\nProf. Leah Johnson (Virginia Tech)\nDr. Kimbely Fornace (Glasgow/)\nProf. Sadie Ryan (Florida)\nProf. Madeleine Thompson (Wellcome Trust)"
   },
   {
-    "objectID": "climate_health_hub/oxford_workshop_climate_change_epidemics_2024.html#links",
-    "href": "climate_health_hub/oxford_workshop_climate_change_epidemics_2024.html#links",
-    "title": "Workshop on Climate Change and Epidemics",
+    "objectID": "climate_health_hub/okumu_2023.html#links",
+    "href": "climate_health_hub/okumu_2023.html#links",
+    "title": "Climate, Mosquitoes and Disease: a Masterclass with World Leading Experts",
     "section": "Links",
-    "text": "Links\n\nhttps://www.maths.ox.ac.uk/node/65901"
+    "text": "Links\n\nhttps://uofglasgow.zoom.us/meeting/register/tZwofu-hpzIrE90KmwZFoBj9OVKaTLlwiVE7#/registration"
   },
   {
-    "objectID": "climate_health_hub/pasteur_spreading_infectious_agents_risk_assessment_2024.html",
-    "href": "climate_health_hub/pasteur_spreading_infectious_agents_risk_assessment_2024.html",
-    "title": "Spreading of infectious agents and risk asessment couse",
+    "objectID": "climate_health_hub/pasteur_modeling_infectious_diseases_course_2024.html",
+    "href": "climate_health_hub/pasteur_modeling_infectious_diseases_course_2024.html",
+    "title": "Modeling of infectious diseases course",
     "section": "",
-    "text": "The different modes of transmission of infectious agents, the eco-epidemiological consequences of changes in their environments related to human activities and the principles of surveillance and prevention of infectious diseases for which they are responsible are presented. Epidemiological situations, chosen from infectious diseases, are developed in a multidisciplinary perspective.\nThis four-week course is for physicians, pharmacists, veterinarians, scientists and engineers who want to specialize in the relationships between infectious agents, their hosts and the environment."
+    "text": "Mathematical modeling has become an essential tool for the study of infectious disease epidemics, making it possible to better characterize the complex transmission dynamics inherent to the spread of pathogens in human populations. Mathematical models are now commonly used to address a variety of questions that can inform policy making, for example, the optimal allocation of control measures, the planning and evaluation of vaccination programmes, nowcasting and forecasting of epidemics and real-time risk assessment during epidemics.\nThis one-week course aims at introducing the main modeling techniques and applications to students and professionals in science, medicine and public health. The main learning objectives of the course are that participants:\n1) understand the key theoretical concepts and techniques of infectious disease modeling;\n2) can read modeling papers, understand the strengths and limits of modeling approaches; and are able to use modeling results in their own research and effectively interact with modelers. To achieve these objectives, the course will be partitioned in three types of sessions: a set of lectures introducing key theoretical concepts and techniques, a seminar series illustrating how these concepts are being used to tackle major Public Health challenges, and practical sessions during which participants will learn to implement, run and use models.\nA Masters or BSc degree is required, as well as basic math knowledge (high school-level knowledge on derivatives, basics of probabilities and statistics)."
   },
   {
-    "objectID": "climate_health_hub/pasteur_spreading_infectious_agents_risk_assessment_2024.html#description",
-    "href": "climate_health_hub/pasteur_spreading_infectious_agents_risk_assessment_2024.html#description",
-    "title": "Spreading of infectious agents and risk asessment couse",
+    "objectID": "climate_health_hub/pasteur_modeling_infectious_diseases_course_2024.html#description",
+    "href": "climate_health_hub/pasteur_modeling_infectious_diseases_course_2024.html#description",
+    "title": "Modeling of infectious diseases course",
     "section": "",
-    "text": "The different modes of transmission of infectious agents, the eco-epidemiological consequences of changes in their environments related to human activities and the principles of surveillance and prevention of infectious diseases for which they are responsible are presented. Epidemiological situations, chosen from infectious diseases, are developed in a multidisciplinary perspective.\nThis four-week course is for physicians, pharmacists, veterinarians, scientists and engineers who want to specialize in the relationships between infectious agents, their hosts and the environment."
+    "text": "Mathematical modeling has become an essential tool for the study of infectious disease epidemics, making it possible to better characterize the complex transmission dynamics inherent to the spread of pathogens in human populations. Mathematical models are now commonly used to address a variety of questions that can inform policy making, for example, the optimal allocation of control measures, the planning and evaluation of vaccination programmes, nowcasting and forecasting of epidemics and real-time risk assessment during epidemics.\nThis one-week course aims at introducing the main modeling techniques and applications to students and professionals in science, medicine and public health. The main learning objectives of the course are that participants:\n1) understand the key theoretical concepts and techniques of infectious disease modeling;\n2) can read modeling papers, understand the strengths and limits of modeling approaches; and are able to use modeling results in their own research and effectively interact with modelers. To achieve these objectives, the course will be partitioned in three types of sessions: a set of lectures introducing key theoretical concepts and techniques, a seminar series illustrating how these concepts are being used to tackle major Public Health challenges, and practical sessions during which participants will learn to implement, run and use models.\nA Masters or BSc degree is required, as well as basic math knowledge (high school-level knowledge on derivatives, basics of probabilities and statistics)."
   },
   {
-    "objectID": "climate_health_hub/pasteur_spreading_infectious_agents_risk_assessment_2024.html#links",
-    "href": "climate_health_hub/pasteur_spreading_infectious_agents_risk_assessment_2024.html#links",
-    "title": "Spreading of infectious agents and risk asessment couse",
+    "objectID": "climate_health_hub/pasteur_modeling_infectious_diseases_course_2024.html#links",
+    "href": "climate_health_hub/pasteur_modeling_infectious_diseases_course_2024.html#links",
+    "title": "Modeling of infectious diseases course",
     "section": "Links",
-    "text": "Links\n\nhttps://www.pasteur.fr/en/education/programs-and-courses/pasteur-courses?id_cours=32306"
+    "text": "Links\n\nhttps://www.pasteur.fr/en/education/programs-and-courses/pasteur-courses?id_cours=32329"
   },
   {
-    "objectID": "code.html#selected-repos",
-    "href": "code.html#selected-repos",
-    "title": "Packages & Code",
-    "section": "Selected repos",
-    "text": "Selected repos"
+    "objectID": "climate_health_hub/winter_school_climate_change_epidemiology_2023.html",
+    "href": "climate_health_hub/winter_school_climate_change_epidemiology_2023.html",
+    "title": "Advanced Methods in Climate Change Epidemiology Winter School",
+    "section": "",
+    "text": "Climate change is the defining public health challenge of the century. The assessment of its health impacts at different geographical and temporal scales, and the identification of the potential mechanisms and the main vulnerable populations are key priorities in today’s epidemiological research. During the last years, novel approaches in environmental epidemiology have emerged, boosted by the urgency to provide reliable scientific evidence to protect populations from climate change. These new techniques combine advanced statistical methods andepidemiological designs, new data sources and interdisciplinary methods to address increasingly complex research questions. This course aims to provide a comprehensive, hands-on, up-to-date overview of the latest developments in environmental epidemiology applied to climate change&gt; research. In particular, the course will cover the state-of-the-art study designs such as multi-location time series analyses and small-area assements, advanced methodologies such as distributed lag models and GIS data linkage, and applications such as health impact projection studies and health attribution analysis. The course will provide fully documented material on the statistical and epidemiological bases with small lectures, real-data demos, and the corresponding R code."
   },
   {
-    "objectID": "data-projects/brazil-climate-zonal-indicators.html#introduction",
-    "href": "data-projects/brazil-climate-zonal-indicators.html#introduction",
-    "title": "Zonal statististics of climate indicators for Brazilian municipalities",
+    "objectID": "climate_health_hub/winter_school_climate_change_epidemiology_2023.html#description",
+    "href": "climate_health_hub/winter_school_climate_change_epidemiology_2023.html#description",
+    "title": "Advanced Methods in Climate Change Epidemiology Winter School",
+    "section": "",
+    "text": "Climate change is the defining public health challenge of the century. The assessment of its health impacts at different geographical and temporal scales, and the identification of the potential mechanisms and the main vulnerable populations are key priorities in today’s epidemiological research. During the last years, novel approaches in environmental epidemiology have emerged, boosted by the urgency to provide reliable scientific evidence to protect populations from climate change. These new techniques combine advanced statistical methods andepidemiological designs, new data sources and interdisciplinary methods to address increasingly complex research questions. This course aims to provide a comprehensive, hands-on, up-to-date overview of the latest developments in environmental epidemiology applied to climate change&gt; research. In particular, the course will cover the state-of-the-art study designs such as multi-location time series analyses and small-area assements, advanced methodologies such as distributed lag models and GIS data linkage, and applications such as health impact projection studies and health attribution analysis. The course will provide fully documented material on the statistical and epidemiological bases with small lectures, real-data demos, and the corresponding R code."
+  },
+  {
+    "objectID": "climate_health_hub/winter_school_climate_change_epidemiology_2023.html#links",
+    "href": "climate_health_hub/winter_school_climate_change_epidemiology_2023.html#links",
+    "title": "Advanced Methods in Climate Change Epidemiology Winter School",
+    "section": "Links",
+    "text": "Links\n\nhttps://www.epi-winterschool.org/program/course-3-advanced-methods-in-climate-change-epidemiology/"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
+    "section": "",
+    "text": "Full name: Raphael de Freitas Saldanha\nDate of birth: April 18, 1985\nLanguages: Portuguese, English"
+  },
+  {
+    "objectID": "cv.html#general-information",
+    "href": "cv.html#general-information",
+    "title": "CV",
+    "section": "",
+    "text": "Full name: Raphael de Freitas Saldanha\nDate of birth: April 18, 1985\nLanguages: Portuguese, English"
+  },
+  {
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "CV",
+    "section": "Education",
+    "text": "Education\n\n2022 - current. Postdoc at Inria and LNCC. Artificial intelligence applications on public health.\n2017 - 2021. PhD at Fiocruz, PPGICS. Information and Communication in Health.\n2015 - 2017. Graduate Degree (Master) at UFJF - PPGSC. Public Health.\n2008 - 2009. Specialization at UFJF. Computational Statistical Methods\n2003 - 2007. Undergraduate Degree at UFJF - ICHL-DG. Geography."
+  },
+  {
+    "objectID": "cv.html#academic-interests",
+    "href": "cv.html#academic-interests",
+    "title": "CV",
+    "section": "Academic interests",
+    "text": "Academic interests\n\nData science\n\nR\nShiny apps\nQuarto\nPlotly\nPython\nJupyter Hub\nduckdb, SQLite\nElasticSearch\nKibana\n\n\n\nGIS\n\nQGIS\nESRI ArcGIS\nGeoserver\n\n\n\nOther\n\nGephi\nLaTeX\nLinux\nMacOS"
+  },
+  {
+    "objectID": "cv.html#work-and-teaching-experience",
+    "href": "cv.html#work-and-teaching-experience",
+    "title": "CV",
+    "section": "Work and teaching experience",
+    "text": "Work and teaching experience\n\n2017 - current. Research assistant at Fiocruz, ICICT, PCDaS.\n2017 - current. Research assistant at Fiocruz, ICICT, Observatório de Clima e Saúde.\n2021 - 2022 Research assistant at Fiocruz, IOC, Lathema Lab (ArboAlvo).\n2017 - 2018 Research assistant at IRD, Maison de la Télédétection (Montpellier, FR).\n2017 - current. Workshop teacher of R.\n2017 - current. Workshop teacher of Introduction to Spatial Econometry with R.\n2013 Teaching Assistant, Scientific Methodology at UFJF, CRITT.\n2023 Distance learning supervisor at Unibanco Institute.\n2005 - 2016 GIS and statistics analyst at Plangeo.\n2012 Approved for substitute teacher position of Thematic Cartograph.\n2012 Distance learning supervisor of Statistics, course of Public Management.\n2011 Distance learning tutor for Business Statistics (Curso de Administração Pública à Distância – PNAP), UFJF.\n2010 Teacher of Technologies for Environmental Planning, FAFISM."
+  },
+  {
+    "objectID": "cv.html#additional-training",
+    "href": "cv.html#additional-training",
+    "title": "CV",
+    "section": "Additional training",
+    "text": "Additional training\n\n2022 Public Health Disparities Geocoding Project 2.0. Harvard School of Public Health\n2022 Developing the SIR Model. Imperial College (Coursera)\n2022 Algoritmos e Modelos de Programação para Big Data. Laboratório Nacional de Computação Científica\n2022 Machine Learning, Curso-R.\n2022 R Deploy, Curso-R.\n2021 QBA/On-line - Sensibilização em Gestão da Qualidade, Biossegurança e Ambiente, Fiocruz.\n2020 Comunicação, Mídia e Saúde em Contexto de Emergências Sanitárias, UFAL.\n2018 Anthropological and Historical Approaches of Visualising Epidemics, COC, Fiocruz.\n2018 Information Visualization, Foundations and Applied Perception, NYU Tandon School of Engineering (Coursera).\n2017 Practical Machine Learning, Johns Hopkins University (Coursera).\n2016 Harvard - Brazil Collaborative Public Health Course, Harvard School of Public Health.\n2015 Introduction to Big Data, University of California, San Diego (Coursera).\n2011 Geoestatística com o uso do R, UFJF.\n2007 Workshop em modelagem em estudos longitudinais, UFJF.\n2007 Geomarketing - Conceitos e aplicações, Centro Universitário Senac.\n2004 Geografia e movimentos sociais, A América Latina, AGB.\n2003 Introdução à Gestão Ambiental Urbana, UFJF.\n2003 Flash Mx, CRITT, UFJF."
+  },
+  {
+    "objectID": "cv.html#hobbies",
+    "href": "cv.html#hobbies",
+    "title": "CV",
+    "section": "Hobbies",
+    "text": "Hobbies\n\nCycling\nWood working"
+  },
+  {
+    "objectID": "data-projects/era5land-daily-latin-america.html",
+    "href": "data-projects/era5land-daily-latin-america.html",
+    "title": "ERA5-Land selected indicators daily aggregates for Latin America",
+    "section": "",
+    "text": "Maximum temperature (k)"
+  },
+  {
+    "objectID": "data-projects/era5land-daily-latin-america.html#introduction",
+    "href": "data-projects/era5land-daily-latin-america.html#introduction",
+    "title": "ERA5-Land selected indicators daily aggregates for Latin America",
     "section": "Introduction",
-    "text": "Introduction\nClimate indicators are used on several statistical models for many research areas and are specially important for modelling Climate Sensitive Diseases (CSD) incidence. Those models usually adopts a lattice structure, where its data is aggregated at administrative boundaries (e.g. disease incidence), but climate indicators are usually presented in a continuous regular grid format.\nTo make climate indicators compatible with lattice structures, zonal statistics may be adopted. Zonal statistics are descriptive statistics calculated using a set of cells that spatially intersects a given spatial boundary. For each boundary in a map, statistics like average, maximum value, minimum value, standard deviation, and sum are obtained to represent the cell’s values that intersect the boundary.\nI created some zonal statistics of climate indicators datasets for Brazilian municipalities from some climate data products."
+    "text": "Introduction\nThe ERA5-Land reanalysis from The Copernicus Programme is an incredible source of climate data with global coverage of land areas from 1950 to the present, at 10km spatial resolution. Its original data is at hourly interval, and monthly aggregates are also available at the Copernicus Data Store (CDS).\nFor some applications like Climate-Sensitive Diseases (CSD) modelling, the hourly interval may be too much detailed, but the monthly aggregation is too coarse.\nFor this reason, I created daily aggregates from some ERA5-Land indicators for the Latin America region."
   },
   {
-    "objectID": "data-projects/brazil-climate-zonal-indicators.html#zonal-era5-land",
-    "href": "data-projects/brazil-climate-zonal-indicators.html#zonal-era5-land",
-    "title": "Zonal statististics of climate indicators for Brazilian municipalities",
-    "section": "Zonal ERA5-Land",
-    "text": "Zonal ERA5-Land\n\n\n\n\n\nThe ERA5-Land data (Muñoz-Sabater et al. 2021) presents hourly climate indicators at 0.1° × 0.1° horizontal resolution with global coverage, from 1950 to present.\nSelected indicators hourly data were downloaded and aggregated at daily basis to compute zonal statistics for the Brazilian municipalities.\nThe following indicators and aggregations were computed.\n\n\n\n\n\n\n\n\nERA5-Land indicators\nDaily time-aggregating functions\nSpatial zonal statistics\n\n\n\n\nTemperature (2m)\nmean, max, min\nmax, min, stdev, count\n\n\nDewpoint temp. (2m)\nmean\nmax, min, stdev, count\n\n\n\\(u\\) component of wind\nmean\nmax, min, stdev, count\n\n\n\\(v\\) component of wind\nmean\nmax, min, stdev, count\n\n\nSurface pressure\nmean\nmax, min, stdev, count\n\n\nTotal precipitation\nsum\nmax, min, stdev, count, sum\n\n\n\nA data paper with full methodology description was submitted to peer review."
+    "objectID": "data-projects/era5land-daily-latin-america.html#methodology",
+    "href": "data-projects/era5land-daily-latin-america.html#methodology",
+    "title": "ERA5-Land selected indicators daily aggregates for Latin America",
+    "section": "Methodology",
+    "text": "Methodology\nI developed an R script using the KrigR package (Kusch and Davy 2022). The script downloads a set of indicators, starting on 1950, for a geographical bounding box covering the Latin America region (coordinates -118.47,-34.1,-56.65, 33.28), and aggregates the data from hourly to daily, saving its results as NetCDF files. Each resulting file covers a year’s month and presents data layers for each day of the respective month.\nThe table bellow contains the time aggregation functions applied to each climate indicator.\n\n\n\nIndicator\nDaily aggregation function\n\n\n\n\n2m temperature\nmean, max, min\n\n\n2m dewpoint temperature\nmean\n\n\nu component of wind\nmean\n\n\nv component of wind\nmean\n\n\nsurface pressure\nmean\n\n\ntotal precipitation\nsum"
   },
   {
-    "objectID": "data-projects/brazil-climate-zonal-indicators.html#zonal-br-dwgd",
-    "href": "data-projects/brazil-climate-zonal-indicators.html#zonal-br-dwgd",
-    "title": "Zonal statististics of climate indicators for Brazilian municipalities",
-    "section": "Zonal BR-DWGD",
-    "text": "Zonal BR-DWGD\n\n\n\n\n\nThe BR-DWGD dataset (Xavier et al. 2022) presents daily meteorological data interpolated to a grid with 0.1° × 0.1° of spatial resolution for the Brazilian territory, with daily data from January 1, 1961, to July 31, 2020. It used data from 1,252 weather stations and 11,473 rain gauges in its interpolation methods, cross-validated to the selection of the best method for each weather indicator.\nThe following weather indicators are available from the BR-DWGD study: precipitation (mm), minimum temperature (°C), maximum temperature (°C), solar radiation (MJ⋅m−2 ), wind speed at 2m height (m⋅s−1) and relative humidity (%).\nThe following zonal statistics were computed.\n\nbrclimr::product_info(product = \"brdwgd\")\n\n&lt;list&gt;\n├─tmax: &lt;list&gt;\n│ ├─name: \"Maximum temperature\"\n│ ├─unit: \"Degree Celsius\"\n│ ├─date_range: \"Daily, 1961-01-01 to 2020-07-31\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"Tmax_min\"\n│   ├─max: \"Tmax_max\"\n│   ├─mean: \"Tmax_mean\"\n│   └─sd: \"Tmax_sd\"\n├─tmin: &lt;list&gt;\n│ ├─name: \"Minimum temperature\"\n│ ├─unit: \"Degree Celsius\"\n│ ├─date_range: \"Daily, 1961-01-01 to 2020-07-31\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"Tmin_min\"\n│   ├─max: \"Tmin_max\"\n│   ├─mean: \"Tmin_mean\"\n│   └─sd: \"Tmin_sd\"\n├─pr: &lt;list&gt;\n│ ├─name: \"Precipitation\"\n│ ├─unit: \"mm\"\n│ ├─date_range: \"Daily, 1961-01-01 to 2020-07-31\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"pr_min\"\n│   ├─max: \"pr_max\"\n│   ├─mean: \"pr_mean\"\n│   ├─sd: \"pr_sd\"\n│   └─sum: \"pr_sum\"\n├─eto: &lt;list&gt;\n│ ├─name: \"Evapotranspiration\"\n│ ├─unit: \"mm\"\n│ ├─date_range: \"Daily, 1961-01-01 to 2020-07-31\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"ETo_min\"\n│   ├─max: \"ETo_max\"\n│   ├─mean: \"ETo_mean\"\n│   ├─sd: \"ETo_sd\"\n│   └─sum: \"ETo_sd\"\n├─rh: &lt;list&gt;\n│ ├─name: \"Relative humidity\"\n│ ├─unit: \"Percentage\"\n│ ├─date_range: \"Daily, 1961-01-01 to 2020-07-31\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"RH_min\"\n│   ├─max: \"RH_max\"\n│   ├─mean: \"RH_mean\"\n│   └─sd: \"RH_sd\"\n├─rs: &lt;list&gt;\n│ ├─name: \"Solar radiation\"\n│ ├─unit: \"MJ/m2\"\n│ ├─date_range: \"Daily, 1961-01-01 to 2020-07-31\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"Rs_min\"\n│   ├─max: \"Rs_max\"\n│   ├─mean: \"Rs_mean\"\n│   └─sd: \"Rs_sd\"\n└─u2: &lt;list&gt;\n  ├─name: \"Wind speed\"\n  ├─unit: \"m/2\"\n  ├─date_range: \"Daily, 1961-01-01 to 2020-07-31\"\n  └─stats: &lt;list&gt;\n    ├─min: \"u2_min\"\n    ├─max: \"u2_max\"\n    ├─mean: \"u2_mean\"\n    └─sd: \"u2_sd\"\n\n\nThe results are availabe as parquet files, available at Zenodo and can be also accessed with the brclimr R package."
+    "objectID": "data-projects/era5land-daily-latin-america.html#data",
+    "href": "data-projects/era5land-daily-latin-america.html#data",
+    "title": "ERA5-Land selected indicators daily aggregates for Latin America",
+    "section": "Data",
+    "text": "Data\nThe resulting NetCDF files are available for download at Zenodo.\n\n\n\nYear\nZenodo deposit\n\n\n\n\n1950\n\n\n\n1951\n\n\n\n1952\n\n\n\n1953\n\n\n\n1954\n\n\n\n1955\n\n\n\n1956\n\n\n\n1957\n\n\n\n1958\n\n\n\n1959\n\n\n\n1960\n\n\n\n1961\n\n\n\n1962\n\n\n\n1963\n\n\n\n1964\n\n\n\n1965\n\n\n\n1966\n\n\n\n1967\n\n\n\n1968\n\n\n\n1969\n\n\n\n1970\n\n\n\n1971\n\n\n\n1972\n\n\n\n1973\n\n\n\n1974\n\n\n\n1975\n\n\n\n1976\n\n\n\n1977\n\n\n\n1978\n\n\n\n1979\n\n\n\n1980\n\n\n\n1981\n\n\n\n1982\n\n\n\n1983\n\n\n\n1984\n\n\n\n1985\n\n\n\n1986\n\n\n\n1987\n\n\n\n1988\n\n\n\n1989\n\n\n\n1990\n\n\n\n1991\n\n\n\n1992\n\n\n\n1993\n\n\n\n1994\n\n\n\n1995\n\n\n\n1996\n\n\n\n1997\n\n\n\n1998\n\n\n\n1999\n\n\n\n2000\n\n\n\n2001\n\n\n\n2002\n\n\n\n2003\n\n\n\n2004\n\n\n\n2005\n\n\n\n2006\n\n\n\n2007\n\n\n\n2008\n\n\n\n2009\n\n\n\n2010\n\n\n\n2011\n\n\n\n2012\n\n\n\n2013\n\n\n\n2014\n\n\n\n2015\n\n\n\n2016\n\n\n\n2017\n\n\n\n2018\n\n\n\n2019\n\n\n\n2020\n\n\n\n2021\n\n\n\n2022"
   },
   {
-    "objectID": "data-projects/brazil-climate-zonal-indicators.html#zonal-terraclimate",
-    "href": "data-projects/brazil-climate-zonal-indicators.html#zonal-terraclimate",
-    "title": "Zonal statististics of climate indicators for Brazilian municipalities",
-    "section": "Zonal TerraClimate",
-    "text": "Zonal TerraClimate\n\n\n\n\n\nThe TerraClimate (Abatzoglou et al. 2018) dataset presents monthly meteorological data interpolated to a grid with 0.04° × 0.04° (1/24th degree) of spatial resolution with world cover, with monthly data from January, 1958, to December, 2021.\nThe following weather indicators are available from the TerraClimate study: Actual Evapotranspiration (mm), Climate Water Deficit (mm), Potential evapotranspiration(mm), Precipitation (mm), Runoff (mm), Soil Moisture (mm), Downward surface shortwave radiation (W/m2), Snow water equivalent (mm), Minimum temperature (°C), Maximum temperature (°C), Vapor pressure (kPa), Wind speed (m/s), Vapor Pressure Deficit (kpa) and Palmer Drought Severity Index.\nThe following zonal statistics were computed.\n\nbrclimr::product_info(product = \"terraclimate\")\n\n&lt;list&gt;\n├─tmax: &lt;list&gt;\n│ ├─name: \"Maximum temperature\"\n│ ├─detail: \"Average for month\"\n│ ├─unit: \"Degree Celsius\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"tmax_min\"\n│   ├─max: \"tmax_max\"\n│   ├─mean: \"tmax_mean\"\n│   └─sd: \"tmax_sd\"\n├─tmin: &lt;list&gt;\n│ ├─name: \"Minimum temperature\"\n│ ├─detail: \"Average for month\"\n│ ├─unit: \"Degree Celsius\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"tmin_min\"\n│   ├─max: \"tmin_max\"\n│   ├─mean: \"tmin_mean\"\n│   └─sd: \"tmin_sd\"\n├─ppt: &lt;list&gt;\n│ ├─name: \"Precipitation\"\n│ ├─detail: \"Monthly total\"\n│ ├─unit: \"mm\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"ppt_min\"\n│   ├─max: \"ppt_max\"\n│   ├─mean: \"ppt_mean\"\n│   ├─sd: \"ppt_sd\"\n│   └─sum: \"ppt_sum\"\n├─aet: &lt;list&gt;\n│ ├─name: \"Actual Evapotranspiration\"\n│ ├─detail: \"Monthly total\"\n│ ├─unit: \"mm\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"aet_min\"\n│   ├─max: \"aet_max\"\n│   ├─mean: \"aet_mean\"\n│   ├─sd: \"aet_sd\"\n│   └─sum: \"aet_sum\"\n├─def: &lt;list&gt;\n│ ├─name: \"Climate Water Deficit\"\n│ ├─detail: \"Monthly total\"\n│ ├─unit: \"mm\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"def_min\"\n│   ├─max: \"def_max\"\n│   ├─mean: \"def_mean\"\n│   ├─sd: \"def_sd\"\n│   └─sum: \"def_sum\"\n├─pdsi: &lt;list&gt;\n│ ├─name: \"Palmer Drought Severity Index\"\n│ ├─detail: \"At end of month\"\n│ ├─unit: \"unitless\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"PDSI_min\"\n│   ├─max: \"PDSI_max\"\n│   ├─mean: \"PDSI_mean\"\n│   └─sd: \"PDSI_sd\"\n├─pet: &lt;list&gt;\n│ ├─name: \"Potential evapotranspiration\"\n│ ├─detail: \"Monthly total\"\n│ ├─unit: \"mm\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"pet_min\"\n│   ├─max: \"pet_max\"\n│   ├─mean: \"pet_mean\"\n│   ├─sd: \"pet_sd\"\n│   └─sum: \"pet_sum\"\n├─q: &lt;list&gt;\n│ ├─name: \"Runoff\"\n│ ├─detail: \"Monthly total\"\n│ ├─unit: \"mm\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"q_min\"\n│   ├─max: \"q_max\"\n│   ├─mean: \"q_mean\"\n│   ├─sd: \"q_sd\"\n│   └─sum: \"q_sum\"\n├─soil: &lt;list&gt;\n│ ├─name: \"Soil Moisture\"\n│ ├─detail: \"Total column, at end of month\"\n│ ├─unit: \"mm\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"soil_min\"\n│   ├─max: \"soil_max\"\n│   ├─mean: \"soil_mean\"\n│   ├─sd: \"soil_sd\"\n│   └─sum: \"soil_sum\"\n├─srad: &lt;list&gt;\n│ ├─name: \"Downward surface shortwave radia...\"\n│ ├─unit: \"W/m2\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"srad_min\"\n│   ├─max: \"srad_max\"\n│   ├─mean: \"srad_mean\"\n│   ├─sd: \"srad_sd\"\n│   └─sum: \"srad_sum\"\n├─swe: &lt;list&gt;\n│ ├─name: \"Snow water equivalent\"\n│ ├─detail: \"At end of month\"\n│ ├─unit: \"mm\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"swe_min\"\n│   ├─max: \"swe_max\"\n│   ├─mean: \"swe_mean\"\n│   ├─sd: \"swe_sd\"\n│   └─sum: \"swe_sum\"\n├─vap: &lt;list&gt;\n│ ├─name: \"Vapor pressure\"\n│ ├─detail: \"Average for month\"\n│ ├─unit: \"kPa\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"vap_min\"\n│   ├─max: \"vap_max\"\n│   ├─mean: \"vap_mean\"\n│   └─sd: \"vap_sd\"\n├─vpd: &lt;list&gt;\n│ ├─name: \"Vapor Pressure Deficit\"\n│ ├─detail: \"Average for month\"\n│ ├─unit: \"kPa\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"vpd_min\"\n│   ├─max: \"vpd_max\"\n│   ├─mean: \"vpd_mean\"\n│   └─sd: \"vpd_sd\"\n└─ws: &lt;list&gt;\n  ├─name: \"Wind speed\"\n  ├─detail: \"Average for month\"\n  ├─unit: \"m/s\"\n  ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n  └─stats: &lt;list&gt;\n    ├─min: \"ws_min\"\n    ├─max: \"ws_max\"\n    ├─mean: \"ws_mean\"\n    └─sd: \"ws_sd\"\n\n\nThe results are availabe as parquet files, available at Zenodo and can be also accessed with the brclimr R package."
-  },
-  {
-    "objectID": "data-projects/std_br_covid_rates_data.html",
-    "href": "data-projects/std_br_covid_rates_data.html",
-    "title": "Age-adjusted COVID-19 mortality rates for Brazilian municipalities",
+    "objectID": "data.html",
+    "href": "data.html",
+    "title": "Data",
     "section": "",
-    "text": "This dataset present crude and age-adjusted COVID-19 mortality rates for Brazilian municipalities, from 2020 to 2022 per epidemiological weeks.\nMore details about the methodology are available at this blog post.\nDownload:\n\n\n\n\n\n\n\n\n Back to top"
+    "text": "Age-adjusted COVID-19 mortality rates for Brazilian municipalities\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nERA5-Land selected indicators daily aggregates for Latin America\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nZonal statististics of climate indicators for Brazilian municipalities\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Raphael Saldanha",
+    "objectID": "photos/photos.html",
+    "href": "photos/photos.html",
+    "title": "Photos",
     "section": "",
-    "text": "Postdoctoral researcher at Inria and LNCC, research assistant at Fiocruz.\nHealth geographer and health data scientist. Undergraduate in Geography, specialization in Statistics, master’s in Public Health, and Ph.D. in Health Information.\nBrazilian from Nova Friburgo (RJ), lived for several years on Minas Gerais and Rio de Janeiro. Currently based on Montpellier, France.\nLoves to code and crunch huge health and climate datasets with R.\n\n\n Back to top"
+    "text": "Le Peyrou\n\n\n\n\n\nArc de triomphe\n\n\n\n\n\nLes Arceaux"
+  },
+  {
+    "objectID": "photos/photos.html#montpellier-fr",
+    "href": "photos/photos.html#montpellier-fr",
+    "title": "Photos",
+    "section": "",
+    "text": "Le Peyrou\n\n\n\n\n\nArc de triomphe\n\n\n\n\n\nLes Arceaux"
   },
   {
     "objectID": "posts/query_remot_parquet_file.html",
@@ -1286,320 +1601,5 @@
     "title": "Talks",
     "section": "",
     "text": "Disease and climate data fusion for modelling\n\n\nAn application case for Brazil\n\n\n\n\nisntd\n\n\nclimate\n\n\ndata\n\n\n\n\nTalk at the ISNTD Climate & Health Conference, Global Health Resilience panel\n\n\n\n\n\n\nNov 22, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\nNo matching items\n\n Back to top"
-  },
-  {
-    "objectID": "climate_health_hub/cop28_2023.html",
-    "href": "climate_health_hub/cop28_2023.html",
-    "title": "COP28",
-    "section": "",
-    "text": "COP28 UAE will be a milestone moment when the world will take stock of its progress on the Paris Agreement.\nCOP28 UAE Presidency, in collaboration with WHO, the Wellcome Trust and partners, is hosting the first-ever Health Day at the COP28 UN Climate Conference, taking place in Dubai, the UAE from 30 November to 12 December 2023."
-  },
-  {
-    "objectID": "climate_health_hub/cop28_2023.html#description",
-    "href": "climate_health_hub/cop28_2023.html#description",
-    "title": "COP28",
-    "section": "",
-    "text": "COP28 UAE will be a milestone moment when the world will take stock of its progress on the Paris Agreement.\nCOP28 UAE Presidency, in collaboration with WHO, the Wellcome Trust and partners, is hosting the first-ever Health Day at the COP28 UN Climate Conference, taking place in Dubai, the UAE from 30 November to 12 December 2023."
-  },
-  {
-    "objectID": "climate_health_hub/cop28_2023.html#links",
-    "href": "climate_health_hub/cop28_2023.html#links",
-    "title": "COP28",
-    "section": "Links",
-    "text": "Links\n\nhttps://www.cop28.com/\nhttps://www.who.int/news-room/events/detail/2023/12/03/default-calendar/cop28-health-day\nhttps://cop-resilience-hub.org/\nhttps://cop-resilience-hub.org/live-stream/"
-  },
-  {
-    "objectID": "climate_health_hub/hdr_uk_2024.html",
-    "href": "climate_health_hub/hdr_uk_2024.html",
-    "title": "Health Data Research UK Conference 2024: The Grand Challenges in Health Data",
-    "section": "",
-    "text": "Health Data Research UK's annual conference will be a free two-day, hybrid event to celebrate progress and bring people together to accelerate the trustworthy use of health data for public benefit.\nThe UK is in a unique position to realise the potential of health data, thanks to the NHS and its cradle-to-grave records for a population of over 65 million people. The last few years have demonstrated the enormous power of data to advance medical knowledge and deliver radical improvements to people's lives. But there is much more that can be done through large-scale data, advanced analytics and innovative developments in data governance.\nHealth Data Research UK's annual conference will be a free two-day, hybrid event to celebrate this progress and allow us to come together and continue to build momentum in the health data research revolution."
-  },
-  {
-    "objectID": "climate_health_hub/hdr_uk_2024.html#description",
-    "href": "climate_health_hub/hdr_uk_2024.html#description",
-    "title": "Health Data Research UK Conference 2024: The Grand Challenges in Health Data",
-    "section": "",
-    "text": "Health Data Research UK's annual conference will be a free two-day, hybrid event to celebrate progress and bring people together to accelerate the trustworthy use of health data for public benefit.\nThe UK is in a unique position to realise the potential of health data, thanks to the NHS and its cradle-to-grave records for a population of over 65 million people. The last few years have demonstrated the enormous power of data to advance medical knowledge and deliver radical improvements to people's lives. But there is much more that can be done through large-scale data, advanced analytics and innovative developments in data governance.\nHealth Data Research UK's annual conference will be a free two-day, hybrid event to celebrate this progress and allow us to come together and continue to build momentum in the health data research revolution."
-  },
-  {
-    "objectID": "climate_health_hub/hdr_uk_2024.html#links",
-    "href": "climate_health_hub/hdr_uk_2024.html#links",
-    "title": "Health Data Research UK Conference 2024: The Grand Challenges in Health Data",
-    "section": "Links",
-    "text": "Links\n\nhttps://www.hdruk.ac.uk/hdruk-conference-2024/"
-  },
-  {
-    "objectID": "climate_health_hub/evigilancia_2023.html",
-    "href": "climate_health_hub/evigilancia_2023.html",
-    "title": "E-Vigilância 2023",
-    "section": "",
-    "text": "Welcome to E-Vigilancia 2023, a symposium dedicated to uniting and strengthening the global community of researchers, students, health professionals, and entrepreneurs from different sectors. Our primary focus is to share innovative initiatives for monitoring and controlling communicable diseases under the theme\"Innovations for a Comprehensive One Health\", As public health administration faces significant challenges, such as the continuous demand for surveillance of outbreaks and epidemics, E-Vigilancia 2023 aims to address these challenges and seek rapid responses to reduce morbidity and mortality from communicable diseases."
-  },
-  {
-    "objectID": "climate_health_hub/evigilancia_2023.html#description",
-    "href": "climate_health_hub/evigilancia_2023.html#description",
-    "title": "E-Vigilância 2023",
-    "section": "",
-    "text": "Welcome to E-Vigilancia 2023, a symposium dedicated to uniting and strengthening the global community of researchers, students, health professionals, and entrepreneurs from different sectors. Our primary focus is to share innovative initiatives for monitoring and controlling communicable diseases under the theme\"Innovations for a Comprehensive One Health\", As public health administration faces significant challenges, such as the continuous demand for surveillance of outbreaks and epidemics, E-Vigilancia 2023 aims to address these challenges and seek rapid responses to reduce morbidity and mortality from communicable diseases."
-  },
-  {
-    "objectID": "climate_health_hub/evigilancia_2023.html#links",
-    "href": "climate_health_hub/evigilancia_2023.html#links",
-    "title": "E-Vigilância 2023",
-    "section": "Links",
-    "text": "Links\n\nhttps://e-vigilancia.dengue.mat.br/"
-  },
-  {
-    "objectID": "climate_health_hub/okumu_2023.html",
-    "href": "climate_health_hub/okumu_2023.html",
-    "title": "Climate, Mosquitoes and Disease: a Masterclass with World Leading Experts",
-    "section": "",
-    "text": "Confirmed Experts\n\nProf. Erin Mordecai (Stanford)\nProf. Abdisalan Noor (Harvard)\nProf. Leah Johnson (Virginia Tech)\nDr. Kimbely Fornace (Glasgow/)\nProf. Sadie Ryan (Florida)\nProf. Madeleine Thompson (Wellcome Trust)"
-  },
-  {
-    "objectID": "climate_health_hub/okumu_2023.html#description",
-    "href": "climate_health_hub/okumu_2023.html#description",
-    "title": "Climate, Mosquitoes and Disease: a Masterclass with World Leading Experts",
-    "section": "",
-    "text": "Confirmed Experts\n\nProf. Erin Mordecai (Stanford)\nProf. Abdisalan Noor (Harvard)\nProf. Leah Johnson (Virginia Tech)\nDr. Kimbely Fornace (Glasgow/)\nProf. Sadie Ryan (Florida)\nProf. Madeleine Thompson (Wellcome Trust)"
-  },
-  {
-    "objectID": "climate_health_hub/okumu_2023.html#links",
-    "href": "climate_health_hub/okumu_2023.html#links",
-    "title": "Climate, Mosquitoes and Disease: a Masterclass with World Leading Experts",
-    "section": "Links",
-    "text": "Links\n\nhttps://uofglasgow.zoom.us/meeting/register/tZwofu-hpzIrE90KmwZFoBj9OVKaTLlwiVE7#/registration"
-  },
-  {
-    "objectID": "climate_health_hub/geoenv_2024.html",
-    "href": "climate_health_hub/geoenv_2024.html",
-    "title": "GeoENV 2024: The 15th International Conference on Geostatistics for Environmental Applications",
-    "section": "",
-    "text": "geoENV, the Conference on Geostatistics for Environmental Applications, shows the state of the art of geostatistics in environmental applications with new cases, results and relevant discussions from leading researchers and practitioners around the world. Novel and outstanding theoretical and practical developments of geostatistics in the environmental field have been compiled from three main areas: that of Hydrology, another regarding Groundwater and Groundwater Contamination, and a third on Soil Contamination and Site Remediation Air Pollution, Ecology and Other Applications."
-  },
-  {
-    "objectID": "climate_health_hub/geoenv_2024.html#description",
-    "href": "climate_health_hub/geoenv_2024.html#description",
-    "title": "GeoENV 2024: The 15th International Conference on Geostatistics for Environmental Applications",
-    "section": "",
-    "text": "geoENV, the Conference on Geostatistics for Environmental Applications, shows the state of the art of geostatistics in environmental applications with new cases, results and relevant discussions from leading researchers and practitioners around the world. Novel and outstanding theoretical and practical developments of geostatistics in the environmental field have been compiled from three main areas: that of Hydrology, another regarding Groundwater and Groundwater Contamination, and a third on Soil Contamination and Site Remediation Air Pollution, Ecology and Other Applications."
-  },
-  {
-    "objectID": "climate_health_hub/geoenv_2024.html#links",
-    "href": "climate_health_hub/geoenv_2024.html#links",
-    "title": "GeoENV 2024: The 15th International Conference on Geostatistics for Environmental Applications",
-    "section": "Links",
-    "text": "Links\n\nhttps://2024.geoenvia.org/"
-  },
-  {
-    "objectID": "posts/hot_2023.html",
-    "href": "posts/hot_2023.html",
-    "title": "How 2023 was hot in different Brazilian municipalities?",
-    "section": "",
-    "text": "According to the last Copernicus report, 2023 was exceptional hot year. The image bellow from this report circulated a lot at the social media.\nClearly, 2023 temperatures are the highest in comparison to other years and the temperature difference to the previous years is unmatched.\nIt is important to comprehend that this graph used data from all the globe surface, including the oceans, giving us an overall picture. At some places this temperature anomaly may be different, with weaker or even stronger differences.\nBut how are 2023 temperatures at the local level, where I live?\nTo answer this question, first we need to have specific data by location. One way to produce this specific data is with zonal statistics.\nI created a dataset with zonal statistics for the Brazilian municipalities, with data from 1950 to 2022 using data from the ERA5-Land reanalysis.\nThus, to make similar graphs to Brazilian municipalities, I used the same methodology with the available 2023 ERA5-Land data (from January to October).\nThe data is ready, let’s make some plots! First, load the necessary packages.\nlibrary(arrow)\nlibrary(dplyr)\nlibrary(lubridate)\nlibrary(timetk)\nlibrary(ggplot2)\nlibrary(directlabels)\nlibrary(viridis)\nlibrary(ggdark)\nNow, we will read the data from the 1950-2022 period. This parquet file is available to download at Zenodo with daily data to all Brazilian municipalities, from 1950 to 2022.\n1temp &lt;- open_dataset(sources = \"../../brclim2/output_data/parquet/2m_temperature_mean.parquet\") %&gt;%\n2  filter(name == \"2m_temperature_mean_mean\") %&gt;%\n3  filter(date &gt;= as.Date(\"1990-01-01\")) %&gt;%\n4  collect() %&gt;%\n  mutate(\n5    year = year(date),\n6    date = update(date, year = 2023),\n7    value = value - 273.15\n  )\n\n\n1\n\nOpen the parquet dataset without loading it all to the memory.\n\n2\n\nFilter the desired indicator, on this case, the average temperature.\n\n3\n\nKeep the data only after 1990 to produce a cleaner graph.\n\n4\n\nCollect the data from the parquet file to memory.\n\n5\n\nCreate a new variable with the year.\n\n6\n\nChange the year of all dates to 2023. This will make easer to overlay the time series of each year.\n\n7\n\nThe original values are in Kelvin. Let’s convert it to Celsius Degrees.\nAnd now load the 2023 data. I will share this parquet file later…\ntemp_23 &lt;- open_dataset(sources = \"../../brclim2/output_data/data_2023/parquet/2m_temperature_mean.parquet\") %&gt;%\n  filter(name == \"2m_temperature_mean_mean\") %&gt;%\n  collect() %&gt;%\n  mutate(value = value - 273.15)\nTo make a graph, we can set a municipality code for reference (e.g. Rio de Janeiro, RJ) and create a list object with all the necessary data. Then, we create a simple and nice ggplot ;-)\nCode\ncode_ref &lt;- 3304557\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Rio de Janeiro, RJ\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )\nFollowing the global trend, the temperature at Rio Janeiro, RJ at 2023 has been exceptional hot after September.\nBellow, the same plot for the Brazilian capitals and some selected municipalities. You will see that at some municipalities the 2023 temperatures are higher than other years, but at some others places the values are lower. This is the climate change effect, leading climate indicators to different extremes, increasing its variabilities."
-  },
-  {
-    "objectID": "posts/hot_2023.html#porto-velho-ro",
-    "href": "posts/hot_2023.html#porto-velho-ro",
-    "title": "How 2023 was hot in different Brazilian municipalities?",
-    "section": "Porto Velho, RO",
-    "text": "Porto Velho, RO\n\n\nCode\ncode_ref &lt;- 1100205\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Porto Velho, RO\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
-  },
-  {
-    "objectID": "posts/hot_2023.html#manaus-am",
-    "href": "posts/hot_2023.html#manaus-am",
-    "title": "How 2023 was hot in different Brazilian municipalities?",
-    "section": "Manaus, AM",
-    "text": "Manaus, AM\n\n\nCode\ncode_ref &lt;- 1302603\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Manaus, AM\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
-  },
-  {
-    "objectID": "posts/hot_2023.html#rio-branco-ac",
-    "href": "posts/hot_2023.html#rio-branco-ac",
-    "title": "How 2023 was hot in different Brazilian municipalities?",
-    "section": "Rio Branco, AC",
-    "text": "Rio Branco, AC\n\n\nCode\ncode_ref &lt;- 1200401\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Rio Branco, AC\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
-  },
-  {
-    "objectID": "posts/hot_2023.html#campo-grande-ms",
-    "href": "posts/hot_2023.html#campo-grande-ms",
-    "title": "How 2023 was hot in different Brazilian municipalities?",
-    "section": "Campo Grande, MS",
-    "text": "Campo Grande, MS\n\n\nCode\ncode_ref &lt;- 5002704\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Campo Grande, MS\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
-  },
-  {
-    "objectID": "posts/hot_2023.html#macapá-ap",
-    "href": "posts/hot_2023.html#macapá-ap",
-    "title": "How 2023 was hot in different Brazilian municipalities?",
-    "section": "Macapá, AP",
-    "text": "Macapá, AP\n\n\nCode\ncode_ref &lt;- 1600303\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Macapá, AP\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
-  },
-  {
-    "objectID": "posts/hot_2023.html#brasília-df",
-    "href": "posts/hot_2023.html#brasília-df",
-    "title": "How 2023 was hot in different Brazilian municipalities?",
-    "section": "Brasília, DF",
-    "text": "Brasília, DF\n\n\nCode\ncode_ref &lt;- 5300108\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Brasília, DF\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
-  },
-  {
-    "objectID": "posts/hot_2023.html#boa-vista-rr",
-    "href": "posts/hot_2023.html#boa-vista-rr",
-    "title": "How 2023 was hot in different Brazilian municipalities?",
-    "section": "Boa Vista, RR",
-    "text": "Boa Vista, RR\n\n\nCode\ncode_ref &lt;- 1400100\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Boa Vista, RR\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
-  },
-  {
-    "objectID": "posts/hot_2023.html#cuiabá-mt",
-    "href": "posts/hot_2023.html#cuiabá-mt",
-    "title": "How 2023 was hot in different Brazilian municipalities?",
-    "section": "Cuiabá, MT",
-    "text": "Cuiabá, MT\n\n\nCode\ncode_ref &lt;- 5103403\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Cuiabá, MT\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
-  },
-  {
-    "objectID": "posts/hot_2023.html#palmas-to",
-    "href": "posts/hot_2023.html#palmas-to",
-    "title": "How 2023 was hot in different Brazilian municipalities?",
-    "section": "Palmas, TO",
-    "text": "Palmas, TO\n\n\nCode\ncode_ref &lt;- 1721000\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Palmas, TO\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
-  },
-  {
-    "objectID": "posts/hot_2023.html#são-paulo-sp",
-    "href": "posts/hot_2023.html#são-paulo-sp",
-    "title": "How 2023 was hot in different Brazilian municipalities?",
-    "section": "São Paulo, SP",
-    "text": "São Paulo, SP\n\n\nCode\ncode_ref &lt;- 3550308\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"São Paulo, SP\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
-  },
-  {
-    "objectID": "posts/hot_2023.html#teresina-pi",
-    "href": "posts/hot_2023.html#teresina-pi",
-    "title": "How 2023 was hot in different Brazilian municipalities?",
-    "section": "Teresina, PI",
-    "text": "Teresina, PI\n\n\nCode\ncode_ref &lt;- 2211001\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Teresina, PI\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
-  },
-  {
-    "objectID": "posts/hot_2023.html#rio-de-janeiro-rj",
-    "href": "posts/hot_2023.html#rio-de-janeiro-rj",
-    "title": "How 2023 was hot in different Brazilian municipalities?",
-    "section": "Rio de Janeiro, RJ",
-    "text": "Rio de Janeiro, RJ\n\n\nCode\ncode_ref &lt;- 3304557\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Rio de Janeiro, RJ\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
-  },
-  {
-    "objectID": "posts/hot_2023.html#belém-pa",
-    "href": "posts/hot_2023.html#belém-pa",
-    "title": "How 2023 was hot in different Brazilian municipalities?",
-    "section": "Belém, PA",
-    "text": "Belém, PA\n\n\nCode\ncode_ref &lt;- 1501402\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Belém, PA\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
-  },
-  {
-    "objectID": "posts/hot_2023.html#goiânia-go",
-    "href": "posts/hot_2023.html#goiânia-go",
-    "title": "How 2023 was hot in different Brazilian municipalities?",
-    "section": "Goiânia, GO",
-    "text": "Goiânia, GO\n\n\nCode\ncode_ref &lt;- 5208707\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Goiânia, GO\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
-  },
-  {
-    "objectID": "posts/hot_2023.html#salvador-ba",
-    "href": "posts/hot_2023.html#salvador-ba",
-    "title": "How 2023 was hot in different Brazilian municipalities?",
-    "section": "Salvador, BA",
-    "text": "Salvador, BA\n\n\nCode\ncode_ref &lt;- 2927408\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Salvador, BA\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
-  },
-  {
-    "objectID": "posts/hot_2023.html#florianópolis-sc",
-    "href": "posts/hot_2023.html#florianópolis-sc",
-    "title": "How 2023 was hot in different Brazilian municipalities?",
-    "section": "Florianópolis, SC",
-    "text": "Florianópolis, SC\n\n\nCode\ncode_ref &lt;- 4205407\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Florianópolis, SC\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
-  },
-  {
-    "objectID": "posts/hot_2023.html#são-luiz-ma",
-    "href": "posts/hot_2023.html#são-luiz-ma",
-    "title": "How 2023 was hot in different Brazilian municipalities?",
-    "section": "São Luiz, MA",
-    "text": "São Luiz, MA\n\n\nCode\ncode_ref &lt;- 2111300\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"São Luiz, MA\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
-  },
-  {
-    "objectID": "posts/hot_2023.html#maceió-al",
-    "href": "posts/hot_2023.html#maceió-al",
-    "title": "How 2023 was hot in different Brazilian municipalities?",
-    "section": "Maceió, AL",
-    "text": "Maceió, AL\n\n\nCode\ncode_ref &lt;- 2704302\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Maceió, AL\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
-  },
-  {
-    "objectID": "posts/hot_2023.html#porto-alegre-rs",
-    "href": "posts/hot_2023.html#porto-alegre-rs",
-    "title": "How 2023 was hot in different Brazilian municipalities?",
-    "section": "Porto Alegre, RS",
-    "text": "Porto Alegre, RS\n\n\nCode\ncode_ref &lt;- 4314902\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Porto Alegre, RS\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
-  },
-  {
-    "objectID": "posts/hot_2023.html#curitiba-pr",
-    "href": "posts/hot_2023.html#curitiba-pr",
-    "title": "How 2023 was hot in different Brazilian municipalities?",
-    "section": "Curitiba, PR",
-    "text": "Curitiba, PR\n\n\nCode\ncode_ref &lt;- 4106902\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Curitiba, PR\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
-  },
-  {
-    "objectID": "posts/hot_2023.html#belo-horizonte-mg",
-    "href": "posts/hot_2023.html#belo-horizonte-mg",
-    "title": "How 2023 was hot in different Brazilian municipalities?",
-    "section": "Belo Horizonte, MG",
-    "text": "Belo Horizonte, MG\n\n\nCode\ncode_ref &lt;- 3106200\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Belo Horizonte, MG\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
-  },
-  {
-    "objectID": "posts/hot_2023.html#fortaleza-ce",
-    "href": "posts/hot_2023.html#fortaleza-ce",
-    "title": "How 2023 was hot in different Brazilian municipalities?",
-    "section": "Fortaleza, CE",
-    "text": "Fortaleza, CE\n\n\nCode\ncode_ref &lt;- 2304400\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Fortaleza, CE\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
-  },
-  {
-    "objectID": "posts/hot_2023.html#recife-pe",
-    "href": "posts/hot_2023.html#recife-pe",
-    "title": "How 2023 was hot in different Brazilian municipalities?",
-    "section": "Recife, PE",
-    "text": "Recife, PE\n\n\nCode\ncode_ref &lt;- 2611606\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Recife, PE\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
-  },
-  {
-    "objectID": "posts/hot_2023.html#joão-pessoa-pb",
-    "href": "posts/hot_2023.html#joão-pessoa-pb",
-    "title": "How 2023 was hot in different Brazilian municipalities?",
-    "section": "João Pessoa, PB",
-    "text": "João Pessoa, PB\n\n\nCode\ncode_ref &lt;- 2507507\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"João Pessoa, PB\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
-  },
-  {
-    "objectID": "posts/hot_2023.html#aracaju-se",
-    "href": "posts/hot_2023.html#aracaju-se",
-    "title": "How 2023 was hot in different Brazilian municipalities?",
-    "section": "Aracaju, SE",
-    "text": "Aracaju, SE\n\n\nCode\ncode_ref &lt;- 2800308\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Aracaju, SE\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
-  },
-  {
-    "objectID": "posts/hot_2023.html#natal-rn",
-    "href": "posts/hot_2023.html#natal-rn",
-    "title": "How 2023 was hot in different Brazilian municipalities?",
-    "section": "Natal, RN",
-    "text": "Natal, RN\n\n\nCode\ncode_ref &lt;- 2408102\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Natal, RN\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
-  },
-  {
-    "objectID": "posts/hot_2023.html#vitória-es",
-    "href": "posts/hot_2023.html#vitória-es",
-    "title": "How 2023 was hot in different Brazilian municipalities?",
-    "section": "Vitória, ES",
-    "text": "Vitória, ES\n\n\nCode\ncode_ref &lt;- 3205309\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Vitória, ES\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
-  },
-  {
-    "objectID": "posts/hot_2023.html#nova-friburgo-rj",
-    "href": "posts/hot_2023.html#nova-friburgo-rj",
-    "title": "How 2023 was hot in different Brazilian municipalities?",
-    "section": "Nova Friburgo, RJ",
-    "text": "Nova Friburgo, RJ\n\n\nCode\ncode_ref &lt;- 3303401\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Nova Friburgo, RJ\", \n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
-  },
-  {
-    "objectID": "posts/hot_2023.html#juiz-de-fora-mg",
-    "href": "posts/hot_2023.html#juiz-de-fora-mg",
-    "title": "How 2023 was hot in different Brazilian municipalities?",
-    "section": "Juiz de Fora, MG",
-    "text": "Juiz de Fora, MG\n\n\nCode\ncode_ref &lt;- 3136702\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Juiz de Fora, MG\",\n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
   }
 ]
