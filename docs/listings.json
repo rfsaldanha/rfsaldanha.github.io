@@ -51,6 +51,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/hot_2023.html",
       "/posts/time_series_clustering.html",
       "/posts/std_br_covid_rates.html",
       "/posts/run_length_encoding.html",

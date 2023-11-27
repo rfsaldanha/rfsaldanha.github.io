@@ -1,0 +1,1640 @@
+---
+title: "How 2023 was hot in different Brazilian municipalities?"
+date: "2023-11-27"
+categories: [climate, zonal statistics]
+---
+
+According to the [last Copernicus report](https://climate.copernicus.eu/copernicus-october-2023-exceptional-temperature-anomalies-2023-virtually-certain-be-warmest-year), 2023 was exceptional hot year. The image bellow from this report circulated a lot at the social media.
+
+![](images/era5_daily_sst_60S-60N_1979-2023_dark.png)
+
+Clearly, 2023 temperatures are the highest in comparison to other years and the temperature difference to the previous years is unmatched.
+
+It is important to comprehend that this graph used data from all the globe surface, including the oceans, giving us an overall picture. At some places this temperature anomaly may be different, with weaker or even stronger differences.
+
+**But how are 2023 temperatures at the local level, where I live?**
+
+To answer this question, first we need to have specific data by location. One way to produce this specific data is with *zonal statistics*.
+
+::: callout-note
+Zonal statistics is a operation where statistics are computed for a set of cell values that intersects a given spatial boundary.
+:::
+
+I created a dataset with [zonal statistics for the Brazilian municipalities](../data-projects/era5land-daily-latin-america.qmd), with data from 1950 to 2022 using data from the ERA5-Land reanalysis.
+
+Thus, to make similar graphs to Brazilian municipalities, I used the same methodology with the available 2023 ERA5-Land data (from January to October).
+
+The data is ready, let's make some plots! First, load the necessary packages.
+
+```{r}
+#| message: false
+library(arrow)
+library(dplyr)
+library(lubridate)
+library(timetk)
+library(ggplot2)
+library(directlabels)
+library(viridis)
+library(ggdark)
+```
+
+Now, we will read the data from the 1950-2022 period. This parquet file is available to download at [Zenodo](../data-projects/era5land-daily-latin-america.qmd) with daily data to all Brazilian municipalities, from 1950 to 2022.
+
+```{r}
+temp <- open_dataset(sources = "../../brclim2/output_data/parquet/2m_temperature_mean.parquet") %>% #<1>
+  filter(name == "2m_temperature_mean_mean") %>% #<2>
+  filter(date >= as.Date("1990-01-01")) %>% #<3>
+  collect() %>% #<4>
+  mutate(
+    year = year(date), #<5>
+    date = update(date, year = 2023), #<6>
+    value = value - 273.15 #<7>
+  )
+```
+
+1.  Open the parquet dataset without loading it all to the memory.
+2.  Filter the desired indicator, on this case, the average temperature.
+3.  Keep the data only after 1990 to produce a cleaner graph.
+4.  Collect the data from the parquet file to memory.
+5.  Create a new variable with the year.
+6.  Change the year of all dates to 2023. This will make easer to overlay the time series of each year.
+7.  The original values are in Kelvin. Let's convert it to Celsius Degrees.
+
+And now load the 2023 data. I will share this parquet file later...
+
+```{r}
+temp_23 <- open_dataset(sources = "../../brclim2/output_data/data_2023/parquet/2m_temperature_mean.parquet") %>%
+  filter(name == "2m_temperature_mean_mean") %>%
+  collect() %>%
+  mutate(value = value - 273.15)
+```
+
+To make a graph, we can set a municipality code for reference (e.g. Rio de Janeiro, RJ) and create a list object with all the necessary data. Then, we create a simple and nice ggplot ;-)
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+#| classes: preview-image
+code_ref <- 3304557
+
+temp_list <- list(
+  temp = temp %>% filter(code_muni == code_ref),
+  temp_23 = temp_23 %>% filter(code_muni == code_ref)
+)
+
+ggplot() +
+  geom_line(
+    data = temp_list$temp, 
+    aes(x = date, y = value, color = year, group = year),
+    alpha = .3, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+  scale_color_viridis(option = "plasma") +
+  geom_line(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value), 
+    color = "red",
+    lwd = 1, alpha = .7, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+  geom_dl(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value, label = "2023"),
+    method = list(dl.combine("last.points")), 
+    color = "red",
+    cex = 0.8
+  ) +
+  ylim(15, 35) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  dark_theme_gray() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal"
+  ) +
+  labs(
+    title = "Rio de Janeiro, RJ", 
+    x = "Date",
+    y = "Average temperature (°C)", 
+    color = NULL
+  )
+```
+
+::: callout-tip
+I choose to use a LOESS smooth because the original daily data is very noise, making harder to see the general trends.
+:::
+
+Following the global trend, the temperature at Rio Janeiro, RJ at 2023 has been exceptional hot after September.
+
+Bellow, the same plot for the Brazilian capitals and some selected municipalities. You will see that at some municipalities the 2023 temperatures are higher than other years, but at some others places the values are lower. This is the climate change effect, leading climate indicators to different extremes, increasing its variabilities.
+
+## Porto Velho, RO
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+code_ref <- 1100205
+
+temp_list <- list(
+  temp = temp %>% filter(code_muni == code_ref),
+  temp_23 = temp_23 %>% filter(code_muni == code_ref)
+)
+
+ggplot() +
+  geom_line(
+    data = temp_list$temp, 
+    aes(x = date, y = value, color = year, group = year),
+    alpha = .3, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+  scale_color_viridis(option = "plasma") +
+  geom_line(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value), 
+    color = "red",
+    lwd = 1, alpha = .7, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+    geom_dl(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value, label = "2023"),
+    method = list(dl.combine("last.points")), 
+    color = "red",
+    cex = 0.8
+  ) +
+  ylim(15, 35) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  dark_theme_gray() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal"
+  ) +
+  labs(
+    title = "Porto Velho, RO", 
+    x = "Date",
+    y = "Average temperature (°C)", 
+    color = NULL
+  )
+```
+
+## Manaus, AM
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+code_ref <- 1302603
+
+temp_list <- list(
+  temp = temp %>% filter(code_muni == code_ref),
+  temp_23 = temp_23 %>% filter(code_muni == code_ref)
+)
+
+ggplot() +
+  geom_line(
+    data = temp_list$temp, 
+    aes(x = date, y = value, color = year, group = year),
+    alpha = .3, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+  scale_color_viridis(option = "plasma") +
+  geom_line(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value), 
+    color = "red",
+    lwd = 1, alpha = .7, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+    geom_dl(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value, label = "2023"),
+    method = list(dl.combine("last.points")), 
+    color = "red",
+    cex = 0.8
+  ) +
+  ylim(15, 35) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  dark_theme_gray() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal"
+  ) +
+  labs(
+    title = "Manaus, AM", 
+    x = "Date",
+    y = "Average temperature (°C)", 
+    color = NULL
+  )
+```
+
+## Rio Branco, AC
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+code_ref <- 1200401
+
+temp_list <- list(
+  temp = temp %>% filter(code_muni == code_ref),
+  temp_23 = temp_23 %>% filter(code_muni == code_ref)
+)
+
+ggplot() +
+  geom_line(
+    data = temp_list$temp, 
+    aes(x = date, y = value, color = year, group = year),
+    alpha = .3, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+  scale_color_viridis(option = "plasma") +
+  geom_line(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value), 
+    color = "red",
+    lwd = 1, alpha = .7, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+    geom_dl(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value, label = "2023"),
+    method = list(dl.combine("last.points")), 
+    color = "red",
+    cex = 0.8
+  ) +
+  ylim(15, 35) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  dark_theme_gray() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal"
+  ) +
+  labs(
+    title = "Rio Branco, AC", 
+    x = "Date",
+    y = "Average temperature (°C)", 
+    color = NULL
+  )
+```
+
+## Campo Grande, MS
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+code_ref <- 5002704
+
+temp_list <- list(
+  temp = temp %>% filter(code_muni == code_ref),
+  temp_23 = temp_23 %>% filter(code_muni == code_ref)
+)
+
+ggplot() +
+  geom_line(
+    data = temp_list$temp, 
+    aes(x = date, y = value, color = year, group = year),
+    alpha = .3, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+  scale_color_viridis(option = "plasma") +
+  geom_line(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value), 
+    color = "red",
+    lwd = 1, alpha = .7, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+    geom_dl(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value, label = "2023"),
+    method = list(dl.combine("last.points")), 
+    color = "red",
+    cex = 0.8
+  ) +
+  ylim(15, 35) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  dark_theme_gray() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal"
+  ) +
+  labs(
+    title = "Campo Grande, MS", 
+    x = "Date",
+    y = "Average temperature (°C)", 
+    color = NULL
+  )
+```
+
+## Macapá, AP
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+code_ref <- 1600303
+
+temp_list <- list(
+  temp = temp %>% filter(code_muni == code_ref),
+  temp_23 = temp_23 %>% filter(code_muni == code_ref)
+)
+
+ggplot() +
+  geom_line(
+    data = temp_list$temp, 
+    aes(x = date, y = value, color = year, group = year),
+    alpha = .3, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+  scale_color_viridis(option = "plasma") +
+  geom_line(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value), 
+    color = "red",
+    lwd = 1, alpha = .7, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+    geom_dl(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value, label = "2023"),
+    method = list(dl.combine("last.points")), 
+    color = "red",
+    cex = 0.8
+  ) +
+  ylim(15, 35) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  dark_theme_gray() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal"
+  ) +
+  labs(
+    title = "Macapá, AP", 
+    x = "Date",
+    y = "Average temperature (°C)", 
+    color = NULL
+  )
+```
+
+## Brasília, DF
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+code_ref <- 5300108
+
+temp_list <- list(
+  temp = temp %>% filter(code_muni == code_ref),
+  temp_23 = temp_23 %>% filter(code_muni == code_ref)
+)
+
+ggplot() +
+  geom_line(
+    data = temp_list$temp, 
+    aes(x = date, y = value, color = year, group = year),
+    alpha = .3, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+  scale_color_viridis(option = "plasma") +
+  geom_line(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value), 
+    color = "red",
+    lwd = 1, alpha = .7, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+    geom_dl(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value, label = "2023"),
+    method = list(dl.combine("last.points")), 
+    color = "red",
+    cex = 0.8
+  ) +
+  ylim(15, 35) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  dark_theme_gray() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal"
+  ) +
+  labs(
+    title = "Brasília, DF", 
+    x = "Date",
+    y = "Average temperature (°C)", 
+    color = NULL
+  )
+```
+
+## Boa Vista, RR
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+code_ref <- 1400100
+
+temp_list <- list(
+  temp = temp %>% filter(code_muni == code_ref),
+  temp_23 = temp_23 %>% filter(code_muni == code_ref)
+)
+
+ggplot() +
+  geom_line(
+    data = temp_list$temp, 
+    aes(x = date, y = value, color = year, group = year),
+    alpha = .3, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+  scale_color_viridis(option = "plasma") +
+  geom_line(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value), 
+    color = "red",
+    lwd = 1, alpha = .7, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+    geom_dl(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value, label = "2023"),
+    method = list(dl.combine("last.points")), 
+    color = "red",
+    cex = 0.8
+  ) +
+  ylim(15, 35) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  dark_theme_gray() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal"
+  ) +
+  labs(
+    title = "Boa Vista, RR", 
+    x = "Date",
+    y = "Average temperature (°C)", 
+    color = NULL
+  )
+```
+
+## Cuiabá, MT
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+code_ref <- 5103403
+
+temp_list <- list(
+  temp = temp %>% filter(code_muni == code_ref),
+  temp_23 = temp_23 %>% filter(code_muni == code_ref)
+)
+
+ggplot() +
+  geom_line(
+    data = temp_list$temp, 
+    aes(x = date, y = value, color = year, group = year),
+    alpha = .3, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+  scale_color_viridis(option = "plasma") +
+  geom_line(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value), 
+    color = "red",
+    lwd = 1, alpha = .7, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+    geom_dl(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value, label = "2023"),
+    method = list(dl.combine("last.points")), 
+    color = "red",
+    cex = 0.8
+  ) +
+  ylim(15, 35) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  dark_theme_gray() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal"
+  ) +
+  labs(
+    title = "Cuiabá, MT", 
+    x = "Date",
+    y = "Average temperature (°C)", 
+    color = NULL
+  )
+```
+
+## Palmas, TO
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+code_ref <- 1721000
+
+temp_list <- list(
+  temp = temp %>% filter(code_muni == code_ref),
+  temp_23 = temp_23 %>% filter(code_muni == code_ref)
+)
+
+ggplot() +
+  geom_line(
+    data = temp_list$temp, 
+    aes(x = date, y = value, color = year, group = year),
+    alpha = .3, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+  scale_color_viridis(option = "plasma") +
+  geom_line(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value), 
+    color = "red",
+    lwd = 1, alpha = .7, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+    geom_dl(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value, label = "2023"),
+    method = list(dl.combine("last.points")), 
+    color = "red",
+    cex = 0.8
+  ) +
+  ylim(15, 35) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  dark_theme_gray() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal"
+  ) +
+  labs(
+    title = "Palmas, TO", 
+    x = "Date",
+    y = "Average temperature (°C)", 
+    color = NULL
+  )
+```
+
+## São Paulo, SP
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+code_ref <- 3550308
+
+temp_list <- list(
+  temp = temp %>% filter(code_muni == code_ref),
+  temp_23 = temp_23 %>% filter(code_muni == code_ref)
+)
+
+ggplot() +
+  geom_line(
+    data = temp_list$temp, 
+    aes(x = date, y = value, color = year, group = year),
+    alpha = .3, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+  scale_color_viridis(option = "plasma") +
+  geom_line(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value), 
+    color = "red",
+    lwd = 1, alpha = .7, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+    geom_dl(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value, label = "2023"),
+    method = list(dl.combine("last.points")), 
+    color = "red",
+    cex = 0.8
+  ) +
+  ylim(15, 35) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  dark_theme_gray() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal"
+  ) +
+  labs(
+    title = "São Paulo, SP", 
+    x = "Date",
+    y = "Average temperature (°C)", 
+    color = NULL
+  )
+```
+
+## Teresina, PI
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+code_ref <- 2211001
+
+temp_list <- list(
+  temp = temp %>% filter(code_muni == code_ref),
+  temp_23 = temp_23 %>% filter(code_muni == code_ref)
+)
+
+ggplot() +
+  geom_line(
+    data = temp_list$temp, 
+    aes(x = date, y = value, color = year, group = year),
+    alpha = .3, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+  scale_color_viridis(option = "plasma") +
+  geom_line(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value), 
+    color = "red",
+    lwd = 1, alpha = .7, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+    geom_dl(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value, label = "2023"),
+    method = list(dl.combine("last.points")), 
+    color = "red",
+    cex = 0.8
+  ) +
+  ylim(15, 35) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  dark_theme_gray() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal"
+  ) +
+  labs(
+    title = "Teresina, PI", 
+    x = "Date",
+    y = "Average temperature (°C)", 
+    color = NULL
+  )
+```
+
+## Rio de Janeiro, RJ
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+code_ref <- 3304557
+
+temp_list <- list(
+  temp = temp %>% filter(code_muni == code_ref),
+  temp_23 = temp_23 %>% filter(code_muni == code_ref)
+)
+
+ggplot() +
+  geom_line(
+    data = temp_list$temp, 
+    aes(x = date, y = value, color = year, group = year),
+    alpha = .3, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+  scale_color_viridis(option = "plasma") +
+  geom_line(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value), 
+    color = "red",
+    lwd = 1, alpha = .7, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+    geom_dl(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value, label = "2023"),
+    method = list(dl.combine("last.points")), 
+    color = "red",
+    cex = 0.8
+  ) +
+  ylim(15, 35) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  dark_theme_gray() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal"
+  ) +
+  labs(
+    title = "Rio de Janeiro, RJ", 
+    x = "Date",
+    y = "Average temperature (°C)", 
+    color = NULL
+  )
+```
+
+## Belém, PA
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+code_ref <- 1501402
+
+temp_list <- list(
+  temp = temp %>% filter(code_muni == code_ref),
+  temp_23 = temp_23 %>% filter(code_muni == code_ref)
+)
+
+ggplot() +
+  geom_line(
+    data = temp_list$temp, 
+    aes(x = date, y = value, color = year, group = year),
+    alpha = .3, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+  scale_color_viridis(option = "plasma") +
+  geom_line(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value), 
+    color = "red",
+    lwd = 1, alpha = .7, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+    geom_dl(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value, label = "2023"),
+    method = list(dl.combine("last.points")), 
+    color = "red",
+    cex = 0.8
+  ) +
+  ylim(15, 35) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  dark_theme_gray() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal"
+  ) +
+  labs(
+    title = "Belém, PA", 
+    x = "Date",
+    y = "Average temperature (°C)", 
+    color = NULL
+  )
+```
+
+## Goiânia, GO
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+code_ref <- 5208707
+
+temp_list <- list(
+  temp = temp %>% filter(code_muni == code_ref),
+  temp_23 = temp_23 %>% filter(code_muni == code_ref)
+)
+
+ggplot() +
+  geom_line(
+    data = temp_list$temp, 
+    aes(x = date, y = value, color = year, group = year),
+    alpha = .3, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+  scale_color_viridis(option = "plasma") +
+  geom_line(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value), 
+    color = "red",
+    lwd = 1, alpha = .7, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+    geom_dl(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value, label = "2023"),
+    method = list(dl.combine("last.points")), 
+    color = "red",
+    cex = 0.8
+  ) +
+  ylim(15, 35) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  dark_theme_gray() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal"
+  ) +
+  labs(
+    title = "Goiânia, GO", 
+    x = "Date",
+    y = "Average temperature (°C)", 
+    color = NULL
+  )
+```
+
+## Salvador, BA
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+code_ref <- 2927408
+
+temp_list <- list(
+  temp = temp %>% filter(code_muni == code_ref),
+  temp_23 = temp_23 %>% filter(code_muni == code_ref)
+)
+
+ggplot() +
+  geom_line(
+    data = temp_list$temp, 
+    aes(x = date, y = value, color = year, group = year),
+    alpha = .3, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+  scale_color_viridis(option = "plasma") +
+  geom_line(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value), 
+    color = "red",
+    lwd = 1, alpha = .7, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+    geom_dl(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value, label = "2023"),
+    method = list(dl.combine("last.points")), 
+    color = "red",
+    cex = 0.8
+  ) +
+  ylim(15, 35) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  dark_theme_gray() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal"
+  ) +
+  labs(
+    title = "Salvador, BA", 
+    x = "Date",
+    y = "Average temperature (°C)", 
+    color = NULL
+  )
+```
+
+## Florianópolis, SC
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+code_ref <- 4205407
+
+temp_list <- list(
+  temp = temp %>% filter(code_muni == code_ref),
+  temp_23 = temp_23 %>% filter(code_muni == code_ref)
+)
+
+ggplot() +
+  geom_line(
+    data = temp_list$temp, 
+    aes(x = date, y = value, color = year, group = year),
+    alpha = .3, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+  scale_color_viridis(option = "plasma") +
+  geom_line(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value), 
+    color = "red",
+    lwd = 1, alpha = .7, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+    geom_dl(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value, label = "2023"),
+    method = list(dl.combine("last.points")), 
+    color = "red",
+    cex = 0.8
+  ) +
+  ylim(15, 35) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  dark_theme_gray() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal"
+  ) +
+  labs(
+    title = "Florianópolis, SC", 
+    x = "Date",
+    y = "Average temperature (°C)", 
+    color = NULL
+  )
+```
+
+## São Luiz, MA
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+code_ref <- 2111300
+
+temp_list <- list(
+  temp = temp %>% filter(code_muni == code_ref),
+  temp_23 = temp_23 %>% filter(code_muni == code_ref)
+)
+
+ggplot() +
+  geom_line(
+    data = temp_list$temp, 
+    aes(x = date, y = value, color = year, group = year),
+    alpha = .3, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+  scale_color_viridis(option = "plasma") +
+  geom_line(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value), 
+    color = "red",
+    lwd = 1, alpha = .7, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+    geom_dl(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value, label = "2023"),
+    method = list(dl.combine("last.points")), 
+    color = "red",
+    cex = 0.8
+  ) +
+  ylim(15, 35) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  dark_theme_gray() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal"
+  ) +
+  labs(
+    title = "São Luiz, MA", 
+    x = "Date",
+    y = "Average temperature (°C)", 
+    color = NULL
+  )
+```
+
+## Maceió, AL
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+code_ref <- 2704302
+
+temp_list <- list(
+  temp = temp %>% filter(code_muni == code_ref),
+  temp_23 = temp_23 %>% filter(code_muni == code_ref)
+)
+
+ggplot() +
+  geom_line(
+    data = temp_list$temp, 
+    aes(x = date, y = value, color = year, group = year),
+    alpha = .3, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+  scale_color_viridis(option = "plasma") +
+  geom_line(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value), 
+    color = "red",
+    lwd = 1, alpha = .7, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+    geom_dl(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value, label = "2023"),
+    method = list(dl.combine("last.points")), 
+    color = "red",
+    cex = 0.8
+  ) +
+  ylim(15, 35) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  dark_theme_gray() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal"
+  ) +
+  labs(
+    title = "Maceió, AL", 
+    x = "Date",
+    y = "Average temperature (°C)", 
+    color = NULL
+  )
+```
+
+## Porto Alegre, RS
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+code_ref <- 4314902
+
+temp_list <- list(
+  temp = temp %>% filter(code_muni == code_ref),
+  temp_23 = temp_23 %>% filter(code_muni == code_ref)
+)
+
+ggplot() +
+  geom_line(
+    data = temp_list$temp, 
+    aes(x = date, y = value, color = year, group = year),
+    alpha = .3, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+  scale_color_viridis(option = "plasma") +
+  geom_line(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value), 
+    color = "red",
+    lwd = 1, alpha = .7, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+    geom_dl(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value, label = "2023"),
+    method = list(dl.combine("last.points")), 
+    color = "red",
+    cex = 0.8
+  ) +
+  ylim(15, 35) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  dark_theme_gray() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal"
+  ) +
+  labs(
+    title = "Porto Alegre, RS", 
+    x = "Date",
+    y = "Average temperature (°C)", 
+    color = NULL
+  )
+```
+
+## Curitiba, PR
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+code_ref <- 4106902
+
+temp_list <- list(
+  temp = temp %>% filter(code_muni == code_ref),
+  temp_23 = temp_23 %>% filter(code_muni == code_ref)
+)
+
+ggplot() +
+  geom_line(
+    data = temp_list$temp, 
+    aes(x = date, y = value, color = year, group = year),
+    alpha = .3, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+  scale_color_viridis(option = "plasma") +
+  geom_line(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value), 
+    color = "red",
+    lwd = 1, alpha = .7, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+    geom_dl(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value, label = "2023"),
+    method = list(dl.combine("last.points")), 
+    color = "red",
+    cex = 0.8
+  ) +
+  ylim(15, 35) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  dark_theme_gray() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal"
+  ) +
+  labs(
+    title = "Curitiba, PR", 
+    x = "Date",
+    y = "Average temperature (°C)", 
+    color = NULL
+  )
+```
+
+## Belo Horizonte, MG
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+code_ref <- 3106200
+
+temp_list <- list(
+  temp = temp %>% filter(code_muni == code_ref),
+  temp_23 = temp_23 %>% filter(code_muni == code_ref)
+)
+
+ggplot() +
+  geom_line(
+    data = temp_list$temp, 
+    aes(x = date, y = value, color = year, group = year),
+    alpha = .3, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+  scale_color_viridis(option = "plasma") +
+  geom_line(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value), 
+    color = "red",
+    lwd = 1, alpha = .7, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+    geom_dl(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value, label = "2023"),
+    method = list(dl.combine("last.points")), 
+    color = "red",
+    cex = 0.8
+  ) +
+  ylim(15, 35) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  dark_theme_gray() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal"
+  ) +
+  labs(
+    title = "Belo Horizonte, MG", 
+    x = "Date",
+    y = "Average temperature (°C)", 
+    color = NULL
+  )
+```
+
+## Fortaleza, CE
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+code_ref <- 2304400
+
+temp_list <- list(
+  temp = temp %>% filter(code_muni == code_ref),
+  temp_23 = temp_23 %>% filter(code_muni == code_ref)
+)
+
+ggplot() +
+  geom_line(
+    data = temp_list$temp, 
+    aes(x = date, y = value, color = year, group = year),
+    alpha = .3, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+  scale_color_viridis(option = "plasma") +
+  geom_line(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value), 
+    color = "red",
+    lwd = 1, alpha = .7, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+    geom_dl(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value, label = "2023"),
+    method = list(dl.combine("last.points")), 
+    color = "red",
+    cex = 0.8
+  ) +
+  ylim(15, 35) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  dark_theme_gray() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal"
+  ) +
+  labs(
+    title = "Fortaleza, CE", 
+    x = "Date",
+    y = "Average temperature (°C)", 
+    color = NULL
+  )
+```
+
+## Recife, PE
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+code_ref <- 2611606
+
+temp_list <- list(
+  temp = temp %>% filter(code_muni == code_ref),
+  temp_23 = temp_23 %>% filter(code_muni == code_ref)
+)
+
+ggplot() +
+  geom_line(
+    data = temp_list$temp, 
+    aes(x = date, y = value, color = year, group = year),
+    alpha = .3, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+  scale_color_viridis(option = "plasma") +
+  geom_line(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value), 
+    color = "red",
+    lwd = 1, alpha = .7, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+    geom_dl(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value, label = "2023"),
+    method = list(dl.combine("last.points")), 
+    color = "red",
+    cex = 0.8
+  ) +
+  ylim(15, 35) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  dark_theme_gray() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal"
+  ) +
+  labs(
+    title = "Recife, PE", 
+    x = "Date",
+    y = "Average temperature (°C)", 
+    color = NULL
+  )
+```
+
+## João Pessoa, PB
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+code_ref <- 2507507
+
+temp_list <- list(
+  temp = temp %>% filter(code_muni == code_ref),
+  temp_23 = temp_23 %>% filter(code_muni == code_ref)
+)
+
+ggplot() +
+  geom_line(
+    data = temp_list$temp, 
+    aes(x = date, y = value, color = year, group = year),
+    alpha = .3, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+  scale_color_viridis(option = "plasma") +
+  geom_line(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value), 
+    color = "red",
+    lwd = 1, alpha = .7, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+    geom_dl(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value, label = "2023"),
+    method = list(dl.combine("last.points")), 
+    color = "red",
+    cex = 0.8
+  ) +
+  ylim(15, 35) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  dark_theme_gray() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal"
+  ) +
+  labs(
+    title = "João Pessoa, PB", 
+    x = "Date",
+    y = "Average temperature (°C)", 
+    color = NULL
+  )
+```
+
+## Aracaju, SE
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+code_ref <- 2800308
+
+temp_list <- list(
+  temp = temp %>% filter(code_muni == code_ref),
+  temp_23 = temp_23 %>% filter(code_muni == code_ref)
+)
+
+ggplot() +
+  geom_line(
+    data = temp_list$temp, 
+    aes(x = date, y = value, color = year, group = year),
+    alpha = .3, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+  scale_color_viridis(option = "plasma") +
+  geom_line(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value), 
+    color = "red",
+    lwd = 1, alpha = .7, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+    geom_dl(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value, label = "2023"),
+    method = list(dl.combine("last.points")), 
+    color = "red",
+    cex = 0.8
+  ) +
+  ylim(15, 35) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  dark_theme_gray() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal"
+  ) +
+  labs(
+    title = "Aracaju, SE", 
+    x = "Date",
+    y = "Average temperature (°C)", 
+    color = NULL
+  )
+```
+
+## Natal, RN
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+code_ref <- 2408102
+
+temp_list <- list(
+  temp = temp %>% filter(code_muni == code_ref),
+  temp_23 = temp_23 %>% filter(code_muni == code_ref)
+)
+
+ggplot() +
+  geom_line(
+    data = temp_list$temp, 
+    aes(x = date, y = value, color = year, group = year),
+    alpha = .3, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+  scale_color_viridis(option = "plasma") +
+  geom_line(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value), 
+    color = "red",
+    lwd = 1, alpha = .7, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+    geom_dl(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value, label = "2023"),
+    method = list(dl.combine("last.points")), 
+    color = "red",
+    cex = 0.8
+  ) +
+  ylim(15, 35) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  dark_theme_gray() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal"
+  ) +
+  labs(
+    title = "Natal, RN", 
+    x = "Date",
+    y = "Average temperature (°C)", 
+    color = NULL
+  )
+```
+
+## Vitória, ES
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+code_ref <- 3205309
+
+temp_list <- list(
+  temp = temp %>% filter(code_muni == code_ref),
+  temp_23 = temp_23 %>% filter(code_muni == code_ref)
+)
+
+ggplot() +
+  geom_line(
+    data = temp_list$temp, 
+    aes(x = date, y = value, color = year, group = year),
+    alpha = .3, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+  scale_color_viridis(option = "plasma") +
+  geom_line(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value), 
+    color = "red",
+    lwd = 1, alpha = .7, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+    geom_dl(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value, label = "2023"),
+    method = list(dl.combine("last.points")), 
+    color = "red",
+    cex = 0.8
+  ) +
+  ylim(15, 35) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  dark_theme_gray() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal"
+  ) +
+  labs(
+    title = "Vitória, ES", 
+    x = "Date",
+    y = "Average temperature (°C)", 
+    color = NULL
+  )
+```
+
+## Nova Friburgo, RJ
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+code_ref <- 3303401
+
+temp_list <- list(
+  temp = temp %>% filter(code_muni == code_ref),
+  temp_23 = temp_23 %>% filter(code_muni == code_ref)
+)
+
+ggplot() +
+  geom_line(
+    data = temp_list$temp, 
+    aes(x = date, y = value, color = year, group = year),
+    alpha = .3, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+  scale_color_viridis(option = "plasma") +
+  geom_line(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value), 
+    color = "red",
+    lwd = 1, alpha = .7, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+    geom_dl(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value, label = "2023"),
+    method = list(dl.combine("last.points")), 
+    color = "red",
+    cex = 0.8
+  ) +
+  ylim(15, 35) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  dark_theme_gray() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal"
+  ) +
+  labs(
+    title = "Nova Friburgo, RJ", 
+    x = "Date",
+    y = "Average temperature (°C)", 
+    color = NULL
+  )
+```
+
+## Juiz de Fora, MG
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+code_ref <- 3136702
+
+temp_list <- list(
+  temp = temp %>% filter(code_muni == code_ref),
+  temp_23 = temp_23 %>% filter(code_muni == code_ref)
+)
+
+ggplot() +
+  geom_line(
+    data = temp_list$temp, 
+    aes(x = date, y = value, color = year, group = year),
+    alpha = .3, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+  scale_color_viridis(option = "plasma") +
+  geom_line(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value), 
+    color = "red",
+    lwd = 1, alpha = .7, 
+    stat = "smooth", 
+    method = "loess"
+  ) +
+    geom_dl(
+    data = temp_list$temp_23, 
+    aes(x = date, y = value, label = "2023"),
+    method = list(dl.combine("last.points")), 
+    color = "red",
+    cex = 0.8
+  ) +
+  ylim(15, 35) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  dark_theme_gray() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal"
+  ) +
+  labs(
+    title = "Juiz de Fora, MG",
+    x = "Date",
+    y = "Average temperature (°C)", 
+    color = NULL
+  )
+```
+
