@@ -17,6 +17,19 @@
     ]
   },
   {
+    "listing": "/blog.html",
+    "items": [
+      "/posts/hot_2023.html",
+      "/posts/time_series_clustering.html",
+      "/posts/std_br_covid_rates.html",
+      "/posts/run_length_encoding.html",
+      "/posts/rates.html",
+      "/posts/query_remot_parquet_file.html",
+      "/posts/sqlite_to_duckdb_and_parquet.html",
+      "/posts/some-tips-for-sqlite.html"
+    ]
+  },
+  {
     "listing": "/climate_health_hub.html",
     "items": [
       "/climate_health_hub/astmh_meeting_2024.html",
@@ -24,6 +37,7 @@
       "/climate_health_hub/columbia_climate_change_and_health_bootcamp_2024.html",
       "/climate_health_hub/pasteur_modeling_infectious_diseases_course_2024.html",
       "/climate_health_hub/eccmid_2024.html",
+      "/climate_health_hub/climate_informatics_2024.html",
       "/climate_health_hub/hdr_uk_2024.html",
       "/climate_health_hub/pasteur_spreading_infectious_agents_risk_assessment_2024.html",
       "/climate_health_hub/winter_school_climate_change_epidemiology_2023.html",
@@ -38,19 +52,6 @@
       "/climate_health_hub/ms_mudancas_climaticas_saude_2023.html",
       "/climate_health_hub/ccmi_webinar_climate_change_health_2023.html",
       "/climate_health_hub/enbel_conference_2023.html"
-    ]
-  },
-  {
-    "listing": "/blog.html",
-    "items": [
-      "/posts/hot_2023.html",
-      "/posts/time_series_clustering.html",
-      "/posts/std_br_covid_rates.html",
-      "/posts/run_length_encoding.html",
-      "/posts/rates.html",
-      "/posts/query_remot_parquet_file.html",
-      "/posts/sqlite_to_duckdb_and_parquet.html",
-      "/posts/some-tips-for-sqlite.html"
     ]
   },
   {

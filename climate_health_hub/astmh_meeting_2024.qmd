@@ -2,7 +2,7 @@
 title: "ASTMH Annual Meeting 2024"
 author: "ASTMH"
 date: 2024-10-23
-categories: [meeting, in person, paid, 2023]
+categories: [meeting, in person, paid, 2024]
 ---
 
 ## Description
