@@ -65,6 +65,7 @@
   {
     "listing": "/publications.html",
     "items": [
+      "/publications/saldanhaMicrodatasus2023.html",
       "/publications/victor2023.html",
       "/publications/pedrosoDataSciencePlatform2023.html",
       "/publications/sallesComprehensiveIntegratedDataset2023a.html",
