@@ -1,91 +1,91 @@
 [
   {
-    "objectID": "talks/climate_data.html#introduction",
-    "href": "talks/climate_data.html#introduction",
+    "objectID": "talks/isntd_conference_2023.html#introduction",
+    "href": "talks/isntd_conference_2023.html#introduction",
     "title": "Disease and climate data fusion for modelling",
     "section": "Introduction",
     "text": "Introduction\n\nPostdoc researcher at Inria, a French research institute for digital science and technology\nBSC, Global Health Resilience collaborator\nFiocruz, Climate and Health Observatory"
   },
   {
-    "objectID": "talks/climate_data.html#climate-sensitive-diseases",
-    "href": "talks/climate_data.html#climate-sensitive-diseases",
+    "objectID": "talks/isntd_conference_2023.html#climate-sensitive-diseases",
+    "href": "talks/isntd_conference_2023.html#climate-sensitive-diseases",
     "title": "Disease and climate data fusion for modelling",
     "section": "Climate sensitive diseases",
-    "text": "Climate sensitive diseases\n\nDirect relationship: floods, droughts, heat waves…\nIndirect relationship\n\n\n\n\n\n%%{\n  init: {\n    'theme': 'base',\n    'themeVariables': {\n      'fontSize': '30px'\n    }\n  }\n}%%\nflowchart LR\n\nclimate(Climate) --&gt; vector(Disease vectors) --&gt; health(Human health)\nclimate --&gt; health\nclimate --&gt; social(Social & economic \\n determinants) --&gt; health\n\n\n\n\n\n\nClimate necessary conditions to vector viability, reproduction and disease transmission efficiency\n\nClimate indicators may act as proxy variables to vector distribution on statistical models"
+    "text": "Climate sensitive diseases\n\nDirect relationship: floods, droughts, heat waves…\nIndirect relationship\n\n\n\n\n\n%%{\n  init: {\n    'theme': 'base',\n    'themeVariables': {\n      'fontSize': '30px'\n    }\n  }\n}%%\nflowchart LR\n\nclimate(Climate) --&gt; vector(Disease vectors) --&gt; health(Human health)\nclimate --&gt; health\nclimate --&gt; social(Social & economic \\n determinants) --&gt; health\n\n\n\n\n\n\nClimate necessary conditions to vector viability, reproduction and disease transmission efficiency\nClimate indicators may act as proxy variables to vector distribution on statistical models"
   },
   {
-    "objectID": "talks/climate_data.html#a-time-lagged-relationship",
-    "href": "talks/climate_data.html#a-time-lagged-relationship",
+    "objectID": "talks/isntd_conference_2023.html#a-time-lagged-relationship",
+    "href": "talks/isntd_conference_2023.html#a-time-lagged-relationship",
     "title": "Disease and climate data fusion for modelling",
     "section": "A time-lagged relationship",
     "text": "A time-lagged relationship\n\n\n\nVector life cycle in a time perspective\nClimate conditions from the past leads to the disease incidence of today"
   },
   {
-    "objectID": "talks/climate_data.html#climate-data",
-    "href": "talks/climate_data.html#climate-data",
+    "objectID": "talks/isntd_conference_2023.html#climate-data",
+    "href": "talks/isntd_conference_2023.html#climate-data",
     "title": "Disease and climate data fusion for modelling",
     "section": "Climate data",
-    "text": "Climate data\n\nData sources\n\nWeather stations, rain gauges\nSatellites\n\n\nData products\n\nStatistical surface interpolations\nModel reanalysis"
+    "text": "Climate data\n\nData sources\n\nWeather stations, rain gauges\nSatellites\n\nData products\n\nStatistical surface interpolations\nModel reanalysis"
   },
   {
-    "objectID": "talks/climate_data.html#era5-land-reanalysis",
-    "href": "talks/climate_data.html#era5-land-reanalysis",
+    "objectID": "talks/isntd_conference_2023.html#era5-land-reanalysis",
+    "href": "talks/isntd_conference_2023.html#era5-land-reanalysis",
     "title": "Disease and climate data fusion for modelling",
     "section": "ERA5-Land reanalysis",
     "text": "ERA5-Land reanalysis\n\n\n\nCopernicus, ECMWF\nGlobal coverage\nHourly data\n1950 to the present (one week lag)\nSpatial resolution ~9km\nSeveral climate indicators"
   },
   {
-    "objectID": "talks/climate_data.html#data-structures",
-    "href": "talks/climate_data.html#data-structures",
+    "objectID": "talks/isntd_conference_2023.html#data-structures",
+    "href": "talks/isntd_conference_2023.html#data-structures",
     "title": "Disease and climate data fusion for modelling",
     "section": "Data structures",
     "text": "Data structures\n\nClimate indicators: grid data\nDisease incidence: tabular, individual cases aggregated by spatial regions and time spans"
   },
   {
-    "objectID": "talks/climate_data.html#fusioning-data",
-    "href": "talks/climate_data.html#fusioning-data",
+    "objectID": "talks/isntd_conference_2023.html#fusioning-data",
+    "href": "talks/isntd_conference_2023.html#fusioning-data",
     "title": "Disease and climate data fusion for modelling",
     "section": "Fusioning data",
     "text": "Fusioning data"
   },
   {
-    "objectID": "talks/climate_data.html#case-example",
-    "href": "talks/climate_data.html#case-example",
+    "objectID": "talks/isntd_conference_2023.html#case-example",
+    "href": "talks/isntd_conference_2023.html#case-example",
     "title": "Disease and climate data fusion for modelling",
     "section": "Case example",
     "text": "Case example\nZonal Statistics of Climate Indicators from ERA5-Land for Brazilian Municipalities, 1950-2022\n\nERA5-Land hourly data to daily aggregates\nAverage, maximum and minimum temperature, total precipitation\nSurface pressure, dewpoint, \\(u\\) and \\(v\\) components of wind\nZonal statistics computation for the 5,570 Brazilian municipalities\n\nMinimum, maximum, average, sum, standard deviation, cell count"
   },
   {
-    "objectID": "talks/climate_data.html#workflow",
-    "href": "talks/climate_data.html#workflow",
+    "objectID": "talks/isntd_conference_2023.html#workflow",
+    "href": "talks/isntd_conference_2023.html#workflow",
     "title": "Disease and climate data fusion for modelling",
     "section": "Workflow",
     "text": "Workflow\n\n\n\n\n%%{\n  init: {\n    'theme': 'base',\n    'themeVariables': {\n      'fontSize': '30px'\n    }\n  }\n}%%\nflowchart TD\n\nera5(ERA5-Land \\n indicators) --&gt; hdata(Hourly data)\nbb(Latin America \\n bounding box) --&gt; hdata\n\nhdata --&gt; agg(Daily aggregated \\n data)\n\nagg --&gt; mun(Municipal boundaries)\nmun --&gt; zs(Zonal statistics)"
   },
   {
-    "objectID": "talks/climate_data.html#results",
-    "href": "talks/climate_data.html#results",
+    "objectID": "talks/isntd_conference_2023.html#results",
+    "href": "talks/isntd_conference_2023.html#results",
     "title": "Disease and climate data fusion for modelling",
     "section": "Results",
-    "text": "Results\n\n\n\n\n\n\n\nERA5-Land indicators\nDaily time-aggregating functions\nSpatial zonal statistics\n\n\n\nTemperature (2m)\nmean, max, min\nmax, min, stdev, count\n\n\nDewpoint temp. (2m)\nmean\nmax, min, stdev, count\n\n\n\n\\(u\\) component of wind\nmean\nmax, min, stdev, count\n\n\n\n\\(v\\) component of wind\nmean\nmax, min, stdev, count\n\n\nSurface pressure\nmean\nmax, min, stdev, count\n\n\nTotal precipitation\nsum\nmax, min, stdev, count, sum"
+    "text": "Results\n\n\n\n\n\n\n\n\nERA5-Land indicators\nDaily time-aggregating functions\nSpatial zonal statistics\n\n\n\n\nTemperature (2m)\nmean, max, min\nmax, min, stdev, count\n\n\nDewpoint temp. (2m)\nmean\nmax, min, stdev, count\n\n\n\\(u\\) component of wind\nmean\nmax, min, stdev, count\n\n\n\\(v\\) component of wind\nmean\nmax, min, stdev, count\n\n\nSurface pressure\nmean\nmax, min, stdev, count\n\n\nTotal precipitation\nsum\nmax, min, stdev, count, sum"
   },
   {
-    "objectID": "talks/climate_data.html#average-temperature",
-    "href": "talks/climate_data.html#average-temperature",
+    "objectID": "talks/isntd_conference_2023.html#average-temperature",
+    "href": "talks/isntd_conference_2023.html#average-temperature",
     "title": "Disease and climate data fusion for modelling",
     "section": "Average temperature",
     "text": "Average temperature"
   },
   {
-    "objectID": "talks/climate_data.html#next-steps",
-    "href": "talks/climate_data.html#next-steps",
+    "objectID": "talks/isntd_conference_2023.html#next-steps",
+    "href": "talks/isntd_conference_2023.html#next-steps",
     "title": "Disease and climate data fusion for modelling",
     "section": "Next steps…",
     "text": "Next steps…\n\nContinuous update\nHuman settlements, population-weighted zonal statistics\nCompute climate time-series features: heat waves, persistent rains, etc.\nExpand methodology to other countries"
   },
   {
-    "objectID": "talks/climate_data.html#thanks",
-    "href": "talks/climate_data.html#thanks",
+    "objectID": "talks/isntd_conference_2023.html#thanks",
+    "href": "talks/isntd_conference_2023.html#thanks",
     "title": "Disease and climate data fusion for modelling",
     "section": "Thanks!",
     "text": "Thanks!\nContact, data links, R packages and short tutorials available at rfsaldanha.github.io"
