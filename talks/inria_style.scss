@@ -74,3 +74,9 @@ details>summary {
   padding-left: 1em;
   background: #ccddeb;
 }
+
+.big_text p {
+  text-align: center;
+  font-size: 4em;
+  color: $presentation-heading-color;
+}
