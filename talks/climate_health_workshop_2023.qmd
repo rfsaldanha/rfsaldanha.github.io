@@ -6,7 +6,7 @@ institute: "Inria"
 date: "2023-12-18"
 description: "Talk at the Climate and Health for Health Situation Studies Workshop, IRD."
 categories: [isntd, climate, data]
-image: images/temp.png
+image: images/prec_map_1.png
 format:
   revealjs: 
     theme: inria_style.scss
@@ -81,23 +81,28 @@ climate --> social(Social & economic \n determinants) --> health
 :::
 
 ::: {.column width="15%"}
-{{< fa sun size=2xl >}}\
-{{< fa cloud-rain size=2xl >}}\
-{{< fa wind size=2xl >}}\
+{{< fa sun size=2xl >}}
+\
+{{< fa cloud-rain size=2xl >}}
+\
+{{< fa wind size=2xl >}}
+\
 {{< fa snowflake size=2xl >}}
 :::
 
 ::: {.column width="15%"}
 \
 \
-{{< fa satellite size=2xl >}}\
+{{< fa satellite size=2xl >}}
+\
 {{< fa tower-cell size=2xl >}}
 :::
 
 ::: {.column width="15%"}
 \
 \
-{{< fa layer-group size=2xl >}}\
+{{< fa layer-group size=2xl >}}
+\
 {{< fa table-cells size=2xl >}}
 :::
 :::
@@ -244,7 +249,7 @@ exact_extract(
 ## Results {.smaller}
 
 | ERA5-Land indicators  | Daily time-aggregating functions | Spatial zonal statistics    |
-|-----------------------|----------------------------------|-----------------------------|
+|----------------------|-----------------------------|----------------------|
 | Temperature (2m)      | mean, max, min                   | max, min, stdev, count      |
 | Dewpoint temp. (2m)   | mean                             | max, min, stdev, count      |
 | $u$ component of wind | mean                             | max, min, stdev, count      |
