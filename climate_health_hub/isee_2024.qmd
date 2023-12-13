@@ -1,0 +1,14 @@
+---
+title: "ISEE 2024"
+author: "ISEE"
+date: 2024-08-25
+categories: [conference, in person, paid, 2024]
+---
+
+## Description
+
+We are delighted to invite you to attend the 36th Annual ISEE Conference in Santiago, Chile between August 25-28, 2024. The main theme of the conference is "Addressing challenges in environmental health, justice, and development". We will address how the scientific community faces current health environmental justice, and epidemiological challenges, including empirical evidence, methodological approaches, ethical and theoretical developments.
+
+## Links
+
+-   <https://iseeconference.org>
