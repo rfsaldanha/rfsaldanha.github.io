@@ -317,6 +317,7 @@ Rio de Janeiro municipalities. January 1, 2010.
 -   Compute climate time-series features: heat waves, persistent rains, etc.
 -   Adopt climate products with finer resolutions when possible (CHIRPS)
 -   Expand methodology to other countries
+-   Methodological paper on reviewing phase
 :::
 ::: {.column width="50%"}
 ![](images/pop_era5_grid_overlay.png){fig-align="center" width="100%"}
