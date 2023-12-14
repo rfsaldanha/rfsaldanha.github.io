@@ -81,29 +81,15 @@ climate --> social(Social & economic \n determinants) --> health
 :::
 
 ::: {.column width="15%"}
-{{< fa sun size=2xl >}}
-\
-{{< fa cloud-rain size=2xl >}}
-\
-{{< fa wind size=2xl >}}
-\
-{{< fa snowflake size=2xl >}}
+{{< fa sun size=2xl >}} <br> {{< fa cloud-rain size=2xl >}} <br> {{< fa wind size=2xl >}} <br> {{< fa snowflake size=2xl >}}
 :::
 
 ::: {.column width="15%"}
-\
-\
-{{< fa satellite size=2xl >}}
-\
-{{< fa tower-cell size=2xl >}}
+<br> <br> {{< fa satellite size=2xl >}} <br> {{< fa tower-cell size=2xl >}}
 :::
 
 ::: {.column width="15%"}
-\
-\
-{{< fa layer-group size=2xl >}}
-\
-{{< fa table-cells size=2xl >}}
+<br> <br> {{< fa layer-group size=2xl >}} <br> {{< fa table-cells size=2xl >}}
 :::
 :::
 
@@ -120,7 +106,7 @@ climate --> social(Social & economic \n determinants) --> health
 -   Copernicus, ECMWF
 -   Global coverage
 -   Hourly data
--   1950 to the present (one week lag)
+-   1950 to the present (one week delay)
 -   Spatial resolution \~9km
 -   Several climate indicators
 :::
@@ -234,7 +220,7 @@ download_ERA(Variable = "2m_temperature", DataSet = "era5-land",
 
 ## Computation
 
--   Zonal statistics weighted weighted by the fraction of the cell that is covered, with the [{exactextractr}](https://isciences.gitlab.io/exactextractr/) package
+-   Zonal statistics weighted by the fraction of the cell that is covered, with the [{exactextractr}](https://isciences.gitlab.io/exactextractr/) package
 
 ```{r}
 #| echo: true
@@ -289,12 +275,41 @@ exact_extract(
 
 Rio de Janeiro municipalities. January 1, 2010.
 
-## Next steps...
+## Resolution and spatial variability {.smaller}
 
+::: columns
+::: {.column width="50%"}
+-   Brazilian municipalities size variation
+    -   Altamira (PA): 159,533 km2
+    -   Santa Cruz de Minas (MG): 3 km2
+-   ERA5-Land cell: \~ 100 km2
+-   Several intersecting cells and different climate regimes
+-   Few intersecting cells or fractions
+
+![](images/era5_grid_overlay.png){fig-align="center" width="80%"}
+:::
+
+::: {.column width="50%"}
+![](images/count_plot.png){fig-align="center" width="100%"}
+:::
+:::
+
+## Next steps...{.smaller}
+
+::: columns
+::: {.column width="50%"}
 -   Continuous update
 -   Human settlements, population-weighted zonal statistics
 -   Compute climate time-series features: heat waves, persistent rains, etc.
+-   Adopt climate products with finer resolutions when possible (CHIRPS)
 -   Expand methodology to other countries
+:::
+::: {.column width="50%"}
+![](images/pop_era5_grid_overlay.png){fig-align="center" width="100%"}
+:::
+:::
+
+
 
 ## Thanks!
 

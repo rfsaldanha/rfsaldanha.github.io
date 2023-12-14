@@ -487,23 +487,11 @@ climate --&gt; social(Social &amp; economic \n determinants) --&gt; health
 </div><div class="column" style="width:10%;">
 
 </div><div class="column" style="width:15%;">
-<p><i class="fa-solid fa-sun fa-2xl" aria-label="sun"></i></p>
-<p><br></p>
-<p><i class="fa-solid fa-cloud-rain fa-2xl" aria-label="cloud-rain"></i></p>
-<p><br></p>
-<p><i class="fa-solid fa-wind fa-2xl" aria-label="wind"></i></p>
-<p><br></p>
-<p><i class="fa-solid fa-snowflake fa-2xl" aria-label="snowflake"></i></p>
+<p><i class="fa-solid fa-sun fa-2xl" aria-label="sun"></i> <br><i class="fa-solid fa-cloud-rain fa-2xl" aria-label="cloud-rain"></i> <br><i class="fa-solid fa-wind fa-2xl" aria-label="wind"></i> <br><i class="fa-solid fa-snowflake fa-2xl" aria-label="snowflake"></i></p>
 </div><div class="column" style="width:15%;">
-<p><br><br></p>
-<p><i class="fa-solid fa-satellite fa-2xl" aria-label="satellite"></i></p>
-<p><br></p>
-<p><i class="fa-solid fa-tower-cell fa-2xl" aria-label="tower-cell"></i></p>
+<p><br><br><i class="fa-solid fa-satellite fa-2xl" aria-label="satellite"></i> <br><i class="fa-solid fa-tower-cell fa-2xl" aria-label="tower-cell"></i></p>
 </div><div class="column" style="width:15%;">
-<p><br><br></p>
-<p><i class="fa-solid fa-layer-group fa-2xl" aria-label="layer-group"></i></p>
-<p><br></p>
-<p><i class="fa-solid fa-table-cells fa-2xl" aria-label="table-cells"></i></p>
+<p><br><br><i class="fa-solid fa-layer-group fa-2xl" aria-label="layer-group"></i> <br><i class="fa-solid fa-table-cells fa-2xl" aria-label="table-cells"></i></p>
 </div>
 </div>
 </section><section id="climate-reanalysis" class="slide level2"><h2>Climate reanalysis</h2>
@@ -514,7 +502,7 @@ climate --&gt; social(Social &amp; economic \n determinants) --&gt; health
 <li>Copernicus, ECMWF</li>
 <li>Global coverage</li>
 <li>Hourly data</li>
-<li>1950 to the present (one week lag)</li>
+<li>1950 to the present (one week delay)</li>
 <li>Spatial resolution ~9km</li>
 <li>Several climate indicators</li>
 </ul>
@@ -637,7 +625,7 @@ mun --&gt; zs(Zonal statistics)
 </div>
 </section><section id="computation" class="slide level2"><h2>Computation</h2>
 <ul>
-<li>Zonal statistics weighted weighted by the fraction of the cell that is covered, with the <a href="https://isciences.gitlab.io/exactextractr/">{exactextractr}</a> package</li>
+<li>Zonal statistics weighted by the fraction of the cell that is covered, with the <a href="https://isciences.gitlab.io/exactextractr/">{exactextractr}</a> package</li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">exact_extract</span>(</span>
@@ -725,13 +713,49 @@ mun --&gt; zs(Zonal statistics)
 </div>
 </div>
 <p>Rio de Janeiro municipalities. January 1, 2010.</p>
-</section><section id="next-steps" class="slide level2"><h2>Next steps…</h2>
+</section><section id="resolution-and-spatial-variability" class="slide level2 smaller"><h2>Resolution and spatial variability</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Brazilian municipalities size variation
+<ul>
+<li>Altamira (PA): 159,533 km2</li>
+<li>Santa Cruz de Minas (MG): 3 km2</li>
+</ul>
+</li>
+<li>ERA5-Land cell: ~ 100 km2</li>
+<li>Several intersecting cells and different climate regimes</li>
+<li>Few intersecting cells or fractions</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/era5_grid_overlay.png" style="width:80.0%"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/count_plot.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="next-steps" class="slide level2 smaller"><h2>Next steps…</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
 <li>Continuous update</li>
 <li>Human settlements, population-weighted zonal statistics</li>
 <li>Compute climate time-series features: heat waves, persistent rains, etc.</li>
+<li>Adopt climate products with finer resolutions when possible (CHIRPS)</li>
 <li>Expand methodology to other countries</li>
-</ul></section><section id="thanks" class="slide level2"><h2>Thanks!</h2>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/pop_era5_grid_overlay.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="thanks" class="slide level2"><h2>Thanks!</h2>
 <p>Contact, data links, R packages and short tutorials available at <a href="https://rfsaldanha.github.io/">rfsaldanha.github.io</a></p>
 
 

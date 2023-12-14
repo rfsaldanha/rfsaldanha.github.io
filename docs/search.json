@@ -1712,7 +1712,7 @@
     "href": "talks/climate_health_workshop_2023.html#era5-land-reanalysis",
     "title": "Disease and climate data fusion for modelling",
     "section": "ERA5-Land reanalysis",
-    "text": "ERA5-Land reanalysis\n\n\n\nCopernicus, ECMWF\nGlobal coverage\nHourly data\n1950 to the present (one week lag)\nSpatial resolution ~9km\nSeveral climate indicators"
+    "text": "ERA5-Land reanalysis\n\n\n\nCopernicus, ECMWF\nGlobal coverage\nHourly data\n1950 to the present (one week delay)\nSpatial resolution ~9km\nSeveral climate indicators"
   },
   {
     "objectID": "talks/climate_health_workshop_2023.html#data-structures",
@@ -1768,7 +1768,7 @@
     "href": "talks/climate_health_workshop_2023.html#computation",
     "title": "Disease and climate data fusion for modelling",
     "section": "Computation",
-    "text": "Computation\n\nZonal statistics weighted weighted by the fraction of the cell that is covered, with the {exactextractr} package\n\n\nexact_extract(\n  x = rst,\n  y = pol,\n  fun = \"mean\"\n)"
+    "text": "Computation\n\nZonal statistics weighted by the fraction of the cell that is covered, with the {exactextractr} package\n\n\nexact_extract(\n  x = rst,\n  y = pol,\n  fun = \"mean\"\n)"
   },
   {
     "objectID": "talks/climate_health_workshop_2023.html#results",
@@ -1803,7 +1803,7 @@
     "href": "talks/climate_health_workshop_2023.html#next-steps",
     "title": "Disease and climate data fusion for modelling",
     "section": "Next steps…",
-    "text": "Next steps…\n\nContinuous update\nHuman settlements, population-weighted zonal statistics\nCompute climate time-series features: heat waves, persistent rains, etc.\nExpand methodology to other countries"
+    "text": "Next steps…\n\n\n\nContinuous update\nHuman settlements, population-weighted zonal statistics\nCompute climate time-series features: heat waves, persistent rains, etc.\nAdopt climate products with finer resolutions when possible (CHIRPS)\nExpand methodology to other countries"
   },
   {
     "objectID": "talks/climate_health_workshop_2023.html#thanks",
@@ -1811,5 +1811,19 @@
     "title": "Disease and climate data fusion for modelling",
     "section": "Thanks!",
     "text": "Thanks!\nContact, data links, R packages and short tutorials available at rfsaldanha.github.io"
+  },
+  {
+    "objectID": "talks/climate_health_workshop_2023.html#a-common-situation-on-summary-measures",
+    "href": "talks/climate_health_workshop_2023.html#a-common-situation-on-summary-measures",
+    "title": "Disease and climate data fusion for modelling",
+    "section": "A common situation on summary measures",
+    "text": "A common situation on summary measures\n\n\n\nThe Brazilian municipalities size variation\n\nAltamira (PA): 159,533 km2\nSanta Cruz de Minas (MG): 3 km2\n\n\nERA5-Land cell: ~ 100 km2\nCase 1: Several intersecting cells and different climate regimes\nFew intersecting cells or fractions"
+  },
+  {
+    "objectID": "talks/climate_health_workshop_2023.html#resolution-and-spatial-variability",
+    "href": "talks/climate_health_workshop_2023.html#resolution-and-spatial-variability",
+    "title": "Disease and climate data fusion for modelling",
+    "section": "Resolution and spatial variability",
+    "text": "Resolution and spatial variability\n\n\n\nBrazilian municipalities size variation\n\nAltamira (PA): 159,533 km2\nSanta Cruz de Minas (MG): 3 km2\n\n\nERA5-Land cell: ~ 100 km2\nSeveral intersecting cells and different climate regimes\nFew intersecting cells or fractions"
   }
 ]
