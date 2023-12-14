@@ -81,15 +81,29 @@ climate --> social(Social & economic \n determinants) --> health
 :::
 
 ::: {.column width="15%"}
-{{< fa sun size=2xl >}} <br> {{< fa cloud-rain size=2xl >}} <br> {{< fa wind size=2xl >}} <br> {{< fa snowflake size=2xl >}}
+{{< fa sun size=2xl >}}
+<br></br>
+{{< fa cloud-rain size=2xl >}}
+<br></br>
+{{< fa wind size=2xl >}}
+<br></br>
+{{< fa snowflake size=2xl >}}
 :::
 
 ::: {.column width="15%"}
-<br> <br> {{< fa satellite size=2xl >}} <br> {{< fa tower-cell size=2xl >}}
+<br></br>
+<br></br>
+{{< fa satellite size=2xl >}} 
+<br></br>
+{{< fa tower-cell size=2xl >}}
 :::
 
 ::: {.column width="15%"}
-<br> <br> {{< fa layer-group size=2xl >}} <br> {{< fa table-cells size=2xl >}}
+<br></br>
+<br></br>
+{{< fa layer-group size=2xl >}}
+<br></br>
+{{< fa table-cells size=2xl >}}
 :::
 :::
 
