@@ -12,8 +12,8 @@
   <meta name="generator" content="quarto-1.4.163">
 
   <meta name="author" content="Raphael Saldanha">
-  <meta name="dcterms.date" content="2023-11-22">
-  <title>Raphael Saldanha - Disease and climate data fusion for modelling</title>
+  <meta name="dcterms.date" content="2023-12-18">
+  <title>Raphael Saldanha - BILIS</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -45,6 +45,7 @@
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
@@ -340,8 +341,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Disease and climate data fusion for modelling</h1>
-  <p class="subtitle">An application case for Brazil</p>
+  <h1 class="title">BILIS</h1>
+  <p class="subtitle">An unified indicators database</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -349,235 +350,101 @@
 Raphael Saldanha 
 </div>
         <p class="quarto-title-affiliation">
-            Inria, GHR collaborator
+            LIS/ICICT/Fiocruz
           </p>
     </div>
 </div>
 
-  <p class="date">2023-11-22</p>
+  <p class="date">2023-12-18</p>
 </section>
-<section id="introduction" class="slide level2">
-<h2>Introduction</h2>
+<section id="bilis" class="slide level2">
+<h2>BILIS</h2>
 <ul>
-<li>Postdoc researcher at Inria, a French research institute for digital science and technology</li>
-<li>BSC, Global Health Resilience collaborator</li>
-<li>Fiocruz, Climate and Health Observatory</li>
+<li><em>Banco de Indicadores do Laboratório de Informação em Saúde</em>, ICICT</li>
+<li>A proposal to create an unified health indicators database</li>
 </ul>
 </section>
-<section id="climate-sensitive-diseases" class="slide level2">
-<h2>Climate sensitive diseases</h2>
+<section id="motivation" class="slide level2">
+<h2>Motivation</h2>
 <ul>
-<li><p><strong>Direct</strong> relationship: floods, droughts, heat waves…</p></li>
-<li><p><strong>Indirect</strong> relationship</p></li>
+<li><p>Health indicators are necessary at several projects</p></li>
+<li><p>Projects usually hires people to compute the indicators</p></li>
+<li><p>Several projects uses a common group of basic indicators</p></li>
+<li><p>The indicators may be computed with slight differences in methodology</p></li>
+<li><p>Dependent on project lifecycle</p></li>
 </ul>
+</section>
+<section id="objectives" class="slide level2">
+<h2>Objectives</h2>
+<ul>
+<li><p>Provide a set of health indicators</p></li>
+<li><p>Standardized methodology</p></li>
+<li><p>Shared budget</p></li>
+<li><p>Long term, independent initiative</p></li>
+</ul>
+</section>
+<section id="solutions" class="slide level2">
+<h2>Solutions</h2>
+<ul>
+<li><p>Primarly use already existing sources of secondary data</p>
+<ul>
+<li>Death records, new born records, hospitalization records, etc</li>
+</ul></li>
+<li><p>Easy to use R packages to compute health indicators</p></li>
+<li><p>One package, one specific mission</p></li>
+</ul>
+</section>
+<section id="packages" class="slide level2">
+<h2>Packages</h2>
+<ul>
+<li><p><strong>brpop</strong>: yearly population estimates for Brazilian administrative levels, including age groups and sex (for standardized indicators)</p></li>
+<li><p><strong>rpcdas</strong>: query SIM, SINASC, SIH and other health information systems stored at <a href="https://pcdas.icict.fiocruz.br">PCDaS</a> ElasticSearch stack, returning aggregated data per administrative level and time</p></li>
+<li><p><strong>recbilis</strong>: query other health information systems stored at ICICT Postgres instance</p></li>
+</ul>
+</section>
+<section id="packages-1" class="slide level2">
+<h2>Packages</h2>
+<ul>
+<li><strong>bilis</strong>: compute health indicators at several combinations of administrative levels (municipality, health region and state) and time units (weekly, monthly and yearly)</li>
+</ul>
+</section>
+<section id="overview" class="slide level2">
+<h2>Overview</h2>
 <div class="cell" data-reveal="true">
 <div class="cell-output-display">
 <div>
 <div>
-<pre class="mermaid mermaid-js">%%{
-  init: {
-    'theme': 'base',
-    'themeVariables': {
-      'fontSize': '30px'
-    }
-  }
-}%%
-flowchart LR
-
-climate(Climate) --&gt; vector(Disease vectors) --&gt; health(Human health)
-climate --&gt; health
-climate --&gt; social(Social &amp; economic \n determinants) --&gt; health
-</pre>
-</div>
-</div>
-</div>
-</div>
-<ul>
-<li>Climate necessary conditions to vector viability, reproduction and <strong>disease transmission efficiency</strong></li>
-<li>Climate indicators may act as <strong>proxy</strong> variables to vector distribution on statistical models</li>
-</ul>
-</section>
-<section id="a-time-lagged-relationship" class="slide level2">
-<h2>A time-lagged relationship</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<ul>
-<li>Vector life cycle in a time perspective</li>
-<li>Climate conditions from the <strong>past</strong> leads to the disease incidence of <strong>today</strong></li>
-</ul>
-</div><div class="column" style="width:60%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/aedes_cycle.png"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="climate-data" class="slide level2">
-<h2>Climate data</h2>
-<ul>
-<li>Data sources
-<ul>
-<li>Weather stations, rain gauges</li>
-<li>Satellites</li>
-</ul></li>
-<li>Data products
-<ul>
-<li>Statistical surface interpolations</li>
-<li>Model reanalysis</li>
-</ul></li>
-</ul>
-</section>
-<section id="era5-land-reanalysis" class="slide level2">
-<h2>ERA5-Land reanalysis</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<ul>
-<li>Copernicus, ECMWF</li>
-<li>Global coverage</li>
-<li>Hourly data</li>
-<li>1950 to the present (one week lag)</li>
-<li>Spatial resolution ~9km</li>
-<li>Several climate indicators</li>
-</ul>
-</div><div class="column" style="width:60%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/era5-land-daily-aggregates.png"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="data-structures" class="slide level2">
-<h2>Data structures</h2>
-<ul>
-<li>Climate indicators: grid data</li>
-<li>Disease incidence: tabular, individual cases aggregated by spatial regions and time spans</li>
-</ul>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="images/temp.png"></p>
-</div><div class="column" style="width:50%;">
-<p><img data-src="images/admin.png"></p>
-</div>
-</div>
-</section>
-<section id="fusioning-data" class="slide level2">
-<h2>Fusioning data</h2>
-
-<img data-src="images/zonal_statistics.png" class="r-stretch"></section>
-<section id="case-example" class="slide level2">
-<h2>Case example</h2>
-<p><strong>Zonal Statistics of Climate Indicators from ERA5-Land for Brazilian Municipalities, 1950-2022</strong></p>
-<ul>
-<li>ERA5-Land hourly data to daily aggregates</li>
-<li>Average, maximum and minimum temperature, total precipitation</li>
-<li>Surface pressure, dewpoint, <span class="math inline">\(u\)</span> and <span class="math inline">\(v\)</span> components of wind</li>
-<li>Zonal statistics computation for the 5,570 Brazilian municipalities
-<ul>
-<li>Minimum, maximum, average, sum, standard deviation, cell count</li>
-</ul></li>
-</ul>
-</section>
-<section id="workflow" class="slide level2">
-<h2>Workflow</h2>
-<div class="cell" data-reveal="true">
-<div class="cell-output-display">
-<div>
-<div>
-<pre class="mermaid mermaid-js">%%{
-  init: {
-    'theme': 'base',
-    'themeVariables': {
-      'fontSize': '30px'
-    }
-  }
-}%%
-flowchart TD
-
-era5(ERA5-Land \n indicators) --&gt; hdata(Hourly data)
-bb(Latin America \n bounding box) --&gt; hdata
-
-hdata --&gt; agg(Daily aggregated \n data)
-
-agg --&gt; mun(Municipal boundaries)
-mun --&gt; zs(Zonal statistics)
+<pre class="mermaid mermaid-js">flowchart LR
+sources_1(SIM, SINASC, SIH) --&gt; pcdas_api(PCDaS API)
+pcdas_api --&gt; rpcdas[rpcdas]
+sources_2(SINAN, \n Sivep-Malária) --&gt; postgres(PostgreSQL Server)
+postgres --&gt; recbilis[recbilis]
+pop(Population count) --&gt; brpop[brpop]
+rpcdas --&gt; bilis[bilis]
+recbilis --&gt; bilis
+brpop --&gt; bilis
+bilis --&gt; csv(CSV files)
+bilis --&gt; parquet(Parquet files)
+bilis --&gt; db(Databases and destinations)
 </pre>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="results" class="slide level2 smaller">
-<h2>Results</h2>
-<table style="width:100%;">
-<colgroup>
-<col style="width: 30%">
-<col style="width: 39%">
-<col style="width: 30%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>ERA5-Land indicators</th>
-<th>Daily time-aggregating functions</th>
-<th>Spatial zonal statistics</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Temperature (2m)</td>
-<td>mean, max, min</td>
-<td>max, min, stdev, count</td>
-</tr>
-<tr class="even">
-<td>Dewpoint temp. (2m)</td>
-<td>mean</td>
-<td>max, min, stdev, count</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(u\)</span> component of wind</td>
-<td>mean</td>
-<td>max, min, stdev, count</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(v\)</span> component of wind</td>
-<td>mean</td>
-<td>max, min, stdev, count</td>
-</tr>
-<tr class="odd">
-<td>Surface pressure</td>
-<td>mean</td>
-<td>max, min, stdev, count</td>
-</tr>
-<tr class="even">
-<td>Total precipitation</td>
-<td>sum</td>
-<td>max, min, stdev, count, sum</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="average-temperature" class="slide level2">
-<h2>Average temperature</h2>
-
-<img data-src="images/temperature.png" class="r-stretch"></section>
-<section id="next-steps" class="slide level2">
-<h2>Next steps…</h2>
+<section id="initial-results" class="slide level2">
+<h2>Initial results</h2>
 <ul>
-<li>Continuous update</li>
-<li>Human settlements, population-weighted zonal statistics</li>
-<li>Compute climate time-series features: heat waves, persistent rains, etc.</li>
-<li>Expand methodology to other countries</li>
+<li><p>21 indicators based on <a href="https://www.ripsa.org.br">RIPSA</a> formulations</p></li>
+<li><p>Crude rates</p></li>
+<li><p>Age standardized rates is the next step</p></li>
 </ul>
 </section>
 <section id="thanks" class="slide level2">
 <h2>Thanks!</h2>
-<p>Contact, data links, R packages and short tutorials available at <a href="https://rfsaldanha.github.io/">rfsaldanha.github.io</a></p>
 
 
-<img src="inria_logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<img src="logo_icict_150.png" class="slide-logo r-stretch"><div class="footer footer-default">
 
 </div>
 </section>
@@ -591,6 +458,7 @@ mun --&gt; zs(Zonal statistics)
   <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-pointer/pointer.js"></script>
   <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -613,6 +481,7 @@ mun --&gt; zs(Zonal statistics)
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'pointer': {"key":"q","color":"#e63312","pointerSize":40,"alwaysVisible":false},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -783,7 +652,7 @@ mun --&gt; zs(Zonal statistics)
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealPointer, QuartoSupport,
 
           RevealMath,
           RevealNotes,
