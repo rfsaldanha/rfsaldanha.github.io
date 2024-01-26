@@ -22,33 +22,50 @@ descrip_exif <- function(x){
   exif <- exifr::read_exif(
     path = x, 
     tags = c("Make" ,"Model", "FocalLength", "FNumber", "ExposureTime", 
-             "ISO", "LensModel", "AmbientTemperature", "BatteryTemperature", 
+             "ISO", "LensModel", 
              "BatteryLevel", "SelfTimer", "DateTimeOriginal", "OffsetTime")
   )
   
   glue::glue("{exif$Make} {exif$Model} Lens {exif$LensModel} <br>
              {exif$FocalLength}mm f/{exif$FNumber} 1/{round(1/exif$ExposureTime)} ISO {exif$ISO} <br>
-             {lubridate::as_datetime(glue::glue('{exif$DateTimeOriginal} {exif$OffsetTime}'))} UTC {exif$AmbientTemperature}°C")
+             {lubridate::as_datetime(glue::glue('{exif$DateTimeOriginal} {exif$OffsetTime}'))} UTC")
 }
 ```
 
 ```{r}
 #| eval: false
 prepare_photos(
-  source_path = "~/Downloads/macbook-air-m1-de-raphael_2021_11_28-11-8-10-49-57/", 
+  source_path = "~/Downloads/iceland/", 
   dest_path = "images/"
 )
 ```
+
+## Iceland
+
+::: {style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));grid-gap: 1em;"}
+![Kirkjufell](images/20240115_0036.jpg){description="`r descrip_exif('images/20240115_0036.jpg')`" desc-position="left" group="iceland"}
+
+![Black pebble beach of Djúpalónssandur](images/20240115_0093.jpg){description="`r descrip_exif('images/20240115_0093.jpg')` " desc-position="left" group="iceland"}
+
+![Arnarstapi](images/20240115_0204.jpg){description="`r descrip_exif('images/20240115_0204.jpg')` " desc-position="left" group="iceland"}
+
+![Búðakirkja](images/20240115_0209.jpg){description="`r descrip_exif('images/20240115_0209.jpg')` " desc-position="left" group="iceland"}
+
+![Diamond beach](images/20240115_0268.jpg){description="`r descrip_exif('images/20240115_0268.jpg')` " desc-position="left" group="iceland"}
+
+![Skógafoss](images/20240115_0379.jpg){description="`r descrip_exif('images/20240115_0379.jpg')` " desc-position="left" group="iceland"}
+
+![Reykjanes Peninsula](images/20240115_0501.jpg){description="`r descrip_exif('images/20240115_0501.jpg')` " desc-position="left" group="iceland"}
+
+![Reykjanes Peninsula](images/20240115_0508.jpg){description="`r descrip_exif('images/20240115_0508.jpg')` " desc-position="left" group="iceland"}
+:::
 
 ## Montpellier, FR
 
 ::: {style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));grid-gap: 1em;"}
 ![Le Peyrou](images/20231105_0054.JPG){description="`r descrip_exif('images/20231105_0054.JPG')`" desc-position="left" group="montpellier"}
 
-![Arc de triomphe](images/20231105_0037.JPG){description="`r descrip_exif('images/20231105_0037.JPG')` "desc-position="left" group="montpellier"}
+![Arc de triomphe](images/20231105_0037.JPG){description="`r descrip_exif('images/20231105_0037.JPG')` " desc-position="left" group="montpellier"}
 
-![Les Arceaux](images/20231105_0069.JPG){description="`r descrip_exif('images/20231105_0069.JPG')` "desc-position="left" group="montpellier"}
+![Les Arceaux](images/20231105_0069.JPG){description="`r descrip_exif('images/20231105_0069.JPG')` " desc-position="left" group="montpellier"}
 :::
-
-
-

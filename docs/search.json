@@ -3,8 +3,8 @@
     "objectID": "talks/isntd_conference_2023.html#introduction",
     "href": "talks/isntd_conference_2023.html#introduction",
     "title": "Disease and climate data fusion for modelling",
-    "section": "Introduction",
-    "text": "Introduction\n\nPostdoc researcher at Inria, a French research institute for digital science and technology\nBSC, Global Health Resilience collaborator\nFiocruz, Climate and Health Observatory"
+    "section": "",
+    "text": "Postdoc researcher at Inria, a French research institute for digital science and technology\nBSC, Global Health Resilience collaborator\nFiocruz, Climate and Health Observatory"
   },
   {
     "objectID": "talks/isntd_conference_2023.html#climate-sensitive-diseases",
@@ -94,8 +94,8 @@
     "objectID": "talks/bilis_2023.html#bilis",
     "href": "talks/bilis_2023.html#bilis",
     "title": "BILIS",
-    "section": "BILIS",
-    "text": "BILIS\n\nBanco de Indicadores do Laboratório de Informação em Saúde, ICICT\nA proposal to create an unified health indicators database"
+    "section": "",
+    "text": "Banco de Indicadores do Laboratório de Informação em Saúde, ICICT\nA proposal to create an unified health indicators database"
   },
   {
     "objectID": "talks/bilis_2023.html#motivation",
@@ -543,14 +543,14 @@
     "href": "photos/photos.html",
     "title": "Photos",
     "section": "",
-    "text": "Le Peyrou\n\n\n\n\n\nArc de triomphe\n\n\n\n\n\nLes Arceaux"
+    "text": "Kirkjufell\n\n\n\n\n\nBlack pebble beach of Djúpalónssandur\n\n\n\n\n\nArnarstapi\n\n\n\n\n\nBúðakirkja\n\n\n\n\n\nDiamond beach\n\n\n\n\n\nSkógafoss\n\n\n\n\n\nReykjanes Peninsula\n\n\n\n\n\nReykjanes Peninsula"
   },
   {
     "objectID": "photos/photos.html#montpellier-fr",
     "href": "photos/photos.html#montpellier-fr",
     "title": "Photos",
-    "section": "",
-    "text": "Le Peyrou\n\n\n\n\n\nArc de triomphe\n\n\n\n\n\nLes Arceaux"
+    "section": "Montpellier, FR",
+    "text": "Montpellier, FR\n\n\n\n\nLe Peyrou\n\n\n\n\n\nArc de triomphe\n\n\n\n\n\nLes Arceaux"
   },
   {
     "objectID": "data.html",
@@ -1739,8 +1739,8 @@
     "objectID": "talks/climate_health_workshop_2023.html#introduction",
     "href": "talks/climate_health_workshop_2023.html#introduction",
     "title": "Disease and climate data fusion for modelling",
-    "section": "Introduction",
-    "text": "Introduction\n\nPostdoctoral researcher at Inria, a French research institute for digital science and technology\nFiocruz, Climate and Health Observatory collaborator\nBSC, Global Health Resilience collaborator"
+    "section": "",
+    "text": "Postdoctoral researcher at Inria, a French research institute for digital science and technology\nFiocruz, Climate and Health Observatory collaborator\nBSC, Global Health Resilience collaborator"
   },
   {
     "objectID": "talks/climate_health_workshop_2023.html#climate-sensitive-diseases",
@@ -1881,5 +1881,33 @@
     "title": "Disease and climate data fusion for modelling",
     "section": "Thanks!",
     "text": "Thanks!\nContact, data links, R packages and short tutorials available at rfsaldanha.github.io"
+  },
+  {
+    "objectID": "photos/photos.html#iceland",
+    "href": "photos/photos.html#iceland",
+    "title": "Photos",
+    "section": "",
+    "text": "Kirkjufell\n\n\n\n\n\nBlack pebble beach of Djúpalónssandur\n\n\n\n\n\nArnarstapi\n\n\n\n\n\nBúðakirkja\n\n\n\n\n\nDiamond beach\n\n\n\n\n\nSkógafoss\n\n\n\n\n\nReykjanes Peninsula\n\n\n\n\n\nReykjanes Peninsula"
+  },
+  {
+    "objectID": "talks/isntd_conference_2023.html",
+    "href": "talks/isntd_conference_2023.html",
+    "title": "Disease and climate data fusion for modelling",
+    "section": "",
+    "text": "Postdoc researcher at Inria, a French research institute for digital science and technology\nBSC, Global Health Resilience collaborator\nFiocruz, Climate and Health Observatory"
+  },
+  {
+    "objectID": "talks/bilis_2023.html",
+    "href": "talks/bilis_2023.html",
+    "title": "BILIS",
+    "section": "",
+    "text": "Banco de Indicadores do Laboratório de Informação em Saúde, ICICT\nA proposal to create an unified health indicators database"
+  },
+  {
+    "objectID": "talks/climate_health_workshop_2023.html",
+    "href": "talks/climate_health_workshop_2023.html",
+    "title": "Disease and climate data fusion for modelling",
+    "section": "",
+    "text": "Postdoctoral researcher at Inria, a French research institute for digital science and technology\nFiocruz, Climate and Health Observatory collaborator\nBSC, Global Health Resilience collaborator"
   }
 ]
