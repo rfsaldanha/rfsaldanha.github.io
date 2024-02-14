@@ -6,8 +6,17 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Raphael Saldanha">
+<meta name="author" content="Reza Akbarinia">
+<meta name="author" content="Marcel Pedroso">
+<meta name="author" content="Victor Ribeiro">
+<meta name="author" content="Carlos Cardoso">
+<meta name="author" content="Eduardo H. M. Pena">
+<meta name="author" content="Patrick Valduriez">
+<meta name="author" content="Fabio Porto">
+<meta name="dcterms.date" content="2024-02-12">
 
-<title>Raphael Saldanha - Photos</title>
+<title>Raphael Saldanha - Zonal statistics datasets of climate indicators for Brazilian municipalities</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +29,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 1em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -40,9 +69,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -105,7 +131,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
  <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../photos/photos.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../photos/photos.html" rel="" target="">
  <span class="menu-text">Photos</span></a>
   </li>  
   <li class="nav-item">
@@ -140,23 +166,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Photos</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -164,499 +174,66 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#iceland" id="toc-iceland" class="nav-link active" data-scroll-target="#iceland">Iceland</a></li>
-  <li><a href="#montpellier-fr" id="toc-montpellier-fr" class="nav-link" data-scroll-target="#montpellier-fr">Montpellier, FR</a></li>
+  <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract">Abstract</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Zonal statistics datasets of climate indicators for Brazilian municipalities</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">climate</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-contents">
+             <p>Raphael Saldanha </p>
+             <p>Reza Akbarinia </p>
+             <p>Marcel Pedroso </p>
+             <p>Victor Ribeiro </p>
+             <p>Carlos Cardoso </p>
+             <p>Eduardo H. M. Pena </p>
+             <p>Patrick Valduriez </p>
+             <p>Fabio Porto </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 12, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<p><img src="images/Screenshot from 2024-02-14 10-21-48.png" class="img-fluid"></p>
+<section id="abstract" class="level2">
+<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
+<p>Climate trends and weather indicators are used in several research fields due to their importance in statistical modeling, frequently used as covariates. Usually, climate indicators are available as grid files with different spatial and time resolutions. The availability of a time series of climate indicators compatible with administrative boundaries is scattered in Brazil, not fully available for several years, and produced with diverse methodologies. In this paper, we propose time series of climate indicators for the Brazilian municipalities produced using zonal statistics derived from the ERA5-Land reanalysis indicators. As a result, we present datasets with zonal statistics of climate indicators with daily data, covering the period from 1950 to 2022.</p>
 
-
-
-
-<section id="iceland" class="level2">
-<h2 class="anchored" data-anchor-id="iceland">Iceland</h2>
-<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));grid-gap: 1em;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/20240115_0036.jpg" class="lightbox" data-description="SONY
-
-ILCE-6400
-
-Lens
-
-16mm
-
-F1.4
-
-DC
-
-DN
-
-|
-
-Contemporary
-
-017
-
-<br>
-
-16mm
-
-f/1.4
-
-1/1000
-
-ISO
-
-3200
-
-<br>
-
-2024-01-09
-
-09:29:01
-
-UTC" title="Kirkjufell" data-gallery="iceland"><img src="images/20240115_0036.jpg" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Kirkjufell</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/20240115_0093.jpg" class="lightbox" data-description="SONY
-
-ILCE-6400
-
-Lens
-
-16mm
-
-F1.4
-
-DC
-
-DN
-
-|
-
-Contemporary
-
-017
-
-<br>
-
-16mm
-
-f/1.4
-
-1/1000
-
-ISO
-
-640
-
-<br>
-
-2024-01-09
-
-11:11:06
-
-UTC" title="Black pebble beach of Djúpalónssandur" data-gallery="iceland"><img src="images/20240115_0093.jpg" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Black pebble beach of Djúpalónssandur</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/20240115_0204.jpg" class="lightbox" data-description="SONY
-
-ILCE-6400
-
-Lens
-
-16mm
-
-F1.4
-
-DC
-
-DN
-
-|
-
-Contemporary
-
-017
-
-<br>
-
-16mm
-
-f/1.4
-
-1/800
-
-ISO
-
-400
-
-<br>
-
-2024-01-09
-
-12:14:14
-
-UTC" title="Arnarstapi" data-gallery="iceland"><img src="images/20240115_0204.jpg" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Arnarstapi</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/20240115_0209.jpg" class="lightbox" data-description="SONY
-
-ILCE-6400
-
-Lens
-
-16mm
-
-F1.4
-
-DC
-
-DN
-
-|
-
-Contemporary
-
-017
-
-<br>
-
-16mm
-
-f/1.4
-
-1/800
-
-ISO
-
-320
-
-<br>
-
-2024-01-09
-
-12:54:17
-
-UTC" title="Búðakirkja" data-gallery="iceland"><img src="images/20240115_0209.jpg" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Búðakirkja</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/20240115_0268.jpg" class="lightbox" data-description="SONY
-
-ILCE-6400
-
-Lens
-
-E
-
-PZ
-
-16-50mm
-
-F3.5-5.6
-
-OSS
-
-<br>
-
-49mm
-
-f/5.6
-
-1/640
-
-ISO
-
-400
-
-<br>
-
-2024-01-10
-
-11:04:13
-
-UTC" title="Diamond beach" data-gallery="iceland"><img src="images/20240115_0268.jpg" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Diamond beach</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/20240115_0379.jpg" class="lightbox" data-description="SONY
-
-ILCE-6400
-
-Lens
-
-16mm
-
-F1.4
-
-DC
-
-DN
-
-|
-
-Contemporary
-
-017
-
-<br>
-
-16mm
-
-f/5.6
-
-1/1
-
-ISO
-
-100
-
-<br>
-
-2024-01-11
-
-08:47:17
-
-UTC" title="Skógafoss" data-gallery="iceland"><img src="images/20240115_0379.jpg" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Skógafoss</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/20240115_0501.jpg" class="lightbox" data-description="SONY
-
-ILCE-6400
-
-Lens
-
-16mm
-
-F1.4
-
-DC
-
-DN
-
-|
-
-Contemporary
-
-017
-
-<br>
-
-16mm
-
-f/2
-
-1/100
-
-ISO
-
-100
-
-<br>
-
-2024-01-13
-
-08:35:43
-
-UTC" title="Reykjanes Peninsula" data-gallery="iceland"><img src="images/20240115_0501.jpg" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Reykjanes Peninsula</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/20240115_0508.jpg" class="lightbox" data-description="SONY
-
-ILCE-6400
-
-Lens
-
-16mm
-
-F1.4
-
-DC
-
-DN
-
-|
-
-Contemporary
-
-017
-
-<br>
-
-16mm
-
-f/1.8
-
-1/100
-
-ISO
-
-100
-
-<br>
-
-2024-01-13
-
-08:39:19
-
-UTC" title="Reykjanes Peninsula" data-gallery="iceland"><img src="images/20240115_0508.jpg" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Reykjanes Peninsula</figcaption>
-</figure>
-</div>
-</div>
-</section>
-<section id="montpellier-fr" class="level2">
-<h2 class="anchored" data-anchor-id="montpellier-fr">Montpellier, FR</h2>
-<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));grid-gap: 1em;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/20231105_0054.JPG" class="lightbox" data-description="SONY
-
-ILCE-6400
-
-Lens
-
-E
-
-PZ
-
-16-50mm
-
-F3.5-5.6
-
-OSS
-
-<br>
-
-22mm
-
-f/5.6
-
-1/800
-
-ISO
-
-100
-
-<br>
-
-2023-11-05
-
-09:00:50
-
-UTC" title="Le Peyrou" data-gallery="montpellier"><img src="images/20231105_0054.JPG" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Le Peyrou</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/20231105_0037.JPG" class="lightbox" data-description="SONY
-
-ILCE-6400
-
-Lens
-
-E
-
-PZ
-
-16-50mm
-
-F3.5-5.6
-
-OSS
-
-<br>
-
-16mm
-
-f/9
-
-1/200
-
-ISO
-
-100
-
-<br>
-
-2023-11-05
-
-08:51:52
-
-UTC" title="Arc de triomphe" data-gallery="montpellier"><img src="images/20231105_0037.JPG" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Arc de triomphe</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/20231105_0069.JPG" class="lightbox" data-description="SONY
-
-ILCE-6400
-
-Lens
-
-E
-
-PZ
-
-16-50mm
-
-F3.5-5.6
-
-OSS
-
-<br>
-
-34mm
-
-f/16
-
-1/60
-
-ISO
-
-100
-
-<br>
-
-2023-11-05
-
-09:12:28
-
-UTC" title="Les Arceaux" data-gallery="montpellier"><img src="images/20231105_0069.JPG" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Les Arceaux</figcaption>
-</figure>
-</div>
-</div>
 
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="1" role="list">
+<div id="ref-saldanhaZonalStatisticsDatasets2024" class="csl-entry" role="listitem">
+SALDANHA, R. et al. <a href="https://doi.org/10.1017/eds.2024.3">Zonal statistics datasets of climate indicators for <span>Brazilian</span> municipalities</a>. <strong>Environmental Data Science</strong>, v. 3, p. e2, 2024.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -915,7 +492,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","loop":true,"selector":".lightbox"});</script>
 
 
 
