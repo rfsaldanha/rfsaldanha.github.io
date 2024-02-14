@@ -32,6 +32,11 @@ nocite: |
 
 ![](images/Screenshot%20from%202023-10-02%2013-21-07.png)
 
+## Reference
+
+::: {#refs}
+:::
+
 ## Abstract
 
 ### Background

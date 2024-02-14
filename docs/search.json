@@ -1659,11 +1659,25 @@
     "text": "Reference\n\n\nPEDROSO, M. et al. Data Science Platform Applied to Health in Contribution to the Brazilian Unified Health System. 49ª International Conference on Very Large Data Bases, 2023.\n\n\nThe Data Science Platform Applied to Health (PCDaS) is a research and technological development project that aims to develop and apply novel data analysis methods to public health data. It fills a technological gap between the variety of data sources available in legacy and unstandardized formats and the current needs and possibilities of Data Science applications to consume and explore data for the benefit of the Brazilian Health System. PCDaS provides democratic access to health-related datasets and information by requiring fewer technological abilities from its users while maintaining a continuously updated stack of technologies. As a data ecosystem, our primary goal is to provide secure and remote access to health data, technological tools, and a robust infrastructure provided by our platform to process and analyze a large amount of data that generally demand computational power often unavailable to researchers. The infrastructure consists of multi-region on-premise and cloud servers prepared to deal with the heavy analysis of Big Data from anywhere from multiple users simultaneously. Providing secure and remote access to health databases, whether in their original form or processed, is a daily breakthrough for a public health researcher. Knowing that there is a place where they can access integrated data in a standard format makes the research process much more manageable. To ensure quality, our data engineering and governance teams process these data sources following a gold standard based on cross-tables provided by the Health Ministry (the TabNET system) and decoding the original variables into meaningful names provided by the sources. It is very relevant to emphasize the comprehensive documentation of metadata, attributes, and the ETL (Extract, Transform, Load) process for databases. Every part of these steps is described in detail on the PCDaS website, ensuring the comprehension and reproducibility of the process. These features ensure that PCDaS users can effectively leverage the platform’s resources and capabilities, enabling them to conduct research, perform data analysis, and collaborate within a secure and supportive environment to contribute to the Brazilian Health System."
   },
   {
+    "objectID": "publications/saldanhaContributingEliminationCrossBorder2020.html#reference",
+    "href": "publications/saldanhaContributingEliminationCrossBorder2020.html#reference",
+    "title": "Contributing to Elimination of Cross-Border Malaria Through a Standardized Solution for Case Surveillance, Data Sharing, and Data Interpretation: Development of a Cross-Border Monitoring System",
+    "section": "Reference",
+    "text": "Reference\n\n\nSALDANHA, R. et al. Contributing to Elimination of Cross-Border Malaria Through a Standardized Solution for Case Surveillance, Data Sharing, and Data Interpretation: Development of a Cross-Border Monitoring System. JMIR Public Health and Surveillance, v. 6, n. 3, p. e15409, Sep. 2020."
+  },
+  {
     "objectID": "publications/saldanhaContributingEliminationCrossBorder2020.html#abstract",
     "href": "publications/saldanhaContributingEliminationCrossBorder2020.html#abstract",
     "title": "Contributing to Elimination of Cross-Border Malaria Through a Standardized Solution for Case Surveillance, Data Sharing, and Data Interpretation: Development of a Cross-Border Monitoring System",
     "section": "Abstract",
     "text": "Abstract\n\nBackground\nCross-border malaria is a significant obstacle to achieving malaria control and elimination worldwide. Objective: This study aimed to build a cross-border surveillance system that can make comparable and qualified data available to all parties involved in malaria control between French Guiana and Brazil.\n\n\nMethods\nData reconciliation rules based on expert knowledge were defined and applied to the heterogeneous data provided by the existing malaria surveillance systems of both countries. Visualization dashboards were designed to facilitate progressive data exploration, analysis, and interpretation. Dedicated advanced open source and robust software solutions were chosen to facilitate solution sharing and reuse.\n\n\nResults\nA database gathering the harmonized data on cross-border malaria epidemiology is updated monthly with new individual malaria cases from both countries. Online dashboards permit a progressi ve and user-friendly visualization of raw data and epidemiological indicators, in the form of time series, maps, and data quality indexes. The monitoring system was shown to be able to identify changes in time series that are related to control actions, as well as differentiated changes according to space and to population subgroups.\n\n\nConclusions\nThis cross-border monitoring tool could help produce new scientific evidence on cross-border malaria dynamics, implementing cross-border cooperation for malaria control and elimination, and can be quickly adapted to other cross-border contexts."
+  },
+  {
+    "objectID": "publications/saldanhaMicrodatasus2023.html#reference",
+    "href": "publications/saldanhaMicrodatasus2023.html#reference",
+    "title": "Acesso aos dados agregados e microdados do SUS",
+    "section": "Reference",
+    "text": "Reference\n\n\nSALDANHA, R.; PEDROSO, M.; MAGALHÃES, M. DE A. F. M. Acesso aos dados agregados e microdados do SUS. In: Avaliação de impacto das políticas públicas de saúde: Um guia para o SUS. 1. ed. Brasília: Ministério da Saúde, 2023. p. 418–434."
   },
   {
     "objectID": "publications/saldanhaMicrodatasus2023.html#abstract",
@@ -1685,6 +1699,13 @@
     "title": "Book review: A pesquisa científica na era do Big data: cinco maneiras que mostram como o Big data prejudica a ciência, e como podemos salvá-la",
     "section": "Abstract",
     "text": "Abstract\nThe book titled A pesquisa científica na era do Big Data: cinco maneiras que mostram como o Big Data prejudica a ciência, e como podemos salvá-la [The scientific research in the age of Big Data: five ways that show how the Big Data harms the science, and how we can save it], by Sabina Leonelli, published in 2002, by Editora Fiocruz, explores in its chapters the definitions of Big Data and its negative impacts on scientific research. Then, the author reveals a new epistemological approach to Big data and finally she presents a set of proposals for developing a good scientific research. The literature review and updating of definitions as well as the important reflections and questions for a conscious use of Big data in scientific research make the work an important contribution to the researcher’s library of the information and communication about health."
+  },
+  {
+    "objectID": "publications/saldanhaZonalStatistics2024.html#reference",
+    "href": "publications/saldanhaZonalStatistics2024.html#reference",
+    "title": "Zonal statistics datasets of climate indicators for Brazilian municipalities",
+    "section": "Reference",
+    "text": "Reference\n\n\nSALDANHA, R. et al. Zonal statistics datasets of climate indicators for Brazilian municipalities. Environmental Data Science, v. 3, p. e2, 2024."
   },
   {
     "objectID": "publications/saldanhaZonalStatistics2024.html#abstract",

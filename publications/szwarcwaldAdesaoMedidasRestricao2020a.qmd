@@ -34,7 +34,7 @@ nocite: |
   @szwarcwaldAdesaoMedidasRestricao2020a
 ---
 
-![](images/Screenshot from 2023-10-02 13-20-22.png)
+![](images/Screenshot%20from%202023-10-02%2013-20-22.png)
 
 ## Reference
 

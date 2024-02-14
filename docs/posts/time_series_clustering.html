@@ -328,51 +328,51 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-4" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-lines="1,2,3,4,5" data-code-annotation="1" data-code-cell="annotated-cell-4">Open parquet files without loading them to the memory.</span>
+<span data-code-annotation="1" data-code-lines="1,2,3,4,5" data-code-cell="annotated-cell-4">Open parquet files without loading them to the memory.</span>
 </dd>
 <dt data-target-cell="annotated-cell-4" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-lines="6,7" data-code-annotation="2" data-code-cell="annotated-cell-4">The parquet files contains daily data from 1961 to 2020. Let’s filter the most 10 years recent data.</span>
+<span data-code-annotation="2" data-code-lines="6,7" data-code-cell="annotated-cell-4">The parquet files contains daily data from 1961 to 2020. Let’s filter the most 10 years recent data.</span>
 </dd>
 <dt data-target-cell="annotated-cell-4" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-lines="8" data-code-annotation="3" data-code-cell="annotated-cell-4">Those parquet files contains several zonal statistics, let’s keep only the precipitation sum and maximun and minimum temperature averages.</span>
+<span data-code-annotation="3" data-code-lines="8" data-code-cell="annotated-cell-4">Those parquet files contains several zonal statistics, let’s keep only the precipitation sum and maximun and minimum temperature averages.</span>
 </dd>
 <dt data-target-cell="annotated-cell-4" data-target-annotation="4">4</dt>
 <dd>
-<span data-code-lines="9" data-code-annotation="4" data-code-cell="annotated-cell-4">Keep only data from the Brazilian capitals.</span>
+<span data-code-annotation="4" data-code-lines="9" data-code-cell="annotated-cell-4">Keep only data from the Brazilian capitals.</span>
 </dd>
 <dt data-target-cell="annotated-cell-4" data-target-annotation="5">5</dt>
 <dd>
-<span data-code-lines="10" data-code-annotation="5" data-code-cell="annotated-cell-4">Based on the filters above, load the remaining data into memory.</span>
+<span data-code-annotation="5" data-code-lines="10" data-code-cell="annotated-cell-4">Based on the filters above, load the remaining data into memory.</span>
 </dd>
 <dt data-target-cell="annotated-cell-4" data-target-annotation="6">6</dt>
 <dd>
-<span data-code-lines="11" data-code-annotation="6" data-code-cell="annotated-cell-4">Now we need to do some data manipulation per municipality.</span>
+<span data-code-annotation="6" data-code-lines="11" data-code-cell="annotated-cell-4">Now we need to do some data manipulation per municipality.</span>
 </dd>
 <dt data-target-cell="annotated-cell-4" data-target-annotation="7">7</dt>
 <dd>
-<span data-code-lines="12" data-code-annotation="7" data-code-cell="annotated-cell-4">Order the municipality data per date.</span>
+<span data-code-annotation="7" data-code-lines="12" data-code-cell="annotated-cell-4">Order the municipality data per date.</span>
 </dd>
 <dt data-target-cell="annotated-cell-4" data-target-annotation="8">8</dt>
 <dd>
-<span data-code-lines="13" data-code-annotation="8" data-code-cell="annotated-cell-4">Pivot the data to wide format. The precipitation, maximum and minimum temperature data will form three columns, one for each.</span>
+<span data-code-annotation="8" data-code-lines="13" data-code-cell="annotated-cell-4">Pivot the data to wide format. The precipitation, maximum and minimum temperature data will form three columns, one for each.</span>
 </dd>
 <dt data-target-cell="annotated-cell-4" data-target-annotation="9">9</dt>
 <dd>
-<span data-code-lines="14,15,16,17,18,19,20" data-code-annotation="9" data-code-cell="annotated-cell-4">We will use the <code>summarise_by_time</code> from the {<code>timetk}</code> package to aggregate the daily data into weekly aggregates. This will help the clustering algorithm with a less noisy data.</span>
+<span data-code-annotation="9" data-code-lines="14,15,16,17,18,19,20" data-code-cell="annotated-cell-4">We will use the <code>summarise_by_time</code> from the {<code>timetk}</code> package to aggregate the daily data into weekly aggregates. This will help the clustering algorithm with a less noisy data.</span>
 </dd>
 <dt data-target-cell="annotated-cell-4" data-target-annotation="10">10</dt>
 <dd>
-<span data-code-lines="21" data-code-annotation="10" data-code-cell="annotated-cell-4">Now we pivot the data back to the original long format.</span>
+<span data-code-annotation="10" data-code-lines="21" data-code-cell="annotated-cell-4">Now we pivot the data back to the original long format.</span>
 </dd>
 <dt data-target-cell="annotated-cell-4" data-target-annotation="11">11</dt>
 <dd>
-<span data-code-lines="22" data-code-annotation="11" data-code-cell="annotated-cell-4">Ungroup the data.</span>
+<span data-code-annotation="11" data-code-lines="22" data-code-cell="annotated-cell-4">Ungroup the data.</span>
 </dd>
 <dt data-target-cell="annotated-cell-4" data-target-annotation="12">12</dt>
 <dd>
-<span data-code-lines="23" data-code-annotation="12" data-code-cell="annotated-cell-4">Arrange the data by municipality code, indicator’s name, and date.</span>
+<span data-code-annotation="12" data-code-lines="23" data-code-cell="annotated-cell-4">Arrange the data by municipality code, indicator’s name, and date.</span>
 </dd>
 </dl>
 </div>
@@ -407,35 +407,35 @@ $ value     &lt;dbl&gt; 32.08503, 30.86310, 31.73320, 29.87361, 30.09459, 30.677
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-6" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-lines="1" data-code-annotation="1" data-code-cell="annotated-cell-6">Load the <code>clim</code> dataset that was just created.</span>
+<span data-code-annotation="1" data-code-lines="1" data-code-cell="annotated-cell-6">Load the <code>clim</code> dataset that was just created.</span>
 </dd>
 <dt data-target-cell="annotated-cell-6" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-lines="2" data-code-annotation="2" data-code-cell="annotated-cell-6">Filter the average maximum temperature data.</span>
+<span data-code-annotation="2" data-code-lines="2" data-code-cell="annotated-cell-6">Filter the average maximum temperature data.</span>
 </dd>
 <dt data-target-cell="annotated-cell-6" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-lines="3" data-code-annotation="3" data-code-cell="annotated-cell-6">Arrange the data by municipality code and date. This will be important as we will see later bellow.</span>
+<span data-code-annotation="3" data-code-lines="3" data-code-cell="annotated-cell-6">Arrange the data by municipality code and date. This will be important as we will see later bellow.</span>
 </dd>
 <dt data-target-cell="annotated-cell-6" data-target-annotation="4">4</dt>
 <dd>
-<span data-code-lines="4" data-code-annotation="4" data-code-cell="annotated-cell-6">As we have only one indicator, we can remove the indicator name variable from the dataset.</span>
+<span data-code-annotation="4" data-code-lines="4" data-code-cell="annotated-cell-6">As we have only one indicator, we can remove the indicator name variable from the dataset.</span>
 </dd>
 <dt data-target-cell="annotated-cell-6" data-target-annotation="5">5</dt>
 <dd>
-<span data-code-lines="5" data-code-annotation="5" data-code-cell="annotated-cell-6">Pivot the dataset into wide format.</span>
+<span data-code-annotation="5" data-code-lines="5" data-code-cell="annotated-cell-6">Pivot the dataset into wide format.</span>
 </dd>
 <dt data-target-cell="annotated-cell-6" data-target-annotation="6">6</dt>
 <dd>
-<span data-code-lines="6" data-code-annotation="6" data-code-cell="annotated-cell-6">Now we remove the date variable, as the <code>{dtwclust}</code> package functions will not use it. For this package, the time series is implicit by the sequence of the values.</span>
+<span data-code-annotation="6" data-code-lines="6" data-code-cell="annotated-cell-6">Now we remove the date variable, as the <code>{dtwclust}</code> package functions will not use it. For this package, the time series is implicit by the sequence of the values.</span>
 </dd>
 <dt data-target-cell="annotated-cell-6" data-target-annotation="7">7</dt>
 <dd>
-<span data-code-lines="7" data-code-annotation="7" data-code-cell="annotated-cell-6">Now we transpose the data. This will result in a matrix.</span>
+<span data-code-annotation="7" data-code-lines="7" data-code-cell="annotated-cell-6">Now we transpose the data. This will result in a matrix.</span>
 </dd>
 <dt data-target-cell="annotated-cell-6" data-target-annotation="8">8</dt>
 <dd>
-<span data-code-lines="8" data-code-annotation="8" data-code-cell="annotated-cell-6">And now we coarce this matrix in a list of time series recognized by the <code>{dtwclust}</code> package.</span>
+<span data-code-annotation="8" data-code-lines="8" data-code-cell="annotated-cell-6">And now we coarce this matrix in a list of time series recognized by the <code>{dtwclust}</code> package.</span>
 </dd>
 </dl>
 </div>
@@ -569,39 +569,39 @@ $ value     &lt;dbl&gt; 32.08503, 30.86310, 31.73320, 29.87361, 30.09459, 30.677
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-14" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-lines="1" data-code-annotation="1" data-code-cell="annotated-cell-14">Load the <code>clim</code> object with all the data.</span>
+<span data-code-annotation="1" data-code-lines="1" data-code-cell="annotated-cell-14">Load the <code>clim</code> object with all the data.</span>
 </dd>
 <dt data-target-cell="annotated-cell-14" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-lines="2" data-code-annotation="2" data-code-cell="annotated-cell-14">Arrange the values by indicator’s name, municipality code and date.</span>
+<span data-code-annotation="2" data-code-lines="2" data-code-cell="annotated-cell-14">Arrange the values by indicator’s name, municipality code and date.</span>
 </dd>
 <dt data-target-cell="annotated-cell-14" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-lines="3" data-code-annotation="3" data-code-cell="annotated-cell-14">Group the dataset to perform some manipulation on municipality level.</span>
+<span data-code-annotation="3" data-code-lines="3" data-code-cell="annotated-cell-14">Group the dataset to perform some manipulation on municipality level.</span>
 </dd>
 <dt data-target-cell="annotated-cell-14" data-target-annotation="4">4</dt>
 <dd>
-<span data-code-lines="4" data-code-annotation="4" data-code-cell="annotated-cell-14">Pivot the indicators to a wide format.</span>
+<span data-code-annotation="4" data-code-lines="4" data-code-cell="annotated-cell-14">Pivot the indicators to a wide format.</span>
 </dd>
 <dt data-target-cell="annotated-cell-14" data-target-annotation="5">5</dt>
 <dd>
-<span data-code-lines="5" data-code-annotation="5" data-code-cell="annotated-cell-14">The clustering algorithms may be influenced by the magnitude and units of the indicators. We will standarize the values with the <code>standardize_vec</code> from the <code>{timetk}</code> package.</span>
+<span data-code-annotation="5" data-code-lines="5" data-code-cell="annotated-cell-14">The clustering algorithms may be influenced by the magnitude and units of the indicators. We will standarize the values with the <code>standardize_vec</code> from the <code>{timetk}</code> package.</span>
 </dd>
 <dt data-target-cell="annotated-cell-14" data-target-annotation="6">6</dt>
 <dd>
-<span data-code-lines="6" data-code-annotation="6" data-code-cell="annotated-cell-14">Remove the date variable.</span>
+<span data-code-annotation="6" data-code-lines="6" data-code-cell="annotated-cell-14">Remove the date variable.</span>
 </dd>
 <dt data-target-cell="annotated-cell-14" data-target-annotation="7">7</dt>
 <dd>
-<span data-code-lines="8" data-code-annotation="7" data-code-cell="annotated-cell-14">The <code>mclim_g</code> object is a grouped data frame. We will split it to list with the <code>group_split</code> function, removing the <code>code_muni</code> variable (<code>keep = FALSE</code> argument).</span>
+<span data-code-annotation="7" data-code-lines="8" data-code-cell="annotated-cell-14">The <code>mclim_g</code> object is a grouped data frame. We will split it to list with the <code>group_split</code> function, removing the <code>code_muni</code> variable (<code>keep = FALSE</code> argument).</span>
 </dd>
 <dt data-target-cell="annotated-cell-14" data-target-annotation="8">8</dt>
 <dd>
-<span data-code-lines="9" data-code-annotation="8" data-code-cell="annotated-cell-14">Then we coerce this to a time series list.</span>
+<span data-code-annotation="8" data-code-lines="9" data-code-cell="annotated-cell-14">Then we coerce this to a time series list.</span>
 </dd>
 <dt data-target-cell="annotated-cell-14" data-target-annotation="9">9</dt>
 <dd>
-<span data-code-lines="11" data-code-annotation="9" data-code-cell="annotated-cell-14">Finally, we update the list names with the municipality codes, which are the grouping keys from the <code>mclim_g</code> intermediary object.</span>
+<span data-code-annotation="9" data-code-lines="11" data-code-cell="annotated-cell-14">Finally, we update the list names with the municipality codes, which are the grouping keys from the <code>mclim_g</code> intermediary object.</span>
 </dd>
 </dl>
 </div>

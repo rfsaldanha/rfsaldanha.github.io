@@ -17,8 +17,14 @@ nocite: |
   @saldanhaAcessoAosDados2023
 ---
 
-![](images/Screenshot from 2023-12-12 09-07-25.png)
+![](images/Screenshot%20from%202023-12-12%2009-07-25.png)
+
+## Reference
+
+::: {#refs}
+:::
 
 ## Abstract
 
 This chapter presents a historical overview about health data dissemination in Brazil and the creation of the DataSUS. Some of the main Brazilian Health Information Systems characteristics and usage are described. Access tools like TabWin and TabNe are presented, and also an R package called "microdatasus", for data download and pre-processing.
+
