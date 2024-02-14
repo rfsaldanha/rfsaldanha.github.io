@@ -14,7 +14,7 @@ title: "CV"
 
 -   2022 - current. **Postdoc** at Inria and LNCC. Artificial intelligence applications on public health.
 
--   2017 - 2021. **PhD** at Fiocruz, PPGICS. Information and Communication in Health.
+-   2018 - 2021. **PhD** at Fiocruz, PPGICS. Information and Communication in Health.
 
 -   2015 - 2017. Graduate Degree (**Master**) at UFJF - PPGSC. Public Health.
 
@@ -27,6 +27,7 @@ title: "CV"
 ### Data science
 
 -   R
+-   Machine Learning
 -   Shiny apps
 -   Quarto
 -   Plotly
@@ -117,6 +118,6 @@ title: "CV"
 
 ## Hobbies
 
--   Cycling
+-   Photography
 
--   Wood working
+-   Cycling
