@@ -18,11 +18,9 @@ author:
   - Emmanuel Roux
 date: 2019-06-13
 categories: 
-  - specialization
-  - diversification
-  - industrial technological intensity
-  - inter-sectoral and spatial spillovers
-  - Brazil
+  - malaria
+  - cross-border
+  - dashboard
 bibliography: publications.bib
 csl: abnt.csl
 ---
@@ -32,12 +30,7 @@ nocite: |
   @saldanhaContributingEliminationCrossBorder2020
 ---
 
-![](images/Screenshot from 2023-10-02 13-21-07.png)
-
-## Reference
-
-::: {#refs}
-:::
+![](images/Screenshot%20from%202023-10-02%2013-21-07.png)
 
 ## Abstract
 
