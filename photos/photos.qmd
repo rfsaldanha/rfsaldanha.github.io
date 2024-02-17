@@ -35,10 +35,25 @@ descrip_exif <- function(x){
 ```{r}
 #| eval: false
 prepare_photos(
-  source_path = "~/Downloads/iceland/", 
+  source_path = "~/Downloads/parc_naturel//", 
   dest_path = "images/"
 )
 ```
+
+## Parc Naturel du Mejean, Lattes FR
+
+::: {style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));grid-gap: 1em;"}
+![Greater flamingo](images/20240211_0325.jpg){description="`r descrip_exif('images/20240211_0325.jpg')`" desc-position="left" group="mejean"}
+
+![Little Egret](images/20240211_0044.jpg){description="`r descrip_exif('images/20240211_0044.jpg')`" desc-position="left" group="mejean"}
+
+![Phragmites australis](images/20240211_0259.jpg){description="`r descrip_exif('images/20240211_0259.jpg')`" desc-position="left" group="mejean"}
+
+
+
+![White Stork](images/20240211_0504.jpg){description="`r descrip_exif('images/20240211_0504.jpg')`" desc-position="left" group="mejean"}
+
+:::
 
 ## Iceland
 

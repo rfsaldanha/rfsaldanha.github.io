@@ -1348,14 +1348,14 @@
     "href": "photos/photos.html",
     "title": "Photos",
     "section": "",
-    "text": "Kirkjufell\n\n\n\n\n\nBlack pebble beach of Djúpalónssandur\n\n\n\n\n\nArnarstapi\n\n\n\n\n\nBúðakirkja\n\n\n\n\n\nDiamond beach\n\n\n\n\n\nSkógafoss\n\n\n\n\n\nReykjanes Peninsula\n\n\n\n\n\nReykjanes Peninsula"
+    "text": "Greater flamingo\n\n\n\n\n\nLittle Egret\n\n\n\n\n\nPhragmites australis\n\n\n\n\n\nWhite Stork"
   },
   {
     "objectID": "photos/photos.html#iceland",
     "href": "photos/photos.html#iceland",
     "title": "Photos",
-    "section": "",
-    "text": "Kirkjufell\n\n\n\n\n\nBlack pebble beach of Djúpalónssandur\n\n\n\n\n\nArnarstapi\n\n\n\n\n\nBúðakirkja\n\n\n\n\n\nDiamond beach\n\n\n\n\n\nSkógafoss\n\n\n\n\n\nReykjanes Peninsula\n\n\n\n\n\nReykjanes Peninsula"
+    "section": "Iceland",
+    "text": "Iceland\n\n\n\n\nKirkjufell\n\n\n\n\n\nBlack pebble beach of Djúpalónssandur\n\n\n\n\n\nArnarstapi\n\n\n\n\n\nBúðakirkja\n\n\n\n\n\nDiamond beach\n\n\n\n\n\nSkógafoss\n\n\n\n\n\nReykjanes Peninsula\n\n\n\n\n\nReykjanes Peninsula"
   },
   {
     "objectID": "photos/photos.html#montpellier-fr",
@@ -1909,5 +1909,12 @@
     "title": "Disease and climate data fusion for modelling",
     "section": "Thanks!",
     "text": "Thanks!\nContact, data links, R packages and short tutorials available at rfsaldanha.github.io"
+  },
+  {
+    "objectID": "photos/photos.html#parc-naturel-du-mejean-lattes-fr",
+    "href": "photos/photos.html#parc-naturel-du-mejean-lattes-fr",
+    "title": "Photos",
+    "section": "",
+    "text": "Greater flamingo\n\n\n\n\n\nLittle Egret\n\n\n\n\n\nPhragmites australis\n\n\n\n\n\nWhite Stork"
   }
 ]
