@@ -17,16 +17,11 @@
     ]
   },
   {
-    "listing": "/blog.html",
+    "listing": "/data.html",
     "items": [
-      "/posts/hot_2023.html",
-      "/posts/time_series_clustering.html",
-      "/posts/std_br_covid_rates.html",
-      "/posts/run_length_encoding.html",
-      "/posts/rates.html",
-      "/posts/query_remot_parquet_file.html",
-      "/posts/sqlite_to_duckdb_and_parquet.html",
-      "/posts/some-tips-for-sqlite.html"
+      "/data-projects/std_br_covid_rates_data.html",
+      "/data-projects/era5land-daily-latin-america.html",
+      "/data-projects/brazil-climate-zonal-indicators.html"
     ]
   },
   {
@@ -57,11 +52,16 @@
     ]
   },
   {
-    "listing": "/data.html",
+    "listing": "/blog.html",
     "items": [
-      "/data-projects/std_br_covid_rates_data.html",
-      "/data-projects/era5land-daily-latin-america.html",
-      "/data-projects/brazil-climate-zonal-indicators.html"
+      "/posts/hot_2023.html",
+      "/posts/time_series_clustering.html",
+      "/posts/std_br_covid_rates.html",
+      "/posts/run_length_encoding.html",
+      "/posts/rates.html",
+      "/posts/query_remot_parquet_file.html",
+      "/posts/sqlite_to_duckdb_and_parquet.html",
+      "/posts/some-tips-for-sqlite.html"
     ]
   },
   {
