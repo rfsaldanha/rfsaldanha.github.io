@@ -1,0 +1,82 @@
+/*-- scss:defaults --*/
+
+// fonts
+@import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap';
+
+$body-bg: #fef9f8 !default;
+$font-family-sans-serif: "Atkinson Hyperlegible", sans-serif;
+$presentation-heading-color: #e63312;
+$presentation-title-slide-text-align: "left";
+$presentation-subtitle-slide-text-align: "left";
+$presentation-h2-font-size: 1.4em;
+$link-color: #e63312 !default;
+$selection-bg: #f7af9f;
+
+/*-- scss:rules --*/
+
+.reveal .custom-title {
+  position: absolute;
+  color: #e63312;
+    font-size: 3em;
+  text-align: right;
+  right: 20px;
+  top: -200px;
+}
+
+.reveal .slide-logo {
+  height: 80px !important;
+  max-width: unset !important;
+  max-height: unset !important;
+}
+
+.reveal .custom-author {
+  position: absolute;
+  font-size: 1.4em;
+  text-align: right;
+  right: 20px;
+  top: 300px;
+}
+
+.reveal .custom-url a {
+  position: absolute;
+  color: #e63312;
+    font-size: 1.5em;
+  text-align: right;
+  right: 20px;
+  top: 570px;
+}
+
+details>summary {
+  font-size: 0.75em;
+}
+
+.small {
+  font-size: 0.75em;
+}
+
+.reveal .slide .in-out {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  padding-left: 1em;
+  background: #E8E8E8;
+    font-family: $font-family-monospace;
+  font-size: 0.6em;
+}
+
+
+.reveal .slide .goal {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  padding-left: 1em;
+  background: #ccddeb;
+}
+
+.big_text p {
+  text-align: center;
+  font-size: 4em;
+  color: $presentation-heading-color;
+}

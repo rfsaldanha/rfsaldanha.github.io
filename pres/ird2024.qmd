@@ -1,0 +1,110 @@
+---
+title: "Introduction and research projects"
+author: "Raphael Saldanha"
+format:
+  revealjs: 
+    theme: inria_style.scss
+    transition: fade
+    background-transition: fade
+    pointer:
+      pointerSize: 40
+      color: '#e63312'
+code-link: true
+revealjs-plugins:
+  - pointer
+---
+
+## About me
+
+-  Brazilian from Rio de Janeiro
+-  Loves to ride a bike and take pictures
+-  Husband, father of dogs and a cat
+-  Works with Health Geography and Climate Sensitive Diseases
+-  R coder and package developer
+
+## Academia
+
+-  Undergraduate on Geography (2007) and Specialization on Statistics (2009)
+-  Master's on Public Health (2017)
+-  PhD on Health Information and Communication (Fiocruz, 2021)
+-  Final year of a postdoc position at Inria, working with Machine Learning methods
+
+## Main projects
+
+-  Data gathering: R packages for Brazilian health data and indicators, climate data  
+      - `{microdatasus}`, `{brpop}`, `{tidyrates}`, `{brclimr}`
+-  Visualization: malaria and COVID-19 interactive visualization dashboards
+-  Analysis and modeling of healthcare access and climate-sensitive diseases
+
+## microdatasus
+
+-  R package to work with raw data from the Brazilian Health Ministry
+-  Functions to download, read and pre-process data
+-  Facilitates everyday work on health data handling
+-  Widely adopted
+
+## Cross-border malaria dashboard
+
+-  Partnership between Fiocruz and IRD
+-  Harmonized dataset of cross-border malaria incidence at Brazil (Amapá) and French Guiana
+-  Construction of interactive visualization dashboard (R Shiny)
+-  Different languages and cultures, visualization is the key
+-  One month work visit at MTD and a field work at Cayenne
+-  Publication at Journal of Medical Internet Research (JMIR, 2019)
+
+## Covid-19 dashboard
+
+-  Fiocruz official institutional dashboard for the pandemics
+-  Data gathering, harmonization, visualization and analysis
+-  Full framework pipeline with R
+-  Challenges on data availability, standardization, and health information communication to the community
+-  Daily work basis, high press demand for data and insights
+-  Project awarded an government prize 
+
+## Climate data
+
+-  Proposal of a standardized methodology to build climate indicators for climate sensitive diseases analysis
+-  Climate indicators (as temperature, precipitation, humidity) at the same time and spatial scale of diseases incidence (administrative regions)
+-  Zonal indicators method
+-  Publication at Environmental Data Science journal (2024)
+
+## Postdoc project
+
+-  Dengue incidence forecast with machine learning and subsets strategy
+-  Health and climate data harmonization
+-  Novel subsets approach, cluster based models with better performance
+
+## Projects and ideas for the next years
+
+-  Streamline health and climate data gathering projects
+-  Expansion to other regions and countries
+-  Provide methods and packages to compute health and climate indicators
+-  Machine learning methods for data analysis and forecast
+
+## Climate data
+
+-  Provide regularly updated datasets of climate indicators at different administrative levels
+-  Expand project coverage to other countries
+-  Include synthetic indicators for water cycle and droughts, warm and cold spells, and extreme events
+
+## Early Warning System for Climate Sensitive Diseases
+
+-  Prevent and early detect CSD outbreaks
+-  Actual EWS are limited on coverage, quality, interpretation and usage for decision making
+-  Proposal of a EWS that follows WHO guidelines, expansible to other countries
+
+## Early Warning System for Climate Sensitive Diseases
+
+-  Application of machine learning methods to forecast incidence for short and medium-time horizons
+-  Multivariate models with climate, environmental and socio-economic covariates
+-  Subsets models to boost performance
+-  Replicable to other countries
+
+## Thanks!
+
+-  More information about me and projects at
+
+[https://rfsaldanha.github.io]()
+
+
+

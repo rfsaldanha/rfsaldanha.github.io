@@ -1916,5 +1916,201 @@
     "title": "Photos",
     "section": "",
     "text": "Greater flamingo\n\n\n\n\n\nLittle Egret\n\n\n\n\n\nPhragmites australis\n\n\n\n\n\nWhite Stork"
+  },
+  {
+    "objectID": "pres/ird2024.html#bilis",
+    "href": "pres/ird2024.html#bilis",
+    "title": "Presentation & Projects",
+    "section": "BILIS",
+    "text": "BILIS\n\nBanco de Indicadores do Laboratório de Informação em Saúde, ICICT\nA proposal to create an unified health indicators database"
+  },
+  {
+    "objectID": "pres/ird2024.html#about-me",
+    "href": "pres/ird2024.html#about-me",
+    "title": "Introduction and research projects",
+    "section": "About me",
+    "text": "About me\n\nBrazilian from Rio de Janeiro\nLoves to ride a bike and take pictures\nHusband, father of dogs and a cat\nWorks with Health Geography and Climate Sensitive Diseases\nR coder and package developer"
+  },
+  {
+    "objectID": "pres/ird2024.html#from-where-i-came",
+    "href": "pres/ird2024.html#from-where-i-came",
+    "title": "Presentation & Projects",
+    "section": "From where I came",
+    "text": "From where I came\n\nUndergrad on Geography and specialization on Statistics\nMaster’s on Public Health\nPhD on Health Information and Communication (Fiocruz)"
+  },
+  {
+    "objectID": "pres/ird2024.html#where-i-am",
+    "href": "pres/ird2024.html#where-i-am",
+    "title": "Presentation & Projects",
+    "section": "Where I am",
+    "text": "Where I am"
+  },
+  {
+    "objectID": "pres/ird2024.html#where-i-want",
+    "href": "pres/ird2024.html#where-i-want",
+    "title": "Presentation & Projects",
+    "section": "Where I want",
+    "text": "Where I want"
+  },
+  {
+    "objectID": "pres/ird2024.html#projects-and-ideas",
+    "href": "pres/ird2024.html#projects-and-ideas",
+    "title": "Research projects proposal",
+    "section": "Projects and ideas",
+    "text": "Projects and ideas\n\nStreamline health and climate data gathering projects\nMachine learning methods for data analysis and forecast\nProjects expansion to other regions and countries"
+  },
+  {
+    "objectID": "pres/ird2024.html#abou-me-at-academia",
+    "href": "pres/ird2024.html#abou-me-at-academia",
+    "title": "Presentation & Projects",
+    "section": "Abou me, at academia",
+    "text": "Abou me, at academia\n\nUndergrad on Geography and specialization on Statistics\nMaster’s on Public Health\nPhD on Health Information and Communication (Fiocruz)"
+  },
+  {
+    "objectID": "pres/ird2024.html#about-me-at-academia",
+    "href": "pres/ird2024.html#about-me-at-academia",
+    "title": "Presentation & Ideas",
+    "section": "About me, at academia",
+    "text": "About me, at academia\n\nUndergrad on Geography and specialization on Statistics\nMaster’s on Public Health\nPhD on Health Information and Communication (Fiocruz)\nFinishing a postdoc at Inria, on Machine Learning applied to Dengue"
+  },
+  {
+    "objectID": "pres/ird2024.html#what-ive-been-doing",
+    "href": "pres/ird2024.html#what-ive-been-doing",
+    "title": "Presentation & Projects",
+    "section": "What I’ve been doing",
+    "text": "What I’ve been doing\n\nProjects on health data: microdatasus, climate data\nProjects on data visualization: cross-border malaria, PNS, Covid-19\nProjects on data analysis: patients flow, Dengue forecast, arboviruses diagnoses"
+  },
+  {
+    "objectID": "pres/ird2024.html#microdatasus",
+    "href": "pres/ird2024.html#microdatasus",
+    "title": "Introduction and research projects",
+    "section": "microdatasus",
+    "text": "microdatasus\n\nR package to work with raw data from the Brazilian Health Ministry\nFunctions to download, read and pre-process data\nFacilitates everyday work on health data handling\nWidely adopted"
+  },
+  {
+    "objectID": "pres/ird2024.html#climate-data",
+    "href": "pres/ird2024.html#climate-data",
+    "title": "Introduction and research projects",
+    "section": "Climate data",
+    "text": "Climate data\n\nProposal of a standardized methodology to build climate indicators for climate sensitive diseases analysis\nClimate indicators (as temperature, precipitation, humidity) at the same time and spatial scale of diseases incidence (administrative regions)\nZonal indicators method\nPublication at Environmental Data Science journal (2024)"
+  },
+  {
+    "objectID": "pres/ird2024.html#cross-border-malaria",
+    "href": "pres/ird2024.html#cross-border-malaria",
+    "title": "Presentation & Projects",
+    "section": "Cross-border malaria",
+    "text": "Cross-border malaria\n\nPartnership between Fiocruz and IRD\nHarmonized dataset of cross-border malaria incidence at Brazil (Amapá) and French Guiana\nWorked on the construction of indicators dashboard\nDifferent languages and cultures, visualization is the key\nPublication at Journal of Medical Internet Research (JMIR)"
+  },
+  {
+    "objectID": "pres/ird2024.html#main-projects",
+    "href": "pres/ird2024.html#main-projects",
+    "title": "Introduction and research projects",
+    "section": "Main projects",
+    "text": "Main projects\n\nData gathering: R packages for Brazilian health data and indicators, climate data\n\n{microdatasus}, {brpop}, {tidyrates}, {brclimr}\n\nVisualization: malaria and COVID-19 interactive visualization dashboards\nAnalysis and modeling of healthcare access and climate-sensitive diseases"
+  },
+  {
+    "objectID": "pres/ird2024.html#cross-border-malaria-dashboard",
+    "href": "pres/ird2024.html#cross-border-malaria-dashboard",
+    "title": "Introduction and research projects",
+    "section": "Cross-border malaria dashboard",
+    "text": "Cross-border malaria dashboard\n\nPartnership between Fiocruz and IRD\nHarmonized dataset of cross-border malaria incidence at Brazil (Amapá) and French Guiana\nConstruction of interactive visualization dashboard (R Shiny)\nDifferent languages and cultures, visualization is the key\nOne month work visit at MTD and a field work at Cayenne\nPublication at Journal of Medical Internet Research (JMIR, 2019)"
+  },
+  {
+    "objectID": "pres/ird2024.html#covid-19-dashboard",
+    "href": "pres/ird2024.html#covid-19-dashboard",
+    "title": "Introduction and research projects",
+    "section": "Covid-19 dashboard",
+    "text": "Covid-19 dashboard\n\nFiocruz official institutional dashboard for the pandemics\nData gathering, harmonization, visualization and analysis\nFull framework pipeline with R\nChallenges on data availability, standardization, and health information communication to the community\nDaily work basis, high press demand for data and insights\nProject awarded an government prize"
+  },
+  {
+    "objectID": "pres/ird2024.html#dengue-incidence-forecast",
+    "href": "pres/ird2024.html#dengue-incidence-forecast",
+    "title": "Research projects proposal",
+    "section": "Dengue incidence forecast",
+    "text": "Dengue incidence forecast\n\nHealth and climate data harmonization\nForecast of Dengue incidence in Brazil\nMachine learning methods\nNovel subsets approach, cluster based models"
+  },
+  {
+    "objectID": "pres/ird2024.html#about-me-academically",
+    "href": "pres/ird2024.html#about-me-academically",
+    "title": "Research projects proposal",
+    "section": "About me, academically",
+    "text": "About me, academically\n\nUndergraduate on Geography (2007) and Specialization on Statistics (2009)\nMaster’s on Public Health (2017)\nPhD on Health Information and Communication (Fiocruz, 2021)\nFinal year of a postdoc position at Inria, working with Machine Learning methods applied to Dengue"
+  },
+  {
+    "objectID": "pres/ird2024.html#an-early-warning-system-for-climate-sensitive-diseases",
+    "href": "pres/ird2024.html#an-early-warning-system-for-climate-sensitive-diseases",
+    "title": "Research projects proposal",
+    "section": "An Early Warning System for Climate Sensitive Diseases",
+    "text": "An Early Warning System for Climate Sensitive Diseases"
+  },
+  {
+    "objectID": "pres/ird2024.html#postoc-project",
+    "href": "pres/ird2024.html#postoc-project",
+    "title": "Research projects proposal",
+    "section": "Postoc project",
+    "text": "Postoc project\n\nDengue incidence forecast with machine learning and subsets strategy\nHealth and climate data harmonization\nNovel subsets approach, cluster based models with better performance"
+  },
+  {
+    "objectID": "pres/ird2024.html#an-early-warning-system-for-dengue",
+    "href": "pres/ird2024.html#an-early-warning-system-for-dengue",
+    "title": "Research projects proposal",
+    "section": "An Early Warning System for Dengue",
+    "text": "An Early Warning System for Dengue\n\nNecessity to be vigilant and prepared to prevent and early detect outbreaks\nActual EWS are limited on coverage, quality, interpretation and usage for decision making\nProposal of a EWS of Dengue for Brazil that follows WHO guidelines, expansible to other countries"
+  },
+  {
+    "objectID": "pres/ird2024.html#academia",
+    "href": "pres/ird2024.html#academia",
+    "title": "Introduction and research projects",
+    "section": "Academia",
+    "text": "Academia\n\nUndergraduate on Geography (2007) and Specialization on Statistics (2009)\nMaster’s on Public Health (2017)\nPhD on Health Information and Communication (Fiocruz, 2021)\nFinal year of a postdoc position at Inria, working with Machine Learning methods"
+  },
+  {
+    "objectID": "pres/ird2024.html#postdoc-project",
+    "href": "pres/ird2024.html#postdoc-project",
+    "title": "Introduction and research projects",
+    "section": "Postdoc project",
+    "text": "Postdoc project\n\nDengue incidence forecast with machine learning and subsets strategy\nHealth and climate data harmonization\nNovel subsets approach, cluster based models with better performance"
+  },
+  {
+    "objectID": "pres/ird2024.html#projects-and-ideas-for-the-next-years",
+    "href": "pres/ird2024.html#projects-and-ideas-for-the-next-years",
+    "title": "Introduction and research projects",
+    "section": "Projects and ideas for the next years",
+    "text": "Projects and ideas for the next years\n\nStreamline health and climate data gathering projects\nExpansion to other regions and countries\nProvide methods and packages to compute health and climate indicators\nMachine learning methods for data analysis and forecast"
+  },
+  {
+    "objectID": "pres/ird2024.html#projects-and-ideas-for-the-next-years-1",
+    "href": "pres/ird2024.html#projects-and-ideas-for-the-next-years-1",
+    "title": "Research projects proposal",
+    "section": "Projects and ideas for the next years",
+    "text": "Projects and ideas for the next years\n\nRevamp the cross-border malaria dashboard and data harmonization meethods\nMachine learning methods for data analysis and forecast"
+  },
+  {
+    "objectID": "pres/ird2024.html#climate-data-1",
+    "href": "pres/ird2024.html#climate-data-1",
+    "title": "Introduction and research projects",
+    "section": "Climate data",
+    "text": "Climate data\n\nProvide regularly updated datasets of climate indicators at different administrative levels\nExpand project coverage to other countries\nInclude synthetic indicators for water cycle and droughts, warm and cold spells, and extreme events"
+  },
+  {
+    "objectID": "pres/ird2024.html#early-warning-system-for-climate-sensitive-diseases",
+    "href": "pres/ird2024.html#early-warning-system-for-climate-sensitive-diseases",
+    "title": "Introduction and research projects",
+    "section": "Early Warning System for Climate Sensitive Diseases",
+    "text": "Early Warning System for Climate Sensitive Diseases\n\nPrevent and early detect CSD outbreaks\nActual EWS are limited on coverage, quality, interpretation and usage for decision making\nProposal of a EWS that follows WHO guidelines, expansible to other countries"
+  },
+  {
+    "objectID": "pres/ird2024.html#early-warning-system-for-climate-sensitive-diseases-1",
+    "href": "pres/ird2024.html#early-warning-system-for-climate-sensitive-diseases-1",
+    "title": "Introduction and research projects",
+    "section": "Early Warning System for Climate Sensitive Diseases",
+    "text": "Early Warning System for Climate Sensitive Diseases\n\nApplication of machine learning methods to forecast incidence for short and medium-time horizons\nMultivariate models with climate, environmental and socio-economic covariates\nSubsets models to boost performance\nReplicable to other countries"
+  },
+  {
+    "objectID": "pres/ird2024.html#thanks",
+    "href": "pres/ird2024.html#thanks",
+    "title": "Introduction and research projects",
+    "section": "Thanks!",
+    "text": "Thanks!\n\nMore information about me and projects at\n\nhttps://rfsaldanha.github.io"
   }
 ]
