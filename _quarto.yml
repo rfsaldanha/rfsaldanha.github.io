@@ -26,12 +26,12 @@ website:
     right:
       - cv.qmd
       - projects.qmd
-      - photos/photos.qmd
       - code.qmd
       - data.qmd
       - publications.qmd
       - talks.qmd
       - climate_health_hub.qmd
+      - photos/photos.qmd
       - blog.qmd
 
 format:
