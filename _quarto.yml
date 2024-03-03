@@ -13,7 +13,7 @@ website:
   google-analytics: "G-2M7VLSRDCB"
   page-footer:
     background: light
-    left: "Copyright 2023, Raphael Saldanha"
+    left: "Copyright 2024, Raphael Saldanha"
     right:
       - icon: github
         href: https://github.com/rfsaldanha
