@@ -24,19 +24,19 @@ revealjs-plugins:
 
 ## Academia
 
--   BSc on Geography (2007) and Specialization on Statistics (2009). *Regionalization proposal based on Census data.*
--   Master's on Public Health (2017). *Spatio-temporal models to study the relationship between traffic violence and income.*
--   Doctorate on Health Information (Fiocruz, 2021). *Applications of Data Science methods on Public Health.*
--   Final year of a postdoc position at Inria. *Machine Learning methods application on Dengue forecast*.
+-   BSc on [Geography]{.hl} (2007) and Specialization on Statistics (2009). *Regionalization proposal based on Census data.*
+-   Master's on [Public Health]{.hl} (2017). *Spatio-temporal models to study the relationship between traffic violence and income.*
+-   Doctorate on [Health Information]{.hl} (Fiocruz, 2021). *Applications of Data Science methods on Public Health.*
+-   Final year of a postdoc position at Inria. [*Machine Learning*]{.hl} *methods application on Dengue forecast*.
 
 ## Main fields of work and projects
 
--   *Data gathering:* R packages to handle Brazilian health datasets, indicators, and climate data (self initiative)
+-   [Data gathering]{.hl}: R packages to handle Brazilian health datasets, indicators, and climate data (self initiative)
 
 `{microdatasus}`, `{brpop}`, `{tidyrates}`, `{brclimr}`
 
--   *Visualization:* malaria and COVID-19 interactive visualization dashboards (IRD and Fiocruz)
--   *Analysis and modeling* of climate-sensitive diseases (Fiocruz, LNCC, BSC, Inria, IRD)
+-   [Visualization:]{.hl} malaria and COVID-19 interactive visualization dashboards (IRD and Fiocruz)
+-   [Analysis and modeling]{.hl} of climate-sensitive diseases (Fiocruz, LNCC, BSC, Inria, IRD)
 
 ## Cross-border malaria transmission
 
@@ -46,12 +46,11 @@ revealjs-plugins:
 -   Brazil (Amapá) and French Guiana border region
 -   Different languages and cultures, visualization is the key
 -   Work at MTD and a field work at Cayenne
--   Publication at Journal of Medical Internet Research (JMIR, 2019)
+-   Publication at Journal of Medical Internet Research ([JMIR, 2019](https://doi.org/10.2196/15409))
 :::
 
 ::: {.column width="40%"}
-![](images/montpellier1-1400-01.webp)
-![](images/cayenne2-1400-01.webp)
+![](images/montpellier1-1400-01.webp) ![](images/cayenne2-1400-01.webp)
 :::
 :::
 
@@ -72,12 +71,11 @@ revealjs-plugins:
 -   Standardized methodology to build health and climate indicators
 -   Same time and spatial units (administrative regions)
 -   Method of zonal statistics
--   Publication at Environmental Data Science journal (2024)
+-   Publication at [Environmental Data Science journal (2024)](https://doi.org/10.1017/eds.2024.3)
 :::
-  
+
 ::: {.column width="40%"}
-![](images/zonal_statistics.png)
-![](images/prec_map_1.png)
+![](images/zonal_statistics.png) ![](images/prec_map_1.png)
 :::
 :::
 
@@ -86,18 +84,18 @@ revealjs-plugins:
 -   Montpellier University Inria Antenne, LIRMM
 -   Dengue inflicts an important health burden in Brazil
     -   1 million new cases reported just in 2024, 214 deaths, official emergency status declaration
--   Project for dengue incidence forecast on Brazil with machine learning methods
+-   Project for [dengue incidence forecast]{.hl} on Brazil with machine learning methods
 -   Novel subsets approach, cluster based models with better performance
 
 ## Research plans for the next years
 
 -   Application of Data Science methods to Public Health challenges on the Global South
--   Streamline health and climate indicators projects, expansion to other countries and continents
--   Usage of Machine Learning methods for data analysis and forecast, Early Warning Systems
+-   Streamline [health and climate indicators]{.hl} projects, expansion to other countries and continents
+-   Usage of Machine Learning methods for data analysis and forecast, [Early Warning Systems]{.hl}
 
 ## Health and climate indicators harmonization
 
--   Provide regularly updated datasets of health and climate indicators at different hierarchical administrative geographic boundaries
+-   Provide [regularly updated datasets]{.hl} of health and climate indicators at different hierarchical administrative geographic boundaries
 -   Expand coverage to other countries
 -   Usage of population estimates as weighting factor
 -   Build synthetic indicators for water cycle and droughts, warm and cold spells, and extreme events
