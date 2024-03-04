@@ -1551,7 +1551,7 @@
     "href": "pres/ird2024.html#academia",
     "title": "Introduction and Research Proposal",
     "section": "Academia",
-    "text": "Academia\n\nBSc on Geography (2007) and Specialization on Statistics (2009)\nMaster’s on Public Health (2017). Spatio-temporal models to study the relationship between traffic violence and income.\nDoctorate on Health Information and Communication (Fiocruz, 2021). Applications of Data Science methods on Public Health.\nFinal year of a postdoc position at Inria. Machine Learning methods."
+    "text": "Academia\n\nBSc on Geography (2007) and Specialization on Statistics (2009). Regionalization proposal based on Census data.\nMaster’s on Public Health (2017). Spatio-temporal models to study the relationship between traffic violence and income.\nDoctorate on Health Information (Fiocruz, 2021). Applications of Data Science methods on Public Health.\nFinal year of a postdoc position at Inria. Machine Learning methods application on Dengue forecast."
   },
   {
     "objectID": "pres/ird2024.html#main-projects",
@@ -1614,7 +1614,7 @@
     "href": "pres/ird2024.html#early-warning-system-for-climate-sensitive-diseases",
     "title": "Introduction and Research Proposal",
     "section": "Early Warning System for Climate-Sensitive Diseases",
-    "text": "Early Warning System for Climate-Sensitive Diseases\n\nFramework proposal to prevent and early detect CSD outbreaks\nActual EWS are limited on coverage, quality, interpretation and usage for decision making\nAligned with WHO guidelines, replicable in other countries"
+    "text": "Early Warning System for Climate-Sensitive Diseases\n\nFramework proposal to prevent and early detect CSD outbreaks on Global South countries, with most vulnerable populations to climate change\nActual EWS are limited on countries coverage, quality, interpretation and usage for decision making\nAligned with WHO guidelines, replicable in other countries"
   },
   {
     "objectID": "pres/ird2024.html#early-warning-system-for-climate-sensitive-diseases-1",
@@ -2055,7 +2055,7 @@
     "href": "pres/ird2024.html#covid-19-monitoring",
     "title": "Introduction and Research Proposal",
     "section": "COVID-19 Monitoring",
-    "text": "COVID-19 Monitoring\n\nFiocruz official institutional dashboard for the pandemics\nData gathering, harmonization, visualization and analysis\nChallenges on data availability, standardization, and health information communication\nDaily work basis, high press demand for data and insights\nSeveral technical notes, papers and a book chapter\nProject awarded an government prize"
+    "text": "COVID-19 Monitoring\n\nFiocruz official institutional dashboard for the pandemics\nMore than 10 data sources covering diverse aspects\nData gathering, harmonization, visualization and analysis\nChallenges on data availability, standardization, and information communication\nDaily work basis, high press demand for data and insights\nSeveral technical notes, papers and a book chapter\nProject awarded an government prize"
   },
   {
     "objectID": "pres/ird2024.html#research-on-climate-indicators",
@@ -2083,7 +2083,7 @@
     "href": "pres/ird2024.html#main-fields-of-work-and-projects",
     "title": "Introduction and Research Proposal",
     "section": "Main fields of work and projects",
-    "text": "Main fields of work and projects\n\nData gathering: R packages to handle Brazilian health datasets, indicators, and climate data (self initiative)\n\n{microdatasus}, {brpop}, {tidyrates}, {brclimr}\n\nVisualization: malaria and COVID-19 interactive visualization dashboards (Fiocruz and IRD)\nAnalysis and modeling of climate-sensitive diseases (Fiocruz, LNCC, BSC, Inria, IRD)"
+    "text": "Main fields of work and projects\n\nData gathering: R packages to handle Brazilian health datasets, indicators, and climate data (self initiative)\n\n{microdatasus}, {brpop}, {tidyrates}, {brclimr}\n\nVisualization: malaria and COVID-19 interactive visualization dashboards (IRD and Fiocruz)\nAnalysis and modeling of climate-sensitive diseases (Fiocruz, LNCC, BSC, Inria, IRD)"
   },
   {
     "objectID": "pres/ird2024.html#research-on-health-and-climate-indicators",

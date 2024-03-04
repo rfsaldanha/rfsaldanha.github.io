@@ -24,10 +24,10 @@ revealjs-plugins:
 
 ## Academia
 
--   BSc on Geography (2007) and Specialization on Statistics (2009)
+-   BSc on Geography (2007) and Specialization on Statistics (2009). *Regionalization proposal based on Census data.*
 -   Master's on Public Health (2017). *Spatio-temporal models to study the relationship between traffic violence and income.*
--   Doctorate on Health Information and Communication (Fiocruz, 2021). *Applications of Data Science methods on Public Health.*
--   Final year of a postdoc position at Inria. *Machine Learning methods*.
+-   Doctorate on Health Information (Fiocruz, 2021). *Applications of Data Science methods on Public Health.*
+-   Final year of a postdoc position at Inria. *Machine Learning methods application on Dengue forecast*.
 
 ## Main fields of work and projects
 
@@ -35,7 +35,7 @@ revealjs-plugins:
 
 `{microdatasus}`, `{brpop}`, `{tidyrates}`, `{brclimr}`
 
--   *Visualization:* malaria and COVID-19 interactive visualization dashboards (Fiocruz and IRD)
+-   *Visualization:* malaria and COVID-19 interactive visualization dashboards (IRD and Fiocruz)
 -   *Analysis and modeling* of climate-sensitive diseases (Fiocruz, LNCC, BSC, Inria, IRD)
 
 ## Cross-border malaria transmission
@@ -58,8 +58,9 @@ revealjs-plugins:
 ## COVID-19 Monitoring
 
 -   Fiocruz official institutional dashboard for the pandemics
+-   More than 10 data sources covering diverse aspects
 -   Data gathering, harmonization, visualization and analysis
--   Challenges on data availability, standardization, and health information communication
+-   Challenges on data availability, standardization, and information communication
 -   Daily work basis, high press demand for data and insights
 -   Several technical notes, papers and a book chapter
 -   Project awarded an government prize
@@ -104,8 +105,8 @@ revealjs-plugins:
 
 ## Early Warning System for Climate-Sensitive Diseases
 
--   Framework proposal to prevent and early detect CSD outbreaks
--   Actual EWS are limited on coverage, quality, interpretation and usage for decision making
+-   Framework proposal to prevent and early detect CSD outbreaks on Global South countries, with most vulnerable populations to climate change
+-   Actual EWS are limited on countries coverage, quality, interpretation and usage for decision making
 -   Aligned with WHO guidelines, replicable in other countries
 
 ## Early Warning System for Climate-Sensitive Diseases
