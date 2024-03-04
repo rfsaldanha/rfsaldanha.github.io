@@ -1,5 +1,5 @@
 ---
-title: "Introduction and research projects"
+title: "Introduction and Research Proposal"
 author: "Raphael Saldanha"
 format:
   revealjs: 
@@ -16,95 +16,121 @@ revealjs-plugins:
 
 ## About me
 
--  Brazilian from Rio de Janeiro
--  Loves to ride a bike and take pictures
--  Husband, father of dogs and a cat
--  Works with Health Geography and Climate Sensitive Diseases
--  R coder and package developer
+-   Brazilian from Rio de Janeiro
+-   Loves cycling and take pictures
+-   Husband, father of dogs and a cat
+-   Researcher on Health Geography and Climate-Sensitive Diseases
+-   R developer
 
 ## Academia
 
--  Undergraduate on Geography (2007) and Specialization on Statistics (2009)
--  Master's on Public Health (2017)
--  PhD on Health Information and Communication (Fiocruz, 2021)
--  Final year of a postdoc position at Inria, working with Machine Learning methods
+-   BSc on Geography (2007) and Specialization on Statistics (2009)
+-   Master's on Public Health (2017). *Spatio-temporal models to study the relationship between traffic violence and income.*
+-   Doctorate on Health Information and Communication (Fiocruz, 2021). *Applications of Data Science methods on Public Health.*
+-   Final year of a postdoc position at Inria. *Machine Learning methods*.
 
-## Main projects
+## Main fields of work and projects
 
--  Data gathering: R packages for Brazilian health data and indicators, climate data  
-      - `{microdatasus}`, `{brpop}`, `{tidyrates}`, `{brclimr}`
--  Visualization: malaria and COVID-19 interactive visualization dashboards
--  Analysis and modeling of healthcare access and climate-sensitive diseases
+-   *Data gathering:* R packages to handle Brazilian health datasets, indicators, and climate data (self initiative)
 
-## microdatasus
+`{microdatasus}`, `{brpop}`, `{tidyrates}`, `{brclimr}`
 
--  R package to work with raw data from the Brazilian Health Ministry
--  Functions to download, read and pre-process data
--  Facilitates everyday work on health data handling
--  Widely adopted
+-   *Visualization:* malaria and COVID-19 interactive visualization dashboards (Fiocruz and IRD)
+-   *Analysis and modeling* of climate-sensitive diseases (Fiocruz, LNCC, BSC, Inria, IRD)
 
-## Cross-border malaria dashboard
+## Cross-border malaria transmission
 
--  Partnership between Fiocruz and IRD
--  Harmonized dataset of cross-border malaria incidence at Brazil (Amapá) and French Guiana
--  Construction of interactive visualization dashboard (R Shiny)
--  Different languages and cultures, visualization is the key
--  One month work visit at MTD and a field work at Cayenne
--  Publication at Journal of Medical Internet Research (JMIR, 2019)
+::: columns
+::: {.column width="60%"}
+-   Fiocruz and IRD partnership
+-   Brazil (Amapá) and French Guiana border region
+-   Different languages and cultures, visualization is the key
+-   Work at MTD and a field work at Cayenne
+-   Publication at Journal of Medical Internet Research (JMIR, 2019)
+:::
 
-## Covid-19 dashboard
+::: {.column width="40%"}
+![](images/montpellier1-1400-01.webp)
+![](images/cayenne2-1400-01.webp)
+:::
+:::
 
--  Fiocruz official institutional dashboard for the pandemics
--  Data gathering, harmonization, visualization and analysis
--  Full framework pipeline with R
--  Challenges on data availability, standardization, and health information communication to the community
--  Daily work basis, high press demand for data and insights
--  Project awarded an government prize 
+## COVID-19 Monitoring
 
-## Climate data
+-   Fiocruz official institutional dashboard for the pandemics
+-   Data gathering, harmonization, visualization and analysis
+-   Challenges on data availability, standardization, and health information communication
+-   Daily work basis, high press demand for data and insights
+-   Several technical notes, papers and a book chapter
+-   Project awarded an government prize
 
--  Proposal of a standardized methodology to build climate indicators for climate sensitive diseases analysis
--  Climate indicators (as temperature, precipitation, humidity) at the same time and spatial scale of diseases incidence (administrative regions)
--  Zonal indicators method
--  Publication at Environmental Data Science journal (2024)
+## Research on Health and Climate indicators
+
+::: columns
+::: {.column width="60%"}
+-   Standardized methodology to build health and climate indicators
+-   Same time and spatial units (administrative regions)
+-   Method of zonal statistics
+-   Publication at Environmental Data Science journal (2024)
+:::
+  
+::: {.column width="40%"}
+![](images/zonal_statistics.png)
+![](images/prec_map_1.png)
+:::
+:::
 
 ## Postdoc project
 
--  Dengue incidence forecast with machine learning and subsets strategy
--  Health and climate data harmonization
--  Novel subsets approach, cluster based models with better performance
+-   Montpellier University Inria Antenne, LIRMM
+-   Dengue inflicts an important health burden in Brazil
+    -   1 million new cases reported just in 2024, 214 deaths, official emergency status declaration
+-   Project for dengue incidence forecast on Brazil with machine learning methods
+-   Novel subsets approach, cluster based models with better performance
 
-## Projects and ideas for the next years
+## Research plans for the next years
 
--  Streamline health and climate data gathering projects
--  Expansion to other regions and countries
--  Provide methods and packages to compute health and climate indicators
--  Machine learning methods for data analysis and forecast
+-   Application of Data Science methods to Public Health challenges on the Global South
+-   Streamline health and climate indicators projects, expansion to other countries and continents
+-   Usage of Machine Learning methods for data analysis and forecast, Early Warning Systems
 
-## Climate data
+## Health and climate indicators harmonization
 
--  Provide regularly updated datasets of climate indicators at different administrative levels
--  Expand project coverage to other countries
--  Include synthetic indicators for water cycle and droughts, warm and cold spells, and extreme events
+-   Provide regularly updated datasets of health and climate indicators at different hierarchical administrative geographic boundaries
+-   Expand coverage to other countries
+-   Usage of population estimates as weighting factor
+-   Build synthetic indicators for water cycle and droughts, warm and cold spells, and extreme events
+-   Work close with the ClimatSuds project
 
-## Early Warning System for Climate Sensitive Diseases
+## Early Warning System for Climate-Sensitive Diseases
 
--  Prevent and early detect CSD outbreaks
--  Actual EWS are limited on coverage, quality, interpretation and usage for decision making
--  Proposal of a EWS that follows WHO guidelines, expansible to other countries
+-   Framework proposal to prevent and early detect CSD outbreaks
+-   Actual EWS are limited on coverage, quality, interpretation and usage for decision making
+-   Aligned with WHO guidelines, replicable in other countries
 
-## Early Warning System for Climate Sensitive Diseases
+## Early Warning System for Climate-Sensitive Diseases
 
--  Application of machine learning methods to forecast incidence for short and medium-time horizons
--  Multivariate models with climate, environmental and socio-economic covariates
--  Subsets models to boost performance
--  Replicable to other countries
+-   Multivariate models with climate, environmental and socio-economic predictors
+-   Traditional and machine learning methods to forecast incidence for short and medium-time horizons (ARIMA, random forest, XGBoost, LSTM...)
+-   Subsets models to boost performance
+-   Continuous model monitoring and update (MLOps)
+
+## Early Warning System for Climate-Sensitive Diseases
+
+-   Lay an EWS framework adaptive to other regions' contexts and society priorities
+-   Close work with health managers and civil society representatives for project usage and tools appropriation
+
+## Integration with IRD
+
+-   Research aligned with the SDGs Good Health and Well-Being (3), Climate Action (13), and Partnership for the Goals (17)
+-   IRD equitable partnerships with the developing countries
+-   UMR EspaceDev expertise on earth observation and modeling of health and climate data
+-   ESOR group focus on environment, society, and health relationship on time and space, reach on South America, Africa and Asia countries
 
 ## Thanks!
 
--  More information about me and projects at
+More information about me and projects at
 
-[https://rfsaldanha.github.io]()
+[rfsaldanha.github.io](https://rfsaldanha.github.io)
 
-
-
+rfsaldanha\@gmail.com
