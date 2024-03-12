@@ -40,7 +40,7 @@ prepare_photos(
 
 ## Parc Naturel du Mejean, Lattes FR
 
-::: {style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));grid-gap: 1em;"}
+::: {style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));grid-gap: 1em;"}
 ![Greater flamingo](images/20240211_0325.jpg){description="`r descrip_exif('images/20240211_0325.jpg')`" desc-position="left" group="mejean"}
 
 ![Little Egret](images/20240211_0044.jpg){description="`r descrip_exif('images/20240211_0044.jpg')`" desc-position="left" group="mejean"}
@@ -55,7 +55,7 @@ prepare_photos(
 
 ## Iceland
 
-::: {style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));grid-gap: 1em;"}
+::: {style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));grid-gap: 1em;"}
 ![Kirkjufell](images/20240115_0036.jpg){description="`r descrip_exif('images/20240115_0036.jpg')`" desc-position="left" group="iceland"}
 
 ![Black pebble beach of Djúpalónssandur](images/20240115_0093.jpg){description="`r descrip_exif('images/20240115_0093.jpg')` " desc-position="left" group="iceland"}
@@ -75,7 +75,7 @@ prepare_photos(
 
 ## Montpellier, FR
 
-::: {style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));grid-gap: 1em;"}
+::: {style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));grid-gap: 1em;"}
 ![Le Peyrou](images/20231105_0054.JPG){description="`r descrip_exif('images/20231105_0054.JPG')`" desc-position="left" group="montpellier"}
 
 ![Arc de triomphe](images/20231105_0037.JPG){description="`r descrip_exif('images/20231105_0037.JPG')` " desc-position="left" group="montpellier"}
