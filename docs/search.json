@@ -648,14 +648,14 @@
     "href": "cv.html#education",
     "title": "CV",
     "section": "Education",
-    "text": "Education\n\n2022 - current. Postdoc at Inria and LNCC. Artificial intelligence applications on public health.\n2018 - 2021. PhD at Fiocruz, PPGICS. Information and Communication in Health.\n2015 - 2017. Graduate Degree (Master) at UFJF - PPGSC. Public Health.\n2008 - 2009. Specialization at UFJF. Computational Statistical Methods\n2003 - 2007. Undergraduate Degree at UFJF - ICHL-DG. Geography."
+    "text": "Education\n\n2022 - current. Post-doctoral researcher at Inria and LNCC. Artificial intelligence applications on public health.\n2018 - 2021. Doctorate at Fiocruz, PPGICS. Information and Communication in Health.\n2015 - 2017. Master’s at UFJF - PPGSC. Public Health.\n2008 - 2009. Specialization at UFJF. Computational Statistical Methods\n2003 - 2007. Bachelor Degree at UFJF - ICHL-DG. Geography."
   },
   {
     "objectID": "cv.html#academic-interests",
     "href": "cv.html#academic-interests",
     "title": "CV",
     "section": "Academic interests",
-    "text": "Academic interests\n\nData science\n\nR\nMachine Learning\nShiny apps\nQuarto\nPlotly\nPython\nJupyter Hub\nduckdb, SQLite\nElasticSearch\nKibana\n\n\n\nGIS\n\nQGIS\nESRI ArcGIS\nGeoserver\n\n\n\nOther\n\nGephi\nLaTeX\nLinux\nMacOS"
+    "text": "Academic interests\n\nData science\n\nR\nMachine Learning\ntidyverse, tidymodels\nShiny apps\nQuarto\nPlotly\nPython\nJupyter Hub\nduckdb, SQLite\nElasticSearch\nKibana\n\n\n\nGIS\n\nQGIS\nESRI ArcGIS\nGeoserver\n\n\n\nOther\n\nGephi\nLaTeX\nLinux\nMacOS"
   },
   {
     "objectID": "cv.html#work-and-teaching-experience",
@@ -1543,8 +1543,8 @@
     "objectID": "pres/ird2024.html#about-me",
     "href": "pres/ird2024.html#about-me",
     "title": "Introduction and Research Proposal",
-    "section": "About me",
-    "text": "About me\n\nBrazilian from Rio de Janeiro\nLoves cycling and take pictures\nHusband, father of dogs and a cat\nResearcher on Health Geography and Climate-Sensitive Diseases\nR developer"
+    "section": "",
+    "text": "Brazilian from Rio de Janeiro\nLoves cycling and take pictures\nHusband, father of dogs and a cat\nResearcher on Health Geography and Climate-Sensitive Diseases\nR developer"
   },
   {
     "objectID": "pres/ird2024.html#academia",
@@ -2091,5 +2091,12 @@
     "title": "Introduction and Research Proposal",
     "section": "Research on Health and Climate indicators",
     "text": "Research on Health and Climate indicators\n\n\n\nStandardized methodology to build health and climate indicators\nSame time and spatial units (administrative regions)\nMethod of zonal statistics\nPublication at Environmental Data Science journal (2024)"
+  },
+  {
+    "objectID": "pres/ird2024.html",
+    "href": "pres/ird2024.html",
+    "title": "Introduction and Research Proposal",
+    "section": "",
+    "text": "Brazilian from Rio de Janeiro\nLoves cycling and take pictures\nHusband, father of dogs and a cat\nResearcher on Health Geography and Climate-Sensitive Diseases\nR developer"
   }
 ]
