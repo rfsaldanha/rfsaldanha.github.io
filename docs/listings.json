@@ -1,5 +1,13 @@
 [
   {
+    "listing": "/talks.html",
+    "items": [
+      "/talks/bilis_2023.html",
+      "/talks/climate_health_workshop_2023.html",
+      "/talks/isntd_conference_2023.html"
+    ]
+  },
+  {
     "listing": "/projects.html",
     "items": [
       "/projects/harmonize.html",
@@ -14,14 +22,6 @@
       "/projects/agua-saude.html",
       "/projects/mauro.html",
       "/projects/cidade-e-saude.html"
-    ]
-  },
-  {
-    "listing": "/data.html",
-    "items": [
-      "/data-projects/std_br_covid_rates_data.html",
-      "/data-projects/era5land-daily-latin-america.html",
-      "/data-projects/brazil-climate-zonal-indicators.html"
     ]
   },
   {
@@ -59,9 +59,17 @@
       "/posts/std_br_covid_rates.html",
       "/posts/run_length_encoding.html",
       "/posts/rates.html",
-      "/posts/query_remot_parquet_file.html",
       "/posts/sqlite_to_duckdb_and_parquet.html",
+      "/posts/query_remot_parquet_file.html",
       "/posts/some-tips-for-sqlite.html"
+    ]
+  },
+  {
+    "listing": "/data.html",
+    "items": [
+      "/data-projects/std_br_covid_rates_data.html",
+      "/data-projects/era5land-daily-latin-america.html",
+      "/data-projects/brazil-climate-zonal-indicators.html"
     ]
   },
   {
@@ -94,14 +102,6 @@
       "/publications/araujoWHATHAVEWE2019a.html",
       "/publications/marinhoBurdenDiseaseBrazil2018.html",
       "/publications/saldanhaPropostaUmObservatorio2017.html"
-    ]
-  },
-  {
-    "listing": "/talks.html",
-    "items": [
-      "/talks/bilis_2023.html",
-      "/talks/climate_health_workshop_2023.html",
-      "/talks/isntd_conference_2023.html"
     ]
   }
 ]

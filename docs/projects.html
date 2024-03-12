@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.163">
+<meta name="generator" content="quarto-1.5.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Raphael Saldanha - Projects</title>
+<title>Raphael Saldanha – Projects</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -48,12 +48,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
   "keyboard-shortcut": [
     "f",
     "/",
     "s"
   ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -62,6 +63,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -106,8 +108,35 @@ gtag('js', new Date());
 gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -115,7 +144,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
@@ -132,44 +161,44 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html" rel="" target="">
- <span class="menu-text">CV</span></a>
+    <a class="nav-link" href="./cv.html"> 
+<span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./projects.html" rel="" target="" aria-current="page">
- <span class="menu-text">Projects</span></a>
+    <a class="nav-link active" href="./projects.html" aria-current="page"> 
+<span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./code.html" rel="" target="">
- <span class="menu-text">Packages &amp; Code</span></a>
+    <a class="nav-link" href="./code.html"> 
+<span class="menu-text">Packages &amp; Code</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./data.html" rel="" target="">
- <span class="menu-text">Data</span></a>
+    <a class="nav-link" href="./data.html"> 
+<span class="menu-text">Data</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./publications.html" rel="" target="">
- <span class="menu-text">Publications</span></a>
+    <a class="nav-link" href="./publications.html"> 
+<span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./talks.html" rel="" target="">
- <span class="menu-text">Talks</span></a>
+    <a class="nav-link" href="./talks.html"> 
+<span class="menu-text">Talks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./climate_health_hub.html" rel="" target="">
- <span class="menu-text">Climate &amp; Health Hub</span></a>
+    <a class="nav-link" href="./climate_health_hub.html"> 
+<span class="menu-text">Climate &amp; Health Hub</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./photos/photos.html" rel="" target="">
- <span class="menu-text">Photos</span></a>
+    <a class="nav-link" href="./photos/photos.html"> 
+<span class="menu-text">Photos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html" rel="" target="">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="./blog.html"> 
+<span class="menu-text">Blog</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -178,7 +207,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
     </div>
 <!-- main -->
@@ -199,7 +228,9 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   </div>
   
 
+
 </header>
+
 
 
 
@@ -207,256 +238,268 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1702892980600" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1702484321723" data-listing-reading-time-sort="1" data-listing-word-count-sort="74">
 <div class="thumbnail">
-<p><a href="./projects/harmonize.html"> <p class="card-img-top"><img src="projects/images/harmonize-1400.webp"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./projects/harmonize.html" class="no-external"></a></p><a href="./projects/harmonize.html" class="no-external">
+<p class="card-img-top"><img src="projects/images/harmonize-1400.webp"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./projects/harmonize.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./projects/harmonize.html">
 <h3 class="no-anchor listing-title">
-Harmonize
+<a href="./projects/harmonize.html" class="no-external">Harmonize</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./projects/harmonize.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Harmonizing multi-scale spatiotemporal data for health in climate change hotspots.
+<a href="./projects/harmonize.html" class="no-external">Harmonizing multi-scale spatiotemporal data for health in climate change hotspots.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./projects/harmonize.html"> </a>
+<p><a href="./projects/harmonize.html" class="no-external"></a></p><a href="./projects/harmonize.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1702892980605" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1702484321727" data-listing-reading-time-sort="1" data-listing-word-count-sort="125">
 <div class="thumbnail">
-<p><a href="./projects/monitoracovid19.html"> <p class="card-img-top"><img src="projects/images/monitoracovid19-1400.webp"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./projects/monitoracovid19.html" class="no-external"></a></p><a href="./projects/monitoracovid19.html" class="no-external">
+<p class="card-img-top"><img src="projects/images/monitoracovid19-1400.webp"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./projects/monitoracovid19.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./projects/monitoracovid19.html">
 <h3 class="no-anchor listing-title">
-MonitoraCovid-19
+<a href="./projects/monitoracovid19.html" class="no-external">MonitoraCovid-19</a>
 </h3>
 <div class="listing-subtitle">
-Covid-19 monitoring.
+<a href="./projects/monitoracovid19.html" class="no-external">Covid-19 monitoring.</a>
 </div>
 <div class="listing-description">
-MonitoraCovid-19 project is an institutional response from Fiocruz to the Covid-19 pandemic.
+<a href="./projects/monitoracovid19.html" class="no-external">MonitoraCovid-19 project is an institutional response from Fiocruz to the Covid-19 pandemic.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./projects/monitoracovid19.html"> </a>
+<p><a href="./projects/monitoracovid19.html" class="no-external"></a></p><a href="./projects/monitoracovid19.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1702892980605" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1702484321727" data-listing-reading-time-sort="1" data-listing-word-count-sort="61">
 <div class="thumbnail">
-<p><a href="./projects/ouvsus.html"> <p class="card-img-top"><img src="projects/images/ouvsus-1400.webp"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./projects/ouvsus.html" class="no-external"></a></p><a href="./projects/ouvsus.html" class="no-external">
+<p class="card-img-top"><img src="projects/images/ouvsus-1400.webp"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./projects/ouvsus.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./projects/ouvsus.html">
 <h3 class="no-anchor listing-title">
-OuvSUS
+<a href="./projects/ouvsus.html" class="no-external">OuvSUS</a>
 </h3>
 <div class="listing-subtitle">
-SUS Ombudsman.
+<a href="./projects/ouvsus.html" class="no-external">SUS Ombudsman.</a>
 </div>
 <div class="listing-description">
-A partnership between PCDaS, Instituto Aggeu Magalhães – Fiocruz Pernambuco, and the Brazilian Ministry of Health ombudsman. The project aims to collect, organize and…
+<a href="./projects/ouvsus.html" class="no-external">A partnership between PCDaS, Instituto Aggeu Magalhães – Fiocruz Pernambuco, and the Brazilian Ministry of Health ombudsman. The project aims to collect, organize and…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./projects/ouvsus.html"> </a>
+<p><a href="./projects/ouvsus.html" class="no-external"></a></p><a href="./projects/ouvsus.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-listing-file-modified-sort="1702892980606" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="3" data-listing-file-modified-sort="1702484321727" data-listing-reading-time-sort="1" data-listing-word-count-sort="85">
 <div class="thumbnail">
-<p><a href="./projects/pns.html"> <p class="card-img-top"><img src="projects/images/pns-1400.webp"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./projects/pns.html" class="no-external"></a></p><a href="./projects/pns.html" class="no-external">
+<p class="card-img-top"><img src="projects/images/pns-1400.webp"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./projects/pns.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./projects/pns.html">
 <h3 class="no-anchor listing-title">
-PNS
+<a href="./projects/pns.html" class="no-external">PNS</a>
 </h3>
 <div class="listing-subtitle">
-Pesquisa Nacional de Saúde.
+<a href="./projects/pns.html" class="no-external">Pesquisa Nacional de Saúde.</a>
 </div>
 <div class="listing-description">
-This project is a partnership between PCDaS and other researchers at Fiocruz and IBGE. The PNS is a national inquiry about the population health conditions with two…
+<a href="./projects/pns.html" class="no-external">This project is a partnership between PCDaS and other researchers at Fiocruz and IBGE. The PNS is a national inquiry about the population health conditions with two…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./projects/pns.html"> </a>
+<p><a href="./projects/pns.html" class="no-external"></a></p><a href="./projects/pns.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-listing-file-modified-sort="1702892980600" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="4" data-listing-file-modified-sort="1702484321723" data-listing-reading-time-sort="1" data-listing-word-count-sort="170">
 <div class="thumbnail">
-<p><a href="./projects/cross-border-malaria.html"> <p class="card-img-top"><img src="projects/images/malaria-1400.webp"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./projects/cross-border-malaria.html" class="no-external"></a></p><a href="./projects/cross-border-malaria.html" class="no-external">
+<p class="card-img-top"><img src="projects/images/malaria-1400.webp"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./projects/cross-border-malaria.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./projects/cross-border-malaria.html">
 <h3 class="no-anchor listing-title">
-Cross-border malaria
+<a href="./projects/cross-border-malaria.html" class="no-external">Cross-border malaria</a>
 </h3>
 <div class="listing-subtitle">
-In partnership with IRD.
+<a href="./projects/cross-border-malaria.html" class="no-external">In partnership with IRD.</a>
 </div>
 <div class="listing-description">
-This was the second project that I got involved at Fiocruz with the Climate and Health Observatory. It was a project in partnership with the French IRD (Institute de…
+<a href="./projects/cross-border-malaria.html" class="no-external">This was the second project that I got involved at Fiocruz with the Climate and Health Observatory. It was a project in partnership with the French IRD (Institute de…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./projects/cross-border-malaria.html"> </a>
+<p><a href="./projects/cross-border-malaria.html" class="no-external"></a></p><a href="./projects/cross-border-malaria.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-listing-file-modified-sort="1702892980606" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="5" data-listing-file-modified-sort="1702484321727" data-listing-reading-time-sort="1" data-listing-word-count-sort="65">
 <div class="thumbnail">
-<p><a href="./projects/redes-de-cuidado.html"> <p class="card-img-top"><img src="projects/images/redescuidado-1400.webp"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./projects/redes-de-cuidado.html" class="no-external"></a></p><a href="./projects/redes-de-cuidado.html" class="no-external">
+<p class="card-img-top"><img src="projects/images/redescuidado-1400.webp"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./projects/redes-de-cuidado.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./projects/redes-de-cuidado.html">
 <h3 class="no-anchor listing-title">
-Redes de Cuidado
+<a href="./projects/redes-de-cuidado.html" class="no-external">Redes de Cuidado</a>
 </h3>
 <div class="listing-subtitle">
-Cancer patients displacement and network analysis.
+<a href="./projects/redes-de-cuidado.html" class="no-external">Cancer patients displacement and network analysis.</a>
 </div>
 <div class="listing-description">
-This project was a partnership with PCDaS and CDTS. The project studied the flow of cancer patients receiving treatment in Brazil between municipalities.
+<a href="./projects/redes-de-cuidado.html" class="no-external">This project was a partnership with PCDaS and CDTS. The project studied the flow of cancer patients receiving treatment in Brazil between municipalities.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./projects/redes-de-cuidado.html"> </a>
+<p><a href="./projects/redes-de-cuidado.html" class="no-external"></a></p><a href="./projects/redes-de-cuidado.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-listing-file-modified-sort="1702892980600" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="6" data-listing-file-modified-sort="1702484321723" data-listing-reading-time-sort="1" data-listing-word-count-sort="60">
 <div class="thumbnail">
-<p><a href="./projects/arboalvo.html"> <p class="card-img-top"><img src="projects/images/arboalvo-1400.webp"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./projects/arboalvo.html" class="no-external"></a></p><a href="./projects/arboalvo.html" class="no-external">
+<p class="card-img-top"><img src="projects/images/arboalvo-1400.webp"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./projects/arboalvo.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./projects/arboalvo.html">
 <h3 class="no-anchor listing-title">
-ArboAlvo
+<a href="./projects/arboalvo.html" class="no-external">ArboAlvo</a>
 </h3>
 <div class="listing-subtitle">
-Stratifying arboviruses risk.
+<a href="./projects/arboalvo.html" class="no-external">Stratifying arboviruses risk.</a>
 </div>
 <div class="listing-description">
-Conducted at the Instituto Oswaldo Cruz (IOC), the project ArboAlvo’s objective is to stratify arboviruses risk into national and intra-municipal levels, considering…
+<a href="./projects/arboalvo.html" class="no-external">Conducted at the Instituto Oswaldo Cruz (IOC), the project ArboAlvo’s objective is to stratify arboviruses risk into national and intra-municipal levels, considering…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./projects/arboalvo.html"> </a>
+<p><a href="./projects/arboalvo.html" class="no-external"></a></p><a href="./projects/arboalvo.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-listing-file-modified-sort="1702892980605" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="7" data-listing-file-modified-sort="1702484321727" data-listing-reading-time-sort="1" data-listing-word-count-sort="86">
 <div class="thumbnail">
-<p><a href="./projects/onde-estao-nossas-doencas.html"> <p class="card-img-top"><img src="projects/images/cavalarica2-1400.webp"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./projects/onde-estao-nossas-doencas.html" class="no-external"></a></p><a href="./projects/onde-estao-nossas-doencas.html" class="no-external">
+<p class="card-img-top"><img src="projects/images/cavalarica2-1400.webp"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./projects/onde-estao-nossas-doencas.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./projects/onde-estao-nossas-doencas.html">
 <h3 class="no-anchor listing-title">
-Onde estão nossas doenças?
+<a href="./projects/onde-estao-nossas-doencas.html" class="no-external">Onde estão nossas doenças?</a>
 </h3>
 <div class="listing-subtitle">
-Museum exhibition.
+<a href="./projects/onde-estao-nossas-doencas.html" class="no-external">Museum exhibition.</a>
 </div>
 <div class="listing-description">
-This was a very special project, where we were invited to develop a museum exhibition at Fiocruz. On this set, we present to the visitors the relationship between health and…
+<a href="./projects/onde-estao-nossas-doencas.html" class="no-external">This was a very special project, where we were invited to develop a museum exhibition at Fiocruz. On this set, we present to the visitors the relationship between health and…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./projects/onde-estao-nossas-doencas.html"> </a>
+<p><a href="./projects/onde-estao-nossas-doencas.html" class="no-external"></a></p><a href="./projects/onde-estao-nossas-doencas.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-listing-file-modified-sort="1702892980606" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="8" data-listing-file-modified-sort="1702484321727" data-listing-reading-time-sort="1" data-listing-word-count-sort="84">
 <div class="thumbnail">
-<p><a href="./projects/pmm.html"> <p class="card-img-top"><img src="projects/images/pmm-1400.webp"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./projects/pmm.html" class="no-external"></a></p><a href="./projects/pmm.html" class="no-external">
+<p class="card-img-top"><img src="projects/images/pmm-1400.webp"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./projects/pmm.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./projects/pmm.html">
 <h3 class="no-anchor listing-title">
-PMM
+<a href="./projects/pmm.html" class="no-external">PMM</a>
 </h3>
 <div class="listing-subtitle">
-Projeto Mais Médicos.
+<a href="./projects/pmm.html" class="no-external">Projeto Mais Médicos.</a>
 </div>
 <div class="listing-description">
-“Projeto Mais Médicos” was the first project that I got involved with at Fiocruz, through the PCDaS initiative. I was in charge of developing a data dashboard and to…
+<a href="./projects/pmm.html" class="no-external">“Projeto Mais Médicos” was the first project that I got involved with at Fiocruz, through the PCDaS initiative. I was in charge of developing a data dashboard and to…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./projects/pmm.html"> </a>
+<p><a href="./projects/pmm.html" class="no-external"></a></p><a href="./projects/pmm.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-listing-file-modified-sort="1702892980600" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="9" data-listing-file-modified-sort="1702484321723" data-listing-reading-time-sort="1" data-listing-word-count-sort="62">
 <div class="thumbnail">
-<p><a href="./projects/agua-saude.html"> <p class="card-img-top"><img src="projects/images/aguasaude-1400.webp"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./projects/agua-saude.html" class="no-external"></a></p><a href="./projects/agua-saude.html" class="no-external">
+<p class="card-img-top"><img src="projects/images/aguasaude-1400.webp"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./projects/agua-saude.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./projects/agua-saude.html">
 <h3 class="no-anchor listing-title">
-Água &amp; Saúde
+<a href="./projects/agua-saude.html" class="no-external">Água &amp; Saúde</a>
 </h3>
 <div class="listing-subtitle">
-In partneship with ANA.
+<a href="./projects/agua-saude.html" class="no-external">In partneship with ANA.</a>
 </div>
 <div class="listing-description">
-The first project that I got involved at Fiocruz with the Climate and Health Observatory. It was a project in partnership with ANA (Agência Nacional das Águas).
+<a href="./projects/agua-saude.html" class="no-external">The first project that I got involved at Fiocruz with the Climate and Health Observatory. It was a project in partnership with ANA (Agência Nacional das Águas).</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./projects/agua-saude.html"> </a>
+<p><a href="./projects/agua-saude.html" class="no-external"></a></p><a href="./projects/agua-saude.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-listing-file-modified-sort="1702892980605" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="10" data-listing-file-modified-sort="1702484321727" data-listing-reading-time-sort="1" data-listing-word-count-sort="81">
 <div class="thumbnail">
-<p><a href="./projects/mauro.html"> <p class="card-img-top"><img src="projects/images/mauro-1400.webp"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./projects/mauro.html" class="no-external"></a></p><a href="./projects/mauro.html" class="no-external">
+<p class="card-img-top"><img src="projects/images/mauro-1400.webp"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./projects/mauro.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./projects/mauro.html">
 <h3 class="no-anchor listing-title">
-Mauro
+<a href="./projects/mauro.html" class="no-external">Mauro</a>
 </h3>
 <div class="listing-subtitle">
-a Metadata Automatic Retrieval system for Updated References and cited Objects from Scielo.
+<a href="./projects/mauro.html" class="no-external">a Metadata Automatic Retrieval system for Updated References and cited Objects from Scielo.</a>
 </div>
 <div class="listing-description">
-“Mauro” was a research project that I initiated during my Ph.D.&nbsp;at Fiocruz, when I was taking some courses about technological information on health.
+<a href="./projects/mauro.html" class="no-external">“Mauro” was a research project that I initiated during my Ph.D.&nbsp;at Fiocruz, when I was taking some courses about technological information on health.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./projects/mauro.html"> </a>
+<p><a href="./projects/mauro.html" class="no-external"></a></p><a href="./projects/mauro.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-listing-file-modified-sort="1702892980600" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="11" data-listing-file-modified-sort="1702484321723" data-listing-reading-time-sort="1" data-listing-word-count-sort="125">
 <div class="thumbnail">
-<p><a href="./projects/cidade-e-saude.html"> <p class="card-img-top"><img src="projects/images/cidadesaude-1400.webp"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./projects/cidade-e-saude.html" class="no-external"></a></p><a href="./projects/cidade-e-saude.html" class="no-external">
+<p class="card-img-top"><img src="projects/images/cidadesaude-1400.webp"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./projects/cidade-e-saude.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./projects/cidade-e-saude.html">
 <h3 class="no-anchor listing-title">
-Cidade &amp; Saúde
+<a href="./projects/cidade-e-saude.html" class="no-external">Cidade &amp; Saúde</a>
 </h3>
 <div class="listing-subtitle">
-Accessible health information about Brazilian municipalities.
+<a href="./projects/cidade-e-saude.html" class="no-external">Accessible health information about Brazilian municipalities.</a>
 </div>
 <div class="listing-description">
-“Cidade &amp; Saúde” is a self-funded Project that I started just after my master’s and before my Ph.D.
+<a href="./projects/cidade-e-saude.html" class="no-external">“Cidade &amp; Saúde” is a self-funded Project that I started just after my master’s and before my Ph.D.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./projects/cidade-e-saude.html"> </a>
+<p><a href="./projects/cidade-e-saude.html" class="no-external"></a></p><a href="./projects/cidade-e-saude.html" class="no-external">
+</a>
 </div>
 </div>
 </div>
@@ -543,6 +586,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -577,24 +638,64 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
   const processXRef = (id, note) => {
-    if (id.startsWith('sec-')) {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
         }
         return container.innerHTML
       } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
-      return note.innerHTML;
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -603,27 +704,56 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       instance.disable();
       let url = xref.getAttribute('href');
       let hash = undefined; 
-      try { hash = new URL(url).hash; } catch {}
-      const id = hash.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note !== null) {
-        try {
-          const html = processXRef(id, note);
-          instance.setContent(html);
-        } finally {
-          instance.enable();
-          instance.show();
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
         }
       } else {
-        // See if we can fetch this
-        fetch(url.split('#')[0])
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
         .then(res => res.text())
         .then(html => {
           const parser = new DOMParser();
           const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.getElementById(id);
+          const note = htmlDoc.querySelector('main.content');
           if (note !== null) {
-            const html = processXRef(id, note);
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
             instance.setContent(html);
           } 
         }).finally(() => {
@@ -701,6 +831,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {

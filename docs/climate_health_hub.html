@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.163">
+<meta name="generator" content="quarto-1.5.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Raphael Saldanha - Climate &amp; Health Hub</title>
+<title>Raphael Saldanha – Climate &amp; Health Hub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -48,12 +48,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
   "keyboard-shortcut": [
     "f",
     "/",
     "s"
   ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -62,6 +63,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -106,16 +108,43 @@ gtag('js', new Date());
 gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
@@ -132,44 +161,44 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html" rel="" target="">
- <span class="menu-text">CV</span></a>
+    <a class="nav-link" href="./cv.html"> 
+<span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html" rel="" target="">
- <span class="menu-text">Projects</span></a>
+    <a class="nav-link" href="./projects.html"> 
+<span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./code.html" rel="" target="">
- <span class="menu-text">Packages &amp; Code</span></a>
+    <a class="nav-link" href="./code.html"> 
+<span class="menu-text">Packages &amp; Code</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./data.html" rel="" target="">
- <span class="menu-text">Data</span></a>
+    <a class="nav-link" href="./data.html"> 
+<span class="menu-text">Data</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./publications.html" rel="" target="">
- <span class="menu-text">Publications</span></a>
+    <a class="nav-link" href="./publications.html"> 
+<span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./talks.html" rel="" target="">
- <span class="menu-text">Talks</span></a>
+    <a class="nav-link" href="./talks.html"> 
+<span class="menu-text">Talks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./climate_health_hub.html" rel="" target="" aria-current="page">
- <span class="menu-text">Climate &amp; Health Hub</span></a>
+    <a class="nav-link active" href="./climate_health_hub.html" aria-current="page"> 
+<span class="menu-text">Climate &amp; Health Hub</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./photos/photos.html" rel="" target="">
- <span class="menu-text">Photos</span></a>
+    <a class="nav-link" href="./photos/photos.html"> 
+<span class="menu-text">Photos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html" rel="" target="">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="./blog.html"> 
+<span class="menu-text">Blog</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -200,6 +229,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
     <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(22)</span></div><div class="category" data-category="2023">2023 <span class="quarto-category-count">(11)</span></div><div class="category" data-category="2024">2024 <span class="quarto-category-count">(11)</span></div><div class="category" data-category="boot camp">boot camp <span class="quarto-category-count">(1)</span></div><div class="category" data-category="conference">conference <span class="quarto-category-count">(9)</span></div><div class="category" data-category="congress">congress <span class="quarto-category-count">(1)</span></div><div class="category" data-category="course">course <span class="quarto-category-count">(2)</span></div><div class="category" data-category="free">free <span class="quarto-category-count">(11)</span></div><div class="category" data-category="hybrid">hybrid <span class="quarto-category-count">(4)</span></div><div class="category" data-category="in person">in person <span class="quarto-category-count">(10)</span></div><div class="category" data-category="masterclass">masterclass <span class="quarto-category-count">(1)</span></div><div class="category" data-category="meeting">meeting <span class="quarto-category-count">(2)</span></div><div class="category" data-category="online">online <span class="quarto-category-count">(8)</span></div><div class="category" data-category="paid">paid <span class="quarto-category-count">(8)</span></div><div class="category" data-category="symposium">symposium <span class="quarto-category-count">(1)</span></div><div class="category" data-category="webinar">webinar <span class="quarto-category-count">(2)</span></div><div class="category" data-category="winter school">winter school <span class="quarto-category-count">(1)</span></div><div class="category" data-category="workshop">workshop <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+
 
 
 
@@ -237,19 +267,19 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="meeting,in person,paid,2024" data-listing-date-sort="1729634400000" data-listing-file-modified-sort="1702892980389" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="0" data-categories="meeting,in person,paid,2024" data-listing-date-sort="1729634400000" data-listing-file-modified-sort="1702484321579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="94">
 <div class="thumbnail">
-<p><a href="./climate_health_hub/astmh_meeting_2024.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./climate_health_hub/astmh_meeting_2024.html" class="no-external"></a></p><a href="./climate_health_hub/astmh_meeting_2024.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./climate_health_hub/astmh_meeting_2024.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./climate_health_hub/astmh_meeting_2024.html">
 <h3 class="no-anchor listing-title">
-ASTMH Annual Meeting 2024
+<a href="./climate_health_hub/astmh_meeting_2024.html" class="no-external">ASTMH Annual Meeting 2024</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./climate_health_hub/astmh_meeting_2024.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('meeting'); return false;">
 meeting
@@ -264,14 +294,12 @@ paid
 2024
 </div>
 </div>
-<a href="./climate_health_hub/astmh_meeting_2024.html">
 <div class="listing-description">
-The American Society of Tropical Medicine % Hygiene (ASTMH) Annual Meeting draws tropical medicine and global health professionals representing academia, foundations…<br>
+<a href="./climate_health_hub/astmh_meeting_2024.html" class="no-external">The American Society of Tropical Medicine % Hygiene (ASTMH) Annual Meeting draws tropical medicine and global health professionals representing academia, foundations…<br></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./climate_health_hub/astmh_meeting_2024.html">
+<a href="./climate_health_hub/astmh_meeting_2024.html" class="no-external">
 <div class="listing-date">
 Oct 23, 2024
 </div>
@@ -281,19 +309,19 @@ ASTMH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="conference,in person,paid,2024" data-listing-date-sort="1725832800000" data-listing-file-modified-sort="1702892980390" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="1" data-categories="conference,in person,paid,2024" data-listing-date-sort="1725832800000" data-listing-file-modified-sort="1702484321579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="72">
 <div class="thumbnail">
-<p><a href="./climate_health_hub/geomed_2024.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./climate_health_hub/geomed_2024.html" class="no-external"></a></p><a href="./climate_health_hub/geomed_2024.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./climate_health_hub/geomed_2024.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./climate_health_hub/geomed_2024.html">
 <h3 class="no-anchor listing-title">
-Geomed 2024
+<a href="./climate_health_hub/geomed_2024.html" class="no-external">Geomed 2024</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./climate_health_hub/geomed_2024.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('conference'); return false;">
 conference
@@ -308,14 +336,12 @@ paid
 2024
 </div>
 </div>
-<a href="./climate_health_hub/geomed_2024.html">
 <div class="listing-description">
-GEOMED is an international, interdisciplinary conference on spatial statistics, geographical epidemiology and public health. The GEOMED conference is held every 2 years…
+<a href="./climate_health_hub/geomed_2024.html" class="no-external">GEOMED is an international, interdisciplinary conference on spatial statistics, geographical epidemiology and public health. The GEOMED conference is held every 2 years…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./climate_health_hub/geomed_2024.html">
+<a href="./climate_health_hub/geomed_2024.html" class="no-external">
 <div class="listing-date">
 Sep 9, 2024
 </div>
@@ -325,19 +351,19 @@ Geomed
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="conference,in person,paid,2024" data-listing-date-sort="1724536800000" data-listing-file-modified-sort="1702892980390" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="2" data-categories="conference,in person,paid,2024" data-listing-date-sort="1724536800000" data-listing-file-modified-sort="1702484321579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="63">
 <div class="thumbnail">
-<p><a href="./climate_health_hub/isee_2024.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./climate_health_hub/isee_2024.html" class="no-external"></a></p><a href="./climate_health_hub/isee_2024.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./climate_health_hub/isee_2024.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./climate_health_hub/isee_2024.html">
 <h3 class="no-anchor listing-title">
-ISEE 2024
+<a href="./climate_health_hub/isee_2024.html" class="no-external">ISEE 2024</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./climate_health_hub/isee_2024.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('conference'); return false;">
 conference
@@ -352,14 +378,12 @@ paid
 2024
 </div>
 </div>
-<a href="./climate_health_hub/isee_2024.html">
 <div class="listing-description">
-We are delighted to invite you to attend the 36th Annual ISEE Conference in Santiago, Chile between August 25-28, 2024. The main theme of the conference is “Addressing…
+<a href="./climate_health_hub/isee_2024.html" class="no-external">We are delighted to invite you to attend the 36th Annual ISEE Conference in Santiago, Chile between August 25-28, 2024. The main theme of the conference is “Addressing…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./climate_health_hub/isee_2024.html">
+<a href="./climate_health_hub/isee_2024.html" class="no-external">
 <div class="listing-date">
 Aug 25, 2024
 </div>
@@ -369,19 +393,19 @@ ISEE
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="conference,in person,2024" data-listing-date-sort="1718748000000" data-listing-file-modified-sort="1702892980390" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="3" data-categories="conference,in person,2024" data-listing-date-sort="1718748000000" data-listing-file-modified-sort="1702484321579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="82">
 <div class="thumbnail">
-<p><a href="./climate_health_hub/geoenv_2024.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./climate_health_hub/geoenv_2024.html" class="no-external"></a></p><a href="./climate_health_hub/geoenv_2024.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./climate_health_hub/geoenv_2024.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./climate_health_hub/geoenv_2024.html">
 <h3 class="no-anchor listing-title">
-GeoENV 2024: The 15th International Conference on Geostatistics for Environmental Applications
+<a href="./climate_health_hub/geoenv_2024.html" class="no-external">GeoENV 2024: The 15th International Conference on Geostatistics for Environmental Applications</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./climate_health_hub/geoenv_2024.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('conference'); return false;">
 conference
@@ -393,14 +417,12 @@ in person
 2024
 </div>
 </div>
-<a href="./climate_health_hub/geoenv_2024.html">
 <div class="listing-description">
-geoENV, the Conference on Geostatistics for Environmental Applications, shows the state of the art of geostatistics in environmental applications with new cases, results and…
+<a href="./climate_health_hub/geoenv_2024.html" class="no-external">geoENV, the Conference on Geostatistics for Environmental Applications, shows the state of the art of geostatistics in environmental applications with new cases, results and…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./climate_health_hub/geoenv_2024.html">
+<a href="./climate_health_hub/geoenv_2024.html" class="no-external">
 <div class="listing-date">
 Jun 19, 2024
 </div>
@@ -410,19 +432,19 @@ Geoenv
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="boot camp,online,paid,2024" data-listing-date-sort="1718143200000" data-listing-file-modified-sort="1702892980389" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="4" data-categories="boot camp,online,paid,2024" data-listing-date-sort="1718143200000" data-listing-file-modified-sort="1702484321579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="47">
 <div class="thumbnail">
-<p><a href="./climate_health_hub/columbia_climate_change_and_health_bootcamp_2024.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./climate_health_hub/columbia_climate_change_and_health_bootcamp_2024.html" class="no-external"></a></p><a href="./climate_health_hub/columbia_climate_change_and_health_bootcamp_2024.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./climate_health_hub/columbia_climate_change_and_health_bootcamp_2024.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./climate_health_hub/columbia_climate_change_and_health_bootcamp_2024.html">
 <h3 class="no-anchor listing-title">
-Climate Change and Health Boot Camp: Building Skills and Knowledge for Effective Engagement
+<a href="./climate_health_hub/columbia_climate_change_and_health_bootcamp_2024.html" class="no-external">Climate Change and Health Boot Camp: Building Skills and Knowledge for Effective Engagement</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./climate_health_hub/columbia_climate_change_and_health_bootcamp_2024.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('boot camp'); return false;">
 boot camp
@@ -437,14 +459,12 @@ paid
 2024
 </div>
 </div>
-<a href="./climate_health_hub/columbia_climate_change_and_health_bootcamp_2024.html">
 <div class="listing-description">
-The Climate Change and Health Boot Camp is a three-day intensive course that will prepare clinicians, scientists, and other members of the research, health, and public…
+<a href="./climate_health_hub/columbia_climate_change_and_health_bootcamp_2024.html" class="no-external">The Climate Change and Health Boot Camp is a three-day intensive course that will prepare clinicians, scientists, and other members of the research, health, and public…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./climate_health_hub/columbia_climate_change_and_health_bootcamp_2024.html">
+<a href="./climate_health_hub/columbia_climate_change_and_health_bootcamp_2024.html" class="no-external">
 <div class="listing-date">
 Jun 12, 2024
 </div>
@@ -454,19 +474,19 @@ Columbia Mailman School of Public Health
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="course,in person,free,2024" data-listing-date-sort="1715551200000" data-listing-file-modified-sort="1702892980391" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="5" data-categories="course,in person,free,2024" data-listing-date-sort="1715551200000" data-listing-file-modified-sort="1702484321579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="226">
 <div class="thumbnail">
-<p><a href="./climate_health_hub/pasteur_modeling_infectious_diseases_course_2024.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./climate_health_hub/pasteur_modeling_infectious_diseases_course_2024.html" class="no-external"></a></p><a href="./climate_health_hub/pasteur_modeling_infectious_diseases_course_2024.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./climate_health_hub/pasteur_modeling_infectious_diseases_course_2024.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./climate_health_hub/pasteur_modeling_infectious_diseases_course_2024.html">
 <h3 class="no-anchor listing-title">
-Modeling of infectious diseases course
+<a href="./climate_health_hub/pasteur_modeling_infectious_diseases_course_2024.html" class="no-external">Modeling of infectious diseases course</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./climate_health_hub/pasteur_modeling_infectious_diseases_course_2024.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('course'); return false;">
 course
@@ -481,14 +501,12 @@ free
 2024
 </div>
 </div>
-<a href="./climate_health_hub/pasteur_modeling_infectious_diseases_course_2024.html">
 <div class="listing-description">
-Mathematical modeling has become an essential tool for the study of infectious disease epidemics, making it possible to better characterize the complex transmission dynamics…
+<a href="./climate_health_hub/pasteur_modeling_infectious_diseases_course_2024.html" class="no-external">Mathematical modeling has become an essential tool for the study of infectious disease epidemics, making it possible to better characterize the complex transmission dynamics…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./climate_health_hub/pasteur_modeling_infectious_diseases_course_2024.html">
+<a href="./climate_health_hub/pasteur_modeling_infectious_diseases_course_2024.html" class="no-external">
 <div class="listing-date">
 May 13, 2024
 </div>
@@ -498,19 +516,19 @@ Institut Pasteur
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="congress,hybrid,paid,2024" data-listing-date-sort="1714168800000" data-listing-file-modified-sort="1702892980389" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="6" data-categories="congress,hybrid,paid,2024" data-listing-date-sort="1714168800000" data-listing-file-modified-sort="1702484321579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="181">
 <div class="thumbnail">
-<p><a href="./climate_health_hub/eccmid_2024.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./climate_health_hub/eccmid_2024.html" class="no-external"></a></p><a href="./climate_health_hub/eccmid_2024.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./climate_health_hub/eccmid_2024.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./climate_health_hub/eccmid_2024.html">
 <h3 class="no-anchor listing-title">
-European Congress of Clinical Microbiology and Infectious Diseases 2024
+<a href="./climate_health_hub/eccmid_2024.html" class="no-external">European Congress of Clinical Microbiology and Infectious Diseases 2024</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./climate_health_hub/eccmid_2024.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('congress'); return false;">
 congress
@@ -525,14 +543,12 @@ paid
 2024
 </div>
 </div>
-<a href="./climate_health_hub/eccmid_2024.html">
 <div class="listing-description">
-ECCMID 2024 will follow the successful format introduced in 2022, offering a comprehensive hybrid congress. While we encourage the majority of our faculty, abstract…
+<a href="./climate_health_hub/eccmid_2024.html" class="no-external">ECCMID 2024 will follow the successful format introduced in 2022, offering a comprehensive hybrid congress. While we encourage the majority of our faculty, abstract…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./climate_health_hub/eccmid_2024.html">
+<a href="./climate_health_hub/eccmid_2024.html" class="no-external">
 <div class="listing-date">
 Apr 27, 2024
 </div>
@@ -542,19 +558,19 @@ ECCMID
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="conference,hybrid,paid,2024" data-listing-date-sort="1713736800000" data-listing-file-modified-sort="1702892980389" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="7" data-categories="conference,hybrid,paid,2024" data-listing-date-sort="1713736800000" data-listing-file-modified-sort="1702484321579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="49">
 <div class="thumbnail">
-<p><a href="./climate_health_hub/climate_informatics_2024.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./climate_health_hub/climate_informatics_2024.html" class="no-external"></a></p><a href="./climate_health_hub/climate_informatics_2024.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./climate_health_hub/climate_informatics_2024.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./climate_health_hub/climate_informatics_2024.html">
 <h3 class="no-anchor listing-title">
-Climate Informatics 2024
+<a href="./climate_health_hub/climate_informatics_2024.html" class="no-external">Climate Informatics 2024</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./climate_health_hub/climate_informatics_2024.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('conference'); return false;">
 conference
@@ -569,14 +585,12 @@ paid
 2024
 </div>
 </div>
-<a href="./climate_health_hub/climate_informatics_2024.html">
 <div class="listing-description">
-Climate Informatics is an open community interested in research combining climate science with approaches from statistics, machine learning and data mining.
+<a href="./climate_health_hub/climate_informatics_2024.html" class="no-external">Climate Informatics is an open community interested in research combining climate science with approaches from statistics, machine learning and data mining.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./climate_health_hub/climate_informatics_2024.html">
+<a href="./climate_health_hub/climate_informatics_2024.html" class="no-external">
 <div class="listing-date">
 Apr 22, 2024
 </div>
@@ -586,19 +600,19 @@ ASTMH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="conference,in person,free,2024" data-listing-date-sort="1709593200000" data-listing-file-modified-sort="1702892980390" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="8" data-categories="conference,in person,free,2024" data-listing-date-sort="1709593200000" data-listing-file-modified-sort="1702484321579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="147">
 <div class="thumbnail">
-<p><a href="./climate_health_hub/hdr_uk_2024.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./climate_health_hub/hdr_uk_2024.html" class="no-external"></a></p><a href="./climate_health_hub/hdr_uk_2024.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./climate_health_hub/hdr_uk_2024.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./climate_health_hub/hdr_uk_2024.html">
 <h3 class="no-anchor listing-title">
-Health Data Research UK Conference 2024: The Grand Challenges in Health Data
+<a href="./climate_health_hub/hdr_uk_2024.html" class="no-external">Health Data Research UK Conference 2024: The Grand Challenges in Health Data</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./climate_health_hub/hdr_uk_2024.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('conference'); return false;">
 conference
@@ -613,14 +627,12 @@ free
 2024
 </div>
 </div>
-<a href="./climate_health_hub/hdr_uk_2024.html">
 <div class="listing-description">
-Health Data Research UK’s annual conference will be a free two-day, hybrid event to celebrate progress and bring people together to accelerate&nbsp;the trustworthy use of health…
+<a href="./climate_health_hub/hdr_uk_2024.html" class="no-external">Health Data Research UK’s annual conference will be a free two-day, hybrid event to celebrate progress and bring people together to accelerate&nbsp;the trustworthy use of health…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./climate_health_hub/hdr_uk_2024.html">
+<a href="./climate_health_hub/hdr_uk_2024.html" class="no-external">
 <div class="listing-date">
 Mar 5, 2024
 </div>
@@ -630,19 +642,19 @@ Health Data Research UK
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="course,in person,free,2024" data-listing-date-sort="1705273200000" data-listing-file-modified-sort="1702892980391" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="9" data-categories="course,in person,free,2024" data-listing-date-sort="1705273200000" data-listing-file-modified-sort="1702484321579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="78">
 <div class="thumbnail">
-<p><a href="./climate_health_hub/pasteur_spreading_infectious_agents_risk_assessment_2024.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./climate_health_hub/pasteur_spreading_infectious_agents_risk_assessment_2024.html" class="no-external"></a></p><a href="./climate_health_hub/pasteur_spreading_infectious_agents_risk_assessment_2024.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./climate_health_hub/pasteur_spreading_infectious_agents_risk_assessment_2024.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./climate_health_hub/pasteur_spreading_infectious_agents_risk_assessment_2024.html">
 <h3 class="no-anchor listing-title">
-Spreading of infectious agents and risk asessment couse
+<a href="./climate_health_hub/pasteur_spreading_infectious_agents_risk_assessment_2024.html" class="no-external">Spreading of infectious agents and risk asessment couse</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./climate_health_hub/pasteur_spreading_infectious_agents_risk_assessment_2024.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('course'); return false;">
 course
@@ -657,14 +669,12 @@ free
 2024
 </div>
 </div>
-<a href="./climate_health_hub/pasteur_spreading_infectious_agents_risk_assessment_2024.html">
 <div class="listing-description">
-The different modes of transmission of infectious agents, the eco-epidemiological consequences of changes in their environments related to human activities and the…
+<a href="./climate_health_hub/pasteur_spreading_infectious_agents_risk_assessment_2024.html" class="no-external">The different modes of transmission of infectious agents, the eco-epidemiological consequences of changes in their environments related to human activities and the…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./climate_health_hub/pasteur_spreading_infectious_agents_risk_assessment_2024.html">
+<a href="./climate_health_hub/pasteur_spreading_infectious_agents_risk_assessment_2024.html" class="no-external">
 <div class="listing-date">
 Jan 15, 2024
 </div>
@@ -674,19 +684,19 @@ Institut Pasteur
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="winter school,in person,paid,2023" data-listing-date-sort="1705273200000" data-listing-file-modified-sort="1702892980391" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="10" data-categories="winter school,in person,paid,2023" data-listing-date-sort="1705273200000" data-listing-file-modified-sort="1702484321579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="180">
 <div class="thumbnail">
-<p><a href="./climate_health_hub/winter_school_climate_change_epidemiology_2024.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./climate_health_hub/winter_school_climate_change_epidemiology_2024.html" class="no-external"></a></p><a href="./climate_health_hub/winter_school_climate_change_epidemiology_2024.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./climate_health_hub/winter_school_climate_change_epidemiology_2024.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./climate_health_hub/winter_school_climate_change_epidemiology_2024.html">
 <h3 class="no-anchor listing-title">
-Advanced Methods in Climate Change Epidemiology Winter School
+<a href="./climate_health_hub/winter_school_climate_change_epidemiology_2024.html" class="no-external">Advanced Methods in Climate Change Epidemiology Winter School</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./climate_health_hub/winter_school_climate_change_epidemiology_2024.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('winter school'); return false;">
 winter school
@@ -701,14 +711,12 @@ paid
 2023
 </div>
 </div>
-<a href="./climate_health_hub/winter_school_climate_change_epidemiology_2024.html">
 <div class="listing-description">
-Climate change is the defining public health challenge of the century. The assessment of its health impacts at different geographical and temporal scales, and the…
+<a href="./climate_health_hub/winter_school_climate_change_epidemiology_2024.html" class="no-external">Climate change is the defining public health challenge of the century. The assessment of its health impacts at different geographical and temporal scales, and the…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./climate_health_hub/winter_school_climate_change_epidemiology_2024.html">
+<a href="./climate_health_hub/winter_school_climate_change_epidemiology_2024.html" class="no-external">
 <div class="listing-date">
 Jan 15, 2024
 </div>
@@ -718,19 +726,19 @@ Swiss Epidemiology Winter School
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="workshop,in person,free,2024" data-listing-date-sort="1704841200000" data-listing-file-modified-sort="1702892980390" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="11" data-categories="workshop,in person,free,2024" data-listing-date-sort="1704841200000" data-listing-file-modified-sort="1702484321579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="289">
 <div class="thumbnail">
-<p><a href="./climate_health_hub/oxford_workshop_climate_change_epidemics_2024.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./climate_health_hub/oxford_workshop_climate_change_epidemics_2024.html" class="no-external"></a></p><a href="./climate_health_hub/oxford_workshop_climate_change_epidemics_2024.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./climate_health_hub/oxford_workshop_climate_change_epidemics_2024.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./climate_health_hub/oxford_workshop_climate_change_epidemics_2024.html">
 <h3 class="no-anchor listing-title">
-Workshop on Climate Change and Epidemics
+<a href="./climate_health_hub/oxford_workshop_climate_change_epidemics_2024.html" class="no-external">Workshop on Climate Change and Epidemics</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./climate_health_hub/oxford_workshop_climate_change_epidemics_2024.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('workshop'); return false;">
 workshop
@@ -745,14 +753,12 @@ free
 2024
 </div>
 </div>
-<a href="./climate_health_hub/oxford_workshop_climate_change_epidemics_2024.html">
 <div class="listing-description">
-Climate change is the key threat to this and future generations. With the Earth warming faster than ever before, we face inter-linked migration, infrastructure and public…
+<a href="./climate_health_hub/oxford_workshop_climate_change_epidemics_2024.html" class="no-external">Climate change is the key threat to this and future generations. With the Earth warming faster than ever before, we face inter-linked migration, infrastructure and public…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./climate_health_hub/oxford_workshop_climate_change_epidemics_2024.html">
+<a href="./climate_health_hub/oxford_workshop_climate_change_epidemics_2024.html" class="no-external">
 <div class="listing-date">
 Jan 10, 2024
 </div>
@@ -762,19 +768,19 @@ University of Oxford, Mathematical Institute
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="masterclass,online,2023" data-listing-date-sort="1702508400000" data-listing-file-modified-sort="1702892980390" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="12" data-categories="masterclass,online,2023" data-listing-date-sort="1702508400000" data-listing-file-modified-sort="1702484321579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="44">
 <div class="thumbnail">
-<p><a href="./climate_health_hub/okumu_2023.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./climate_health_hub/okumu_2023.html" class="no-external"></a></p><a href="./climate_health_hub/okumu_2023.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./climate_health_hub/okumu_2023.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./climate_health_hub/okumu_2023.html">
 <h3 class="no-anchor listing-title">
-Climate, Mosquitoes and Disease: a Masterclass with World Leading Experts
+<a href="./climate_health_hub/okumu_2023.html" class="no-external">Climate, Mosquitoes and Disease: a Masterclass with World Leading Experts</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./climate_health_hub/okumu_2023.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('masterclass'); return false;">
 masterclass
@@ -786,14 +792,12 @@ online
 2023
 </div>
 </div>
-<a href="./climate_health_hub/okumu_2023.html">
 <div class="listing-description">
-Confirmed Experts
+<a href="./climate_health_hub/okumu_2023.html" class="no-external">Confirmed Experts</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./climate_health_hub/okumu_2023.html">
+<a href="./climate_health_hub/okumu_2023.html" class="no-external">
 <div class="listing-date">
 Dec 14, 2023
 </div>
@@ -803,19 +807,19 @@ Fredros Okumu
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="symposium,in person,paid,2023" data-listing-date-sort="1701903600000" data-listing-file-modified-sort="1702892980390" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="13" data-categories="symposium,in person,paid,2023" data-listing-date-sort="1701903600000" data-listing-file-modified-sort="1702484321579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="87">
 <div class="thumbnail">
-<p><a href="./climate_health_hub/evigilancia_2023.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./climate_health_hub/evigilancia_2023.html" class="no-external"></a></p><a href="./climate_health_hub/evigilancia_2023.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./climate_health_hub/evigilancia_2023.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./climate_health_hub/evigilancia_2023.html">
 <h3 class="no-anchor listing-title">
-E-Vigilância 2023
+<a href="./climate_health_hub/evigilancia_2023.html" class="no-external">E-Vigilância 2023</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./climate_health_hub/evigilancia_2023.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('symposium'); return false;">
 symposium
@@ -830,14 +834,12 @@ paid
 2023
 </div>
 </div>
-<a href="./climate_health_hub/evigilancia_2023.html">
 <div class="listing-description">
-Welcome to E-Vigilancia 2023, a symposium dedicated to uniting and strengthening the global community of researchers, students, health professionals, and entrepreneurs from…
+<a href="./climate_health_hub/evigilancia_2023.html" class="no-external">Welcome to E-Vigilancia 2023, a symposium dedicated to uniting and strengthening the global community of researchers, students, health professionals, and entrepreneurs from…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./climate_health_hub/evigilancia_2023.html">
+<a href="./climate_health_hub/evigilancia_2023.html" class="no-external">
 <div class="listing-date">
 Dec 7, 2023
 </div>
@@ -847,19 +849,19 @@ E-Vigilância
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-categories="workshop,online,free,2023" data-listing-date-sort="1701817200000" data-listing-file-modified-sort="1702892980390" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="14" data-categories="workshop,online,free,2023" data-listing-date-sort="1701817200000" data-listing-file-modified-sort="1702484321579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="57">
 <div class="thumbnail">
-<p><a href="./climate_health_hub/enbel_workshop_forest_fires_2023.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./climate_health_hub/enbel_workshop_forest_fires_2023.html" class="no-external"></a></p><a href="./climate_health_hub/enbel_workshop_forest_fires_2023.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./climate_health_hub/enbel_workshop_forest_fires_2023.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./climate_health_hub/enbel_workshop_forest_fires_2023.html">
 <h3 class="no-anchor listing-title">
-Forest fires, health and climate concerns workshop
+<a href="./climate_health_hub/enbel_workshop_forest_fires_2023.html" class="no-external">Forest fires, health and climate concerns workshop</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./climate_health_hub/enbel_workshop_forest_fires_2023.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('workshop'); return false;">
 workshop
@@ -874,14 +876,12 @@ free
 2023
 </div>
 </div>
-<a href="./climate_health_hub/enbel_workshop_forest_fires_2023.html">
 <div class="listing-description">
-The University of Tartu, Umea University, Finnish Meteorological Institute (FMI), the Swedish meteorological and hydrological institute (SMHI) and CICERO Center for…
+<a href="./climate_health_hub/enbel_workshop_forest_fires_2023.html" class="no-external">The University of Tartu, Umea University, Finnish Meteorological Institute (FMI), the Swedish meteorological and hydrological institute (SMHI) and CICERO Center for…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./climate_health_hub/enbel_workshop_forest_fires_2023.html">
+<a href="./climate_health_hub/enbel_workshop_forest_fires_2023.html" class="no-external">
 <div class="listing-date">
 Dec 6, 2023
 </div>
@@ -891,19 +891,19 @@ ENBEL
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="15" data-categories="conference,hybrid,2023" data-listing-date-sort="1701385200000" data-listing-file-modified-sort="1702892980389" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="15" data-categories="conference,hybrid,2023" data-listing-date-sort="1701385200000" data-listing-file-modified-sort="1702484321579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="75">
 <div class="thumbnail">
-<p><a href="./climate_health_hub/cop28_2023.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./climate_health_hub/cop28_2023.html" class="no-external"></a></p><a href="./climate_health_hub/cop28_2023.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./climate_health_hub/cop28_2023.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./climate_health_hub/cop28_2023.html">
 <h3 class="no-anchor listing-title">
-COP28
+<a href="./climate_health_hub/cop28_2023.html" class="no-external">COP28</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./climate_health_hub/cop28_2023.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('conference'); return false;">
 conference
@@ -915,14 +915,12 @@ hybrid
 2023
 </div>
 </div>
-<a href="./climate_health_hub/cop28_2023.html">
 <div class="listing-description">
-COP28 UAE will be a milestone moment when the world will take stock of its progress on the Paris Agreement.
+<a href="./climate_health_hub/cop28_2023.html" class="no-external">COP28 UAE will be a milestone moment when the world will take stock of its progress on the Paris Agreement.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./climate_health_hub/cop28_2023.html">
+<a href="./climate_health_hub/cop28_2023.html" class="no-external">
 <div class="listing-date">
 Dec 1, 2023
 </div>
@@ -932,19 +930,19 @@ United Nations
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="16" data-categories="meeting,online,free,2023" data-listing-date-sort="1701298800000" data-listing-file-modified-sort="1702892980390" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="16" data-categories="meeting,online,free,2023" data-listing-date-sort="1701298800000" data-listing-file-modified-sort="1702484321579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="47">
 <div class="thumbnail">
-<p><a href="./climate_health_hub/isntd_connect_dengue_2023.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./climate_health_hub/isntd_connect_dengue_2023.html" class="no-external"></a></p><a href="./climate_health_hub/isntd_connect_dengue_2023.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./climate_health_hub/isntd_connect_dengue_2023.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./climate_health_hub/isntd_connect_dengue_2023.html">
 <h3 class="no-anchor listing-title">
-Meeting: How increasingly public dengue data will transform research and control
+<a href="./climate_health_hub/isntd_connect_dengue_2023.html" class="no-external">Meeting: How increasingly public dengue data will transform research and control</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./climate_health_hub/isntd_connect_dengue_2023.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('meeting'); return false;">
 meeting
@@ -959,14 +957,17 @@ free
 2023
 </div>
 </div>
-<a href="./climate_health_hub/isntd_connect_dengue_2023.html">
 <div class="listing-description">
+<a href="./climate_health_hub/isntd_connect_dengue_2023.html" class="no-external">
 
+<ul>
+<li>Dr Oliver Brady (Associate Professor, London School of Hygiene &amp; Tropical Medicine)</li>
+<li>Dr Diana Rojas Alvarez (Technical Officer Arbovirus HQ/EZD, World Health Organization)</li>
+<li>…</li></ul></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./climate_health_hub/isntd_connect_dengue_2023.html">
+<a href="./climate_health_hub/isntd_connect_dengue_2023.html" class="no-external">
 <div class="listing-date">
 Nov 30, 2023
 </div>
@@ -976,19 +977,19 @@ ISNTD
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="17" data-categories="conference,online,free,2023" data-listing-date-sort="1701212400000" data-listing-file-modified-sort="1702892980390" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="17" data-categories="conference,online,free,2023" data-listing-date-sort="1701212400000" data-listing-file-modified-sort="1702484321579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="135">
 <div class="thumbnail">
-<p><a href="./climate_health_hub/lancet_countdown_report_2023.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./climate_health_hub/lancet_countdown_report_2023.html" class="no-external"></a></p><a href="./climate_health_hub/lancet_countdown_report_2023.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./climate_health_hub/lancet_countdown_report_2023.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./climate_health_hub/lancet_countdown_report_2023.html">
 <h3 class="no-anchor listing-title">
-European Launch of the 2023 Lancet Countdown Report
+<a href="./climate_health_hub/lancet_countdown_report_2023.html" class="no-external">European Launch of the 2023 Lancet Countdown Report</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./climate_health_hub/lancet_countdown_report_2023.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('conference'); return false;">
 conference
@@ -1003,14 +1004,12 @@ free
 2023
 </div>
 </div>
-<a href="./climate_health_hub/lancet_countdown_report_2023.html">
 <div class="listing-description">
-The Lancet Countdown: Tracking Progress on Health and Climate Change is an international research collaboration that brings together 114 leading experts to monitor how the…
+<a href="./climate_health_hub/lancet_countdown_report_2023.html" class="no-external">The Lancet Countdown: Tracking Progress on Health and Climate Change is an international research collaboration that brings together 114 leading experts to monitor how the…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./climate_health_hub/lancet_countdown_report_2023.html">
+<a href="./climate_health_hub/lancet_countdown_report_2023.html" class="no-external">
 <div class="listing-date">
 Nov 29, 2023
 </div>
@@ -1020,19 +1019,19 @@ Lancet Countdown
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="18" data-categories="conference,online,free,2023" data-listing-date-sort="1700607600000" data-listing-file-modified-sort="1702892980390" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="18" data-categories="conference,online,free,2023" data-listing-date-sort="1700607600000" data-listing-file-modified-sort="1702484321579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="60">
 <div class="thumbnail">
-<p><a href="./climate_health_hub/isntd_climate_health_2023.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./climate_health_hub/isntd_climate_health_2023.html" class="no-external"></a></p><a href="./climate_health_hub/isntd_climate_health_2023.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./climate_health_hub/isntd_climate_health_2023.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./climate_health_hub/isntd_climate_health_2023.html">
 <h3 class="no-anchor listing-title">
-Climate &amp; Health Conference 2023
+<a href="./climate_health_hub/isntd_climate_health_2023.html" class="no-external">Climate &amp; Health Conference 2023</a>
 </h3>
 <div class="listing-subtitle">
-Climate change, tropical diseases and global health
+<a href="./climate_health_hub/isntd_climate_health_2023.html" class="no-external">Climate change, tropical diseases and global health</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('conference'); return false;">
 conference
@@ -1047,14 +1046,12 @@ free
 2023
 </div>
 </div>
-<a href="./climate_health_hub/isntd_climate_health_2023.html">
 <div class="listing-description">
-Welcome to our third annual ISNTD Climate &amp; Health conference scheduled for Nov 22nd 2023, taking a closer look at the linkages between climate, infectious diseases (with a…
+<a href="./climate_health_hub/isntd_climate_health_2023.html" class="no-external">Welcome to our third annual ISNTD Climate &amp; Health conference scheduled for Nov 22nd 2023, taking a closer look at the linkages between climate, infectious diseases (with a…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./climate_health_hub/isntd_climate_health_2023.html">
+<a href="./climate_health_hub/isntd_climate_health_2023.html" class="no-external">
 <div class="listing-date">
 Nov 22, 2023
 </div>
@@ -1064,19 +1061,19 @@ ISNTD
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="19" data-categories="webinar,online,free,2023" data-listing-date-sort="1700607600000" data-listing-file-modified-sort="1702892980390" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="19" data-categories="webinar,online,free,2023" data-listing-date-sort="1700607600000" data-listing-file-modified-sort="1702484321579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
 <div class="thumbnail">
-<p><a href="./climate_health_hub/ms_mudancas_climaticas_saude_2023.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./climate_health_hub/ms_mudancas_climaticas_saude_2023.html" class="no-external"></a></p><a href="./climate_health_hub/ms_mudancas_climaticas_saude_2023.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./climate_health_hub/ms_mudancas_climaticas_saude_2023.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./climate_health_hub/ms_mudancas_climaticas_saude_2023.html">
 <h3 class="no-anchor listing-title">
-Mudanças Climáticas e Saúde
+<a href="./climate_health_hub/ms_mudancas_climaticas_saude_2023.html" class="no-external">Mudanças Climáticas e Saúde</a>
 </h3>
 <div class="listing-subtitle">
-12a Sessão do Ciclo de Estudos
+<a href="./climate_health_hub/ms_mudancas_climaticas_saude_2023.html" class="no-external">12a Sessão do Ciclo de Estudos</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('webinar'); return false;">
 webinar
@@ -1091,14 +1088,20 @@ free
 2023
 </div>
 </div>
-<a href="./climate_health_hub/ms_mudancas_climaticas_saude_2023.html">
 <div class="listing-description">
+<a href="./climate_health_hub/ms_mudancas_climaticas_saude_2023.html" class="no-external">
 
-</div>
+<ul>
+<li>https://webinar.aids.gov.br</li>
+<li>Recording: https://www.youtube.com/watch?v=5qdde7mkiZM</li>
+</ul>
+
+
 </a>
 </div>
+</div>
 <div class="metadata">
-<a href="./climate_health_hub/ms_mudancas_climaticas_saude_2023.html">
+<a href="./climate_health_hub/ms_mudancas_climaticas_saude_2023.html" class="no-external">
 <div class="listing-date">
 Nov 22, 2023
 </div>
@@ -1108,19 +1111,19 @@ Ministério da Saúde (Brasil)
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="20" data-categories="webinar,online,free,2023" data-listing-date-sort="1700521200000" data-listing-file-modified-sort="1702892980389" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="20" data-categories="webinar,online,free,2023" data-listing-date-sort="1700521200000" data-listing-file-modified-sort="1702484321579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="114">
 <div class="thumbnail">
-<p><a href="./climate_health_hub/ccmi_webinar_climate_change_health_2023.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./climate_health_hub/ccmi_webinar_climate_change_health_2023.html" class="no-external"></a></p><a href="./climate_health_hub/ccmi_webinar_climate_change_health_2023.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./climate_health_hub/ccmi_webinar_climate_change_health_2023.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./climate_health_hub/ccmi_webinar_climate_change_health_2023.html">
 <h3 class="no-anchor listing-title">
-Climate change and health impacts webinar
+<a href="./climate_health_hub/ccmi_webinar_climate_change_health_2023.html" class="no-external">Climate change and health impacts webinar</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./climate_health_hub/ccmi_webinar_climate_change_health_2023.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('webinar'); return false;">
 webinar
@@ -1135,14 +1138,12 @@ free
 2023
 </div>
 </div>
-<a href="./climate_health_hub/ccmi_webinar_climate_change_health_2023.html">
 <div class="listing-description">
-Join the CCMI project for an insightful webinar on 21 November 2023: 11:00-12:00 CET exploring the latest developments and opportunities in assessing the links between…
+<a href="./climate_health_hub/ccmi_webinar_climate_change_health_2023.html" class="no-external">Join the CCMI project for an insightful webinar on 21 November 2023: 11:00-12:00 CET exploring the latest developments and opportunities in assessing the links between…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./climate_health_hub/ccmi_webinar_climate_change_health_2023.html">
+<a href="./climate_health_hub/ccmi_webinar_climate_change_health_2023.html" class="no-external">
 <div class="listing-date">
 Nov 21, 2023
 </div>
@@ -1152,19 +1153,19 @@ CCMI
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="21" data-categories="conference,hybrid,free,2023" data-listing-date-sort="1696975200000" data-listing-file-modified-sort="1702892980389" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="21" data-categories="conference,hybrid,free,2023" data-listing-date-sort="1696975200000" data-listing-file-modified-sort="1702484321579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="141">
 <div class="thumbnail">
-<p><a href="./climate_health_hub/enbel_conference_2023.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./climate_health_hub/enbel_conference_2023.html" class="no-external"></a></p><a href="./climate_health_hub/enbel_conference_2023.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./climate_health_hub/enbel_conference_2023.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./climate_health_hub/enbel_conference_2023.html">
 <h3 class="no-anchor listing-title">
-Connecting Health and Climate Change Conference
+<a href="./climate_health_hub/enbel_conference_2023.html" class="no-external">Connecting Health and Climate Change Conference</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./climate_health_hub/enbel_conference_2023.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('conference'); return false;">
 conference
@@ -1179,14 +1180,12 @@ free
 2023
 </div>
 </div>
-<a href="./climate_health_hub/enbel_conference_2023.html">
 <div class="listing-description">
-Climate change is already impacting health in multiple ways and is undermining determinants for good health, such as clean air and water, food, safe shelter, and economic…
+<a href="./climate_health_hub/enbel_conference_2023.html" class="no-external">Climate change is already impacting health in multiple ways and is undermining determinants for good health, such as clean air and water, food, safe shelter, and economic…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./climate_health_hub/enbel_conference_2023.html">
+<a href="./climate_health_hub/enbel_conference_2023.html" class="no-external">
 <div class="listing-date">
 Oct 11, 2023
 </div>
@@ -1280,6 +1279,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1314,24 +1331,64 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
   const processXRef = (id, note) => {
-    if (id.startsWith('sec-')) {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
         }
         return container.innerHTML
       } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
-      return note.innerHTML;
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -1340,27 +1397,56 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       instance.disable();
       let url = xref.getAttribute('href');
       let hash = undefined; 
-      try { hash = new URL(url).hash; } catch {}
-      const id = hash.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note !== null) {
-        try {
-          const html = processXRef(id, note);
-          instance.setContent(html);
-        } finally {
-          instance.enable();
-          instance.show();
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
         }
       } else {
-        // See if we can fetch this
-        fetch(url.split('#')[0])
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
         .then(res => res.text())
         .then(html => {
           const parser = new DOMParser();
           const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.getElementById(id);
+          const note = htmlDoc.querySelector('main.content');
           if (note !== null) {
-            const html = processXRef(id, note);
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
             instance.setContent(html);
           } 
         }).finally(() => {
@@ -1438,6 +1524,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {

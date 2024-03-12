@@ -1,0 +1,65 @@
+---
+title: "Dengue outbreak in Brazil, 2024: understanding the numbers"
+date: "2024-02-05"
+categories: [epidemiology, dengue]
+---
+
+I am writing this post to take a look at the dengue cases in Brazil, as the news reports that there is an increasing number of *suspected cases* early on 2024.
+
+## Packages
+
+```{r}
+#| message: false
+library(tidyverse)
+library(microdatasus)
+```
+
+## Data
+
+Let's download the most recent data from the Brazilian Health Ministry with the [microdatasus](https://rfsaldanha.github.io/microdatasus/) package. **Premiminary datasets** are available for the years of 2023 and 2024.
+
+```{r}
+dengue_raw <- fetch_datasus(
+  year_start = 2023, year_end = 2024, 
+  information_system = "SINAN-DENGUE", 
+  timeout = 480
+)
+
+# vars = c("DT_NOTIFIC", "DT_SIN_PRI", "MUNICIPIO", "CLASSI_FIN")
+
+dengue <- process_sinan_dengue(
+  data = dengue_raw, 
+  municipality_data = FALSE
+)
+```
+
+## Overview
+
+Let's take a look at the suspect cases.
+
+```{r}
+dengue |>
+  mutate(
+    DT_SIN_PRI = as_date(DT_SIN_PRI),
+    DT_SIN_PRI = ceiling_date(DT_SIN_PRI, unit = "month")
+  ) |>
+  filter(year(DT_SIN_PRI) >= 2023) |>
+  group_by(DT_SIN_PRI) |>
+  summarise(freq = n()) |>
+  ungroup() |>
+  ggplot(aes(x = DT_SIN_PRI, y = freq)) +
+  geom_bar(stat = "identity")
+```
+
+```{r}
+res <- dengue |>
+  filter(year(DT_SIN_PRI) >= 2024) |>
+  select(DT_SIN_PRI, CLASSI_FIN) |>
+  mutate(CLASSI_FIN = replace_na(CLASSI_FIN, "Em investigação"))
+```
+
+```{r}
+res %>%
+  group_by(CLASSI_FIN) %>%
+  summarise(freq = n())
+```

@@ -12,10 +12,10 @@
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.163">
+<meta name="generator" content="quarto-1.5.24">
 <meta name="author" content="Raphael Saldanha">
 <meta name="dcterms.date" content="2023-12-18">
-<title>Raphael Saldanha - Disease and climate data fusion for modelling</title>
+<title>Raphael Saldanha – Disease and climate data fusion for modelling</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -35,7 +35,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -74,7 +74,7 @@
     code span.at { color: #657422; } /* Attribute */
     code span.bn { color: #ad0000; } /* BaseN */
     code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
     code span.ch { color: #20794d; } /* Char */
     code span.cn { color: #8f5902; } /* Constant */
     code span.co { color: #5e5e5e; } /* Comment */
@@ -88,7 +88,7 @@
     code span.fu { color: #4758ab; } /* Function */
     code span.im { color: #00769e; } /* Import */
     code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
     code span.op { color: #5e5e5e; } /* Operator */
     code span.ot { color: #003b4f; } /* Other */
     code span.pp { color: #ad0000; } /* Preprocessor */
@@ -427,9 +427,10 @@ Raphael Saldanha
 <li><p><strong>Direct</strong> relationship: floods, droughts, heat waves…</p></li>
 <li><p><strong>Indirect</strong> relationship</p></li>
 </ul>
-<div class="cell" data-reveal="true">
+<div class="cell" data-reveal="true" data-layout-align="default">
 <div class="cell-output-display">
 <div>
+<p></p><figure class=""></figure><p></p>
 <div>
 <pre class="mermaid mermaid-js">%%{
   init: {
@@ -446,6 +447,7 @@ climate --&gt; health
 climate --&gt; social(Social &amp; economic \n determinants) --&gt; health
 </pre>
 </div>
+<p></p>
 </div>
 </div>
 </div>
@@ -463,7 +465,7 @@ climate --&gt; social(Social &amp; economic \n determinants) --&gt; health
 </ul>
 </div><div class="column" style="width:55%;">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/aedes_cycle.png"></p>
+<figure><p><img data-src="images/aedes_cycle.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
@@ -521,7 +523,7 @@ climate --&gt; social(Social &amp; economic \n determinants) --&gt; health
 </ul>
 </div><div class="column" style="width:60%;">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/NL161-Sabater-Fig1.jpg"></p>
+<figure><p><img data-src="images/NL161-Sabater-Fig1.jpg" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
@@ -554,9 +556,10 @@ climate --&gt; social(Social &amp; economic \n determinants) --&gt; health
 <li>
 <strong>Time coverage</strong>: 1950-2022, daily data</li>
 </ul></section><section id="workflow" class="slide level2"><h2>Workflow</h2>
-<div class="cell" data-reveal="true">
+<div class="cell" data-reveal="true" data-layout-align="default">
 <div class="cell-output-display">
 <div>
+<p></p><figure class=""></figure><p></p>
 <div>
 <pre class="mermaid mermaid-js">%%{
   init: {
@@ -577,6 +580,7 @@ agg --&gt; mun(Municipal boundaries)
 mun --&gt; zs(Zonal statistics)
 </pre>
 </div>
+<p></p>
 </div>
 </div>
 </div>
@@ -585,13 +589,13 @@ mun --&gt; zs(Zonal statistics)
 <li>Usage of <a href="https://github.com/ErikKusch/KrigR">{KrigR}</a> package to access the <a href="https://cds.climate.copernicus.eu">Copernicus Climate Data Store API</a>, crop data at server side, download and perform the time aggregation.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">download_ERA</span>(<span class="at">Variable =</span> <span class="st">"2m_temperature"</span>, <span class="at">DataSet =</span> <span class="st">"era5-land"</span>, </span>
-<span id="cb1-2"><a href="#cb1-2"></a>             <span class="at">DateStart =</span> <span class="st">"2022-12-01"</span>, <span class="at">DateStop =</span> <span class="st">"2022-12-31"</span>,</span>
-<span id="cb1-3"><a href="#cb1-3"></a>             <span class="at">TResolution =</span> <span class="st">"day"</span>, <span class="at">TStep =</span> <span class="dv">1</span>,</span>
-<span id="cb1-4"><a href="#cb1-4"></a>             <span class="at">FUN =</span> <span class="st">"max"</span>,</span>
-<span id="cb1-5"><a href="#cb1-5"></a>             <span class="at">Extent =</span> <span class="fu">extent</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="fl">118.47</span>,<span class="sc">-</span><span class="fl">34.1</span>,<span class="sc">-</span><span class="fl">56.65</span>, <span class="fl">33.28</span>)), </span>
-<span id="cb1-6"><a href="#cb1-6"></a>             <span class="at">Dir =</span> <span class="st">"dir_name"</span>, <span class="at">FileName =</span> <span class="st">"file_name.nc"</span>, </span>
-<span id="cb1-7"><a href="#cb1-7"></a>             <span class="at">API_User =</span> <span class="st">"api_user"</span>, <span class="at">API_Key =</span> <span class="st">"api_key"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">download_ERA</span>(<span class="at">Variable =</span> <span class="st">"2m_temperature"</span>, <span class="at">DataSet =</span> <span class="st">"era5-land"</span>, </span>
+<span id="cb1-2"><a></a>             <span class="at">DateStart =</span> <span class="st">"2022-12-01"</span>, <span class="at">DateStop =</span> <span class="st">"2022-12-31"</span>,</span>
+<span id="cb1-3"><a></a>             <span class="at">TResolution =</span> <span class="st">"day"</span>, <span class="at">TStep =</span> <span class="dv">1</span>,</span>
+<span id="cb1-4"><a></a>             <span class="at">FUN =</span> <span class="st">"max"</span>,</span>
+<span id="cb1-5"><a></a>             <span class="at">Extent =</span> <span class="fu">extent</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="fl">118.47</span>,<span class="sc">-</span><span class="fl">34.1</span>,<span class="sc">-</span><span class="fl">56.65</span>, <span class="fl">33.28</span>)), </span>
+<span id="cb1-6"><a></a>             <span class="at">Dir =</span> <span class="st">"dir_name"</span>, <span class="at">FileName =</span> <span class="st">"file_name.nc"</span>, </span>
+<span id="cb1-7"><a></a>             <span class="at">API_User =</span> <span class="st">"api_user"</span>, <span class="at">API_Key =</span> <span class="st">"api_key"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Took ~15 days to download and process the data from 8 climate indicators covering the Latin America region</li>
@@ -606,7 +610,7 @@ mun --&gt; zs(Zonal statistics)
 </ul>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/era5-land-daily-aggregates.png"></p>
+<figure><p><img data-src="images/era5-land-daily-aggregates.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
@@ -631,7 +635,7 @@ mun --&gt; zs(Zonal statistics)
 </ul>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/dag_overview.png" style="width:70.0%"></p>
+<figure><p><img data-src="images/dag_overview.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
 </figure>
 </div>
 </div>
@@ -641,11 +645,11 @@ mun --&gt; zs(Zonal statistics)
 <li>Zonal statistics weighted by the fraction of the cell that is covered, with the <a href="https://isciences.gitlab.io/exactextractr/">{exactextractr}</a> package</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">exact_extract</span>(</span>
-<span id="cb2-2"><a href="#cb2-2"></a>  <span class="at">x =</span> rst,</span>
-<span id="cb2-3"><a href="#cb2-3"></a>  <span class="at">y =</span> pol,</span>
-<span id="cb2-4"><a href="#cb2-4"></a>  <span class="at">fun =</span> <span class="st">"mean"</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">exact_extract</span>(</span>
+<span id="cb2-2"><a></a>  <span class="at">x =</span> rst,</span>
+<span id="cb2-3"><a></a>  <span class="at">y =</span> pol,</span>
+<span id="cb2-4"><a></a>  <span class="at">fun =</span> <span class="st">"mean"</span></span>
+<span id="cb2-5"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="results" class="slide level2 smaller"><h2>Results</h2>
 <table style="width:100%;">
@@ -701,12 +705,12 @@ mun --&gt; zs(Zonal statistics)
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/tmin_map.png" style="width:70.0%"></p>
+<figure><p><img data-src="images/tmin_map.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
 </figure>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/tmax_map.png" style="width:70.0%"></p>
+<figure><p><img data-src="images/tmax_map.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
 </figure>
 </div>
 </div>
@@ -715,12 +719,12 @@ mun --&gt; zs(Zonal statistics)
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/prec_map_2.png" style="width:100.0%"></p>
+<figure><p><img data-src="images/prec_map_2.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
 </figure>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/prec_map_1.png" style="width:100.0%"></p>
+<figure><p><img data-src="images/prec_map_1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -741,12 +745,12 @@ mun --&gt; zs(Zonal statistics)
 <li>Few intersecting cells or fractions</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/era5_grid_overlay.png" style="width:80.0%"></p>
+<figure><p><img data-src="images/era5_grid_overlay.png" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
 </figure>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/count_plot.png" style="width:100.0%"></p>
+<figure><p><img data-src="images/count_plot.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -764,7 +768,7 @@ mun --&gt; zs(Zonal statistics)
 </ul>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/pop_era5_grid_overlay.png" style="width:100.0%"></p>
+<figure><p><img data-src="images/pop_era5_grid_overlay.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -772,9 +776,11 @@ mun --&gt; zs(Zonal statistics)
 </section><section id="thanks" class="slide level2"><h2>Thanks!</h2>
 <p>Contact, data links, R packages and short tutorials available at <a href="https://rfsaldanha.github.io/">rfsaldanha.github.io</a></p>
 
+<div class="quarto-auto-generated-content">
+<p><img src="inria_logo.png" class="slide-logo"></p>
+<div class="footer footer-default">
 
-<img src="inria_logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
-
+</div>
 </div>
 </section>
 </div>
@@ -787,7 +793,6 @@ mun --&gt; zs(Zonal statistics)
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1083,6 +1088,24 @@ mun --&gt; zs(Zonal statistics)
         // clear code selection
         e.clearSelection();
       });
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -1119,7 +1142,11 @@ mun --&gt; zs(Zonal statistics)
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

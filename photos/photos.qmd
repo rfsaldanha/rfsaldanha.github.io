@@ -3,8 +3,6 @@ title: "Photos"
 title-block-banner: true
 page-layout: full
 freeze: true
-filters:
-   - lightbox
 lightbox: auto
 echo: false
 ---
