@@ -8,19 +8,19 @@ title: "CV"
 
 -   Date of birth: April 18, 1985
 
--   Languages: Portuguese, English
+-   Languages: Portuguese, English, French
 
 ## Education
 
--   2022 - current. **Post-doctoral** researcher at Inria and LNCC. Artificial intelligence applications on public health.
+-   2022 - current. **Post-doctoral** researcher at Inria and LNCC. *Artificial Intelligence applications on Public Health and Climate-Sensitive Diseases forecast.*
 
--   2018 - 2021. **Doctorate** at Fiocruz, PPGICS. Information and Communication in Health.
+-   2018 - 2021. **Doctorate** at Fiocruz, PPGICS. Information and Communication in Health. *Data Science Applications for Public Health*.
 
--   2015 - 2017. **Master's** at UFJF - PPGSC. Public Health.
+-   2015 - 2017. **Master's** at UFJF - PPGSC on Public Health. *Traffic violence and economic growth, an Spatial Econometrics analysis.*
 
--   2008 - 2009. **Specialization** at UFJF. Computational Statistical Methods
+-   2008 - 2009. **Specialization** at UFJF. Computational Statistical Methods. *Traffic violence and zero-alcohol-consumption law, an policy evaluation study.*
 
--   2003 - 2007. **Bachelor** Degree at UFJF - ICHL-DG. Geography.
+-   2003 - 2007. **Bachelor** Degree at UFJF - ICHL-DG. Geography. *Regionalization proposal for the Juiz de Fora city based on Census 2000 data.*
 
 ## Academic interests
 
@@ -32,8 +32,6 @@ title: "CV"
 -   Shiny apps
 -   Quarto
 -   Plotly
--   Python
--   Jupyter Hub
 -   duckdb, SQLite
 -   ElasticSearch
 -   Kibana
@@ -42,9 +40,9 @@ title: "CV"
 
 -   QGIS
 -   ESRI ArcGIS
--   Geoserver
+-   GeoServer
 
-### Other
+### Other technologies
 
 -   Gephi
 -   LaTeX
@@ -61,19 +59,15 @@ title: "CV"
 
 -   2017 - 2018 Research assistant at IRD, Maison de la Télédétection (Montpellier, FR).
 
--   2017 - current. Workshop teacher of R.
-
 -   2017 - current. Workshop teacher of Introduction to Spatial Econometry with R.
 
--   2013 Teaching Assistant, Scientific Methodology at UFJF, CRITT.
+-   2013 - Teaching Assistant, Scientific Methodology at UFJF, CRITT.
 
--   2023 Distance learning supervisor at Unibanco Institute.
+-   2005 - 2016 GIS and statistics analyst at Plangeo (private company).
 
--   2005 - 2016 GIS and statistics analyst at Plangeo.
+-   2012-2013 Distance learning supervisor of Statistics, course of Public Management.
 
--   2012 Approved for substitute teacher position of Thematic Cartograph.
-
--   2012 Distance learning supervisor of Statistics, course of Public Management.
+-   2012 Approved for substitute teacher position of Thematic Cartography.
 
 -   2011 Distance learning tutor for Business Statistics (Curso de Administração Pública à Distância -- PNAP), UFJF.
 
@@ -81,41 +75,45 @@ title: "CV"
 
 ## Additional training
 
--   2022 Public Health Disparities Geocoding Project 2.0. Harvard School of Public Health
+-   2023 - Nature-based solutions for tackling global health challenges. Heidelberg Institute of Global Health, HIGH, Alemanha.
 
--   2022 Developing the SIR Model. Imperial College (Coursera)
+-   2022 - Algorithms and Programming Methods for Big Data Laboratório Nacional de Computação Científica (LNCC, Brazil)
 
--   2022 Algoritmos e Modelos de Programação para Big Data. Laboratório Nacional de Computação Científica
+-   2023 - VII Escola Avançada em Big Data Analytics (USP, Brazil)
 
--   2022 Machine Learning, Curso-R.
+-   2022 - Public Health Disparities Geocoding Project 2.0. Harvard School of Public Health
 
--   2022 R Deploy, Curso-R.
+-   2022 - Developing the SIR Model. Imperial College (Coursera)
 
--   2021 QBA/On-line - Sensibilização em Gestão da Qualidade, Biossegurança e Ambiente, Fiocruz.
+-   2022 - Machine Learning methods with R, Curso-R school.
 
--   2020 Comunicação, Mídia e Saúde em Contexto de Emergências Sanitárias, UFAL.
+-   2021 - R Deploy methods, Curso-R school.
 
--   2018 Anthropological and Historical Approaches of Visualising Epidemics, COC, Fiocruz.
+-   2021 - QBA/On-line - Sensibilização em Gestão da Qualidade, Biossegurança e Ambiente, Fiocruz.
 
--   2018 Information Visualization, Foundations and Applied Perception, NYU Tandon School of Engineering (Coursera).
+-   2020 - Comunicação, Mídia e Saúde em Contexto de Emergências Sanitárias, UFAL.
 
--   2017 Practical Machine Learning, Johns Hopkins University (Coursera).
+-   2018 - Anthropological and Historical Approaches of Visualising Epidemics, COC, Fiocruz.
 
--   2016 Harvard - Brazil Collaborative Public Health Course, Harvard School of Public Health.
+-   2018 - Information Visualization, Foundations and Applied Perception, NYU Tandon School of Engineering (Coursera).
 
--   2015 Introduction to Big Data, University of California, San Diego (Coursera).
+-   2017 - Practical Machine Learning, Johns Hopkins University (Coursera).
 
--   2011 Geoestatística com o uso do R, UFJF.
+-   2016 - Harvard - Brazil Collaborative Public Health Course, Harvard School of Public Health.
 
--   2007 Workshop em modelagem em estudos longitudinais, UFJF.
+-   2015 - Introduction to Big Data, University of California, San Diego (Coursera).
 
--   2007 Geomarketing - Conceitos e aplicações, Centro Universitário Senac.
+-   2011 - Geoestatística com o uso do R, UFJF.
 
--   2004 Geografia e movimentos sociais, A América Latina, AGB.
+-   2007 - Workshop em modelagem em estudos longitudinais, UFJF.
 
--   2003 Introdução à Gestão Ambiental Urbana, UFJF.
+-   2007 - Geomarketing - Conceitos e aplicações, Centro Universitário Senac.
 
--   2003 Flash Mx, CRITT, UFJF.
+-   2004 - Geografia e movimentos sociais, A América Latina, AGB.
+
+-   2003 - Introdução à Gestão Ambiental Urbana, UFJF.
+
+-   2003 - Flash Mx, CRITT, UFJF.
 
 ## Hobbies
 
