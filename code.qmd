@@ -12,6 +12,8 @@ title: "Packages & Code"
 
 [![](https://gh-card.dev/repos/rfsaldanha/brpop.svg?fullname=)](https://rfsaldanha.github.io/brpop/)
 
+[![](https://gh-card.dev/repos/rfsaldanha/rspell.svg?fullname=)](https://rfsaldanha.github.io/rspell/)
+
 [![](https://gh-card.dev/repos/rfsaldanha/brclimr.svg?fullname=)](https://rfsaldanha.github.io/brclimr/)
 
 [![](https://gh-card.dev/repos/rfsaldanha/opendenguedata.svg?fullname=)](https://rfsaldanha.github.io/opendenguedata/)

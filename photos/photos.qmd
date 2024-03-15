@@ -47,10 +47,7 @@ prepare_photos(
 
 ![Phragmites australis](images/20240211_0259.jpg){description="`r descrip_exif('images/20240211_0259.jpg')`" desc-position="left" group="mejean"}
 
-
-
 ![White Stork](images/20240211_0504.jpg){description="`r descrip_exif('images/20240211_0504.jpg')`" desc-position="left" group="mejean"}
-
 :::
 
 ## Iceland
