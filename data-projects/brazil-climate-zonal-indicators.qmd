@@ -31,7 +31,9 @@ The following indicators and aggregations were computed.
 | Surface pressure      | mean                             | max, min, stdev, count      |
 | Total precipitation   | sum                              | max, min, stdev, count, sum |
 
-*A data paper with full methodology description was submitted to peer review.*
+A paper with the full methodology was published in the Environmental Data Science journal.
+
+[![](https://zenodo.org/badge/DOI/10.1017/eds.2024.3.svg)](https://doi.org/10.1017/eds.2024.3)
 
 ## Zonal BR-DWGD
 
