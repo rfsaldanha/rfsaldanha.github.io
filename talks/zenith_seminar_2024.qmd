@@ -270,16 +270,30 @@ Rio de Janeiro municipalities. January 1, 2010.
 :::
 :::
 
-## Usage
+## Usage {.small}
 
+
+
+
+
+::: columns
+::: {.column width="60%"}
 -   Training multivariate **machine learning models** to forecast dengue incidence in Brazil with a **subsets strategy**
 
 $$
-\small
-\begin{aligned}        D_t = \mu + & \theta_1 D_{t-1} + \cdots + \theta_p D_{t-p} + \\        & \lambda_1 C_{t-1} + \cdots + \lambda_p C_{t-p} + \\         & \varepsilon_1 e_{t-1} + \cdots + \varepsilon_p e_{t-p}    \end{aligned}
+{\small
+\begin{aligned}        D_t = \mu + & \theta_1 D_{t-1} + \cdots + \theta_p D_{t-p} + \\        & \lambda_1 C_{t-1} + \cdots + \lambda_p C_{t-p} + \\         & \varepsilon_1 e_{t-1} + \cdots + \varepsilon_p e_{t-p}    \end{aligned}}
 $$
 
+-   Cluster municipalities based on dengue spread and climate regimes
+-   Train different models for each partition
+:::
+
+::: {.column width="40%"}
 -   Accepted paper on **ICDE2024**, Multivariate Time Series Analytics workshop
+![](images/icde.png){fig-align="center" width="50%"}
+:::
+:::
 
 ## Next steps... {.smaller}
 

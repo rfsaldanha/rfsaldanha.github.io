@@ -2181,7 +2181,7 @@
     "href": "talks/zenith_seminar_2024.html#usage",
     "title": "Disease and climate data fusion for modeling",
     "section": "Usage",
-    "text": "Usage\n\nTraining multivariate machine learning models to forecast dengue incidence in Brazil with a subsets strategy\n\n\n\\[\n\\small\n\\begin{aligned}        D_t = \\mu + & \\theta_1 D_{t-1} + \\cdots + \\theta_p D_{t-p} + \\\\        & \\lambda_1 C_{t-1} + \\cdots + \\lambda_p C_{t-p} + \\\\         & \\varepsilon_1 e_{t-1} + \\cdots + \\varepsilon_p e_{t-p}    \\end{aligned}\n\\]\n\nAccepted paper on ICDE2024, Multivariate Time Series Analytics workshop"
+    "text": "Usage\n\n\n\nTraining multivariate machine learning models to forecast dengue incidence in Brazil with a subsets strategy\n\n\n\\[\n{\\small\n\\begin{aligned}        D_t = \\mu + & \\theta_1 D_{t-1} + \\cdots + \\theta_p D_{t-p} + \\\\        & \\lambda_1 C_{t-1} + \\cdots + \\lambda_p C_{t-p} + \\\\         & \\varepsilon_1 e_{t-1} + \\cdots + \\varepsilon_p e_{t-p}    \\end{aligned}}\n\\]\n\nCluster municipalities based on dengue spread and climate regimes\nTrain different models for each partition\n\n\n\nAccepted paper on ICDE2024, Multivariate Time Series Analytics workshop"
   },
   {
     "objectID": "talks/zenith_seminar_2024.html#backup-slides",
