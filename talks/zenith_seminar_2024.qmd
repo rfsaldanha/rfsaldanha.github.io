@@ -1,0 +1,355 @@
+---
+title: "Disease and climate data fusion for modeling"
+subtitle: "An application case for Brazil"
+author: "Raphael Saldanha"
+institute: "Inria"
+date: "2024-03-20"
+description: "Talk at the Inria Zenith's Team Seminar."
+categories: [brclim]
+image: images/prec_map_1.png
+format:
+  revealjs: 
+    theme: inria_style.scss
+    logo: inria_logo.png
+    transition: fade
+    background-transition: fade
+    pointer:
+      pointerSize: 40
+      color: '#e63312'
+code-link: true
+revealjs-plugins:
+  - pointer
+---
+
+## Introduction
+
+-   Postdoctoral researcher at **Inria**, Zenith team
+-   Master's at Public Health, Doctorate on Health Information
+-   Data Science applied to Public Health
+
+## Climate sensitive diseases
+
+-   **Direct** relationship: floods, droughts, heat waves...
+
+-   **Indirect** relationship
+
+```{mermaid}
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'fontSize': '30px'
+    }
+  }
+}%%
+flowchart LR
+
+climate(Climate) --> vector(Disease vectors) --> health(Human health)
+climate --> health
+climate --> social(Social & economic \n determinants) --> health
+```
+
+## A time-lagged relationship
+
+::: columns
+::: {.column width="45%"}
+-   Vector life cycle from a time perspective
+-   Climate conditions from the **past** leads to the disease incidence of **tomorrow**
+:::
+
+::: {.column width="55%"}
+![](images/aedes_cycle.png){fig-align="center"}
+:::
+:::
+
+## Climate data
+
+::: columns
+::: {.column width="45%"}
+-   Data sources
+    -   In situ: Weather stations, rain gauges
+    -   Remote: Satellites, drones
+-   Data products
+    -   Statistical surface interpolations
+    -   Model reanalysis
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="15%"}
+{{< fa sun size=2xl >}} 
+<br></br> 
+{{< fa cloud-rain size=2xl >}} 
+<br></br> 
+{{< fa wind size=2xl >}} 
+<br></br> 
+{{< fa snowflake size=2xl >}}
+:::
+
+::: {.column width="15%"}
+<br></br> 
+<br></br>
+{{< fa satellite size=2xl >}}
+<br></br> 
+{{< fa tower-cell size=2xl >}}
+:::
+
+::: {.column width="15%"}
+<br></br> 
+<br></br> 
+{{< fa layer-group size=2xl >}} 
+<br></br> 
+{{< fa table-cells size=2xl >}}
+:::
+:::
+
+## ERA5-Land reanalysis
+
+::: columns
+::: {.column width="40%"}
+-   Copernicus, ECMWF
+-   Global coverage
+-   Hourly data
+-   1950 to the present (one week delay)
+-   Spatial resolution \~9km
+-   Several climate indicators
+:::
+
+::: {.column width="60%"}
+![](images/NL161-Sabater-Fig1.jpg){fig-align="center"}
+:::
+:::
+
+## Data structures
+
+-   Climate indicators: grid data
+-   Disease incidence: tabular, individual cases aggregated by spatial regions and time spans
+
+::: columns
+::: {.column width="50%"}
+![](images/temp.png){width="80%"}
+:::
+
+::: {.column width="50%"}
+![](images/admin.png){width="80%"}
+:::
+:::
+
+## Fusioning data
+
+![](images/zonal_statistics.png)
+
+## Case example
+
+**Zonal Statistics of Climate Indicators from ERA5-Land for Brazilian Municipalities**
+
+-   **8 climate indicators**: maximum, minimum and average temperature, total precipitation, surface pressure, dewpoint, $u$ and $v$ components of wind
+-   **6 zonal statistics** computation for the 5,570 Brazilian municipalities
+    -   Minimum, maximum, average, sum, standard deviation, cell count
+-   **Time coverage**: 1950-2022, daily data
+
+## Workflow
+
+```{mermaid}
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'fontSize': '30px'
+    }
+  }
+}%%
+flowchart TD
+
+era5(ERA5-Land \n indicators) --> hdata(Hourly data)
+bb(Latin America \n bounding box) --> hdata
+
+hdata --> agg(Aggregation to \n daily data)
+
+agg --> mun(Municipal boundaries)
+mun --> zs(Zonal statistics)
+```
+
+## ERA5-Land Daily datasets
+
+::: columns
+::: {.column width="50%"}
+-   Open data, available at Zenodo
+-   7,105 files, 658.7 GB
+-   Reproducible R scripts
+-   Plans to continuously update this dataset and add more indicators
+:::
+
+::: {.column width="50%"}
+![](images/era5-land-daily-aggregates.png){fig-align="center"}
+:::
+:::
+
+<https://rfsaldanha.github.io/data-projects/era5land-daily-latin-america.html>
+
+## Zonal statistics {.smaller}
+
+::: columns
+::: {.column width="50%"}
+-   Challenges to handle the **amount of data** and **computational tasks**
+-   Strategy
+    -   Group the tasks into **chunks** and compute in **parallel**
+    -   DAG (Directed-Acyclic Graph) approach to **orchestrate computation**, with the [{targets}](https://docs.ropensci.org/targets/) package
+    -   Save results into columnar-oriented **databases** for fast data retrieval (duckdb and parquet)    
+:::
+
+::: {.column width="50%"}
+![](images/dag_overview.png){fig-align="center" width="70%"}
+:::
+:::
+
+
+
+##  {.big_text .center data-menu-title="Records" }
+
+::: big_text
+6,085,749,761 records
+:::
+
+## Temperature
+
+::: columns
+::: {.column width="50%"}
+![](images/tmin_map.png){fig-align="center" width="70%"}
+:::
+
+::: {.column width="50%"}
+![](images/tmax_map.png){fig-align="center" width="70%"}
+:::
+:::
+
+## Precipitation {.smaller}
+
+::: columns
+::: {.column width="50%"}
+![](images/prec_map_2.png){fig-align="center" width="100%"}
+:::
+
+::: {.column width="50%"}
+![](images/prec_map_1.png){fig-align="center" width="100%"}
+:::
+:::
+
+Rio de Janeiro municipalities. January 1, 2010.
+
+## Resolution and spatial variability {.smaller}
+
+::: columns
+::: {.column width="50%"}
+-   Brazilian municipalities size variation
+    -   Altamira (PA): 159,533 km2
+    -   Santa Cruz de Minas (MG): 3 km2
+-   ERA5-Land cell: \~ 100 km2
+
+![](images/era5_grid_overlay.png){fig-align="center" width="80%"}
+:::
+
+::: {.column width="50%"}
+![](images/count_plot.png){fig-align="center" width="100%"}
+:::
+:::
+
+## Published paper
+
+::: columns
+::: {.column width="60%"}
+-   Environmental Data Science journal
+-   Published on February 8, 2024
+-   Swift submission process
+-   Inria has an [agreement](https://intranet.inria.fr/Actualite/Edition-nouvel-accord-avec-Cambridge-University-Press) for APC fees with the Cambridge University Press
+:::
+
+::: {.column width="40%"}
+[![](https://zenodo.org/badge/DOI/10.1017/eds.2024.3.svg)](https://doi.org/10.1017/eds.2024.3) ![](images/eds_paper.png)
+:::
+:::
+
+## Usage
+
+-   Training multivariate **machine learning models** to forecast dengue incidence in Brazil with a **subsets strategy**
+
+$$
+\small
+\begin{aligned}        D_t = \mu + & \theta_1 D_{t-1} + \cdots + \theta_p D_{t-p} + \\        & \lambda_1 C_{t-1} + \cdots + \lambda_p C_{t-p} + \\         & \varepsilon_1 e_{t-1} + \cdots + \varepsilon_p e_{t-p}    \end{aligned}
+$$
+
+-   Accepted paper on **ICDE2024**, Multivariate Time Series Analytics workshop
+
+## Next steps... {.smaller}
+
+::: columns
+::: {.column width="50%"}
+-   Continuous update
+-   Human settlements, population-weighted zonal statistics
+-   Compute climate time-series features: heat waves, persistent rains, etc.
+-   Adopt climate products with finer resolutions when possible (CHIRPS)
+-   Expand results to other countries
+:::
+
+::: {.column width="50%"}
+![](images/pop_era5_grid_overlay.png){fig-align="center" width="100%"}
+:::
+:::
+
+##  {.big_text .center data-menu-title="Thanks" }
+
+::: big_text
+Thanks
+:::
+
+## Backup slides
+
+## Climate reanalysis
+
+<video controls loop preload data-autoplay src="https://climate.copernicus.eu/sites/default/files/2020-01/2019.11.21_ECMWF%20Reanalysis%20video_with%20caption_v4_IOB.mp4">
+
+</video>
+
+## ERA5-Land hourly to daily aggregation
+
+-   Usage of [{KrigR}](https://github.com/ErikKusch/KrigR) package to access the [Copernicus Climate Data Store API](https://cds.climate.copernicus.eu), crop data at server side, download and perform the time aggregation.
+
+```{r}
+#| echo: true
+#| eval: false
+download_ERA(Variable = "2m_temperature", DataSet = "era5-land", 
+             DateStart = "2022-12-01", DateStop = "2022-12-31",
+             TResolution = "day", TStep = 1,
+             FUN = "max",
+             Extent = extent(c(-118.47,-34.1,-56.65, 33.28)), 
+             Dir = "dir_name", FileName = "file_name.nc", 
+             API_User = "api_user", API_Key = "api_key")
+```
+
+-   Took \~15 days to download and process the data from 8 climate indicators covering the Latin America region
+
+## Computation
+
+-   Zonal statistics weighted by the fraction of the cell that is covered, with the [{exactextractr}](https://isciences.gitlab.io/exactextractr/) package
+
+```{r}
+#| echo: true
+#| eval: false
+exact_extract(
+  x = rst,
+  y = pol,
+  fun = "mean"
+)
+```
+
+## Results {.smaller}
+
+| ERA5-Land indicators  | Daily time-aggregating functions | Spatial zonal statistics    |
+|----------------------|----------------------------|----------------------|
+| Temperature (2m)      | mean, max, min                   | max, min, stdev, count      |
+| Dewpoint temp. (2m)   | mean                             | max, min, stdev, count      |
+| $u$ component of wind | mean                             | max, min, stdev, count      |
+| $v$ component of wind | mean                             | max, min, stdev, count      |
+| Surface pressure      | mean                             | max, min, stdev, count      |
+| Total precipitation   | sum                              | max, min, stdev, count, sum |
