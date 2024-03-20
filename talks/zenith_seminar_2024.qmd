@@ -3,7 +3,7 @@ title: "Disease and climate data fusion for modeling"
 subtitle: "An application case for Brazil"
 author: "Raphael Saldanha"
 institute: "Inria"
-date: "2024-03-20"
+date: "2024-03-21"
 description: "Talk at the Inria Zenith's Team Seminar."
 categories: [brclim]
 image: images/prec_map_1.png
