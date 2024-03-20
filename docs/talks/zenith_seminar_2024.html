@@ -675,17 +675,46 @@ mun --&gt; zs(Zonal statistics)
 </div>
 </div>
 </div>
-</section><section id="published-paper" class="slide level2"><h2>Published paper</h2>
+</section><section id="published-paper" class="slide level2 small"><h2>Published paper</h2>
 <div class="columns">
-<div class="column" style="width:60%;">
+<div class="column" style="width:50%;">
 <ul>
 <li>Environmental Data Science journal</li>
 <li>Published on February 8, 2024</li>
-<li>Swift submission process</li>
+<li>Journal’s most read paper of the month</li>
+<li>More than 9,000 datasets downloads on Zenodo so far</li>
 <li>Inria has an <a href="https://intranet.inria.fr/Actualite/Edition-nouvel-accord-avec-Cambridge-University-Press">agreement</a> for APC fees with the Cambridge University Press</li>
+<li>Swift submission process</li>
 </ul>
-</div><div class="column" style="width:40%;">
+</div><div class="column" style="width:50%;">
 <p><a href="https://doi.org/10.1017/eds.2024.3"><img data-src="https://zenodo.org/badge/DOI/10.1017/eds.2024.3.svg"></a> <img data-src="images/eds_paper.png"></p>
+</div>
+</div>
+</section><section id="brclimr-r-package" class="slide level2 small"><h2>brclimr R package</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>
+<a href="https://rfsaldanha.github.io/brclimr/">Package</a> to retrieve climate data of Brazilian municipalities</li>
+<li>Query remote parquet files stored on a S3 system</li>
+<li>Avoid huge dataset downloads when user wants only a subset of the data</li>
+<li>Available on <a href="https://cran.r-project.org/web/packages/brclimr/index.html">CRAN</a>. More than 3,000 downloads</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>brclimr<span class="sc">::</span><span class="fu">fetch_data</span>(</span>
+<span id="cb1-2"><a></a>    <span class="at">code_muni =</span> <span class="dv">3304557</span>,</span>
+<span id="cb1-3"><a></a>    <span class="at">product =</span> <span class="st">"brdwgd"</span>,</span>
+<span id="cb1-4"><a></a>    <span class="at">indicator =</span> <span class="st">"rh"</span>,</span>
+<span id="cb1-5"><a></a>    <span class="at">statistics =</span> <span class="st">"mean"</span>,</span>
+<span id="cb1-6"><a></a>    <span class="at">date_start =</span> <span class="fu">as.Date</span>(<span class="st">"2010-10-15"</span>),</span>
+<span id="cb1-7"><a></a>    <span class="at">date_end =</span> <span class="fu">as.Date</span>(<span class="st">"2010-10-20"</span>)</span>
+<span id="cb1-8"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/brclimr_downloads.gif" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
 </div>
 </div>
 </section><section id="usage" class="slide level2 small"><h2>Usage</h2>
@@ -738,13 +767,13 @@ mun --&gt; zs(Zonal statistics)
 <li>Usage of <a href="https://github.com/ErikKusch/KrigR">{KrigR}</a> package to access the <a href="https://cds.climate.copernicus.eu">Copernicus Climate Data Store API</a>, crop data at server side, download and perform the time aggregation.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">download_ERA</span>(<span class="at">Variable =</span> <span class="st">"2m_temperature"</span>, <span class="at">DataSet =</span> <span class="st">"era5-land"</span>, </span>
-<span id="cb1-2"><a></a>             <span class="at">DateStart =</span> <span class="st">"2022-12-01"</span>, <span class="at">DateStop =</span> <span class="st">"2022-12-31"</span>,</span>
-<span id="cb1-3"><a></a>             <span class="at">TResolution =</span> <span class="st">"day"</span>, <span class="at">TStep =</span> <span class="dv">1</span>,</span>
-<span id="cb1-4"><a></a>             <span class="at">FUN =</span> <span class="st">"max"</span>,</span>
-<span id="cb1-5"><a></a>             <span class="at">Extent =</span> <span class="fu">extent</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="fl">118.47</span>,<span class="sc">-</span><span class="fl">34.1</span>,<span class="sc">-</span><span class="fl">56.65</span>, <span class="fl">33.28</span>)), </span>
-<span id="cb1-6"><a></a>             <span class="at">Dir =</span> <span class="st">"dir_name"</span>, <span class="at">FileName =</span> <span class="st">"file_name.nc"</span>, </span>
-<span id="cb1-7"><a></a>             <span class="at">API_User =</span> <span class="st">"api_user"</span>, <span class="at">API_Key =</span> <span class="st">"api_key"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">download_ERA</span>(<span class="at">Variable =</span> <span class="st">"2m_temperature"</span>, <span class="at">DataSet =</span> <span class="st">"era5-land"</span>, </span>
+<span id="cb2-2"><a></a>             <span class="at">DateStart =</span> <span class="st">"2022-12-01"</span>, <span class="at">DateStop =</span> <span class="st">"2022-12-31"</span>,</span>
+<span id="cb2-3"><a></a>             <span class="at">TResolution =</span> <span class="st">"day"</span>, <span class="at">TStep =</span> <span class="dv">1</span>,</span>
+<span id="cb2-4"><a></a>             <span class="at">FUN =</span> <span class="st">"max"</span>,</span>
+<span id="cb2-5"><a></a>             <span class="at">Extent =</span> <span class="fu">extent</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="fl">118.47</span>,<span class="sc">-</span><span class="fl">34.1</span>,<span class="sc">-</span><span class="fl">56.65</span>, <span class="fl">33.28</span>)), </span>
+<span id="cb2-6"><a></a>             <span class="at">Dir =</span> <span class="st">"dir_name"</span>, <span class="at">FileName =</span> <span class="st">"file_name.nc"</span>, </span>
+<span id="cb2-7"><a></a>             <span class="at">API_User =</span> <span class="st">"api_user"</span>, <span class="at">API_Key =</span> <span class="st">"api_key"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Took ~15 days to download and process the data from 8 climate indicators covering the Latin America region</li>
@@ -753,11 +782,11 @@ mun --&gt; zs(Zonal statistics)
 <li>Zonal statistics weighted by the fraction of the cell that is covered, with the <a href="https://isciences.gitlab.io/exactextractr/">{exactextractr}</a> package</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">exact_extract</span>(</span>
-<span id="cb2-2"><a></a>  <span class="at">x =</span> rst,</span>
-<span id="cb2-3"><a></a>  <span class="at">y =</span> pol,</span>
-<span id="cb2-4"><a></a>  <span class="at">fun =</span> <span class="st">"mean"</span></span>
-<span id="cb2-5"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">exact_extract</span>(</span>
+<span id="cb3-2"><a></a>  <span class="at">x =</span> rst,</span>
+<span id="cb3-3"><a></a>  <span class="at">y =</span> pol,</span>
+<span id="cb3-4"><a></a>  <span class="at">fun =</span> <span class="st">"mean"</span></span>
+<span id="cb3-5"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="results" class="slide level2 smaller"><h2>Results</h2>
 <table>

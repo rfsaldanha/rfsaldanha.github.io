@@ -255,26 +255,52 @@ Rio de Janeiro municipalities. January 1, 2010.
 :::
 :::
 
-## Published paper
+## Published paper {.small}
 
 ::: columns
-::: {.column width="60%"}
+::: {.column width="50%"}
 -   Environmental Data Science journal
 -   Published on February 8, 2024
--   Swift submission process
+-   Journal's most read paper of the month
+-   More than 9,000 datasets downloads on Zenodo so far
 -   Inria has an [agreement](https://intranet.inria.fr/Actualite/Edition-nouvel-accord-avec-Cambridge-University-Press) for APC fees with the Cambridge University Press
+-   Swift submission process
 :::
 
-::: {.column width="40%"}
+::: {.column width="50%"}
 [![](https://zenodo.org/badge/DOI/10.1017/eds.2024.3.svg)](https://doi.org/10.1017/eds.2024.3) ![](images/eds_paper.png)
 :::
 :::
 
+## brclimr R package {.small}
+
+::: columns
+::: {.column width="50%"}
+-   [Package](https://rfsaldanha.github.io/brclimr/) to retrieve climate data of Brazilian municipalities
+-   Query remote parquet files stored on a S3 system
+-   Avoid huge dataset downloads when user wants only a subset of the data
+-   Available on [CRAN](https://cran.r-project.org/web/packages/brclimr/index.html). More than 3,000 downloads
+
+```{r, eval=FALSE, echo=TRUE}
+brclimr::fetch_data(
+    code_muni = 3304557,
+    product = "brdwgd",
+    indicator = "rh",
+    statistics = "mean",
+    date_start = as.Date("2010-10-15"),
+    date_end = as.Date("2010-10-20")
+  )
+```
+
+
+:::
+
+::: {.column width="50%"}
+![](images/brclimr_downloads.gif){fig-align="center" width="100%"}
+:::
+:::
+
 ## Usage {.small}
-
-
-
-
 
 ::: columns
 ::: {.column width="60%"}

@@ -2174,7 +2174,7 @@
     "href": "talks/zenith_seminar_2024.html#published-paper",
     "title": "Disease and climate data fusion for modeling",
     "section": "Published paper",
-    "text": "Published paper\n\n\n\nEnvironmental Data Science journal\nPublished on February 8, 2024\nSwift submission process\nInria has an agreement for APC fees with the Cambridge University Press"
+    "text": "Published paper\n\n\n\nEnvironmental Data Science journal\nPublished on February 8, 2024\nJournal’s most read paper of the month\nMore than 9,000 datasets downloads on Zenodo so far\nInria has an agreement for APC fees with the Cambridge University Press\nSwift submission process"
   },
   {
     "objectID": "talks/zenith_seminar_2024.html#usage",
@@ -2196,5 +2196,12 @@
     "title": "Disease and climate data fusion for modeling",
     "section": "",
     "text": "Thanks"
+  },
+  {
+    "objectID": "talks/zenith_seminar_2024.html#brclimr-r-package",
+    "href": "talks/zenith_seminar_2024.html#brclimr-r-package",
+    "title": "Disease and climate data fusion for modeling",
+    "section": "brclimr R package",
+    "text": "brclimr R package\n\n\n\n\nPackage to retrieve climate data of Brazilian municipalities\nQuery remote parquet files stored on a S3 system\nAvoid huge dataset downloads when user wants only a subset of the data\nAvailable on CRAN. More than 3,000 downloads\n\n\nbrclimr::fetch_data(\n    code_muni = 3304557,\n    product = \"brdwgd\",\n    indicator = \"rh\",\n    statistics = \"mean\",\n    date_start = as.Date(\"2010-10-15\"),\n    date_end = as.Date(\"2010-10-20\")\n  )"
   }
 ]
