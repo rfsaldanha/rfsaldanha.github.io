@@ -2203,5 +2203,12 @@
     "title": "Disease and climate data fusion for modeling",
     "section": "brclimr R package",
     "text": "brclimr R package\n\n\n\n\nPackage to retrieve climate data of Brazilian municipalities\nQuery remote parquet files stored on a S3 system\nAvoid huge dataset downloads when user wants only a subset of the data\nAvailable on CRAN. More than 3,000 downloads\n\n\nbrclimr::fetch_data(\n    code_muni = 3304557,\n    product = \"brdwgd\",\n    indicator = \"rh\",\n    statistics = \"mean\",\n    date_start = as.Date(\"2010-10-15\"),\n    date_end = as.Date(\"2010-10-20\")\n  )"
+  },
+  {
+    "objectID": "talks/zenith_seminar_2024.html#angra-dos-reis",
+    "href": "talks/zenith_seminar_2024.html#angra-dos-reis",
+    "title": "Disease and climate data fusion for modeling",
+    "section": "Angra dos Reis",
+    "text": "Angra dos Reis"
   }
 ]

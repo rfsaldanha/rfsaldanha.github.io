@@ -238,6 +238,10 @@ mun --> zs(Zonal statistics)
 
 Rio de Janeiro municipalities. January 1, 2010.
 
+## Angra dos Reis
+
+![](images/angra.webp){fig-align="center" width="100%"}
+
 ## Resolution and spatial variability {.smaller}
 
 ::: columns
