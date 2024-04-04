@@ -1,0 +1,152 @@
+---
+title: "Query local parquet files"
+date: "2024-04-04"
+categories: [database, parquet, arrow]
+---
+
+After releasing the parquet files with zonal statistics of climate indicators for Brazilian municipalities, I am receiving some inquiries about how to query the files in an efficient way, avoiding loading all data to the memory. This blog post shows some examples about how to do it.
+
+After downloading the desired data, load the following packages on R.
+
+## Packages
+
+```{r}
+#| message: false
+library(tidyverse) #<1>
+library(arrow)     #<2>
+```
+
+1.  The `{tidyverse}` load several packages like `{dplyr}` that will help us to handle the data.
+2.  The `{arrow}` package present efficient ways to connect to parquet files.
+
+## Access the data
+
+### Small datasets
+
+The most straightforward way to read a parquet file is with the `read_parquet()` command. But this will load all parquet data to the memory. Use this command only with small parquet files (and remember that parquet files are usually compressed).
+
+### Large datasets
+
+For large datasets, we can use the `open_dataset()` command. This will create a virtual link to the parquet file but will not load it to the memory.
+
+```{r}
+temp_mean <- open_dataset(sources = "~/Downloads/2m_temperature_mean.parquet")
+
+print(temp_mean)
+```
+
+With the `sources` argument, you can point to a specific parquet file or to a folder with several files. Check the help to learn more about this command `?open_dataset`.
+
+When we print the `temp_mean` object, the console shows how many parquet files are linked and the available variables.
+
+#### Dimension
+
+To check the dimension (number of lines and columns), you can use the `dim()` command.
+
+```{r}
+dim(temp_mean)
+```
+
+That is a lot of rows!
+
+#### Print first rows
+
+To take a look at the file, we can print the first rows.
+
+```{r}
+temp_mean |>   #<1>
+  head() |>    #<2>
+  collect() |> #<3>
+  gt::gt()     #<4>
+```
+
+1.  The object that points to the parquet file.
+2.  R base command to access the first rows of a data frame. You can use `head(10)` to access more lines if you want.
+3.  Collect the data from the parquet file to the memory.
+4.  Present the result in a nice table.
+
+## Query 
+
+Now we are ready to query the data. We can use some `dplyr` verbs to filter the data we want.
+
+```{r}
+res1 <- temp_mean |>
+  filter(code_muni %in% c(3303401, 3136702, 3304557)) |> #<1>
+  filter(year(date) >= 2000) |> #<2>
+  filter(name == "2m_temperature_mean_mean") |> #<3>
+  collect() #<4>
+```
+
+1.  Filter some municipalities (Nova Friburgo, Juiz de Fora and Rio de Janeiro IBGE codes).
+2.  Filter dates where the year is 2000 or greater.
+3.  Filter the indicator.
+4.  Collect the data from the parquet to memory.
+
+Let's inspect the results.
+
+```{r}
+dim(res1)
+```
+
+```{r}
+res1 |> head() |> gt::gt()
+```
+
+As you can see, the command `collect()` does all the magic. Filters and other verbs are translated and executed with the file on disk and only the results are returned.
+
+We can also make some aggregations before loading the data into memory. By example, let's convert this data from daily to weekly.
+
+```{r}
+res2 <- temp_mean |>
+  filter(code_muni %in% c(3303401, 3136702, 3304557)) |>
+  filter(year(date) >= 2000) |>
+  filter(name == "2m_temperature_mean_mean") |>
+  mutate(date_w = ceiling_date(date, unit = "week")) |> #<1>
+  group_by(code_muni, date_w, name) |> #<2>
+  summarise(value = mean(value, na.rm = TRUE)) |> #<3>
+  ungroup() |> #<4>
+  collect() #<5>
+```
+
+1.  First, we create a date variable with the first date of the week. Take a look on `?ceiling_date` to learn more about this function.
+2.  Now we will group or data by municipality code, week start date and indicator name.
+3.  Summarize value by the mean of values.
+4.  Ungroup the data.
+5.  Collect the data from the parquet file to memory.
+
+```{r}
+dim(res2)
+```
+
+```{r}
+res2 |> head() |> gt::gt()
+```
+
+And a simple plot.
+
+```{r}
+ggplot(data = res2, aes(x = date_w, y = value, group = code_muni, color = as.character(code_muni))) +
+  geom_line(stat = "identity", alpha = .5) +
+  theme_bw() +
+  theme(legend.position = "bottom", legend.direction = "horizontal") +
+  labs(title = "Average temperature", color = "Municipality",
+       x = "Week start", y = "Temp (k)")
+```
+
+## Bonus: indicator meaning
+
+What the indicator **2m_temperature_mean_mean** means?
+
+-   `2m_temperature` is the base indicator, it is the atmospheric temperature at 2m height.
+
+-   `_mean` (the first mean): we are using the average temperature of the day. It could be the maximum (`max`) or minimum (`min`) for example.
+
+-   `_mean` (the second mean): we are dealing with zonal statistics. This is the zonal statistic that was applied on all spatial cells that intersects the municipality. We also have the `max`, `min`, `sd` (standard deviation) and `count` (cells count). For volume indicators there is also the `sum`.
+
+Usually, for temperature we will use the `mean`, and for precipitation the `sum`.
+
+## Session info
+
+```{r}
+sessioninfo::session_info()
+```

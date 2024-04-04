@@ -55,6 +55,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/query_local_parquet_files.html",
       "/posts/hot_2023.html",
       "/posts/time_series_clustering.html",
       "/posts/std_br_covid_rates.html",
