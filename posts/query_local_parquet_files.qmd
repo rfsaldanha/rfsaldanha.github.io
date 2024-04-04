@@ -4,7 +4,7 @@ date: "2024-04-04"
 categories: [database, parquet, arrow]
 ---
 
-After releasing the parquet files with zonal statistics of climate indicators for Brazilian municipalities, I am receiving some inquiries about how to query the files in an efficient way, avoiding loading all data to the memory. This blog post shows some examples about how to do it.
+After releasing [parquet](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html) files with zonal statistics of climate indicators for Brazilian municipalities, I received some inquiries about how to query the files in an efficient way, avoiding loading all data to the memory. This blog post shows some examples about how to do it.
 
 After downloading the desired data, load the following packages on R.
 
