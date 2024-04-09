@@ -14,7 +14,10 @@ To make climate indicators compatible with lattice structures, zonal statistics 
 I created some zonal statistics of climate indicators datasets for Brazilian municipalities from some climate data products.
 
 ## Zonal ERA5-Land
-[![](https://img.shields.io/badge/download-10.5281/zenodo.10036211-green.svg)](https://doi.org/10.5281/zenodo.10036211)
+
+1950-2022: [![](https://img.shields.io/badge/download-10.5281/zenodo.10036211-green.svg)](https://doi.org/10.5281/zenodo.10036211)
+
+2023: [![](https://img.shields.io/badge/download-10.5281/zenodo.10947952-green.svg)](https://doi.org/10.5281/zenodo.10947952)
 
 The ERA5-Land data [@muñoz-sabater2021] presents hourly climate indicators at 0.1° × 0.1° horizontal resolution with global coverage, from 1950 to present.
 
@@ -23,7 +26,7 @@ Selected indicators hourly data were [downloaded and aggregated at daily basis](
 The following indicators and aggregations were computed.
 
 | ERA5-Land indicators  | Daily time-aggregating functions | Spatial zonal statistics    |
-|----------------------|-----------------------------|----------------------|
+|----------------------|----------------------------|----------------------|
 | Temperature (2m)      | mean, max, min                   | max, min, stdev, count      |
 | Dewpoint temp. (2m)   | mean                             | max, min, stdev, count      |
 | $u$ component of wind | mean                             | max, min, stdev, count      |
