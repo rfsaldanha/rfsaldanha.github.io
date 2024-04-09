@@ -26,6 +26,20 @@
     ]
   },
   {
+    "listing": "/blog.html",
+    "items": [
+      "/posts/query_local_parquet_files.html",
+      "/posts/hot_2023.html",
+      "/posts/time_series_clustering.html",
+      "/posts/std_br_covid_rates.html",
+      "/posts/run_length_encoding.html",
+      "/posts/rates.html",
+      "/posts/sqlite_to_duckdb_and_parquet.html",
+      "/posts/query_remot_parquet_file.html",
+      "/posts/some-tips-for-sqlite.html"
+    ]
+  },
+  {
     "listing": "/climate_health_hub.html",
     "items": [
       "/climate_health_hub/astmh_meeting_2024.html",
@@ -53,25 +67,19 @@
     ]
   },
   {
-    "listing": "/blog.html",
+    "listing": "/data-projects/health-indicators.html",
     "items": [
-      "/posts/query_local_parquet_files.html",
-      "/posts/hot_2023.html",
-      "/posts/time_series_clustering.html",
-      "/posts/std_br_covid_rates.html",
-      "/posts/run_length_encoding.html",
-      "/posts/rates.html",
-      "/posts/sqlite_to_duckdb_and_parquet.html",
-      "/posts/query_remot_parquet_file.html",
-      "/posts/some-tips-for-sqlite.html"
+      "/data-projects/health_indicators/indi_0002.html",
+      "/data-projects/health_indicators/indi_0001.html"
     ]
   },
   {
     "listing": "/data.html",
     "items": [
-      "/data-projects/std_br_covid_rates_data.html",
+      "/data-projects/brazil-climate-zonal-indicators.html",
+      "/data-projects/health-indicators.html",
       "/data-projects/era5land-daily-latin-america.html",
-      "/data-projects/brazil-climate-zonal-indicators.html"
+      "/data-projects/std_br_covid_rates_data.html"
     ]
   },
   {

@@ -2,5 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
-
 /.quarto/
+*.duckdb
+*.wal
+*.parquet

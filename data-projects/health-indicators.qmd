@@ -1,0 +1,10 @@
+---
+title: "Health indicators"
+listing: 
+  contents:
+    - health_indicators
+  sort-ui: false
+  filter-ui: true
+---
+
+Computed health indicators for Brazilian municipalities, health regions and UFs ready to download on parquet format. The definitions are in Portuguese. 

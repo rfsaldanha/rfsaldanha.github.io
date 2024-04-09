@@ -2,9 +2,10 @@
 title: "Data"
 listing:
   contents:
-    - data-projects/std_br_covid_rates_data.qmd
-    - data-projects/era5land-daily-latin-america.qmd
     - data-projects/brazil-climate-zonal-indicators.qmd
+    - data-projects/health-indicators.qmd
+    - data-projects/era5land-daily-latin-america.qmd
+    - data-projects/std_br_covid_rates_data.qmd
   sort: false
   sort-ui: false
   filter-ui: false
