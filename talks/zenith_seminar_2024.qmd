@@ -78,29 +78,15 @@ climate --> social(Social & economic \n determinants) --> health
 :::
 
 ::: {.column width="15%"}
-{{< fa sun size=2xl >}} 
-<br></br> 
-{{< fa cloud-rain size=2xl >}} 
-<br></br> 
-{{< fa wind size=2xl >}} 
-<br></br> 
-{{< fa snowflake size=2xl >}}
+{{< fa sun size=2xl >}} <br></br> {{< fa cloud-rain size=2xl >}} <br></br> {{< fa wind size=2xl >}} <br></br> {{< fa snowflake size=2xl >}}
 :::
 
 ::: {.column width="15%"}
-<br></br> 
-<br></br>
-{{< fa satellite size=2xl >}}
-<br></br> 
-{{< fa tower-cell size=2xl >}}
+<br></br> <br></br> {{< fa satellite size=2xl >}} <br></br> {{< fa tower-cell size=2xl >}}
 :::
 
 ::: {.column width="15%"}
-<br></br> 
-<br></br> 
-{{< fa layer-group size=2xl >}} 
-<br></br> 
-{{< fa table-cells size=2xl >}}
+<br></br> <br></br> {{< fa layer-group size=2xl >}} <br></br> {{< fa table-cells size=2xl >}}
 :::
 :::
 
@@ -196,7 +182,7 @@ mun --> zs(Zonal statistics)
 -   Strategy
     -   Group the tasks into **chunks** and compute in **parallel**
     -   DAG (Directed-Acyclic Graph) approach to **orchestrate computation**, with the [{targets}](https://docs.ropensci.org/targets/) package
-    -   Save results into columnar-oriented **databases** for fast data retrieval (duckdb and parquet)    
+    -   Save results into columnar-oriented **databases** for fast data retrieval (duckdb and parquet)\
 :::
 
 ::: {.column width="50%"}
@@ -204,9 +190,7 @@ mun --> zs(Zonal statistics)
 :::
 :::
 
-
-
-##  {.big_text .center data-menu-title="Records" }
+##  {.big_text .center data-menu-title="Records"}
 
 ::: big_text
 6,085,749,761 records
@@ -295,8 +279,6 @@ brclimr::fetch_data(
     date_end = as.Date("2010-10-20")
   )
 ```
-
-
 :::
 
 ::: {.column width="50%"}
@@ -320,8 +302,7 @@ $$
 :::
 
 ::: {.column width="40%"}
--   Accepted paper on **ICDE2024**, Multivariate Time Series Analytics workshop
-![](images/icde.png){fig-align="center" width="50%"}
+-   Accepted paper on **ICDE2024**, Multivariate Time Series Analytics workshop ![](images/icde.png){fig-align="center" width="50%"}
 :::
 :::
 
@@ -341,7 +322,7 @@ $$
 :::
 :::
 
-##  {.big_text .center data-menu-title="Thanks" }
+##  {.big_text .center data-menu-title="Thanks"}
 
 ::: big_text
 Thanks
@@ -390,7 +371,7 @@ exact_extract(
 ## Results {.smaller}
 
 | ERA5-Land indicators  | Daily time-aggregating functions | Spatial zonal statistics    |
-|----------------------|----------------------------|----------------------|
+|-----------------------|----------------------------------|-----------------------------|
 | Temperature (2m)      | mean, max, min                   | max, min, stdev, count      |
 | Dewpoint temp. (2m)   | mean                             | max, min, stdev, count      |
 | $u$ component of wind | mean                             | max, min, stdev, count      |
