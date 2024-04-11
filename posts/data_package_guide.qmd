@@ -1,0 +1,158 @@
+---
+title: "Writing R packages with large datasets"
+date: "2024-04-11"
+categories: [package, data]
+---
+
+This post aims to be a guide for those writing R packages that will contain datasets, presenting some approaches and solutions for some pitfalls.
+
+R packages commonly contain some datasets. They are useful to provide functions examples of usage and also internally test the package functions.
+
+## Creating package data files
+
+Following the [R Packages book's recommendation](https://r-pkgs.org/data.html), you may use
+
+```{r, eval=FALSE}
+usethis::use_data_raw()
+```
+
+This command will create a `data-raw` folder on your package and an R script. The idea is to put all steps necessary to create the data there. But this folder is not used to build your package. For this reason, at the end of this script, you will find this command
+
+```{r, eval=FALSE}
+usethis::use_data()
+```
+
+The `use_data()` command will write the final data to the official data folder of the package.
+
+## Data size restrictions
+
+Considering CRAN guidelines, a package should be small. Remember that a package, once on CRAN, will be compiled to some operational systems and all package versions are archived. Thus, the package sources, binaries and its versions will occupy more space than you think. For this reason, it is asked to have less than 5MB of data. If you need more, you will need to ask for exception and present a good justification.
+
+You can try different compression methods with the `use_data()` command to get smaller files. On my experience, `xz` compressions gives you smaller files with data frames.
+
+```{r, eval=FALSE}
+usethis::use_data(..., compress = "gzip") # The default
+usethis::use_data(..., compress = "bzip2")
+usethis::use_data(..., compress = "xz")
+```
+
+## Document your data
+
+Remember to create an R file at the R folder of your package with the documentation of your dataset.
+
+```{r, eval=FALSE}
+usethis::use_r("mydata")
+```
+
+And inside it, describe your data. An example:
+
+```{r, eval=FALSE}
+#' My data name
+#'
+#' Some description.
+#'
+#' \describe{
+#'   \item{variable_1}{description}
+#'   \item{variable_2}{description}
+#'   \item{variable_3}{description}
+#' }
+"mydata"
+```
+
+## Separate packages
+
+To reduce the load of versioning packages with data, some package authors create two packages: a main package with functions, and a data package with only the data.
+
+The main package will import the data package. The vantage here is that you can upgrade your package without creating useless versions of your data.
+
+## Solutions for large datasets
+
+Until now, those are the standard procedures to include small datasets with your package. But what to do when you need large files, occupying more than 5MB?
+
+### The `piggyback` solution
+
+There is a nice package called [piggyback](https://docs.ropensci.org/piggyback/). It provides functions to store files as GitHub releases. As Git and GitHub are not ideal to version data, it uses the GitHub releases feature to host files.
+
+With this package, you can store your large datasets as a GitHub release and download them on your package.
+
+### The `pins` solution
+
+The package [pins](https://pins.rstudio.com) present very interesting ways to publish data, models and R objects on "boards". You can store your data on Azure, Google Drive, Google Cloud Storage, Amazon's S3 and others.
+
+Something very useful on `pins` is its capacity to cache files. This means that once the file was downloaded, the user will not need to download it again, as it will be cached on the computer.
+
+The package has a nice article about web-hosted boards, including a [suggestion](https://pins.rstudio.com/articles/using-board-url.html#pkgdown) to use the a pkgdown asset to store your data. If you store your `pkgdown` on GitHub, remember the file size limits (usually ok for less than 20MB).
+
+### My solution: `zendown`
+
+[Zenodo](https://zenodo.org) is a scientific data repository maintained by CERN. It is very stable and easy to use. You create an account, make an upload and instantly your dataset is available to other people to download. Also, your data gets a nice DOI code for citation
+
+I created a package called [zendown](https://rfsaldanha.github.io/zendown/), with functions to access data stored at Zenodo. The package will download and cache the requested data, avoiding unnecessary downloads.
+
+Its usage is very straighfoward. You just need the Zenodo deposit code (the number on the end of the URL of your repository) and the desired file name.
+
+```{r}
+# https://zenodo.org/records/10959197
+my_iris <- zendown::zen_file(deposit_id = 10959197, file_name = "iris.rds") |>
+  readRDS()
+
+head(my_iris)
+```
+
+## Using `zendown` in a package
+
+After importing `zendown` in your package (`usethis::use_package("zendown")`), create an R file just like the documentation example, but it will contain a function.
+
+```{r, eval=FALSE}
+#' My data name
+#'
+#' Some description.
+#'
+#' \describe{
+#'   \item{variable_1}{description}
+#'   \item{variable_2}{description}
+#'   \item{variable_3}{description}
+#' }
+mydata <- function(){
+  path <- zendown::zen_file(10959197,  "iris.rds")
+  readRDS(file = path)
+}
+```
+
+Modify the deposit ID and file name and adapt the read function accordingly to your data. It can be a CSV, parquet file, etc.
+
+Then, on your package functions, call your data function.
+
+```{r, eval=FALSE}
+#' My Fuction
+#'
+#' Some description.
+#'
+#' @param x
+myfunction <- function(x){
+  df <- mydata()
+  df$Sepal.Length * x
+  
+  return(df)
+}
+```
+
+As `zendown` cache the files, the user will download the data just once, and it will be always available to the package.
+
+## The Internet caveat
+
+All of those solutions depends on an Internet connection, and now your package will rely on the Internet to work. Remember to use functions to verify if Internet is available.
+
+```{r, eval=FALSE}
+curl::has_internet()
+```
+
+And to check if the host is online.
+
+```{r, eval=FALSE}
+RCurl::url.exists(url = "...")
+```
+
+## Package tests
+
+As your package relies on Internet now, it can be important to skip some tests on CRAN, as the host may be offline or some connection problem can occur. Include `testthat::skip_on_cran()` on the tests that will require online data.

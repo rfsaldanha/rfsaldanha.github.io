@@ -346,8 +346,8 @@
     "objectID": "talks/zenith_seminar_2024.html#introduction",
     "href": "talks/zenith_seminar_2024.html#introduction",
     "title": "Disease and climate data fusion for modeling",
-    "section": "Introduction",
-    "text": "Introduction\n\nPostdoctoral researcher at Inria, Zenith team\nMaster’s at Public Health, Doctorate on Health Information\nData Science applied to Public Health"
+    "section": "",
+    "text": "Postdoctoral researcher at Inria, Zenith team\nMaster’s at Public Health, Doctorate on Health Information\nData Science applied to Public Health"
   },
   {
     "objectID": "talks/zenith_seminar_2024.html#climate-sensitive-diseases",
@@ -1376,7 +1376,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Query local parquet files\n\n\n\n\n\n\ndatabase\n\n\nparquet\n\n\narrow\n\n\n\n\n\n\n\n\n\nApr 4, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHow 2023 was hot in different Brazilian municipalities?\n\n\n\n\n\n\nclimate\n\n\nzonal statistics\n\n\n\n\n\n\n\n\n\nNov 27, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nUnivariate and multivariate time series clustering\n\n\nExamples with Brazilian climate data\n\n\n\nclustering\n\n\ntime series\n\n\ndtwclust\n\n\n\n\n\n\n\n\n\nNov 14, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nAge-adjusted COVID-19 mortality rates for Brazilian municipalities\n\n\n\n\n\n\ncovid19\n\n\ntidyrates\n\n\n\n\n\n\n\n\n\nNov 7, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nCounting consecutive sequences of events: run length encoding and warm spell occurence example\n\n\n\n\n\n\nrle\n\n\nwarm spell\n\n\nsequences\n\n\n\n\n\n\n\n\n\nNov 6, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nCrude and adjusted rates in a tidy way\n\n\n\n\n\n\nrates\n\n\nepidemiology\n\n\ntidyrates\n\n\n\n\n\n\n\n\n\nNov 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nSQLite database conversion to DuckDB and Parquet files\n\n\n\n\n\n\ndatabase\n\n\nsqlite\n\n\nduckdb\n\n\nparquet\n\n\n\n\n\n\n\n\n\nOct 24, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nQuery remote parquet files with DuckDB\n\n\n\n\n\n\ndatabase\n\n\nduckdb\n\n\nparquet\n\n\n\n\n\n\n\n\n\nOct 24, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nSome tips to work with SQLite database\n\n\n\n\n\n\ndatabase\n\n\nsqlite\n\n\n\n\n\n\n\n\n\nOct 20, 2023\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Writing R packages with large datasets\n\n\n\n\n\n\npackage\n\n\ndata\n\n\n\n\n\n\n\n\n\nApr 11, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nQuery local parquet files\n\n\n\n\n\n\ndatabase\n\n\nparquet\n\n\narrow\n\n\n\n\n\n\n\n\n\nApr 4, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHow 2023 was hot in different Brazilian municipalities?\n\n\n\n\n\n\nclimate\n\n\nzonal statistics\n\n\n\n\n\n\n\n\n\nNov 27, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nUnivariate and multivariate time series clustering\n\n\nExamples with Brazilian climate data\n\n\n\nclustering\n\n\ntime series\n\n\ndtwclust\n\n\n\n\n\n\n\n\n\nNov 14, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nAge-adjusted COVID-19 mortality rates for Brazilian municipalities\n\n\n\n\n\n\ncovid19\n\n\ntidyrates\n\n\n\n\n\n\n\n\n\nNov 7, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nCounting consecutive sequences of events: run length encoding and warm spell occurence example\n\n\n\n\n\n\nrle\n\n\nwarm spell\n\n\nsequences\n\n\n\n\n\n\n\n\n\nNov 6, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nCrude and adjusted rates in a tidy way\n\n\n\n\n\n\nrates\n\n\nepidemiology\n\n\ntidyrates\n\n\n\n\n\n\n\n\n\nNov 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nSQLite database conversion to DuckDB and Parquet files\n\n\n\n\n\n\ndatabase\n\n\nsqlite\n\n\nduckdb\n\n\nparquet\n\n\n\n\n\n\n\n\n\nOct 24, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nQuery remote parquet files with DuckDB\n\n\n\n\n\n\ndatabase\n\n\nduckdb\n\n\nparquet\n\n\n\n\n\n\n\n\n\nOct 24, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nSome tips to work with SQLite database\n\n\n\n\n\n\ndatabase\n\n\nsqlite\n\n\n\n\n\n\n\n\n\nOct 20, 2023\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "climate_health_hub.html",
@@ -2329,5 +2329,103 @@
     "title": "Univariate and multivariate time series clustering",
     "section": "Session info",
     "text": "Session info\n\nsessionInfo()\n\nR version 4.2.0 (2022-04-22)\nPlatform: aarch64-apple-darwin20 (64-bit)\nRunning under: macOS 14.0\n\nMatrix products: default\nBLAS:   /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/lib/libRblas.0.dylib\nLAPACK: /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/lib/libRlapack.dylib\n\nRandom number generation:\n RNG:     L'Ecuyer-CMRG \n Normal:  Inversion \n Sample:  Rejection \n \nlocale:\n[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nother attached packages:\n [1] sf_1.0-14       geobr_1.8.1     dtwclust_5.5.12 dtw_1.23-1     \n [5] proxy_0.4-27    arrow_13.0.0.1  timetk_2.9.0    ggplot2_3.4.4  \n [9] dplyr_1.1.3     tidyr_1.3.0    \n\nloaded via a namespace (and not attached):\n  [1] xts_0.13.1          lubridate_1.9.3     bit64_4.0.5        \n  [4] httr_1.4.7          DiceDesign_1.9      tools_4.2.0        \n  [7] utf8_1.2.4          R6_2.5.1            KernSmooth_2.23-22 \n [10] rpart_4.1.21        DBI_1.1.3           colorspace_2.1-0   \n [13] yardstick_1.2.0     nnet_7.3-19         withr_2.5.2        \n [16] tidyselect_1.2.0    curl_5.1.0          bit_4.0.5          \n [19] compiler_4.2.0      flexclust_1.4-1     cli_3.6.1          \n [22] shinyjs_2.1.0       labeling_0.4.3      scales_1.2.1       \n [25] classInt_0.4-10     tune_1.1.2          stringr_1.5.0      \n [28] digest_0.6.33       rmarkdown_2.25      pkgconfig_2.0.3    \n [31] htmltools_0.5.7     parallelly_1.36.0   lhs_1.1.6          \n [34] fastmap_1.1.1       htmlwidgets_1.6.2   rlang_1.1.2        \n [37] rstudioapi_0.15.0   shiny_1.7.5.1       farver_2.1.1       \n [40] generics_0.1.3      zoo_1.8-12          jsonlite_1.8.7     \n [43] magrittr_2.0.3      modeltools_0.2-23   Matrix_1.5-4.1     \n [46] Rcpp_1.0.11         munsell_0.5.0       fansi_1.0.5        \n [49] GPfit_1.0-8         lifecycle_1.0.4     furrr_0.3.1        \n [52] stringi_1.8.1       yaml_2.3.7          MASS_7.3-60        \n [55] plyr_1.8.9          recipes_1.0.8       grid_4.2.0         \n [58] parallel_4.2.0      listenv_0.9.0       promises_1.2.1     \n [61] ggrepel_0.9.4       lattice_0.22-5      splines_4.2.0      \n [64] knitr_1.45          pillar_1.9.0        dials_1.2.0        \n [67] future.apply_1.11.0 reshape2_1.4.4      codetools_0.2-19   \n [70] parsnip_1.1.1       stats4_4.2.0        glue_1.6.2         \n [73] evaluate_0.23       rsample_1.2.0       data.table_1.14.8  \n [76] RcppParallel_5.1.7  vctrs_0.6.4         httpuv_1.6.12      \n [79] foreach_1.5.2       gtable_0.3.4        purrr_1.0.2        \n [82] clue_0.3-65         future_1.33.0       assertthat_0.2.1   \n [85] xfun_0.41           gower_1.0.1         mime_0.12          \n [88] prodlim_2023.08.28  xtable_1.8-4        e1071_1.7-13       \n [91] RSpectra_0.16-1     later_1.3.1         class_7.3-22       \n [94] survival_3.5-7      timeDate_4022.108   tibble_3.2.1       \n [97] iterators_1.0.14    hardhat_1.3.0       units_0.8-4        \n[100] cluster_2.1.4       lava_1.7.3          workflows_1.1.3    \n[103] timechange_0.2.0    globals_0.16.2      ellipsis_0.3.2     \n[106] ipred_0.9-14"
+  },
+  {
+    "objectID": "posts/data_package_guide.html",
+    "href": "posts/data_package_guide.html",
+    "title": "Writing R packages with large datasets",
+    "section": "",
+    "text": "This post aims to be a guide for those writing R packages that will contain datasets, presenting some approaches and solutions for some pitfalls.\nR packages commonly contain some datasets. They are useful to provide functions examples of usage and also internally test the package functions."
+  },
+  {
+    "objectID": "posts/data_package_guide.html#creating-package-data-files",
+    "href": "posts/data_package_guide.html#creating-package-data-files",
+    "title": "Writing R packages with large datasets",
+    "section": "Creating package data files",
+    "text": "Creating package data files\nFollowing the R Packages book’s recommendation, you may use\n\nusethis::use_data_raw()\n\nThis command will create a data-raw folder on your package and an R script. The idea is to put all steps necessary to create the data there. But this folder is not used to build your package. For this reason, at the end of this script, you will find this command\n\nusethis::use_data()\n\nThe use_data() command will write the final data to the official data folder of the package."
+  },
+  {
+    "objectID": "posts/data_package_guide.html#data-size-restrictions",
+    "href": "posts/data_package_guide.html#data-size-restrictions",
+    "title": "Writing R packages with large datasets",
+    "section": "Data size restrictions",
+    "text": "Data size restrictions\nConsidering CRAN guidelines, a package should be small. Remember that a package, once on CRAN, will be compiled to some operational systems and all package versions are archived. Thus, the package sources, binaries and its versions will occupy more space than you think. For this reason, it is asked to have less than 5MB of data. If you need more, you will need to ask for exception and present a good justification.\nYou can try different compression methods with the use_data() command to get smaller files. On my experience, xz compressions gives you smaller files with data frames.\n\nusethis::use_data(..., compress = \"gzip\") # The default\nusethis::use_data(..., compress = \"bzip2\")\nusethis::use_data(..., compress = \"xz\")"
+  },
+  {
+    "objectID": "talks/zenith_seminar_2024.html",
+    "href": "talks/zenith_seminar_2024.html",
+    "title": "Disease and climate data fusion for modeling",
+    "section": "",
+    "text": "Postdoctoral researcher at Inria, Zenith team\nMaster’s at Public Health, Doctorate on Health Information\nData Science applied to Public Health"
+  },
+  {
+    "objectID": "posts/data_package_guide.html#document-your-data",
+    "href": "posts/data_package_guide.html#document-your-data",
+    "title": "Writing R packages with large datasets",
+    "section": "Document your data",
+    "text": "Document your data\nRemember to create an R file at the R folder of your package with the documentation of your dataset.\n\nusethis::use_r(\"mydata\")\n\nAnd inside it, describe your data. An example:\n\n#' My data name\n#'\n#' Some description.\n#'\n#' \\describe{\n#'   \\item{variable_1}{description}\n#'   \\item{variable_2}{description}\n#'   \\item{variable_3}{description}\n#' }\n\"mydata\""
+  },
+  {
+    "objectID": "posts/data_package_guide.html#separate-packages",
+    "href": "posts/data_package_guide.html#separate-packages",
+    "title": "Writing R packages with large datasets",
+    "section": "Separate packages",
+    "text": "Separate packages\nTo reduce the load of versioning packages with data, some package authors create two packages: a main package with functions, and a data package with only the data.\nThe main package will import the data package. The vantage here is that you can upgrade your package without creating useless versions of your data."
+  },
+  {
+    "objectID": "posts/data_package_guide.html#solutions-for-large-datasets",
+    "href": "posts/data_package_guide.html#solutions-for-large-datasets",
+    "title": "Writing R packages with large datasets",
+    "section": "Solutions for large datasets",
+    "text": "Solutions for large datasets\nUntil now, those are the standard procedures to include small datasets with your package. But what to do when you need large files, occupying more than 5MB?\n\nThe piggyback solution\nThere is a nice package called piggyback. It provides functions to store files as GitHub releases. As Git and GitHub are not ideal to version data, it uses the GitHub releases feature to host files.\nWith this package, you can store your large datasets as a GitHub release and download them on your package.\n\n\nThe pins solution\nThe package pins present very interesting ways to publish data, models and R objects on “boards”. You can store your data on Azure, Google Drive, Google Cloud Storage, Amazon’s S3 and others.\nSomething very useful on pins is its capacity to cache files. This means that once the file was downloaded, the user will not need to download it again, as it will be cached on the computer.\nThe package has a nice article about web-hosted boards, including a suggestion to use the a pkgdown asset to store your data. If you store your pkgdown on GitHub, remember the file size limits (usually ok for less than 20MB).\n\n\nMy solution: zendown\nZenodo is a scientific data repository maintained by CERN. It is very stable and easy to use. You create an account, make an upload and instantly your dataset is available to other people to download. Also, your data gets a nice DOI code for citation\nI created a package called zendown, with functions to access data stored at Zenodo. The package will download and cache the requested data, avoiding unnecessary downloads.\nIts usage is very straighfoward. You just need the Zenodo deposit code (the number on the end of the URL of your repository) and the desired file name.\n\n# https://zenodo.org/records/10959197\nmy_iris &lt;- zendown::zen_file(deposit_id = 10959197, file_name = \"iris.rds\") |&gt;\n  readRDS()\n\nhead(my_iris)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa"
+  },
+  {
+    "objectID": "posts/data_package_guide.html#the-piggyback-solution",
+    "href": "posts/data_package_guide.html#the-piggyback-solution",
+    "title": "A guide for writing R packages with large datasets",
+    "section": "The piggyback solution",
+    "text": "The piggyback solution\nThere is a nice package called piggyback. It provides functions to store files as GitHub releases. As Git and GitHub are not ideal to version data, it uses the GitHub releases feature to host files.\nWith this package, you can store your large datasets as a GitHub release and download them on your package."
+  },
+  {
+    "objectID": "posts/data_package_guide.html#the-pins-solution",
+    "href": "posts/data_package_guide.html#the-pins-solution",
+    "title": "A guide for writing R packages with large datasets",
+    "section": "The pins solution",
+    "text": "The pins solution\nThe package pins present very interesting ways to publish data, models and R objects on “boards”. You can store your data on Azure, Google Drive, Google Cloud Storage, Amazon’s S3 and others.\nSomething very usefull on pins is its capacity to cache files. This means that once the file was downloaded, the user will not need to download it again, as it will be cached on the computer.\nThe package has a nice article about web-hosted boards, including a suggestion to use the a pkgdown asset to store your data. If you store your pkgdown on GitHub, remember the file size limits (usually ok for less than 20MB)."
+  },
+  {
+    "objectID": "posts/data_package_guide.html#my-solution-zendown",
+    "href": "posts/data_package_guide.html#my-solution-zendown",
+    "title": "A guide for writing R packages with large datasets",
+    "section": "My solution: zendown",
+    "text": "My solution: zendown\nZenodo is a scientific data repository maintained by CERN. It is very stable and easy to use. You create an account, make a upload and instantly your dataset is available to other people download. Also, your data gets a nice DOI code for citation.\nI created a package called zendown, with functions to access data stored at Zenodo. The package will download and cache the data your request, avoiding unnecessary downloads.\nIts usage is very straighfoward. You just need the Zenodo deposit code (the number on the end of the URL of your repository) and the desired file name.\n\nmy_iris &lt;- zendown::zen_file(deposit_id = 10959197, file_name = \"iris.rds\") |&gt;\n  readRDS()\n\nhead(my_iris)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa"
+  },
+  {
+    "objectID": "posts/data_package_guide.html#using-zendown-in-a-package",
+    "href": "posts/data_package_guide.html#using-zendown-in-a-package",
+    "title": "Writing R packages with large datasets",
+    "section": "Using zendown in a package",
+    "text": "Using zendown in a package\nAfter importing zendown in your package (usethis::use_package(\"zendown\")), create an R file just like the documentation example, but it will contain a function.\n\n#' My data name\n#'\n#' Some description.\n#'\n#' \\describe{\n#'   \\item{variable_1}{description}\n#'   \\item{variable_2}{description}\n#'   \\item{variable_3}{description}\n#' }\nmydata &lt;- function(){\n  path &lt;- zendown::zen_file(10959197,  \"iris.rds\")\n  readRDS(file = path)\n}\n\nModify the deposit ID and file name and adapt the read function accordingly to your data. It can be a CSV, parquet file, etc.\nThen, on your package functions, call your data function.\n\n#' My Fuction\n#'\n#' Some description.\n#'\n#' @param x\nmyfunction &lt;- function(x){\n  df &lt;- mydata()\n  df$Sepal.Length * x\n  \n  return(df)\n}\n\nAs zendown cache the files, the user will download the data just once, and it will be always available to the package."
+  },
+  {
+    "objectID": "posts/data_package_guide.html#the-internet-caveat",
+    "href": "posts/data_package_guide.html#the-internet-caveat",
+    "title": "Writing R packages with large datasets",
+    "section": "The Internet caveat",
+    "text": "The Internet caveat\nAll of those solutions depends on an Internet connection, and now your package will rely on the Internet to work. Remember to use functions to verify if Internet is available.\n\ncurl::has_internet()\n\nAnd to check if the host is online.\n\nRCurl::url.exists(url = \"...\")"
+  },
+  {
+    "objectID": "posts/data_package_guide.html#package-tests",
+    "href": "posts/data_package_guide.html#package-tests",
+    "title": "Writing R packages with large datasets",
+    "section": "Package tests",
+    "text": "Package tests\nAs your package relies on Internet now, it can be important to skip some tests on CRAN, as the host may be offline or some connection problem can occur. Include testthat::skip_on_cran() on the tests that will require online data."
+  },
+  {
+    "objectID": "posts/data_package_guide.html#data-samples",
+    "href": "posts/data_package_guide.html#data-samples",
+    "title": "A guide for writing R packages with large datasets",
+    "section": "Data samples",
+    "text": "Data samples\nIt could be interesting also to include in your package some data samples in the old way."
   }
 ]
