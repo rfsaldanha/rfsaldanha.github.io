@@ -4,18 +4,64 @@ title: "Packages & Code "
 
 [![](https://github-readme-stats.vercel.app/api?username=rfsaldanha&show_icons=true&theme:transparent)](https://github.com/rfsaldanha)
 
-## Selected repos
+## microdatasus
 
-[![](https://gh-card.dev/repos/rfsaldanha/microdatasus.svg?fullname=)](https://rfsaldanha.github.io/microdatasus/)
+R package to download and pre-process datasets from DataSUS, Brazilian Health Ministry.
 
-[![](https://gh-card.dev/repos/rfsaldanha/tidyrates.svg?fullname=)](https://rfsaldanha.github.io/tidyrates/)
+[![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/microdatasus-blue)](https://rfsaldanha.github.io/microdatasus/)
+[![](https://img.shields.io/github/stars/rfsaldanha/microdatasus)](https://github.com/rfsaldanha/microdatasus)
+[![](https://github.com/rfsaldanha/microdatasus/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/microdatasus/actions/workflows/R-CMD-check.yaml)
 
-[![](https://gh-card.dev/repos/rfsaldanha/brpop.svg?fullname=)](https://rfsaldanha.github.io/brpop/)
 
-[![](https://gh-card.dev/repos/rfsaldanha/rspell.svg?fullname=)](https://rfsaldanha.github.io/rspell/)
+## tidyrates
 
-[![](https://gh-card.dev/repos/rfsaldanha/brclimr.svg?fullname=)](https://rfsaldanha.github.io/brclimr/)
+R package to compute age-standardized epidemiological rates in a tidy way.
 
-[![](https://gh-card.dev/repos/rfsaldanha/zendown.svg?fullname=)](https://rfsaldanha.github.io/zendown/)
+[![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/tidyrates-blue)](https://rfsaldanha.github.io/tidyrates/)
+[![](https://img.shields.io/github/stars/rfsaldanha/tidyrates)](https://github.com/rfsaldanha/tidyrates)
+[![](https://github.com/rfsaldanha/tidyrates/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/tidyrates/actions/workflows/R-CMD-check.yaml)
+[![](https://img.shields.io/cran/v/tidyrates)](https://cran.r-project.org/package=tidyrates)
 
-[![](https://gh-card.dev/repos/rfsaldanha/opendenguedata.svg?fullname=)](https://rfsaldanha.github.io/opendenguedata/)
+
+## brpop
+
+R package with Brazilian population estimates.
+
+[![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/brpop-blue)](https://rfsaldanha.github.io/brpop/)
+[![](https://img.shields.io/github/stars/rfsaldanha/brpop)](https://github.com/rfsaldanha/brpop)
+[![](https://github.com/rfsaldanha/brpop/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/brpop/actions/workflows/R-CMD-check.yaml)
+[![](https://img.shields.io/cran/v/brpop)](https://cran.r-project.org/package=brpop)
+
+## rspell
+
+R package to grammar check documents inside RStudio.
+
+[![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/rspell-blue)](https://rfsaldanha.github.io/rspell/)
+[![](https://img.shields.io/github/stars/rfsaldanha/rspell)](https://github.com/rfsaldanha/rspell)
+[![](https://github.com/rfsaldanha/rspell/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/rspell/actions/workflows/R-CMD-check.yaml)
+
+## brclimr
+
+R package to retrieve municipal climate indicators of Brazilian municipalities.
+
+[![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/brclimr-blue)](https://rfsaldanha.github.io/brclimr/)
+[![](https://img.shields.io/github/stars/rfsaldanha/brclimr)](https://github.com/rfsaldanha/brclimr)
+[![](https://github.com/rfsaldanha/brclimr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/brclimr/actions/workflows/R-CMD-check.yaml)
+[![](https://img.shields.io/cran/v/brclimr)](https://cran.r-project.org/package=brclimr)
+
+## zendown
+
+R package to download and cache files from Zenodo deposits.
+
+[![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/zendown-blue)](https://rfsaldanha.github.io/zendown/)
+[![](https://img.shields.io/github/stars/rfsaldanha/zendown)](https://github.com/rfsaldanha/zendown)
+[![](https://github.com/rfsaldanha/zendown/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/zendown/actions/workflows/R-CMD-check.yaml)
+[![](https://img.shields.io/cran/v/zendown)](https://cran.r-project.org/package=zendown)
+
+## opendenguedata
+
+R package to download dengue data from the OpenDengue project.
+
+[![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/opendenguedata-blue)](https://rfsaldanha.github.io/opendenguedata/)
+[![](https://img.shields.io/github/stars/rfsaldanha/opendenguedata)](https://github.com/rfsaldanha/opendenguedata)
+[![](https://github.com/rfsaldanha/opendenguedata/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/opendenguedata/actions/workflows/R-CMD-check.yaml)

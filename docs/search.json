@@ -2427,5 +2427,54 @@
     "title": "A guide for writing R packages with large datasets",
     "section": "Data samples",
     "text": "Data samples\nIt could be interesting also to include in your package some data samples in the old way."
+  },
+  {
+    "objectID": "code.html#microdatasus",
+    "href": "code.html#microdatasus",
+    "title": "Packages & Code",
+    "section": "microdatasus",
+    "text": "microdatasus\nR package to download and pre-process datasets from DataSUS, Brazilian Health Ministry."
+  },
+  {
+    "objectID": "code.html#tidyrates",
+    "href": "code.html#tidyrates",
+    "title": "Packages & Code",
+    "section": "tidyrates",
+    "text": "tidyrates\nR package to compute age-standardized epidemiological rates in a tidy way."
+  },
+  {
+    "objectID": "code.html#brpop",
+    "href": "code.html#brpop",
+    "title": "Packages & Code",
+    "section": "brpop",
+    "text": "brpop\nR package with Brazilian population estimates."
+  },
+  {
+    "objectID": "code.html#rspell",
+    "href": "code.html#rspell",
+    "title": "Packages & Code",
+    "section": "rspell",
+    "text": "rspell\nR package to grammar check documents inside RStudio."
+  },
+  {
+    "objectID": "code.html#brclimr",
+    "href": "code.html#brclimr",
+    "title": "Packages & Code",
+    "section": "brclimr",
+    "text": "brclimr\nR package to retrieve municipal climate indicators of Brazilian municipalities."
+  },
+  {
+    "objectID": "code.html#zendown",
+    "href": "code.html#zendown",
+    "title": "Packages & Code",
+    "section": "zendown",
+    "text": "zendown\nR package to download and cache files from Zenodo deposits."
+  },
+  {
+    "objectID": "code.html#opendenguedata",
+    "href": "code.html#opendenguedata",
+    "title": "Packages & Code",
+    "section": "opendenguedata",
+    "text": "opendenguedata\nR package to download dengue data from the OpenDengue project."
   }
 ]
