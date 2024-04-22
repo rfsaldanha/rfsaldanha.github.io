@@ -12,6 +12,14 @@ R package to download and pre-process datasets from DataSUS, Brazilian Health Mi
 [![](https://img.shields.io/github/stars/rfsaldanha/microdatasus)](https://github.com/rfsaldanha/microdatasus)
 [![](https://github.com/rfsaldanha/microdatasus/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/microdatasus/actions/workflows/R-CMD-check.yaml)
 
+## brpop
+
+R package with Brazilian population estimates.
+
+[![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/brpop-blue)](https://rfsaldanha.github.io/brpop/)
+[![](https://img.shields.io/github/stars/rfsaldanha/brpop)](https://github.com/rfsaldanha/brpop)
+[![](https://github.com/rfsaldanha/brpop/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/brpop/actions/workflows/R-CMD-check.yaml)
+[![](https://img.shields.io/cran/v/brpop)](https://cran.r-project.org/package=brpop)
 
 ## tidyrates
 
@@ -22,15 +30,22 @@ R package to compute age-standardized epidemiological rates in a tidy way.
 [![](https://github.com/rfsaldanha/tidyrates/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/tidyrates/actions/workflows/R-CMD-check.yaml)
 [![](https://img.shields.io/cran/v/tidyrates)](https://cran.r-project.org/package=tidyrates)
 
+## zendown
 
-## brpop
+R package to download and cache files from Zenodo deposits.
 
-R package with Brazilian population estimates.
+[![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/zendown-blue)](https://rfsaldanha.github.io/zendown/)
+[![](https://img.shields.io/github/stars/rfsaldanha/zendown)](https://github.com/rfsaldanha/zendown)
+[![](https://github.com/rfsaldanha/zendown/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/zendown/actions/workflows/R-CMD-check.yaml)
+[![](https://img.shields.io/cran/v/zendown)](https://cran.r-project.org/package=zendown)
 
-[![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/brpop-blue)](https://rfsaldanha.github.io/brpop/)
-[![](https://img.shields.io/github/stars/rfsaldanha/brpop)](https://github.com/rfsaldanha/brpop)
-[![](https://github.com/rfsaldanha/brpop/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/brpop/actions/workflows/R-CMD-check.yaml)
-[![](https://img.shields.io/cran/v/brpop)](https://cran.r-project.org/package=brpop)
+## nseq
+
+R package to compute counts and statistics of occurrence of events in sequences that meets a criterion. 
+
+[![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/nseq-blue)](https://rfsaldanha.github.io/nseq/)
+[![](https://img.shields.io/github/stars/rfsaldanha/nseq)](https://github.com/rfsaldanha/nseq)
+[![](https://github.com/rfsaldanha/nseq/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/nseq/actions/workflows/R-CMD-check.yaml)
 
 ## rspell
 
@@ -48,15 +63,6 @@ R package to retrieve municipal climate indicators of Brazilian municipalities.
 [![](https://img.shields.io/github/stars/rfsaldanha/brclimr)](https://github.com/rfsaldanha/brclimr)
 [![](https://github.com/rfsaldanha/brclimr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/brclimr/actions/workflows/R-CMD-check.yaml)
 [![](https://img.shields.io/cran/v/brclimr)](https://cran.r-project.org/package=brclimr)
-
-## zendown
-
-R package to download and cache files from Zenodo deposits.
-
-[![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/zendown-blue)](https://rfsaldanha.github.io/zendown/)
-[![](https://img.shields.io/github/stars/rfsaldanha/zendown)](https://github.com/rfsaldanha/zendown)
-[![](https://github.com/rfsaldanha/zendown/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/zendown/actions/workflows/R-CMD-check.yaml)
-[![](https://img.shields.io/cran/v/zendown)](https://cran.r-project.org/package=zendown)
 
 ## opendenguedata
 

@@ -2476,5 +2476,12 @@
     "title": "Packages & Code",
     "section": "opendenguedata",
     "text": "opendenguedata\nR package to download dengue data from the OpenDengue project."
+  },
+  {
+    "objectID": "code.html#nseq",
+    "href": "code.html#nseq",
+    "title": "Packages & Code",
+    "section": "nseq",
+    "text": "nseq\nR package to compute counts and statistics of occurrence of events in sequences that meets a criterion."
   }
 ]
