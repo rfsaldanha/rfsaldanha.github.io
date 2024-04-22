@@ -131,7 +131,7 @@ ggplot() +
   geom_sf(data = subset(res_2023_map, temp_3_35 > 0), aes(color = temp_3_35), size = 1, alpha = 0.5) +
   scale_colour_viridis_c(option = "turbo") +
   theme_minimal() +
-  labs(title = "Número de ocorrências de 3 dias ou mais ", subtitle = "com temperatura acima de 35 graus Celsius em 2023", color = NULL)
+  labs(title = "Número de ocorrências de 3 dias ou mais ", subtitle = "com temperatura máxima média acima de 35 graus Celsius em 2023", color = NULL)
 ```
 
 ```{r}
@@ -140,7 +140,7 @@ ggplot() +
   geom_sf(data = subset(res_1993_map, temp_3_35 > 0), aes(color = temp_3_35), size = 1, alpha = 0.5) +
   scale_colour_viridis_c(option = "turbo") +
   theme_minimal() +
-  labs(title = "Número de ocorrências de 3 dias ou mais ", subtitle = "com temperatura acima de 35 graus Celsius em 1993", color = NULL)
+  labs(title = "Número de ocorrências de 3 dias ou mais ", subtitle = "com temperatura máxima média acima de 35 graus Celsius em 1993", color = NULL)
 ```
 
 ```{r}
@@ -149,7 +149,7 @@ ggplot() +
   geom_sf(data = subset(res_2023_map, temp_5_35 > 0), aes(color = temp_5_35), size = 1, alpha = 0.5) +
   scale_colour_viridis_c(option = "turbo") +
   theme_minimal() +
-  labs(title = "Número de ocorrências de 5 dias ou mais", subtitle = "com temperatura acima de 35 graus Celsius em 2023", color = NULL)
+  labs(title = "Número de ocorrências de 5 dias ou mais", subtitle = "com temperatura máxima média acima de 35 graus Celsius em 2023", color = NULL)
 ```
 
 ```{r}
@@ -158,7 +158,7 @@ ggplot() +
   geom_sf(data = subset(res_1993_map, temp_5_35 > 0), aes(color = temp_5_35), size = 1, alpha = 0.5) +
   scale_colour_viridis_c(option = "turbo") +
   theme_minimal() +
-  labs(title = "Número de ocorrências de 5 dias ou mais", subtitle = "com temperatura acima de 35 graus Celsius em 1993", color = NULL)
+  labs(title = "Número de ocorrências de 5 dias ou mais", subtitle = "com temperatura máxima média acima de 35 graus Celsius em 1993", color = NULL)
 ```
 
 ```{r}
@@ -167,7 +167,7 @@ ggplot() +
   geom_sf(data = subset(res_2023_map, temp_3_40 > 0), aes(color = temp_3_40), size = 1, alpha = 0.5) +
   scale_colour_viridis_c(option = "turbo") +
   theme_minimal() +
-  labs(title = "Número de ocorrências de 3 dias ou mais", subtitle = "com temperatura acima de 40 graus Celsius em 2023", color = NULL)
+  labs(title = "Número de ocorrências de 3 dias ou mais", subtitle = "com temperatura máxima média acima de 40 graus Celsius em 2023", color = NULL)
 ```
 
 ```{r}
@@ -176,7 +176,7 @@ ggplot() +
   geom_sf(data = subset(res_1993_map, temp_3_40 > 0), aes(color = temp_3_40), size = 1, alpha = 0.5) +
   scale_colour_viridis_c(option = "turbo") +
   theme_minimal() +
-  labs(title = "Número de ocorrências de 3 dias ou mais", subtitle = "com temperatura acima de 40 graus Celsius em 1993", color = NULL)
+  labs(title = "Número de ocorrências de 3 dias ou mais", subtitle = "com temperatura máxima média acima de 40 graus Celsius em 1993", color = NULL)
 ```
 
 ```{r}
@@ -185,7 +185,7 @@ ggplot() +
   geom_sf(data = subset(res_2023_map, temp_5_40 > 0), aes(color = temp_5_40), size = 1, alpha = 0.5) +
   scale_colour_viridis_c(option = "turbo") +
   theme_minimal() +
-  labs(title = "Número de ocorrências de 5 dias ou mais", subtitle = "com temperatura acima de 40 graus Celsius em 2023", color = NULL)
+  labs(title = "Número de ocorrências de 5 dias ou mais", subtitle = "com temperatura máxima média acima de 40 graus Celsius em 2023", color = NULL)
 ```
 
 ```{r}
@@ -194,7 +194,7 @@ ggplot() +
   geom_sf(data = subset(res_1993_map, temp_5_40 > 0), aes(color = temp_5_40), size = 1, alpha = 0.5) +
   scale_colour_viridis_c(option = "turbo") +
   theme_minimal() +
-  labs(title = "Número de ocorrências de 5 dias ou mais", subtitle = "com temperatura acima de 40 graus Celsius em 1993", color = NULL)
+  labs(title = "Número de ocorrências de 5 dias ou mais", subtitle = "com temperatura máxima média acima de 40 graus Celsius em 1993", color = NULL)
 ```
 
 ## Session info
