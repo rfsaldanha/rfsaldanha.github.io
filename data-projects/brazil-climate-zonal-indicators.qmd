@@ -38,6 +38,21 @@ A paper with the full methodology was published in the Environmental Data Scienc
 
 [![](https://zenodo.org/badge/DOI/10.1017/eds.2024.3.svg)](https://doi.org/10.1017/eds.2024.3)
 
+### Usage statistics
+
+```{r}
+#| echo: false
+
+ids <- c(10036212, 10947952)
+
+res <- zenstats::deposit_stats(ids, all_versions_only = TRUE, progress = FALSE)
+```
+
+-   Date: `r format(Sys.time())`
+-   Views: `r sum(res$views)`
+-   File downloads: `r format(sum(res$downloads))`
+-   Total volume: `r format(sum(res$volume, na.rm = TRUE))`
+
 ## Zonal BR-DWGD
 
 [![](https://img.shields.io/badge/download-10.5281/zenodo.7824920-green.svg)](https://doi.org/10.5281/zenodo.7824920)

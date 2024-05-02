@@ -33,7 +33,7 @@ The table bellow contains the time aggregation functions applied to each climate
 The resulting NetCDF files are available for download at Zenodo.
 
 | Year | Zenodo deposit                                                                                                     |
-|------|--------------------------------------------------------------------------------------------------------------------|
+|-------------------|-----------------------------------------------------|
 | 1950 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10013254-green.svg)](https://doi.org/10.5281/zenodo.10013254) |
 | 1951 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10013695-green.svg)](https://doi.org/10.5281/zenodo.10013695) |
 | 1952 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10013780-green.svg)](https://doi.org/10.5281/zenodo.10013780) |
@@ -108,3 +108,17 @@ The resulting NetCDF files are available for download at Zenodo.
 | 2021 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10036161-green.svg)](https://doi.org/10.5281/zenodo.10036161) |
 | 2022 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10036167-green.svg)](https://doi.org/10.5281/zenodo.10036167) |
 | 2023 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10889682-green.svg)](https://doi.org/10.5281/zenodo.10889682) |
+
+## Usage statistics
+
+```{r}
+#| echo: false
+source("era5land-daily-latin-america_ids.R")
+
+res <- zenstats::deposit_stats(ids, all_versions_only = TRUE, progress = FALSE)
+```
+
+-   Date: `r format(Sys.time())`
+-   Views: `r sum(res$views)`
+-   File downloads: `r format(sum(res$downloads))`
+-   Total volume: `r format(sum(res$volume, na.rm = TRUE))`
