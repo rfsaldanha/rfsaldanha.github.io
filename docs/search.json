@@ -2532,5 +2532,12 @@
     "title": "ERA5-Land selected indicators daily aggregates for Latin America",
     "section": "Usage statistics",
     "text": "Usage statistics\n\nDate: 2024-05-02 16:13:04\nViews: 5346\nFile downloads: 16317\nTotal volume: 1.84 TB"
+  },
+  {
+    "objectID": "code.html#zenstats",
+    "href": "code.html#zenstats",
+    "title": "Packages & Code",
+    "section": "zenstats",
+    "text": "zenstats\nR package to fetch statistics of views, downloads and volume from Zenodo deposits."
   }
 ]
