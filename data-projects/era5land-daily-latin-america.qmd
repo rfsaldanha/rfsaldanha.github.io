@@ -33,7 +33,7 @@ The table bellow contains the time aggregation functions applied to each climate
 The resulting NetCDF files are available for download at Zenodo.
 
 | Year | Zenodo deposit                                                                                                     |
-|------|--------------------------------------------------------------------------------------------------------------------|
+|------------|------------------------------------------------------------|
 | 1950 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10013254-green.svg)](https://doi.org/10.5281/zenodo.10013254) |
 | 1951 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10013695-green.svg)](https://doi.org/10.5281/zenodo.10013695) |
 | 1952 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10013780-green.svg)](https://doi.org/10.5281/zenodo.10013780) |
@@ -120,5 +120,5 @@ res <- zenstats::deposit_stats(ids, all_versions_only = TRUE, progress = FALSE)
 
 -   Date: `r format(Sys.time())`
 -   Views: `r sum(res$views)`
--   File downloads: `r format(sum(res$downloads))`
--   Total volume: `r format(sum(res$volume, na.rm = TRUE))`
+-   Downloads: `r format(sum(res$downloads))`
+-   Total data volume: `r format(sum(res$volume, na.rm = TRUE))`
