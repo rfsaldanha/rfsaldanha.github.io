@@ -46,6 +46,12 @@ R package to grammar check documents inside RStudio.
 
 [![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/rspell-blue)](https://rfsaldanha.github.io/rspell/) [![](https://img.shields.io/github/stars/rfsaldanha/rspell)](https://github.com/rfsaldanha/rspell) [![](https://github.com/rfsaldanha/rspell/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/rspell/actions/workflows/R-CMD-check.yaml)
 
+## zonalclim
+
+R package to compute zonal statistics of climate indicators.
+
+[![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/zonalclim-blue)](https://rfsaldanha.github.io/zonalclim/) [![](https://img.shields.io/github/stars/rfsaldanha/rspell)](https://github.com/rfsaldanha/zonalclim) [![](https://github.com/rfsaldanha/zonalclim/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/zonalclim/actions/workflows/R-CMD-check.yaml)
+
 ## brclimr
 
 R package to retrieve municipal climate indicators of Brazilian municipalities.
