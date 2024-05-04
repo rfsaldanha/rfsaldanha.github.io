@@ -2728,5 +2728,12 @@
     "title": "Research Experience & Plans",
     "section": "Early Warning Systems for CSD",
     "text": "Early Warning Systems for CSD\n\nFramework proposal to prevent and early detect CSD outbreaks adaptive to regions’ contexts and priorities\nAligned with WHO guidelines\nClose work with health managers and civil society representatives for project usage and tools appropriation\nTraditional and machine learning multivariate models to forecast incidence for short and medium-time horizons (ARIMA, random forest, XGBoost, LSTM…)\nContinuous model monitoring and update (MLOps)"
+  },
+  {
+    "objectID": "code.html#zonalclim",
+    "href": "code.html#zonalclim",
+    "title": "Packages & Code",
+    "section": "zonalclim",
+    "text": "zonalclim\nR package to compute zonal statistics of climate indicators."
   }
 ]
