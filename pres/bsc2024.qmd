@@ -1,0 +1,68 @@
+---
+title: "Research Experience & Plans"
+author: "Raphael Saldanha"
+format:
+  revealjs: 
+    theme: inria_style.scss
+    transition: fade
+    background-transition: fade
+    pointer:
+      pointerSize: 40
+      color: '#e63312'
+code-link: true
+revealjs-plugins:
+  - pointer
+---
+
+## Main fields of work and projects
+
+-   [Data handling tools]{.hl}: author of ten R packages to handle health and climate datasets and indicators.
+
+`{microdatasus}`, `{brpop}`, `{tidyrates}`, `{zendown}`, `{zenstats}`, `{nseq}`, `{rspell}`, `{brclimr}`, `{zonalclim}`, `{opendenguedata}`
+
+-   [Visualization:]{.hl} malaria and COVID-19 interactive visualization dashboards (IRD and Fiocruz)
+-   [Analysis and modeling]{.hl} of climate-sensitive diseases (Fiocruz, LNCC, BSC, Inria, IRD)
+
+## Health and Climate indicators
+
+::: columns
+::: {.column width="60%"}
+-   [Standardized]{.hl} methodology to harmonize climate indicators with health data
+-   Same time and spatial units (administrative regions)
+-   Method of Zonal Statistics
+-   Publication at [Environmental Data Science journal (2024)](https://doi.org/10.1017/eds.2024.3)
+:::
+
+::: {.column width="40%"}
+![](images/zonal_statistics.png) ![](images/prec_map_1.png)
+:::
+:::
+
+## Health and Climate indicators
+
+-   Streamline methods, [expansion]{.hl} to other countries and continents
+-   Provide [regularly updated datasets]{.hl} of health and climate indicators at standardized administrative geographic boundaries (level 2, level 3)
+-   Usage of population estimates as [weighting]{.hl} factor
+-   Build [synthetic indicators]{.hl} for water cycle and droughts, warm and cold spells, and extreme events
+
+## Climate-Sensitive Diseases modeling
+
+-   Dengue inflicts an important health burden in Brazil
+    -   1 million new cases reported just in 2024, 214 deaths, official emergency status declaration
+-   Project for [dengue incidence forecast]{.hl} on Brazil with machine learning methods
+-   Novel subsets approach, cluster based models with better performance
+
+## Early Warning Systems for CSD
+
+-   [Framework]{.hl} proposal to prevent and early detect CSD outbreaks adaptive to regions' contexts and priorities
+-   Aligned with WHO guidelines
+-   Close work with health managers and civil society representatives for project usage and tools appropriation
+-   Traditional and machine learning multivariate models to forecast incidence for short and medium-time horizons (ARIMA, random forest, XGBoost, LSTM...)
+-   Continuous model monitoring and update ([MLOps]{.hl})
+
+## Integration with the Global Health Resilience group and projects 
+
+-   [Toolkits]{.hl} development, maintenance and training. DAGs (directed acyclic graph) to integrate and monitor tools execution and results lifecycle
+-   [Climate and health data]{.hl} methods and products, basis of different projects 
+-   [ML]{.hl} methods and models for EWS 
+-   Provide [interoperable]{.hl} data, methods and models to different projects, as HARMONIZE, IDAlert, IDExtremes, and E4Warning

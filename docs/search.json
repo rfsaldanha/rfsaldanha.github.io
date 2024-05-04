@@ -2539,5 +2539,194 @@
     "title": "Packages & Code",
     "section": "zenstats",
     "text": "zenstats\nR package to fetch statistics of views, downloads and volume from Zenodo deposits."
+  },
+  {
+    "objectID": "pres/bsc2024.html#about-me",
+    "href": "pres/bsc2024.html#about-me",
+    "title": "Introduction and Research Proposal",
+    "section": "About me",
+    "text": "About me\n\nBrazilian from Rio de Janeiro\nLoves cycling and take pictures\nHusband, father of two dogs and a cat\nResearcher on Health Geography and Climate-Sensitive Diseases\nR developer"
+  },
+  {
+    "objectID": "pres/bsc2024.html#academia",
+    "href": "pres/bsc2024.html#academia",
+    "title": "Introduction and Research Proposal",
+    "section": "Academia",
+    "text": "Academia\n\nBSc on Geography (2007) and Specialization on Statistics (2009). Regionalization proposal based on Census data.\nMaster’s on Public Health (2017). Spatio-temporal models to study the relationship between traffic violence and income.\nDoctorate on Health Information (Fiocruz, 2021). Applications of Data Science methods on Public Health.\nConcluding a postdoc position at Inria. Machine Learning methods application on Dengue forecast."
+  },
+  {
+    "objectID": "pres/bsc2024.html#main-fields-of-work-and-projects",
+    "href": "pres/bsc2024.html#main-fields-of-work-and-projects",
+    "title": "Research Experience & Plans",
+    "section": "Main fields of work and projects",
+    "text": "Main fields of work and projects\n\nData handling tools: author of ten R packages to handle health and climate datasets and indicators.\n\n{microdatasus}, {brpop}, {tidyrates}, {zendown}, {zenstats}, {nseq}, {rspell}, {brclimr}, {zonalclim}, {opendenguedata}\n\nVisualization: malaria and COVID-19 interactive visualization dashboards (IRD and Fiocruz)\nAnalysis and modeling of climate-sensitive diseases (Fiocruz, LNCC, BSC, Inria, IRD)"
+  },
+  {
+    "objectID": "pres/bsc2024.html#cross-border-malaria-transmission",
+    "href": "pres/bsc2024.html#cross-border-malaria-transmission",
+    "title": "Introduction and Research Proposal",
+    "section": "Cross-border malaria transmission",
+    "text": "Cross-border malaria transmission\n\n\n\nFiocruz and IRD partnership\nBrazil (Amapá) and French Guiana border region\nDifferent languages and cultures, visualization is the key\nWork at MTD and a field work at Cayenne\nPublication at Journal of Medical Internet Research (JMIR, 2019)"
+  },
+  {
+    "objectID": "pres/bsc2024.html#covid-19-monitoring",
+    "href": "pres/bsc2024.html#covid-19-monitoring",
+    "title": "Introduction and Research Proposal",
+    "section": "COVID-19 Monitoring",
+    "text": "COVID-19 Monitoring\n\nFiocruz official institutional dashboard for the pandemics\nMore than 10 data sources covering diverse aspects\nData gathering, harmonization, visualization and analysis\nChallenges on data availability, standardization, and information communication\nDaily work basis, high press demand for data and insights\nSeveral technical notes, papers and a book chapter\nProject awarded an government prize"
+  },
+  {
+    "objectID": "pres/bsc2024.html#research-on-health-and-climate-indicators",
+    "href": "pres/bsc2024.html#research-on-health-and-climate-indicators",
+    "title": "Introduction and Research Proposal",
+    "section": "Research on Health and Climate indicators",
+    "text": "Research on Health and Climate indicators\n\n\n\nStandardized methodology to harmonize climate indicators with health data\nSame time and spatial units (administrative regions)\nMethod of Zonal Statistics\nPublication at Environmental Data Science journal (2024)"
+  },
+  {
+    "objectID": "pres/bsc2024.html#postdoc-project",
+    "href": "pres/bsc2024.html#postdoc-project",
+    "title": "Introduction and Research Proposal",
+    "section": "Postdoc project",
+    "text": "Postdoc project\n\nMontpellier University Inria Antenne, LIRMM\nDengue inflicts an important health burden in Brazil\n\n1 million new cases reported just in 2024, 214 deaths, official emergency status declaration\n\nProject for dengue incidence forecast on Brazil with machine learning methods\nNovel subsets approach, cluster based models with better performance"
+  },
+  {
+    "objectID": "pres/bsc2024.html#research-plans-for-the-next-years",
+    "href": "pres/bsc2024.html#research-plans-for-the-next-years",
+    "title": "Introduction and Research Proposal",
+    "section": "Research plans for the next years",
+    "text": "Research plans for the next years\n\nApplication of Data Science methods to Public Health challenges on the Global South\nStreamline health and climate indicators projects, expansion to other countries and continents\nUsage of Machine Learning methods for data analysis and forecast, Early Warning Systems"
+  },
+  {
+    "objectID": "pres/bsc2024.html#health-and-climate-indicators-harmonization",
+    "href": "pres/bsc2024.html#health-and-climate-indicators-harmonization",
+    "title": "Introduction and Research Proposal",
+    "section": "Health and climate indicators harmonization",
+    "text": "Health and climate indicators harmonization\n\nProvide regularly updated datasets of health and climate indicators at standardized administrative geographic boundaries (level 2, level 3)\nExpand coverage to other countries\nUsage of population estimates as weighting factor\nBuild synthetic indicators for water cycle and droughts, warm and cold spells, and extreme events"
+  },
+  {
+    "objectID": "pres/bsc2024.html#early-warning-system-for-climate-sensitive-diseases",
+    "href": "pres/bsc2024.html#early-warning-system-for-climate-sensitive-diseases",
+    "title": "Introduction and Research Proposal",
+    "section": "Early Warning System for Climate-Sensitive Diseases",
+    "text": "Early Warning System for Climate-Sensitive Diseases\n\nFramework proposal to prevent and early detect CSD outbreaks adaptive to regions’ contexts and priorities\nAligned with WHO guidelines\nClose work with health managers and civil society representatives for project usage and tools appropriation\nTraditional and machine learning multivariate models to forecast incidence for short and medium-time horizons (ARIMA, random forest, XGBoost, LSTM…)\nContinuous model monitoring and update (MLOps)"
+  },
+  {
+    "objectID": "pres/bsc2024.html#early-warning-system-for-climate-sensitive-diseases-1",
+    "href": "pres/bsc2024.html#early-warning-system-for-climate-sensitive-diseases-1",
+    "title": "Introduction and Research Proposal",
+    "section": "Early Warning System for Climate-Sensitive Diseases",
+    "text": "Early Warning System for Climate-Sensitive Diseases\n\nClose work with health managers and civil society representatives for project usage and tools appropriation"
+  },
+  {
+    "objectID": "pres/bsc2024.html#early-warning-system-for-climate-sensitive-diseases-2",
+    "href": "pres/bsc2024.html#early-warning-system-for-climate-sensitive-diseases-2",
+    "title": "Introduction and Research Proposal",
+    "section": "Early Warning System for Climate-Sensitive Diseases",
+    "text": "Early Warning System for Climate-Sensitive Diseases\n\nLay an EWS framework adaptive to other regions’ contexts and society priorities\nClose work with health managers and civil society representatives for project usage and tools appropriation"
+  },
+  {
+    "objectID": "pres/bsc2024.html#integration-with-ird",
+    "href": "pres/bsc2024.html#integration-with-ird",
+    "title": "Introduction and Research Proposal",
+    "section": "Integration with IRD",
+    "text": "Integration with IRD\n\nResearch aligned with the SDGs Good Health and Well-Being (3), Climate Action (13), and Partnership for the Goals (17)\nIRD equitable partnerships with the developing countries\nUMR EspaceDev expertise on earth observation and modeling of health and climate data\nESOR group focus on environment, society, and health relationship on time and space, reach on South America, Africa and Asia countries"
+  },
+  {
+    "objectID": "pres/bsc2024.html#thanks",
+    "href": "pres/bsc2024.html#thanks",
+    "title": "Introduction and Research Proposal",
+    "section": "Thanks!",
+    "text": "Thanks!\nMore information about me and projects at\nrfsaldanha.github.io\nrfsaldanha@gmail.com"
+  },
+  {
+    "objectID": "pres/bsc2024.html#previous-research-on-health-and-climate-indicators",
+    "href": "pres/bsc2024.html#previous-research-on-health-and-climate-indicators",
+    "title": "Introduction and Research Proposal",
+    "section": "Previous research on Health and Climate indicators",
+    "text": "Previous research on Health and Climate indicators\n\n\n\nStandardized methodology to harmonize climate indicators with health data\nSame time and spatial units (administrative regions)\nMethod of Zonal Statistics\nPublication at Environmental Data Science journal (2024)"
+  },
+  {
+    "objectID": "pres/bsc2024.html#previous-research-on-modeling",
+    "href": "pres/bsc2024.html#previous-research-on-modeling",
+    "title": "Introduction and Research Proposal",
+    "section": "Previous research on modeling",
+    "text": "Previous research on modeling\n\nMontpellier University Inria Antenne, LIRMM\nDengue inflicts an important health burden in Brazil\n\n1 million new cases reported just in 2024, 214 deaths, official emergency status declaration\n\nProject for dengue incidence forecast on Brazil with machine learning methods\nNovel subsets approach, cluster based models with better performance"
+  },
+  {
+    "objectID": "pres/bsc2024.html#new-research-plans",
+    "href": "pres/bsc2024.html#new-research-plans",
+    "title": "Introduction and Research Proposal",
+    "section": "New research plans",
+    "text": "New research plans\n\nApplication of Data Science methods to Public Health challenges on the Global South\nStreamline health and climate indicators projects, expansion to other countries and continents\nUsage of Machine Learning methods for data analysis and forecast, Early Warning Systems"
+  },
+  {
+    "objectID": "pres/bsc2024.html#career",
+    "href": "pres/bsc2024.html#career",
+    "title": "Introduction and Research Proposal",
+    "section": "Career",
+    "text": "Career\n\nBSc on Geography (2007) and Specialization on Statistics (2009). Regionalization proposal based on Census data.\nMaster’s on Public Health (2017). Spatio-temporal models to study the relationship between traffic violence and income.\nDoctorate on Health Information (Fiocruz, 2021). Applications of Data Science methods on Public Health.\nConcluding a postdoc position at Inria. Machine Learning methods application on Dengue forecast."
+  },
+  {
+    "objectID": "pres/bsc2024.html#integration-with-the-global-health-resilience-group",
+    "href": "pres/bsc2024.html#integration-with-the-global-health-resilience-group",
+    "title": "Introduction and Research Proposal",
+    "section": "Integration with the Global Health Resilience group",
+    "text": "Integration with the Global Health Resilience group\n\nResearch aligned with the SDGs Good Health and Well-Being (3), Climate Action (13), and Partnership for the Goals (17)\nIRD equitable partnerships with the developing countries\nUMR EspaceDev expertise on earth observation and modeling of health and climate data\nESOR group focus on environment, society, and health relationship on time and space, reach on South America, Africa and Asia countries"
+  },
+  {
+    "objectID": "pres/bsc2024.html#research-on-modeling",
+    "href": "pres/bsc2024.html#research-on-modeling",
+    "title": "Introduction and Research Proposal",
+    "section": "Research on modeling",
+    "text": "Research on modeling\n\nMontpellier University Inria Antenne, LIRMM\nDengue inflicts an important health burden in Brazil\n\n1 million new cases reported just in 2024, 214 deaths, official emergency status declaration\n\nProject for dengue incidence forecast on Brazil with machine learning methods\nNovel subsets approach, cluster based models with better performance"
+  },
+  {
+    "objectID": "pres/bsc2024.html#research-on-csd-modeling",
+    "href": "pres/bsc2024.html#research-on-csd-modeling",
+    "title": "Introduction and Research Proposal",
+    "section": "Research on CSD modeling",
+    "text": "Research on CSD modeling\n\nDengue inflicts an important health burden in Brazil\n\n1 million new cases reported just in 2024, 214 deaths, official emergency status declaration\n\nProject for dengue incidence forecast on Brazil with machine learning methods\nNovel subsets approach, cluster based models with better performance"
+  },
+  {
+    "objectID": "pres/bsc2024.html#integration-with-the-global-health-resilience-group-and-projects",
+    "href": "pres/bsc2024.html#integration-with-the-global-health-resilience-group-and-projects",
+    "title": "Research Experience & Plans",
+    "section": "Integration with the Global Health Resilience group and projects",
+    "text": "Integration with the Global Health Resilience group and projects\n\nToolkits development, maintenance and training. DAGs (directed acyclic graph) to integrate and monitor tools execution and results lifecycle\nClimate and health data methods and products, basis of different projects\nML methods and models for EWS\nProvide interoperable data, methods and models to different projects, as HARMONIZE, IDAlert, IDExtremes, and E4Warning"
+  },
+  {
+    "objectID": "pres/bsc2024.html#health-and-climate-indicators",
+    "href": "pres/bsc2024.html#health-and-climate-indicators",
+    "title": "Research Experience & Plans",
+    "section": "Health and Climate indicators",
+    "text": "Health and Climate indicators\n\n\n\nStandardized methodology to harmonize climate indicators with health data\nSame time and spatial units (administrative regions)\nMethod of Zonal Statistics\nPublication at Environmental Data Science journal (2024)"
+  },
+  {
+    "objectID": "pres/bsc2024.html#health-and-climate-indicators-1",
+    "href": "pres/bsc2024.html#health-and-climate-indicators-1",
+    "title": "Research Experience & Plans",
+    "section": "Health and Climate indicators",
+    "text": "Health and Climate indicators\n\nStreamline methods, expansion to other countries and continents\nProvide regularly updated datasets of health and climate indicators at standardized administrative geographic boundaries (level 2, level 3)\nUsage of population estimates as weighting factor\nBuild synthetic indicators for water cycle and droughts, warm and cold spells, and extreme events"
+  },
+  {
+    "objectID": "pres/bsc2024.html#csd-modeling",
+    "href": "pres/bsc2024.html#csd-modeling",
+    "title": "Introduction and Research Proposal",
+    "section": "CSD modeling",
+    "text": "CSD modeling\n\nDengue inflicts an important health burden in Brazil\n\n1 million new cases reported just in 2024, 214 deaths, official emergency status declaration\n\nProject for dengue incidence forecast on Brazil with machine learning methods\nNovel subsets approach, cluster based models with better performance"
+  },
+  {
+    "objectID": "pres/bsc2024.html#climate-sensitive-diseases-modeling",
+    "href": "pres/bsc2024.html#climate-sensitive-diseases-modeling",
+    "title": "Research Experience & Plans",
+    "section": "Climate-Sensitive Diseases modeling",
+    "text": "Climate-Sensitive Diseases modeling\n\nDengue inflicts an important health burden in Brazil\n\n1 million new cases reported just in 2024, 214 deaths, official emergency status declaration\n\nProject for dengue incidence forecast on Brazil with machine learning methods\nNovel subsets approach, cluster based models with better performance"
+  },
+  {
+    "objectID": "pres/bsc2024.html#early-warning-systems-for-csd",
+    "href": "pres/bsc2024.html#early-warning-systems-for-csd",
+    "title": "Research Experience & Plans",
+    "section": "Early Warning Systems for CSD",
+    "text": "Early Warning Systems for CSD\n\nFramework proposal to prevent and early detect CSD outbreaks adaptive to regions’ contexts and priorities\nAligned with WHO guidelines\nClose work with health managers and civil society representatives for project usage and tools appropriation\nTraditional and machine learning multivariate models to forecast incidence for short and medium-time horizons (ARIMA, random forest, XGBoost, LSTM…)\nContinuous model monitoring and update (MLOps)"
   }
 ]
