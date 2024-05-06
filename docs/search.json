@@ -2559,7 +2559,7 @@
     "href": "pres/bsc2024.html#main-fields-of-work-and-projects",
     "title": "Research Experience & Plans",
     "section": "Main fields of work and projects",
-    "text": "Main fields of work and projects\n\nData handling tools: author of ten R packages to handle health and climate datasets and indicators.\n\n{microdatasus}, {brpop}, {tidyrates}, {zendown}, {zenstats}, {nseq}, {rspell}, {brclimr}, {zonalclim}, {opendenguedata}\n\nVisualization: malaria and COVID-19 interactive visualization dashboards (IRD and Fiocruz)\nAnalysis and modeling of climate-sensitive diseases (Fiocruz, LNCC, BSC, Inria, IRD)"
+    "text": "Main fields of work and projects\n\nData handling tools: author of ten R packages to handle health and climate datasets and indicators.\n\n{microdatasus}, {brpop}, {tidyrates}, {zendown}, {zenstats}, {nseq}, {rspell}, {brclimr}, {zonalclim}, {opendenguedata}\n\nVisualization: malaria and COVID-19 interactive visualization dashboards (IRD-FR and Fiocruz-BR)\nAnalysis and modeling of climate-sensitive diseases (Fiocruz-BR, LNCC-BR, BSC, Inria-FR, IRD-FR)"
   },
   {
     "objectID": "pres/bsc2024.html#cross-border-malaria-transmission",

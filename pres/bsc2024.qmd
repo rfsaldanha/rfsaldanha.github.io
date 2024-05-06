@@ -20,8 +20,8 @@ revealjs-plugins:
 
 `{microdatasus}`, `{brpop}`, `{tidyrates}`, `{zendown}`, `{zenstats}`, `{nseq}`, `{rspell}`, `{brclimr}`, `{zonalclim}`, `{opendenguedata}`
 
--   [Visualization:]{.hl} malaria and COVID-19 interactive visualization dashboards (IRD and Fiocruz)
--   [Analysis and modeling]{.hl} of climate-sensitive diseases (Fiocruz, LNCC, BSC, Inria, IRD)
+-   [Visualization:]{.hl} malaria and COVID-19 interactive visualization dashboards (IRD-FR and Fiocruz-BR)
+-   [Analysis and modeling]{.hl} of climate-sensitive diseases (Fiocruz-BR, LNCC-BR, BSC, Inria-FR, IRD-FR)
 
 ## Health and Climate indicators
 
@@ -54,7 +54,7 @@ revealjs-plugins:
 
 ## Early Warning Systems for CSD
 
--   [Framework]{.hl} proposal to prevent and early detect CSD outbreaks adaptive to regions' contexts and priorities
+-   [Framework]{.hl} proposal to prevent and early detect CSD outbreaks [adaptive]{.hl} to regions' contexts and priorities
 -   Aligned with WHO guidelines
 -   Close work with health managers and civil society representatives for project usage and tools appropriation
 -   Traditional and machine learning multivariate models to forecast incidence for short and medium-time horizons (ARIMA, random forest, XGBoost, LSTM...)
