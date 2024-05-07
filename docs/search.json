@@ -1684,7 +1684,7 @@
     "href": "data.html",
     "title": "Data",
     "section": "",
-    "text": "Zonal statististics of climate indicators for Brazilian municipalities\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHealth indicators\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nERA5-Land selected indicators daily aggregates for Latin America\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAge-adjusted COVID-19 mortality rates for Brazilian municipalities\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Zonal statististics of climate indicators for Brazilian municipalities\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHealth indicators\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nERA5-Land selected indicators daily aggregates for Latin America and Africa\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAge-adjusted COVID-19 mortality rates for Brazilian municipalities\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "pres/ird2024.html#about-me",
@@ -2819,5 +2819,40 @@
     "title": "Research Experience & Plans",
     "section": "",
     "text": "Data handling tools: author of ten R packages to handle health and climate datasets and indicators.\n\n{microdatasus}, {brpop}, {tidyrates}, {zendown}, {zenstats}, {nseq}, {rspell}, {brclimr}, {zonalclim}, {opendenguedata}\n\nVisualization: malaria and COVID-19 interactive visualization dashboards (IRD-FR and Fiocruz-BR)\nAnalysis and modeling of climate-sensitive diseases (Fiocruz-BR, LNCC-BR, BSC, Inria-FR, IRD-FR)"
+  },
+  {
+    "objectID": "data-projects/era5land-daily-latin-america-africa.html",
+    "href": "data-projects/era5land-daily-latin-america-africa.html",
+    "title": "ERA5-Land selected indicators daily aggregates for Latin America and Africa",
+    "section": "",
+    "text": "Maximum temperature (k)"
+  },
+  {
+    "objectID": "data-projects/era5land-daily-latin-america-africa.html#introduction",
+    "href": "data-projects/era5land-daily-latin-america-africa.html#introduction",
+    "title": "ERA5-Land selected indicators daily aggregates for Latin America and Africa",
+    "section": "Introduction",
+    "text": "Introduction\nThe ERA5-Land reanalysis from The Copernicus Programme is an incredible source of climate data with global coverage of land areas from 1950 to the present, at 10km spatial resolution. Its original data is at hourly interval, and monthly aggregates are also available at the Copernicus Data Store (CDS).\nFor some applications like Climate-Sensitive Diseases (CSD) modelling, the hourly interval may be too much detailed, but the monthly aggregation is too coarse.\nFor this reason, I created daily aggregates from some ERA5-Land indicators for the Latin America and Africa."
+  },
+  {
+    "objectID": "data-projects/era5land-daily-latin-america-africa.html#methodology",
+    "href": "data-projects/era5land-daily-latin-america-africa.html#methodology",
+    "title": "ERA5-Land selected indicators daily aggregates for Latin America and Africa",
+    "section": "Methodology",
+    "text": "Methodology\nI developed an R script using the KrigR package (Kusch and Davy 2022). The script downloads a set of indicators, starting on 1950, for a geographical bounding box covering the Latin America region (coordinates -118.47,-34.1,-56.65, 33.28), and Africa (coordinates -47.11,71.01,34.88,71.38) and aggregates the data from hourly to daily, saving its results as NetCDF files. Each resulting file covers a year’s month and presents data layers for each day of the respective month.\nThe table bellow contains the time aggregation functions applied to each climate indicator.\n\n\n\nIndicator\nDaily aggregation function\n\n\n\n\n2m temperature\nmean, max, min\n\n\n2m dewpoint temperature\nmean\n\n\nu component of wind\nmean\n\n\nv component of wind\nmean\n\n\nsurface pressure\nmean\n\n\ntotal precipitation\nsum"
+  },
+  {
+    "objectID": "data-projects/era5land-daily-latin-america-africa.html#latin-america-data",
+    "href": "data-projects/era5land-daily-latin-america-africa.html#latin-america-data",
+    "title": "ERA5-Land selected indicators daily aggregates for Latin America and Africa",
+    "section": "Latin America data",
+    "text": "Latin America data\nThe resulting NetCDF files are available for download at Zenodo.\n\n\n\nYear\nZenodo deposit\n\n\n\n\n1950\n\n\n\n1951\n\n\n\n1952\n\n\n\n1953\n\n\n\n1954\n\n\n\n1955\n\n\n\n1956\n\n\n\n1957\n\n\n\n1958\n\n\n\n1959\n\n\n\n1960\n\n\n\n1961\n\n\n\n1962\n\n\n\n1963\n\n\n\n1964\n\n\n\n1965\n\n\n\n1966\n\n\n\n1967\n\n\n\n1968\n\n\n\n1969\n\n\n\n1970\n\n\n\n1971\n\n\n\n1972\n\n\n\n1973\n\n\n\n1974\n\n\n\n1975\n\n\n\n1976\n\n\n\n1977\n\n\n\n1978\n\n\n\n1979\n\n\n\n1980\n\n\n\n1981\n\n\n\n1982\n\n\n\n1983\n\n\n\n1984\n\n\n\n1985\n\n\n\n1986\n\n\n\n1987\n\n\n\n1988\n\n\n\n1989\n\n\n\n1990\n\n\n\n1991\n\n\n\n1992\n\n\n\n1993\n\n\n\n1994\n\n\n\n1995\n\n\n\n1996\n\n\n\n1997\n\n\n\n1998\n\n\n\n1999\n\n\n\n2000\n\n\n\n2001\n\n\n\n2002\n\n\n\n2003\n\n\n\n2004\n\n\n\n2005\n\n\n\n2006\n\n\n\n2007\n\n\n\n2008\n\n\n\n2009\n\n\n\n2010\n\n\n\n2011\n\n\n\n2012\n\n\n\n2013\n\n\n\n2014\n\n\n\n2015\n\n\n\n2016\n\n\n\n2017\n\n\n\n2018\n\n\n\n2019\n\n\n\n2020\n\n\n\n2021\n\n\n\n2022\n\n\n\n2023\n\n\n\n\n\nUsage statistics\n\nUntil: 2024-05-07 16:50:52\nViews: 5785\nDownloads: 16683\nTotal data volume: 1.87 TB"
+  },
+  {
+    "objectID": "data-projects/era5land-daily-latin-america-africa.html#africa-data",
+    "href": "data-projects/era5land-daily-latin-america-africa.html#africa-data",
+    "title": "ERA5-Land selected indicators daily aggregates for Latin America and Africa",
+    "section": "Africa data",
+    "text": "Africa data\nData from 2010 to 2023 is ready to use and available on Zenodo. Data from 1950 to 2009 is being processed and will be made available soon.\n\n\n\nYear\nZenodo deposit\n\n\n\n\n2010\n\n\n\n2011\n\n\n\n2012\n\n\n\n2013\n\n\n\n2014\n\n\n\n2015\n\n\n\n2016\n\n\n\n2017\n\n\n\n2018\n\n\n\n2019\n\n\n\n2020\n\n\n\n2021\n\n\n\n2022\n\n\n\n2023\n\n\n\n\n\nUsage statistics\n\nUntil: 2024-05-07 16:51:11\nViews: 143\nDownloads: 150\nTotal data volume: 14.74 GB"
   }
 ]

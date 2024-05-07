@@ -1,9 +1,9 @@
 ---
-title: "ERA5-Land selected indicators daily aggregates for Latin America"
+title: "ERA5-Land selected indicators daily aggregates for Latin America and Africa"
 bibliography: references.bib
 ---
 
-![Maximum temperature (k)](images/era5-land-daily-aggregates.png)
+![Maximum temperature (k)](images/era5land_daily_la_africa.png)
 
 ## Introduction
 
@@ -11,11 +11,11 @@ The [ERA5-Land](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-er
 
 For some applications like Climate-Sensitive Diseases (CSD) modelling, the hourly interval may be too much detailed, but the monthly aggregation is too coarse.
 
-For this reason, I created daily aggregates from some ERA5-Land indicators for the Latin America region.
+For this reason, I created daily aggregates from some ERA5-Land indicators for the Latin America and Africa.
 
 ## Methodology
 
-I developed an [R script](https://github.com/rfsaldanha/era5daily) using the KrigR package [@kusch2022]. The script downloads a set of indicators, starting on 1950, for a geographical bounding box covering the Latin America region (coordinates -118.47,-34.1,-56.65, 33.28), and aggregates the data from hourly to daily, saving its results as NetCDF files. Each resulting file covers a year's month and presents data layers for each day of the respective month.
+I developed an [R script](https://github.com/rfsaldanha/era5daily) using the KrigR package [@kusch2022]. The script downloads a set of indicators, starting on 1950, for a geographical bounding box covering the Latin America region (coordinates -118.47,-34.1,-56.65, 33.28), and Africa (coordinates -47.11,71.01,34.88,71.38) and aggregates the data from hourly to daily, saving its results as NetCDF files. Each resulting file covers a year's month and presents data layers for each day of the respective month.
 
 The table bellow contains the time aggregation functions applied to each climate indicator.
 
@@ -28,12 +28,12 @@ The table bellow contains the time aggregation functions applied to each climate
 | surface pressure        | mean                       |
 | total precipitation     | sum                        |
 
-## Data
+## Latin America data
 
 The resulting NetCDF files are available for download at Zenodo.
 
 | Year | Zenodo deposit                                                                                                     |
-|------|--------------------------------------------------------------------------------------------------------------------|
+|------------|------------------------------------------------------------|
 | 1950 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10013254-green.svg)](https://doi.org/10.5281/zenodo.10013254) |
 | 1951 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10013695-green.svg)](https://doi.org/10.5281/zenodo.10013695) |
 | 1952 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10013780-green.svg)](https://doi.org/10.5281/zenodo.10013780) |
@@ -109,16 +109,51 @@ The resulting NetCDF files are available for download at Zenodo.
 | 2022 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10036167-green.svg)](https://doi.org/10.5281/zenodo.10036167) |
 | 2023 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10889682-green.svg)](https://doi.org/10.5281/zenodo.10889682) |
 
-## Usage statistics
+### Usage statistics
 
 ```{r}
 #| echo: false
 source("era5land-daily-latin-america_ids.R")
 
-res <- zenstats::deposit_stats(ids, all_versions_only = TRUE, progress = FALSE)
+res <- zenstats::deposit_stats(ids_la, all_versions_only = TRUE, progress = FALSE)
 ```
 
--   Date: `r format(Sys.time())`
+-   Until: `r format(Sys.time())`
+-   Views: `r sum(res$views)`
+-   Downloads: `r format(sum(res$downloads))`
+-   Total data volume: `r format(sum(res$volume, na.rm = TRUE))`
+
+## Africa data
+
+Data from 2010 to 2023 is ready to use and available on Zenodo. Data from 1950 to 2009 is being processed and will be made available soon.
+
+| Year | Zenodo deposit                                                                                                     |
+|------------|------------------------------------------------------------|
+| 2010 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11127111-green.svg)](https://doi.org/10.5281/zenodo.11127111) |
+| 2011 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11127089-green.svg)](https://doi.org/10.5281/zenodo.11127089) |
+| 2012 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11126935-green.svg)](https://doi.org/10.5281/zenodo.11126935) |
+| 2013 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11126924-green.svg)](https://doi.org/10.5281/zenodo.11126924) |
+| 2014 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11126908-green.svg)](https://doi.org/10.5281/zenodo.11126908) |
+| 2015 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11126889-green.svg)](https://doi.org/10.5281/zenodo.11126889) |
+| 2016 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11126864-green.svg)](https://doi.org/10.5281/zenodo.11126864) |
+| 2017 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11126841-green.svg)](https://doi.org/10.5281/zenodo.11126841) |
+| 2018 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11126820-green.svg)](https://doi.org/10.5281/zenodo.11126820) |
+| 2019 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11126794-green.svg)](https://doi.org/10.5281/zenodo.11126794) |
+| 2020 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11126758-green.svg)](https://doi.org/10.5281/zenodo.11126758) |
+| 2021 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11126741-green.svg)](https://doi.org/10.5281/zenodo.11126741) |
+| 2022 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11126723-green.svg)](https://doi.org/10.5281/zenodo.11126723) |
+| 2023 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11105116-green.svg)](https://doi.org/10.5281/zenodo.11105116) |
+
+### Usage statistics
+
+```{r}
+#| echo: false
+source("era5land-daily-africa_ids.R")
+
+res <- zenstats::deposit_stats(ids_africa, all_versions_only = TRUE, progress = FALSE)
+```
+
+-   Until: `r format(Sys.time())`
 -   Views: `r sum(res$views)`
 -   Downloads: `r format(sum(res$downloads))`
 -   Total data volume: `r format(sum(res$volume, na.rm = TRUE))`

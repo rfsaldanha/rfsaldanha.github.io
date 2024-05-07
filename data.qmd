@@ -4,7 +4,7 @@ listing:
   contents:
     - data-projects/brazil-climate-zonal-indicators.qmd
     - data-projects/health-indicators.qmd
-    - data-projects/era5land-daily-latin-america.qmd
+    - data-projects/era5land-daily-latin-america-africa.qmd
     - data-projects/std_br_covid_rates_data.qmd
   sort: false
   sort-ui: false
