@@ -1047,7 +1047,7 @@
     "href": "talks.html",
     "title": "Talks",
     "section": "",
-    "text": "Disease and climate data fusion for modeling\n\n\nAn application case for Brazil\n\n\n\nbrclim\n\n\n\nTalk at the Inria Zenith’s Team Seminar.\n\n\n\n\n\nMar 21, 2024\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nBILIS\n\n\nAn unified indicators database\n\n\n\nbilis\n\n\n\nTalk at the Climate and Health for Health Situation Studies Workshop, IRD.\n\n\n\n\n\nDec 18, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modelling\n\n\nAn application case for Brazil\n\n\n\nbrclim\n\n\n\nTalk at the Climate and Health for Health Situation Studies Workshop, IRD.\n\n\n\n\n\nDec 18, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modelling\n\n\nAn application case for Brazil\n\n\n\nisntd\n\n\nclimate\n\n\ndata\n\n\n\nTalk at the ISNTD Climate & Health Conference, Global Health Resilience panel\n\n\n\n\n\nNov 22, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Subset Models for Multivariate Time Series Forecast\n\n\n1st MulTiSA, ICDE 2024\n\n\n\nsubsets\n\n\nmachine learning\n\n\n\nPresentation at 1st MulTiSA workshop, ICDE 2024 conference.\n\n\n\n\n\nMay 13, 2024\n\n\nRaphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, Patrick Valduriez, Fabio Porto\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modeling\n\n\nAn application case for Brazil\n\n\n\nbrclim\n\n\n\nTalk at the Inria Zenith’s Team Seminar.\n\n\n\n\n\nMar 21, 2024\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nBILIS\n\n\nAn unified indicators database\n\n\n\nbilis\n\n\n\nTalk at the Climate and Health for Health Situation Studies Workshop, IRD.\n\n\n\n\n\nDec 18, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modelling\n\n\nAn application case for Brazil\n\n\n\nbrclim\n\n\n\nTalk at the Climate and Health for Health Situation Studies Workshop, IRD.\n\n\n\n\n\nDec 18, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modelling\n\n\nAn application case for Brazil\n\n\n\nisntd\n\n\nclimate\n\n\ndata\n\n\n\nTalk at the ISNTD Climate & Health Conference, Global Health Resilience panel\n\n\n\n\n\nNov 22, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "projects/redes-de-cuidado.html",
@@ -2735,5 +2735,82 @@
     "title": "Packages & Code",
     "section": "zonalclim",
     "text": "zonalclim\nR package to compute zonal statistics of climate indicators."
+  },
+  {
+    "objectID": "talks/multisa_subsets_2024.html#introduction",
+    "href": "talks/multisa_subsets_2024.html#introduction",
+    "title": "Subset Models for Multivariate Time Series Forecast",
+    "section": "Introduction",
+    "text": "Introduction\n\nAbundant multivariate time series, good opportunity for forecasting machine learning methods\nData may present intrinsic diversity of samples, affecting model’s performance on different parts of the input\nGlobal models: use all available time series\nLocal models: use only time series pertaining to each sample\nData subsets models: our proposal"
+  },
+  {
+    "objectID": "talks/multisa_subsets_2024.html#objective",
+    "href": "talks/multisa_subsets_2024.html#objective",
+    "title": "Subset Models for Multivariate Time Series Forecast",
+    "section": "Objective",
+    "text": "Objective\n\nPropose a subset modeling framework\nAccommodate regional variations across diverse units (e.g. municipalities)\nCost-effective training with robust prediction capabilities in comparison with global models"
+  },
+  {
+    "objectID": "talks/multisa_subsets_2024.html#subset-modeling-framework",
+    "href": "talks/multisa_subsets_2024.html#subset-modeling-framework",
+    "title": "Subset Models for Multivariate Time Series Forecast",
+    "section": "Subset modeling framework",
+    "text": "Subset modeling framework\n\n\n\nIdentify subsets within the dataset with similar patterns\nTrain models for each subset\nUse the model trained on the subset data for prediction"
+  },
+  {
+    "objectID": "talks/multisa_subsets_2024.html#experimental-evaluation",
+    "href": "talks/multisa_subsets_2024.html#experimental-evaluation",
+    "title": "Subset Models for Multivariate Time Series Forecast",
+    "section": "Experimental evaluation",
+    "text": "Experimental evaluation\n\nDengue disease is transmitted by mosquitoes and is a Public Health concern. Record number cases on 2024 in Brazil, tendency to increase with global warming\nA typical forecasting model is targeted to predict number of cases based on climate indicators (rain and temperature)\nA global model would use data from all municipalities, facing difficulties related to distinct temporal and spatial disease transmission patterns"
+  },
+  {
+    "objectID": "talks/multisa_subsets_2024.html#results",
+    "href": "talks/multisa_subsets_2024.html#results",
+    "title": "Subset Models for Multivariate Time Series Forecast",
+    "section": "Results",
+    "text": "Results\n\n\\(k = 5\\) returned the highest silhouette score"
+  },
+  {
+    "objectID": "talks/multisa_subsets_2024.html#conclusions-and-next-steps",
+    "href": "talks/multisa_subsets_2024.html#conclusions-and-next-steps",
+    "title": "Subset Models for Multivariate Time Series Forecast",
+    "section": "Conclusions and next steps",
+    "text": "Conclusions and next steps\n\nWe specifically addressed and formalized the subsets approach in a multivariate time series setting\nSubsets models rendered better performance than global models on 116 municipalities from 333 (34.83%)\nSubsets models overall performance is related to the partition’s size. Bigger partitions (more municipalities) have more training data.\nFurther work may advance on clustering strategies (constraints in size and featured-based approaches) and apply different learners on model training"
+  },
+  {
+    "objectID": "talks/multisa_subsets_2024.html#case-example",
+    "href": "talks/multisa_subsets_2024.html#case-example",
+    "title": "Subset Models for Multivariate Time Series Forecast",
+    "section": "Case example",
+    "text": "Case example\n\nDengue disease is transmitted by mosquitoes and is a Public Health concern. Record number cases on 2024 in Brazil, tendency to increase with global warming\nA typical forecasting model is targeted to predict number of cases based on climate indicators (rain and temperature)\nA global model would use data from all municipalities, facing difficulties related to distinct temporal and spatial disease transmission patterns"
+  },
+  {
+    "objectID": "talks/multisa_subsets_2024.html#datasets",
+    "href": "talks/multisa_subsets_2024.html#datasets",
+    "title": "Subset Models for Multivariate Time Series Forecast",
+    "section": "Datasets",
+    "text": "Datasets\n\nDengue dataset. Weekly cases count, from 2011 to 2020, for 333 municipalities.\nClimate dataset. Average maximum and minimum temperature, total precipitation. Same time and spatial units and coverage.\nAll indicators were standardized (with zero mean and one SD)"
+  },
+  {
+    "objectID": "talks/multisa_subsets_2024.html#experimental-setup",
+    "href": "talks/multisa_subsets_2024.html#experimental-setup",
+    "title": "Subset Models for Multivariate Time Series Forecast",
+    "section": "Experimental setup",
+    "text": "Experimental setup\n\nIdentify data subsets considering dengue cases and covariates patterns across municipalities with DTW distance.\n\nSelect the optimum number of subsets (\\(k\\)) considering silhouette score\n\nTrain random forest Global Model with and without the subset id feature information\nTrain random forest Subsets Models\nEvaluate forecasting model’s performance on test data"
+  },
+  {
+    "objectID": "talks/multisa_subsets_2024.html#clustering-results",
+    "href": "talks/multisa_subsets_2024.html#clustering-results",
+    "title": "Subset Models for Multivariate Time Series Forecast",
+    "section": "Clustering results",
+    "text": "Clustering results\n\n\n\n\\(k = 5\\) returned the highest silhouette score\nPartition sizes: \\(g_1 = 69\\), \\(g_2 = 62\\), \\(g_3 = 82\\), \\(g_4 = 102\\), \\(g_5 = 18\\)"
+  },
+  {
+    "objectID": "talks/multisa_subsets_2024.html#model-results",
+    "href": "talks/multisa_subsets_2024.html#model-results",
+    "title": "Subset Models for Multivariate Time Series Forecast",
+    "section": "Model results",
+    "text": "Model results"
   }
 ]
