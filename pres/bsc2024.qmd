@@ -50,7 +50,7 @@ revealjs-plugins:
 -   Dengue inflicts an important health burden in Brazil
     -   1 million new cases reported just in 2024, 214 deaths, official emergency status declaration
 -   Project for [dengue incidence forecast]{.hl} on Brazil with machine learning methods
--   Novel subsets approach, cluster based models with better performance
+-   Novel [ML subsets approach]{.hl}, with cluster based models
 
 ## Early Warning Systems for CSD
 
