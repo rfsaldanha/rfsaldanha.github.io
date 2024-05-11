@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.24">
+  <meta name="generator" content="quarto-1.5.33">
 
   <meta name="author" content="Raphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, Patrick Valduriez, Fabio Porto">
   <meta name="dcterms.date" content="2024-05-13">
@@ -364,6 +364,14 @@ Raphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, 
 <li><span class="hl">Data subsets models</span>: our proposal</li>
 </ul>
 </section>
+<section id="case-example" class="slide level2">
+<h2>Case example</h2>
+<ul>
+<li><span class="hl">Dengue</span> disease is transmitted by mosquitoes and is a Public Health concern. Record number cases on 2024 in Brazil, tendency to increase with global warming</li>
+<li>A typical forecasting model is targeted to predict number of cases based on <span class="hl">climate indicators</span> (rain and temperature)</li>
+<li>A <span class="hl">global model</span> would use data from all municipalities, facing <span class="hl">difficulties</span> related to <span class="hl">distinct</span> temporal and spatial disease <span class="hl">transmission patterns</span></li>
+</ul>
+</section>
 <section id="objective" class="slide level2">
 <h2>Objective</h2>
 <ul>
@@ -406,14 +414,6 @@ Raphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, 
 <h2></h2>
 
 <img data-src="images/subset_model_fig_d.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="case-example" class="slide level2">
-<h2>Case example</h2>
-<ul>
-<li><span class="hl">Dengue</span> disease is transmitted by mosquitoes and is a Public Health concern. Record number cases on 2024 in Brazil, tendency to increase with global warming</li>
-<li>A typical forecasting model is targeted to predict number of cases based on <span class="hl">climate indicators</span> (rain and temperature)</li>
-<li>A <span class="hl">global model</span> would use data from all municipalities, facing <span class="hl">difficulties</span> related to <span class="hl">distinct</span> temporal and spatial disease <span class="hl">transmission patterns</span></li>
-</ul>
-</section>
 <section id="datasets" class="slide level2">
 <h2>Datasets</h2>
 <ul>
@@ -463,6 +463,11 @@ Raphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, 
 <li>Subsets models overall performance is related to the <span class="hl">partition’s size</span>. Bigger partitions (more municipalities) have more training data.</li>
 <li>Further work may advance on clustering strategies (constraints in size and featured-based approaches) and apply different learners on model training</li>
 </ul>
+</section>
+<section id="thanks" class="slide level2">
+<h2>Thanks!</h2>
+<p>Contact and more info at</p>
+<p><a href="https://rfsaldanha.github.io">rfsaldanha.github.io</a></p>
 
 <div class="quarto-auto-generated-content">
 <p><img src="inria_logo.png" class="slide-logo"></p>
@@ -715,18 +720,7 @@ Raphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, 
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -758,7 +752,29 @@ Raphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, 
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp('/' + window.location.host + '/');

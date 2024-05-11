@@ -27,6 +27,22 @@
     ]
   },
   {
+    "listing": "/data.html",
+    "items": [
+      "/data-projects/brazil-climate-zonal-indicators.html",
+      "/data-projects/health-indicators.html",
+      "/data-projects/era5land-daily-latin-america-africa.html",
+      "/data-projects/std_br_covid_rates_data.html"
+    ]
+  },
+  {
+    "listing": "/data-projects/health-indicators.html",
+    "items": [
+      "/data-projects/health_indicators/indi_0002.html",
+      "/data-projects/health_indicators/indi_0001.html"
+    ]
+  },
+  {
     "listing": "/blog.html",
     "items": [
       "/posts/persistent_heat.html",
@@ -67,22 +83,6 @@
       "/climate_health_hub/ms_mudancas_climaticas_saude_2023.html",
       "/climate_health_hub/ccmi_webinar_climate_change_health_2023.html",
       "/climate_health_hub/enbel_conference_2023.html"
-    ]
-  },
-  {
-    "listing": "/data-projects/health-indicators.html",
-    "items": [
-      "/data-projects/health_indicators/indi_0002.html",
-      "/data-projects/health_indicators/indi_0001.html"
-    ]
-  },
-  {
-    "listing": "/data.html",
-    "items": [
-      "/data-projects/brazil-climate-zonal-indicators.html",
-      "/data-projects/health-indicators.html",
-      "/data-projects/era5land-daily-latin-america-africa.html",
-      "/data-projects/std_br_covid_rates_data.html"
     ]
   },
   {
