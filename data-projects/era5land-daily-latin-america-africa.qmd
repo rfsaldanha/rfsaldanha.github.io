@@ -33,7 +33,7 @@ The table bellow contains the time aggregation functions applied to each climate
 The resulting NetCDF files are available for download at Zenodo.
 
 | Year | Zenodo deposit                                                                                                     |
-|------------|------------------------------------------------------------|
+|------|--------------------------------------------------------------------------------------------------------------------|
 | 1950 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10013254-green.svg)](https://doi.org/10.5281/zenodo.10013254) |
 | 1951 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10013695-green.svg)](https://doi.org/10.5281/zenodo.10013695) |
 | 1952 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10013780-green.svg)](https://doi.org/10.5281/zenodo.10013780) |
@@ -128,7 +128,7 @@ res <- zenstats::deposit_stats(ids_la, all_versions_only = TRUE, progress = FALS
 Data from 2010 to 2023 is ready to use and available on Zenodo. Data from 1950 to 2009 is being processed and will be made available soon.
 
 | Year | Zenodo deposit                                                                                                     |
-|------------|------------------------------------------------------------|
+|------|--------------------------------------------------------------------------------------------------------------------|
 | 2010 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11127111-green.svg)](https://doi.org/10.5281/zenodo.11127111) |
 | 2011 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11127089-green.svg)](https://doi.org/10.5281/zenodo.11127089) |
 | 2012 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11126935-green.svg)](https://doi.org/10.5281/zenodo.11126935) |
