@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "data.html",
-    "href": "data.html",
-    "title": "Datasets",
-    "section": "",
-    "text": "Zonal statististics of climate indicators for Brazilian municipalities\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nERA5-Land selected indicators daily aggregates for Latin America and Africa\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHealth indicators\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAge-adjusted COVID-19 mortality rates for Brazilian municipalities\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
-  },
-  {
     "objectID": "posts/hot_2023.html",
     "href": "posts/hot_2023.html",
     "title": "How 2023 was hot in different Brazilian municipalities?",
@@ -455,18 +448,11 @@
     "text": "Package tests\nAs your package relies on Internet now, it can be important to skip some tests on CRAN, as the host may be offline or some connection problem can occur. Include testthat::skip_on_cran() on the tests that will require online data."
   },
   {
-    "objectID": "talks/climate_health_workshop_2023.html",
-    "href": "talks/climate_health_workshop_2023.html",
-    "title": "Disease and climate data fusion for modelling",
-    "section": "",
-    "text": "Postdoctoral researcher at Inria, a French research institute for digital science and technology\nFiocruz, Climate and Health Observatory collaborator\nBSC, Global Health Resilience collaborator"
-  },
-  {
     "objectID": "talks/climate_health_workshop_2023.html#introduction",
     "href": "talks/climate_health_workshop_2023.html#introduction",
     "title": "Disease and climate data fusion for modelling",
-    "section": "",
-    "text": "Postdoctoral researcher at Inria, a French research institute for digital science and technology\nFiocruz, Climate and Health Observatory collaborator\nBSC, Global Health Resilience collaborator"
+    "section": "Introduction",
+    "text": "Introduction\n\nPostdoctoral researcher at Inria, a French research institute for digital science and technology\nFiocruz, Climate and Health Observatory collaborator\nBSC, Global Health Resilience collaborator"
   },
   {
     "objectID": "talks/climate_health_workshop_2023.html#climate-sensitive-diseases",
@@ -679,18 +665,11 @@
     "text": "Zonal TerraClimate\n\nThe TerraClimate (Abatzoglou et al. 2018) dataset presents monthly meteorological data interpolated to a grid with 0.04° × 0.04° (1/24th degree) of spatial resolution with world cover, with monthly data from January, 1958, to December, 2021.\nThe following weather indicators are available from the TerraClimate study: Actual Evapotranspiration (mm), Climate Water Deficit (mm), Potential evapotranspiration(mm), Precipitation (mm), Runoff (mm), Soil Moisture (mm), Downward surface shortwave radiation (W/m2), Snow water equivalent (mm), Minimum temperature (°C), Maximum temperature (°C), Vapor pressure (kPa), Wind speed (m/s), Vapor Pressure Deficit (kpa) and Palmer Drought Severity Index.\nThe following zonal statistics were computed.\n\nbrclimr::product_info(product = \"terraclimate\")\n\n&lt;list&gt;\n├─tmax: &lt;list&gt;\n│ ├─link: \"https://terraclimate.nyc3.cdn.di...\"\n│ ├─name: \"Maximum temperature\"\n│ ├─detail: \"Average for month\"\n│ ├─unit: \"°C\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"tmax_min\"\n│   ├─max: \"tmax_max\"\n│   ├─mean: \"tmax_mean\"\n│   └─sd: \"tmax_sd\"\n├─tmin: &lt;list&gt;\n│ ├─link: \"https://terraclimate.nyc3.cdn.di...\"\n│ ├─name: \"Minimum temperature\"\n│ ├─detail: \"Average for month\"\n│ ├─unit: \"°C\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"tmin_min\"\n│   ├─max: \"tmin_max\"\n│   ├─mean: \"tmin_mean\"\n│   └─sd: \"tmin_sd\"\n├─ppt: &lt;list&gt;\n│ ├─link: \"https://terraclimate.nyc3.cdn.di...\"\n│ ├─name: \"Precipitation\"\n│ ├─detail: \"Monthly total\"\n│ ├─unit: \"mm\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"ppt_min\"\n│   ├─max: \"ppt_max\"\n│   ├─mean: \"ppt_mean\"\n│   ├─sd: \"ppt_sd\"\n│   └─sum: \"ppt_sum\"\n├─aet: &lt;list&gt;\n│ ├─link: \"https://terraclimate.nyc3.cdn.di...\"\n│ ├─name: \"Actual Evapotranspiration\"\n│ ├─detail: \"Monthly total\"\n│ ├─unit: \"mm\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"aet_min\"\n│   ├─max: \"aet_max\"\n│   ├─mean: \"aet_mean\"\n│   ├─sd: \"aet_sd\"\n│   └─sum: \"aet_sum\"\n├─def: &lt;list&gt;\n│ ├─link: \"https://terraclimate.nyc3.cdn.di...\"\n│ ├─name: \"Climate Water Deficit\"\n│ ├─detail: \"Monthly total\"\n│ ├─unit: \"mm\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"def_min\"\n│   ├─max: \"def_max\"\n│   ├─mean: \"def_mean\"\n│   ├─sd: \"def_sd\"\n│   └─sum: \"def_sum\"\n├─pdsi: &lt;list&gt;\n│ ├─link: \"https://terraclimate.nyc3.cdn.di...\"\n│ ├─name: \"Palmer Drought Severity Index\"\n│ ├─detail: \"At end of month\"\n│ ├─unit: \"unitless\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"PDSI_min\"\n│   ├─max: \"PDSI_max\"\n│   ├─mean: \"PDSI_mean\"\n│   └─sd: \"PDSI_sd\"\n├─pet: &lt;list&gt;\n│ ├─link: \"https://terraclimate.nyc3.cdn.di...\"\n│ ├─name: \"Potential evapotranspiration\"\n│ ├─detail: \"Monthly total\"\n│ ├─unit: \"mm\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"pet_min\"\n│   ├─max: \"pet_max\"\n│   ├─mean: \"pet_mean\"\n│   ├─sd: \"pet_sd\"\n│   └─sum: \"pet_sum\"\n├─q: &lt;list&gt;\n│ ├─link: \"https://terraclimate.nyc3.cdn.di...\"\n│ ├─name: \"Runoff\"\n│ ├─detail: \"Monthly total\"\n│ ├─unit: \"mm\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"q_min\"\n│   ├─max: \"q_max\"\n│   ├─mean: \"q_mean\"\n│   ├─sd: \"q_sd\"\n│   └─sum: \"q_sum\"\n├─soil: &lt;list&gt;\n│ ├─link: \"https://terraclimate.nyc3.cdn.di...\"\n│ ├─name: \"Soil Moisture\"\n│ ├─detail: \"Total column, at end of month\"\n│ ├─unit: \"mm\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"soil_min\"\n│   ├─max: \"soil_max\"\n│   ├─mean: \"soil_mean\"\n│   ├─sd: \"soil_sd\"\n│   └─sum: \"soil_sum\"\n├─srad: &lt;list&gt;\n│ ├─link: \"https://terraclimate.nyc3.cdn.di...\"\n│ ├─name: \"Downward surface shortwave radia...\"\n│ ├─unit: \"W/m2\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"srad_min\"\n│   ├─max: \"srad_max\"\n│   ├─mean: \"srad_mean\"\n│   ├─sd: \"srad_sd\"\n│   └─sum: \"srad_sum\"\n├─swe: &lt;list&gt;\n│ ├─link: \"https://terraclimate.nyc3.cdn.di...\"\n│ ├─name: \"Snow water equivalent\"\n│ ├─detail: \"At end of month\"\n│ ├─unit: \"mm\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"swe_min\"\n│   ├─max: \"swe_max\"\n│   ├─mean: \"swe_mean\"\n│   ├─sd: \"swe_sd\"\n│   └─sum: \"swe_sum\"\n├─vap: &lt;list&gt;\n│ ├─link: \"https://terraclimate.nyc3.cdn.di...\"\n│ ├─name: \"Vapor pressure\"\n│ ├─detail: \"Average for month\"\n│ ├─unit: \"kPa\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"vap_min\"\n│   ├─max: \"vap_max\"\n│   ├─mean: \"vap_mean\"\n│   └─sd: \"vap_sd\"\n├─vpd: &lt;list&gt;\n│ ├─link: \"https://terraclimate.nyc3.cdn.di...\"\n│ ├─name: \"Vapor Pressure Deficit\"\n│ ├─detail: \"Average for month\"\n│ ├─unit: \"kPa\"\n│ ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n│ └─stats: &lt;list&gt;\n│   ├─min: \"vpd_min\"\n│   ├─max: \"vpd_max\"\n│   ├─mean: \"vpd_mean\"\n│   └─sd: \"vpd_sd\"\n└─ws: &lt;list&gt;\n  ├─link: \"https://terraclimate.nyc3.cdn.di...\"\n  ├─name: \"Wind speed\"\n  ├─detail: \"Average for month\"\n  ├─unit: \"m/s\"\n  ├─date_range: \"Monthly, 1958-01 to 2021-12\"\n  └─stats: &lt;list&gt;\n    ├─min: \"ws_min\"\n    ├─max: \"ws_max\"\n    ├─mean: \"ws_mean\"\n    └─sd: \"ws_sd\"\n\n\nThe results are availabe as parquet files, available at Zenodo and can be also accessed with the brclimr R package."
   },
   {
-    "objectID": "talks/isntd_conference_2023.html",
-    "href": "talks/isntd_conference_2023.html",
-    "title": "Disease and climate data fusion for modelling",
-    "section": "",
-    "text": "Postdoc researcher at Inria, a French research institute for digital science and technology\nBSC, Global Health Resilience collaborator\nFiocruz, Climate and Health Observatory"
-  },
-  {
     "objectID": "talks/isntd_conference_2023.html#introduction",
     "href": "talks/isntd_conference_2023.html#introduction",
     "title": "Disease and climate data fusion for modelling",
-    "section": "",
-    "text": "Postdoc researcher at Inria, a French research institute for digital science and technology\nBSC, Global Health Resilience collaborator\nFiocruz, Climate and Health Observatory"
+    "section": "Introduction",
+    "text": "Introduction\n\nPostdoc researcher at Inria, a French research institute for digital science and technology\nBSC, Global Health Resilience collaborator\nFiocruz, Climate and Health Observatory"
   },
   {
     "objectID": "talks/isntd_conference_2023.html#climate-sensitive-diseases",
@@ -966,18 +945,11 @@
     "text": "Abstract\nNeonatal mortality is a global public health problem, and the efforts to reduce child mortality is one of the goals of the 2030 Agenda for Sustainable Development, launched in 2015 by the United Nations. The availability of historical neonatal mortality rates (NMR) data in Brazilian municipalities is crucial to evaluate trends at local, regional and national level, identifying gaps and vulnerable territories. Therefore, the objective of this article is to offer an integrated dataset containing monthly data in a historical series from 1996 to 2017 with information on all births, neonatal deaths, and NMR (total, early and late components) enriched with information related to the municipality."
   },
   {
-    "objectID": "talks/multisa_subsets_2024.html",
-    "href": "talks/multisa_subsets_2024.html",
-    "title": "Subset Models for Multivariate Time Series Forecast",
-    "section": "",
-    "text": "Abundant multivariate time series, good opportunity for forecasting machine learning methods\nData may present intrinsic diversity of samples, affecting model’s performance on different parts of the input\nGlobal models: use all available time series\nLocal models: use only time series pertaining to each sample\nData subsets models: our proposal"
-  },
-  {
     "objectID": "talks/multisa_subsets_2024.html#introduction",
     "href": "talks/multisa_subsets_2024.html#introduction",
     "title": "Subset Models for Multivariate Time Series Forecast",
-    "section": "",
-    "text": "Abundant multivariate time series, good opportunity for forecasting machine learning methods\nData may present intrinsic diversity of samples, affecting model’s performance on different parts of the input\nGlobal models: use all available time series\nLocal models: use only time series pertaining to each sample\nData subsets models: our proposal"
+    "section": "Introduction",
+    "text": "Introduction\n\nAbundant multivariate time series, good opportunity for forecasting machine learning methods\nData may present intrinsic diversity of samples, affecting model’s performance on different parts of the input\nGlobal models: use all available time series\nLocal models: use only time series pertaining to each sample\nData subsets models: our proposal"
   },
   {
     "objectID": "talks/multisa_subsets_2024.html#case-example",
@@ -1043,6 +1015,13 @@
     "text": "Thanks!\nContact and more info at\nrfsaldanha.github.io"
   },
   {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nSubset Models for Multivariate Time Series Forecast\n\n\n\n\n\n\n\n\n\n\n\nMay 13, 2024\n\n\nRaphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, Patrick Valduriez, Fabio Porto\n\n\n\n\n\n\n\n\n\n\n\n\nZonal statistics datasets of climate indicators for Brazilian municipalities\n\n\n\n\n\n\n\n\n\n\n\nFeb 12, 2024\n\n\nRaphael Saldanha, Reza Akbarinia, Marcel Pedroso, Victor Ribeiro, Carlos Cardoso, Eduardo H. M. Pena, Patrick Valduriez, Fabio Porto\n\n\n\n\n\n\n\n\n\n\n\n\nAcesso aos dados agregados e microdados do SUS\n\n\n\n\n\n\n\n\n\n\n\nDec 11, 2023\n\n\nRaphael Saldanha, Marcelo Pedroso, Monica Magalhães\n\n\n\n\n\n\n\n\n\n\n\n\nSubset modelling: A domain partitioning strategy for data-efficient machine-learning\n\n\n\n\n\n\n\n\n\n\n\nSep 25, 2023\n\n\nVitor Ribeiro, Eduardo Pena, Raphael Saldanha, Reza Akbarinia, Patrick Valduriez, Falaah Khan, Julia Stoyanovich, Fabio Porto\n\n\n\n\n\n\n\n\n\n\n\n\nData Science Platform Applied to Health in Contribution to the Brazilian Unified Health System\n\n\n\n\n\n\n\n\n\n\n\nSep 1, 2023\n\n\nMarcel Pedroso, Rebecca Salles, Raphael Saldanha, Vinicius Kreischer de Almeida, Gabriel Souto, Balthazar Paixão, Victor Ribeiro, Raquel Gritz, Carmen Bonifácio, Matheus Miloski, Carlos Augusto de Sousa, Gizelton Pereira Alencar, Ariane Alves, Nelson Niero Neto, Letícia Sabbadini, Eduardo Ogasawara, Christovam Barcellos, Fabio Porto, Lucas Zinato Carraro, Jefferson Lima\n\n\n\n\n\n\n\n\n\n\n\n\nA comprehensive integrated dataset on Brazilian health facilities: from 2005 to 2021\n\n\n\n\n\n\n\n\n\n\n\nJul 20, 2023\n\n\nRebecca Salles, Victor Dornella, Raquel Gritz, Carlos Cardoso, Sérgio Cruz, Vinicius Kreischer, Carmen Bonifácio, Raphael Saldanha, Gabriel Souto, Matheus Miloski, Leandro Zirondi, Gizelton Alencar, Ariane Alves, Nelson Nieiro Neto, Jefferson Lima, Marcel Pedroso, Ronaldo Alves, Cristiano Boccolini\n\n\n\n\n\n\n\n\n\n\n\n\nDataset on infant mortality rates in Brazil\n\n\n\n\n\n\n\n\n\n\n\nJul 17, 2023\n\n\nGabriel Souto, Matheus Miloski, Carlos Cardoso, Vinicius Kreischer, Balthazar Paixão, Victor Ribeiro, Raquel Gritz, Lucas Carraro, Sérgio Cruz, Carmen Bonifácio, Raphael Saldanha, Leandro Zirondi, Gizelton Alencar, Ariane Alves, Nelson Nieiro Neto, Rebecca Salles, Jefferson Lima, Marcel Pedroso\n\n\n\n\n\n\n\n\n\n\n\n\nBook review: A pesquisa científica na era do Big data: cinco maneiras que mostram como o Big data prejudica a ciência, e como podemos salvá-la\n\n\n\n\n\n\n\n\n\n\n\nSep 30, 2022\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nTemporal and spatial distribution trends of polio vaccine coverage in children in Brazil, 2011-2021\n\n\n\n\n\n\n\n\n\n\n\nAug 29, 2022\n\n\nTércia Silva, Ana Carolina de Sá, Elton Prates, Raphael Saldanha, Thales Silva, Antonia Teixeira, Mark Beinner, Suelen Oliveira, Anonio de Sá, Fernanda Matozinhos, Ed Vieira\n\n\n\n\n\n\n\n\n\n\n\n\nComparison of sampling designs from the two editions of the Brazilian National Health Survey, 2013 and 2019\n\n\n\n\n\n\n\n\n\n\n\nJul 13, 2022\n\n\nPaulo Souza Júnior, Celia Szwarcwald, Wanessa Almeida, Giseli Damacena, Marcel Pedroso, Carlos Sousa, Igor Morais, Raphael Saldanha, Jefferson Lima, Sheila Stopa\n\n\n\n\n\n\n\n\n\n\n\n\nHow to overcome the stagnation of the first dose vaccine coverage curve against coronavirus disease 2019 in Brazil?\n\n\n\n\n\n\n\n\n\n\n\nJun 6, 2022\n\n\nRaphael Guimarães, Diego Xavier, Raphael Saldanha, Monica Magalhães\n\n\n\n\n\n\n\n\n\n\n\n\nGeographic accessibility to cancer treatment in Brazil: A network analysis\n\n\n\n\n\n\n\n\n\n\n\nMar 1, 2022\n\n\nBruna Fonseca, Priscila Albuquerque, Raphael Saldanha, Fabio Zicker\n\n\n\n\n\n\n\n\n\n\n\n\nCiência de dados e big data: o que isso significa para estudos populacionais e da saúde?\n\n\n\n\n\n\n\n\n\n\n\nNov 26, 2021\n\n\nRaphael Saldanha, Christovam Barcellos, Marcel Pedroso\n\n\n\n\n\n\n\n\n\n\n\n\nEstimation of COVID-19 Under-Reporting in the Brazilian States Through SARI\n\n\n\n\n\n\n\n\n\n\n\nNov 1, 2021\n\n\nBalthazar Paixão, Lais Baroni, Marcel Pedroso, Rebecca Sales, Luciana Escobar, Carlos Sousa, Raphael Saldanha, Jorge Soares, Rafaelli Coutinho, Fabio Porto, Eduardo Ogasawara\n\n\n\n\n\n\n\n\n\n\n\n\nNeonatal mortality rates in Brazilian municipalities: from 1996 to 2017\n\n\n\n\n\n\n\n\n\n\n\nSep 1, 2021\n\n\nLais Baroni, Rebecca Sales, Samella Sales, Marcel Pedroso, Jefferson Lima, Igor Morais, Lucas Carraro, Raphael Saldanha, Carlos Sousa, Carlos Cardoso, Balthazar Paixão, Sérgio Cruz, Eduardo Ogasawara, Patricia Boccolini, Cristiano Boccolini\n\n\n\n\n\n\n\n\n\n\n\n\nIncreasing impact of COVID-19 on young adults: evidence from hospitalisations in Brazil\n\n\n\n\n\n\n\n\n\n\n\nSep 1, 2021\n\n\nRaphael Guimarães, Daniel Vilela, Diego Xavier, Raphael Saldanha, Christovam Barcellos, Carlos Freitas, Margareth Portela\n\n\n\n\n\n\n\n\n\n\n\n\nAdesão às medidas de restrição de contato físico e disseminação da COVID-19 no Brasil\n\n\n\n\n\n\n\n\n\n\n\nNov 6, 2020\n\n\nCelia Szwarcwald, Paulo Souza Junior, Deborah Malta, Marilisa Barros, Raphael Saldanha, Giseli Damascena, Luiz Azevedo, Margareth Lima, Dalia Romero, Ísis Machado, Crizian Gomes, André Werneck, Danilo Silva, Renata Gracie, Maria Pina\n\n\n\n\n\n\n\n\n\n\n\n\nIs it time to talk about the end of social distancing? A joinpoint analysis of COVID-19 time series in Brazilian capitals\n\n\n\n\n\n\n\n\n\n\n\nSep 21, 2020\n\n\nRaphael Guimarães, Monica Magalhães, Diego Xavier, Raphael Saldanha, Rafael Catão\n\n\n\n\n\n\n\n\n\n\n\n\nResurgence risk for malaria, and the characterization of a recent outbreak in an Amazonian border area between French Guiana and Brazil\n\n\n\n\n\n\n\n\n\n\n\nMay 26, 2020\n\n\nEmilie Mosnier, Isabelle Dusfour, Guillaume Lacour, Raphael Saldanha, Amandine Guidez, Margaret Gomes, Alice Sanna, Yanouk Epelboin, Johana Restrepo, Damien Davy, Magalie Demar, Félix Djossou, Maylis Douine, Vanessa Ardillon, Mathieu Nacher, Lise Musset, Emmanuel Roux\n\n\n\n\n\n\n\n\n\n\n\n\nFatores associados ao letramento funcional em saúde de mulheres atendidas pela Estratégia de Saúde da Família\n\n\n\n\n\n\n\n\n\n\n\nApr 9, 2020\n\n\nAngélica Campos, Felipe Neves, Raphael Saldanha, Kristiane Duque, Maximiliano Guerra, Isabel Leite, Maria Teixeira\n\n\n\n\n\n\n\n\n\n\n\n\nMicrodatasus: pacote para download e pré-processamento de microdados do Departamento de Informática do SUS (DATASUS)\n\n\n\n\n\n\n\n\n\n\n\nSep 16, 2019\n\n\nRaphael Saldanha, Ronaldo Bastos, Christovam Barcellos\n\n\n\n\n\n\n\n\n\n\n\n\nEstudo de análise de rede do fluxo de pacientes de câncer de mama no Brasil entre 2014 e 2016\n\n\n\n\n\n\n\n\n\n\n\nJul 22, 2019\n\n\nRaphael Saldanha, Diego Xavier, Keila Carnavalli, Kátia Lerner, Christovam Barcellos\n\n\n\n\n\n\n\n\n\n\n\n\nCrescimento do emprego industrial local no Brasil: o grau de especialização por intensidade tecnológica importa?\n\n\n\n\n\n\n\n\n\n\n\nJun 13, 2019\n\n\nEduardo Gonçalves, Raphael Saldanha, Eduardo Almeida, André Silva\n\n\n\n\n\n\n\n\n\n\n\n\nContributing to Elimination of Cross-Border Malaria Through a Standardized Solution for Case Surveillance, Data Sharing, and Data Interpretation: Development of a Cross-Border Monitoring System\n\n\n\n\n\n\n\n\n\n\n\nJun 13, 2019\n\n\nRaphael Saldanha, Émilie Mosnier, Christovam Barcellos, Aurel Carbunar, Christophe Charron, Jean-Christophe Desconnets, Basma Guarmit, Margarete Gomes, Théophile Mandon, Anapaula Mendes, Paulo Peiter, Lise Musset, Alice Sanna, Benoît Van Gastel, Emmanuel Roux\n\n\n\n\n\n\n\n\n\n\n\n\nAs Regiões de Saúde no Brasil segundo internações: método para apoio na regionalização de saúde\n\n\n\n\n\n\n\n\n\n\n\nJun 13, 2019\n\n\nDiego Xavier, Ricardo Oliveira, Christovam Barcellos, Raphael Saldanha, Walter Ramalho, Josué Laguardia, Francisco Viacava\n\n\n\n\n\n\n\n\n\n\n\n\nWhat have we learned from Mariana? The importance of names, places and affections\n\n\n\n\n\n\n\n\n\n\n\nMay 16, 2019\n\n\nNadja Araújo, Keila Carnavalli, Nathalia Barbosa, Patricia Barcelos, Raphael Saldanha, Teresa Neves, Vinicius Klein, Maria Guimarães\n\n\n\n\n\n\n\n\n\n\n\n\nBurden of disease in Brazil, 1990–2016: a systematic subnational analysis for the Global Burden of Disease Study 2016\n\n\n\n\n\n\n\n\n\n\n\nSep 1, 2018\n\n\nFatima Marinho et al.\n\n\n\n\n\n\n\n\n\n\n\n\nProposta de um observatório epidemiológico do Sistema Único de Saúde\n\n\n\n\n\n\n\n\n\n\n\nJan 23, 2017\n\n\nRaphael Saldanha, Ronaldo Bastos, Maria Bustamante-Teixeira, Isabel Leite, Estela Campos\n\n\n\n\n\n\nNo matching items\n\n\n  \n\n Back to top"
+  },
+  {
     "objectID": "projects/pns.html",
     "href": "projects/pns.html",
     "title": "PNS",
@@ -1085,81 +1064,11 @@
     "text": "Água & Saúde main webpage.\n\n\nThe first project that I got involved at Fiocruz with the Climate and Health Observatory. It was a project in partnership with ANA (Agência Nacional das Águas).\nI was in charge to create a database of health and water indicators and a data dashboard. The project was fully developed with R, Shiny, and SQLite technologies.\nThe project has been discontinued.\n\n\n\n Back to top"
   },
   {
-    "objectID": "pres/bsc2024.html",
-    "href": "pres/bsc2024.html",
-    "title": "Research Experience & Plans",
-    "section": "",
-    "text": "Data handling tools: author of ten R packages to handle health and climate datasets and indicators.\n\n{microdatasus}, {brpop}, {tidyrates}, {zendown}, {zenstats}, {nseq}, {rspell}, {brclimr}, {zonalclim}, {opendenguedata}\n\nVisualization: malaria and COVID-19 interactive visualization dashboards (IRD-FR and Fiocruz-BR)\nAnalysis and modeling of climate-sensitive diseases (Fiocruz-BR, LNCC-BR, BSC, Inria-FR, IRD-FR)"
-  },
-  {
-    "objectID": "pres/bsc2024.html#main-fields-of-work-and-projects",
-    "href": "pres/bsc2024.html#main-fields-of-work-and-projects",
-    "title": "Research Experience & Plans",
-    "section": "",
-    "text": "Data handling tools: author of ten R packages to handle health and climate datasets and indicators.\n\n{microdatasus}, {brpop}, {tidyrates}, {zendown}, {zenstats}, {nseq}, {rspell}, {brclimr}, {zonalclim}, {opendenguedata}\n\nVisualization: malaria and COVID-19 interactive visualization dashboards (IRD-FR and Fiocruz-BR)\nAnalysis and modeling of climate-sensitive diseases (Fiocruz-BR, LNCC-BR, BSC, Inria-FR, IRD-FR)"
-  },
-  {
-    "objectID": "pres/bsc2024.html#health-and-climate-indicators",
-    "href": "pres/bsc2024.html#health-and-climate-indicators",
-    "title": "Research Experience & Plans",
-    "section": "Health and Climate indicators",
-    "text": "Health and Climate indicators\n\n\n\nStandardized methodology to harmonize climate indicators with health data\nSame time and spatial units (administrative regions)\nMethod of Zonal Statistics\nPublication at Environmental Data Science journal (2024)"
-  },
-  {
-    "objectID": "pres/bsc2024.html#health-and-climate-indicators-1",
-    "href": "pres/bsc2024.html#health-and-climate-indicators-1",
-    "title": "Research Experience & Plans",
-    "section": "Health and Climate indicators",
-    "text": "Health and Climate indicators\n\nStreamline methods, expansion to other countries and continents\nProvide regularly updated datasets of health and climate indicators at standardized administrative geographic boundaries (level 2, level 3)\nUsage of population estimates as weighting factor\nBuild synthetic indicators for water cycle and droughts, warm and cold spells, and extreme events"
-  },
-  {
-    "objectID": "pres/bsc2024.html#climate-sensitive-diseases-modeling",
-    "href": "pres/bsc2024.html#climate-sensitive-diseases-modeling",
-    "title": "Research Experience & Plans",
-    "section": "Climate-Sensitive Diseases modeling",
-    "text": "Climate-Sensitive Diseases modeling\n\nDengue inflicts an important health burden in Brazil\n\n1 million new cases reported just in 2024, 214 deaths, official emergency status declaration\n\nProject for dengue incidence forecast on Brazil with machine learning methods\nNovel ML subsets approach, with cluster based models"
-  },
-  {
-    "objectID": "pres/bsc2024.html#early-warning-systems-for-csd",
-    "href": "pres/bsc2024.html#early-warning-systems-for-csd",
-    "title": "Research Experience & Plans",
-    "section": "Early Warning Systems for CSD",
-    "text": "Early Warning Systems for CSD\n\nFramework proposal to prevent and early detect CSD outbreaks adaptive to regions’ contexts and priorities\nAligned with WHO guidelines\nClose work with health managers and civil society representatives for project usage and tools appropriation\nTraditional and machine learning multivariate models to forecast incidence for short and medium-time horizons (ARIMA, random forest, XGBoost, LSTM…)\nContinuous model monitoring and update (MLOps)"
-  },
-  {
-    "objectID": "pres/bsc2024.html#integration-with-the-global-health-resilience-group-and-projects",
-    "href": "pres/bsc2024.html#integration-with-the-global-health-resilience-group-and-projects",
-    "title": "Research Experience & Plans",
-    "section": "Integration with the Global Health Resilience group and projects",
-    "text": "Integration with the Global Health Resilience group and projects\n\nToolkits development, maintenance and training. DAGs (directed acyclic graph) to integrate and monitor tools execution and results lifecycle\nClimate and health data methods and products, basis of different projects\nML methods and models for EWS\nProvide interoperable data, methods and models to different projects, as HARMONIZE, IDAlert, IDExtremes, and E4Warning"
-  },
-  {
-    "objectID": "data-projects/health-indicators.html",
-    "href": "data-projects/health-indicators.html",
-    "title": "Health indicators",
-    "section": "",
-    "text": "Computed health indicators for Brazilian municipalities, health regions and UFs ready to download on parquet format. The definitions are in Portuguese.\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nTaxa de mortalidade específica por Acidente Vascular Cerebral\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTaxa de mortalidade específica por causas externas\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
-  },
-  {
-    "objectID": "data-projects/std_br_covid_rates_data.html",
-    "href": "data-projects/std_br_covid_rates_data.html",
-    "title": "Age-adjusted COVID-19 mortality rates for Brazilian municipalities",
-    "section": "",
-    "text": "This dataset present crude and age-adjusted COVID-19 mortality rates for Brazilian municipalities, from 2020 to 2022 per epidemiological weeks.\nMore details about the methodology are available at this blog post.\nDownload:\n\n\n\n\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "pres/ird2024.html",
-    "href": "pres/ird2024.html",
-    "title": "Introduction and Research Proposal",
-    "section": "",
-    "text": "Brazilian from Rio de Janeiro\nLoves cycling and take pictures\nHusband, father of dogs and a cat\nResearcher on Health Geography and Climate-Sensitive Diseases\nR developer"
-  },
-  {
     "objectID": "pres/ird2024.html#about-me",
     "href": "pres/ird2024.html#about-me",
     "title": "Introduction and Research Proposal",
-    "section": "",
-    "text": "Brazilian from Rio de Janeiro\nLoves cycling and take pictures\nHusband, father of dogs and a cat\nResearcher on Health Geography and Climate-Sensitive Diseases\nR developer"
+    "section": "About me",
+    "text": "About me\n\nBrazilian from Rio de Janeiro\nLoves cycling and take pictures\nHusband, father of dogs and a cat\nResearcher on Health Geography and Climate-Sensitive Diseases\nR developer"
   },
   {
     "objectID": "pres/ird2024.html#academia",
@@ -1253,6 +1162,209 @@
     "text": "Thanks!\nMore information about me and projects at\nrfsaldanha.github.io\nrfsaldanha@gmail.com"
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Raphael Saldanha",
+    "section": "",
+    "text": "Postdoctoral researcher at Inria and LNCC, research assistant at Fiocruz.\nHealth geographer and health data scientist. Undergraduate in Geography, specialization in Statistics, master’s in Public Health, and Ph.D. in Health Information.\nBrazilian from Nova Friburgo (RJ), lived for several years on Minas Gerais and Rio de Janeiro. Currently based on Montpellier, France.\nLoves to code and crunch huge health and climate datasets with R.\n\n\n Back to top"
+  },
+  {
+    "objectID": "data-projects/std_br_covid_rates_data.html",
+    "href": "data-projects/std_br_covid_rates_data.html",
+    "title": "Age-adjusted COVID-19 mortality rates for Brazilian municipalities",
+    "section": "",
+    "text": "This dataset present crude and age-adjusted COVID-19 mortality rates for Brazilian municipalities, from 2020 to 2022 per epidemiological weeks.\nMore details about the methodology are available at this blog post.\nDownload:\n\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
+    "section": "",
+    "text": "Full name: Raphael de Freitas Saldanha\nDate of birth: April 18, 1985\nLanguages: Portuguese, English, French"
+  },
+  {
+    "objectID": "cv.html#general-information",
+    "href": "cv.html#general-information",
+    "title": "CV",
+    "section": "",
+    "text": "Full name: Raphael de Freitas Saldanha\nDate of birth: April 18, 1985\nLanguages: Portuguese, English, French"
+  },
+  {
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "CV",
+    "section": "Education",
+    "text": "Education\n\n2022 - current. Post-doctoral researcher at Inria and LNCC. Artificial Intelligence applications on Public Health and Climate-Sensitive Diseases forecast.\n2018 - 2021. Doctorate at Fiocruz, PPGICS. Information and Communication in Health. Data Science Applications for Public Health.\n2015 - 2017. Master’s at UFJF - PPGSC on Public Health. Traffic violence and economic growth, an Spatial Econometrics analysis.\n2008 - 2009. Specialization at UFJF. Computational Statistical Methods. Traffic violence and zero-alcohol-consumption law, an policy evaluation study.\n2003 - 2007. Bachelor Degree at UFJF - ICHL-DG. Geography. Regionalization proposal for the Juiz de Fora city based on Census 2000 data."
+  },
+  {
+    "objectID": "cv.html#academic-interests",
+    "href": "cv.html#academic-interests",
+    "title": "CV",
+    "section": "Academic interests",
+    "text": "Academic interests\n\nData science\n\nR\nMachine Learning\ntidyverse, tidymodels\nShiny apps\nQuarto\nPlotly\nduckdb, SQLite\nElasticSearch\nKibana\n\n\n\nGIS\n\nQGIS\nESRI ArcGIS\nGeoServer\n\n\n\nOther technologies\n\nGephi\nLaTeX\nLinux\nMacOS"
+  },
+  {
+    "objectID": "cv.html#work-and-teaching-experience",
+    "href": "cv.html#work-and-teaching-experience",
+    "title": "CV",
+    "section": "Work and teaching experience",
+    "text": "Work and teaching experience\n\n2017 - current. Research assistant at Fiocruz, ICICT, PCDaS.\n2017 - current. Research assistant at Fiocruz, ICICT, Observatório de Clima e Saúde.\n2021 - 2022 Research assistant at Fiocruz, IOC, Lathema Lab (ArboAlvo).\n2017 - 2018 Research assistant at IRD, Maison de la Télédétection (Montpellier, FR).\n2017 - current. Workshop teacher of Introduction to Spatial Econometry with R.\n2013 - Teaching Assistant, Scientific Methodology at UFJF, CRITT.\n2005 - 2016 GIS and statistics analyst at Plangeo (private company).\n2012-2013 Distance learning supervisor of Statistics, course of Public Management.\n2012 Approved for substitute teacher position of Thematic Cartography.\n2011 Distance learning tutor for Business Statistics (Curso de Administração Pública à Distância – PNAP), UFJF.\n2010 Teacher of Technologies for Environmental Planning, FAFISM."
+  },
+  {
+    "objectID": "cv.html#additional-training",
+    "href": "cv.html#additional-training",
+    "title": "CV",
+    "section": "Additional training",
+    "text": "Additional training\n\n2023 - Nature-based solutions for tackling global health challenges. Heidelberg Institute of Global Health, HIGH, Alemanha.\n2022 - Algorithms and Programming Methods for Big Data Laboratório Nacional de Computação Científica (LNCC, Brazil)\n2023 - VII Escola Avançada em Big Data Analytics (USP, Brazil)\n2022 - Public Health Disparities Geocoding Project 2.0. Harvard School of Public Health\n2022 - Developing the SIR Model. Imperial College (Coursera)\n2022 - Machine Learning methods with R, Curso-R school.\n2021 - R Deploy methods, Curso-R school.\n2021 - QBA/On-line - Sensibilização em Gestão da Qualidade, Biossegurança e Ambiente, Fiocruz.\n2020 - Comunicação, Mídia e Saúde em Contexto de Emergências Sanitárias, UFAL.\n2018 - Anthropological and Historical Approaches of Visualising Epidemics, COC, Fiocruz.\n2018 - Information Visualization, Foundations and Applied Perception, NYU Tandon School of Engineering (Coursera).\n2017 - Practical Machine Learning, Johns Hopkins University (Coursera).\n2016 - Harvard - Brazil Collaborative Public Health Course, Harvard School of Public Health.\n2015 - Introduction to Big Data, University of California, San Diego (Coursera).\n2011 - Geoestatística com o uso do R, UFJF.\n2007 - Workshop em modelagem em estudos longitudinais, UFJF.\n2007 - Geomarketing - Conceitos e aplicações, Centro Universitário Senac.\n2004 - Geografia e movimentos sociais, A América Latina, AGB.\n2003 - Introdução à Gestão Ambiental Urbana, UFJF.\n2003 - Flash Mx, CRITT, UFJF."
+  },
+  {
+    "objectID": "cv.html#hobbies",
+    "href": "cv.html#hobbies",
+    "title": "CV",
+    "section": "Hobbies",
+    "text": "Hobbies\n\nPhotography\nCycling"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Persistent heat in Brazil: 1993 and 2023\n\n\n\n\n\n\nclimate\n\n\n\n\n\n\n\n\n\nApr 22, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nWriting R packages with large datasets\n\n\n\n\n\n\npackage\n\n\ndata\n\n\n\n\n\n\n\n\n\nApr 11, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nQuery local parquet files\n\n\n\n\n\n\ndatabase\n\n\nparquet\n\n\narrow\n\n\n\n\n\n\n\n\n\nApr 4, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHow 2023 was hot in different Brazilian municipalities?\n\n\n\n\n\n\nclimate\n\n\nzonal statistics\n\n\n\n\n\n\n\n\n\nNov 27, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nUnivariate and multivariate time series clustering\n\n\nExamples with Brazilian climate data\n\n\n\nclustering\n\n\ntime series\n\n\ndtwclust\n\n\n\n\n\n\n\n\n\nNov 14, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nAge-adjusted COVID-19 mortality rates for Brazilian municipalities\n\n\n\n\n\n\ncovid19\n\n\ntidyrates\n\n\n\n\n\n\n\n\n\nNov 7, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nCounting consecutive sequences of events: run length encoding and warm spell occurence example\n\n\n\n\n\n\nrle\n\n\nwarm spell\n\n\nsequences\n\n\n\n\n\n\n\n\n\nNov 6, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nCrude and adjusted rates in a tidy way\n\n\n\n\n\n\nrates\n\n\nepidemiology\n\n\ntidyrates\n\n\n\n\n\n\n\n\n\nNov 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nSQLite database conversion to DuckDB and Parquet files\n\n\n\n\n\n\ndatabase\n\n\nsqlite\n\n\nduckdb\n\n\nparquet\n\n\n\n\n\n\n\n\n\nOct 24, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nQuery remote parquet files with DuckDB\n\n\n\n\n\n\ndatabase\n\n\nduckdb\n\n\nparquet\n\n\n\n\n\n\n\n\n\nOct 24, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nSome tips to work with SQLite database\n\n\n\n\n\n\ndatabase\n\n\nsqlite\n\n\n\n\n\n\n\n\n\nOct 20, 2023\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "code.html#microdatasus",
+    "href": "code.html#microdatasus",
+    "title": "Packages & Code",
+    "section": "microdatasus",
+    "text": "microdatasus\nR package to download and pre-process datasets from DataSUS, Brazilian Health Ministry."
+  },
+  {
+    "objectID": "code.html#brpop",
+    "href": "code.html#brpop",
+    "title": "Packages & Code",
+    "section": "brpop",
+    "text": "brpop\nR package with Brazilian population estimates."
+  },
+  {
+    "objectID": "code.html#tidyrates",
+    "href": "code.html#tidyrates",
+    "title": "Packages & Code",
+    "section": "tidyrates",
+    "text": "tidyrates\nR package to compute age-standardized epidemiological rates in a tidy way."
+  },
+  {
+    "objectID": "code.html#zendown",
+    "href": "code.html#zendown",
+    "title": "Packages & Code",
+    "section": "zendown",
+    "text": "zendown\nR package to download and cache files from Zenodo deposits."
+  },
+  {
+    "objectID": "code.html#zenstats",
+    "href": "code.html#zenstats",
+    "title": "Packages & Code",
+    "section": "zenstats",
+    "text": "zenstats\nR package to fetch statistics of views, downloads and volume from Zenodo deposits."
+  },
+  {
+    "objectID": "code.html#nseq",
+    "href": "code.html#nseq",
+    "title": "Packages & Code",
+    "section": "nseq",
+    "text": "nseq\nR package to compute counts and statistics of occurrence of events in sequences that meets a criterion."
+  },
+  {
+    "objectID": "code.html#rspell",
+    "href": "code.html#rspell",
+    "title": "Packages & Code",
+    "section": "rspell",
+    "text": "rspell\nR package to grammar check documents inside RStudio."
+  },
+  {
+    "objectID": "code.html#zonalclim",
+    "href": "code.html#zonalclim",
+    "title": "Packages & Code",
+    "section": "zonalclim",
+    "text": "zonalclim\nR package to compute zonal statistics of climate indicators."
+  },
+  {
+    "objectID": "code.html#brclimr",
+    "href": "code.html#brclimr",
+    "title": "Packages & Code",
+    "section": "brclimr",
+    "text": "brclimr\nR package to retrieve municipal climate indicators of Brazilian municipalities."
+  },
+  {
+    "objectID": "code.html#opendenguedata",
+    "href": "code.html#opendenguedata",
+    "title": "Packages & Code",
+    "section": "opendenguedata",
+    "text": "opendenguedata\nR package to download dengue data from the OpenDengue project."
+  },
+  {
+    "objectID": "data-projects/health-indicators.html",
+    "href": "data-projects/health-indicators.html",
+    "title": "Health indicators",
+    "section": "",
+    "text": "Computed health indicators for Brazilian municipalities, health regions and UFs ready to download on parquet format. The definitions are in Portuguese.\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nTaxa de mortalidade específica por Acidente Vascular Cerebral\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTaxa de mortalidade específica por causas externas\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "data.html",
+    "href": "data.html",
+    "title": "Datasets",
+    "section": "",
+    "text": "Zonal statististics of climate indicators for Brazilian municipalities\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nERA5-Land selected indicators daily aggregates for Latin America and Africa\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHealth indicators\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAge-adjusted COVID-19 mortality rates for Brazilian municipalities\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "pres/bsc2024.html#main-fields-of-work-and-projects",
+    "href": "pres/bsc2024.html#main-fields-of-work-and-projects",
+    "title": "Research Experience & Plans",
+    "section": "Main fields of work and projects",
+    "text": "Main fields of work and projects\n\nData handling tools: author of ten R packages to handle health and climate datasets and indicators.\n\n{microdatasus}, {brpop}, {tidyrates}, {zendown}, {zenstats}, {nseq}, {rspell}, {brclimr}, {zonalclim}, {opendenguedata}\n\nVisualization: malaria and COVID-19 interactive visualization dashboards (IRD-FR and Fiocruz-BR)\nAnalysis and modeling of climate-sensitive diseases (Fiocruz-BR, LNCC-BR, BSC, Inria-FR, IRD-FR)"
+  },
+  {
+    "objectID": "pres/bsc2024.html#health-and-climate-indicators",
+    "href": "pres/bsc2024.html#health-and-climate-indicators",
+    "title": "Research Experience & Plans",
+    "section": "Health and Climate indicators",
+    "text": "Health and Climate indicators\n\n\n\nStandardized methodology to harmonize climate indicators with health data\nSame time and spatial units (administrative regions)\nMethod of Zonal Statistics\nPublication at Environmental Data Science journal (2024)"
+  },
+  {
+    "objectID": "pres/bsc2024.html#health-and-climate-indicators-1",
+    "href": "pres/bsc2024.html#health-and-climate-indicators-1",
+    "title": "Research Experience & Plans",
+    "section": "Health and Climate indicators",
+    "text": "Health and Climate indicators\n\nStreamline methods, expansion to other countries and continents\nProvide regularly updated datasets of health and climate indicators at standardized administrative geographic boundaries (level 2, level 3)\nUsage of population estimates as weighting factor\nBuild synthetic indicators for water cycle and droughts, warm and cold spells, and extreme events"
+  },
+  {
+    "objectID": "pres/bsc2024.html#climate-sensitive-diseases-modeling",
+    "href": "pres/bsc2024.html#climate-sensitive-diseases-modeling",
+    "title": "Research Experience & Plans",
+    "section": "Climate-Sensitive Diseases modeling",
+    "text": "Climate-Sensitive Diseases modeling\n\nDengue inflicts an important health burden in Brazil\n\n1 million new cases reported just in 2024, 214 deaths, official emergency status declaration\n\nProject for dengue incidence forecast on Brazil with machine learning methods\nNovel ML subsets approach, with cluster based models"
+  },
+  {
+    "objectID": "pres/bsc2024.html#early-warning-systems-for-csd",
+    "href": "pres/bsc2024.html#early-warning-systems-for-csd",
+    "title": "Research Experience & Plans",
+    "section": "Early Warning Systems for CSD",
+    "text": "Early Warning Systems for CSD\n\nFramework proposal to prevent and early detect CSD outbreaks adaptive to regions’ contexts and priorities\nAligned with WHO guidelines\nClose work with health managers and civil society representatives for project usage and tools appropriation\nTraditional and machine learning multivariate models to forecast incidence for short and medium-time horizons (ARIMA, random forest, XGBoost, LSTM…)\nContinuous model monitoring and update (MLOps)"
+  },
+  {
+    "objectID": "pres/bsc2024.html#integration-with-the-global-health-resilience-group-and-projects",
+    "href": "pres/bsc2024.html#integration-with-the-global-health-resilience-group-and-projects",
+    "title": "Research Experience & Plans",
+    "section": "Integration with the Global Health Resilience group and projects",
+    "text": "Integration with the Global Health Resilience group and projects\n\nToolkits development, maintenance and training. DAGs (directed acyclic graph) to integrate and monitor tools execution and results lifecycle\nClimate and health data methods and products, basis of different projects\nML methods and models for EWS\nProvide interoperable data, methods and models to different projects, as HARMONIZE, IDAlert, IDExtremes, and E4Warning"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Harmonize\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMonitoraCovid-19\n\n\nCovid-19 monitoring.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOuvSUS\n\n\nSUS Ombudsman.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPNS\n\n\nPesquisa Nacional de Saúde.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCross-border malaria\n\n\nIn partnership with IRD.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRedes de Cuidado\n\n\nCancer patients displacement and network analysis.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nArboAlvo\n\n\nStratifying arboviruses risk.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOnde estão nossas doenças?\n\n\nMuseum exhibition.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPMM\n\n\nProjeto Mais Médicos.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nÁgua & Saúde\n\n\nIn partneship with ANA.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMauro\n\n\na Metadata Automatic Retrieval system for Updated References and cited Objects from Scielo.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCidade & Saúde\n\n\nAccessible health information about Brazilian municipalities.\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
     "objectID": "projects/arboalvo.html",
     "href": "projects/arboalvo.html",
     "title": "ArboAlvo",
@@ -1293,6 +1405,13 @@
     "title": "Redes de Cuidado",
     "section": "",
     "text": "Commuting networks of patients that received cancer treatment within SUS, from article http://dx.doi.org/10.1016/j.lana.2021.100153.\n\n\nThis project was a partnership with PCDaS and CDTS. The project studied the flow of cancer patients receiving treatment in Brazil between municipalities.\nI was in charge to handle the large datasets about hospitalizations and treatments and perform some network analysis.\nThis work was supported by Inova Fiocruz and resulted in a published paper: http://dx.doi.org/10.1016/j.lana.2021.100153.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "talks.html",
+    "href": "talks.html",
+    "title": "Talks",
+    "section": "",
+    "text": "Subset Models for Multivariate Time Series Forecast\n\n\n1st MulTiSA, ICDE 2024\n\n\n\nsubsets\n\n\nmachine learning\n\n\n\nPresentation at 1st MulTiSA workshop, ICDE 2024 conference.\n\n\n\n\n\nMay 13, 2024\n\n\nRaphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, Patrick Valduriez, Fabio Porto\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modeling\n\n\nAn application case for Brazil\n\n\n\nbrclim\n\n\n\nTalk at the Inria Zenith’s Team Seminar.\n\n\n\n\n\nMar 21, 2024\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nBILIS\n\n\nAn unified indicators database\n\n\n\nbilis\n\n\n\nTalk at the Climate and Health for Health Situation Studies Workshop, IRD.\n\n\n\n\n\nDec 18, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modelling\n\n\nAn application case for Brazil\n\n\n\nbrclim\n\n\n\nTalk at the Climate and Health for Health Situation Studies Workshop, IRD.\n\n\n\n\n\nDec 18, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modelling\n\n\nAn application case for Brazil\n\n\n\nisntd\n\n\nclimate\n\n\ndata\n\n\n\nTalk at the ISNTD Climate & Health Conference, Global Health Resilience panel\n\n\n\n\n\nNov 22, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "publications/araujoWHATHAVEWE2019a.html",
@@ -1491,18 +1610,11 @@
     "text": "Abstract\nThe success of machine learning (ML) systems depends on data availability, volume, quality, and efficient computing resources. A challenge in this context is to reduce computational costs while maintaining adequate accuracy of the models. This paper presents a framework to address this challenge. The idea is to identify “subdomains” within the input space, train local models that produce better predictions for samples from that specific subdomain, instead of training a single global model on the full dataset. We experimentally evaluate our approach on two real-world datasets. Our results indicate that subset modelling (i) improves the predictive performance compared to a single global model and (ii) allows data-efficient training."
   },
   {
-    "objectID": "talks/bilis_2023.html",
-    "href": "talks/bilis_2023.html",
-    "title": "BILIS",
-    "section": "",
-    "text": "Banco de Indicadores do Laboratório de Informação em Saúde, ICICT\nA proposal to create an unified health indicators database"
-  },
-  {
     "objectID": "talks/bilis_2023.html#bilis",
     "href": "talks/bilis_2023.html#bilis",
     "title": "BILIS",
-    "section": "",
-    "text": "Banco de Indicadores do Laboratório de Informação em Saúde, ICICT\nA proposal to create an unified health indicators database"
+    "section": "BILIS",
+    "text": "BILIS\n\nBanco de Indicadores do Laboratório de Informação em Saúde, ICICT\nA proposal to create an unified health indicators database"
   },
   {
     "objectID": "talks/bilis_2023.html#motivation",
@@ -1666,18 +1778,11 @@
     "text": "Computação\n\n\nCódigo\n# UF of residence and year\nbrindi::expand_indi_parquet(\n  agg = \"uf_res\", agg_time = \"year\", \n  anos = years_range, \n  dir = \"health_indicators_data/\", \n  indi = \"indi_0002\"\n)\nbrindi::expand_indi_parquet(\n  agg = \"uf_res\", agg_time = \"month\", \n  anos = years_range, \n  dir = \"health_indicators_data/\", \n  indi = \"indi_0002\"\n)\nbrindi::expand_indi_parquet(\n  agg = \"uf_res\", agg_time = \"week\", \n  anos = years_range, \n  dir = \"health_indicators_data/\", \n  indi = \"indi_0002\"\n)\n\n# Health region of residence and year\nbrindi::expand_indi_parquet(\n  agg = \"regsaude_res\", agg_time = \"year\", \n  anos = years_range, \n  dir = \"health_indicators_data/\", \n  indi = \"indi_0002\"\n)\nbrindi::expand_indi_parquet(\n  agg = \"regsaude_res\", agg_time = \"month\", \n  anos = years_range, \n  dir = \"health_indicators_data/\", \n  indi = \"indi_0002\"\n)\nbrindi::expand_indi_parquet(\n  agg = \"regsaude_res\", agg_time = \"week\", \n  anos = years_range, \n  dir = \"health_indicators_data/\", \n  indi = \"indi_0002\"\n)\n\n# Municipality of residence and year\nbrindi::expand_indi_parquet(\n  agg = \"mun_res\", agg_time = \"year\", \n  anos = years_range, \n  dir = \"health_indicators_data/\", \n  indi = \"indi_0002\"\n)\nbrindi::expand_indi_parquet(\n  agg = \"mun_res\", agg_time = \"month\", \n  anos = years_range, \n  dir = \"health_indicators_data/\", \n  indi = \"indi_0002\"\n)\nbrindi::expand_indi_parquet(\n  agg = \"mun_res\", agg_time = \"week\", \n  anos = years_range, \n  dir = \"health_indicators_data/\", \n  indi = \"indi_0002\"\n)"
   },
   {
-    "objectID": "talks/zenith_seminar_2024.html",
-    "href": "talks/zenith_seminar_2024.html",
-    "title": "Disease and climate data fusion for modeling",
-    "section": "",
-    "text": "Postdoctoral researcher at Inria, Zenith team\nMaster’s at Public Health, Doctorate on Health Information\nData Science applied to Public Health"
-  },
-  {
     "objectID": "talks/zenith_seminar_2024.html#introduction",
     "href": "talks/zenith_seminar_2024.html#introduction",
     "title": "Disease and climate data fusion for modeling",
-    "section": "",
-    "text": "Postdoctoral researcher at Inria, Zenith team\nMaster’s at Public Health, Doctorate on Health Information\nData Science applied to Public Health"
+    "section": "Introduction",
+    "text": "Introduction\n\nPostdoctoral researcher at Inria, Zenith team\nMaster’s at Public Health, Doctorate on Health Information\nData Science applied to Public Health"
   },
   {
     "objectID": "talks/zenith_seminar_2024.html#climate-sensitive-diseases",
@@ -2056,152 +2161,5 @@
     "title": "Univariate and multivariate time series clustering",
     "section": "Session info",
     "text": "Session info\n\nsessionInfo()\n\nR version 4.2.0 (2022-04-22)\nPlatform: aarch64-apple-darwin20 (64-bit)\nRunning under: macOS 14.0\n\nMatrix products: default\nBLAS:   /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/lib/libRblas.0.dylib\nLAPACK: /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/lib/libRlapack.dylib\n\nRandom number generation:\n RNG:     L'Ecuyer-CMRG \n Normal:  Inversion \n Sample:  Rejection \n \nlocale:\n[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nother attached packages:\n [1] sf_1.0-14       geobr_1.8.1     dtwclust_5.5.12 dtw_1.23-1     \n [5] proxy_0.4-27    arrow_13.0.0.1  timetk_2.9.0    ggplot2_3.4.4  \n [9] dplyr_1.1.3     tidyr_1.3.0    \n\nloaded via a namespace (and not attached):\n  [1] xts_0.13.1          lubridate_1.9.3     bit64_4.0.5        \n  [4] httr_1.4.7          DiceDesign_1.9      tools_4.2.0        \n  [7] utf8_1.2.4          R6_2.5.1            KernSmooth_2.23-22 \n [10] rpart_4.1.21        DBI_1.1.3           colorspace_2.1-0   \n [13] yardstick_1.2.0     nnet_7.3-19         withr_2.5.2        \n [16] tidyselect_1.2.0    curl_5.1.0          bit_4.0.5          \n [19] compiler_4.2.0      flexclust_1.4-1     cli_3.6.1          \n [22] shinyjs_2.1.0       labeling_0.4.3      scales_1.2.1       \n [25] classInt_0.4-10     tune_1.1.2          stringr_1.5.0      \n [28] digest_0.6.33       rmarkdown_2.25      pkgconfig_2.0.3    \n [31] htmltools_0.5.7     parallelly_1.36.0   lhs_1.1.6          \n [34] fastmap_1.1.1       htmlwidgets_1.6.2   rlang_1.1.2        \n [37] rstudioapi_0.15.0   shiny_1.7.5.1       farver_2.1.1       \n [40] generics_0.1.3      zoo_1.8-12          jsonlite_1.8.7     \n [43] magrittr_2.0.3      modeltools_0.2-23   Matrix_1.5-4.1     \n [46] Rcpp_1.0.11         munsell_0.5.0       fansi_1.0.5        \n [49] GPfit_1.0-8         lifecycle_1.0.4     furrr_0.3.1        \n [52] stringi_1.8.1       yaml_2.3.7          MASS_7.3-60        \n [55] plyr_1.8.9          recipes_1.0.8       grid_4.2.0         \n [58] parallel_4.2.0      listenv_0.9.0       promises_1.2.1     \n [61] ggrepel_0.9.4       lattice_0.22-5      splines_4.2.0      \n [64] knitr_1.45          pillar_1.9.0        dials_1.2.0        \n [67] future.apply_1.11.0 reshape2_1.4.4      codetools_0.2-19   \n [70] parsnip_1.1.1       stats4_4.2.0        glue_1.6.2         \n [73] evaluate_0.23       rsample_1.2.0       data.table_1.14.8  \n [76] RcppParallel_5.1.7  vctrs_0.6.4         httpuv_1.6.12      \n [79] foreach_1.5.2       gtable_0.3.4        purrr_1.0.2        \n [82] clue_0.3-65         future_1.33.0       assertthat_0.2.1   \n [85] xfun_0.41           gower_1.0.1         mime_0.12          \n [88] prodlim_2023.08.28  xtable_1.8-4        e1071_1.7-13       \n [91] RSpectra_0.16-1     later_1.3.1         class_7.3-22       \n [94] survival_3.5-7      timeDate_4022.108   tibble_3.2.1       \n [97] iterators_1.0.14    hardhat_1.3.0       units_0.8-4        \n[100] cluster_2.1.4       lava_1.7.3          workflows_1.1.3    \n[103] timechange_0.2.0    globals_0.16.2      ellipsis_0.3.2     \n[106] ipred_0.9-14"
-  },
-  {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Blog",
-    "section": "",
-    "text": "Persistent heat in Brazil: 1993 and 2023\n\n\n\n\n\n\nclimate\n\n\n\n\n\n\n\n\n\nApr 22, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nWriting R packages with large datasets\n\n\n\n\n\n\npackage\n\n\ndata\n\n\n\n\n\n\n\n\n\nApr 11, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nQuery local parquet files\n\n\n\n\n\n\ndatabase\n\n\nparquet\n\n\narrow\n\n\n\n\n\n\n\n\n\nApr 4, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHow 2023 was hot in different Brazilian municipalities?\n\n\n\n\n\n\nclimate\n\n\nzonal statistics\n\n\n\n\n\n\n\n\n\nNov 27, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nUnivariate and multivariate time series clustering\n\n\nExamples with Brazilian climate data\n\n\n\nclustering\n\n\ntime series\n\n\ndtwclust\n\n\n\n\n\n\n\n\n\nNov 14, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nAge-adjusted COVID-19 mortality rates for Brazilian municipalities\n\n\n\n\n\n\ncovid19\n\n\ntidyrates\n\n\n\n\n\n\n\n\n\nNov 7, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nCounting consecutive sequences of events: run length encoding and warm spell occurence example\n\n\n\n\n\n\nrle\n\n\nwarm spell\n\n\nsequences\n\n\n\n\n\n\n\n\n\nNov 6, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nCrude and adjusted rates in a tidy way\n\n\n\n\n\n\nrates\n\n\nepidemiology\n\n\ntidyrates\n\n\n\n\n\n\n\n\n\nNov 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nSQLite database conversion to DuckDB and Parquet files\n\n\n\n\n\n\ndatabase\n\n\nsqlite\n\n\nduckdb\n\n\nparquet\n\n\n\n\n\n\n\n\n\nOct 24, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nQuery remote parquet files with DuckDB\n\n\n\n\n\n\ndatabase\n\n\nduckdb\n\n\nparquet\n\n\n\n\n\n\n\n\n\nOct 24, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nSome tips to work with SQLite database\n\n\n\n\n\n\ndatabase\n\n\nsqlite\n\n\n\n\n\n\n\n\n\nOct 20, 2023\n\n\n\n\n\n\nNo matching items\n\n Back to top"
-  },
-  {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "CV",
-    "section": "",
-    "text": "Full name: Raphael de Freitas Saldanha\nDate of birth: April 18, 1985\nLanguages: Portuguese, English, French"
-  },
-  {
-    "objectID": "cv.html#general-information",
-    "href": "cv.html#general-information",
-    "title": "CV",
-    "section": "",
-    "text": "Full name: Raphael de Freitas Saldanha\nDate of birth: April 18, 1985\nLanguages: Portuguese, English, French"
-  },
-  {
-    "objectID": "cv.html#education",
-    "href": "cv.html#education",
-    "title": "CV",
-    "section": "Education",
-    "text": "Education\n\n2022 - current. Post-doctoral researcher at Inria and LNCC. Artificial Intelligence applications on Public Health and Climate-Sensitive Diseases forecast.\n2018 - 2021. Doctorate at Fiocruz, PPGICS. Information and Communication in Health. Data Science Applications for Public Health.\n2015 - 2017. Master’s at UFJF - PPGSC on Public Health. Traffic violence and economic growth, an Spatial Econometrics analysis.\n2008 - 2009. Specialization at UFJF. Computational Statistical Methods. Traffic violence and zero-alcohol-consumption law, an policy evaluation study.\n2003 - 2007. Bachelor Degree at UFJF - ICHL-DG. Geography. Regionalization proposal for the Juiz de Fora city based on Census 2000 data."
-  },
-  {
-    "objectID": "cv.html#academic-interests",
-    "href": "cv.html#academic-interests",
-    "title": "CV",
-    "section": "Academic interests",
-    "text": "Academic interests\n\nData science\n\nR\nMachine Learning\ntidyverse, tidymodels\nShiny apps\nQuarto\nPlotly\nduckdb, SQLite\nElasticSearch\nKibana\n\n\n\nGIS\n\nQGIS\nESRI ArcGIS\nGeoServer\n\n\n\nOther technologies\n\nGephi\nLaTeX\nLinux\nMacOS"
-  },
-  {
-    "objectID": "cv.html#work-and-teaching-experience",
-    "href": "cv.html#work-and-teaching-experience",
-    "title": "CV",
-    "section": "Work and teaching experience",
-    "text": "Work and teaching experience\n\n2017 - current. Research assistant at Fiocruz, ICICT, PCDaS.\n2017 - current. Research assistant at Fiocruz, ICICT, Observatório de Clima e Saúde.\n2021 - 2022 Research assistant at Fiocruz, IOC, Lathema Lab (ArboAlvo).\n2017 - 2018 Research assistant at IRD, Maison de la Télédétection (Montpellier, FR).\n2017 - current. Workshop teacher of Introduction to Spatial Econometry with R.\n2013 - Teaching Assistant, Scientific Methodology at UFJF, CRITT.\n2005 - 2016 GIS and statistics analyst at Plangeo (private company).\n2012-2013 Distance learning supervisor of Statistics, course of Public Management.\n2012 Approved for substitute teacher position of Thematic Cartography.\n2011 Distance learning tutor for Business Statistics (Curso de Administração Pública à Distância – PNAP), UFJF.\n2010 Teacher of Technologies for Environmental Planning, FAFISM."
-  },
-  {
-    "objectID": "cv.html#additional-training",
-    "href": "cv.html#additional-training",
-    "title": "CV",
-    "section": "Additional training",
-    "text": "Additional training\n\n2023 - Nature-based solutions for tackling global health challenges. Heidelberg Institute of Global Health, HIGH, Alemanha.\n2022 - Algorithms and Programming Methods for Big Data Laboratório Nacional de Computação Científica (LNCC, Brazil)\n2023 - VII Escola Avançada em Big Data Analytics (USP, Brazil)\n2022 - Public Health Disparities Geocoding Project 2.0. Harvard School of Public Health\n2022 - Developing the SIR Model. Imperial College (Coursera)\n2022 - Machine Learning methods with R, Curso-R school.\n2021 - R Deploy methods, Curso-R school.\n2021 - QBA/On-line - Sensibilização em Gestão da Qualidade, Biossegurança e Ambiente, Fiocruz.\n2020 - Comunicação, Mídia e Saúde em Contexto de Emergências Sanitárias, UFAL.\n2018 - Anthropological and Historical Approaches of Visualising Epidemics, COC, Fiocruz.\n2018 - Information Visualization, Foundations and Applied Perception, NYU Tandon School of Engineering (Coursera).\n2017 - Practical Machine Learning, Johns Hopkins University (Coursera).\n2016 - Harvard - Brazil Collaborative Public Health Course, Harvard School of Public Health.\n2015 - Introduction to Big Data, University of California, San Diego (Coursera).\n2011 - Geoestatística com o uso do R, UFJF.\n2007 - Workshop em modelagem em estudos longitudinais, UFJF.\n2007 - Geomarketing - Conceitos e aplicações, Centro Universitário Senac.\n2004 - Geografia e movimentos sociais, A América Latina, AGB.\n2003 - Introdução à Gestão Ambiental Urbana, UFJF.\n2003 - Flash Mx, CRITT, UFJF."
-  },
-  {
-    "objectID": "cv.html#hobbies",
-    "href": "cv.html#hobbies",
-    "title": "CV",
-    "section": "Hobbies",
-    "text": "Hobbies\n\nPhotography\nCycling"
-  },
-  {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Projects",
-    "section": "",
-    "text": "Harmonize\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMonitoraCovid-19\n\n\nCovid-19 monitoring.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOuvSUS\n\n\nSUS Ombudsman.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPNS\n\n\nPesquisa Nacional de Saúde.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCross-border malaria\n\n\nIn partnership with IRD.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRedes de Cuidado\n\n\nCancer patients displacement and network analysis.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nArboAlvo\n\n\nStratifying arboviruses risk.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOnde estão nossas doenças?\n\n\nMuseum exhibition.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPMM\n\n\nProjeto Mais Médicos.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nÁgua & Saúde\n\n\nIn partneship with ANA.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMauro\n\n\na Metadata Automatic Retrieval system for Updated References and cited Objects from Scielo.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCidade & Saúde\n\n\nAccessible health information about Brazilian municipalities.\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
-  },
-  {
-    "objectID": "code.html#microdatasus",
-    "href": "code.html#microdatasus",
-    "title": "Packages & Code",
-    "section": "microdatasus",
-    "text": "microdatasus\nR package to download and pre-process datasets from DataSUS, Brazilian Health Ministry."
-  },
-  {
-    "objectID": "code.html#brpop",
-    "href": "code.html#brpop",
-    "title": "Packages & Code",
-    "section": "brpop",
-    "text": "brpop\nR package with Brazilian population estimates."
-  },
-  {
-    "objectID": "code.html#tidyrates",
-    "href": "code.html#tidyrates",
-    "title": "Packages & Code",
-    "section": "tidyrates",
-    "text": "tidyrates\nR package to compute age-standardized epidemiological rates in a tidy way."
-  },
-  {
-    "objectID": "code.html#zendown",
-    "href": "code.html#zendown",
-    "title": "Packages & Code",
-    "section": "zendown",
-    "text": "zendown\nR package to download and cache files from Zenodo deposits."
-  },
-  {
-    "objectID": "code.html#zenstats",
-    "href": "code.html#zenstats",
-    "title": "Packages & Code",
-    "section": "zenstats",
-    "text": "zenstats\nR package to fetch statistics of views, downloads and volume from Zenodo deposits."
-  },
-  {
-    "objectID": "code.html#nseq",
-    "href": "code.html#nseq",
-    "title": "Packages & Code",
-    "section": "nseq",
-    "text": "nseq\nR package to compute counts and statistics of occurrence of events in sequences that meets a criterion."
-  },
-  {
-    "objectID": "code.html#rspell",
-    "href": "code.html#rspell",
-    "title": "Packages & Code",
-    "section": "rspell",
-    "text": "rspell\nR package to grammar check documents inside RStudio."
-  },
-  {
-    "objectID": "code.html#zonalclim",
-    "href": "code.html#zonalclim",
-    "title": "Packages & Code",
-    "section": "zonalclim",
-    "text": "zonalclim\nR package to compute zonal statistics of climate indicators."
-  },
-  {
-    "objectID": "code.html#brclimr",
-    "href": "code.html#brclimr",
-    "title": "Packages & Code",
-    "section": "brclimr",
-    "text": "brclimr\nR package to retrieve municipal climate indicators of Brazilian municipalities."
-  },
-  {
-    "objectID": "code.html#opendenguedata",
-    "href": "code.html#opendenguedata",
-    "title": "Packages & Code",
-    "section": "opendenguedata",
-    "text": "opendenguedata\nR package to download dengue data from the OpenDengue project."
-  },
-  {
-    "objectID": "publications.html",
-    "href": "publications.html",
-    "title": "Publications",
-    "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nSubset Models for Multivariate Time Series Forecast\n\n\n\n\n\n\n\n\n\n\n\nMay 13, 2024\n\n\nRaphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, Patrick Valduriez, Fabio Porto\n\n\n\n\n\n\n\n\n\n\n\n\nZonal statistics datasets of climate indicators for Brazilian municipalities\n\n\n\n\n\n\n\n\n\n\n\nFeb 12, 2024\n\n\nRaphael Saldanha, Reza Akbarinia, Marcel Pedroso, Victor Ribeiro, Carlos Cardoso, Eduardo H. M. Pena, Patrick Valduriez, Fabio Porto\n\n\n\n\n\n\n\n\n\n\n\n\nAcesso aos dados agregados e microdados do SUS\n\n\n\n\n\n\n\n\n\n\n\nDec 11, 2023\n\n\nRaphael Saldanha, Marcelo Pedroso, Monica Magalhães\n\n\n\n\n\n\n\n\n\n\n\n\nSubset modelling: A domain partitioning strategy for data-efficient machine-learning\n\n\n\n\n\n\n\n\n\n\n\nSep 25, 2023\n\n\nVitor Ribeiro, Eduardo Pena, Raphael Saldanha, Reza Akbarinia, Patrick Valduriez, Falaah Khan, Julia Stoyanovich, Fabio Porto\n\n\n\n\n\n\n\n\n\n\n\n\nData Science Platform Applied to Health in Contribution to the Brazilian Unified Health System\n\n\n\n\n\n\n\n\n\n\n\nSep 1, 2023\n\n\nMarcel Pedroso, Rebecca Salles, Raphael Saldanha, Vinicius Kreischer de Almeida, Gabriel Souto, Balthazar Paixão, Victor Ribeiro, Raquel Gritz, Carmen Bonifácio, Matheus Miloski, Carlos Augusto de Sousa, Gizelton Pereira Alencar, Ariane Alves, Nelson Niero Neto, Letícia Sabbadini, Eduardo Ogasawara, Christovam Barcellos, Fabio Porto, Lucas Zinato Carraro, Jefferson Lima\n\n\n\n\n\n\n\n\n\n\n\n\nA comprehensive integrated dataset on Brazilian health facilities: from 2005 to 2021\n\n\n\n\n\n\n\n\n\n\n\nJul 20, 2023\n\n\nRebecca Salles, Victor Dornella, Raquel Gritz, Carlos Cardoso, Sérgio Cruz, Vinicius Kreischer, Carmen Bonifácio, Raphael Saldanha, Gabriel Souto, Matheus Miloski, Leandro Zirondi, Gizelton Alencar, Ariane Alves, Nelson Nieiro Neto, Jefferson Lima, Marcel Pedroso, Ronaldo Alves, Cristiano Boccolini\n\n\n\n\n\n\n\n\n\n\n\n\nDataset on infant mortality rates in Brazil\n\n\n\n\n\n\n\n\n\n\n\nJul 17, 2023\n\n\nGabriel Souto, Matheus Miloski, Carlos Cardoso, Vinicius Kreischer, Balthazar Paixão, Victor Ribeiro, Raquel Gritz, Lucas Carraro, Sérgio Cruz, Carmen Bonifácio, Raphael Saldanha, Leandro Zirondi, Gizelton Alencar, Ariane Alves, Nelson Nieiro Neto, Rebecca Salles, Jefferson Lima, Marcel Pedroso\n\n\n\n\n\n\n\n\n\n\n\n\nBook review: A pesquisa científica na era do Big data: cinco maneiras que mostram como o Big data prejudica a ciência, e como podemos salvá-la\n\n\n\n\n\n\n\n\n\n\n\nSep 30, 2022\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nTemporal and spatial distribution trends of polio vaccine coverage in children in Brazil, 2011-2021\n\n\n\n\n\n\n\n\n\n\n\nAug 29, 2022\n\n\nTércia Silva, Ana Carolina de Sá, Elton Prates, Raphael Saldanha, Thales Silva, Antonia Teixeira, Mark Beinner, Suelen Oliveira, Anonio de Sá, Fernanda Matozinhos, Ed Vieira\n\n\n\n\n\n\n\n\n\n\n\n\nComparison of sampling designs from the two editions of the Brazilian National Health Survey, 2013 and 2019\n\n\n\n\n\n\n\n\n\n\n\nJul 13, 2022\n\n\nPaulo Souza Júnior, Celia Szwarcwald, Wanessa Almeida, Giseli Damacena, Marcel Pedroso, Carlos Sousa, Igor Morais, Raphael Saldanha, Jefferson Lima, Sheila Stopa\n\n\n\n\n\n\n\n\n\n\n\n\nHow to overcome the stagnation of the first dose vaccine coverage curve against coronavirus disease 2019 in Brazil?\n\n\n\n\n\n\n\n\n\n\n\nJun 6, 2022\n\n\nRaphael Guimarães, Diego Xavier, Raphael Saldanha, Monica Magalhães\n\n\n\n\n\n\n\n\n\n\n\n\nGeographic accessibility to cancer treatment in Brazil: A network analysis\n\n\n\n\n\n\n\n\n\n\n\nMar 1, 2022\n\n\nBruna Fonseca, Priscila Albuquerque, Raphael Saldanha, Fabio Zicker\n\n\n\n\n\n\n\n\n\n\n\n\nCiência de dados e big data: o que isso significa para estudos populacionais e da saúde?\n\n\n\n\n\n\n\n\n\n\n\nNov 26, 2021\n\n\nRaphael Saldanha, Christovam Barcellos, Marcel Pedroso\n\n\n\n\n\n\n\n\n\n\n\n\nEstimation of COVID-19 Under-Reporting in the Brazilian States Through SARI\n\n\n\n\n\n\n\n\n\n\n\nNov 1, 2021\n\n\nBalthazar Paixão, Lais Baroni, Marcel Pedroso, Rebecca Sales, Luciana Escobar, Carlos Sousa, Raphael Saldanha, Jorge Soares, Rafaelli Coutinho, Fabio Porto, Eduardo Ogasawara\n\n\n\n\n\n\n\n\n\n\n\n\nNeonatal mortality rates in Brazilian municipalities: from 1996 to 2017\n\n\n\n\n\n\n\n\n\n\n\nSep 1, 2021\n\n\nLais Baroni, Rebecca Sales, Samella Sales, Marcel Pedroso, Jefferson Lima, Igor Morais, Lucas Carraro, Raphael Saldanha, Carlos Sousa, Carlos Cardoso, Balthazar Paixão, Sérgio Cruz, Eduardo Ogasawara, Patricia Boccolini, Cristiano Boccolini\n\n\n\n\n\n\n\n\n\n\n\n\nIncreasing impact of COVID-19 on young adults: evidence from hospitalisations in Brazil\n\n\n\n\n\n\n\n\n\n\n\nSep 1, 2021\n\n\nRaphael Guimarães, Daniel Vilela, Diego Xavier, Raphael Saldanha, Christovam Barcellos, Carlos Freitas, Margareth Portela\n\n\n\n\n\n\n\n\n\n\n\n\nAdesão às medidas de restrição de contato físico e disseminação da COVID-19 no Brasil\n\n\n\n\n\n\n\n\n\n\n\nNov 6, 2020\n\n\nCelia Szwarcwald, Paulo Souza Junior, Deborah Malta, Marilisa Barros, Raphael Saldanha, Giseli Damascena, Luiz Azevedo, Margareth Lima, Dalia Romero, Ísis Machado, Crizian Gomes, André Werneck, Danilo Silva, Renata Gracie, Maria Pina\n\n\n\n\n\n\n\n\n\n\n\n\nIs it time to talk about the end of social distancing? A joinpoint analysis of COVID-19 time series in Brazilian capitals\n\n\n\n\n\n\n\n\n\n\n\nSep 21, 2020\n\n\nRaphael Guimarães, Monica Magalhães, Diego Xavier, Raphael Saldanha, Rafael Catão\n\n\n\n\n\n\n\n\n\n\n\n\nResurgence risk for malaria, and the characterization of a recent outbreak in an Amazonian border area between French Guiana and Brazil\n\n\n\n\n\n\n\n\n\n\n\nMay 26, 2020\n\n\nEmilie Mosnier, Isabelle Dusfour, Guillaume Lacour, Raphael Saldanha, Amandine Guidez, Margaret Gomes, Alice Sanna, Yanouk Epelboin, Johana Restrepo, Damien Davy, Magalie Demar, Félix Djossou, Maylis Douine, Vanessa Ardillon, Mathieu Nacher, Lise Musset, Emmanuel Roux\n\n\n\n\n\n\n\n\n\n\n\n\nFatores associados ao letramento funcional em saúde de mulheres atendidas pela Estratégia de Saúde da Família\n\n\n\n\n\n\n\n\n\n\n\nApr 9, 2020\n\n\nAngélica Campos, Felipe Neves, Raphael Saldanha, Kristiane Duque, Maximiliano Guerra, Isabel Leite, Maria Teixeira\n\n\n\n\n\n\n\n\n\n\n\n\nMicrodatasus: pacote para download e pré-processamento de microdados do Departamento de Informática do SUS (DATASUS)\n\n\n\n\n\n\n\n\n\n\n\nSep 16, 2019\n\n\nRaphael Saldanha, Ronaldo Bastos, Christovam Barcellos\n\n\n\n\n\n\n\n\n\n\n\n\nEstudo de análise de rede do fluxo de pacientes de câncer de mama no Brasil entre 2014 e 2016\n\n\n\n\n\n\n\n\n\n\n\nJul 22, 2019\n\n\nRaphael Saldanha, Diego Xavier, Keila Carnavalli, Kátia Lerner, Christovam Barcellos\n\n\n\n\n\n\n\n\n\n\n\n\nCrescimento do emprego industrial local no Brasil: o grau de especialização por intensidade tecnológica importa?\n\n\n\n\n\n\n\n\n\n\n\nJun 13, 2019\n\n\nEduardo Gonçalves, Raphael Saldanha, Eduardo Almeida, André Silva\n\n\n\n\n\n\n\n\n\n\n\n\nContributing to Elimination of Cross-Border Malaria Through a Standardized Solution for Case Surveillance, Data Sharing, and Data Interpretation: Development of a Cross-Border Monitoring System\n\n\n\n\n\n\n\n\n\n\n\nJun 13, 2019\n\n\nRaphael Saldanha, Émilie Mosnier, Christovam Barcellos, Aurel Carbunar, Christophe Charron, Jean-Christophe Desconnets, Basma Guarmit, Margarete Gomes, Théophile Mandon, Anapaula Mendes, Paulo Peiter, Lise Musset, Alice Sanna, Benoît Van Gastel, Emmanuel Roux\n\n\n\n\n\n\n\n\n\n\n\n\nAs Regiões de Saúde no Brasil segundo internações: método para apoio na regionalização de saúde\n\n\n\n\n\n\n\n\n\n\n\nJun 13, 2019\n\n\nDiego Xavier, Ricardo Oliveira, Christovam Barcellos, Raphael Saldanha, Walter Ramalho, Josué Laguardia, Francisco Viacava\n\n\n\n\n\n\n\n\n\n\n\n\nWhat have we learned from Mariana? The importance of names, places and affections\n\n\n\n\n\n\n\n\n\n\n\nMay 16, 2019\n\n\nNadja Araújo, Keila Carnavalli, Nathalia Barbosa, Patricia Barcelos, Raphael Saldanha, Teresa Neves, Vinicius Klein, Maria Guimarães\n\n\n\n\n\n\n\n\n\n\n\n\nBurden of disease in Brazil, 1990–2016: a systematic subnational analysis for the Global Burden of Disease Study 2016\n\n\n\n\n\n\n\n\n\n\n\nSep 1, 2018\n\n\nFatima Marinho et al.\n\n\n\n\n\n\n\n\n\n\n\n\nProposta de um observatório epidemiológico do Sistema Único de Saúde\n\n\n\n\n\n\n\n\n\n\n\nJan 23, 2017\n\n\nRaphael Saldanha, Ronaldo Bastos, Maria Bustamante-Teixeira, Isabel Leite, Estela Campos\n\n\n\n\n\n\nNo matching items\n\n\n  \n\n Back to top"
-  },
-  {
-    "objectID": "talks.html",
-    "href": "talks.html",
-    "title": "Talks",
-    "section": "",
-    "text": "Subset Models for Multivariate Time Series Forecast\n\n\n1st MulTiSA, ICDE 2024\n\n\n\nsubsets\n\n\nmachine learning\n\n\n\nPresentation at 1st MulTiSA workshop, ICDE 2024 conference.\n\n\n\n\n\nMay 13, 2024\n\n\nRaphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, Patrick Valduriez, Fabio Porto\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modeling\n\n\nAn application case for Brazil\n\n\n\nbrclim\n\n\n\nTalk at the Inria Zenith’s Team Seminar.\n\n\n\n\n\nMar 21, 2024\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nBILIS\n\n\nAn unified indicators database\n\n\n\nbilis\n\n\n\nTalk at the Climate and Health for Health Situation Studies Workshop, IRD.\n\n\n\n\n\nDec 18, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modelling\n\n\nAn application case for Brazil\n\n\n\nbrclim\n\n\n\nTalk at the Climate and Health for Health Situation Studies Workshop, IRD.\n\n\n\n\n\nDec 18, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modelling\n\n\nAn application case for Brazil\n\n\n\nisntd\n\n\nclimate\n\n\ndata\n\n\n\nTalk at the ISNTD Climate & Health Conference, Global Health Resilience panel\n\n\n\n\n\nNov 22, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   }
 ]
