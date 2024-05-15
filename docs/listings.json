@@ -1,5 +1,54 @@
 [
   {
+    "listing": "/data.html",
+    "items": [
+      "/data-projects/brazil-climate-zonal-indicators.html",
+      "/data-projects/era5land-daily-latin-america-africa.html",
+      "/data-projects/health-indicators.html",
+      "/data-projects/std_br_covid_rates_data.html"
+    ]
+  },
+  {
+    "listing": "/data-projects/health-indicators.html",
+    "items": [
+      "/data-projects/health_indicators/indi_0002.html",
+      "/data-projects/health_indicators/indi_0001.html"
+    ]
+  },
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/posts/persistent_heat.html",
+      "/posts/data_package_guide.html",
+      "/posts/query_local_parquet_files.html",
+      "/posts/hot_2023.html",
+      "/posts/time_series_clustering.html",
+      "/posts/std_br_covid_rates.html",
+      "/posts/run_length_encoding.html",
+      "/posts/rates.html",
+      "/posts/sqlite_to_duckdb_and_parquet.html",
+      "/posts/query_remot_parquet_file.html",
+      "/posts/some-tips-for-sqlite.html"
+    ]
+  },
+  {
+    "listing": "/projects.html",
+    "items": [
+      "/projects/harmonize.html",
+      "/projects/monitoracovid19.html",
+      "/projects/ouvsus.html",
+      "/projects/pns.html",
+      "/projects/cross-border-malaria.html",
+      "/projects/redes-de-cuidado.html",
+      "/projects/arboalvo.html",
+      "/projects/onde-estao-nossas-doencas.html",
+      "/projects/pmm.html",
+      "/projects/agua-saude.html",
+      "/projects/mauro.html",
+      "/projects/cidade-e-saude.html"
+    ]
+  },
+  {
     "listing": "/publications.html",
     "items": [
       "/publications/saldanhaSubsetModelsMultivariate2024a.html",
@@ -30,55 +79,6 @@
       "/publications/araujoWHATHAVEWE2019a.html",
       "/publications/marinhoBurdenDiseaseBrazil2018.html",
       "/publications/saldanhaPropostaUmObservatorio2017.html"
-    ]
-  },
-  {
-    "listing": "/blog.html",
-    "items": [
-      "/posts/persistent_heat.html",
-      "/posts/data_package_guide.html",
-      "/posts/query_local_parquet_files.html",
-      "/posts/hot_2023.html",
-      "/posts/time_series_clustering.html",
-      "/posts/std_br_covid_rates.html",
-      "/posts/run_length_encoding.html",
-      "/posts/rates.html",
-      "/posts/sqlite_to_duckdb_and_parquet.html",
-      "/posts/query_remot_parquet_file.html",
-      "/posts/some-tips-for-sqlite.html"
-    ]
-  },
-  {
-    "listing": "/data-projects/health-indicators.html",
-    "items": [
-      "/data-projects/health_indicators/indi_0002.html",
-      "/data-projects/health_indicators/indi_0001.html"
-    ]
-  },
-  {
-    "listing": "/data.html",
-    "items": [
-      "/data-projects/brazil-climate-zonal-indicators.html",
-      "/data-projects/health-indicators.html",
-      "/data-projects/era5land-daily-latin-america-africa.html",
-      "/data-projects/std_br_covid_rates_data.html"
-    ]
-  },
-  {
-    "listing": "/projects.html",
-    "items": [
-      "/projects/harmonize.html",
-      "/projects/monitoracovid19.html",
-      "/projects/ouvsus.html",
-      "/projects/pns.html",
-      "/projects/cross-border-malaria.html",
-      "/projects/redes-de-cuidado.html",
-      "/projects/arboalvo.html",
-      "/projects/onde-estao-nossas-doencas.html",
-      "/projects/pmm.html",
-      "/projects/agua-saude.html",
-      "/projects/mauro.html",
-      "/projects/cidade-e-saude.html"
     ]
   },
   {
