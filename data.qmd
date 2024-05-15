@@ -1,5 +1,5 @@
 ---
-title: "Data"
+title: "Datasets"
 listing:
   contents:
     - data-projects/brazil-climate-zonal-indicators.qmd
