@@ -67,6 +67,7 @@
   {
     "listing": "/projects.html",
     "items": [
+      "/projects/sauders.html",
       "/projects/harmonize.html",
       "/projects/monitoracovid19.html",
       "/projects/ouvsus.html",

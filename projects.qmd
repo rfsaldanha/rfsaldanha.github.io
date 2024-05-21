@@ -2,6 +2,7 @@
 title: "Projects"
 listing:
   contents:
+    - projects/sauders.qmd
     - projects/harmonize.qmd
     - projects/monitoracovid19.qmd
     - projects/ouvsus.qmd
