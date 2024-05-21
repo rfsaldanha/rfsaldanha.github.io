@@ -129,6 +129,15 @@ Data from 2010 to 2023 is ready to use and available on Zenodo. Data from 1950 t
 
 | Year | Zenodo deposit                                                                                                     |
 |------|--------------------------------------------------------------------------------------------------------------------|
+| 2001 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11234867-green.svg)](https://doi.org/10.5281/zenodo.11234867) |
+| 2002 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11234849-green.svg)](https://doi.org/10.5281/zenodo.11234849) |
+| 2003 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11234745-green.svg)](https://doi.org/10.5281/zenodo.11234745) |
+| 2004 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11234713-green.svg)](https://doi.org/10.5281/zenodo.11234713) |
+| 2005 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11234671-green.svg)](https://doi.org/10.5281/zenodo.11234671) |
+| 2006 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11234651-green.svg)](https://doi.org/10.5281/zenodo.11234651) |
+| 2007 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11234232-green.svg)](https://doi.org/10.5281/zenodo.11234232) |
+| 2008 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11233620-green.svg)](https://doi.org/10.5281/zenodo.11233620) |
+| 2009 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11232951-green.svg)](https://doi.org/10.5281/zenodo.11232951) |
 | 2010 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11127111-green.svg)](https://doi.org/10.5281/zenodo.11127111) |
 | 2011 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11127089-green.svg)](https://doi.org/10.5281/zenodo.11127089) |
 | 2012 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11126935-green.svg)](https://doi.org/10.5281/zenodo.11126935) |
