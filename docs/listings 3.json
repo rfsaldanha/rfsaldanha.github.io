@@ -1,0 +1,94 @@
+[
+  {
+    "listing": "/publications.html",
+    "items": [
+      "/publications/saldanhaSubsetModelsMultivariate2024a.html",
+      "/publications/saldanhaZonalStatistics2024.html",
+      "/publications/saldanhaMicrodatasus2023.html",
+      "/publications/victor2023.html",
+      "/publications/pedrosoDataSciencePlatform2023.html",
+      "/publications/sallesComprehensiveIntegratedDataset2023a.html",
+      "/publications/soutoDatasetInfantMortality2023.html",
+      "/publications/saldanhaPesquisaCientificaNa2022.html",
+      "/publications/silvaTemporalSpatialDistribution2022.html",
+      "/publications/souzajuniorComparisonSamplingDesigns2022b.html",
+      "/publications/guimaraesHowOvercomeStagnation2022a.html",
+      "/publications/fonsecaGeographicAccessibilityCancer2022a.html",
+      "/publications/saldanhaCienciaDadosBig2021a.html",
+      "/publications/paixaoEstimationCOVID19UnderReporting2021a.html",
+      "/publications/baroniNeonatalMortalityRates2021b.html",
+      "/publications/guimaraesIncreasingImpactCOVID192021b.html",
+      "/publications/szwarcwaldAdesaoMedidasRestricao2020a.html",
+      "/publications/guimaraesItTimeTalk2020b.html",
+      "/publications/mosnierResurgenceRiskMalaria2020a.html",
+      "/publications/camposFatoresAssociadosAo2020b.html",
+      "/publications/saldanhaMicrodatasusPacotePara2019.html",
+      "/publications/saldanhaEstudoAnaliseRede2019.html",
+      "/publications/goncalvesCrescimentoEmpregoIndustrial2019a.html",
+      "/publications/saldanhaContributingEliminationCrossBorder2020.html",
+      "/publications/xavierRegioesSaudeNo2019.html",
+      "/publications/araujoWHATHAVEWE2019a.html",
+      "/publications/marinhoBurdenDiseaseBrazil2018.html",
+      "/publications/saldanhaPropostaUmObservatorio2017.html"
+    ]
+  },
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/posts/persistent_heat.html",
+      "/posts/data_package_guide.html",
+      "/posts/query_local_parquet_files.html",
+      "/posts/hot_2023.html",
+      "/posts/time_series_clustering.html",
+      "/posts/std_br_covid_rates.html",
+      "/posts/run_length_encoding.html",
+      "/posts/rates.html",
+      "/posts/sqlite_to_duckdb_and_parquet.html",
+      "/posts/query_remot_parquet_file.html",
+      "/posts/some-tips-for-sqlite.html"
+    ]
+  },
+  {
+    "listing": "/data-projects/health-indicators.html",
+    "items": [
+      "/data-projects/health_indicators/indi_0002.html",
+      "/data-projects/health_indicators/indi_0001.html"
+    ]
+  },
+  {
+    "listing": "/data.html",
+    "items": [
+      "/data-projects/brazil-climate-zonal-indicators.html",
+      "/data-projects/era5land-daily-latin-america-africa.html",
+      "/data-projects/health-indicators.html",
+      "/data-projects/std_br_covid_rates_data.html"
+    ]
+  },
+  {
+    "listing": "/projects.html",
+    "items": [
+      "/projects/harmonize.html",
+      "/projects/monitoracovid19.html",
+      "/projects/ouvsus.html",
+      "/projects/pns.html",
+      "/projects/cross-border-malaria.html",
+      "/projects/redes-de-cuidado.html",
+      "/projects/arboalvo.html",
+      "/projects/onde-estao-nossas-doencas.html",
+      "/projects/pmm.html",
+      "/projects/agua-saude.html",
+      "/projects/mauro.html",
+      "/projects/cidade-e-saude.html"
+    ]
+  },
+  {
+    "listing": "/talks.html",
+    "items": [
+      "/talks/multisa_subsets_2024.html",
+      "/talks/zenith_seminar_2024.html",
+      "/talks/bilis_2023.html",
+      "/talks/climate_health_workshop_2023.html",
+      "/talks/isntd_conference_2023.html"
+    ]
+  }
+]
