@@ -1313,7 +1313,7 @@
     "href": "data.html",
     "title": "Datasets",
     "section": "",
-    "text": "Zonal statististics of climate indicators for Brazilian municipalities\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nERA5-Land selected indicators daily aggregates for Latin America and Africa\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHealth indicators\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAge-adjusted COVID-19 mortality rates for Brazilian municipalities\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Zonal statististics of climate indicators for Brazilian municipalities\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nERA5-Land selected indicators daily aggregates for Latin America\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nERA5-Land selected indicators daily aggregates for Africa\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHealth indicators\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAge-adjusted COVID-19 mortality rates for Brazilian municipalities\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "pres/bsc2024.html#main-fields-of-work-and-projects",
@@ -1726,14 +1726,14 @@
     "href": "data-projects/era5land-daily-latin-america-africa.html#latin-america-data",
     "title": "ERA5-Land selected indicators daily aggregates for Latin America and Africa",
     "section": "Latin America data",
-    "text": "Latin America data\nThe resulting NetCDF files are available for download at Zenodo.\n\n\n\nYear\nZenodo deposit\n\n\n\n\n1950\n\n\n\n1951\n\n\n\n1952\n\n\n\n1953\n\n\n\n1954\n\n\n\n1955\n\n\n\n1956\n\n\n\n1957\n\n\n\n1958\n\n\n\n1959\n\n\n\n1960\n\n\n\n1961\n\n\n\n1962\n\n\n\n1963\n\n\n\n1964\n\n\n\n1965\n\n\n\n1966\n\n\n\n1967\n\n\n\n1968\n\n\n\n1969\n\n\n\n1970\n\n\n\n1971\n\n\n\n1972\n\n\n\n1973\n\n\n\n1974\n\n\n\n1975\n\n\n\n1976\n\n\n\n1977\n\n\n\n1978\n\n\n\n1979\n\n\n\n1980\n\n\n\n1981\n\n\n\n1982\n\n\n\n1983\n\n\n\n1984\n\n\n\n1985\n\n\n\n1986\n\n\n\n1987\n\n\n\n1988\n\n\n\n1989\n\n\n\n1990\n\n\n\n1991\n\n\n\n1992\n\n\n\n1993\n\n\n\n1994\n\n\n\n1995\n\n\n\n1996\n\n\n\n1997\n\n\n\n1998\n\n\n\n1999\n\n\n\n2000\n\n\n\n2001\n\n\n\n2002\n\n\n\n2003\n\n\n\n2004\n\n\n\n2005\n\n\n\n2006\n\n\n\n2007\n\n\n\n2008\n\n\n\n2009\n\n\n\n2010\n\n\n\n2011\n\n\n\n2012\n\n\n\n2013\n\n\n\n2014\n\n\n\n2015\n\n\n\n2016\n\n\n\n2017\n\n\n\n2018\n\n\n\n2019\n\n\n\n2020\n\n\n\n2021\n\n\n\n2022\n\n\n\n2023\n\n\n\n\n\nUsage statistics\n\nUntil: 2024-05-21 14:04:13\nViews: 6472\nDownloads: 21956\nTotal data volume: 2.36 TB"
+    "text": "Latin America data\nThe resulting NetCDF files are available for download at Zenodo.\n\n\n\nYear\nZenodo deposit\n\n\n\n\n1950\n\n\n\n1951\n\n\n\n1952\n\n\n\n1953\n\n\n\n1954\n\n\n\n1955\n\n\n\n1956\n\n\n\n1957\n\n\n\n1958\n\n\n\n1959\n\n\n\n1960\n\n\n\n1961\n\n\n\n1962\n\n\n\n1963\n\n\n\n1964\n\n\n\n1965\n\n\n\n1966\n\n\n\n1967\n\n\n\n1968\n\n\n\n1969\n\n\n\n1970\n\n\n\n1971\n\n\n\n1972\n\n\n\n1973\n\n\n\n1974\n\n\n\n1975\n\n\n\n1976\n\n\n\n1977\n\n\n\n1978\n\n\n\n1979\n\n\n\n1980\n\n\n\n1981\n\n\n\n1982\n\n\n\n1983\n\n\n\n1984\n\n\n\n1985\n\n\n\n1986\n\n\n\n1987\n\n\n\n1988\n\n\n\n1989\n\n\n\n1990\n\n\n\n1991\n\n\n\n1992\n\n\n\n1993\n\n\n\n1994\n\n\n\n1995\n\n\n\n1996\n\n\n\n1997\n\n\n\n1998\n\n\n\n1999\n\n\n\n2000\n\n\n\n2001\n\n\n\n2002\n\n\n\n2003\n\n\n\n2004\n\n\n\n2005\n\n\n\n2006\n\n\n\n2007\n\n\n\n2008\n\n\n\n2009\n\n\n\n2010\n\n\n\n2011\n\n\n\n2012\n\n\n\n2013\n\n\n\n2014\n\n\n\n2015\n\n\n\n2016\n\n\n\n2017\n\n\n\n2018\n\n\n\n2019\n\n\n\n2020\n\n\n\n2021\n\n\n\n2022\n\n\n\n2023\n\n\n\n\n\nUsage statistics\n\nUntil: 2024-05-21 15:39:19\nViews: 6603\nDownloads: 22148\nTotal data volume: 2.38 TB"
   },
   {
     "objectID": "data-projects/era5land-daily-latin-america-africa.html#africa-data",
     "href": "data-projects/era5land-daily-latin-america-africa.html#africa-data",
     "title": "ERA5-Land selected indicators daily aggregates for Latin America and Africa",
     "section": "Africa data",
-    "text": "Africa data\nData from 2010 to 2023 is ready to use and available on Zenodo. Data from 1950 to 2009 is being processed and will be made available soon.\n\n\n\nYear\nZenodo deposit\n\n\n\n\n2001\n\n\n\n2002\n\n\n\n2003\n\n\n\n2004\n\n\n\n2005\n\n\n\n2006\n\n\n\n2007\n\n\n\n2008\n\n\n\n2009\n\n\n\n2010\n\n\n\n2011\n\n\n\n2012\n\n\n\n2013\n\n\n\n2014\n\n\n\n2015\n\n\n\n2016\n\n\n\n2017\n\n\n\n2018\n\n\n\n2019\n\n\n\n2020\n\n\n\n2021\n\n\n\n2022\n\n\n\n2023\n\n\n\n\n\nUsage statistics\n\nUntil: 2024-05-21 14:04:36\nViews: 523\nDownloads: 1598\nTotal data volume: 136.25 GB"
+    "text": "Africa data\nData from 2010 to 2023 is ready to use and available on Zenodo. Data from 1950 to 2009 is being processed and will be made available soon.\n\n\n\nYear\nZenodo deposit\n\n\n\n\n2000\n\n\n\n2001\n\n\n\n2002\n\n\n\n2003\n\n\n\n2004\n\n\n\n2005\n\n\n\n2006\n\n\n\n2007\n\n\n\n2008\n\n\n\n2009\n\n\n\n2010\n\n\n\n2011\n\n\n\n2012\n\n\n\n2013\n\n\n\n2014\n\n\n\n2015\n\n\n\n2016\n\n\n\n2017\n\n\n\n2018\n\n\n\n2019\n\n\n\n2020\n\n\n\n2021\n\n\n\n2022\n\n\n\n2023\n\n\n\n\n\nUsage statistics\n\nUntil: 2024-05-21 15:43:40\nViews: 703\nDownloads: 2300\nTotal data volume: 198.78 GB"
   },
   {
     "objectID": "data-projects/health_indicators/indi_0002.html",
@@ -2182,5 +2182,68 @@
     "title": "Saúde RS",
     "section": "",
     "text": "Saúde RS is a fast response project to the Rio Grande do Sul flooding disaster that occurred in Brazil on May 2024. It presents maps and data sources about the flooding, with emphasis to map health units that are in risk areas.\nAccess: https://rfsaldanha.github.io/sauders\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "data-projects/era5land-daily-africa.html#introduction",
+    "href": "data-projects/era5land-daily-africa.html#introduction",
+    "title": "ERA5-Land selected indicators daily aggregates for Africa",
+    "section": "Introduction",
+    "text": "Introduction\nThe ERA5-Land reanalysis from The Copernicus Programme is an incredible source of climate data with global coverage of land areas from 1950 to the present, at 10km spatial resolution. Its original data is at hourly interval, and monthly aggregates are also available at the Copernicus Data Store (CDS).\nFor some applications like Climate-Sensitive Diseases (CSD) modelling, the hourly interval may be too much detailed, but the monthly aggregation is too coarse.\nFor this reason, I created daily aggregates from some ERA5-Land indicators for some regions."
+  },
+  {
+    "objectID": "data-projects/era5land-daily-africa.html#methodology",
+    "href": "data-projects/era5land-daily-africa.html#methodology",
+    "title": "ERA5-Land selected indicators daily aggregates for Africa",
+    "section": "Methodology",
+    "text": "Methodology\nI developed an R script using the KrigR package (Kusch and Davy 2022). The script downloads a set of indicators, starting on 1950, for a geographical bounding box covering Africa (coordinates -47.11,71.01,34.88,71.38) and aggregates the data from hourly to daily, saving its results as NetCDF files. Each resulting file covers a year’s month and presents data layers for each day of the respective month.\nThe table bellow contains the time aggregation functions applied to each climate indicator.\n\n\n\nIndicator\nDaily aggregation function\n\n\n\n\n2m temperature\nmean, max, min\n\n\n2m dewpoint temperature\nmean\n\n\nu component of wind\nmean\n\n\nv component of wind\nmean\n\n\nsurface pressure\nmean\n\n\ntotal precipitation\nsum"
+  },
+  {
+    "objectID": "data-projects/era5land-daily-africa.html#datasets",
+    "href": "data-projects/era5land-daily-africa.html#datasets",
+    "title": "ERA5-Land selected indicators daily aggregates for Africa",
+    "section": "Datasets",
+    "text": "Datasets\nData from 2000 to 2023 is ready to use and available on Zenodo. Data from 1950 to 1999 is being processed and will be made available soon.\n\n\n\nYear\nZenodo deposit\n\n\n\n\n2000\n\n\n\n2001\n\n\n\n2002\n\n\n\n2003\n\n\n\n2004\n\n\n\n2005\n\n\n\n2006\n\n\n\n2007\n\n\n\n2008\n\n\n\n2009\n\n\n\n2010\n\n\n\n2011\n\n\n\n2012\n\n\n\n2013\n\n\n\n2014\n\n\n\n2015\n\n\n\n2016\n\n\n\n2017\n\n\n\n2018\n\n\n\n2019\n\n\n\n2020\n\n\n\n2021\n\n\n\n2022\n\n\n\n2023\n\n\n\n\n\nUsage statistics\n\nStatistics update: 2024-05-27 10:31:38\nViews: 1025\nDownloads: 10380"
+  },
+  {
+    "objectID": "data-projects/era5land-daily-latin-america.html",
+    "href": "data-projects/era5land-daily-latin-america.html",
+    "title": "ERA5-Land selected indicators daily aggregates for Latin America",
+    "section": "",
+    "text": "Maximum temperature (k)"
+  },
+  {
+    "objectID": "data-projects/era5land-daily-latin-america.html#introduction",
+    "href": "data-projects/era5land-daily-latin-america.html#introduction",
+    "title": "ERA5-Land selected indicators daily aggregates for Latin America",
+    "section": "Introduction",
+    "text": "Introduction\nThe ERA5-Land reanalysis from The Copernicus Programme is an incredible source of climate data with global coverage of land areas from 1950 to the present, at 10km spatial resolution. Its original data is at hourly interval, and monthly aggregates are also available at the Copernicus Data Store (CDS).\nFor some applications like Climate-Sensitive Diseases (CSD) modelling, the hourly interval may be too much detailed, but the monthly aggregation is too coarse.\nFor this reason, I created daily aggregates from some ERA5-Land indicators for some regions."
+  },
+  {
+    "objectID": "data-projects/era5land-daily-latin-america.html#methodology",
+    "href": "data-projects/era5land-daily-latin-america.html#methodology",
+    "title": "ERA5-Land selected indicators daily aggregates for Latin America",
+    "section": "Methodology",
+    "text": "Methodology\nI developed an R script using the KrigR package (Kusch and Davy 2022). The script downloads a set of indicators, starting on 1950, for a geographical bounding box covering the Latin America region (coordinates -118.47,-34.1,-56.65, 33.28) and aggregates the data from hourly to daily, saving its results as NetCDF files. Each resulting file covers a year’s month and presents data layers for each day of the respective month.\nThe table bellow contains the time aggregation functions applied to each climate indicator.\n\n\n\nIndicator\nDaily aggregation function\n\n\n\n\n2m temperature\nmean, max, min\n\n\n2m dewpoint temperature\nmean\n\n\nu component of wind\nmean\n\n\nv component of wind\nmean\n\n\nsurface pressure\nmean\n\n\ntotal precipitation\nsum"
+  },
+  {
+    "objectID": "data-projects/era5land-daily-latin-america.html#data",
+    "href": "data-projects/era5land-daily-latin-america.html#data",
+    "title": "ERA5-Land selected indicators daily aggregates for Latin America",
+    "section": "Data",
+    "text": "Data\nThe resulting NetCDF files are available for download at Zenodo.\n\n\n\nYear\nZenodo deposit\n\n\n\n\n1950\n\n\n\n1951\n\n\n\n1952\n\n\n\n1953\n\n\n\n1954\n\n\n\n1955\n\n\n\n1956\n\n\n\n1957\n\n\n\n1958\n\n\n\n1959\n\n\n\n1960\n\n\n\n1961\n\n\n\n1962\n\n\n\n1963\n\n\n\n1964\n\n\n\n1965\n\n\n\n1966\n\n\n\n1967\n\n\n\n1968\n\n\n\n1969\n\n\n\n1970\n\n\n\n1971\n\n\n\n1972\n\n\n\n1973\n\n\n\n1974\n\n\n\n1975\n\n\n\n1976\n\n\n\n1977\n\n\n\n1978\n\n\n\n1979\n\n\n\n1980\n\n\n\n1981\n\n\n\n1982\n\n\n\n1983\n\n\n\n1984\n\n\n\n1985\n\n\n\n1986\n\n\n\n1987\n\n\n\n1988\n\n\n\n1989\n\n\n\n1990\n\n\n\n1991\n\n\n\n1992\n\n\n\n1993\n\n\n\n1994\n\n\n\n1995\n\n\n\n1996\n\n\n\n1997\n\n\n\n1998\n\n\n\n1999\n\n\n\n2000\n\n\n\n2001\n\n\n\n2002\n\n\n\n2003\n\n\n\n2004\n\n\n\n2005\n\n\n\n2006\n\n\n\n2007\n\n\n\n2008\n\n\n\n2009\n\n\n\n2010\n\n\n\n2011\n\n\n\n2012\n\n\n\n2013\n\n\n\n2014\n\n\n\n2015\n\n\n\n2016\n\n\n\n2017\n\n\n\n2018\n\n\n\n2019\n\n\n\n2020\n\n\n\n2021\n\n\n\n2022\n\n\n\n2023"
+  },
+  {
+    "objectID": "data-projects/era5land-daily-latin-america.html#usage-statistics",
+    "href": "data-projects/era5land-daily-latin-america.html#usage-statistics",
+    "title": "ERA5-Land selected indicators daily aggregates for Latin America",
+    "section": "Usage statistics",
+    "text": "Usage statistics\n\nDate: 2024-05-07 11:30:24\nViews: 5707\nDownloads: 16683\nTotal data volume: 1.87 TB"
+  },
+  {
+    "objectID": "data-projects/era5land-daily-latin-america.html#datasets",
+    "href": "data-projects/era5land-daily-latin-america.html#datasets",
+    "title": "ERA5-Land selected indicators daily aggregates for Latin America",
+    "section": "Datasets",
+    "text": "Datasets\nThe resulting NetCDF files are available for download at Zenodo.\n\n\n\nYear\nZenodo deposit\n\n\n\n\n1950\n\n\n\n1951\n\n\n\n1952\n\n\n\n1953\n\n\n\n1954\n\n\n\n1955\n\n\n\n1956\n\n\n\n1957\n\n\n\n1958\n\n\n\n1959\n\n\n\n1960\n\n\n\n1961\n\n\n\n1962\n\n\n\n1963\n\n\n\n1964\n\n\n\n1965\n\n\n\n1966\n\n\n\n1967\n\n\n\n1968\n\n\n\n1969\n\n\n\n1970\n\n\n\n1971\n\n\n\n1972\n\n\n\n1973\n\n\n\n1974\n\n\n\n1975\n\n\n\n1976\n\n\n\n1977\n\n\n\n1978\n\n\n\n1979\n\n\n\n1980\n\n\n\n1981\n\n\n\n1982\n\n\n\n1983\n\n\n\n1984\n\n\n\n1985\n\n\n\n1986\n\n\n\n1987\n\n\n\n1988\n\n\n\n1989\n\n\n\n1990\n\n\n\n1991\n\n\n\n1992\n\n\n\n1993\n\n\n\n1994\n\n\n\n1995\n\n\n\n1996\n\n\n\n1997\n\n\n\n1998\n\n\n\n1999\n\n\n\n2000\n\n\n\n2001\n\n\n\n2002\n\n\n\n2003\n\n\n\n2004\n\n\n\n2005\n\n\n\n2006\n\n\n\n2007\n\n\n\n2008\n\n\n\n2009\n\n\n\n2010\n\n\n\n2011\n\n\n\n2012\n\n\n\n2013\n\n\n\n2014\n\n\n\n2015\n\n\n\n2016\n\n\n\n2017\n\n\n\n2018\n\n\n\n2019\n\n\n\n2020\n\n\n\n2021\n\n\n\n2022\n\n\n\n2023\n\n\n\n\n\nUsage statistics\n\nStatistics update: 2024-05-27 10:46:19\nViews: 6939\nDownloads: 24242"
   }
 ]

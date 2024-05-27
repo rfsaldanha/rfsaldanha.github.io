@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Raphael Saldanha – ERA5-Land selected indicators daily aggregates for Latin America and Africa</title>
+<title>Raphael Saldanha – ERA5-Land selected indicators daily aggregates for Latin America</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -163,7 +163,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">ERA5-Land selected indicators daily aggregates for Latin America and Africa</h1>
+      <h1 class="title">ERA5-Land selected indicators daily aggregates for Latin America</h1>
                       </div>
   </div>
     
@@ -186,13 +186,9 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a></li>
-  <li><a href="#latin-america-data" id="toc-latin-america-data" class="nav-link" data-scroll-target="#latin-america-data">Latin America data</a>
+  <li><a href="#datasets" id="toc-datasets" class="nav-link" data-scroll-target="#datasets">Datasets</a>
   <ul class="collapse">
   <li><a href="#usage-statistics" id="toc-usage-statistics" class="nav-link" data-scroll-target="#usage-statistics">Usage statistics</a></li>
-  </ul></li>
-  <li><a href="#africa-data" id="toc-africa-data" class="nav-link" data-scroll-target="#africa-data">Africa data</a>
-  <ul class="collapse">
-  <li><a href="#usage-statistics-1" id="toc-usage-statistics-1" class="nav-link" data-scroll-target="#usage-statistics-1">Usage statistics</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -204,21 +200,24 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 
 
 
-<div class="quarto-figure quarto-figure-center">
+<div class="cell">
+<div class="cell-output-display">
+<div>
 <figure class="figure">
-<p><img src="images/era5land_daily_la_africa.png" class="img-fluid figure-img"></p>
-<figcaption>Maximum temperature (k)</figcaption>
+<p><img src="era5land-daily-latin-america_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
+</div>
+</div>
 </div>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>The <a href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land?tab=overview">ERA5-Land</a> reanalysis from The Copernicus Programme is an incredible source of climate data with global coverage of land areas from 1950 to the present, at 10km spatial resolution. Its original data is at hourly interval, and monthly aggregates are also available at the <a href="https://cds.climate.copernicus.eu">Copernicus Data Store</a> (CDS).</p>
 <p>For some applications like Climate-Sensitive Diseases (CSD) modelling, the hourly interval may be too much detailed, but the monthly aggregation is too coarse.</p>
-<p>For this reason, I created daily aggregates from some ERA5-Land indicators for the Latin America and Africa.</p>
+<p>For this reason, I created daily aggregates from some ERA5-Land indicators for some regions.</p>
 </section>
 <section id="methodology" class="level2">
 <h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
-<p>I developed an <a href="https://github.com/rfsaldanha/era5daily">R script</a> using the KrigR package <span class="citation" data-cites="kusch2022">(<a href="#ref-kusch2022" role="doc-biblioref">Kusch and Davy 2022</a>)</span>. The script downloads a set of indicators, starting on 1950, for a geographical bounding box covering the Latin America region (coordinates -118.47,-34.1,-56.65, 33.28), and Africa (coordinates -47.11,71.01,34.88,71.38) and aggregates the data from hourly to daily, saving its results as NetCDF files. Each resulting file covers a year’s month and presents data layers for each day of the respective month.</p>
+<p>I developed an <a href="https://github.com/rfsaldanha/era5daily">R script</a> using the KrigR package <span class="citation" data-cites="kusch2022">(<a href="#ref-kusch2022" role="doc-biblioref">Kusch and Davy 2022</a>)</span>. The script downloads a set of indicators, starting on 1950, for a geographical bounding box covering the Latin America region (coordinates -118.47,-34.1,-56.65, 33.28) and aggregates the data from hourly to daily, saving its results as NetCDF files. Each resulting file covers a year’s month and presents data layers for each day of the respective month.</p>
 <p>The table bellow contains the time aggregation functions applied to each climate indicator.</p>
 <table class="table">
 <thead>
@@ -255,8 +254,8 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 </tbody>
 </table>
 </section>
-<section id="latin-america-data" class="level2">
-<h2 class="anchored" data-anchor-id="latin-america-data">Latin America data</h2>
+<section id="datasets" class="level2">
+<h2 class="anchored" data-anchor-id="datasets">Datasets</h2>
 <p>The resulting NetCDF files are available for download at Zenodo.</p>
 <table class="table">
 <thead>
@@ -567,129 +566,9 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <section id="usage-statistics" class="level3">
 <h3 class="anchored" data-anchor-id="usage-statistics">Usage statistics</h3>
 <ul>
-<li>Until: 2024-05-21 15:39:19</li>
-<li>Views: 6603</li>
-<li>Downloads: 22148</li>
-<li>Total data volume: 2.38 TB</li>
-</ul>
-</section>
-</section>
-<section id="africa-data" class="level2">
-<h2 class="anchored" data-anchor-id="africa-data">Africa data</h2>
-<p>Data from 2010 to 2023 is ready to use and available on Zenodo. Data from 1950 to 2009 is being processed and will be made available soon.</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th>Year</th>
-<th>Zenodo deposit</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2000</td>
-<td><a href="https://doi.org/10.5281/zenodo.11235544"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.11235544-green.svg" class="img-fluid"></a></td>
-</tr>
-<tr class="even">
-<td>2001</td>
-<td><a href="https://doi.org/10.5281/zenodo.11234867"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.11234867-green.svg" class="img-fluid"></a></td>
-</tr>
-<tr class="odd">
-<td>2002</td>
-<td><a href="https://doi.org/10.5281/zenodo.11234849"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.11234849-green.svg" class="img-fluid"></a></td>
-</tr>
-<tr class="even">
-<td>2003</td>
-<td><a href="https://doi.org/10.5281/zenodo.11234745"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.11234745-green.svg" class="img-fluid"></a></td>
-</tr>
-<tr class="odd">
-<td>2004</td>
-<td><a href="https://doi.org/10.5281/zenodo.11234713"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.11234713-green.svg" class="img-fluid"></a></td>
-</tr>
-<tr class="even">
-<td>2005</td>
-<td><a href="https://doi.org/10.5281/zenodo.11234671"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.11234671-green.svg" class="img-fluid"></a></td>
-</tr>
-<tr class="odd">
-<td>2006</td>
-<td><a href="https://doi.org/10.5281/zenodo.11234651"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.11234651-green.svg" class="img-fluid"></a></td>
-</tr>
-<tr class="even">
-<td>2007</td>
-<td><a href="https://doi.org/10.5281/zenodo.11234232"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.11234232-green.svg" class="img-fluid"></a></td>
-</tr>
-<tr class="odd">
-<td>2008</td>
-<td><a href="https://doi.org/10.5281/zenodo.11233620"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.11233620-green.svg" class="img-fluid"></a></td>
-</tr>
-<tr class="even">
-<td>2009</td>
-<td><a href="https://doi.org/10.5281/zenodo.11232951"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.11232951-green.svg" class="img-fluid"></a></td>
-</tr>
-<tr class="odd">
-<td>2010</td>
-<td><a href="https://doi.org/10.5281/zenodo.11127111"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.11127111-green.svg" class="img-fluid"></a></td>
-</tr>
-<tr class="even">
-<td>2011</td>
-<td><a href="https://doi.org/10.5281/zenodo.11127089"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.11127089-green.svg" class="img-fluid"></a></td>
-</tr>
-<tr class="odd">
-<td>2012</td>
-<td><a href="https://doi.org/10.5281/zenodo.11126935"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.11126935-green.svg" class="img-fluid"></a></td>
-</tr>
-<tr class="even">
-<td>2013</td>
-<td><a href="https://doi.org/10.5281/zenodo.11126924"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.11126924-green.svg" class="img-fluid"></a></td>
-</tr>
-<tr class="odd">
-<td>2014</td>
-<td><a href="https://doi.org/10.5281/zenodo.11126908"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.11126908-green.svg" class="img-fluid"></a></td>
-</tr>
-<tr class="even">
-<td>2015</td>
-<td><a href="https://doi.org/10.5281/zenodo.11126889"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.11126889-green.svg" class="img-fluid"></a></td>
-</tr>
-<tr class="odd">
-<td>2016</td>
-<td><a href="https://doi.org/10.5281/zenodo.11126864"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.11126864-green.svg" class="img-fluid"></a></td>
-</tr>
-<tr class="even">
-<td>2017</td>
-<td><a href="https://doi.org/10.5281/zenodo.11126841"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.11126841-green.svg" class="img-fluid"></a></td>
-</tr>
-<tr class="odd">
-<td>2018</td>
-<td><a href="https://doi.org/10.5281/zenodo.11126820"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.11126820-green.svg" class="img-fluid"></a></td>
-</tr>
-<tr class="even">
-<td>2019</td>
-<td><a href="https://doi.org/10.5281/zenodo.11126794"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.11126794-green.svg" class="img-fluid"></a></td>
-</tr>
-<tr class="odd">
-<td>2020</td>
-<td><a href="https://doi.org/10.5281/zenodo.11126758"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.11126758-green.svg" class="img-fluid"></a></td>
-</tr>
-<tr class="even">
-<td>2021</td>
-<td><a href="https://doi.org/10.5281/zenodo.11126741"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.11126741-green.svg" class="img-fluid"></a></td>
-</tr>
-<tr class="odd">
-<td>2022</td>
-<td><a href="https://doi.org/10.5281/zenodo.11126723"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.11126723-green.svg" class="img-fluid"></a></td>
-</tr>
-<tr class="even">
-<td>2023</td>
-<td><a href="https://doi.org/10.5281/zenodo.11105116"><img src="https://img.shields.io/badge/doi-10.5281/zenodo.11105116-green.svg" class="img-fluid"></a></td>
-</tr>
-</tbody>
-</table>
-<section id="usage-statistics-1" class="level3">
-<h3 class="anchored" data-anchor-id="usage-statistics-1">Usage statistics</h3>
-<ul>
-<li>Until: 2024-05-21 15:43:40</li>
-<li>Views: 703</li>
-<li>Downloads: 2300</li>
-<li>Total data volume: 198.78 GB</li>
+<li>Statistics update: 2024-05-27 10:46:19</li>
+<li>Views: 6939</li>
+<li>Downloads: 24242</li>
 </ul>
 
 
