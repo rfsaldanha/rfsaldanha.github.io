@@ -1,35 +1,12 @@
 [
   {
-    "listing": "/publications.html",
+    "listing": "/talks.html",
     "items": [
-      "/publications/saldanhaSubsetModelsMultivariate2024a.html",
-      "/publications/saldanhaZonalStatistics2024.html",
-      "/publications/saldanhaMicrodatasus2023.html",
-      "/publications/victor2023.html",
-      "/publications/pedrosoDataSciencePlatform2023.html",
-      "/publications/sallesComprehensiveIntegratedDataset2023a.html",
-      "/publications/soutoDatasetInfantMortality2023.html",
-      "/publications/saldanhaPesquisaCientificaNa2022.html",
-      "/publications/silvaTemporalSpatialDistribution2022.html",
-      "/publications/souzajuniorComparisonSamplingDesigns2022b.html",
-      "/publications/guimaraesHowOvercomeStagnation2022a.html",
-      "/publications/fonsecaGeographicAccessibilityCancer2022a.html",
-      "/publications/saldanhaCienciaDadosBig2021a.html",
-      "/publications/paixaoEstimationCOVID19UnderReporting2021a.html",
-      "/publications/baroniNeonatalMortalityRates2021b.html",
-      "/publications/guimaraesIncreasingImpactCOVID192021b.html",
-      "/publications/szwarcwaldAdesaoMedidasRestricao2020a.html",
-      "/publications/guimaraesItTimeTalk2020b.html",
-      "/publications/mosnierResurgenceRiskMalaria2020a.html",
-      "/publications/camposFatoresAssociadosAo2020b.html",
-      "/publications/saldanhaMicrodatasusPacotePara2019.html",
-      "/publications/saldanhaEstudoAnaliseRede2019.html",
-      "/publications/goncalvesCrescimentoEmpregoIndustrial2019a.html",
-      "/publications/saldanhaContributingEliminationCrossBorder2020.html",
-      "/publications/xavierRegioesSaudeNo2019.html",
-      "/publications/araujoWHATHAVEWE2019a.html",
-      "/publications/marinhoBurdenDiseaseBrazil2018.html",
-      "/publications/saldanhaPropostaUmObservatorio2017.html"
+      "/talks/multisa_subsets_2024.html",
+      "/talks/zenith_seminar_2024.html",
+      "/talks/bilis_2023.html",
+      "/talks/climate_health_workshop_2023.html",
+      "/talks/isntd_conference_2023.html"
     ]
   },
   {
@@ -84,13 +61,36 @@
     ]
   },
   {
-    "listing": "/talks.html",
+    "listing": "/publications.html",
     "items": [
-      "/talks/multisa_subsets_2024.html",
-      "/talks/zenith_seminar_2024.html",
-      "/talks/bilis_2023.html",
-      "/talks/climate_health_workshop_2023.html",
-      "/talks/isntd_conference_2023.html"
+      "/publications/saldanhaSubsetModelsMultivariate2024a.html",
+      "/publications/saldanhaZonalStatistics2024.html",
+      "/publications/saldanhaMicrodatasus2023.html",
+      "/publications/victor2023.html",
+      "/publications/pedrosoDataSciencePlatform2023.html",
+      "/publications/sallesComprehensiveIntegratedDataset2023a.html",
+      "/publications/soutoDatasetInfantMortality2023.html",
+      "/publications/saldanhaPesquisaCientificaNa2022.html",
+      "/publications/silvaTemporalSpatialDistribution2022.html",
+      "/publications/souzajuniorComparisonSamplingDesigns2022b.html",
+      "/publications/guimaraesHowOvercomeStagnation2022a.html",
+      "/publications/fonsecaGeographicAccessibilityCancer2022a.html",
+      "/publications/saldanhaCienciaDadosBig2021a.html",
+      "/publications/paixaoEstimationCOVID19UnderReporting2021a.html",
+      "/publications/baroniNeonatalMortalityRates2021b.html",
+      "/publications/guimaraesIncreasingImpactCOVID192021b.html",
+      "/publications/szwarcwaldAdesaoMedidasRestricao2020a.html",
+      "/publications/guimaraesItTimeTalk2020b.html",
+      "/publications/mosnierResurgenceRiskMalaria2020a.html",
+      "/publications/camposFatoresAssociadosAo2020b.html",
+      "/publications/saldanhaMicrodatasusPacotePara2019.html",
+      "/publications/saldanhaEstudoAnaliseRede2019.html",
+      "/publications/goncalvesCrescimentoEmpregoIndustrial2019a.html",
+      "/publications/saldanhaContributingEliminationCrossBorder2020.html",
+      "/publications/xavierRegioesSaudeNo2019.html",
+      "/publications/araujoWHATHAVEWE2019a.html",
+      "/publications/marinhoBurdenDiseaseBrazil2018.html",
+      "/publications/saldanhaPropostaUmObservatorio2017.html"
     ]
   }
 ]

@@ -17,21 +17,25 @@ revealjs-plugins:
 ## About me
 
 -   Brazilian from Rio de Janeiro
+-   Husband, father of two dogs and a cat
 -   Loves cycling and take pictures
--   Husband, father of dogs and a cat
 -   Researcher on Health Geography and Climate-Sensitive Diseases
 -   R developer
 
-## Academia
+## Academic formation
 
 -   BSc on [Geography]{.hl} (2007) and Specialization on Statistics (2009). *Regionalization proposal based on Census data.*
 -   Master's on [Public Health]{.hl} (2017). *Spatio-temporal models to study the relationship between traffic violence and income.*
 -   Doctorate on [Health Information]{.hl} (Fiocruz, 2021). *Applications of Data Science methods on Public Health.*
 -   Final year of a postdoc position at Inria. [*Machine Learning*]{.hl} *methods application on Dengue forecast*.
 
+# Previous research activities
+
 ## Main fields of work and projects
 
--   [Data gathering]{.hl}: R packages to handle Brazilian health datasets, indicators, and climate data (self initiative)
+-   [Data Science]{.hl} methods applied to [Public Health]{.hl} challenges
+
+-   [Data]{.hl}: R packages to handle Brazilian health datasets, indicators, and climate data (self initiative)
 
 `{microdatasus}`, `{brpop}`, `{tidyrates}`, `{brclimr}`
 
@@ -56,28 +60,13 @@ revealjs-plugins:
 
 ## COVID-19 Monitoring
 
--   Fiocruz official institutional dashboard for the pandemics
+-   Fiocruz official [institutional dashboard]{.hl} for the pandemics
 -   More than 10 data sources covering diverse aspects
 -   Data gathering, harmonization, visualization and analysis
--   Challenges on data availability, standardization, and information communication
--   Daily work basis, high press demand for data and insights
+-   [Challenges]{.hl} on data availability, standardization, and information communication
+-   [Daily work basis]{.hl}, high press demand for data and insights
 -   Several technical notes, papers and a book chapter
--   Project awarded an government prize
-
-## Research on Health and Climate indicators
-
-::: columns
-::: {.column width="60%"}
--   Standardized methodology to build health and climate indicators
--   Same time and spatial units (administrative regions)
--   Method of zonal statistics
--   Publication at [Environmental Data Science journal (2024)](https://doi.org/10.1017/eds.2024.3)
-:::
-
-::: {.column width="40%"}
-![](images/zonal_statistics.png) ![](images/prec_map_1.png)
-:::
-:::
+-   Project awarded an [government prize]{.hl}
 
 ## Postdoc project
 
@@ -87,13 +76,35 @@ revealjs-plugins:
 -   Project for [dengue incidence forecast]{.hl} on Brazil with machine learning methods
 -   Novel subsets approach, cluster based models with better performance
 
+# Development research project
+
+## Research interface and working axis
+
+![](images/clipboard-1554558249.png){fig-align="center"}
+
 ## Research plans for the next years
 
 -   Application of Data Science methods to Public Health challenges on the Global South
 -   Streamline [health and climate indicators]{.hl} projects, expansion to other countries and continents
 -   Usage of Machine Learning methods for data analysis and forecast, [Early Warning Systems]{.hl}
 
-## Health and climate indicators harmonization
+## Axis 1. Data and indicators
+
+::: columns
+::: {.column width="60%"}
+-   Standardized methodology to build [health and climate indicators]{.hl}
+-   Adoption of common time and spatial units (administrative regions)
+-   Application of zonal statistics
+-   Publication at [Environmental Data Science journal (2024)](https://doi.org/10.1017/eds.2024.3)
+:::
+
+::: {.column width="40%"}
+![](images/zonal_statistics.png) ![](images/prec_map_1.png)
+:::
+:::
+
+
+## Health and climate indicators
 
 -   Provide [regularly updated datasets]{.hl} of health and climate indicators at different hierarchical administrative geographic boundaries
 -   Expand coverage to other countries
@@ -101,15 +112,15 @@ revealjs-plugins:
 -   Build synthetic indicators for water cycle and droughts, warm and cold spells, and extreme events
 -   Work close with the ClimatSuds project
 
-## Early Warning System for Climate-Sensitive Diseases
+## Axis 2. Early Warning System for Climate-Sensitive Diseases
 
--   Framework proposal to prevent and early detect CSD outbreaks on Global South countries, with most vulnerable populations to climate change
+-   Framework proposal to prevent and early detect CSD outbreaks on Global South countries, with [most vulnerable populations to climate change]{.hl}
 -   Actual EWS are limited on countries coverage, quality, interpretation and usage for decision making
 -   Aligned with WHO guidelines, replicable in other countries
 
 ## Early Warning System for Climate-Sensitive Diseases
 
--   Multivariate models with climate, environmental and socio-economic predictors
+-   [Multivariate models]{.hl} with climate, environmental and socio-economic predictors
 -   Traditional and machine learning methods to forecast incidence for short and medium-time horizons (ARIMA, random forest, XGBoost, LSTM...)
 -   Subsets models to boost performance
 -   Continuous model monitoring and update (MLOps)
@@ -118,6 +129,14 @@ revealjs-plugins:
 
 -   Lay an EWS framework adaptive to other regions' contexts and society priorities
 -   Close work with health managers and civil society representatives for project usage and tools appropriation
+
+## Axis 2. Healthcare access research
+
+-   Study the healthcare access [networks]{.hl}
+-   Observation of empirical data on the patients address and healthcare unit location
+-   Adaptation of [Social Network Analysis (SNA)]{.hl} methods
+-   Addresses are [nodes]{.hl}, healthcare events are [links]{.hl}
+-   Metrics of [centrality]{.hl} of healthcare units, simulations on the effect of units creation and closing
 
 ## Integration with IRD
 
@@ -131,5 +150,3 @@ revealjs-plugins:
 More information about me and projects at
 
 [rfsaldanha.github.io](https://rfsaldanha.github.io)
-
-rfsaldanha\@gmail.com
