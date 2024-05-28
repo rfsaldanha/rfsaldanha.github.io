@@ -949,7 +949,7 @@
     "href": "talks.html",
     "title": "Talks",
     "section": "",
-    "text": "Subset Models for Multivariate Time Series Forecast\n\n\n1st MulTiSA, ICDE 2024\n\n\n\nsubsets\n\n\nmachine learning\n\n\n\nPresentation at 1st MulTiSA workshop, ICDE 2024 conference.\n\n\n\n\n\nMay 13, 2024\n\n\nRaphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, Patrick Valduriez, Fabio Porto\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modeling\n\n\nAn application case for Brazil\n\n\n\nbrclim\n\n\n\nTalk at the Inria Zenith’s Team Seminar.\n\n\n\n\n\nMar 21, 2024\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nBILIS\n\n\nAn unified indicators database\n\n\n\nbilis\n\n\n\nTalk at the Climate and Health for Health Situation Studies Workshop, IRD.\n\n\n\n\n\nDec 18, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modelling\n\n\nAn application case for Brazil\n\n\n\nbrclim\n\n\n\nTalk at the Climate and Health for Health Situation Studies Workshop, IRD.\n\n\n\n\n\nDec 18, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modelling\n\n\nAn application case for Brazil\n\n\n\nisntd\n\n\nclimate\n\n\ndata\n\n\n\nTalk at the ISNTD Climate & Health Conference, Global Health Resilience panel\n\n\n\n\n\nNov 22, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Advances in climate features engineering and subsets modeling\n\n\nfor Dengue forecasting\n\n\n\nbrclim\n\n\n\nTalk at the HPDaSc Workshop on Data Driven Science.\n\n\n\n\n\nMay 31, 2024\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nSubset Models for Multivariate Time Series Forecast\n\n\n1st MulTiSA, ICDE 2024\n\n\n\nsubsets\n\n\nmachine learning\n\n\n\nPresentation at 1st MulTiSA workshop, ICDE 2024 conference.\n\n\n\n\n\nMay 13, 2024\n\n\nRaphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, Patrick Valduriez, Fabio Porto\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modeling\n\n\nAn application case for Brazil\n\n\n\nbrclim\n\n\n\nTalk at the Inria Zenith’s Team Seminar.\n\n\n\n\n\nMar 21, 2024\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nBILIS\n\n\nAn unified indicators database\n\n\n\nbilis\n\n\n\nTalk at the Climate and Health for Health Situation Studies Workshop, IRD.\n\n\n\n\n\nDec 18, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modelling\n\n\nAn application case for Brazil\n\n\n\nbrclim\n\n\n\nTalk at the Climate and Health for Health Situation Studies Workshop, IRD.\n\n\n\n\n\nDec 18, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modelling\n\n\nAn application case for Brazil\n\n\n\nisntd\n\n\nclimate\n\n\ndata\n\n\n\nTalk at the ISNTD Climate & Health Conference, Global Health Resilience panel\n\n\n\n\n\nNov 22, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "projects/sauders.html",
@@ -2189,5 +2189,229 @@
     "title": "Univariate and multivariate time series clustering",
     "section": "Session info",
     "text": "Session info\n\nsessionInfo()\n\nR version 4.2.0 (2022-04-22)\nPlatform: aarch64-apple-darwin20 (64-bit)\nRunning under: macOS 14.0\n\nMatrix products: default\nBLAS:   /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/lib/libRblas.0.dylib\nLAPACK: /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/lib/libRlapack.dylib\n\nRandom number generation:\n RNG:     L'Ecuyer-CMRG \n Normal:  Inversion \n Sample:  Rejection \n \nlocale:\n[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nother attached packages:\n [1] sf_1.0-14       geobr_1.8.1     dtwclust_5.5.12 dtw_1.23-1     \n [5] proxy_0.4-27    arrow_13.0.0.1  timetk_2.9.0    ggplot2_3.4.4  \n [9] dplyr_1.1.3     tidyr_1.3.0    \n\nloaded via a namespace (and not attached):\n  [1] xts_0.13.1          lubridate_1.9.3     bit64_4.0.5        \n  [4] httr_1.4.7          DiceDesign_1.9      tools_4.2.0        \n  [7] utf8_1.2.4          R6_2.5.1            KernSmooth_2.23-22 \n [10] rpart_4.1.21        DBI_1.1.3           colorspace_2.1-0   \n [13] yardstick_1.2.0     nnet_7.3-19         withr_2.5.2        \n [16] tidyselect_1.2.0    curl_5.1.0          bit_4.0.5          \n [19] compiler_4.2.0      flexclust_1.4-1     cli_3.6.1          \n [22] shinyjs_2.1.0       labeling_0.4.3      scales_1.2.1       \n [25] classInt_0.4-10     tune_1.1.2          stringr_1.5.0      \n [28] digest_0.6.33       rmarkdown_2.25      pkgconfig_2.0.3    \n [31] htmltools_0.5.7     parallelly_1.36.0   lhs_1.1.6          \n [34] fastmap_1.1.1       htmlwidgets_1.6.2   rlang_1.1.2        \n [37] rstudioapi_0.15.0   shiny_1.7.5.1       farver_2.1.1       \n [40] generics_0.1.3      zoo_1.8-12          jsonlite_1.8.7     \n [43] magrittr_2.0.3      modeltools_0.2-23   Matrix_1.5-4.1     \n [46] Rcpp_1.0.11         munsell_0.5.0       fansi_1.0.5        \n [49] GPfit_1.0-8         lifecycle_1.0.4     furrr_0.3.1        \n [52] stringi_1.8.1       yaml_2.3.7          MASS_7.3-60        \n [55] plyr_1.8.9          recipes_1.0.8       grid_4.2.0         \n [58] parallel_4.2.0      listenv_0.9.0       promises_1.2.1     \n [61] ggrepel_0.9.4       lattice_0.22-5      splines_4.2.0      \n [64] knitr_1.45          pillar_1.9.0        dials_1.2.0        \n [67] future.apply_1.11.0 reshape2_1.4.4      codetools_0.2-19   \n [70] parsnip_1.1.1       stats4_4.2.0        glue_1.6.2         \n [73] evaluate_0.23       rsample_1.2.0       data.table_1.14.8  \n [76] RcppParallel_5.1.7  vctrs_0.6.4         httpuv_1.6.12      \n [79] foreach_1.5.2       gtable_0.3.4        purrr_1.0.2        \n [82] clue_0.3-65         future_1.33.0       assertthat_0.2.1   \n [85] xfun_0.41           gower_1.0.1         mime_0.12          \n [88] prodlim_2023.08.28  xtable_1.8-4        e1071_1.7-13       \n [91] RSpectra_0.16-1     later_1.3.1         class_7.3-22       \n [94] survival_3.5-7      timeDate_4022.108   tibble_3.2.1       \n [97] iterators_1.0.14    hardhat_1.3.0       units_0.8-4        \n[100] cluster_2.1.4       lava_1.7.3          workflows_1.1.3    \n[103] timechange_0.2.0    globals_0.16.2      ellipsis_0.3.2     \n[106] ipred_0.9-14"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#introduction",
+    "href": "talks/hpdasc_workshop_2024.html#introduction",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Introduction",
+    "text": "Introduction\n\nPostdoctoral researcher at Inria, Zenith team\nMaster’s at Public Health, Doctorate on Health Information\nData Science applied to Public Health"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#climate-sensitive-diseases",
+    "href": "talks/hpdasc_workshop_2024.html#climate-sensitive-diseases",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Climate sensitive diseases",
+    "text": "Climate sensitive diseases\n\nDirect relationship: floods, droughts, heat waves…\nIndirect relationship\n\n\n\n\n\n\n%%{\n  init: {\n    'theme': 'base',\n    'themeVariables': {\n      'fontSize': '30px'\n    }\n  }\n}%%\nflowchart LR\n\nclimate(Climate) --&gt; vector(Disease vectors) --&gt; health(Human health)\nclimate --&gt; health\nclimate --&gt; social(Social & economic \\n determinants) --&gt; health"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#a-time-lagged-relationship",
+    "href": "talks/hpdasc_workshop_2024.html#a-time-lagged-relationship",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "A time-lagged relationship",
+    "text": "A time-lagged relationship\n\n\n\nVector life cycle from a time perspective\nClimate conditions from the past leads to the disease incidence of tomorrow"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#climate-data",
+    "href": "talks/hpdasc_workshop_2024.html#climate-data",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Climate data",
+    "text": "Climate data\n\n\n\nData sources\n\nIn situ: Weather stations, rain gauges\nRemote: Satellites, drones\n\n\nData products\n\nStatistical surface interpolations\nModel reanalysis"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#era5-land-reanalysis",
+    "href": "talks/hpdasc_workshop_2024.html#era5-land-reanalysis",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "ERA5-Land reanalysis",
+    "text": "ERA5-Land reanalysis\n\n\n\nCopernicus, ECMWF\nGlobal coverage\nHourly data\n1950 to the present (one week delay)\nSpatial resolution ~9km\nSeveral climate indicators"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#data-structures",
+    "href": "talks/hpdasc_workshop_2024.html#data-structures",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Data structures",
+    "text": "Data structures\n\nClimate indicators: grid data\nDisease incidence: tabular, individual cases aggregated by spatial regions and time spans"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#fusioning-data",
+    "href": "talks/hpdasc_workshop_2024.html#fusioning-data",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Fusioning data",
+    "text": "Fusioning data"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#case-example",
+    "href": "talks/hpdasc_workshop_2024.html#case-example",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Case example",
+    "text": "Case example\nZonal Statistics of Climate Indicators from ERA5-Land for Brazilian Municipalities\n\n\n8 climate indicators: maximum, minimum and average temperature, total precipitation, surface pressure, dewpoint, \\(u\\) and \\(v\\) components of wind\n\n6 zonal statistics computation for the 5,570 Brazilian municipalities\n\nMinimum, maximum, average, sum, standard deviation, cell count\n\n\n\nTime coverage: 1950-2022, daily data"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#workflow",
+    "href": "talks/hpdasc_workshop_2024.html#workflow",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Workflow",
+    "text": "Workflow\n\n\n\n\n\n%%{\n  init: {\n    'theme': 'base',\n    'themeVariables': {\n      'fontSize': '30px'\n    }\n  }\n}%%\nflowchart TD\n\nera5(ERA5-Land \\n indicators) --&gt; hdata(Hourly data)\nbb(Latin America \\n bounding box) --&gt; hdata\n\nhdata --&gt; agg(Aggregation to \\n daily data)\n\nagg --&gt; mun(Municipal boundaries)\nmun --&gt; zs(Zonal statistics)"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#era5-land-daily-datasets",
+    "href": "talks/hpdasc_workshop_2024.html#era5-land-daily-datasets",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "ERA5-Land Daily datasets",
+    "text": "ERA5-Land Daily datasets\n\n\n\nOpen data, available at Zenodo\n7,105 files, 658.7 GB\nReproducible R scripts\nPlans to continuously update this dataset and add more indicators\n\n\n\n\n\n\n\n\nhttps://rfsaldanha.github.io/data-projects/era5land-daily-latin-america.html"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#zonal-statistics",
+    "href": "talks/hpdasc_workshop_2024.html#zonal-statistics",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Zonal statistics",
+    "text": "Zonal statistics"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#section",
+    "href": "talks/hpdasc_workshop_2024.html#section",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "",
+    "text": "Thanks"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#temperature",
+    "href": "talks/hpdasc_workshop_2024.html#temperature",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Temperature",
+    "text": "Temperature"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#precipitation",
+    "href": "talks/hpdasc_workshop_2024.html#precipitation",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Precipitation",
+    "text": "Precipitation\n\n\n\n\n\n\n\n\n\n\n\n\n\nRio de Janeiro municipalities. January 1, 2010."
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#angra-dos-reis",
+    "href": "talks/hpdasc_workshop_2024.html#angra-dos-reis",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Angra dos Reis",
+    "text": "Angra dos Reis"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#resolution-and-spatial-variability",
+    "href": "talks/hpdasc_workshop_2024.html#resolution-and-spatial-variability",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Resolution and spatial variability",
+    "text": "Resolution and spatial variability\n\n\n\nBrazilian municipalities size variation\n\nAltamira (PA): 159,533 km2\nSanta Cruz de Minas (MG): 3 km2\n\n\nERA5-Land cell: ~ 100 km2"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#published-paper",
+    "href": "talks/hpdasc_workshop_2024.html#published-paper",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Published paper",
+    "text": "Published paper\n\n\n\nEnvironmental Data Science journal\nPublished on February 8, 2024\nJournal’s most read paper of the month\nMore than 9,000 datasets downloads on Zenodo so far"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#brclimr-r-package",
+    "href": "talks/hpdasc_workshop_2024.html#brclimr-r-package",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "brclimr R package",
+    "text": "brclimr R package\n\n\n\n\nPackage to retrieve climate data of Brazilian municipalities\nQuery remote parquet files stored on a S3 system\nAvoid huge dataset downloads when user wants only a subset of the data\nAvailable on CRAN. More than 3,000 downloads\n\n\nbrclimr::fetch_data(\n    code_muni = 3304557,\n    product = \"brdwgd\",\n    indicator = \"rh\",\n    statistics = \"mean\",\n    date_start = as.Date(\"2010-10-15\"),\n    date_end = as.Date(\"2010-10-20\")\n  )"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#usage",
+    "href": "talks/hpdasc_workshop_2024.html#usage",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Usage",
+    "text": "Usage\n\n\n\nTraining multivariate machine learning models to forecast dengue incidence in Brazil with a subsets strategy\n\n\n\\[\n{\\small\n\\begin{aligned}        D_t = \\mu + & \\theta_1 D_{t-1} + \\cdots + \\theta_p D_{t-p} + \\\\        & \\lambda_1 C_{t-1} + \\cdots + \\lambda_p C_{t-p} + \\\\         & \\varepsilon_1 e_{t-1} + \\cdots + \\varepsilon_p e_{t-p}    \\end{aligned}}\n\\]\n\nCluster municipalities based on dengue spread and climate regimes\nTrain different models for each partition\n\n\n\nAccepted paper on ICDE2024, Multivariate Time Series Analytics workshop"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#next-steps",
+    "href": "talks/hpdasc_workshop_2024.html#next-steps",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Next steps…",
+    "text": "Next steps…\n\n\n\nContinuous update\nHuman settlements, population-weighted zonal statistics\nCompute climate time-series features: heat waves, persistent rains, etc.\nAdopt climate products with finer resolutions when possible (CHIRPS)\nExpand results to other countries"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#section-1",
+    "href": "talks/hpdasc_workshop_2024.html#section-1",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "",
+    "text": "Thanks"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#backup-slides",
+    "href": "talks/hpdasc_workshop_2024.html#backup-slides",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Backup slides",
+    "text": "Backup slides"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#climate-reanalysis",
+    "href": "talks/hpdasc_workshop_2024.html#climate-reanalysis",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Climate reanalysis",
+    "text": "Climate reanalysis"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#era5-land-hourly-to-daily-aggregation",
+    "href": "talks/hpdasc_workshop_2024.html#era5-land-hourly-to-daily-aggregation",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "ERA5-Land hourly to daily aggregation",
+    "text": "ERA5-Land hourly to daily aggregation\n\nUsage of {KrigR} package to access the Copernicus Climate Data Store API, crop data at server side, download and perform the time aggregation.\n\n\ndownload_ERA(Variable = \"2m_temperature\", DataSet = \"era5-land\", \n             DateStart = \"2022-12-01\", DateStop = \"2022-12-31\",\n             TResolution = \"day\", TStep = 1,\n             FUN = \"max\",\n             Extent = extent(c(-118.47,-34.1,-56.65, 33.28)), \n             Dir = \"dir_name\", FileName = \"file_name.nc\", \n             API_User = \"api_user\", API_Key = \"api_key\")\n\n\nTook ~15 days to download and process the data from 8 climate indicators covering the Latin America region"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#computation",
+    "href": "talks/hpdasc_workshop_2024.html#computation",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Computation",
+    "text": "Computation\n\nZonal statistics weighted by the fraction of the cell that is covered, with the {exactextractr} package\n\n\nexact_extract(\n  x = rst,\n  y = pol,\n  fun = \"mean\"\n)"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#results",
+    "href": "talks/hpdasc_workshop_2024.html#results",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Results",
+    "text": "Results\n\n\n\n\n\n\n\nERA5-Land indicators\nDaily time-aggregating functions\nSpatial zonal statistics\n\n\n\nTemperature (2m)\nmean, max, min\nmax, min, stdev, count\n\n\nDewpoint temp. (2m)\nmean\nmax, min, stdev, count\n\n\n\n\\(u\\) component of wind\nmean\nmax, min, stdev, count\n\n\n\n\\(v\\) component of wind\nmean\nmax, min, stdev, count\n\n\nSurface pressure\nmean\nmax, min, stdev, count\n\n\nTotal precipitation\nsum\nmax, min, stdev, count, sum"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#contexto-of-climate-sensitive-diseases",
+    "href": "talks/hpdasc_workshop_2024.html#contexto-of-climate-sensitive-diseases",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Contexto of Climate-Sensitive diseases",
+    "text": "Contexto of Climate-Sensitive diseases\n\nDirect relationship: floods, droughts, heat waves…\nIndirect relationship\n\n\n\n\n\n\n%%{\n  init: {\n    'theme': 'base',\n    'themeVariables': {\n      'fontSize': '30px'\n    }\n  }\n}%%\nflowchart LR\n\nclimate(Climate) --&gt; vector(Disease vectors) --&gt; health(Human health)\nclimate --&gt; health\nclimate --&gt; social(Social & economic \\n determinants) --&gt; health"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#context-of-climate-sensitive-diseases",
+    "href": "talks/hpdasc_workshop_2024.html#context-of-climate-sensitive-diseases",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Context of Climate-Sensitive diseases",
+    "text": "Context of Climate-Sensitive diseases\n\nDirect relationship: floods, droughts, heat waves…\nIndirect relationship\n\n\n\n\n\n\n%%{\n  init: {\n    'theme': 'base',\n    'themeVariables': {\n      'fontSize': '30px'\n    }\n  }\n}%%\nflowchart LR\n\nclimate(Climate) --&gt; vector(Disease vectors) --&gt; health(Human health)\nclimate --&gt; health\nclimate --&gt; social(Social & economic \\n determinants) --&gt; health"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#challenge-on-data-structures",
+    "href": "talks/hpdasc_workshop_2024.html#challenge-on-data-structures",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Challenge on data structures",
+    "text": "Challenge on data structures\n\nClimate indicators: grid data\nDisease incidence: tabular, individual cases aggregated by spatial regions and time spans"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#data-fusioning",
+    "href": "talks/hpdasc_workshop_2024.html#data-fusioning",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Data fusioning",
+    "text": "Data fusioning"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#zonal-statistics-1",
+    "href": "talks/hpdasc_workshop_2024.html#zonal-statistics-1",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Zonal statistics",
+    "text": "Zonal statistics\n\n\n\nChallenges to handle the amount of data and computational tasks\n\nStrategy\n\nGroup the tasks into chunks and compute in parallel\n\nDAG (Directed-Acyclic Graph) approach to orchestrate computation, with the {targets} package\nSave results into columnar-oriented databases for fast data retrieval (duckdb and parquet)"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#resulting-products",
+    "href": "talks/hpdasc_workshop_2024.html#resulting-products",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Resulting products",
+    "text": "Resulting products\n\n\n\nERA5-Land daily datasets\n\n7,105 files, 658.7 GB\n24,242 downloads on Zenodo\n\n\nDaily zonal statistics of climate indicators\n\n8 selected indicators, 5,570 municipalities\n6,085,749,761 records covering 1950-2023"
   }
 ]
