@@ -22,7 +22,7 @@ For this reason, I created daily aggregates from some ERA5-Land indicators for s
 
 ## Methodology
 
-I developed an [R script](https://github.com/rfsaldanha/era5daily) using the KrigR package [@kusch2022]. The script downloads a set of indicators, starting on 1950, for a geographical bounding box covering  Africa (coordinates -47.11,71.01,34.88,71.38) and aggregates the data from hourly to daily, saving its results as NetCDF files. Each resulting file covers a year's month and presents data layers for each day of the respective month.
+I developed an [R script](https://github.com/rfsaldanha/era5daily) using the KrigR package [@kusch2022]. The script downloads a set of indicators, starting on 1950, for a geographical bounding box covering Africa (coordinates -47.11,71.01,34.88,71.38) and aggregates the data from hourly to daily, saving its results as NetCDF files. Each resulting file covers a year's month and presents data layers for each day of the respective month.
 
 The table bellow contains the time aggregation functions applied to each climate indicator.
 
@@ -37,10 +37,20 @@ The table bellow contains the time aggregation functions applied to each climate
 
 ## Datasets
 
-Data from 2000 to 2023 is ready to use and available on Zenodo. Data from 1950 to 1999 is being processed and will be made available soon.
+Data from 1990 to 2023 is ready to use and available on Zenodo. Data from 1950 to 1989 is being processed and will be made available soon.
 
 | Year | Zenodo deposit                                                                                                     |
-|------|--------------------------------------------------------------------------------------------------------------------|
+|----------------|--------------------------------------------------------|
+| 1990 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11388406-green.svg)](https://doi.org/10.5281/zenodo.11388406) |
+| 1991 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11388334-green.svg)](https://doi.org/10.5281/zenodo.11388334) |
+| 1992 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11387789-green.svg)](https://doi.org/10.5281/zenodo.11387789) |
+| 1993 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11387738-green.svg)](https://doi.org/10.5281/zenodo.11387738) |
+| 1994 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11387688-green.svg)](https://doi.org/10.5281/zenodo.11387688) |
+| 1995 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11387618-green.svg)](https://doi.org/10.5281/zenodo.11387618) |
+| 1996 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11387580-green.svg)](https://doi.org/10.5281/zenodo.11387580) |
+| 1997 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11387536-green.svg)](https://doi.org/10.5281/zenodo.11387536) |
+| 1998 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11387451-green.svg)](https://doi.org/10.5281/zenodo.11387451) |
+| 1999 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11387376-green.svg)](https://doi.org/10.5281/zenodo.11387376) |
 | 2000 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11235544-green.svg)](https://doi.org/10.5281/zenodo.11235544) |
 | 2001 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11234867-green.svg)](https://doi.org/10.5281/zenodo.11234867) |
 | 2002 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11234849-green.svg)](https://doi.org/10.5281/zenodo.11234849) |

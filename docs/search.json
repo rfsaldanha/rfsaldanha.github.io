@@ -655,7 +655,7 @@
     "href": "data-projects/era5land-daily-africa.html#datasets",
     "title": "ERA5-Land selected indicators daily aggregates for Africa",
     "section": "Datasets",
-    "text": "Datasets\nData from 2000 to 2023 is ready to use and available on Zenodo. Data from 1950 to 1999 is being processed and will be made available soon.\n\n\n\nYear\nZenodo deposit\n\n\n\n\n2000\n\n\n\n2001\n\n\n\n2002\n\n\n\n2003\n\n\n\n2004\n\n\n\n2005\n\n\n\n2006\n\n\n\n2007\n\n\n\n2008\n\n\n\n2009\n\n\n\n2010\n\n\n\n2011\n\n\n\n2012\n\n\n\n2013\n\n\n\n2014\n\n\n\n2015\n\n\n\n2016\n\n\n\n2017\n\n\n\n2018\n\n\n\n2019\n\n\n\n2020\n\n\n\n2021\n\n\n\n2022\n\n\n\n2023\n\n\n\n\n\nUsage statistics\n\nStatistics update: 2024-05-27 10:31:38\nViews: 1025\nDownloads: 10380"
+    "text": "Datasets\nData from 1990 to 2023 is ready to use and available on Zenodo. Data from 1950 to 1989 is being processed and will be made available soon.\n\n\n\nYear\nZenodo deposit\n\n\n\n\n1990\n\n\n\n1991\n\n\n\n1992\n\n\n\n1993\n\n\n\n1994\n\n\n\n1995\n\n\n\n1996\n\n\n\n1997\n\n\n\n1998\n\n\n\n1999\n\n\n\n2000\n\n\n\n2001\n\n\n\n2002\n\n\n\n2003\n\n\n\n2004\n\n\n\n2005\n\n\n\n2006\n\n\n\n2007\n\n\n\n2008\n\n\n\n2009\n\n\n\n2010\n\n\n\n2011\n\n\n\n2012\n\n\n\n2013\n\n\n\n2014\n\n\n\n2015\n\n\n\n2016\n\n\n\n2017\n\n\n\n2018\n\n\n\n2019\n\n\n\n2020\n\n\n\n2021\n\n\n\n2022\n\n\n\n2023\n\n\n\n\n\nUsage statistics\n\nStatistics update: 2024-05-29 17:12:47\nViews: 1122\nDownloads: 10495"
   },
   {
     "objectID": "photos/photos.html",
@@ -1368,8 +1368,8 @@
     "objectID": "talks/multisa_subsets_2024.html#introduction",
     "href": "talks/multisa_subsets_2024.html#introduction",
     "title": "Subset Models for Multivariate Time Series Forecast",
-    "section": "Introduction",
-    "text": "Introduction\n\nAbundant multivariate time series, good opportunity for forecasting machine learning methods\nData may present intrinsic diversity of samples, affecting model’s performance on different parts of the input\nGlobal models: use all available time series\nLocal models: use only time series pertaining to each sample\nData subsets models: our proposal"
+    "section": "",
+    "text": "Abundant multivariate time series, good opportunity for forecasting machine learning methods\nData may present intrinsic diversity of samples, affecting model’s performance on different parts of the input\nGlobal models: use all available time series\nLocal models: use only time series pertaining to each sample\nData subsets models: our proposal"
   },
   {
     "objectID": "talks/multisa_subsets_2024.html#case-example",
@@ -1726,7 +1726,7 @@
     "href": "data-projects/brazil-climate-zonal-indicators.html#zonal-era5-land",
     "title": "Zonal statististics of climate indicators for Brazilian municipalities",
     "section": "Zonal ERA5-Land",
-    "text": "Zonal ERA5-Land\n1950-2022: \n2023: \nThe ERA5-Land data (Muñoz-Sabater et al. 2021) presents hourly climate indicators at 0.1° × 0.1° horizontal resolution with global coverage, from 1950 to present.\nSelected indicators hourly data were downloaded and aggregated at daily basis to compute zonal statistics for the Brazilian municipalities.\nThe following indicators and aggregations were computed.\n\n\n\n\n\n\n\n\nERA5-Land indicators\nDaily time-aggregating functions\nSpatial zonal statistics\n\n\n\n\nTemperature (2m)\nmean, max, min\nmax, min, stdev, count\n\n\nDewpoint temp. (2m)\nmean\nmax, min, stdev, count\n\n\n\\(u\\) component of wind\nmean\nmax, min, stdev, count\n\n\n\\(v\\) component of wind\nmean\nmax, min, stdev, count\n\n\nSurface pressure\nmean\nmax, min, stdev, count\n\n\nTotal precipitation\nsum\nmax, min, stdev, count, sum\n\n\n\nA paper with the full methodology was published in the Environmental Data Science journal.\n\n\nUsage statistics\n\nDate: 2024-05-21 14:08:04\nViews: 607\nDownloads: 363\nTotal data volume: 1.40 TB"
+    "text": "Zonal ERA5-Land\n1950-2022: \n2023: \nThe ERA5-Land data (Muñoz-Sabater et al. 2021) presents hourly climate indicators at 0.1° × 0.1° horizontal resolution with global coverage, from 1950 to present.\nSelected indicators hourly data were downloaded and aggregated at daily basis to compute zonal statistics for the Brazilian municipalities.\nThe following indicators and aggregations were computed.\n\n\n\n\n\n\n\n\nERA5-Land indicators\nDaily time-aggregating functions\nSpatial zonal statistics\n\n\n\n\nTemperature (2m)\nmean, max, min\nmax, min, stdev, count\n\n\nDewpoint temp. (2m)\nmean\nmax, min, stdev, count\n\n\n\\(u\\) component of wind\nmean\nmax, min, stdev, count\n\n\n\\(v\\) component of wind\nmean\nmax, min, stdev, count\n\n\nSurface pressure\nmean\nmax, min, stdev, count\n\n\nTotal precipitation\nsum\nmax, min, stdev, count, sum\n\n\n\nA paper with the full methodology was published in the Environmental Data Science journal.\n\n\nUsage statistics\n\nDate: 2024-05-29 16:58:36\nViews: 630\nDownloads: 382\nTotal data volume: 1.50 TB"
   },
   {
     "objectID": "data-projects/brazil-climate-zonal-indicators.html#zonal-br-dwgd",
@@ -1761,7 +1761,7 @@
     "href": "data-projects/era5land-daily-latin-america.html#datasets",
     "title": "ERA5-Land selected indicators daily aggregates for Latin America",
     "section": "Datasets",
-    "text": "Datasets\nThe resulting NetCDF files are available for download at Zenodo.\n\n\n\nYear\nZenodo deposit\n\n\n\n\n1950\n\n\n\n1951\n\n\n\n1952\n\n\n\n1953\n\n\n\n1954\n\n\n\n1955\n\n\n\n1956\n\n\n\n1957\n\n\n\n1958\n\n\n\n1959\n\n\n\n1960\n\n\n\n1961\n\n\n\n1962\n\n\n\n1963\n\n\n\n1964\n\n\n\n1965\n\n\n\n1966\n\n\n\n1967\n\n\n\n1968\n\n\n\n1969\n\n\n\n1970\n\n\n\n1971\n\n\n\n1972\n\n\n\n1973\n\n\n\n1974\n\n\n\n1975\n\n\n\n1976\n\n\n\n1977\n\n\n\n1978\n\n\n\n1979\n\n\n\n1980\n\n\n\n1981\n\n\n\n1982\n\n\n\n1983\n\n\n\n1984\n\n\n\n1985\n\n\n\n1986\n\n\n\n1987\n\n\n\n1988\n\n\n\n1989\n\n\n\n1990\n\n\n\n1991\n\n\n\n1992\n\n\n\n1993\n\n\n\n1994\n\n\n\n1995\n\n\n\n1996\n\n\n\n1997\n\n\n\n1998\n\n\n\n1999\n\n\n\n2000\n\n\n\n2001\n\n\n\n2002\n\n\n\n2003\n\n\n\n2004\n\n\n\n2005\n\n\n\n2006\n\n\n\n2007\n\n\n\n2008\n\n\n\n2009\n\n\n\n2010\n\n\n\n2011\n\n\n\n2012\n\n\n\n2013\n\n\n\n2014\n\n\n\n2015\n\n\n\n2016\n\n\n\n2017\n\n\n\n2018\n\n\n\n2019\n\n\n\n2020\n\n\n\n2021\n\n\n\n2022\n\n\n\n2023\n\n\n\n\n\nUsage statistics\n\nStatistics update: 2024-05-27 10:46:19\nViews: 6939\nDownloads: 24242"
+    "text": "Datasets\nThe resulting NetCDF files are available for download at Zenodo.\n\n\n\nYear\nZenodo deposit\n\n\n\n\n1950\n\n\n\n1951\n\n\n\n1952\n\n\n\n1953\n\n\n\n1954\n\n\n\n1955\n\n\n\n1956\n\n\n\n1957\n\n\n\n1958\n\n\n\n1959\n\n\n\n1960\n\n\n\n1961\n\n\n\n1962\n\n\n\n1963\n\n\n\n1964\n\n\n\n1965\n\n\n\n1966\n\n\n\n1967\n\n\n\n1968\n\n\n\n1969\n\n\n\n1970\n\n\n\n1971\n\n\n\n1972\n\n\n\n1973\n\n\n\n1974\n\n\n\n1975\n\n\n\n1976\n\n\n\n1977\n\n\n\n1978\n\n\n\n1979\n\n\n\n1980\n\n\n\n1981\n\n\n\n1982\n\n\n\n1983\n\n\n\n1984\n\n\n\n1985\n\n\n\n1986\n\n\n\n1987\n\n\n\n1988\n\n\n\n1989\n\n\n\n1990\n\n\n\n1991\n\n\n\n1992\n\n\n\n1993\n\n\n\n1994\n\n\n\n1995\n\n\n\n1996\n\n\n\n1997\n\n\n\n1998\n\n\n\n1999\n\n\n\n2000\n\n\n\n2001\n\n\n\n2002\n\n\n\n2003\n\n\n\n2004\n\n\n\n2005\n\n\n\n2006\n\n\n\n2007\n\n\n\n2008\n\n\n\n2009\n\n\n\n2010\n\n\n\n2011\n\n\n\n2012\n\n\n\n2013\n\n\n\n2014\n\n\n\n2015\n\n\n\n2016\n\n\n\n2017\n\n\n\n2018\n\n\n\n2019\n\n\n\n2020\n\n\n\n2021\n\n\n\n2022\n\n\n\n2023\n\n\n\n\n\nUsage statistics\n\nStatistics update: 2024-05-29 17:26:54\nViews: 7203\nDownloads: 25969"
   },
   {
     "objectID": "data-projects/health_indicators/indi_0002.html",
@@ -2476,5 +2476,12 @@
     "title": "Advances in climate features engineering and subsets modeling",
     "section": "Publications & Products",
     "text": "Publications & Products\n\n\n\nPaper on Environmental Data Science journal (Saldanha et al. 2024)\nDatasets on Zenodo: more than 34,000 downloads\nbrclimr package to retrieve climate data of Brazilian municipalities, Almost 4,000 downloads on CRAN."
+  },
+  {
+    "objectID": "talks/multisa_subsets_2024.html",
+    "href": "talks/multisa_subsets_2024.html",
+    "title": "Subset Models for Multivariate Time Series Forecast",
+    "section": "",
+    "text": "Abundant multivariate time series, good opportunity for forecasting machine learning methods\nData may present intrinsic diversity of samples, affecting model’s performance on different parts of the input\nGlobal models: use all available time series\nLocal models: use only time series pertaining to each sample\nData subsets models: our proposal"
   }
 ]
