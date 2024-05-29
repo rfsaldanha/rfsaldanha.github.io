@@ -2244,7 +2244,7 @@
     "href": "talks/hpdasc_workshop_2024.html#case-example",
     "title": "Advances in climate features engineering and subsets modeling",
     "section": "Case example",
-    "text": "Case example\nZonal Statistics of Climate Indicators from ERA5-Land for Brazilian Municipalities\n\n\n8 climate indicators: maximum, minimum and average temperature, total precipitation, surface pressure, dewpoint, \\(u\\) and \\(v\\) components of wind\n\n6 zonal statistics computation for the 5,570 Brazilian municipalities\n\nMinimum, maximum, average, sum, standard deviation, cell count\n\n\n\nTime coverage: 1950-2022, daily data"
+    "text": "Case example\n\nDengue disease is transmitted by mosquitoes and is a Public Health concern. Record number cases on 2024 in Brazil, tendency to increase with global warming\nA typical forecasting model is targeted to predict number of cases based on climate indicators (rain and temperature)\nA global model would use data from all municipalities, facing difficulties related to distinct temporal and spatial disease transmission patterns"
   },
   {
     "objectID": "talks/hpdasc_workshop_2024.html#workflow",
@@ -2286,7 +2286,7 @@
     "href": "talks/hpdasc_workshop_2024.html#precipitation",
     "title": "Advances in climate features engineering and subsets modeling",
     "section": "Precipitation",
-    "text": "Precipitation\n\n\n\n\n\n\n\n\n\n\n\n\n\nRio de Janeiro municipalities. January 1, 2010."
+    "text": "Precipitation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRio de Janeiro municipalities. January 1, 2010."
   },
   {
     "objectID": "talks/hpdasc_workshop_2024.html#angra-dos-reis",
@@ -2314,7 +2314,7 @@
     "href": "talks/hpdasc_workshop_2024.html#brclimr-r-package",
     "title": "Advances in climate features engineering and subsets modeling",
     "section": "brclimr R package",
-    "text": "brclimr R package\n\n\n\n\nPackage to retrieve climate data of Brazilian municipalities\nQuery remote parquet files stored on a S3 system\nAvoid huge dataset downloads when user wants only a subset of the data\nAvailable on CRAN. More than 3,000 downloads\n\n\nbrclimr::fetch_data(\n    code_muni = 3304557,\n    product = \"brdwgd\",\n    indicator = \"rh\",\n    statistics = \"mean\",\n    date_start = as.Date(\"2010-10-15\"),\n    date_end = as.Date(\"2010-10-20\")\n  )"
+    "text": "brclimr R package\n\n\n\n\nPackage to retrieve climate data of Brazilian municipalities\nQuery remote parquet files stored on a S3 system\nAvoid huge dataset downloads when user wants only a subset of the data\nAvailable on CRAN. Almost 4,000 downloads\n\n\nbrclimr::fetch_data(\n    code_muni = 3304557,\n    product = \"brdwgd\",\n    indicator = \"rh\",\n    statistics = \"mean\",\n    date_start = as.Date(\"2010-10-15\"),\n    date_end = as.Date(\"2010-10-20\")\n  )"
   },
   {
     "objectID": "talks/hpdasc_workshop_2024.html#usage",
@@ -2412,6 +2412,69 @@
     "href": "talks/hpdasc_workshop_2024.html#resulting-products",
     "title": "Advances in climate features engineering and subsets modeling",
     "section": "Resulting products",
-    "text": "Resulting products\n\n\n\nERA5-Land daily datasets\n\n7,105 files, 658.7 GB\n24,242 downloads on Zenodo\n\n\nDaily zonal statistics of climate indicators\n\n8 selected indicators, 5,570 municipalities\n6,085,749,761 records covering 1950-2023"
+    "text": "Resulting products\n\n\n\nERA5-Land daily datasets\n\n7,105 files, 658.7 GB\n24,242 downloads on Zenodo\n\nDaily zonal statistics of climate indicators\n\n8 selected indicators, 5,570 municipalities\n6,085,749,761 records covering 1950-2023"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#subset-models",
+    "href": "talks/hpdasc_workshop_2024.html#subset-models",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Subset models",
+    "text": "Subset models\n\n\n\nTraining multivariate machine learning models to forecast dengue incidence in Brazil with a subsets strategy\n\n\n\\[\n{\\small\n\\begin{aligned}        D_t = \\mu + & \\theta_1 D_{t-1} + \\cdots + \\theta_p D_{t-p} + \\\\        & \\lambda_1 C_{t-1} + \\cdots + \\lambda_p C_{t-p} + \\\\         & \\varepsilon_1 e_{t-1} + \\cdots + \\varepsilon_p e_{t-p}    \\end{aligned}}\n\\]\n\nCluster municipalities based on dengue spread and climate regimes\nTrain different models for each partition\n\n\n\nAccepted paper on ICDE2024, Multivariate Time Series Analytics workshop"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#subset-models-for-multivariate-time-series-forecast",
+    "href": "talks/hpdasc_workshop_2024.html#subset-models-for-multivariate-time-series-forecast",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Subset models for multivariate time series forecast",
+    "text": "Subset models for multivariate time series forecast\n\n\n\nData may present intrinsic diversity of samples, affecting model’s performance on different parts of the input\nGlobal models: use all available time series\nLocal models: use only time series pertaining to each sample\nData subsets models: our proposal\n\n\n\nPaper on ICDE2024, Multivariate Time Series Analytics workshop"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#section-4",
+    "href": "talks/hpdasc_workshop_2024.html#section-4",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "",
+    "text": "Thanks"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#experimental-setup",
+    "href": "talks/hpdasc_workshop_2024.html#experimental-setup",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Experimental setup",
+    "text": "Experimental setup\n\nIdentify data subsets considering dengue cases and covariates patterns across municipalities with DTW distance.\n\nSelect the optimum number of subsets (\\(k\\)) considering silhouette score\n\nTrain random forest Global Model with and without the subset id feature information\nTrain random forest Subsets Models\nEvaluate forecasting model’s performance on test data"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#clustering-results",
+    "href": "talks/hpdasc_workshop_2024.html#clustering-results",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Clustering results",
+    "text": "Clustering results\n\n\n\n\\(k = 5\\) returned the highest silhouette score\nPartition sizes: \\(g_1 = 69\\), \\(g_2 = 62\\), \\(g_3 = 82\\), \\(g_4 = 102\\), \\(g_5 = 18\\)"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#model-results",
+    "href": "talks/hpdasc_workshop_2024.html#model-results",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Model results",
+    "text": "Model results"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#conclusions-and-next-steps",
+    "href": "talks/hpdasc_workshop_2024.html#conclusions-and-next-steps",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Conclusions and next steps",
+    "text": "Conclusions and next steps\n\nSubsets models rendered better performance than global models on 116 municipalities from 333 (34.83%)\nSubsets models overall performance is related to the partition’s size. Bigger partitions (more municipalities) have more training data.\nWe are working on different clustering strategies (constraints in size and featured-based approaches) and apply different learners on model training"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#products",
+    "href": "talks/hpdasc_workshop_2024.html#products",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Products",
+    "text": "Products\n\n\n\nEnvironmental Data Science journal\nPublished on February 8, 2024\nJournal’s most read paper of the month\nMore than 9,000 datasets downloads on Zenodo so far"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#publications-products",
+    "href": "talks/hpdasc_workshop_2024.html#publications-products",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Publications & Products",
+    "text": "Publications & Products\n\n\n\nPaper on Environmental Data Science journal (Saldanha et al. 2024)\nDatasets on Zenodo: more than 34,000 downloads\nbrclimr package to retrieve climate data of Brazilian municipalities, Almost 4,000 downloads on CRAN."
   }
 ]

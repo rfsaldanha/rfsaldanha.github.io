@@ -8,18 +8,18 @@
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.24">
-<meta name="author" content="Raphael Saldanha">
-<meta name="dcterms.date" content="2024-05-31">
-<title>Raphael Saldanha – Advances in climate features engineering and subsets modeling</title>
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-<link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
-<link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
-<style>
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.5.24">
+
+  <meta name="author" content="Raphael Saldanha">
+  <meta name="dcterms.date" content="2024-05-31">
+  <title>Raphael Saldanha – Advances in climate features engineering and subsets modeling</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -31,85 +31,23 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2M7VLSRDCB"></script><script type="text/javascript">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2M7VLSRDCB"></script>
+
+  <script type="text/javascript">
 
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
-  </script><link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-<link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-<link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-<link href="../site_libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
-<link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-<style type="text/css">
+  </script>
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
 
   .callout {
     margin-top: 1em;
@@ -307,7 +245,7 @@
   }
 
   </style>
-<style type="text/css">
+  <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
       overflow: auto;
@@ -394,13 +332,16 @@
       margin-right: 0; 
     }
   </style>
-<script src="../site_libs/quarto-diagram/mermaid.min.js"></script><script src="../site_libs/quarto-diagram/mermaid-init.js"></script><link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+  <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center"><h1 class="title">Advances in climate features engineering and subsets modeling</h1>
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Advances in climate features engineering and subsets modeling</h1>
   <p class="subtitle">for Dengue forecasting</p>
 
 <div class="quarto-title-authors">
@@ -415,7 +356,9 @@ Raphael Saldanha
 </div>
 
   <p class="date">2024-05-31</p>
-</section><section id="context-of-climate-sensitive-diseases" class="slide level2"><h2>Context of Climate-Sensitive diseases</h2>
+</section>
+<section id="context-of-climate-sensitive-diseases" class="slide level2">
+<h2>Context of Climate-Sensitive diseases</h2>
 <ul>
 <li><p><strong>Direct</strong> relationship: floods, droughts, heat waves…</p></li>
 <li><p><strong>Indirect</strong> relationship</p></li>
@@ -423,7 +366,7 @@ Raphael Saldanha
 <div class="cell" data-reveal="true" data-layout-align="default">
 <div class="cell-output-display">
 <div>
-<p></p><figure class=""></figure><p></p>
+<p></p><figure class=""><p></p>
 <div>
 <pre class="mermaid mermaid-js">%%{
   init: {
@@ -440,26 +383,30 @@ climate --&gt; health
 climate --&gt; social(Social &amp; economic \n determinants) --&gt; health
 </pre>
 </div>
-<p></p>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
-</section><section id="a-time-lagged-relationship" class="slide level2"><h2>A time-lagged relationship</h2>
+</section>
+<section id="a-time-lagged-relationship" class="slide level2">
+<h2>A time-lagged relationship</h2>
 <div class="columns">
 <div class="column" style="width:45%;">
 <ul>
 <li>Vector life cycle from a time perspective</li>
-<li>Climate conditions from the <strong>past</strong> leads to the disease incidence of <strong>tomorrow</strong>
-</li>
+<li>Climate conditions from the <strong>past</strong> leads to the disease incidence of <strong>tomorrow</strong></li>
 </ul>
 </div><div class="column" style="width:55%;">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/aedes_cycle.png" class="quarto-figure quarto-figure-center"></p>
+<figure>
+<p><img data-src="images/aedes_cycle.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
 </div>
-</section><section id="era5-land-reanalysis" class="slide level2"><h2>ERA5-Land reanalysis</h2>
+</section>
+<section id="era5-land-reanalysis" class="slide level2">
+<h2>ERA5-Land reanalysis</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
 <ul>
@@ -472,12 +419,15 @@ climate --&gt; social(Social &amp; economic \n determinants) --&gt; health
 </ul>
 </div><div class="column" style="width:60%;">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/NL161-Sabater-Fig1.jpg" class="quarto-figure quarto-figure-center"></p>
+<figure>
+<p><img data-src="images/NL161-Sabater-Fig1.jpg" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
 </div>
-</section><section id="challenge-on-data-structures" class="slide level2"><h2>Challenge on data structures</h2>
+</section>
+<section id="challenge-on-data-structures" class="slide level2">
+<h2>Challenge on data structures</h2>
 <ul>
 <li>Climate indicators: grid data</li>
 <li>Disease incidence: tabular, individual cases aggregated by spatial regions and time spans</li>
@@ -489,9 +439,13 @@ climate --&gt; social(Social &amp; economic \n determinants) --&gt; health
 <p><img data-src="images/admin.png" style="width:80.0%"></p>
 </div>
 </div>
-</section><section id="zonal-statistics" class="slide level2"><h2>Zonal statistics</h2>
+</section>
+<section id="zonal-statistics" class="slide level2">
+<h2>Zonal statistics</h2>
 
-<img data-src="images/zonal_statistics.png" class="r-stretch"></section><section id="resulting-products" class="slide level2 small"><h2>Resulting products</h2>
+<img data-src="images/zonal_statistics.png" class="r-stretch"></section>
+<section id="resulting-products" class="slide level2 small">
+<h2>Resulting products</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
@@ -499,197 +453,140 @@ climate --&gt; social(Social &amp; economic \n determinants) --&gt; health
 <ul>
 <li>7,105 files, 658.7 GB</li>
 <li>24,242 downloads on Zenodo</li>
-</ul>
-</li>
+</ul></li>
 <li>Daily zonal statistics of climate indicators
 <ul>
 <li>8 selected indicators, 5,570 municipalities</li>
 <li>6,085,749,761 records covering 1950-2023</li>
-</ul>
-</li>
+</ul></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/era5-land-daily-aggregates.png" class="quarto-figure quarto-figure-center"></p>
+<figure>
+<p><img data-src="images/era5-land-daily-aggregates.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
 </div>
-</section><section id="precipitation" class="slide level2 smaller"><h2>Precipitation</h2>
+</section>
+<section id="precipitation" class="slide level2 smaller">
+<h2>Precipitation</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/prec_map_2.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure>
+<p><img data-src="images/prec_map_2.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
 </figure>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/prec_map_1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure>
+<p><img data-src="images/prec_map_1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Rio de Janeiro municipalities. January 1, 2010.</p>
-</section><section id="angra-dos-reis" class="slide level2"><h2>Angra dos Reis</h2>
+</section>
+<section id="angra-dos-reis" class="slide level2">
+<h2>Angra dos Reis</h2>
 
-<img data-src="images/angra.webp" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="published-paper" class="slide level2 small"><h2>Published paper</h2>
+<img data-src="images/angra.webp" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
+<section id="publications-products" class="slide level2 small">
+<h2>Publications &amp; Products</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
-<li>Environmental Data Science journal</li>
-<li>Published on February 8, 2024</li>
-<li>Journal’s most read paper of the month</li>
-<li>More than 9,000 datasets downloads on Zenodo so far</li>
+<li>Paper on <span class="hl">Environmental Data Science journal</span> (Saldanha et al.&nbsp;2024)</li>
+<li>Datasets on Zenodo: more than <span class="hl">34,000 downloads</span></li>
+<li><a href="https://rfsaldanha.github.io/brclimr/">brclimr package</a> to retrieve climate data of Brazilian municipalities, Almost 4,000 downloads on CRAN.</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <p><a href="https://doi.org/10.1017/eds.2024.3"><img data-src="https://zenodo.org/badge/DOI/10.1017/eds.2024.3.svg"></a> <img data-src="images/eds_paper.png"></p>
 </div>
 </div>
-</section><section id="brclimr-r-package" class="slide level2 small"><h2>brclimr R package</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li>
-<a href="https://rfsaldanha.github.io/brclimr/">Package</a> to retrieve climate data of Brazilian municipalities</li>
-<li>Query remote parquet files stored on a S3 system</li>
-<li>Avoid huge dataset downloads when user wants only a subset of the data</li>
-<li>Available on <a href="https://cran.r-project.org/web/packages/brclimr/index.html">CRAN</a>. More than 3,000 downloads</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>brclimr<span class="sc">::</span><span class="fu">fetch_data</span>(</span>
-<span id="cb1-2"><a></a>    <span class="at">code_muni =</span> <span class="dv">3304557</span>,</span>
-<span id="cb1-3"><a></a>    <span class="at">product =</span> <span class="st">"brdwgd"</span>,</span>
-<span id="cb1-4"><a></a>    <span class="at">indicator =</span> <span class="st">"rh"</span>,</span>
-<span id="cb1-5"><a></a>    <span class="at">statistics =</span> <span class="st">"mean"</span>,</span>
-<span id="cb1-6"><a></a>    <span class="at">date_start =</span> <span class="fu">as.Date</span>(<span class="st">"2010-10-15"</span>),</span>
-<span id="cb1-7"><a></a>    <span class="at">date_end =</span> <span class="fu">as.Date</span>(<span class="st">"2010-10-20"</span>)</span>
-<span id="cb1-8"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/brclimr_downloads.gif" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="usage" class="slide level2 small"><h2>Usage</h2>
+</section>
+<section id="subset-models-for-multivariate-time-series-forecast" class="slide level2 small">
+<h2>Subset models for multivariate time series forecast</h2>
 <div class="columns">
 <div class="column" style="width:60%;">
 <ul>
-<li>Training multivariate <strong>machine learning models</strong> to forecast dengue incidence in Brazil with a <strong>subsets strategy</strong>
-</li>
-</ul>
-<p><span class="math display">\[
-{\small
-\begin{aligned}        D_t = \mu + &amp; \theta_1 D_{t-1} + \cdots + \theta_p D_{t-p} + \\        &amp; \lambda_1 C_{t-1} + \cdots + \lambda_p C_{t-p} + \\         &amp; \varepsilon_1 e_{t-1} + \cdots + \varepsilon_p e_{t-p}    \end{aligned}}
-\]</span></p>
-<ul>
-<li>Cluster municipalities based on dengue spread and climate regimes</li>
-<li>Train different models for each partition</li>
+<li>Data may present intrinsic <span class="hl">diversity</span> of samples, affecting model’s performance on <span class="hl">different parts of the input</span></li>
+<li><span class="hl">Global models</span>: use all available time series</li>
+<li><span class="hl">Local models</span>: use only time series pertaining to each sample</li>
+<li><span class="hl">Data subsets models</span>: our proposal</li>
 </ul>
 </div><div class="column" style="width:40%;">
 <ul>
-<li>Accepted paper on <strong>ICDE2024</strong>, Multivariate Time Series Analytics workshop <img data-src="images/icde.png" class="quarto-figure quarto-figure-center" style="width:50.0%">
-</li>
+<li>Paper on <strong>ICDE2024</strong>, Multivariate Time Series Analytics workshop <img data-src="images/icde.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></li>
 </ul>
 </div>
 </div>
-</section><section id="next-steps" class="slide level2 smaller"><h2>Next steps…</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
+</section>
+<section id="case-example" class="slide level2">
+<h2>Case example</h2>
 <ul>
-<li>Continuous update</li>
-<li>Human settlements, population-weighted zonal statistics</li>
-<li>Compute climate time-series features: heat waves, persistent rains, etc.</li>
-<li>Adopt climate products with finer resolutions when possible (CHIRPS)</li>
-<li>Expand results to other countries</li>
+<li><span class="hl">Dengue</span> disease is transmitted by mosquitoes and is a Public Health concern. Record number cases on 2024 in Brazil, tendency to increase with global warming</li>
+<li>A typical forecasting model is targeted to predict number of cases based on <span class="hl">climate indicators</span> (rain and temperature)</li>
+<li>A <span class="hl">global model</span> would use data from all municipalities, facing <span class="hl">difficulties</span> related to <span class="hl">distinct</span> temporal and spatial disease <span class="hl">transmission patterns</span></li>
 </ul>
-</div><div class="column" style="width:50%;">
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+
+<img data-src="images/subset_model_fig_a.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+
+<img data-src="images/subset_model_fig_b.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+
+<img data-src="images/subset_model_fig_c.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="section-3" class="slide level2">
+<h2></h2>
+
+<img data-src="images/subset_model_fig_d.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="experimental-setup" class="slide level2">
+<h2>Experimental setup</h2>
+<ul>
+<li><span class="hl">Identify</span> data subsets considering dengue cases and covariates patterns across municipalities with DTW distance.
+<ul>
+<li>Select the <span class="hl">optimum</span> number of subsets (<span class="math inline">\(k\)</span>) considering silhouette score</li>
+</ul></li>
+<li>Train random forest <span class="hl">Global Model</span> with and without the <span class="hl">subset id</span> feature information</li>
+<li>Train random forest <span class="hl">Subsets Models</span></li>
+<li><span class="hl">Evaluate</span> forecasting model’s <span class="hl">performance</span> on test data</li>
+</ul>
+</section>
+<section id="clustering-results" class="slide level2">
+<h2>Clustering results</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li><span class="math inline">\(k = 5\)</span> returned the highest silhouette score</li>
+<li>Partition sizes: <span class="math inline">\(g_1 = 69\)</span>, <span class="math inline">\(g_2 = 62\)</span>, <span class="math inline">\(g_3 = 82\)</span>, <span class="math inline">\(g_4 = 102\)</span>, <span class="math inline">\(g_5 = 18\)</span></li>
+</ul>
+</div><div class="column" style="width:60%;">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/pop_era5_grid_overlay.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure>
+<p><img data-src="images/subset_model_partitions_map.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
 </div>
-</section><section id="section" class="slide level2 big_text center" data-menu-title="Thanks"><h2></h2>
-<div class="big_text">
-<p>Thanks</p>
-</div>
-</section><section id="backup-slides" class="slide level2"><h2>Backup slides</h2>
-</section><section id="climate-reanalysis" class="slide level2"><h2>Climate reanalysis</h2>
-<video controls="" loop="" preload="" data-autoplay="" src="https://climate.copernicus.eu/sites/default/files/2020-01/2019.11.21_ECMWF%20Reanalysis%20video_with%20caption_v4_IOB.mp4"></video></section><section id="era5-land-hourly-to-daily-aggregation" class="slide level2"><h2>ERA5-Land hourly to daily aggregation</h2>
+</section>
+<section id="model-results" class="slide level2">
+<h2>Model results</h2>
+
+<img data-src="images/subsets_model_accuracy.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="conclusions-and-next-steps" class="slide level2">
+<h2>Conclusions and next steps</h2>
 <ul>
-<li>Usage of <a href="https://github.com/ErikKusch/KrigR">{KrigR}</a> package to access the <a href="https://cds.climate.copernicus.eu">Copernicus Climate Data Store API</a>, crop data at server side, download and perform the time aggregation.</li>
+<li>Subsets models rendered <span class="hl">better performance</span> than global models on <span class="hl">116 municipalities</span> from 333 (34.83%)</li>
+<li>Subsets models overall performance is related to the <span class="hl">partition’s size</span>. Bigger partitions (more municipalities) have more training data.</li>
+<li>We are working on different clustering strategies (constraints in size and featured-based approaches) and apply different learners on model training</li>
 </ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">download_ERA</span>(<span class="at">Variable =</span> <span class="st">"2m_temperature"</span>, <span class="at">DataSet =</span> <span class="st">"era5-land"</span>, </span>
-<span id="cb2-2"><a></a>             <span class="at">DateStart =</span> <span class="st">"2022-12-01"</span>, <span class="at">DateStop =</span> <span class="st">"2022-12-31"</span>,</span>
-<span id="cb2-3"><a></a>             <span class="at">TResolution =</span> <span class="st">"day"</span>, <span class="at">TStep =</span> <span class="dv">1</span>,</span>
-<span id="cb2-4"><a></a>             <span class="at">FUN =</span> <span class="st">"max"</span>,</span>
-<span id="cb2-5"><a></a>             <span class="at">Extent =</span> <span class="fu">extent</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="fl">118.47</span>,<span class="sc">-</span><span class="fl">34.1</span>,<span class="sc">-</span><span class="fl">56.65</span>, <span class="fl">33.28</span>)), </span>
-<span id="cb2-6"><a></a>             <span class="at">Dir =</span> <span class="st">"dir_name"</span>, <span class="at">FileName =</span> <span class="st">"file_name.nc"</span>, </span>
-<span id="cb2-7"><a></a>             <span class="at">API_User =</span> <span class="st">"api_user"</span>, <span class="at">API_Key =</span> <span class="st">"api_key"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ul>
-<li>Took ~15 days to download and process the data from 8 climate indicators covering the Latin America region</li>
-</ul></section><section id="computation" class="slide level2"><h2>Computation</h2>
-<ul>
-<li>Zonal statistics weighted by the fraction of the cell that is covered, with the <a href="https://isciences.gitlab.io/exactextractr/">{exactextractr}</a> package</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">exact_extract</span>(</span>
-<span id="cb3-2"><a></a>  <span class="at">x =</span> rst,</span>
-<span id="cb3-3"><a></a>  <span class="at">y =</span> pol,</span>
-<span id="cb3-4"><a></a>  <span class="at">fun =</span> <span class="st">"mean"</span></span>
-<span id="cb3-5"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section><section id="results" class="slide level2 smaller"><h2>Results</h2>
-<table>
-<colgroup>
-<col style="width: 27%">
-<col style="width: 38%">
-<col style="width: 33%">
-</colgroup>
-<thead><tr class="header">
-<th>ERA5-Land indicators</th>
-<th>Daily time-aggregating functions</th>
-<th>Spatial zonal statistics</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td>Temperature (2m)</td>
-<td>mean, max, min</td>
-<td>max, min, stdev, count</td>
-</tr>
-<tr class="even">
-<td>Dewpoint temp. (2m)</td>
-<td>mean</td>
-<td>max, min, stdev, count</td>
-</tr>
-<tr class="odd">
-<td>
-<span class="math inline">\(u\)</span> component of wind</td>
-<td>mean</td>
-<td>max, min, stdev, count</td>
-</tr>
-<tr class="even">
-<td>
-<span class="math inline">\(v\)</span> component of wind</td>
-<td>mean</td>
-<td>max, min, stdev, count</td>
-</tr>
-<tr class="odd">
-<td>Surface pressure</td>
-<td>mean</td>
-<td>max, min, stdev, count</td>
-</tr>
-<tr class="even">
-<td>Total precipitation</td>
-<td>sum</td>
-<td>max, min, stdev, count, sum</td>
-</tr>
-</tbody>
-</table>
 
 <div class="quarto-auto-generated-content">
 <p><img src="inria_logo.png" class="slide-logo"></p>
@@ -698,10 +595,27 @@ climate --&gt; social(Social &amp; economic \n determinants) --&gt; health
 </div>
 </div>
 </section>
-</div>
+    </div>
   </div>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="../site_libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="../site_libs/revealjs/plugin/reveal-pointer/pointer.js"></script><script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script><script src="../site_libs/revealjs/plugin/notes/notes.js"></script><script src="../site_libs/revealjs/plugin/search/search.js"></script><script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script><script src="../site_libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-pointer/pointer.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
 
       // Full list of configuration options available at:
       // https://revealjs.com/config/
@@ -892,42 +806,8 @@ climate --&gt; social(Social &amp; economic \n determinants) --&gt; health
           RevealZoom
         ]
       });
-    </script><script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script><script id="quarto-html-after-body" type="application/javascript">
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
         const mode = bsSheetEl.getAttribute("data-mode");
@@ -1103,6 +983,6 @@ climate --&gt; social(Social &amp; economic \n determinants) --&gt; health
       }
     });
     </script>
-
+    
 
 </body></html>

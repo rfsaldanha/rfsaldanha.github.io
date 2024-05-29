@@ -129,14 +129,13 @@ Rio de Janeiro municipalities. January 1, 2010.
 
 ![](images/angra.webp){fig-align="center" width="100%"}
 
-## Published paper {.small}
+## Publications & Products {.small}
 
 ::: columns
 ::: {.column width="50%"}
--   Environmental Data Science journal
--   Published on February 8, 2024
--   Journal's most read paper of the month
--   More than 9,000 datasets downloads on Zenodo so far
+-   Paper on [Environmental Data Science journal]{.hl} (Saldanha et al. 2024)
+-   Datasets on Zenodo: more than [34,000 downloads]{.hl}
+-   [brclimr package](https://rfsaldanha.github.io/brclimr/) to retrieve climate data of Brazilian municipalities, Almost 4,000 downloads on CRAN.
 :::
 
 ::: {.column width="50%"}
@@ -144,121 +143,71 @@ Rio de Janeiro municipalities. January 1, 2010.
 :::
 :::
 
-## brclimr R package {.small}
-
-::: columns
-::: {.column width="50%"}
--   [Package](https://rfsaldanha.github.io/brclimr/) to retrieve climate data of Brazilian municipalities
--   Query remote parquet files stored on a S3 system
--   Avoid huge dataset downloads when user wants only a subset of the data
--   Available on [CRAN](https://cran.r-project.org/web/packages/brclimr/index.html). More than 3,000 downloads
-
-```{r, eval=FALSE, echo=TRUE}
-brclimr::fetch_data(
-    code_muni = 3304557,
-    product = "brdwgd",
-    indicator = "rh",
-    statistics = "mean",
-    date_start = as.Date("2010-10-15"),
-    date_end = as.Date("2010-10-20")
-  )
-```
-:::
-
-::: {.column width="50%"}
-![](images/brclimr_downloads.gif){fig-align="center" width="100%"}
-:::
-:::
-
-## Usage {.small}
+## Subset models for multivariate time series forecast {.small}
 
 ::: columns
 ::: {.column width="60%"}
--   Training multivariate **machine learning models** to forecast dengue incidence in Brazil with a **subsets strategy**
-
-$$
-{\small
-\begin{aligned}        D_t = \mu + & \theta_1 D_{t-1} + \cdots + \theta_p D_{t-p} + \\        & \lambda_1 C_{t-1} + \cdots + \lambda_p C_{t-p} + \\         & \varepsilon_1 e_{t-1} + \cdots + \varepsilon_p e_{t-p}    \end{aligned}}
-$$
-
--   Cluster municipalities based on dengue spread and climate regimes
--   Train different models for each partition
+-   Data may present intrinsic [diversity]{.hl} of samples, affecting model's performance on [different parts of the input]{.hl}
+-   [Global models]{.hl}: use all available time series
+-   [Local models]{.hl}: use only time series pertaining to each sample
+-   [Data subsets models]{.hl}: our proposal
 :::
 
 ::: {.column width="40%"}
--   Accepted paper on **ICDE2024**, Multivariate Time Series Analytics workshop ![](images/icde.png){fig-align="center" width="50%"}
+-   Paper on **ICDE2024**, Multivariate Time Series Analytics workshop ![](images/icde.png){fig-align="center" width="50%"}
 :::
 :::
 
-## Next steps... {.smaller}
+## Case example
+
+-   [Dengue]{.hl} disease is transmitted by mosquitoes and is a Public Health concern. Record number cases on 2024 in Brazil, tendency to increase with global warming
+-   A typical forecasting model is targeted to predict number of cases based on [climate indicators]{.hl} (rain and temperature)
+-   A [global model]{.hl} would use data from all municipalities, facing [difficulties]{.hl} related to [distinct]{.hl} temporal and spatial disease [transmission patterns]{.hl}
+
+## 
+
+![](images/subset_model_fig_a.png){fig-align="center"}
+
+## 
+
+![](images/subset_model_fig_b.png){fig-align="center"}
+
+## 
+
+![](images/subset_model_fig_c.png){fig-align="center"}
+
+## 
+
+![](images/subset_model_fig_d.png){fig-align="center"}
+
+## Experimental setup
+
+-   [Identify]{.hl} data subsets considering dengue cases and covariates patterns across municipalities with DTW distance.
+    -   Select the [optimum]{.hl} number of subsets ($k$) considering silhouette score
+-   Train random forest [Global Model]{.hl} with and without the [subset id]{.hl} feature information
+-   Train random forest [Subsets Models]{.hl}
+-   [Evaluate]{.hl} forecasting model's [performance]{.hl} on test data
+
+
+## Clustering results
 
 ::: columns
-::: {.column width="50%"}
--   Continuous update
--   Human settlements, population-weighted zonal statistics
--   Compute climate time-series features: heat waves, persistent rains, etc.
--   Adopt climate products with finer resolutions when possible (CHIRPS)
--   Expand results to other countries
+::: {.column width="40%"}
+-   $k = 5$ returned the highest silhouette score
+-   Partition sizes: $g_1 = 69$, $g_2 = 62$, $g_3 = 82$, $g_4 = 102$, $g_5 = 18$
 :::
 
-::: {.column width="50%"}
-![](images/pop_era5_grid_overlay.png){fig-align="center" width="100%"}
+::: {.column width="60%"}
+![](images/subset_model_partitions_map.png){fig-align="center"}
 :::
 :::
 
-##  {.big_text .center data-menu-title="Thanks"}
+## Model results
 
-::: big_text
-Thanks
-:::
+![](images/subsets_model_accuracy.png){fig-align="center"}
 
-## Backup slides
+## Conclusions and next steps
 
-## Climate reanalysis
-
-<video controls loop preload data-autoplay src="https://climate.copernicus.eu/sites/default/files/2020-01/2019.11.21_ECMWF%20Reanalysis%20video_with%20caption_v4_IOB.mp4">
-
-</video>
-
-## ERA5-Land hourly to daily aggregation
-
--   Usage of [{KrigR}](https://github.com/ErikKusch/KrigR) package to access the [Copernicus Climate Data Store API](https://cds.climate.copernicus.eu), crop data at server side, download and perform the time aggregation.
-
-```{r}
-#| echo: true
-#| eval: false
-download_ERA(Variable = "2m_temperature", DataSet = "era5-land", 
-             DateStart = "2022-12-01", DateStop = "2022-12-31",
-             TResolution = "day", TStep = 1,
-             FUN = "max",
-             Extent = extent(c(-118.47,-34.1,-56.65, 33.28)), 
-             Dir = "dir_name", FileName = "file_name.nc", 
-             API_User = "api_user", API_Key = "api_key")
-```
-
--   Took \~15 days to download and process the data from 8 climate indicators covering the Latin America region
-
-## Computation
-
--   Zonal statistics weighted by the fraction of the cell that is covered, with the [{exactextractr}](https://isciences.gitlab.io/exactextractr/) package
-
-```{r}
-#| echo: true
-#| eval: false
-exact_extract(
-  x = rst,
-  y = pol,
-  fun = "mean"
-)
-```
-
-## Results {.smaller}
-
-| ERA5-Land indicators  | Daily time-aggregating functions | Spatial zonal statistics    |
-|--------------------|----------------------------|------------------------|
-| Temperature (2m)      | mean, max, min                   | max, min, stdev, count      |
-| Dewpoint temp. (2m)   | mean                             | max, min, stdev, count      |
-| $u$ component of wind | mean                             | max, min, stdev, count      |
-| $v$ component of wind | mean                             | max, min, stdev, count      |
-| Surface pressure      | mean                             | max, min, stdev, count      |
-| Total precipitation   | sum                              | max, min, stdev, count, sum |
+-   Subsets models rendered [better performance]{.hl} than global models on [116 municipalities]{.hl} from 333 (34.83%)
+-   Subsets models overall performance is related to the [partition's size]{.hl}. Bigger partitions (more municipalities) have more training data.
+-   We are working on different clustering strategies (constraints in size and featured-based approaches) and apply different learners on model training
