@@ -26,7 +26,7 @@ Selected indicators hourly data were [downloaded and aggregated at daily basis](
 The following indicators and aggregations were computed.
 
 | ERA5-Land indicators  | Daily time-aggregating functions | Spatial zonal statistics    |
-|-----------------------|----------------------------------|-----------------------------|
+|--------------------|----------------------------|------------------------|
 | Temperature (2m)      | mean, max, min                   | max, min, stdev, count      |
 | Dewpoint temp. (2m)   | mean                             | max, min, stdev, count      |
 | $u$ component of wind | mean                             | max, min, stdev, count      |
@@ -51,7 +51,6 @@ res <- zenstats::deposit_stats(ids, all_versions_only = TRUE, progress = FALSE)
 -   Date: `r format(Sys.time())`
 -   Views: `r sum(res$views)`
 -   Downloads: `r format(sum(res$downloads))`
--   Total data volume: `r format(sum(res$volume, na.rm = TRUE))`
 
 ## Zonal BR-DWGD
 
