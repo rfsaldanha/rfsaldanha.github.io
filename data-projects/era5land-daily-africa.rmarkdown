@@ -1,0 +1,98 @@
+---
+title: "ERA5-Land selected indicators daily aggregates for Africa"
+bibliography: references.bib
+---
+
+```{r}
+#| message: false
+#| echo: false
+nc_file <- zendown::zen_file(11235544, "2m_temperature_2000-06-01_2000-06-30_day_max.nc")
+nc_rast <- terra::rast(nc_file)
+
+terra::plot(nc_rast[[1:4]])
+```
+
+
+
+## Introduction
+
+The [ERA5-Land](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land?tab=overview) reanalysis from The Copernicus Programme is an incredible source of climate data with global coverage of land areas from 1950 to the present, at 10km spatial resolution. Its original data is at hourly interval, and monthly aggregates are also available at the [Copernicus Data Store](https://cds.climate.copernicus.eu) (CDS).
+
+For some applications like Climate-Sensitive Diseases (CSD) modelling, the hourly interval may be too much detailed, but the monthly aggregation is too coarse.
+
+For this reason, I created daily aggregates from some ERA5-Land indicators for some regions.
+
+## Methodology
+
+I developed an [R script](https://github.com/rfsaldanha/era5daily) using the KrigR package [@kusch2022]. The script downloads a set of indicators, starting on 1950, for a geographical bounding box covering Africa (coordinates -47.11,71.01,34.88,71.38) and aggregates the data from hourly to daily, saving its results as NetCDF files. Each resulting file covers a year's month and presents data layers for each day of the respective month.
+
+The table bellow contains the time aggregation functions applied to each climate indicator.
+
+| Indicator               | Daily aggregation function |
+|-------------------------|----------------------------|
+| 2m temperature          | mean, max, min             |
+| 2m dewpoint temperature | mean                       |
+| u component of wind     | mean                       |
+| v component of wind     | mean                       |
+| surface pressure        | mean                       |
+| total precipitation     | sum                        |
+
+## Datasets
+
+Data from 1990 to 2023 is ready to use and available on Zenodo. Data from 1950 to 1989 is being processed and will be made available soon.
+
+| Year | Zenodo deposit                                                                                                     |
+|----------------|--------------------------------------------------------|
+| 1990 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11388406-green.svg)](https://doi.org/10.5281/zenodo.11388406) |
+| 1991 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11388334-green.svg)](https://doi.org/10.5281/zenodo.11388334) |
+| 1992 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11387789-green.svg)](https://doi.org/10.5281/zenodo.11387789) |
+| 1993 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11387738-green.svg)](https://doi.org/10.5281/zenodo.11387738) |
+| 1994 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11387688-green.svg)](https://doi.org/10.5281/zenodo.11387688) |
+| 1995 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11387618-green.svg)](https://doi.org/10.5281/zenodo.11387618) |
+| 1996 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11387580-green.svg)](https://doi.org/10.5281/zenodo.11387580) |
+| 1997 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11387536-green.svg)](https://doi.org/10.5281/zenodo.11387536) |
+| 1998 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11387451-green.svg)](https://doi.org/10.5281/zenodo.11387451) |
+| 1999 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11387376-green.svg)](https://doi.org/10.5281/zenodo.11387376) |
+| 2000 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11235544-green.svg)](https://doi.org/10.5281/zenodo.11235544) |
+| 2001 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11234867-green.svg)](https://doi.org/10.5281/zenodo.11234867) |
+| 2002 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11234849-green.svg)](https://doi.org/10.5281/zenodo.11234849) |
+| 2003 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11234745-green.svg)](https://doi.org/10.5281/zenodo.11234745) |
+| 2004 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11234713-green.svg)](https://doi.org/10.5281/zenodo.11234713) |
+| 2005 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11234671-green.svg)](https://doi.org/10.5281/zenodo.11234671) |
+| 2006 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11234651-green.svg)](https://doi.org/10.5281/zenodo.11234651) |
+| 2007 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11234232-green.svg)](https://doi.org/10.5281/zenodo.11234232) |
+| 2008 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11233620-green.svg)](https://doi.org/10.5281/zenodo.11233620) |
+| 2009 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11232951-green.svg)](https://doi.org/10.5281/zenodo.11232951) |
+| 2010 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11127111-green.svg)](https://doi.org/10.5281/zenodo.11127111) |
+| 2011 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11127089-green.svg)](https://doi.org/10.5281/zenodo.11127089) |
+| 2012 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11126935-green.svg)](https://doi.org/10.5281/zenodo.11126935) |
+| 2013 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11126924-green.svg)](https://doi.org/10.5281/zenodo.11126924) |
+| 2014 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11126908-green.svg)](https://doi.org/10.5281/zenodo.11126908) |
+| 2015 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11126889-green.svg)](https://doi.org/10.5281/zenodo.11126889) |
+| 2016 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11126864-green.svg)](https://doi.org/10.5281/zenodo.11126864) |
+| 2017 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11126841-green.svg)](https://doi.org/10.5281/zenodo.11126841) |
+| 2018 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11126820-green.svg)](https://doi.org/10.5281/zenodo.11126820) |
+| 2019 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11126794-green.svg)](https://doi.org/10.5281/zenodo.11126794) |
+| 2020 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11126758-green.svg)](https://doi.org/10.5281/zenodo.11126758) |
+| 2021 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11126741-green.svg)](https://doi.org/10.5281/zenodo.11126741) |
+| 2022 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11126723-green.svg)](https://doi.org/10.5281/zenodo.11126723) |
+| 2023 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11105116-green.svg)](https://doi.org/10.5281/zenodo.11105116) |
+
+### Usage statistics
+
+
+
+```{r}
+#| echo: false
+#| message: false
+source("era5land-daily-africa_ids.R")
+
+res <- zenstats::deposit_stats(ids_africa, all_versions_only = TRUE, progress = FALSE)
+```
+
+
+
+-   Statistics update: `r format(Sys.time())`
+-   Views: `r sum(res$views)`
+-   Downloads: `r format(sum(res$downloads, na.rm = TRUE))`
+
