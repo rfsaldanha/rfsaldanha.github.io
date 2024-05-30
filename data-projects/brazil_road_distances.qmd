@@ -25,13 +25,13 @@ combn(x, m = 2)
 With this, I assume that the distance between two municipalities is the same, independently of the direction.
 :::
 
-Thus, for 5,565 municipalities, we have a total of $5,565 \times 5,565 / 2 = 15,484,612$ routes to be computed.
+Thus, for the 5,565 municipalities, we will have a total number of routes to be computed of:
 
 ```{r}
 choose(n = 5565, k = 2)
 ```
 
-To compute the road distance between pairs of municipalities, the [OSRM](http://project-osrm.org/) API service was used, with the [{osrm}](https://cran.r-project.org/package=osrm) package [@osrm_paper_2022]. More specifically, the table service was used, considering the "car" profile, returning as result the distance in **meters** and estimated trip duration in **minutes** for the shortest direct route possible.
+To compute the road distance between pairs of municipalities, the [OSRM](http://project-osrm.org/) API service was used, with the [{osrm}](https://cran.r-project.org/package=osrm) package [@osrm_paper_2022]. More specifically, the table service was used, considering the "car" profile, returning as result the distance in **meters** and estimated trip duration in **minutes** for the **fastest** route found.
 
 ### Route example
 
