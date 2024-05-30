@@ -37,10 +37,20 @@ The table bellow contains the time aggregation functions applied to each climate
 
 ## Datasets
 
-Data from 1990 to 2023 is ready to use and available on Zenodo. Data from 1950 to 1989 is being processed and will be made available soon.
+Data from 1980 to 2023 is ready to use and available on Zenodo. Data from 1950 to 1979 is being processed and will be made available soon.
 
 | Year | Zenodo deposit                                                                                                     |
 |----------------|--------------------------------------------------------|
+| 1980 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11396191-green.svg)](https://doi.org/10.5281/zenodo.11396191) |
+| 1981 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11396136-green.svg)](https://doi.org/10.5281/zenodo.11396136) |
+| 1982 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11396006-green.svg)](https://doi.org/10.5281/zenodo.11396006) |
+| 1983 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11395872-green.svg)](https://doi.org/10.5281/zenodo.11395872) |
+| 1984 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11395849-green.svg)](https://doi.org/10.5281/zenodo.11395849) |
+| 1985 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11395817-green.svg)](https://doi.org/10.5281/zenodo.11395817) |
+| 1986 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11395763-green.svg)](https://doi.org/10.5281/zenodo.11395763) |
+| 1987 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11395740-green.svg)](https://doi.org/10.5281/zenodo.11395740) |
+| 1988 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11395696-green.svg)](https://doi.org/10.5281/zenodo.11395696) |
+| 1989 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11395677-green.svg)](https://doi.org/10.5281/zenodo.11395677) |
 | 1990 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11388406-green.svg)](https://doi.org/10.5281/zenodo.11388406) |
 | 1991 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11388334-green.svg)](https://doi.org/10.5281/zenodo.11388334) |
 | 1992 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11387789-green.svg)](https://doi.org/10.5281/zenodo.11387789) |
