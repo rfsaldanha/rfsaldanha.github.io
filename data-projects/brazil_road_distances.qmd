@@ -83,15 +83,11 @@ The scripts used to prepare the dataset is available [here](https://github.com/r
 
 ## Dataset
 
-The dataset with the road distances and trip duration are available on Zenodo. The current version was computed between May and June 2024.
+The dataset with the road distances and trip duration are available on Zenodo. Click the link below to access the data.
+
+[![](https://zenodo.org/badge/DOI/10.5281/zenodo.11400243.svg)](https://doi.org/10.5281/zenodo.11400243)
 
 You can download the dataset directly from Zenodo or download it directly from R, using the [{zendown}](https://rfsaldanha.github.io/zendown/) package.
-
-```{r}
-library(zendown)
-
-# zen_file() |> readRDS()
-```
 
 ## Future plans
 
