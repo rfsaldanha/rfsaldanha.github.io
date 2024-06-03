@@ -32,13 +32,13 @@ R package to download and cache files from Zenodo deposits.
 
 R package to fetch statistics of views, downloads and volume from Zenodo deposits.
 
-[![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/zenstats-blue)](https://rfsaldanha.github.io/zenstats/) [![](https://img.shields.io/github/stars/rfsaldanha/zenstats)](https://github.com/rfsaldanha/zenstats) [![](https://github.com/rfsaldanha/zenstats/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/zenstats/actions/workflows/R-CMD-check.yaml)
+[![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/zenstats-blue)](https://rfsaldanha.github.io/zenstats/) [![](https://img.shields.io/github/stars/rfsaldanha/zenstats)](https://github.com/rfsaldanha/zenstats) [![](https://github.com/rfsaldanha/zenstats/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/zenstats/actions/workflows/R-CMD-check.yaml) [![](https://img.shields.io/cran/v/zenstats)](https://cran.r-project.org/package=zenstats)
 
 ## nseq
 
 R package to compute counts and statistics of occurrence of events in sequences that meets a criterion.
 
-[![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/nseq-blue)](https://rfsaldanha.github.io/nseq/) [![](https://img.shields.io/github/stars/rfsaldanha/nseq)](https://github.com/rfsaldanha/nseq) [![](https://github.com/rfsaldanha/nseq/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/nseq/actions/workflows/R-CMD-check.yaml)
+[![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/nseq-blue)](https://rfsaldanha.github.io/nseq/) [![](https://img.shields.io/github/stars/rfsaldanha/nseq)](https://github.com/rfsaldanha/nseq) [![](https://github.com/rfsaldanha/nseq/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/nseq/actions/workflows/R-CMD-check.yaml) [![](https://img.shields.io/cran/v/nseq)](https://cran.r-project.org/package=nseq)
 
 ## rspell
 
