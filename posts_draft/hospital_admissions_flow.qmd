@@ -256,8 +256,14 @@ verts_2023 <- data.frame(x = V(g_2023)$longitude, y = V(g_2023)$latitude)
 To plot the vertices, we will use a nice function from the [edgebundle](https://schochastics.github.io/edgebundle/) package. This will take several minutes to be computed.
 
 ```{r}
-pbundle_2019 <- edge_bundle_path(g_2019, xy_2019, max_distortion = 12, weight_fac = 2, segments = 50)
+pbundle_2019 <- readRDS("pbundle_2019.rds")
+pbundle_2020 <- readRDS("pbundle_2020.rds")
+pbundle_2021 <- readRDS("pbundle_2021.rds")
+pbundle_2022 <- readRDS("pbundle_2022.rds")
+pbundle_2023 <- readRDS("pbundle_2023.rds")
 
+# pbundle_2019 <- edge_bundle_path(g_2019, xy_2019, max_distortion = 12, weight_fac = 2, segments = 50)
+#
 # pbundle_2020 <- edge_bundle_path(g_2020, xy_2020, max_distortion = 12, weight_fac = 2, segments = 50)
 # 
 # pbundle_2021 <- edge_bundle_path(g_2021, xy_2021, max_distortion = 12, weight_fac = 2, segments = 50)
@@ -271,6 +277,9 @@ Now, all needed objects are ready. Let's plot it.
 
 ```{r}
 #| column: page
+#| fig-height: 30
+#| fig-width: 30
+#| fig-dpi: 120
 
 ggplot() +
   geom_sf(
@@ -304,8 +313,9 @@ ggplot() +
 
 ```{r}
 #| column: page
-#| eval: false
-
+#| fig-height: 30
+#| fig-width: 30
+#| fig-dpi: 120
 ggplot() +
   geom_sf(
     data = states,
@@ -331,14 +341,16 @@ ggplot() +
     data = verts_2020[verts_2020$name != "", ], aes(x, y),
     col = "white", size = 3, alpha = 1
   )  +
-  labs(title = "Patient's flow for hospital admission", subtitle = "2020") +
+  labs(title = "Patient's flow for hospital admission, 2020") +
   ggraph::theme_graph(background = "black") +
   theme(plot.title = element_text(color = "white"))
 ```
 
 ```{r}
 #| column: page
-#| eval: false
+#| fig-height: 30
+#| fig-width: 30
+#| fig-dpi: 120
 
 ggplot() +
   geom_sf(
@@ -365,14 +377,16 @@ ggplot() +
     data = verts_2021[verts_2021$name != "", ], aes(x, y),
     col = "white", size = 3, alpha = 1
   )  +
-  labs(title = "Patient's flow for hospital admission", subtitle = "2019") +
+  labs(title = "Patient's flow for hospital admission, 2019") +
   ggraph::theme_graph(background = "black") +
   theme(plot.title = element_text(color = "white"))
 ```
 
 ```{r}
 #| column: page
-#| eval: false
+#| fig-height: 30
+#| fig-width: 30
+#| fig-dpi: 120
 
 ggplot() +
   geom_sf(
@@ -399,14 +413,16 @@ ggplot() +
     data = verts_2022[verts_2022$name != "", ], aes(x, y),
     col = "white", size = 3, alpha = 1
   )  +
-  labs(title = "Patient's flow for hospital admission", subtitle = "2022") +
+  labs(title = "Patient's flow for hospital admission, 2022") +
   ggraph::theme_graph(background = "black") +
   theme(plot.title = element_text(color = "white"))
 ```
 
 ```{r}
 #| column: page
-#| eval: false
+#| fig-height: 30
+#| fig-width: 30
+#| fig-dpi: 120
 
 ggplot() +
   geom_sf(
@@ -433,7 +449,7 @@ ggplot() +
     data = verts_2023[verts_2023$name != "", ], aes(x, y),
     col = "white", size = 3, alpha = 1
   )  +
-  labs(title = "Patient's flow for hospital admission", subtitle = "2023") +
+  labs(title = "Patient's flow for hospital admission, 2023") +
   ggraph::theme_graph(background = "black") +
   theme(plot.title = element_text(color = "white"))
 ```

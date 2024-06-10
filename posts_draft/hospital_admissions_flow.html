@@ -285,14 +285,14 @@ Tip
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(res_geral)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 4
-   year cod_res cod_int  freq
-  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;dbl&gt;
-1  2019 291680  293330    194
-2  2019 292270  293330    215
-3  2019 290320  290320   8715
-4  2019 291005  290570    149
-5  2019 290550  292120     61
-6  2019 290870  293330    427</code></pre>
+   year cod_res cod_int   freq
+  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;dbl&gt;
+1  2019 292740  292740  153272
+2  2019 291905  291905     877
+3  2019 291250  292360     201
+4  2019 291733  291733     765
+5  2019 292925  291915       1
+6  2019 293135  292740     129</code></pre>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -410,12 +410,12 @@ Note
 <pre><code># A tibble: 6 × 3
   cod_res cod_int  freq
   &lt;chr&gt;   &lt;chr&gt;   &lt;dbl&gt;
-1 231270  230440    292
-2 230690  230440    558
-3 231090  231140     15
-4 230533  231140    100
-5 231030  231140     60
-6 230850  231140     48</code></pre>
+1 230765  230440   4724
+2 230270  230440     52
+3 231040  230440    210
+4 231126  230440     75
+5 231160  230440    565
+6 230630  230440   1026</code></pre>
 </div>
 </div>
 <p>Now, we will create igraph objects for each year.</p>
@@ -449,15 +449,21 @@ Note
 </div>
 <p>To plot the vertices, we will use a nice function from the <a href="https://schochastics.github.io/edgebundle/">edgebundle</a> package. This will take several minutes to be computed.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>pbundle_2019 <span class="ot">&lt;-</span> <span class="fu">edge_bundle_path</span>(g_2019, xy_2019, <span class="at">max_distortion =</span> <span class="dv">12</span>, <span class="at">weight_fac =</span> <span class="dv">2</span>, <span class="at">segments =</span> <span class="dv">50</span>)</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="co"># pbundle_2020 &lt;- edge_bundle_path(g_2020, xy_2020, max_distortion = 12, weight_fac = 2, segments = 50)</span></span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="co"># pbundle_2021 &lt;- edge_bundle_path(g_2021, xy_2021, max_distortion = 12, weight_fac = 2, segments = 50)</span></span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="co"># pbundle_2022 &lt;- edge_bundle_path(g_2022, xy_2022, max_distortion = 12, weight_fac = 2, segments = 50)</span></span>
-<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="co"># pbundle_2023 &lt;- edge_bundle_path(g_2023, xy_2023, max_distortion = 12, weight_fac = 2, segments = 50)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>pbundle_2019 <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"pbundle_2019.rds"</span>)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>pbundle_2020 <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"pbundle_2020.rds"</span>)</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>pbundle_2021 <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"pbundle_2021.rds"</span>)</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>pbundle_2022 <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"pbundle_2022.rds"</span>)</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>pbundle_2023 <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"pbundle_2023.rds"</span>)</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="co"># pbundle_2019 &lt;- edge_bundle_path(g_2019, xy_2019, max_distortion = 12, weight_fac = 2, segments = 50)</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="co"># pbundle_2020 &lt;- edge_bundle_path(g_2020, xy_2020, max_distortion = 12, weight_fac = 2, segments = 50)</span></span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a><span class="co"># pbundle_2021 &lt;- edge_bundle_path(g_2021, xy_2021, max_distortion = 12, weight_fac = 2, segments = 50)</span></span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a><span class="co"># pbundle_2022 &lt;- edge_bundle_path(g_2022, xy_2022, max_distortion = 12, weight_fac = 2, segments = 50)</span></span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a><span class="co"># pbundle_2023 &lt;- edge_bundle_path(g_2023, xy_2023, max_distortion = 12, weight_fac = 2, segments = 50)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now, all needed objects are ready. Let’s plot it.</p>
 <div class="cell page-columns page-full">
@@ -492,12 +498,12 @@ Note
 <div class="cell-output-display page-columns page-full">
 <div class="page-columns page-full">
 <figure class="figure page-columns page-full">
-<p class="page-columns page-full"><img src="hospital_admissions_flow_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img column-page" width="672"></p>
+<p class="page-columns page-full"><img src="hospital_admissions_flow_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img column-page" width="3600"></p>
 </figure>
 </div>
 </div>
 </div>
-<div class="cell column-page">
+<div class="cell page-columns page-full">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(</span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> states,</span>
@@ -523,11 +529,18 @@ Note
 <span id="cb27-23"><a href="#cb27-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> verts_2020[verts_2020<span class="sc">$</span>name <span class="sc">!=</span> <span class="st">""</span>, ], <span class="fu">aes</span>(x, y),</span>
 <span id="cb27-24"><a href="#cb27-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">col =</span> <span class="st">"white"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">alpha =</span> <span class="dv">1</span></span>
 <span id="cb27-25"><a href="#cb27-25" aria-hidden="true" tabindex="-1"></a>  )  <span class="sc">+</span></span>
-<span id="cb27-26"><a href="#cb27-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Patient's flow for hospital admission"</span>, <span class="at">subtitle =</span> <span class="st">"2020"</span>) <span class="sc">+</span></span>
+<span id="cb27-26"><a href="#cb27-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Patient's flow for hospital admission, 2020"</span>) <span class="sc">+</span></span>
 <span id="cb27-27"><a href="#cb27-27" aria-hidden="true" tabindex="-1"></a>  ggraph<span class="sc">::</span><span class="fu">theme_graph</span>(<span class="at">background =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
 <span id="cb27-28"><a href="#cb27-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"white"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display page-columns page-full">
+<div class="page-columns page-full">
+<figure class="figure page-columns page-full">
+<p class="page-columns page-full"><img src="hospital_admissions_flow_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img column-page" width="3600"></p>
+</figure>
 </div>
-<div class="cell column-page">
+</div>
+</div>
+<div class="cell page-columns page-full">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(</span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> states,</span>
@@ -553,11 +566,18 @@ Note
 <span id="cb28-23"><a href="#cb28-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> verts_2021[verts_2021<span class="sc">$</span>name <span class="sc">!=</span> <span class="st">""</span>, ], <span class="fu">aes</span>(x, y),</span>
 <span id="cb28-24"><a href="#cb28-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">col =</span> <span class="st">"white"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">alpha =</span> <span class="dv">1</span></span>
 <span id="cb28-25"><a href="#cb28-25" aria-hidden="true" tabindex="-1"></a>  )  <span class="sc">+</span></span>
-<span id="cb28-26"><a href="#cb28-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Patient's flow for hospital admission"</span>, <span class="at">subtitle =</span> <span class="st">"2019"</span>) <span class="sc">+</span></span>
+<span id="cb28-26"><a href="#cb28-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Patient's flow for hospital admission, 2019"</span>) <span class="sc">+</span></span>
 <span id="cb28-27"><a href="#cb28-27" aria-hidden="true" tabindex="-1"></a>  ggraph<span class="sc">::</span><span class="fu">theme_graph</span>(<span class="at">background =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
 <span id="cb28-28"><a href="#cb28-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"white"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display page-columns page-full">
+<div class="page-columns page-full">
+<figure class="figure page-columns page-full">
+<p class="page-columns page-full"><img src="hospital_admissions_flow_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img column-page" width="3600"></p>
+</figure>
 </div>
-<div class="cell column-page">
+</div>
+</div>
+<div class="cell page-columns page-full">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(</span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> states,</span>
@@ -583,11 +603,18 @@ Note
 <span id="cb29-23"><a href="#cb29-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> verts_2022[verts_2022<span class="sc">$</span>name <span class="sc">!=</span> <span class="st">""</span>, ], <span class="fu">aes</span>(x, y),</span>
 <span id="cb29-24"><a href="#cb29-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">col =</span> <span class="st">"white"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">alpha =</span> <span class="dv">1</span></span>
 <span id="cb29-25"><a href="#cb29-25" aria-hidden="true" tabindex="-1"></a>  )  <span class="sc">+</span></span>
-<span id="cb29-26"><a href="#cb29-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Patient's flow for hospital admission"</span>, <span class="at">subtitle =</span> <span class="st">"2022"</span>) <span class="sc">+</span></span>
+<span id="cb29-26"><a href="#cb29-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Patient's flow for hospital admission, 2022"</span>) <span class="sc">+</span></span>
 <span id="cb29-27"><a href="#cb29-27" aria-hidden="true" tabindex="-1"></a>  ggraph<span class="sc">::</span><span class="fu">theme_graph</span>(<span class="at">background =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
 <span id="cb29-28"><a href="#cb29-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"white"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display page-columns page-full">
+<div class="page-columns page-full">
+<figure class="figure page-columns page-full">
+<p class="page-columns page-full"><img src="hospital_admissions_flow_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid figure-img column-page" width="3600"></p>
+</figure>
 </div>
-<div class="cell column-page">
+</div>
+</div>
+<div class="cell page-columns page-full">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(</span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> states,</span>
@@ -613,9 +640,16 @@ Note
 <span id="cb30-23"><a href="#cb30-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> verts_2023[verts_2023<span class="sc">$</span>name <span class="sc">!=</span> <span class="st">""</span>, ], <span class="fu">aes</span>(x, y),</span>
 <span id="cb30-24"><a href="#cb30-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">col =</span> <span class="st">"white"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">alpha =</span> <span class="dv">1</span></span>
 <span id="cb30-25"><a href="#cb30-25" aria-hidden="true" tabindex="-1"></a>  )  <span class="sc">+</span></span>
-<span id="cb30-26"><a href="#cb30-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Patient's flow for hospital admission"</span>, <span class="at">subtitle =</span> <span class="st">"2023"</span>) <span class="sc">+</span></span>
+<span id="cb30-26"><a href="#cb30-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Patient's flow for hospital admission, 2023"</span>) <span class="sc">+</span></span>
 <span id="cb30-27"><a href="#cb30-27" aria-hidden="true" tabindex="-1"></a>  ggraph<span class="sc">::</span><span class="fu">theme_graph</span>(<span class="at">background =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
 <span id="cb30-28"><a href="#cb30-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"white"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display page-columns page-full">
+<div class="page-columns page-full">
+<figure class="figure page-columns page-full">
+<p class="page-columns page-full"><img src="hospital_admissions_flow_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img column-page" width="3600"></p>
+</figure>
+</div>
+</div>
 </div>
 </section>
 <section id="session-info" class="level2">
