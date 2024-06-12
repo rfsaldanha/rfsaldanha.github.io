@@ -13,6 +13,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/hospital_admissions_flow.html",
       "/posts/persistent_heat.html",
       "/posts/data_package_guide.html",
       "/posts/query_local_parquet_files.html",

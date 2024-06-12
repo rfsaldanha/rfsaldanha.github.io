@@ -1,0 +1,293 @@
+---
+title: "Handling 187 millions hospital admissions in Brazil with DuckDB"
+subtitle: "A patient geographical flow study"
+date: "2024-06-11"
+bibliography: ref.bib
+categories: [duckdb, sih]
+lightbox: auto
+---
+
+On ideal circumstances, any hospital admission would take place at the same city of residence of the patient. This facilitates the patient and family dislocation to the hospital, staying in a more familiar surrounding, and making the whole process less stressful. But, to a management point of view, this requires that all cities equal present a complete and extremely expensive set of hospital units, able to take care from simple diagnosis to complex organs transfusions
+
+Thus, a national health system is usually organized under hierarchy and centralization principles. On this setting, smaller cities with less population have more simple resources and bigger cities have more complex resources at disposal. This administrative optimization comes with a cost: patients will likely need to travel to another city in order to receive a more complex health treatment, creating a flow of patients seeking for health care.
+
+We will study here the flow of patients for hospital admissions using Brazilian datasets from its Universal Health System (SUS). This data is originally from the [DataSUS](https://datasus.saude.gov.br/), the informatics department of the Brazilian Health Ministry.
+
+## Dataset
+
+We will use the Hospital Admissions data prepared by the [PCDaS/Fiocruz](https://pcdas.icict.fiocruz.br) with the original DataSUS data. This dataset is already cleaned, enriched and fully documented. I downloaded the CSV version, which contains 5,210 files, totaling 315.7 GB.
+
+On these files, each row represents a hospital admission, and several variables of interest are available, including the patient's municipality code of residence, the hospital's code municipality and the date of the hospital admission.
+
+It is a lot of data to process, making it very unpractical to just load the files into the computer memory.
+
+The [DuckDB](https://duckdb.org/) database is very interesting for this case:
+
+-   I will not need to create or have access to a database server, the DuckDB database is a just a file on your computer.
+
+-   DuckDB have dedicated functions to parse and import CSV files straight to the database.
+
+-   It is very fast for aggregate and other analytical functions that need to access all rows.
+
+-   It is seamless integrated with R and `{dplyr}` verbs.
+
+## Database creation
+
+First, we need to call some packages and create the database and create an empty table on it.
+
+```{r}
+#| message: false
+library(duckdb)
+library(duckplyr)
+library(glue)
+```
+
+```{r}
+#| eval: false
+con <- dbConnect(duckdb(), dbdir = "pcdas_sih.duckdb", read_only = FALSE) #<1>
+
+dbExecute(con, "CREATE TABLE sih (
+    cod_res VARCHAR,
+    cod_int VARCHAR,
+    dt_inter DATE,
+    def_ident VARCHAR,
+    def_car_int VARCHAR
+)")  #<2>
+```
+
+1.  Create an empty database on the computer.
+2.  Create the `sih` table with a schema.
+
+Now, we will populate the `sih` table with a loop.
+
+```{r}
+#| eval: false
+years <- 2008:2023
+
+for(y in years){
+  message(y)
+  query <- glue("INSERT INTO sih 
+          SELECT res_codigo_adotado AS cod_res, 
+          int_MUNCOD AS cod_int, 
+          DT_INTER AS dt_inter, def_ident, def_car_int 
+          FROM read_csv('/media/raphael/lacie/pcdas_sih/csv/*[y]*.csv',
+          delim = ',',
+          header = true,
+          dateformat = '%Y%m%d',
+          types = {'res_codigo_adotado': 'VARCHAR',
+          'int_MUNCOD': 'VARCHAR',
+          'dt_inter': 'DATE',
+          'def_ident': 'VARCHAR',
+          'def_car_int': 'VARCHAR'},
+          union_by_name = true
+          )", .open = "[", .close = "]")
+  
+  dbExecute(con, query)
+}
+
+dbDisconnect(con)
+```
+
+The query may seem a little complicated, but it is simple if we look at it by parts:
+
+-   For each year `y` from 2008 to 2023...
+
+-   Using the connection `con`, `INSERT INTO` the table `sih` the selected columns (changing its original names) `FROM` the csv files. This is achieved with the DuckDB's function `read_csv`. Here, DuckDB will parse the CSV files contents that have the year `y` on its name (*`[y]`*`.csv`).
+
+::: callout-note
+I tried to read all 5,210 files at once, but I received messages about "Too many files open". This loop required fewer files to be open at the same time, being very effective.
+:::
+
+::: callout-tip
+One nice thing here is that we are reading into our table [only the variables we want]{.underline} from the CSV files, reducing the database size and saving time.
+:::
+
+After importing all CSV files, the database occupies **829MB** on disk and the `sih` table have **187,735,977 rows**.
+
+## Flow computation
+
+Let's compute the yearly flow of patients starting in 2008.
+
+To compute the amount of patients that goes from a municipality to another on one year, we will do a grouping operation and observe the number of rows on each group.
+
+```{r}
+#| message: false
+con <- dbConnect(duckdb(), dbdir = "../../flowsus/pcdas_sih.duckdb", read_only = FALSE) #<1>
+
+sih_tbl <- dplyr::tbl(con, "sih") #<2>
+
+res_geral <- sih_tbl |> #<3>
+  filter(def_ident == "Normal") |> #<4>
+  filter(year(dt_inter) >= 2008 & year(dt_inter) <= 2023) |> #<4>
+  mutate(year = year(dt_inter)) |> #<5>
+  summarise( #<56
+    weight = n(), #<6>
+    .by = c(year, cod_res, cod_int) #<6>
+  ) |> #<6>
+  collect() #<7>
+
+dbDisconnect(con) #<8>
+```
+
+1.  Connect with the database on read-only mode.
+2.  Create a virtual connection to the `sih` table.
+3.  `res_geral` will be the object that will receive the results.
+4.  Filter the hospital admissions, considering only the typical admissions (this excludes long-stays admissions, like mental healthcare) and filter hospital admissions that took place between 2008 and 2023.
+5.  Create a new variable: the year of the hospital admission.
+6.  Summarize the table, by year and municipality of residence and destination, creating a `weight` variable that will receive the amount with rows.
+7.  Executes the query on the DuckDB database, returning a tibble ready-to-use.
+8.  Disconnect the database.
+
+The `res_geral` tibble present 1,395,512 rows.
+
+```{r}
+head(res_geral)
+```
+
+::: callout-note
+There are rows where the municipality of origin and destiny are the same. This represents the hospital admissions that took place at the [same municipality of residence of the patient]{.underline}.
+:::
+
+Discarding these loop-cases, the biggest observed flow occurred on 2021, when 28,375 hospital admissions occurred with patients from Jaboatão dos Guararapes, PE being admitted to hospitals from Recife, PE
+
+```{r}
+res_geral |> 
+  filter(cod_res != cod_int) |>
+  arrange(-weight) |>
+  head(10)
+```
+
+In total, 58,216,831 hospital admissions in Brazil occurred outside the patient's residence municipality between 2008 and 2023.
+
+```{r}
+res_geral |> 
+  filter(cod_res != cod_int) |>
+  pull(weight) |>
+  sum()
+```
+
+And 124,835,812 hospital admissions in Brazil occurred at the same patient's residence municipality between 2008 and 2023.
+
+```{r}
+res_geral |> 
+  filter(cod_res == cod_int) |>
+  pull(weight) |>
+  sum()
+```
+
+## Map
+
+The flow of patients deserves a map! Let's take a look at the last year available (2023).
+
+We will need more packages.
+
+```{r}
+#| message: false
+library(dplyr)
+library(geobr)
+library(sf)
+library(edgebundle)
+library(igraph)
+library(ggplot2)
+```
+
+For the map, we will need the geographical coordinates of the municipalities and the state boundaries. The [geobr](https://ipeagit.github.io/geobr/) package is very handy for this.
+
+```{r}
+seats <- read_municipal_seat(showProgress = FALSE) |>
+  mutate(code_muni = substr(code_muni, 0, 6))
+
+states <- read_state(showProgress = FALSE)
+```
+
+Prepare the municipal seats database.
+
+```{r}
+seats <- seats |>
+  mutate(code_muni = substr(code_muni, 0, 6)) |>
+  mutate(longitude = st_coordinates(seats)[,1],
+         latitude = st_coordinates(seats)[,2]) |>
+  st_drop_geometry() |>
+  select(code_muni, longitude, latitude)
+
+head(seats)
+```
+
+And prepare the flow data for 2023. I will remove flows with less than 10 hospital admissions.
+
+```{r}
+res_2023 <- res_geral |>
+  filter(weight >= 10) |>
+  filter(cod_res %in% seats$code_muni & cod_int %in% seats$code_muni) |>
+  filter(cod_res != cod_int) |>
+  filter(year == 2023) |>
+  select(2:4)
+
+head(res_2023)
+```
+
+Now, we will create an [igraph](https://r.igraph.org/) object to represent the network.
+
+```{r}
+g_2023 <- graph_from_data_frame(d = res_2023, directed = TRUE, vertices = seats)
+```
+
+And pairs of coordinates and vertices objects.
+
+```{r}
+xy_2023 <- cbind(V(g_2023)$longitude, V(g_2023)$latitude)
+verts_2023 <- data.frame(x = V(g_2023)$longitude, y = V(g_2023)$latitude)
+```
+
+To plot the vertices, we will use a nice function from the [edgebundle](https://schochastics.github.io/edgebundle/) package. This may take some time to be computed.
+
+```{r}
+pbundle_2023 <- edge_bundle_path(g_2023, xy_2023, max_distortion = 12, weight_fac = 2, segments = 50)
+
+pbundle_2023 <- pbundle_2023 %>% 
+  left_join(res_2023 |> mutate(id = row_number()) |> select(c(id, weight)), by=c('group' = 'id')) |> 
+  st_as_sf(coords=c('x', 'y'), crs=4326) |>
+  group_by(group) |>
+  summarise(weight=mean(weight), do_union=FALSE) |>
+  arrange(weight) |>
+  st_cast("LINESTRING")
+```
+
+Now, all needed objects are ready. Let's plot it.
+
+```{r}
+#| fig-dpi: 600
+#| column: page
+#| fig-asp: 1
+
+ggplot() +
+  geom_sf(
+    data = states,
+    col = "white", linewidth = 0.1, fill = NA
+  ) +
+  geom_sf(
+    data = pbundle_2023, aes(group = group, linewidth = log(weight), color = log(weight), alpha = 0.5),
+  ) +
+  scale_linewidth(range = c(0.001, .2)) +
+  scale_colour_gradient(low = "#3d0038", high = "#f993f1") +
+  geom_point(
+    data = verts_2023, aes(x, y),
+    stroke = 0,
+    col = "white", size = 0.1, alpha = 0.3
+  ) +
+  labs(title = "Patient's flow for hospital admission, 2023") +
+  ggraph::theme_graph(background = "black") +
+  theme(plot.title = element_text(color = "white"), legend.position = "none")
+```
+
+You can observe that some of the patient's flow are its state of residence. On those cases, the patient is likely traveling to the state capital or to some big city within the state to receive healthcare. But the states size in Brazil varies a lot: the Amazonas state, by example, has an area bigger than Spain and France together. Also, other kind of flow occurs between states, typically from the interior or capital city from one state to the capital or regional center of the other state.
+
+One important thing to observe is that some of those flows are expected, like the case where patients need to be admitted by hospitals with very specific capacities due to the patient's disease and conditions.
+
+The analysis of patient flows in a health system is very interesting and can guide health managers to better understand and organize the health system. I published with some colleagues on this theme some time ago ([@Saldanha2019a], [@Xavier2019] and [@fonsecaGeographicAccessibilityCancer2022]).
+
+## Session info
+
+```{r}
+sessioninfo::session_info()
+```
