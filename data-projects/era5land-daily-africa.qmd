@@ -40,7 +40,17 @@ The table bellow contains the time aggregation functions applied to each climate
 Data from 1980 to 2023 is ready to use and available on Zenodo. Data from 1950 to 1979 is being processed and will be made available soon.
 
 | Year | Zenodo deposit                                                                                                     |
-|------------------|------------------------------------------------------|
+|------------|------------------------------------------------------------|
+| 1970 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.12093490-green.svg)](https://doi.org/10.5281/zenodo.12093490) |
+| 1971 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.12089903-green.svg)](https://doi.org/10.5281/zenodo.12089903) |
+| 1972 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.12089641-green.svg)](https://doi.org/10.5281/zenodo.12089641) |
+| 1973 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.12089236-green.svg)](https://doi.org/10.5281/zenodo.12089236) |
+| 1974 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.12088798-green.svg)](https://doi.org/10.5281/zenodo.12088798) |
+| 1975 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.12088301-green.svg)](https://doi.org/10.5281/zenodo.12088301) |
+| 1976 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.12088006-green.svg)](https://doi.org/10.5281/zenodo.12088006) |
+| 1977 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.12087736-green.svg)](https://doi.org/10.5281/zenodo.12087736) |
+| 1978 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.12087488-green.svg)](https://doi.org/10.5281/zenodo.12087488) |
+| 1979 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.12087290-green.svg)](https://doi.org/10.5281/zenodo.12087290) |
 | 1980 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11396191-green.svg)](https://doi.org/10.5281/zenodo.11396191) |
 | 1981 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11396136-green.svg)](https://doi.org/10.5281/zenodo.11396136) |
 | 1982 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11396006-green.svg)](https://doi.org/10.5281/zenodo.11396006) |
