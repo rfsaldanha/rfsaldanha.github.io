@@ -217,7 +217,6 @@ And prepare the flow data for 2023. I will remove flows with less than 10 hospit
 
 ```{r}
 res_2023 <- res_geral |>
-  filter(weight >= 10) |>
   filter(cod_res %in% seats$code_muni & cod_int %in% seats$code_muni) |>
   filter(cod_res != cod_int) |>
   filter(year == 2023) |>
@@ -242,18 +241,85 @@ verts_2023 <- data.frame(x = V(g_2023)$longitude, y = V(g_2023)$latitude)
 To plot the vertices, we will use a nice function from the [edgebundle](https://schochastics.github.io/edgebundle/) package. This may take some time to be computed.
 
 ```{r}
+pbundle_2023 <- edge_bundle_force(g_2023, xy_2023, compatibility_threshold = 0.6)
+```
+
+Now, all needed objects are ready. Let's plot it.
+
+```{r}
+#| fig-dpi: 120
+#| column: page
+#| fig-asp: 1
+
+ggplot() +
+    geom_sf(
+        data = states, 
+        col = "white", size = 0.1, fill = NA
+    ) +
+    geom_path(
+        data = pbundle_2023, aes(x, y, group = group),
+        col = "#9d0191", size = 0.05
+    ) +
+    geom_path(
+        data = pbundle_2023, aes(x, y, group = group),
+        col = "white", size = 0.005
+    ) +
+    geom_point(
+        data = verts_2023, aes(x, y),
+        col = "#9d0191", size = 0.25
+    ) +
+    geom_point(
+        data = verts_2023, aes(x, y),
+        col = "white", size = 0.25, alpha = 0.5
+    ) +
+    geom_point(
+        data = verts_2023[verts_2023$name != "", ], aes(x, y),
+        col = "white", size = 3, alpha = 1
+    ) +
+    labs(title = "Patient's flow for hospital admission, 2023") +
+    ggraph::theme_graph(background = "black") +
+    theme(plot.title = element_text(color = "white"))
+```
+
+You can observe that some of the patient's flow are its state of residence. On those cases, the patient is likely traveling to the state capital or to some big city within the state to receive healthcare. But the states size in Brazil varies a lot: the Amazonas state, by example, has an area bigger than Spain and France together. Also, other kind of flow occurs between states, typically from the interior or capital city from one state to the capital or regional center of the other state.
+
+One important thing to observe is that some of those flows are expected, like the case where patients need to be admitted by hospitals with very specific capacities due to the patient's disease and conditions.
+
+The analysis of patient flows in a health system is very interesting and can guide health managers to better understand and organize the health system. I published with some colleagues on this theme some time ago ([@Saldanha2019a], [@Xavier2019] and [@fonsecaGeographicAccessibilityCancer2022]).
+
+## Extra map
+
+This extra map takes into consideration the weights.
+
+```{r}
+res_2023 <- res_geral |>
+  filter(weight >= 10) |>
+  filter(cod_res %in% seats$code_muni & cod_int %in% seats$code_muni) |>
+  filter(cod_res != cod_int) |>
+  filter(year == 2023) |>
+  select(2:4)
+```
+
+```{r}
+g_2023 <- graph_from_data_frame(d = res_2023, directed = TRUE, vertices = seats)
+```
+
+```{r}
+xy_2023 <- cbind(V(g_2023)$longitude, V(g_2023)$latitude)
+verts_2023 <- data.frame(x = V(g_2023)$longitude, y = V(g_2023)$latitude)
+```
+
+```{r}
 pbundle_2023 <- edge_bundle_path(g_2023, xy_2023, max_distortion = 12, weight_fac = 2, segments = 50)
 
-pbundle_2023 <- pbundle_2023 %>% 
-  left_join(res_2023 |> mutate(id = row_number()) |> select(c(id, weight)), by=c('group' = 'id')) |> 
+pbundle_2023 <- pbundle_2023 %>%
+  left_join(res_2023 |> mutate(id = row_number()) |> select(c(id, weight)), by=c('group' = 'id')) |>
   st_as_sf(coords=c('x', 'y'), crs=4326) |>
   group_by(group) |>
   summarise(weight=mean(weight), do_union=FALSE) |>
   arrange(weight) |>
   st_cast("LINESTRING")
 ```
-
-Now, all needed objects are ready. Let's plot it.
 
 ```{r}
 #| fig-dpi: 600
@@ -280,11 +346,13 @@ ggplot() +
   theme(plot.title = element_text(color = "white"), legend.position = "none")
 ```
 
-You can observe that some of the patient's flow are its state of residence. On those cases, the patient is likely traveling to the state capital or to some big city within the state to receive healthcare. But the states size in Brazil varies a lot: the Amazonas state, by example, has an area bigger than Spain and France together. Also, other kind of flow occurs between states, typically from the interior or capital city from one state to the capital or regional center of the other state.
 
-One important thing to observe is that some of those flows are expected, like the case where patients need to be admitted by hospitals with very specific capacities due to the patient's disease and conditions.
 
-The analysis of patient flows in a health system is very interesting and can guide health managers to better understand and organize the health system. I published with some colleagues on this theme some time ago ([@Saldanha2019a], [@Xavier2019] and [@fonsecaGeographicAccessibilityCancer2022]).
+
+
+
+
+
 
 ## Session info
 
