@@ -40,7 +40,7 @@ The table bellow contains the time aggregation functions applied to each climate
 Data from 1980 to 2023 is ready to use and available on Zenodo. Data from 1950 to 1979 is being processed and will be made available soon.
 
 | Year | Zenodo deposit                                                                                                     |
-|----------------|--------------------------------------------------------|
+|------------------|------------------------------------------------------|
 | 1980 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11396191-green.svg)](https://doi.org/10.5281/zenodo.11396191) |
 | 1981 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11396136-green.svg)](https://doi.org/10.5281/zenodo.11396136) |
 | 1982 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11396006-green.svg)](https://doi.org/10.5281/zenodo.11396006) |
@@ -88,14 +88,4 @@ Data from 1980 to 2023 is ready to use and available on Zenodo. Data from 1950 t
 
 ### Usage statistics
 
-```{r}
-#| echo: false
-#| message: false
-source("era5land-daily-africa_ids.R")
-
-res <- zenstats::deposit_stats(ids_africa, all_versions_only = TRUE, progress = FALSE)
-```
-
--   Statistics update: `r format(Sys.time())`
--   Views: `r sum(res$views)`
--   Downloads: `r format(sum(res$downloads, na.rm = TRUE))`
+Usage statistics of this and other datasets are available [here](https://rfsaldanha.github.io/pkgdash/#datasets).

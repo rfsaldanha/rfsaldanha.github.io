@@ -40,17 +40,7 @@ A paper with the full methodology was published in the Environmental Data Scienc
 
 ### Usage statistics
 
-```{r}
-#| echo: false
-
-ids <- c(10036212, 10947952)
-
-res <- zenstats::deposit_stats(ids, all_versions_only = TRUE, progress = FALSE)
-```
-
--   Date: `r format(Sys.time())`
--   Views: `r sum(res$views)`
--   Downloads: `r format(sum(res$downloads))`
+Usage statistics of this and other datasets are available [here](https://rfsaldanha.github.io/pkgdash/#datasets).
 
 ## Zonal BR-DWGD
 
