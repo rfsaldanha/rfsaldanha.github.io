@@ -2588,5 +2588,19 @@
     "title": "Road distances and trip duration matrix for Brazilian municipalities",
     "section": "Dataset download",
     "text": "Dataset download\nThe dataset with the road distances and trip duration are available on Zenodo, on RDS format, parquet format, and CSV (zipped) format.\nClick the link below to access and download the data.\n\nYou can also download the dataset directly from R, using the {zendown} package.\n\n# install.packages(\"zendown\")\nlibrary(zendown)\n\ndist_brasil_file &lt;- zen_file(11400243, \"dist_brasil.rds\")\n\ndist_brasil &lt;- readRDS(dist_brasil_file)\n\nhead(dist_brasil)\n\n     orig    dest   dist   dur\n1 1100015 1100023 330534 313.6\n2 1100015 1100031 397600 380.7\n3 1100015 1100049 112805 113.9\n4 1100015 1100056 390938 373.2\n5 1100015 1100064 353606 333.9\n6 1100015 1100072 321636 348.5\n\n\n\nGraphs\n\nlibrary(ggplot2)\n\nggplot(data = dist_brasil, aes(x = dist/1000)) +\n  geom_histogram(bins = 100) +\n  labs(\n    title = \"Fastest route road distance between Brazilian municipalities\", \n    x = \"Distance (km)\", y = \"count\"\n  ) +\n  theme_bw()\n\n\n\n\n\n\n\n\n\nggplot(data = dist_brasil, aes(x = dur/60)) +\n  geom_histogram(bins = 100) +\n  labs(\n    title = \"Fastest route estimated trip duration between Brazilian municipalities\", \n    x = \"Trip duration (hours)\", y = \"count\"\n  ) +\n  theme_bw()"
+  },
+  {
+    "objectID": "code.html#r-packages",
+    "href": "code.html#r-packages",
+    "title": "Packages & Code",
+    "section": "R packages",
+    "text": "R packages\n\nmicrodatasus\nR package to download and pre-process datasets from DataSUS, Brazilian Health Ministry.\n  \n\n\nbrpop\nR package with Brazilian population estimates.\n   \n\n\ntidyrates\nR package to compute age-standardized epidemiological rates in a tidy way.\n   \n\n\nzendown\nR package to download and cache files from Zenodo deposits.\n   \n\n\nzenstats\nR package to fetch statistics of views, downloads and volume from Zenodo deposits.\n   \n\n\nnseq\nR package to compute counts and statistics of occurrence of events in sequences that meets a criterion.\n   \n\n\nrspell\nR package to grammar check documents inside RStudio.\n  \n\n\nzonalclim\nR package to compute zonal statistics of climate indicators.\n  \n\n\nbrclimr\nR package to retrieve municipal climate indicators of Brazilian municipalities.\n   \n\n\nopendenguedata\nR package to download dengue data from the OpenDengue project."
+  },
+  {
+    "objectID": "code.html#packages-download-statistics",
+    "href": "code.html#packages-download-statistics",
+    "title": "Packages & Code",
+    "section": "Packages download statistics",
+    "text": "Packages download statistics\nDownload statistics of packages on CRAN are available here."
   }
 ]
