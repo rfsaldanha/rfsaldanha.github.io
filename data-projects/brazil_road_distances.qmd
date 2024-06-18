@@ -81,7 +81,7 @@ For some pairs of municipalities, the OSRM service is not able to determine a po
 
 The scripts used to prepare the dataset are available [here](https://github.com/rfsaldanha/distbrasil).
 
-## Download dataset
+## Dataset download
 
 The dataset with the road distances and trip duration are available on Zenodo, on RDS format, parquet format, and CSV (zipped) format.
 
@@ -103,6 +103,7 @@ dist_brasil <- readRDS(dist_brasil_file)
 
 head(dist_brasil)
 ```
+
 ### Graphs
 
 ```{r}
@@ -118,6 +119,7 @@ ggplot(data = dist_brasil, aes(x = dist/1000)) +
   ) +
   theme_bw()
 ```
+
 ```{r}
 #| message: false
 #| warning: false
@@ -129,7 +131,6 @@ ggplot(data = dist_brasil, aes(x = dur/60)) +
   ) +
   theme_bw()
 ```
-
 
 ## Future plans
 
