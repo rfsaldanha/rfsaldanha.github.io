@@ -37,10 +37,10 @@ The table bellow contains the time aggregation functions applied to each climate
 
 ## Datasets
 
-Data from 1980 to 2023 is ready to use and available on Zenodo. Data from 1950 to 1979 is being processed and will be made available soon.
+Data from 1970 to 2023 is ready to use and available on Zenodo. Data from 1950 to 1969 is being processed and will be made available soon.
 
 | Year | Zenodo deposit                                                                                                     |
-|------------|------------------------------------------------------------|
+|----------------|--------------------------------------------------------|
 | 1970 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.12093490-green.svg)](https://doi.org/10.5281/zenodo.12093490) |
 | 1971 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.12089903-green.svg)](https://doi.org/10.5281/zenodo.12089903) |
 | 1972 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.12089641-green.svg)](https://doi.org/10.5281/zenodo.12089641) |
