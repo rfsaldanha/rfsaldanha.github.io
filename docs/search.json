@@ -451,8 +451,8 @@
     "objectID": "talks/climate_health_workshop_2023.html#introduction",
     "href": "talks/climate_health_workshop_2023.html#introduction",
     "title": "Disease and climate data fusion for modelling",
-    "section": "Introduction",
-    "text": "Introduction\n\nPostdoctoral researcher at Inria, a French research institute for digital science and technology\nFiocruz, Climate and Health Observatory collaborator\nBSC, Global Health Resilience collaborator"
+    "section": "",
+    "text": "Postdoctoral researcher at Inria, a French research institute for digital science and technology\nFiocruz, Climate and Health Observatory collaborator\nBSC, Global Health Resilience collaborator"
   },
   {
     "objectID": "talks/climate_health_workshop_2023.html#climate-sensitive-diseases",
@@ -689,8 +689,8 @@
     "objectID": "talks/bilis_2023.html#bilis",
     "href": "talks/bilis_2023.html#bilis",
     "title": "BILIS",
-    "section": "BILIS",
-    "text": "BILIS\n\nBanco de Indicadores do Laboratório de Informação em Saúde, ICICT\nA proposal to create an unified health indicators database"
+    "section": "",
+    "text": "Banco de Indicadores do Laboratório de Informação em Saúde, ICICT\nA proposal to create an unified health indicators database"
   },
   {
     "objectID": "talks/bilis_2023.html#motivation",
@@ -1004,8 +1004,8 @@
     "objectID": "pres/ird2024.html#about-me",
     "href": "pres/ird2024.html#about-me",
     "title": "Introduction and Research Proposal",
-    "section": "About me",
-    "text": "About me\n\nBrazilian from Rio de Janeiro\nHusband, father of two dogs and a cat\nLoves cycling and take pictures\nResearcher on Health Geography and Climate-Sensitive Diseases\nR developer"
+    "section": "",
+    "text": "Brazilian from Rio de Janeiro\nHusband, father of two dogs and a cat\nLoves cycling and take pictures\nResearcher on Health Geography and Climate-Sensitive Diseases\nR developer"
   },
   {
     "objectID": "pres/ird2024.html#academic-formation",
@@ -1270,8 +1270,8 @@
     "objectID": "pres/bsc2024.html#main-fields-of-work-and-projects",
     "href": "pres/bsc2024.html#main-fields-of-work-and-projects",
     "title": "Research Experience & Plans",
-    "section": "Main fields of work and projects",
-    "text": "Main fields of work and projects\n\nData handling tools: author of ten R packages to handle health and climate datasets and indicators.\n\n{microdatasus}, {brpop}, {tidyrates}, {zendown}, {zenstats}, {nseq}, {rspell}, {brclimr}, {zonalclim}, {opendenguedata}\n\nVisualization: malaria and COVID-19 interactive visualization dashboards (IRD-FR and Fiocruz-BR)\nAnalysis and modeling of climate-sensitive diseases (Fiocruz-BR, LNCC-BR, BSC, Inria-FR, IRD-FR)"
+    "section": "",
+    "text": "Data handling tools: author of ten R packages to handle health and climate datasets and indicators.\n\n{microdatasus}, {brpop}, {tidyrates}, {zendown}, {zenstats}, {nseq}, {rspell}, {brclimr}, {zonalclim}, {opendenguedata}\n\nVisualization: malaria and COVID-19 interactive visualization dashboards (IRD-FR and Fiocruz-BR)\nAnalysis and modeling of climate-sensitive diseases (Fiocruz-BR, LNCC-BR, BSC, Inria-FR, IRD-FR)"
   },
   {
     "objectID": "pres/bsc2024.html#health-and-climate-indicators",
@@ -1368,8 +1368,8 @@
     "objectID": "talks/multisa_subsets_2024.html#introduction",
     "href": "talks/multisa_subsets_2024.html#introduction",
     "title": "Subset Models for Multivariate Time Series Forecast",
-    "section": "Introduction",
-    "text": "Introduction\n\nAbundant multivariate time series, good opportunity for forecasting machine learning methods\nData may present intrinsic diversity of samples, affecting model’s performance on different parts of the input\nGlobal models: use all available time series\nLocal models: use only time series pertaining to each sample\nData subsets models: our proposal"
+    "section": "",
+    "text": "Abundant multivariate time series, good opportunity for forecasting machine learning methods\nData may present intrinsic diversity of samples, affecting model’s performance on different parts of the input\nGlobal models: use all available time series\nLocal models: use only time series pertaining to each sample\nData subsets models: our proposal"
   },
   {
     "objectID": "talks/multisa_subsets_2024.html#case-example",
@@ -1627,8 +1627,8 @@
     "objectID": "talks/isntd_conference_2023.html#introduction",
     "href": "talks/isntd_conference_2023.html#introduction",
     "title": "Disease and climate data fusion for modelling",
-    "section": "Introduction",
-    "text": "Introduction\n\nPostdoc researcher at Inria, a French research institute for digital science and technology\nBSC, Global Health Resilience collaborator\nFiocruz, Climate and Health Observatory"
+    "section": "",
+    "text": "Postdoc researcher at Inria, a French research institute for digital science and technology\nBSC, Global Health Resilience collaborator\nFiocruz, Climate and Health Observatory"
   },
   {
     "objectID": "talks/isntd_conference_2023.html#climate-sensitive-diseases",
@@ -1809,8 +1809,8 @@
     "objectID": "talks/zenith_seminar_2024.html#introduction",
     "href": "talks/zenith_seminar_2024.html#introduction",
     "title": "Disease and climate data fusion for modeling",
-    "section": "Introduction",
-    "text": "Introduction\n\nPostdoctoral researcher at Inria, Zenith team\nMaster’s at Public Health, Doctorate on Health Information\nData Science applied to Public Health"
+    "section": "",
+    "text": "Postdoctoral researcher at Inria, Zenith team\nMaster’s at Public Health, Doctorate on Health Information\nData Science applied to Public Health"
   },
   {
     "objectID": "talks/zenith_seminar_2024.html#climate-sensitive-diseases",
@@ -2383,8 +2383,8 @@
     "objectID": "talks/hpdasc_workshop_2024.html#context-of-climate-sensitive-diseases",
     "href": "talks/hpdasc_workshop_2024.html#context-of-climate-sensitive-diseases",
     "title": "Advances in climate features engineering and subsets modeling",
-    "section": "Context of Climate-Sensitive diseases",
-    "text": "Context of Climate-Sensitive diseases\n\nDirect relationship: floods, droughts, heat waves…\nIndirect relationship\n\n\n\n\n\n\n%%{\n  init: {\n    'theme': 'base',\n    'themeVariables': {\n      'fontSize': '30px'\n    }\n  }\n}%%\nflowchart LR\n\nclimate(Climate) --&gt; vector(Disease vectors) --&gt; health(Human health)\nclimate --&gt; health\nclimate --&gt; social(Social & economic \\n determinants) --&gt; health"
+    "section": "",
+    "text": "Direct relationship: floods, droughts, heat waves…\nIndirect relationship\n\n\n\n\n\n\n%%{\n  init: {\n    'theme': 'base',\n    'themeVariables': {\n      'fontSize': '30px'\n    }\n  }\n}%%\nflowchart LR\n\nclimate(Climate) --&gt; vector(Disease vectors) --&gt; health(Human health)\nclimate --&gt; health\nclimate --&gt; social(Social & economic \\n determinants) --&gt; health"
   },
   {
     "objectID": "talks/hpdasc_workshop_2024.html#challenge-on-data-structures",
@@ -2602,5 +2602,54 @@
     "title": "Packages & Code",
     "section": "Packages download statistics",
     "text": "Packages download statistics\nDownload statistics of packages on CRAN are available here."
+  },
+  {
+    "objectID": "talks/zenith_seminar_2024.html",
+    "href": "talks/zenith_seminar_2024.html",
+    "title": "Disease and climate data fusion for modeling",
+    "section": "",
+    "text": "Postdoctoral researcher at Inria, Zenith team\nMaster’s at Public Health, Doctorate on Health Information\nData Science applied to Public Health"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html",
+    "href": "talks/hpdasc_workshop_2024.html",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "",
+    "text": "Direct relationship: floods, droughts, heat waves…\nIndirect relationship\n\n\n\n\n\n\n%%{\n  init: {\n    'theme': 'base',\n    'themeVariables': {\n      'fontSize': '30px'\n    }\n  }\n}%%\nflowchart LR\n\nclimate(Climate) --&gt; vector(Disease vectors) --&gt; health(Human health)\nclimate --&gt; health\nclimate --&gt; social(Social & economic \\n determinants) --&gt; health"
+  },
+  {
+    "objectID": "pres/bsc2024.html",
+    "href": "pres/bsc2024.html",
+    "title": "Research Experience & Plans",
+    "section": "",
+    "text": "Data handling tools: author of ten R packages to handle health and climate datasets and indicators.\n\n{microdatasus}, {brpop}, {tidyrates}, {zendown}, {zenstats}, {nseq}, {rspell}, {brclimr}, {zonalclim}, {opendenguedata}\n\nVisualization: malaria and COVID-19 interactive visualization dashboards (IRD-FR and Fiocruz-BR)\nAnalysis and modeling of climate-sensitive diseases (Fiocruz-BR, LNCC-BR, BSC, Inria-FR, IRD-FR)"
+  },
+  {
+    "objectID": "pres/ird2024.html",
+    "href": "pres/ird2024.html",
+    "title": "Introduction and Research Proposal",
+    "section": "",
+    "text": "Brazilian from Rio de Janeiro\nHusband, father of two dogs and a cat\nLoves cycling and take pictures\nResearcher on Health Geography and Climate-Sensitive Diseases\nR developer"
+  },
+  {
+    "objectID": "talks/bilis_2023.html",
+    "href": "talks/bilis_2023.html",
+    "title": "BILIS",
+    "section": "",
+    "text": "Banco de Indicadores do Laboratório de Informação em Saúde, ICICT\nA proposal to create an unified health indicators database"
+  },
+  {
+    "objectID": "talks/isntd_conference_2023.html",
+    "href": "talks/isntd_conference_2023.html",
+    "title": "Disease and climate data fusion for modelling",
+    "section": "",
+    "text": "Postdoc researcher at Inria, a French research institute for digital science and technology\nBSC, Global Health Resilience collaborator\nFiocruz, Climate and Health Observatory"
+  },
+  {
+    "objectID": "talks/climate_health_workshop_2023.html",
+    "href": "talks/climate_health_workshop_2023.html",
+    "title": "Disease and climate data fusion for modelling",
+    "section": "",
+    "text": "Postdoctoral researcher at Inria, a French research institute for digital science and technology\nFiocruz, Climate and Health Observatory collaborator\nBSC, Global Health Resilience collaborator"
   }
 ]
