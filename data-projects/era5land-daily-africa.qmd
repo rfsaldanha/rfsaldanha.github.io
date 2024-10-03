@@ -37,10 +37,30 @@ The table bellow contains the time aggregation functions applied to each climate
 
 ## Datasets
 
-Data from 1970 to 2023 is ready to use and available on Zenodo. Data from 1950 to 1969 is being processed and will be made available soon.
+Data from 1950 to 2023 is ready to use and available on Zenodo. Data from 1950 to 1969 is being processed and will be made available soon.
 
 | Year | Zenodo deposit                                                                                                     |
 |----------------|--------------------------------------------------------|
+| 1950 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.13884834-green.svg)](https://doi.org/10.5281/zenodo.13884834) |
+| 1951 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.13884819-green.svg)](https://doi.org/10.5281/zenodo.13884819) |
+| 1952 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.13884796-green.svg)](https://doi.org/10.5281/zenodo.13884796) |
+| 1953 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.13884788-green.svg)](https://doi.org/10.5281/zenodo.13884788) |
+| 1954 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.13884768-green.svg)](https://doi.org/10.5281/zenodo.13884768) |
+| 1955 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.13884714-green.svg)](https://doi.org/10.5281/zenodo.13884714) |
+| 1956 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.13884703-green.svg)](https://doi.org/10.5281/zenodo.13884703) |
+| 1957 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.13884688-green.svg)](https://doi.org/10.5281/zenodo.13884688) |
+| 1958 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.13884677-green.svg)](https://doi.org/10.5281/zenodo.13884677) |
+| 1959 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.13884661-green.svg)](https://doi.org/10.5281/zenodo.13884661) |
+| 1960 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.13884645-green.svg)](https://doi.org/10.5281/zenodo.13884645) |
+| 1961 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.13884623-green.svg)](https://doi.org/10.5281/zenodo.13884623) |
+| 1962 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.13884613-green.svg)](https://doi.org/10.5281/zenodo.13884613) |
+| 1963 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.13884596-green.svg)](https://doi.org/10.5281/zenodo.13884596) |
+| 1964 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.13860380-green.svg)](https://doi.org/10.5281/zenodo.13860380) |
+| 1965 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.13860349-green.svg)](https://doi.org/10.5281/zenodo.13860349) |
+| 1966 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.13860303-green.svg)](https://doi.org/10.5281/zenodo.13860303) |
+| 1967 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.13860265-green.svg)](https://doi.org/10.5281/zenodo.13860265) |
+| 1968 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.13860240-green.svg)](https://doi.org/10.5281/zenodo.13860240) |
+| 1969 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.13375124-green.svg)](https://doi.org/10.5281/zenodo.13375124) |
 | 1970 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.12093490-green.svg)](https://doi.org/10.5281/zenodo.12093490) |
 | 1971 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.12089903-green.svg)](https://doi.org/10.5281/zenodo.12089903) |
 | 1972 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.12089641-green.svg)](https://doi.org/10.5281/zenodo.12089641) |
