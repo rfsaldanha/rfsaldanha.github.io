@@ -1,6 +1,7 @@
 ---
 title: "Road distances and trip duration matrix for Brazilian municipalities"
 bibliography: references.bib
+image: images/map_route.png
 ---
 
 ## Introduction
