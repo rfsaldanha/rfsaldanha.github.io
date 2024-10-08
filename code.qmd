@@ -60,6 +60,12 @@ R package to retrieve municipal climate indicators of Brazilian municipalities.
 
 [![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/brclimr-blue)](https://rfsaldanha.github.io/brclimr/) [![](https://img.shields.io/github/stars/rfsaldanha/brclimr)](https://github.com/rfsaldanha/brclimr) [![](https://github.com/rfsaldanha/brclimr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/brclimr/actions/workflows/R-CMD-check.yaml) [![](https://img.shields.io/cran/v/brclimr)](https://cran.r-project.org/package=brclimr)
 
+### plugfieldapi
+
+R package to to access the Plugfield API and retrieve data from weather stations.
+
+[![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/plugfieldapi-blue)](https://rfsaldanha.github.io/plugfieldapi/) [![](https://img.shields.io/github/stars/rfsaldanha/plugfieldapi)](https://github.com/rfsaldanha/plugfieldapi) [![](https://github.com/rfsaldanha/plugfieldapi/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/plugfieldapi/actions/workflows/R-CMD-check.yaml)
+
 ### opendenguedata
 
 R package to download dengue data from the OpenDengue project.
