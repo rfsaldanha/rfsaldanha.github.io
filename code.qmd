@@ -60,9 +60,15 @@ R package to retrieve municipal climate indicators of Brazilian municipalities.
 
 [![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/brclimr-blue)](https://rfsaldanha.github.io/brclimr/) [![](https://img.shields.io/github/stars/rfsaldanha/brclimr)](https://github.com/rfsaldanha/brclimr) [![](https://github.com/rfsaldanha/brclimr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/brclimr/actions/workflows/R-CMD-check.yaml) [![](https://img.shields.io/cran/v/brclimr)](https://cran.r-project.org/package=brclimr)
 
+### zonalclim
+
+R package with helper functions to compute zonal statistics using NetCDF and sf objects for climate studies.
+
+[![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/zonalclim-blue)](https://rfsaldanha.github.io/zonalclim/) [![](https://img.shields.io/github/stars/rfsaldanha/zonalclim)](https://github.com/rfsaldanha/zonalclim) [![](https://github.com/rfsaldanha/zonalclim/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/zonalclim/actions/workflows/R-CMD-check.yaml)
+
 ### plugfieldapi
 
-R package to to access the Plugfield API and retrieve data from weather stations.
+R package to access the Plugfield API and retrieve data from weather stations.
 
 [![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/plugfieldapi-blue)](https://rfsaldanha.github.io/plugfieldapi/) [![](https://img.shields.io/github/stars/rfsaldanha/plugfieldapi)](https://github.com/rfsaldanha/plugfieldapi) [![](https://github.com/rfsaldanha/plugfieldapi/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/plugfieldapi/actions/workflows/R-CMD-check.yaml)
 
