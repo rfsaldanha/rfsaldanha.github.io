@@ -1,0 +1,135 @@
+---
+title: "Road distances and trip duration matrix for USA counties"
+bibliography: references.bib
+image: images/map_route_usa.png
+---
+
+## Introduction
+
+Distance information between places is useful to evaluate the proximity and interconnection of regions. The Euclidean distance between two places, although simple and easy to compute, is not realistic in terms of dislocation costs. This dataset present the **road distance and trip duration metrics** between all USA counties.
+
+## Methods
+
+I used the county database from [Simple Maps](https://simplemaps.com/data/us-counties) (basic 2024 version), with 3,144 entries.
+
+A list of pairs of counties is computed using simple combinatorial analysis. Example:
+
+```{r}
+x <- c("a", "b", "c", "d")
+
+combn(x, m = 2)
+```
+
+::: callout-note
+With this, I assume that the distance between two counties is the same, independently of the direction.
+:::
+
+Thus, for the 3,144 counties, we will have a total number of routes to be computed:
+
+```{r}
+choose(n = 3144, k = 2)
+```
+
+To compute the road distance between pairs of counties, the [OSRM](http://project-osrm.org/) API service was used, with the [{osrm}](https://cran.r-project.org/package=osrm) package [@osrm_paper_2022]. More specifically, the table service was used, considering the "car" profile, returning as result the distance in **meters** and estimated trip duration in **minutes** for the **fastest** route found.
+
+### Route example
+
+For example, lets compute the road distance between New York County, NY and Los Angeles Counties, CA with the {osrm} package.
+
+```{r}
+#| message: false
+#| warning: false
+library(osrm)
+library(leaflet)
+library(sf)
+
+new_york <- c(-73.9668, 40.7792)
+los_angeles <- c(-118.2247, 34.3219)
+
+route <- osrmRoute(
+  src = new_york, dst = los_angeles, 
+  overview = "full",
+  osrm.profile = "car"
+)
+```
+
+```{r}
+# Route distance, in meters
+route$distance
+```
+
+```{r}
+# Route duration, in minutes
+route$duration
+```
+
+```{r}
+route |>
+  st_transform(4326) |>
+  leaflet() |>
+  addTiles() |>
+  addPolylines()
+```
+
+::: callout-important
+For some pairs of counties, the OSRM service is not able to determine a possible road route. This is expected, as some counties may be not reachable by road.
+:::
+
+The scripts used to prepare the dataset are available [here](https://github.com/rfsaldanha/distusa).
+
+## Dataset download
+
+The dataset with the road distances and trip duration are available on Zenodo, on RDS format, parquet format, and CSV format.
+
+Click the link below to access and download the data.
+
+[![](https://zenodo.org/badge/DOI/10.5281/zenodo.13906981.svg)](https://doi.org/10.5281/zenodo.13906981)
+
+You can also download the dataset directly from R, using the [{zendown}](https://rfsaldanha.github.io/zendown/) package.
+
+```{r}
+#| message: false
+#| warning: false
+# install.packages("zendown")
+library(zendown)
+
+dist_usa_file <- zen_file(13906981, "dist_usa.rds")
+
+dist_usa <- readRDS(dist_usa_file)
+
+head(dist_usa)
+```
+
+### Graphs
+
+```{r}
+#| message: false
+#| warning: false
+library(ggplot2)
+
+ggplot(data = dist_usa, aes(x = dist/1000)) +
+  geom_histogram(bins = 100) +
+  labs(
+    title = "Fastest route road distance between USA counties", 
+    x = "Distance (km)", y = "count"
+  ) +
+  theme_bw()
+```
+
+```{r}
+#| message: false
+#| warning: false
+ggplot(data = dist_usa, aes(x = dur/60)) +
+  geom_histogram(bins = 100) +
+  labs(
+    title = "Fastest route estimated trip duration between USA counties", 
+    x = "Trip duration (hours)", y = "count"
+  ) +
+  theme_bw()
+```
+
+## Future plans
+
+-   Compute routes using other available routing services.
+
+-   Yearly updates of the dataset, as the road infrastructure may change.
