@@ -26,7 +26,7 @@ Selected indicators hourly data were [downloaded and aggregated at daily basis](
 The following indicators and aggregations were computed.
 
 | ERA5-Land indicators  | Daily time-aggregating functions | Spatial zonal statistics    |
-|--------------------|----------------------------|------------------------|
+|-----------------------|----------------------------------|-----------------------------|
 | Temperature (2m)      | mean, max, min                   | max, min, stdev, count      |
 | Dewpoint temp. (2m)   | mean                             | max, min, stdev, count      |
 | $u$ component of wind | mean                             | max, min, stdev, count      |
@@ -44,19 +44,23 @@ Usage statistics of this and other datasets are available [here](https://rfsalda
 
 ## Zonal BR-DWGD
 
-[![](https://img.shields.io/badge/download-10.5281/zenodo.7824920-green.svg)](https://doi.org/10.5281/zenodo.7824920)
+1961-01-01 to 2024-03-20: [![](https://img.shields.io/badge/download-10.5281/zenodo.13906834-green.svg)](https://doi.org/10.5281/zenodo.13906834)
 
-The BR-DWGD dataset [@xavier2022] presents daily meteorological data interpolated to a grid with 0.1° × 0.1° of spatial resolution for the Brazilian territory, with daily data from January 1, 1961, to July 31, 2020. It used data from 1,252 weather stations and 11,473 rain gauges in its interpolation methods, cross-validated to the selection of the best method for each weather indicator.
+The BR-DWGD dataset [@xavier2022] presents daily meteorological data interpolated to a grid with 0.1° × 0.1° of spatial resolution for the Brazilian territory, with daily data starting on January 1, 1961. It uses data from several weather stationsrain gauges in its interpolation methods, cross-validated to the selection of the best method for each weather indicator.
 
 The following weather indicators are available from the BR-DWGD study: precipitation (mm), minimum temperature (°C), maximum temperature (°C), solar radiation (MJ⋅m−2 ), wind speed at 2m height (m⋅s−1) and relative humidity (%).
 
 The following zonal statistics were computed.
 
-```{r}
-brclimr::product_info(product = "brdwgd")
-```
+| BR-DGWD indicators    | Daily time-aggregating functions | Spatial zonal statistics    |
+|-----------------------|----------------------------------|-----------------------------|
+| Temperature           | max, min                         | max, min, stdev, count      |
+| Relative humidity     | mean                             | max, min, stdev, count      |
+| $u$ component of wind | mean                             | max, min, stdev, count      |
+| Evapotranspiration    | mean                             | max, min, stdev, count      |
+| Solar radiation       | mean                             | max, min, stdev, count      |
+| Precipitation         | sum                              | max, min, stdev, count, sum |
 
-The results are availabe as parquet files, available at [Zenodo](https://zenodo.org/records/7824920) and can be also accessed with the [brclimr](https://rfsaldanha.github.io/brclimr) R package.
 
 ## Zonal TerraClimate
 
