@@ -7,6 +7,9 @@ about:
     - icon: github
       text: Github
       href: https://github.com/rfsaldanha
+    - icon: bluesky
+      text: Bluesky
+      href: https://bsky.app/profile/rfsaldanha.bsky.social
     - icon: twitter
       text: Twitter
       href: https://twitter.com/rfsaldanhario
