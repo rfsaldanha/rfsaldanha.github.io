@@ -1,0 +1,13 @@
+{
+    "grammarly.selectors": [
+        {
+            "language": "quarto",
+            "scheme": "file"
+        },
+        {
+            "language": "Log",
+            "scheme": "output",
+            "pattern": "extension-output-znck.grammarly-#2-Grammarly"
+        }
+    ]
+}

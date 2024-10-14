@@ -1,0 +1,180 @@
+---
+title: "Climatological normals and indicators of Brazilian municipalities"
+bibliography: references.bib
+---
+
+## Introduction
+
+Climatological normals are averages of climate variables observed for a given time -- usually months -- in a 30-year range. The normals are usually used as comparison benchmarks against recent or current conditions, being useful to recognize anomalies and to characterize global warming impacts.
+
+These normals are usually computed to surface meteorological stations maintained by government meteorological institutions (QUOTE INMET). In Brazil, the distribution of surface meteorological stations over the territory is scarce and uneven. Thus, the availability of climatological normals to different regions and administrative divisions like municipalities is difficult. 
+
+I propose here a method to compute climatological normals and other climate indicator to the Brazilian municipalities using a climate reanalysis dataset. 
+
+## Methods
+
+Climatological normals can be computed from other sources of observation, including remote sensing sensors and "area averages or points in gridded datasets" [@wmoWMOGuidelinesCalculation2017]. Some gridded climatological datasets are available for the Brazilian territory, including the ERA5-Land from Copernicus [@muñoz-sabater2021] and the BR-DWGD dataset [@xavier2022], offering hourly and daily data (respectively) of several climatological indicators for a long time range, being continuously updated. 
+
+However, some research methods demands that climate data must be aggregated in the same spatial and temporal units of other data to be used in statistical models. This procedure is fairly common in epidemiological and economical studies. In order to approach this issue, spatial gridded data can be aggregated using zonal statistics [@saldanhaZonalStatisticsDatasets2024].
+
+I used the same methodology from the study above to create zonal statistics of climate indicators with data from the BR-DWGD project [@xavier2022]. This data is available [here](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html#zonal-br-dwgd), presenting climatological indicators of interest from 1961 to March 2024 for all Brazilian municipalities. Thus, I propose here to compute the climatological normals and other climate indicators from this dataset.
+
+In order to compute climatological normals and other indicators, I created an R package named [climindi](https://rfsaldanha.github.io/climindi). The package provides helper functions to compute climatological normals and other aggregated indicators in a [tidy](https://www.tidyverse.org) way.
+
+### Packages
+
+```{r}
+#| message: false
+#| warning: false
+library(dplyr)
+library(lubridate)
+library(arrow)
+library(climindi) # http://rfsaldanha.github.io/climindi/
+library(zendown) # https://rfsaldanha.github.io/zendown/
+```
+
+### Data source
+
+We need to download the climate indicators from [here](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html#zonal-br-dwgd). We can use the [{zendown}](https://rfsaldanha.github.io/zendown/) package to download the data files from zenodo this. 
+
+### Precipitation
+
+```{r}
+# Precipitation (mm)
+pr_data <- zen_file(13906834, "pr_3.2.3.parquet") |>
+    open_dataset() |>
+    filter(name == "pr_3.2.3_mean") |>
+    filter(date >= as.Date("1961-01-01")) |>
+    filter(date <= as.Date("2023-12-31")) |>
+    select(-name) |>
+    collect()
+
+# Evapotranspiration (mm)
+eto_data <- zen_file(13906834, "ETo_3.2.3.parquet") |>
+    open_dataset() |>
+    filter(name == "ETo_3.2.3_mean") |>
+    filter(date >= as.Date("1961-01-01")) |>
+    filter(date <= as.Date("2023-12-31")) |>
+    select(-name) |>
+    collect()
+
+# Maximum temperature (°C)
+tmax_data <- zen_file(13906834, "Tmax_3.2.3.parquet") |>
+    open_dataset() |>
+    filter(name == "Tmax_3.2.3_mean") |>
+    filter(date >= as.Date("1961-01-01")) |>
+    filter(date <= as.Date("2023-12-31")) |>
+    select(-name) |>
+    collect()
+
+# Minimum temperature (°C)
+tmin_data <- zen_file(13906834, "Tmin_3.2.3.parquet") |>
+    open_dataset() |>
+    filter(name == "Tmin_3.2.3_mean") |>
+    filter(date >= as.Date("1961-01-01")) |>
+    filter(date <= as.Date("2023-12-31")) |>
+    select(-name) |>
+    collect()
+
+# Solar radiation (MJm-2)
+rs_data <- zen_file(13906834, "Rs_3.2.3.parquet") |>
+    open_dataset() |>
+    filter(name == "Rs_3.2.3_mean") |>
+    filter(date >= as.Date("1961-01-01")) |>
+    filter(date <= as.Date("2023-12-31")) |>
+    select(-name) |>
+    collect()
+
+# Wind speed at 2m height ()m/s
+u2_data <- zen_file(13906834, "u2_3.2.3.parquet") |>
+    open_dataset() |>
+    filter(name == "u2_3.2.3_mean") |>
+    filter(date >= as.Date("1961-01-01")) |>
+    filter(date <= as.Date("2023-12-31")) |>
+    select(-name) |>
+    collect()
+
+# Relative humidity (%)
+rh_data <- zen_file(13906834, "RH_3.2.3.parquet") |>
+    open_dataset() |>
+    filter(name == "RH_3.2.3_mean") |>
+    filter(date >= as.Date("1961-01-01")) |>
+    filter(date <= as.Date("2023-12-31")) |>
+    select(-name) |>
+    collect()
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+text[^1] and present 5,565 features.
+
+[^1]: footnote example
+
+
+::: callout-note
+Example
+:::
+
+
+citation example [@osrm_paper_2022]
+
+
+```{r}
+#| message: false
+#| warning: false
+library(dplyr)
+
+```
+
+
+
+## Dataset download
+
+The dataset with the road distances and trip duration are available on Zenodo, on RDS format, parquet format, and CSV (zipped) format.
+
+Click the link below to access and download the data.
+
+[![](https://zenodo.org/badge/DOI/10.5281/zenodo.11400243.svg)](https://doi.org/10.5281/zenodo.11400243)
+
+You can also download the dataset directly from R, using the [{zendown}](https://rfsaldanha.github.io/zendown/) package.
+
+```{r}
+#| message: false
+#| warning: false
+# install.packages("zendown")
+library(zendown)
+
+dist_brasil_file <- zen_file(11400243, "dist_brasil.rds")
+
+dist_brasil <- readRDS(dist_brasil_file)
+
+head(dist_brasil)
+```
+
+
+
+## Future plans
+
+-   Compute routes using other available routing services.
+
+-   Yearly updates of the dataset, as the road infrastructure may change.
+
+
+## Session info
+
+```{r}
+sessioninfo::session_info()
+```
