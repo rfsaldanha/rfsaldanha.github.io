@@ -46,7 +46,8 @@ For these computations, I needed to increase the envinroment variable `R_MAX_VSI
 
 #### Data
 ```{r}
-# Precipitation (mm)
+#| message: false
+#| warning: false
 pr_data <- zen_file(13906834, "pr_3.2.3.parquet") |>
     open_dataset() |>
     filter(name == "pr_3.2.3_mean") |>
@@ -59,6 +60,8 @@ pr_data <- zen_file(13906834, "pr_3.2.3.parquet") |>
 
 #### Normal
 ```{r}
+#| message: false
+#| warning: false
 pr_normal <- pr_data |>
     # Identify month
     mutate(month = month(date)) |>
@@ -76,7 +79,8 @@ pr_normal <- pr_data |>
 #### Indicators
 
 ```{r}
-tictoc::tic()
+#| message: false
+#| warning: false
 pr_indi <- pr_data |>
     # Identify year
     mutate(year = year(date)) |>
@@ -93,12 +97,13 @@ pr_indi <- pr_data |>
     ) |>
     # Ungroup
     ungroup()
-tictoc::toc()
 ```
 
 #### Export
 
 ```{r}
+#| message: false
+#| warning: false
 write_parquet(x = pr_normal, sink = "pr_normal.parquet")
 write_csv2(x = pr_normal, file = "pr_normal.csv")
 write_parquet(x = pr_indi, sink = "pr_indi.parquet")
