@@ -57,7 +57,6 @@ pr_data <- zen_file(13906834, "pr_3.2.3.parquet") |>
     collect()
 ```
 
-
 #### Normal
 ```{r}
 #| message: false
@@ -110,6 +109,10 @@ write_parquet(x = pr_indi, sink = "pr_indi.parquet")
 write_csv2(x = pr_indi, file = "pr_indi.csv")
 ```
 
+```{r}
+rm(list = ls())
+```
+
 ### Evapotranspiration (mm)
 
 #### Data
@@ -121,6 +124,62 @@ eto_data <- zen_file(13906834, "ETo_3.2.3.parquet") |>
     filter(date <= as.Date("2023-12-31")) |>
     select(-name) |>
     collect()
+```
+
+#### Normal
+```{r}
+#| message: false
+#| warning: false
+eto_normal <- eto_data |>
+    # Identify month
+    mutate(month = month(date)) |>
+    # Group by id variable and month
+    group_by(code_muni, month) |>
+    # Compute normal
+    summarise_normal(
+        date_var = date, value_var = value, 
+        year_start = 1961, year_end = 1990
+    ) |>
+    # Ungroup
+    ungroup()
+```
+
+#### Indicators
+
+```{r}
+#| message: false
+#| warning: false
+eto_indi <- eto_data |>
+    # Identify year
+    mutate(year = year(date)) |>
+    # Identify month
+    mutate(month = month(date)) |>
+    # Filter year
+    filter(year >= 1991) |>
+    # Group by id variable, year and month
+    group_by(code_muni, year, month) |>
+    # Compute precipitation indicators
+    summarise_evapotrapiration(
+        value_var = value, 
+        normals_df = pr_normal
+    ) |>
+    # Ungroup
+    ungroup()
+```
+
+#### Export
+
+```{r}
+#| message: false
+#| warning: false
+write_parquet(x = eto_normal, sink = "eto_normal.parquet")
+write_csv2(x = eto_normal, file = "eto_normal.csv")
+write_parquet(x = eto_indi, sink = "eto_indi.parquet")
+write_csv2(x = eto_indi, file = "eto_indi.csv")
+```
+
+```{r}
+rm(list = ls())
 ```
 
 ### Maximum temperature (°C)
