@@ -116,6 +116,7 @@ rm(list = ls())
 ### Evapotranspiration (mm)
 
 #### Data
+
 ```{r}
 eto_data <- zen_file(13906834, "ETo_3.2.3.parquet") |>
     open_dataset() |>
@@ -161,7 +162,7 @@ eto_indi <- eto_data |>
     # Compute precipitation indicators
     summarise_evapotrapiration(
         value_var = value, 
-        normals_df = pr_normal
+        normals_df = eto_normal
     ) |>
     # Ungroup
     ungroup()
@@ -196,6 +197,62 @@ tmax_data <- zen_file(13906834, "Tmax_3.2.3.parquet") |>
     collect()
 ```
 
+#### Normal
+```{r}
+#| message: false
+#| warning: false
+tmax_normal <- tmax_data |>
+    # Identify month
+    mutate(month = month(date)) |>
+    # Group by id variable and month
+    group_by(code_muni, month) |>
+    # Compute normal
+    summarise_normal(
+        date_var = date, value_var = value, 
+        year_start = 1961, year_end = 1990
+    ) |>
+    # Ungroup
+    ungroup()
+```
+
+#### Indicators
+
+```{r}
+#| message: false
+#| warning: false
+tmax_indi <- tmax_data |>
+    # Identify year
+    mutate(year = year(date)) |>
+    # Identify month
+    mutate(month = month(date)) |>
+    # Filter year
+    filter(year >= 1991) |>
+    # Group by id variable, year and month
+    group_by(code_muni, year, month) |>
+    # Compute precipitation indicators
+    summarise_temp_max(
+        value_var = value, 
+        normals_df = tmax_normal
+    ) |>
+    # Ungroup
+    ungroup()
+```
+
+#### Export
+
+```{r}
+#| message: false
+#| warning: false
+write_parquet(x = tmax_normal, sink = "tmax_normal.parquet")
+write_csv2(x = tmax_normal, file = "tmax_normal.csv")
+write_parquet(x = tmax_indi, sink = "tmax_indi.parquet")
+write_csv2(x = tmax_indi, file = "tmax_indi.csv")
+```
+
+```{r}
+rm(list = ls())
+```
+
 ### Minimum temperature (°C)
 
 #### Data
@@ -208,6 +265,62 @@ tmin_data <- zen_file(13906834, "Tmin_3.2.3.parquet") |>
     filter(date <= as.Date("2023-12-31")) |>
     select(-name) |>
     collect()
+```
+
+#### Normal
+```{r}
+#| message: false
+#| warning: false
+tmin_normal <- tmin_data |>
+    # Identify month
+    mutate(month = month(date)) |>
+    # Group by id variable and month
+    group_by(code_muni, month) |>
+    # Compute normal
+    summarise_normal(
+        date_var = date, value_var = value, 
+        year_start = 1961, year_end = 1990
+    ) |>
+    # Ungroup
+    ungroup()
+```
+
+#### Indicators
+
+```{r}
+#| message: false
+#| warning: false
+tmin_indi <- tmin_data |>
+    # Identify year
+    mutate(year = year(date)) |>
+    # Identify month
+    mutate(month = month(date)) |>
+    # Filter year
+    filter(year >= 1991) |>
+    # Group by id variable, year and month
+    group_by(code_muni, year, month) |>
+    # Compute precipitation indicators
+    summarise_temp_min(
+        value_var = value, 
+        normals_df = tmin_normal
+    ) |>
+    # Ungroup
+    ungroup()
+```
+
+#### Export
+
+```{r}
+#| message: false
+#| warning: false
+write_parquet(x = tmin_normal, sink = "tmin_normal.parquet")
+write_csv2(x = tmin_normal, file = "tmin_normal.csv")
+write_parquet(x = tmin_indi, sink = "tmin_indi.parquet")
+write_csv2(x = tmin_indi, file = "tmin_indi.csv")
+```
+
+```{r}
+rm(list = ls())
 ```
 
 ### Solar radiation (MJm-2)
@@ -224,6 +337,62 @@ rs_data <- zen_file(13906834, "Rs_3.2.3.parquet") |>
     collect()
 ```
 
+#### Normal
+```{r}
+#| message: false
+#| warning: false
+rs_normal <- rs_data |>
+    # Identify month
+    mutate(month = month(date)) |>
+    # Group by id variable and month
+    group_by(code_muni, month) |>
+    # Compute normal
+    summarise_normal(
+        date_var = date, value_var = value, 
+        year_start = 1961, year_end = 1990
+    ) |>
+    # Ungroup
+    ungroup()
+```
+
+#### Indicators
+
+```{r}
+#| message: false
+#| warning: false
+rs_indi <- rs_data |>
+    # Identify year
+    mutate(year = year(date)) |>
+    # Identify month
+    mutate(month = month(date)) |>
+    # Filter year
+    filter(year >= 1991) |>
+    # Group by id variable, year and month
+    group_by(code_muni, year, month) |>
+    # Compute precipitation indicators
+    summarise_solar_radiation(
+        value_var = value, 
+        normals_df = rs_normal
+    ) |>
+    # Ungroup
+    ungroup()
+```
+
+#### Export
+
+```{r}
+#| message: false
+#| warning: false
+write_parquet(x = rs_normal, sink = "rs_normal.parquet")
+write_csv2(x = rs_normal, file = "rs_normal.csv")
+write_parquet(x = rs_indi, sink = "rs_indi.parquet")
+write_csv2(x = rs_indi, file = "rs_indi.csv")
+```
+
+```{r}
+rm(list = ls())
+```
+
 ### Wind speed at 2m height (m/s)
 
 #### Data
@@ -236,6 +405,62 @@ u2_data <- zen_file(13906834, "u2_3.2.3.parquet") |>
     filter(date <= as.Date("2023-12-31")) |>
     select(-name) |>
     collect()
+```
+
+#### Normal
+```{r}
+#| message: false
+#| warning: false
+u2_normal <- u2_data |>
+    # Identify month
+    mutate(month = month(date)) |>
+    # Group by id variable and month
+    group_by(code_muni, month) |>
+    # Compute normal
+    summarise_normal(
+        date_var = date, value_var = value, 
+        year_start = 1961, year_end = 1990
+    ) |>
+    # Ungroup
+    ungroup()
+```
+
+#### Indicators
+
+```{r}
+#| message: false
+#| warning: false
+u2_indi <- u2_data |>
+    # Identify year
+    mutate(year = year(date)) |>
+    # Identify month
+    mutate(month = month(date)) |>
+    # Filter year
+    filter(year >= 1991) |>
+    # Group by id variable, year and month
+    group_by(code_muni, year, month) |>
+    # Compute precipitation indicators
+    summarise_windspeed(
+        value_var = value, 
+        normals_df = u2_normal
+    ) |>
+    # Ungroup
+    ungroup()
+```
+
+#### Export
+
+```{r}
+#| message: false
+#| warning: false
+write_parquet(x = u2_normal, sink = "u2_normal.parquet")
+write_csv2(x = u2_normal, file = "u2_normal.csv")
+write_parquet(x = u2_indi, sink = "u2_indi.parquet")
+write_csv2(x = u2_indi, file = "u2_indi.csv")
+```
+
+```{r}
+rm(list = ls())
 ```
 
 ### Relative humidity (%)
@@ -252,6 +477,61 @@ rh_data <- zen_file(13906834, "RH_3.2.3.parquet") |>
     collect()
 ```
 
+#### Normal
+```{r}
+#| message: false
+#| warning: false
+rh_normal <- rh_data |>
+    # Identify month
+    mutate(month = month(date)) |>
+    # Group by id variable and month
+    group_by(code_muni, month) |>
+    # Compute normal
+    summarise_normal(
+        date_var = date, value_var = value, 
+        year_start = 1961, year_end = 1990
+    ) |>
+    # Ungroup
+    ungroup()
+```
+
+#### Indicators
+
+```{r}
+#| message: false
+#| warning: false
+rh_indi <- rh_data |>
+    # Identify year
+    mutate(year = year(date)) |>
+    # Identify month
+    mutate(month = month(date)) |>
+    # Filter year
+    filter(year >= 1991) |>
+    # Group by id variable, year and month
+    group_by(code_muni, year, month) |>
+    # Compute precipitation indicators
+    summarise_rel_humidity(
+        value_var = value, 
+        normals_df = rh_normal
+    ) |>
+    # Ungroup
+    ungroup()
+```
+
+#### Export
+
+```{r}
+#| message: false
+#| warning: false
+write_parquet(x = rh_normal, sink = "rh_normal.parquet")
+write_csv2(x = rh_normal, file = "rh_normal.csv")
+write_parquet(x = rh_indi, sink = "rh_indi.parquet")
+write_csv2(x = rh_indi, file = "rh_indi.csv")
+```
+
+```{r}
+rm(list = ls())
+```
 
 
 
