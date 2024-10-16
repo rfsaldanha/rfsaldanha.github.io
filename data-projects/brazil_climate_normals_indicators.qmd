@@ -11,6 +11,10 @@ The normals are usually computed with surface meteorological stations data, main
 
 I propose here a method to compute monthly climatological normals for the 1961--1990 and monthly aggregated climate indicators from 1991 to 2023 for Brazilian municipalities using a climate reanalysis dataset. 
 
+:::::: {.callout-tip}
+In a hurry? Jump to the [download](#sec-download) section ;-)
+:::
+
 ## Methods
 
 A climatological normal can be computed with data from different sources, including remote sensing sensors and "area averages or points in gridded datasets" [@wmoWMOGuidelinesCalculation2017]. Some gridded climatological datasets are available for the Brazilian territory, including the ERA5-Land from Copernicus [@muñoz-sabater2021] and the BR-DWGD dataset [@xavier2022], offering several climatological indicators for a long time range, and continuously updates. 
@@ -527,7 +531,7 @@ write_parquet(x = rh_indi, sink = "rh_indi.parquet")
 write_csv2(x = rh_indi, file = "rh_indi.csv")
 ```
 
-## Results and dataset download
+## Results and dataset download {#sec-download}
 
 The climatological normals and aggregated indicators of Brazilian municipalities can be downloaded from Zenodo on CSV and parquet formats. Click the link bellow to access and download the data. 
 

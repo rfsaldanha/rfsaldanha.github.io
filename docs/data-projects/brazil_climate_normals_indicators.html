@@ -233,7 +233,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   <li><a href="#wind-speed-at-2m-height-ms" id="toc-wind-speed-at-2m-height-ms" class="nav-link" data-scroll-target="#wind-speed-at-2m-height-ms">Wind speed at 2m height (m/s)</a></li>
   <li><a href="#relative-humidity" id="toc-relative-humidity" class="nav-link" data-scroll-target="#relative-humidity">Relative humidity (%)</a></li>
   </ul></li>
-  <li><a href="#results-and-dataset-download" id="toc-results-and-dataset-download" class="nav-link" data-scroll-target="#results-and-dataset-download">Results and dataset download</a>
+  <li><a href="#sec-download" id="toc-sec-download" class="nav-link" data-scroll-target="#sec-download">Results and dataset download</a>
   <ul class="collapse">
   <li><a href="#maximum-temperature-rio-de-janeiro-rj-2023" id="toc-maximum-temperature-rio-de-janeiro-rj-2023" class="nav-link" data-scroll-target="#maximum-temperature-rio-de-janeiro-rj-2023">Maximum temperature, Rio de Janeiro, RJ, 2023</a></li>
   </ul></li>
@@ -253,6 +253,19 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <p>Climatological normals are averages of climate variables observed for a given time – usually months – in a 30-year range. The normals are usually used as comparison benchmarks against recent or current conditions, being useful to recognize anomalies and to characterize global warming impacts.</p>
 <p>The normals are usually computed with surface meteorological stations data, maintained by government meteorological institutions, and its distribution over the territory may be scarce or uneven, like in Brazil. Thus, the availability of climatological normals to different regions and administrative divisions like municipalities is difficult to obtain.</p>
 <p>I propose here a method to compute monthly climatological normals for the 1961–1990 and monthly aggregated climate indicators from 1991 to 2023 for Brazilian municipalities using a climate reanalysis dataset.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In a hurry? Jump to the <a href="#sec-download">download</a> section ;-)</p>
+</div>
+</div>
 </section>
 <section id="methods" class="level2">
 <h2 class="anchored" data-anchor-id="methods">Methods</h2>
@@ -776,8 +789,8 @@ Warning
 </section>
 </section>
 </section>
-<section id="results-and-dataset-download" class="level2">
-<h2 class="anchored" data-anchor-id="results-and-dataset-download">Results and dataset download</h2>
+<section id="sec-download" class="level2">
+<h2 class="anchored" data-anchor-id="sec-download">Results and dataset download</h2>
 <p>The climatological normals and aggregated indicators of Brazilian municipalities can be downloaded from Zenodo on CSV and parquet formats. Click the link bellow to access and download the data.</p>
 <p><a href="https://doi.org/10.5281/zenodo.13934888"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.13934888.svg" class="img-fluid"></a></p>
 <p>You can also download the dataset directly from R, using the <a href="https://rfsaldanha.github.io/zendown/">{zendown}</a> package.</p>
@@ -852,23 +865,23 @@ Warning
 <span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">use_seps =</span> <span class="cn">FALSE</span></span>
 <span id="cb32-14"><a href="#cb32-14" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="qdfpyachaq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#qdfpyachaq table {
+<div id="xrxtqehcje" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#xrxtqehcje table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#qdfpyachaq thead, #qdfpyachaq tbody, #qdfpyachaq tfoot, #qdfpyachaq tr, #qdfpyachaq td, #qdfpyachaq th {
+#xrxtqehcje thead, #xrxtqehcje tbody, #xrxtqehcje tfoot, #xrxtqehcje tr, #xrxtqehcje td, #xrxtqehcje th {
   border-style: none;
 }
 
-#qdfpyachaq p {
+#xrxtqehcje p {
   margin: 0;
   padding: 0;
 }
 
-#qdfpyachaq .gt_table {
+#xrxtqehcje .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -894,12 +907,12 @@ Warning
   border-left-color: #D3D3D3;
 }
 
-#qdfpyachaq .gt_caption {
+#xrxtqehcje .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#qdfpyachaq .gt_title {
+#xrxtqehcje .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -911,7 +924,7 @@ Warning
   border-bottom-width: 0;
 }
 
-#qdfpyachaq .gt_subtitle {
+#xrxtqehcje .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -923,7 +936,7 @@ Warning
   border-top-width: 0;
 }
 
-#qdfpyachaq .gt_heading {
+#xrxtqehcje .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -935,13 +948,13 @@ Warning
   border-right-color: #D3D3D3;
 }
 
-#qdfpyachaq .gt_bottom_border {
+#xrxtqehcje .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#qdfpyachaq .gt_col_headings {
+#xrxtqehcje .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -956,7 +969,7 @@ Warning
   border-right-color: #D3D3D3;
 }
 
-#qdfpyachaq .gt_col_heading {
+#xrxtqehcje .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -976,7 +989,7 @@ Warning
   overflow-x: hidden;
 }
 
-#qdfpyachaq .gt_column_spanner_outer {
+#xrxtqehcje .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -988,15 +1001,15 @@ Warning
   padding-right: 4px;
 }
 
-#qdfpyachaq .gt_column_spanner_outer:first-child {
+#xrxtqehcje .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#qdfpyachaq .gt_column_spanner_outer:last-child {
+#xrxtqehcje .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#qdfpyachaq .gt_column_spanner {
+#xrxtqehcje .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1008,11 +1021,11 @@ Warning
   width: 100%;
 }
 
-#qdfpyachaq .gt_spanner_row {
+#xrxtqehcje .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#qdfpyachaq .gt_group_heading {
+#xrxtqehcje .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1038,7 +1051,7 @@ Warning
   text-align: left;
 }
 
-#qdfpyachaq .gt_empty_group_heading {
+#xrxtqehcje .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1053,15 +1066,15 @@ Warning
   vertical-align: middle;
 }
 
-#qdfpyachaq .gt_from_md > :first-child {
+#xrxtqehcje .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#qdfpyachaq .gt_from_md > :last-child {
+#xrxtqehcje .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#qdfpyachaq .gt_row {
+#xrxtqehcje .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1080,7 +1093,7 @@ Warning
   overflow-x: hidden;
 }
 
-#qdfpyachaq .gt_stub {
+#xrxtqehcje .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1093,7 +1106,7 @@ Warning
   padding-right: 5px;
 }
 
-#qdfpyachaq .gt_stub_row_group {
+#xrxtqehcje .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1107,15 +1120,15 @@ Warning
   vertical-align: top;
 }
 
-#qdfpyachaq .gt_row_group_first td {
+#xrxtqehcje .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#qdfpyachaq .gt_row_group_first th {
+#xrxtqehcje .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#qdfpyachaq .gt_summary_row {
+#xrxtqehcje .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1125,16 +1138,16 @@ Warning
   padding-right: 5px;
 }
 
-#qdfpyachaq .gt_first_summary_row {
+#xrxtqehcje .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#qdfpyachaq .gt_first_summary_row.thick {
+#xrxtqehcje .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#qdfpyachaq .gt_last_summary_row {
+#xrxtqehcje .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1144,7 +1157,7 @@ Warning
   border-bottom-color: #D3D3D3;
 }
 
-#qdfpyachaq .gt_grand_summary_row {
+#xrxtqehcje .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1154,7 +1167,7 @@ Warning
   padding-right: 5px;
 }
 
-#qdfpyachaq .gt_first_grand_summary_row {
+#xrxtqehcje .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1164,7 +1177,7 @@ Warning
   border-top-color: #D3D3D3;
 }
 
-#qdfpyachaq .gt_last_grand_summary_row_top {
+#xrxtqehcje .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1174,11 +1187,11 @@ Warning
   border-bottom-color: #D3D3D3;
 }
 
-#qdfpyachaq .gt_striped {
+#xrxtqehcje .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#qdfpyachaq .gt_table_body {
+#xrxtqehcje .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1187,7 +1200,7 @@ Warning
   border-bottom-color: #D3D3D3;
 }
 
-#qdfpyachaq .gt_footnotes {
+#xrxtqehcje .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1201,7 +1214,7 @@ Warning
   border-right-color: #D3D3D3;
 }
 
-#qdfpyachaq .gt_footnote {
+#xrxtqehcje .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1210,7 +1223,7 @@ Warning
   padding-right: 5px;
 }
 
-#qdfpyachaq .gt_sourcenotes {
+#xrxtqehcje .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1224,7 +1237,7 @@ Warning
   border-right-color: #D3D3D3;
 }
 
-#qdfpyachaq .gt_sourcenote {
+#xrxtqehcje .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1232,72 +1245,72 @@ Warning
   padding-right: 5px;
 }
 
-#qdfpyachaq .gt_left {
+#xrxtqehcje .gt_left {
   text-align: left;
 }
 
-#qdfpyachaq .gt_center {
+#xrxtqehcje .gt_center {
   text-align: center;
 }
 
-#qdfpyachaq .gt_right {
+#xrxtqehcje .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#qdfpyachaq .gt_font_normal {
+#xrxtqehcje .gt_font_normal {
   font-weight: normal;
 }
 
-#qdfpyachaq .gt_font_bold {
+#xrxtqehcje .gt_font_bold {
   font-weight: bold;
 }
 
-#qdfpyachaq .gt_font_italic {
+#xrxtqehcje .gt_font_italic {
   font-style: italic;
 }
 
-#qdfpyachaq .gt_super {
+#xrxtqehcje .gt_super {
   font-size: 65%;
 }
 
-#qdfpyachaq .gt_footnote_marks {
+#xrxtqehcje .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#qdfpyachaq .gt_asterisk {
+#xrxtqehcje .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#qdfpyachaq .gt_indent_1 {
+#xrxtqehcje .gt_indent_1 {
   text-indent: 5px;
 }
 
-#qdfpyachaq .gt_indent_2 {
+#xrxtqehcje .gt_indent_2 {
   text-indent: 10px;
 }
 
-#qdfpyachaq .gt_indent_3 {
+#xrxtqehcje .gt_indent_3 {
   text-indent: 15px;
 }
 
-#qdfpyachaq .gt_indent_4 {
+#xrxtqehcje .gt_indent_4 {
   text-indent: 20px;
 }
 
-#qdfpyachaq .gt_indent_5 {
+#xrxtqehcje .gt_indent_5 {
   text-indent: 25px;
 }
 
-#qdfpyachaq .katex-display {
+#xrxtqehcje .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#qdfpyachaq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#xrxtqehcje div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
