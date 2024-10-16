@@ -7,23 +7,61 @@ bibliography: references.bib
 
 Climatological normals are averages of climate variables observed for a given time -- usually months -- in a 30-year range. The normals are usually used as comparison benchmarks against recent or current conditions, being useful to recognize anomalies and to characterize global warming impacts.
 
-These normals are usually computed to surface meteorological stations maintained by government meteorological institutions (QUOTE INMET). In Brazil, the distribution of surface meteorological stations over the territory is scarce and uneven. Thus, the availability of climatological normals to different regions and administrative divisions like municipalities is difficult. 
+The normals are usually computed with surface meteorological stations data, maintained by government meteorological institutions, and its distribution over the territory may be scarce or uneven, like in Brazil. Thus, the availability of climatological normals to different regions and administrative divisions like municipalities is difficult to obtain. 
 
-I propose here a method to compute climatological normals and other climate indicator to the Brazilian municipalities using a climate reanalysis dataset. 
+I propose here a method to compute monthly climatological normals for the 1961--1990 and monthly aggregated climate indicators from 1991 to 2023 for Brazilian municipalities using a climate reanalysis dataset. 
 
 ## Methods
 
-Climatological normals can be computed from other sources of observation, including remote sensing sensors and "area averages or points in gridded datasets" [@wmoWMOGuidelinesCalculation2017]. Some gridded climatological datasets are available for the Brazilian territory, including the ERA5-Land from Copernicus [@muñoz-sabater2021] and the BR-DWGD dataset [@xavier2022], offering hourly and daily data (respectively) of several climatological indicators for a long time range, being continuously updated. 
+A climatological normal can be computed with data from different sources, including remote sensing sensors and "area averages or points in gridded datasets" [@wmoWMOGuidelinesCalculation2017]. Some gridded climatological datasets are available for the Brazilian territory, including the ERA5-Land from Copernicus [@muñoz-sabater2021] and the BR-DWGD dataset [@xavier2022], offering several climatological indicators for a long time range, and continuously updates. 
 
-However, some research methods demands that climate data must be aggregated in the same spatial and temporal units of other data to be used in statistical models. This procedure is fairly common in epidemiological and economical studies. In order to approach this issue, spatial gridded data can be aggregated using zonal statistics [@saldanhaZonalStatisticsDatasets2024].
+Some research methods demands that climate data must be aggregated in the same spatial and temporal units of other data to be used in statistical models, being a fairly common procedure in epidemiology and economy studies. In order to approach this issue, spatial gridded data can be aggregated using *zonal statistics* [@saldanhaZonalStatisticsDatasets2024].
 
-I used the same methodology from the study above to create zonal statistics of climate indicators with data from the BR-DWGD project [@xavier2022]. This data is available [here](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html#zonal-br-dwgd), presenting climatological indicators of interest from 1961 to March 2024 for all Brazilian municipalities. Thus, I propose here to compute the climatological normals and other climate indicators from this dataset.
+I used the same methodology from the study above to create zonal statistics of climate indicators from the BR-DWGD project [@xavier2022]. This data is available [here](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html#zonal-br-dwgd), presenting climatological indicators from 1961 to March 2024 for all Brazilian municipalities. I propose here to compute the climatological normals and other climate aggregated indicators from this dataset of zonal statistics.
 
-In order to compute climatological normals and other indicators, I created an R package named [climindi](https://rfsaldanha.github.io/climindi). The package provides helper functions to compute climatological normals and other aggregated indicators in a [tidy](https://www.tidyverse.org) way.
+In order to compute these indicators, I created an R package named [{climindi}](https://rfsaldanha.github.io/climindi). The package provides helper functions to compute climatological normals and other aggregated indicators in a [tidy](https://www.tidyverse.org) way.
+
+### Normal indicators
+
+The {climindi} package computes the average, 10th and 90th percentile as climatological normals.
+
+### Aggregated indicators
+
+The {climindi} package present functions to compute the following statistics for time-aggregated data: count of data points, average, median, standard deviation, standard error, maximum and minimum values, the 10th, 25th, 75th and 90th percentiles, and indicator-specific indicators, listed bellow.
+
+* Precipitation
+    * Rain spells: count of rain spells occurrences, with 3 and 5 or more consecutive days with rain above the climatological normal average value
+    * Count of days with precipitation above 1mm, 5mm, 10mm, 50mm, and 100mm
+    * Count of sequences of 3 days, 5 days, 10 days, 15 days, 20 days, and 25 days or more without precipitation
+* Maximum temperature
+    * Heat waves: Count of heat waves occurrences, with 3 and 5 or more consecutive days with maximum temperature above the climatological normal value plus 5 Celsius degrees
+    * Hot days: count of warm days, when the maximum temperature is above the normal 90th percentile
+    * Count of days with temperatures above or equal to 25, 30, 35, and 40 Celsius degrees
+* Minimum temperature
+    * Cold spells: count of cold spells occurrences, with 3 and 5 or more consecutive days with minimum temperature bellow the climatological normal value minus 5 Celsius degrees
+    * Cold days: count of cold days, when the minimum temperature is bellow the normal 10th percentile
+    * Count of days with temperatures bellow or equal to 0, 5, 10, 15, and 20 Celsius degrees
+* Relative humidity
+    * Count of dry spells occurrences, with 3 and 5 or more consecutive days with relative humidity bellow the climatological normal value minus 10 percent
+    * Count of wet spells occurrences, with 3 and 5 or more consecutive days with relative humidity above the climatological normal value plus 10 percent
+    * Count of dry days, when the relative humidity is bellow the normal 10th percentile
+    * Count of wet days, when the relative humidity is above the normal 90th percentile
+    * Count of days with relative humidity between 21% and 30% (Attention level)
+    * Count of days with relative humidity between 12% and 20% (Alert level)
+    * Count of days with relative humidity bellow 12% (Emergence level)
+* Wind speed
+    * Count of sequences of 3 and 5 days or more with wind speed bellow the climatological average normal
+    * Count of sequences of 3 and 5 days or more with wind speed above the climatological average normal
+* Evapotranspirations
+    * Count of sequences of 3 and 5 days or more with evapotranspirations bellow the climatological average normal
+    * Count of sequences of 3 and 5 days or more with evapotranspirations above the climatological average normal
+* Solar radiation
+    * Count of sequences of 3 and 5 days or more with solar radiation bellow the climatological normal
+    * Count of sequences of 3 and 5 days or more with solar radiation above the climatological normal
 
 ### Data source
 
-We will use the climate indicators from [here](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html#zonal-br-dwgd) and use the the [{zendown}](https://rfsaldanha.github.io/zendown/) package to download the data files from Zenodo. 
+The zonal statistics for the Brazilian municipalities computed with the BR-DWGD project is described [here](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html#zonal-br-dwgd). We can use the [{zendown}](https://rfsaldanha.github.io/zendown/) package to download the data files directly from from Zenodo. 
 
 ### Packages
 
@@ -39,15 +77,14 @@ library(zendown) # https://rfsaldanha.github.io/zendown/
 ```
 
 ::: callout-warning
-For these computations, I needed to increase the envinroment variable `R_MAX_VSIZE`, as explained [here](https://stackoverflow.com/questions/51248293/error-vector-memory-exhausted-limit-reached-r-3-5-0-macos).
+To perform those computations, I needed to increase the envinroment variable `R_MAX_VSIZE`, as explained [here](https://stackoverflow.com/questions/51248293/error-vector-memory-exhausted-limit-reached-r-3-5-0-macos).
 :::
 
 ### Precipitation (mm)
 
 #### Data
 ```{r}
-#| message: false
-#| warning: false
+#| eval: false
 pr_data <- zen_file(13906834, "pr_3.2.3.parquet") |>
     open_dataset() |>
     filter(name == "pr_3.2.3_mean") |>
@@ -59,8 +96,7 @@ pr_data <- zen_file(13906834, "pr_3.2.3.parquet") |>
 
 #### Normal
 ```{r}
-#| message: false
-#| warning: false
+#| eval: false
 pr_normal <- pr_data |>
     # Identify month
     mutate(month = month(date)) |>
@@ -78,8 +114,7 @@ pr_normal <- pr_data |>
 #### Indicators
 
 ```{r}
-#| message: false
-#| warning: false
+#| eval: false
 pr_indi <- pr_data |>
     # Identify year
     mutate(year = year(date)) |>
@@ -101,16 +136,11 @@ pr_indi <- pr_data |>
 #### Export
 
 ```{r}
-#| message: false
-#| warning: false
+#| eval: false
 write_parquet(x = pr_normal, sink = "pr_normal.parquet")
 write_csv2(x = pr_normal, file = "pr_normal.csv")
 write_parquet(x = pr_indi, sink = "pr_indi.parquet")
 write_csv2(x = pr_indi, file = "pr_indi.csv")
-```
-
-```{r}
-rm(list = ls())
 ```
 
 ### Evapotranspiration (mm)
@@ -118,6 +148,7 @@ rm(list = ls())
 #### Data
 
 ```{r}
+#| eval: false
 eto_data <- zen_file(13906834, "ETo_3.2.3.parquet") |>
     open_dataset() |>
     filter(name == "ETo_3.2.3_mean") |>
@@ -129,8 +160,7 @@ eto_data <- zen_file(13906834, "ETo_3.2.3.parquet") |>
 
 #### Normal
 ```{r}
-#| message: false
-#| warning: false
+#| eval: false
 eto_normal <- eto_data |>
     # Identify month
     mutate(month = month(date)) |>
@@ -148,8 +178,7 @@ eto_normal <- eto_data |>
 #### Indicators
 
 ```{r}
-#| message: false
-#| warning: false
+#| eval: false
 eto_indi <- eto_data |>
     # Identify year
     mutate(year = year(date)) |>
@@ -171,16 +200,11 @@ eto_indi <- eto_data |>
 #### Export
 
 ```{r}
-#| message: false
-#| warning: false
+#| eval: false
 write_parquet(x = eto_normal, sink = "eto_normal.parquet")
 write_csv2(x = eto_normal, file = "eto_normal.csv")
 write_parquet(x = eto_indi, sink = "eto_indi.parquet")
 write_csv2(x = eto_indi, file = "eto_indi.csv")
-```
-
-```{r}
-rm(list = ls())
 ```
 
 ### Maximum temperature (°C)
@@ -188,6 +212,7 @@ rm(list = ls())
 #### Data
 
 ```{r}
+#| eval: false
 tmax_data <- zen_file(13906834, "Tmax_3.2.3.parquet") |>
     open_dataset() |>
     filter(name == "Tmax_3.2.3_mean") |>
@@ -199,8 +224,7 @@ tmax_data <- zen_file(13906834, "Tmax_3.2.3.parquet") |>
 
 #### Normal
 ```{r}
-#| message: false
-#| warning: false
+#| eval: false
 tmax_normal <- tmax_data |>
     # Identify month
     mutate(month = month(date)) |>
@@ -218,8 +242,7 @@ tmax_normal <- tmax_data |>
 #### Indicators
 
 ```{r}
-#| message: false
-#| warning: false
+#| eval: false
 tmax_indi <- tmax_data |>
     # Identify year
     mutate(year = year(date)) |>
@@ -241,16 +264,11 @@ tmax_indi <- tmax_data |>
 #### Export
 
 ```{r}
-#| message: false
-#| warning: false
+#| eval: false
 write_parquet(x = tmax_normal, sink = "tmax_normal.parquet")
 write_csv2(x = tmax_normal, file = "tmax_normal.csv")
 write_parquet(x = tmax_indi, sink = "tmax_indi.parquet")
 write_csv2(x = tmax_indi, file = "tmax_indi.csv")
-```
-
-```{r}
-rm(list = ls())
 ```
 
 ### Minimum temperature (°C)
@@ -258,6 +276,7 @@ rm(list = ls())
 #### Data
 
 ```{r}
+#| eval: false
 tmin_data <- zen_file(13906834, "Tmin_3.2.3.parquet") |>
     open_dataset() |>
     filter(name == "Tmin_3.2.3_mean") |>
@@ -269,8 +288,7 @@ tmin_data <- zen_file(13906834, "Tmin_3.2.3.parquet") |>
 
 #### Normal
 ```{r}
-#| message: false
-#| warning: false
+#| eval: false
 tmin_normal <- tmin_data |>
     # Identify month
     mutate(month = month(date)) |>
@@ -288,8 +306,7 @@ tmin_normal <- tmin_data |>
 #### Indicators
 
 ```{r}
-#| message: false
-#| warning: false
+#| eval: false
 tmin_indi <- tmin_data |>
     # Identify year
     mutate(year = year(date)) |>
@@ -311,16 +328,11 @@ tmin_indi <- tmin_data |>
 #### Export
 
 ```{r}
-#| message: false
-#| warning: false
+#| eval: false
 write_parquet(x = tmin_normal, sink = "tmin_normal.parquet")
 write_csv2(x = tmin_normal, file = "tmin_normal.csv")
 write_parquet(x = tmin_indi, sink = "tmin_indi.parquet")
 write_csv2(x = tmin_indi, file = "tmin_indi.csv")
-```
-
-```{r}
-rm(list = ls())
 ```
 
 ### Solar radiation (MJm-2)
@@ -328,6 +340,7 @@ rm(list = ls())
 #### Data
 
 ```{r}
+#| eval: false
 rs_data <- zen_file(13906834, "Rs_3.2.3.parquet") |>
     open_dataset() |>
     filter(name == "Rs_3.2.3_mean") |>
@@ -339,8 +352,7 @@ rs_data <- zen_file(13906834, "Rs_3.2.3.parquet") |>
 
 #### Normal
 ```{r}
-#| message: false
-#| warning: false
+#| eval: false
 rs_normal <- rs_data |>
     # Identify month
     mutate(month = month(date)) |>
@@ -358,8 +370,7 @@ rs_normal <- rs_data |>
 #### Indicators
 
 ```{r}
-#| message: false
-#| warning: false
+#| eval: false
 rs_indi <- rs_data |>
     # Identify year
     mutate(year = year(date)) |>
@@ -381,16 +392,11 @@ rs_indi <- rs_data |>
 #### Export
 
 ```{r}
-#| message: false
-#| warning: false
+#| eval: false
 write_parquet(x = rs_normal, sink = "rs_normal.parquet")
 write_csv2(x = rs_normal, file = "rs_normal.csv")
 write_parquet(x = rs_indi, sink = "rs_indi.parquet")
 write_csv2(x = rs_indi, file = "rs_indi.csv")
-```
-
-```{r}
-rm(list = ls())
 ```
 
 ### Wind speed at 2m height (m/s)
@@ -398,6 +404,7 @@ rm(list = ls())
 #### Data
 
 ```{r}
+#| eval: false
 u2_data <- zen_file(13906834, "u2_3.2.3.parquet") |>
     open_dataset() |>
     filter(name == "u2_3.2.3_mean") |>
@@ -409,8 +416,7 @@ u2_data <- zen_file(13906834, "u2_3.2.3.parquet") |>
 
 #### Normal
 ```{r}
-#| message: false
-#| warning: false
+#| eval: false
 u2_normal <- u2_data |>
     # Identify month
     mutate(month = month(date)) |>
@@ -428,8 +434,7 @@ u2_normal <- u2_data |>
 #### Indicators
 
 ```{r}
-#| message: false
-#| warning: false
+#| eval: false
 u2_indi <- u2_data |>
     # Identify year
     mutate(year = year(date)) |>
@@ -451,16 +456,11 @@ u2_indi <- u2_data |>
 #### Export
 
 ```{r}
-#| message: false
-#| warning: false
+#| eval: false
 write_parquet(x = u2_normal, sink = "u2_normal.parquet")
 write_csv2(x = u2_normal, file = "u2_normal.csv")
 write_parquet(x = u2_indi, sink = "u2_indi.parquet")
 write_csv2(x = u2_indi, file = "u2_indi.csv")
-```
-
-```{r}
-rm(list = ls())
 ```
 
 ### Relative humidity (%)
@@ -468,6 +468,7 @@ rm(list = ls())
 #### Data
 
 ```{r}
+#| eval: false
 rh_data <- zen_file(13906834, "RH_3.2.3.parquet") |>
     open_dataset() |>
     filter(name == "RH_3.2.3_mean") |>
@@ -479,8 +480,7 @@ rh_data <- zen_file(13906834, "RH_3.2.3.parquet") |>
 
 #### Normal
 ```{r}
-#| message: false
-#| warning: false
+#| eval: false
 rh_normal <- rh_data |>
     # Identify month
     mutate(month = month(date)) |>
@@ -498,8 +498,7 @@ rh_normal <- rh_data |>
 #### Indicators
 
 ```{r}
-#| message: false
-#| warning: false
+#| eval: false
 rh_indi <- rh_data |>
     # Identify year
     mutate(year = year(date)) |>
@@ -521,77 +520,95 @@ rh_indi <- rh_data |>
 #### Export
 
 ```{r}
-#| message: false
-#| warning: false
+#| eval: false
 write_parquet(x = rh_normal, sink = "rh_normal.parquet")
 write_csv2(x = rh_normal, file = "rh_normal.csv")
 write_parquet(x = rh_indi, sink = "rh_indi.parquet")
 write_csv2(x = rh_indi, file = "rh_indi.csv")
 ```
 
-```{r}
-rm(list = ls())
-```
+## Results and dataset download
 
+The climatological normals and aggregated indicators of Brazilian municipalities can be downloaded from Zenodo on CSV and parquet formats. Click the link bellow to access and download the data. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-text[^1] and present 5,565 features.
-
-[^1]: footnote example
-
-
-::: callout-note
-Example
-:::
-
-
-citation example [@osrm_paper_2022]
-
-
-```{r}
-#| message: false
-#| warning: false
-library(dplyr)
-
-```
-
-
-
-## Dataset download
-
-The dataset with the road distances and trip duration are available on Zenodo, on RDS format, parquet format, and CSV (zipped) format.
-
-Click the link below to access and download the data.
-
-[![](https://zenodo.org/badge/DOI/10.5281/zenodo.11400243.svg)](https://doi.org/10.5281/zenodo.11400243)
+[![](https://zenodo.org/badge/DOI/10.5281/zenodo.13934888.svg)](https://doi.org/10.5281/zenodo.13934888)
 
 You can also download the dataset directly from R, using the [{zendown}](https://rfsaldanha.github.io/zendown/) package.
 
+Let's check some results.
+
+### Maximum temperature, Rio de Janeiro, RJ, 2023
+
+#### Observed and normal
+
 ```{r}
 #| message: false
 #| warning: false
-# install.packages("zendown")
-library(zendown)
+tmax_data <- zen_file(13906834, "Tmax_3.2.3.parquet") |>
+    open_dataset() |>
+    filter(name == "Tmax_3.2.3_mean") |>
+    filter(code_muni == 3304557) |>
+    filter(date >= as.Date("2023-01-01")) |>
+    filter(date <= as.Date("2023-12-31")) |>
+    select(-name) |>
+    collect()
 
-dist_brasil_file <- zen_file(11400243, "dist_brasil.rds")
-
-dist_brasil <- readRDS(dist_brasil_file)
-
-head(dist_brasil)
+tmax_normal <- zen_file(13934888, "tmax_normal.parquet") |>
+    open_dataset() |>
+    filter(code_muni == 3304557) |>
+    collect()
 ```
 
+```{r}
+#| message: false
+#| warning: false
+library(ggplot2)
+library(tidyr)
+
+tmax_normal_exp <- tmax_normal |>
+    mutate(date = as_date(paste0("2023-",month,"-01"))) |>
+    group_by(month) %>%
+    expand(
+        date = seq.Date(floor_date(date, unit = "month"), ceiling_date(date, unit="month")-days(1), by="day"), normal_mean, normal_p10, normal_p90
+    ) |>
+    pivot_longer(cols = starts_with("normal_")) |>
+    mutate(name = substr(name, 8, 100))
+
+ggplot() +
+    geom_line(data = tmax_data, aes(x = date, y = value)) +
+    geom_line(data = tmax_normal_exp, aes(x = date, y = value, color = name)) +
+    theme_bw() +
+    labs(
+        title = "Maximum temperature and climatological normal", 
+        subtitle = "Rio de Janeiro, RJ",
+        color = "Normal (1961-1990)",
+        x = "Date", y = "Celsius degrees"
+    ) +
+    theme(legend.position = "bottom", legend.direction = "horizontal")
+```
+
+
+#### Indicators
+
+```{r}
+#| message: false
+#| warning: false
+library(gt)
+
+zen_file(13934888, "tmax_indi.parquet") |>
+    open_dataset() |>
+    filter(code_muni == 3304557) |>
+    filter(year == 2023) |>
+    select(-code_muni, -year) |>
+    collect() |>
+    gt() |>
+    fmt_number(
+        columns = where(is.double),
+        decimals = 2,
+        use_seps = FALSE
+    )
+
+```
 
 
 ## Future plans
