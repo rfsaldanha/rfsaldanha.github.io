@@ -611,13 +611,6 @@ zen_file(13934888, "tmax_indi.parquet") |>
 ```
 
 
-## Future plans
-
--   Compute routes using other available routing services.
-
--   Yearly updates of the dataset, as the road infrastructure may change.
-
-
 ## Session info
 
 ```{r}
