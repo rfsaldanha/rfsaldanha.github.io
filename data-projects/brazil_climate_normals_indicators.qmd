@@ -562,6 +562,7 @@ tmax_normal <- zen_file(13934888, "tmax_normal.parquet") |>
 ```{r}
 #| message: false
 #| warning: false
+#| classes: preview-image
 library(ggplot2)
 library(tidyr)
 

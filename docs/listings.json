@@ -54,6 +54,7 @@
     "listing": "/data.html",
     "items": [
       "/data-projects/brazil-climate-zonal-indicators.html",
+      "/data-projects/brazil_climate_normals_indicators.html",
       "/data-projects/era5land-daily-latin-america.html",
       "/data-projects/era5land-daily-africa.html",
       "/data-projects/brazil_road_distances.html",
