@@ -1516,7 +1516,7 @@
     "href": "talks.html",
     "title": "Talks",
     "section": "",
-    "text": "Advances in climate features engineering and subsets modeling\n\n\nfor Dengue forecasting\n\n\n\nbrclim\n\n\n\nTalk at the HPDaSc Workshop on Data Driven Science.\n\n\n\n\n\nMay 31, 2024\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nSubset Models for Multivariate Time Series Forecast\n\n\n1st MulTiSA, ICDE 2024\n\n\n\nsubsets\n\n\nmachine learning\n\n\n\nPresentation at 1st MulTiSA workshop, ICDE 2024 conference.\n\n\n\n\n\nMay 13, 2024\n\n\nRaphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, Patrick Valduriez, Fabio Porto\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modeling\n\n\nAn application case for Brazil\n\n\n\nbrclim\n\n\n\nTalk at the Inria Zenith’s Team Seminar.\n\n\n\n\n\nMar 21, 2024\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nBILIS\n\n\nAn unified indicators database\n\n\n\nbilis\n\n\n\nTalk at the Climate and Health for Health Situation Studies Workshop, IRD.\n\n\n\n\n\nDec 18, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modelling\n\n\nAn application case for Brazil\n\n\n\nbrclim\n\n\n\nTalk at the Climate and Health for Health Situation Studies Workshop, IRD.\n\n\n\n\n\nDec 18, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modelling\n\n\nAn application case for Brazil\n\n\n\nisntd\n\n\nclimate\n\n\ndata\n\n\n\nTalk at the ISNTD Climate & Health Conference, Global Health Resilience panel\n\n\n\n\n\nNov 22, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Subset Models for Multivariate Time Series Forecast\n\n\nBDA 2024, Orléans\n\n\n\nsubsets\n\n\nmachine learning\n\n\n\nPresentation at BDA2024 conference.\n\n\n\n\n\nOct 22, 2024\n\n\nRaphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, Patrick Valduriez, Fabio Porto\n\n\n\n\n\n\n\n\n\n\n\n\nAdvances in climate features engineering and subsets modeling\n\n\nfor Dengue forecasting\n\n\n\nbrclim\n\n\n\nTalk at the HPDaSc Workshop on Data Driven Science.\n\n\n\n\n\nMay 31, 2024\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nSubset Models for Multivariate Time Series Forecast\n\n\n1st MulTiSA, ICDE 2024\n\n\n\nsubsets\n\n\nmachine learning\n\n\n\nPresentation at 1st MulTiSA workshop, ICDE 2024 conference.\n\n\n\n\n\nMay 13, 2024\n\n\nRaphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, Patrick Valduriez, Fabio Porto\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modeling\n\n\nAn application case for Brazil\n\n\n\nbrclim\n\n\n\nTalk at the Inria Zenith’s Team Seminar.\n\n\n\n\n\nMar 21, 2024\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nBILIS\n\n\nAn unified indicators database\n\n\n\nbilis\n\n\n\nTalk at the Climate and Health for Health Situation Studies Workshop, IRD.\n\n\n\n\n\nDec 18, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modelling\n\n\nAn application case for Brazil\n\n\n\nbrclim\n\n\n\nTalk at the Climate and Health for Health Situation Studies Workshop, IRD.\n\n\n\n\n\nDec 18, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modelling\n\n\nAn application case for Brazil\n\n\n\nisntd\n\n\nclimate\n\n\ndata\n\n\n\nTalk at the ISNTD Climate & Health Conference, Global Health Resilience panel\n\n\n\n\n\nNov 22, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "publications/araujoWHATHAVEWE2019a.html",
@@ -2427,5 +2427,75 @@
     "title": "Climatological normals and indicators of Brazilian municipalities",
     "section": "Results and dataset download",
     "text": "Results and dataset download\nThe climatological normals and aggregated indicators of Brazilian municipalities can be downloaded from Zenodo on CSV and parquet formats. Click the link bellow to access and download the data.\n\nYou can also download the dataset directly from R, using the {zendown} package.\nLet’s check some results.\n\nMaximum temperature, Rio de Janeiro, RJ, 2023\n\nObserved and normal\n\ntmax_data &lt;- zen_file(13906834, \"Tmax_3.2.3.parquet\") |&gt;\n    open_dataset() |&gt;\n    filter(name == \"Tmax_3.2.3_mean\") |&gt;\n    filter(code_muni == 3304557) |&gt;\n    filter(date &gt;= as.Date(\"2023-01-01\")) |&gt;\n    filter(date &lt;= as.Date(\"2023-12-31\")) |&gt;\n    select(-name) |&gt;\n    collect()\n\ntmax_normal &lt;- zen_file(13934888, \"tmax_normal.parquet\") |&gt;\n    open_dataset() |&gt;\n    filter(code_muni == 3304557) |&gt;\n    collect()\n\n\nlibrary(ggplot2)\nlibrary(tidyr)\n\ntmax_normal_exp &lt;- tmax_normal |&gt;\n    mutate(date = as_date(paste0(\"2023-\",month,\"-01\"))) |&gt;\n    group_by(month) %&gt;%\n    expand(\n        date = seq.Date(floor_date(date, unit = \"month\"), ceiling_date(date, unit=\"month\")-days(1), by=\"day\"), normal_mean, normal_p10, normal_p90\n    ) |&gt;\n    pivot_longer(cols = starts_with(\"normal_\")) |&gt;\n    mutate(name = substr(name, 8, 100))\n\nggplot() +\n    geom_line(data = tmax_data, aes(x = date, y = value)) +\n    geom_line(data = tmax_normal_exp, aes(x = date, y = value, color = name)) +\n    theme_bw() +\n    labs(\n        title = \"Maximum temperature and climatological normal\", \n        subtitle = \"Rio de Janeiro, RJ\",\n        color = \"Normal (1961-1990)\",\n        x = \"Date\", y = \"Celsius degrees\"\n    ) +\n    theme(legend.position = \"bottom\", legend.direction = \"horizontal\")\n\n\n\n\n\n\n\n\n\n\nIndicators\n\nlibrary(gt)\n\nzen_file(13934888, \"tmax_indi.parquet\") |&gt;\n    open_dataset() |&gt;\n    filter(code_muni == 3304557) |&gt;\n    filter(year == 2023) |&gt;\n    select(-code_muni, -year) |&gt;\n    collect() |&gt;\n    gt() |&gt;\n    fmt_number(\n        columns = where(is.double),\n        decimals = 2,\n        use_seps = FALSE\n    )\n\n\n\n\n\n\n\nmonth\ncount\nnormal_mean\nnormal_p10\nnormal_p90\nmean\nmedian\nsd\nse\nmax\nmin\np10\np25\np75\np90\nheat_waves_3d\nheat_waves_5d\nhot_days\nt_25\nt_30\nt_35\nt_40\n\n\n\n\n1.00\n31\n31.73\n26.93\n36.51\n30.56\n31.44\n3.92\n0.70\n35.32\n21.36\n23.99\n29.28\n32.96\n34.65\n0\n0\n0\n2\n4\n1\n0\n\n\n2.00\n28\n32.23\n27.80\n36.05\n32.67\n32.22\n2.47\n0.47\n37.20\n28.26\n30.04\n30.92\n34.91\n35.86\n0\n0\n3\n1\n3\n5\n0\n\n\n3.00\n31\n31.15\n26.95\n34.75\n31.63\n31.01\n2.21\n0.40\n36.72\n27.88\n29.21\n30.32\n33.14\n35.03\n0\n0\n4\n1\n5\n4\n0\n\n\n4.00\n30\n28.83\n25.03\n32.98\n27.86\n27.79\n2.33\n0.42\n32.16\n23.10\n24.92\n26.17\n29.54\n30.68\n0\n0\n0\n3\n4\n0\n0\n\n\n5.00\n31\n27.19\n23.23\n31.03\n26.33\n27.45\n2.55\n0.46\n30.42\n20.67\n23.26\n24.11\n28.06\n29.22\n0\n0\n0\n3\n1\n0\n0\n\n\n6.00\n30\n26.14\n21.77\n30.30\n26.55\n26.39\n2.56\n0.47\n31.11\n21.69\n23.39\n25.09\n28.06\n30.46\n0\n0\n2\n2\n2\n0\n0\n\n\n7.00\n31\n25.85\n21.44\n30.29\n25.99\n25.40\n3.40\n0.61\n35.50\n20.93\n22.13\n23.04\n28.41\n29.46\n0\n0\n3\n6\n3\n1\n0\n\n\n8.00\n31\n26.79\n21.34\n31.84\n27.29\n26.51\n4.91\n0.88\n37.73\n17.49\n22.32\n24.37\n30.79\n33.19\n1\n0\n4\n6\n5\n1\n0\n\n\n9.00\n30\n26.82\n21.49\n32.93\n30.39\n30.81\n4.17\n0.76\n36.94\n21.40\n23.91\n27.73\n33.35\n35.00\n3\n0\n6\n4\n6\n3\n0\n\n\n10.00\n31\n27.59\n22.33\n33.40\n28.49\n29.49\n4.54\n0.82\n37.85\n20.91\n23.06\n24.81\n32.65\n33.71\n1\n0\n4\n5\n6\n1\n0\n\n\n11.00\n30\n29.02\n23.87\n34.44\n31.21\n30.75\n4.79\n0.88\n40.94\n24.80\n25.35\n26.20\n34.72\n37.07\n1\n1\n5\n4\n5\n5\n1\n\n\n12.00\n31\n30.41\n25.32\n35.41\n31.30\n31.32\n3.27\n0.59\n38.47\n25.13\n26.78\n29.20\n33.47\n34.47\n0\n0\n2\n1\n5\n3\n0"
+  },
+  {
+    "objectID": "talks/bda_subsets_2024.html#introduction",
+    "href": "talks/bda_subsets_2024.html#introduction",
+    "title": "Subset Models for Multivariate Time Series Forecast",
+    "section": "Introduction",
+    "text": "Introduction\n\nAbundant multivariate time series, good opportunity for forecasting machine learning methods\nData may present intrinsic diversity of samples, affecting model’s performance on different parts of the input\nGlobal models: use all available time series\nLocal models: use only time series pertaining to each sample\nData subsets models: our proposal"
+  },
+  {
+    "objectID": "talks/bda_subsets_2024.html#case-example",
+    "href": "talks/bda_subsets_2024.html#case-example",
+    "title": "Subset Models for Multivariate Time Series Forecast",
+    "section": "Case example",
+    "text": "Case example\n\nDengue disease is transmitted by mosquitoes and is a Public Health concern. Record number cases on 2024 in Brazil, tendency to increase with global warming\nA typical forecasting model is targeted to predict number of cases based on climate indicators (rain and temperature)\nA global model would use data from all municipalities, facing difficulties related to distinct temporal and spatial disease transmission patterns"
+  },
+  {
+    "objectID": "talks/bda_subsets_2024.html#objective",
+    "href": "talks/bda_subsets_2024.html#objective",
+    "title": "Subset Models for Multivariate Time Series Forecast",
+    "section": "Objective",
+    "text": "Objective\n\nPropose a subset modeling framework\nAccommodate regional variations across diverse units (e.g. municipalities)\nCost-effective training with robust prediction capabilities in comparison with global models"
+  },
+  {
+    "objectID": "talks/bda_subsets_2024.html#subset-modeling-framework",
+    "href": "talks/bda_subsets_2024.html#subset-modeling-framework",
+    "title": "Subset Models for Multivariate Time Series Forecast",
+    "section": "Subset modeling framework",
+    "text": "Subset modeling framework\n\n\n\nIdentify subsets within the dataset with similar patterns\nTrain models for each subset\nUse the model trained on the subset data for prediction"
+  },
+  {
+    "objectID": "talks/bda_subsets_2024.html#datasets",
+    "href": "talks/bda_subsets_2024.html#datasets",
+    "title": "Subset Models for Multivariate Time Series Forecast",
+    "section": "Datasets",
+    "text": "Datasets\n\nDengue dataset. Weekly cases count, from 2011 to 2020, for 333 municipalities.\nClimate dataset. Average maximum and minimum temperature, total precipitation. Same time and spatial units and coverage.\nAll indicators were standardized (with zero mean and one SD)"
+  },
+  {
+    "objectID": "talks/bda_subsets_2024.html#experimental-setup",
+    "href": "talks/bda_subsets_2024.html#experimental-setup",
+    "title": "Subset Models for Multivariate Time Series Forecast",
+    "section": "Experimental setup",
+    "text": "Experimental setup\n\nIdentify data subsets considering dengue cases and covariates patterns across municipalities with DTW distance.\n\nSelect the optimum number of subsets (\\(k\\)) considering silhouette score\n\nTrain random forest Global Model with and without the subset id feature information\nTrain random forest Subsets Models\nEvaluate forecasting model’s performance on test data"
+  },
+  {
+    "objectID": "talks/bda_subsets_2024.html#clustering-results",
+    "href": "talks/bda_subsets_2024.html#clustering-results",
+    "title": "Subset Models for Multivariate Time Series Forecast",
+    "section": "Clustering results",
+    "text": "Clustering results\n\n\n\n\\(k = 5\\) returned the highest silhouette score\nPartition sizes: \\(g_1 = 69\\), \\(g_2 = 62\\), \\(g_3 = 82\\), \\(g_4 = 102\\), \\(g_5 = 18\\)"
+  },
+  {
+    "objectID": "talks/bda_subsets_2024.html#model-results",
+    "href": "talks/bda_subsets_2024.html#model-results",
+    "title": "Subset Models for Multivariate Time Series Forecast",
+    "section": "Model results",
+    "text": "Model results"
+  },
+  {
+    "objectID": "talks/bda_subsets_2024.html#conclusions-and-next-steps",
+    "href": "talks/bda_subsets_2024.html#conclusions-and-next-steps",
+    "title": "Subset Models for Multivariate Time Series Forecast",
+    "section": "Conclusions and next steps",
+    "text": "Conclusions and next steps\n\nWe specifically addressed and formalized the subsets approach in a multivariate time series setting\nSubsets models rendered better performance than global models on 116 municipalities from 333 (34.83%)\nSubsets models overall performance is related to the partition’s size. Bigger partitions (more municipalities) have more training data.\nFurther work may advance on clustering strategies (constraints in size and featured-based approaches) and apply different learners on model training"
+  },
+  {
+    "objectID": "talks/bda_subsets_2024.html#thanks",
+    "href": "talks/bda_subsets_2024.html#thanks",
+    "title": "Subset Models for Multivariate Time Series Forecast",
+    "section": "Thanks!",
+    "text": "Thanks!\nContact and more info at\nrfsaldanha.github.io"
   }
 ]

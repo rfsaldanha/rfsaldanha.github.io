@@ -1,0 +1,116 @@
+---
+title: "Subset Models for Multivariate Time Series Forecast"
+subtitle: "BDA 2024, Orléans"
+author: "Raphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, Patrick Valduriez, Fabio Porto"
+institute: "Inria (FR), LNCC (BR)"
+date: "2024-10-22"
+description: "Presentation at BDA2024 conference."
+categories: [subsets, machine learning]
+image: images/subsets_model_accuracy.png
+format:
+  revealjs: 
+    theme: inria_style.scss
+    logo: inria_logo.png
+    transition: fade
+    background-transition: fade
+    pointer:
+      pointerSize: 40
+      color: '#e63312'
+code-link: true
+revealjs-plugins:
+  - pointer
+---
+
+## Introduction
+
+-   Abundant [multivariate time series]{.hl}, good opportunity for forecasting [machine learning]{.hl} methods
+-   Data may present intrinsic [diversity]{.hl} of samples, affecting model's performance on [different parts of the input]{.hl}
+-   [Global models]{.hl}: use all available time series
+-   [Local models]{.hl}: use only time series pertaining to each sample
+-   [Data subsets models]{.hl}: our proposal
+
+## Case example
+
+-   [Dengue]{.hl} disease is transmitted by mosquitoes and is a Public Health concern. Record number cases on 2024 in Brazil, tendency to increase with global warming
+-   A typical forecasting model is targeted to predict number of cases based on [climate indicators]{.hl} (rain and temperature)
+-   A [global model]{.hl} would use data from all municipalities, facing [difficulties]{.hl} related to [distinct]{.hl} temporal and spatial disease [transmission patterns]{.hl}
+
+## Objective
+
+-   Propose a [subset modeling framework]{.hl}
+-   Accommodate [regional variations]{.hl} across diverse units (e.g. municipalities)
+-   Cost-effective training with [robust prediction capabilities]{.hl} in comparison with global models
+
+## Subset modeling framework
+
+::: columns
+::: {.column width="40%"}
+1.  Identify subsets within the dataset with similar patterns
+2.  Train models for each subset
+3.  Use the model trained on the subset data for prediction
+:::
+
+::: {.column width="60%"}
+![](images/subset_model_framework_diagram.png){width="60%" fig-align="center"}
+:::
+:::
+
+## 
+
+![](images/subset_model_fig_a.png){fig-align="center"}
+
+## 
+
+![](images/subset_model_fig_b.png){fig-align="center"}
+
+## 
+
+![](images/subset_model_fig_c.png){fig-align="center"}
+
+## 
+
+![](images/subset_model_fig_d.png){fig-align="center"}
+
+## Datasets
+
+-   Dengue dataset. Weekly cases count, from 2011 to 2020, for 333 municipalities.
+-   Climate dataset. Average maximum and minimum temperature, total precipitation. Same time and spatial units and coverage.
+-   All indicators were standardized (with zero mean and one SD)
+
+## Experimental setup
+
+-   [Identify]{.hl} data subsets considering dengue cases and covariates patterns across municipalities with DTW distance.
+    -   Select the [optimum]{.hl} number of subsets ($k$) considering silhouette score
+-   Train random forest [Global Model]{.hl} with and without the [subset id]{.hl} feature information
+-   Train random forest [Subsets Models]{.hl}
+-   [Evaluate]{.hl} forecasting model's [performance]{.hl} on test data
+
+## Clustering results
+
+::: columns
+::: {.column width="40%"}
+-   $k = 5$ returned the highest silhouette score
+-   Partition sizes: $g_1 = 69$, $g_2 = 62$, $g_3 = 82$, $g_4 = 102$, $g_5 = 18$
+:::
+
+::: {.column width="60%"}
+![](images/subset_model_partitions_map.png){fig-align="center"}
+:::
+:::
+
+## Model results
+
+![](images/subsets_model_accuracy.png){fig-align="center"}
+
+## Conclusions and next steps
+
+-   We specifically addressed and formalized the subsets approach in a multivariate time series setting
+-   Subsets models rendered [better performance]{.hl} than global models on [116 municipalities]{.hl} from 333 (34.83%)
+-   Subsets models overall performance is related to the [partition's size]{.hl}. Bigger partitions (more municipalities) have more training data.
+-   Further work may advance on clustering strategies (constraints in size and featured-based approaches) and apply different learners on model training
+
+## Thanks!
+
+Contact and more info at
+
+[rfsaldanha.github.io](https://rfsaldanha.github.io)
