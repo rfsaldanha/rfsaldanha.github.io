@@ -2489,7 +2489,7 @@
     "href": "talks/bda_subsets_2024.html#conclusions-and-next-steps",
     "title": "Subset Models for Multivariate Time Series Forecast",
     "section": "Conclusions and next steps",
-    "text": "Conclusions and next steps\n\nSubsets models rendered better performance than global models on 116 municipalities from 333 (34.83%)\nSubsets models overall performance is related to the partition’s size. Bigger partitions (more municipalities) have more training data.\nFurther work may advance on clustering strategies (constraints in size and featured-based approaches) and apply different learners on model training"
+    "text": "Conclusions and next steps\n\nSubsets models rendered better performance than global models on 116 municipalities from 333 (34.83%)\nSubsets models overall performance is related to the partition’s size. Bigger partitions (more municipalities) have more training data.\nWe are currently testing different clustering strategies (including constraints in partition size and featured-based approaches) and investigating different learners performance on model training\nLooking for datasets of different domains. Suggestions?"
   },
   {
     "objectID": "talks/bda_subsets_2024.html#thanks",

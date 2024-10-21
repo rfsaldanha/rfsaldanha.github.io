@@ -107,7 +107,8 @@ revealjs-plugins:
 
 -   Subsets models rendered [better performance]{.hl} than global models on [116 municipalities]{.hl} from 333 (34.83%)
 -   Subsets models overall performance is related to the [partition's size]{.hl}. Bigger partitions (more municipalities) have more training data.
--   Further work may advance on clustering strategies (constraints in size and featured-based approaches) and apply different learners on model training
+-   We are currently testing different [clustering strategies]{.hl} (including constraints in partition size and featured-based approaches) and investigating different learners performance on model training
+-   Looking for datasets of [different domains]{.hl}. Suggestions?
 
 ## Thanks!
 
