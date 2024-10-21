@@ -347,7 +347,7 @@
 Raphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, Patrick Valduriez, Fabio Porto 
 </div>
         <p class="quarto-title-affiliation">
-            Inria (FR), LNCC (BR)
+            Inria (FR), LNCC (BR), Fiocruz (BR)
           </p>
     </div>
 </div>
@@ -357,6 +357,7 @@ Raphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, 
 <section id="introduction" class="slide level2">
 <h2>Introduction</h2>
 <ul>
+<li>Previously presented at <span class="hl">MulTiSA</span> workshop (ICDE 2024)</li>
 <li>Abundant <span class="hl">multivariate time series</span>, good opportunity for forecasting <span class="hl">machine learning</span> methods</li>
 <li>Data may present intrinsic <span class="hl">diversity</span> of samples, affecting model’s performance on <span class="hl">different parts of the input</span></li>
 <li><span class="hl">Global models</span>: use all available time series</li>
@@ -367,7 +368,7 @@ Raphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, 
 <section id="case-example" class="slide level2">
 <h2>Case example</h2>
 <ul>
-<li><span class="hl">Dengue</span> disease is transmitted by mosquitoes and is a Public Health concern. Record number cases on 2024 in Brazil, tendency to increase with global warming</li>
+<li><span class="hl">Dengue</span> disease is transmitted by mosquitoes and is a Public Health concern. Record number cases on 2024 in Brazil, tendency to increase with climate change</li>
 <li>A typical forecasting model is targeted to predict number of cases based on <span class="hl">climate indicators</span> (rain and temperature)</li>
 <li>A <span class="hl">global model</span> would use data from all municipalities, facing <span class="hl">difficulties</span> related to <span class="hl">distinct</span> temporal and spatial disease <span class="hl">transmission patterns</span></li>
 </ul>
@@ -380,14 +381,14 @@ Raphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, 
 <li>Cost-effective training with <span class="hl">robust prediction capabilities</span> in comparison with global models</li>
 </ul>
 </section>
-<section id="subset-modeling-framework" class="slide level2">
-<h2>Subset modeling framework</h2>
+<section id="framework-proposal" class="slide level2">
+<h2>Framework proposal</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
 <ol type="1">
-<li>Identify subsets within the dataset with similar patterns</li>
-<li>Train models for each subset</li>
-<li>Use the model trained on the subset data for prediction</li>
+<li><span class="hl">Identify</span> subsets within the dataset with similar patterns</li>
+<li><span class="hl">Train</span> models for each subset</li>
+<li>Use the model trained on the subset data for <span class="hl">prediction</span></li>
 </ol>
 </div><div class="column" style="width:60%;">
 <div class="quarto-figure quarto-figure-center">
@@ -417,7 +418,7 @@ Raphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, 
 <h2>Datasets</h2>
 <ul>
 <li>Dengue dataset. Weekly cases count, from 2011 to 2020, for 333 municipalities.</li>
-<li>Climate dataset. Average maximum and minimum temperature, total precipitation. Same time and spatial units and coverage.</li>
+<li>Climate dataset. Average maximum and minimum temperature, total precipitation. Same time and spatial units and coverage, derived from Copernicus ERA5-Land.</li>
 <li>All indicators were standardized (with zero mean and one SD)</li>
 </ul>
 </section>
@@ -456,7 +457,6 @@ Raphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, 
 <section id="conclusions-and-next-steps" class="slide level2">
 <h2>Conclusions and next steps</h2>
 <ul>
-<li>We specifically addressed and formalized the subsets approach in a multivariate time series setting</li>
 <li>Subsets models rendered <span class="hl">better performance</span> than global models on <span class="hl">116 municipalities</span> from 333 (34.83%)</li>
 <li>Subsets models overall performance is related to the <span class="hl">partition’s size</span>. Bigger partitions (more municipalities) have more training data.</li>
 <li>Further work may advance on clustering strategies (constraints in size and featured-based approaches) and apply different learners on model training</li>
