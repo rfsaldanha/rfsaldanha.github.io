@@ -49,10 +49,10 @@ The mirror is not a backup system. Modificated files at the FTP server will be u
 
 Check the desired file name at [full path list](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_full_path.txt) and append it to the endpoint access.
 
-Example: [SIM file for Bahia, 2022](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/SIM/CID10/DORES/DOBR2022.dbc)
+Example: [SIM file for Bahia, 2022](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/SIM/CID10/DORES/DOBA2022.dbc)
 
 ```
-https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/SIM/CID10/DORES/DOBR2022.dbc
+https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/SIM/CID10/DORES/DOBA2022.dbc
 ```
 
 ## Costs

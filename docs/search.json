@@ -2545,7 +2545,7 @@
     "href": "data-projects/s3-datasus-ftp-mirror.html#how-to-access-a-file",
     "title": "S3 DataSUS FTP mirror",
     "section": "How to access a file?",
-    "text": "How to access a file?\nCheck the desired file name at full path list and append it to the endpoint access.\nExample: SIM file for Bahia, 2022\nhttps://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/SIM/CID10/DORES/DOBR2022.dbc"
+    "text": "How to access a file?\nCheck the desired file name at full path list and append it to the endpoint access.\nExample: SIM file for Bahia, 2022\nhttps://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/SIM/CID10/DORES/DOBA2022.dbc"
   },
   {
     "objectID": "data-projects/s3-datasus-ftp-mirror.html#costs",
