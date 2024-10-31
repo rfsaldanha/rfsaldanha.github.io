@@ -2,6 +2,7 @@
 title: "Datasets"
 listing:
   contents:
+    - data-projects/s3-datasus-ftp-mirror.qmd
     - data-projects/brazil-climate-zonal-indicators.qmd
     - data-projects/brazil_climate_normals_indicators.qmd
     - data-projects/era5land-daily-latin-america.qmd

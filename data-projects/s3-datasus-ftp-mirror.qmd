@@ -1,0 +1,64 @@
+---
+title: "S3 DataSUS FTP mirror"
+image: images/s3datasus.png
+---
+
+The Department of Informatics (DataSUS) of the Brazilian Health Ministry hosts microdata anonymized files from several health information systems, covering themes such as mortality, newborns, hospitalization, and transmissible diseases.
+
+Those files are hosted in a public FTP server, but its access is geographically restricted to Brazil.
+
+In order to offer an alternative way to access those files, I created a partial mirror of the FTP server in a S3 object storage architecture. This structure allows worldwide access, CDN distribution of files, and a redudancy in case of failure of the DataSUS FTP server.
+
+## Available health information systems and files
+
+Currently, the following health information systems are mirrored:
+
+- SIM -- Sistema de Informações de Mortalidade
+- SINASC -- Sistema de Informações de Nascidos Vivos
+- SINAN -- Sistema de Informações de Agravos de Notificação
+- SIH -- Sistema de Informações Hospitalares do SUS
+- SIA -- Sistema de Informações Ambulatoriais do SUS
+- CNES -- Cadastro Nacional de Estalecimentos de Saúde
+
+## File Access
+
+The S3 mirror is available at this endpoint:
+
+```
+https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com
+```
+
+::::: {.callout-note}
+- The file structure at the S3 mirror follows the same directory structure of the FTP server.
+- All files available at the FTP are mirrored, except expanded XML and CSV files.
+:::
+
+## Mirror update and files tree
+
+The mirror is synced daily at 3:00 am Brazilian time. On each update file lists are produced:
+
+-   [Directory tree](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_dirs_tree.txt)
+-   [Files tree](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_files_tree.txt)
+-   [Full path list](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_full_path.txt)
+
+::: {.callout-caution}
+The mirror is not a backup system. Modificated files at the FTP server will be updated at the mirror. Deleted files at the FTP server will be deleted at the mirror.
+:::
+
+## How to access a file?
+
+Check the desired file name at [full path list](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_full_path.txt) and append it to the endpoint access.
+
+Example: [SIM file for Bahia, 2022](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/SIM/CID10/DORES/DOBR2022.dbc)
+
+```
+https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/SIM/CID10/DORES/DOBR2022.dbc
+```
+
+## Costs
+
+This S3 mirror is available for free use, but I have running costs for storage and transfer volume at Digital Ocean. Please use it carefully and consciously. 
+
+## Script
+
+If you are curious to see how this works, check this [code repository](https://github.com/rfsaldanha/rclone-datasus).
