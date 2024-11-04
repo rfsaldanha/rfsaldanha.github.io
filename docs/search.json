@@ -2432,8 +2432,8 @@
     "objectID": "talks/bda_subsets_2024.html#introduction",
     "href": "talks/bda_subsets_2024.html#introduction",
     "title": "Subset Models for Multivariate Time Series Forecast",
-    "section": "Introduction",
-    "text": "Introduction\n\nPreviously presented at MulTiSA workshop (ICDE 2024)\nAbundant multivariate time series, good opportunity for forecasting machine learning methods\nData may present intrinsic diversity of samples, affecting model’s performance on different parts of the input\nGlobal models: use all available time series\nLocal models: use only time series pertaining to each sample\nData subsets models: our proposal"
+    "section": "",
+    "text": "Previously presented at MulTiSA workshop (ICDE 2024)\nAbundant multivariate time series, good opportunity for forecasting machine learning methods\nData may present intrinsic diversity of samples, affecting model’s performance on different parts of the input\nGlobal models: use all available time series\nLocal models: use only time series pertaining to each sample\nData subsets models: our proposal"
   },
   {
     "objectID": "talks/bda_subsets_2024.html#case-example",
@@ -2538,7 +2538,7 @@
     "href": "data-projects/s3-datasus-ftp-mirror.html#mirror-update-and-files-tree",
     "title": "S3 DataSUS FTP mirror",
     "section": "Mirror update and files tree",
-    "text": "Mirror update and files tree\nThe mirror is synced daily at 3:00 am Brazilian time. On each update file lists are produced:\n\nDirectory tree\nFiles tree\nFull path list\n\n\n\n\n\n\n\nCaution\n\n\n\nThe mirror is not a backup system. Modificated files at the FTP server will be updated at the mirror. Deleted files at the FTP server will be deleted at the mirror."
+    "text": "Mirror update and files tree\nThe mirror is synced daily at 3:00 am Brazilian time. On each update file lists are produced:\n\nDirectory tree\nFiles tree\nFull path list\nUpdate log\n\n\n\n\n\n\n\nCaution\n\n\n\nThe mirror is not a backup system. Modificated files at the FTP server will be updated at the mirror. Deleted files at the FTP server will be deleted at the mirror."
   },
   {
     "objectID": "data-projects/s3-datasus-ftp-mirror.html#how-to-access-a-file",
@@ -2560,5 +2560,12 @@
     "title": "S3 DataSUS FTP mirror",
     "section": "Script",
     "text": "Script\nIf you are curious to see how this works, check this code repository."
+  },
+  {
+    "objectID": "talks/bda_subsets_2024.html",
+    "href": "talks/bda_subsets_2024.html",
+    "title": "Subset Models for Multivariate Time Series Forecast",
+    "section": "",
+    "text": "Previously presented at MulTiSA workshop (ICDE 2024)\nAbundant multivariate time series, good opportunity for forecasting machine learning methods\nData may present intrinsic diversity of samples, affecting model’s performance on different parts of the input\nGlobal models: use all available time series\nLocal models: use only time series pertaining to each sample\nData subsets models: our proposal"
   }
 ]
