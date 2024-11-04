@@ -40,6 +40,7 @@ The mirror is synced daily at 3:00 am Brazilian time. On each update file lists 
 -   [Directory tree](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_dirs_tree.txt)
 -   [Files tree](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_files_tree.txt)
 -   [Full path list](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_full_path.txt)
+-   [Update log](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_log.txt)
 
 ::: {.callout-caution}
 The mirror is not a backup system. Modificated files at the FTP server will be updated at the mirror. Deleted files at the FTP server will be deleted at the mirror.
