@@ -65,13 +65,6 @@
     ]
   },
   {
-    "listing": "/data-projects/health-indicators.html",
-    "items": [
-      "/data-projects/health_indicators/indi_0002.html",
-      "/data-projects/health_indicators/indi_0001.html"
-    ]
-  },
-  {
     "listing": "/blog.html",
     "items": [
       "/posts/hospital_admissions_flow.html",
@@ -86,6 +79,13 @@
       "/posts/sqlite_to_duckdb_and_parquet.html",
       "/posts/query_remot_parquet_file.html",
       "/posts/some-tips-for-sqlite.html"
+    ]
+  },
+  {
+    "listing": "/data-projects/health-indicators.html",
+    "items": [
+      "/data-projects/health_indicators/indi_0002.html",
+      "/data-projects/health_indicators/indi_0001.html"
     ]
   },
   {
