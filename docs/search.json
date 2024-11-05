@@ -1516,7 +1516,7 @@
     "href": "talks.html",
     "title": "Talks",
     "section": "",
-    "text": "Subset Models for Multivariate Time Series Forecast\n\n\nBDA 2024, Orléans\n\n\n\nsubsets\n\n\nmachine learning\n\n\n\nPresentation at BDA2024 conference.\n\n\n\n\n\nOct 22, 2024\n\n\nRaphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, Patrick Valduriez, Fabio Porto\n\n\n\n\n\n\n\n\n\n\n\n\nAdvances in climate features engineering and subsets modeling\n\n\nfor Dengue forecasting\n\n\n\nbrclim\n\n\n\nTalk at the HPDaSc Workshop on Data Driven Science.\n\n\n\n\n\nMay 31, 2024\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nSubset Models for Multivariate Time Series Forecast\n\n\n1st MulTiSA, ICDE 2024\n\n\n\nsubsets\n\n\nmachine learning\n\n\n\nPresentation at 1st MulTiSA workshop, ICDE 2024 conference.\n\n\n\n\n\nMay 13, 2024\n\n\nRaphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, Patrick Valduriez, Fabio Porto\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modeling\n\n\nAn application case for Brazil\n\n\n\nbrclim\n\n\n\nTalk at the Inria Zenith’s Team Seminar.\n\n\n\n\n\nMar 21, 2024\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nBILIS\n\n\nAn unified indicators database\n\n\n\nbilis\n\n\n\nTalk at the Climate and Health for Health Situation Studies Workshop, IRD.\n\n\n\n\n\nDec 18, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modelling\n\n\nAn application case for Brazil\n\n\n\nbrclim\n\n\n\nTalk at the Climate and Health for Health Situation Studies Workshop, IRD.\n\n\n\n\n\nDec 18, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modelling\n\n\nAn application case for Brazil\n\n\n\nisntd\n\n\nclimate\n\n\ndata\n\n\n\nTalk at the ISNTD Climate & Health Conference, Global Health Resilience panel\n\n\n\n\n\nNov 22, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Dengue cases screening\n\n\n\n\n\n\nmachine learning\n\n\n\n\n\n\n\n\n\nNov 5, 2024\n\n\nRaphael Saldanha et al.\n\n\n\n\n\n\n\n\n\n\n\n\nSubset Models for Multivariate Time Series Forecast\n\n\nBDA 2024, Orléans\n\n\n\nsubsets\n\n\nmachine learning\n\n\n\nPresentation at BDA2024 conference.\n\n\n\n\n\nOct 22, 2024\n\n\nRaphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, Patrick Valduriez, Fabio Porto\n\n\n\n\n\n\n\n\n\n\n\n\nAdvances in climate features engineering and subsets modeling\n\n\nfor Dengue forecasting\n\n\n\nbrclim\n\n\n\nTalk at the HPDaSc Workshop on Data Driven Science.\n\n\n\n\n\nMay 31, 2024\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nSubset Models for Multivariate Time Series Forecast\n\n\n1st MulTiSA, ICDE 2024\n\n\n\nsubsets\n\n\nmachine learning\n\n\n\nPresentation at 1st MulTiSA workshop, ICDE 2024 conference.\n\n\n\n\n\nMay 13, 2024\n\n\nRaphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, Patrick Valduriez, Fabio Porto\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modeling\n\n\nAn application case for Brazil\n\n\n\nbrclim\n\n\n\nTalk at the Inria Zenith’s Team Seminar.\n\n\n\n\n\nMar 21, 2024\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nBILIS\n\n\nAn unified indicators database\n\n\n\nbilis\n\n\n\nTalk at the Climate and Health for Health Situation Studies Workshop, IRD.\n\n\n\n\n\nDec 18, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modelling\n\n\nAn application case for Brazil\n\n\n\nbrclim\n\n\n\nTalk at the Climate and Health for Health Situation Studies Workshop, IRD.\n\n\n\n\n\nDec 18, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modelling\n\n\nAn application case for Brazil\n\n\n\nisntd\n\n\nclimate\n\n\ndata\n\n\n\nTalk at the ISNTD Climate & Health Conference, Global Health Resilience panel\n\n\n\n\n\nNov 22, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "publications/araujoWHATHAVEWE2019a.html",
@@ -2560,5 +2560,152 @@
     "title": "S3 DataSUS FTP mirror",
     "section": "Script",
     "text": "Script\nIf you are curious to see how this works, check this code repository."
+  },
+  {
+    "objectID": "talks/dengue_class.html#dengue-cases-classification",
+    "href": "talks/dengue_class.html#dengue-cases-classification",
+    "title": "Dengue cases screening",
+    "section": "Dengue cases classification",
+    "text": "Dengue cases classification\n\na"
+  },
+  {
+    "objectID": "talks/dengue_class.html#the-case-itinerary",
+    "href": "talks/dengue_class.html#the-case-itinerary",
+    "title": "Dengue cases screening",
+    "section": "The case itinerary",
+    "text": "The case itinerary\n\nAfter a clinical assessement, a patient can be pointed as a suspected dengue/chikungunya case, based on its symptoms, clinical conditions and history (anamnesis)\n\nFever, arthralgia, myalgia, headache, and retroorbital pain\n\nThe suspected case is immediately notified to the health authorities (SINAN dataset)\nThe diagnosis must be verified to adequate the health treatment"
+  },
+  {
+    "objectID": "talks/dengue_class.html#possible-diagnosis",
+    "href": "talks/dengue_class.html#possible-diagnosis",
+    "title": "Dengue cases screening",
+    "section": "Possible diagnosis",
+    "text": "Possible diagnosis\n\nSuspected case\nConfirmed case\nDiscarded case"
+  },
+  {
+    "objectID": "talks/dengue_class.html#possible-case-classifications",
+    "href": "talks/dengue_class.html#possible-case-classifications",
+    "title": "Dengue cases screening",
+    "section": "Possible case classifications",
+    "text": "Possible case classifications\n\nSuspected case\nConfirmed case: dengue or chikungunya\nDiscarded case"
+  },
+  {
+    "objectID": "talks/dengue_class.html#how-a-case-is-confirmed-or-discarded",
+    "href": "talks/dengue_class.html#how-a-case-is-confirmed-or-discarded",
+    "title": "Dengue cases screening",
+    "section": "How a case is confirmed or discarded?",
+    "text": "How a case is confirmed or discarded?\n\nOn normal conditions\n\nPrimarly by laboratory exams (blood tests)\nNucleic acid amplification tests, serologic tests, and IgG antibody tests.\n\nOn outbreaks\n\nBy laboratorial test, if available\nOr by the doctor’s judgment, based on symptoms, clinical conditions and the patient history"
+  },
+  {
+    "objectID": "talks/dengue_class.html#dengue-cases-diagnosis-and-criteria",
+    "href": "talks/dengue_class.html#dengue-cases-diagnosis-and-criteria",
+    "title": "Dengue cases screening",
+    "section": "Dengue cases diagnosis and criteria",
+    "text": "Dengue cases diagnosis and criteria"
+  },
+  {
+    "objectID": "talks/dengue_class.html#research-questions",
+    "href": "talks/dengue_class.html#research-questions",
+    "title": "Dengue cases screening",
+    "section": "Research questions",
+    "text": "Research questions"
+  },
+  {
+    "objectID": "talks/dengue_class.html#dengue-cases-diagnosis-and-criteria-1",
+    "href": "talks/dengue_class.html#dengue-cases-diagnosis-and-criteria-1",
+    "title": "Dengue cases screening",
+    "section": "Dengue cases diagnosis and criteria",
+    "text": "Dengue cases diagnosis and criteria\n\n\n\nDiagnosis\nLaboratory\nClinical\n\n\n\n\nPositive Dengue\n3,624,320\n6,130,030\n\n\nPositive Chikungunya\n300,429\n502,977\n\n\nDiscarded\n1,304,000\n1,052,512"
+  },
+  {
+    "objectID": "talks/dengue_class.html#research-objectives",
+    "href": "talks/dengue_class.html#research-objectives",
+    "title": "Dengue cases screening",
+    "section": "Research objectives",
+    "text": "Research objectives\n\nTrain a ML model to predict a patient’s diagnosis based on its symptoms and clinical conditions\nEvaluate the performance of the model for cases screening during dengue outbreaks\nAssess the human performance on diagnosis based on the trained model"
+  },
+  {
+    "objectID": "talks/dengue_class.html#previous-works",
+    "href": "talks/dengue_class.html#previous-works",
+    "title": "Dengue cases screening",
+    "section": "Previous works",
+    "text": "Previous works\n\nNeto (2022) present a systematic literature review on ML and DL techniques to support clinical diagnoses of arboviral diseases.\n\nCurrent research is focused on binary classification of Dengue diagnosis.\nNone of the reviewed papers were trained to predict Dengue and or Chikungunya diagnosis with Brazilian data\nMaximum number of records of 14,019 was used for training and testing ML models"
+  },
+  {
+    "objectID": "talks/dengue_class.html#study-design",
+    "href": "talks/dengue_class.html#study-design",
+    "title": "Dengue cases screening",
+    "section": "Study design",
+    "text": "Study design\n\nCreate two datasets: \\(D_a\\) with cases that received diagnosis from laboratorial exams, and \\(D_b\\) containing only cases diagnosed solely on symptoms and clinical conditions\nTrain different ML learners on \\(D_a\\) based on the patient’s symptoms and clinical conditions\nModel evaluation\nApply the selected model on \\(D_b\\)\nCompare the results"
+  },
+  {
+    "objectID": "talks/dengue_class.html#previous-works-1",
+    "href": "talks/dengue_class.html#previous-works-1",
+    "title": "Dengue cases screening",
+    "section": "Previous works",
+    "text": "Previous works\n\nTabosa (2022) present a comparative study of ML techniques for multi-class classification of arboviral diseases\n\nData restricted to Amazonas and the city of Recife, Pernambuco, from 2015 to 2020.\nGradient-boosting learners offered the best performance\nNo learner achieved an accuracy above 70%"
+  },
+  {
+    "objectID": "talks/dengue_class.html#previous-works-2",
+    "href": "talks/dengue_class.html#previous-works-2",
+    "title": "Dengue cases screening",
+    "section": "Previous works",
+    "text": "Previous works\n\nBohm (2024) present a model for binary classification with 98% accuracy\n\nData restricted to Rio de Janeiro and Minas Gerais states\nSample of 20,000 records\nPossible discrepancies between paper methodology and available data from author"
+  },
+  {
+    "objectID": "talks/dengue_class.html#preliminary-results",
+    "href": "talks/dengue_class.html#preliminary-results",
+    "title": "Dengue cases screening",
+    "section": "Preliminary results",
+    "text": "Preliminary results\n\n\\(D_a\\) with 50,000 ramdom samples for each class: positive Dengue, positive Chikungunya, and discarded cases\nTraining dataset with 3/4 proportion, 5 folds\nLearners: XG-Boosting, Random Forest, KNN, MLP, Logistic Regression, and Regularized Discriminant Analysis (RDA) model\nThree cumulative model especifications: symptoms and clinical conditions, weather season and geographical region (state)"
+  },
+  {
+    "objectID": "talks/dengue_class.html#best-model-so-far",
+    "href": "talks/dengue_class.html#best-model-so-far",
+    "title": "Dengue cases screening",
+    "section": "Best model, so far",
+    "text": "Best model, so far\n\nComplete model especification\nXG-Boost learner\n64,28% accurracy\n64,28% sensibility\n82,14% specificity\n81,73% ROC AUC"
+  },
+  {
+    "objectID": "talks/dengue_class.html#model-cutoffs",
+    "href": "talks/dengue_class.html#model-cutoffs",
+    "title": "Dengue cases screening",
+    "section": "Model cutoffs",
+    "text": "Model cutoffs\n\nWith a 70% minimum probability\n78,9% accuracy for 33% of the cases"
+  },
+  {
+    "objectID": "talks/dengue_class.html#second-approach-binary-classification",
+    "href": "talks/dengue_class.html#second-approach-binary-classification",
+    "title": "Dengue cases screening",
+    "section": "Second approach: binary classification",
+    "text": "Second approach: binary classification\n\nComplete model especification\nXG-Boost learner\n64,28% accurracy\n64,28% sensibility\n82,14% specificity\n81,73% ROC AUC"
+  },
+  {
+    "objectID": "talks/dengue_class.html#thoughts",
+    "href": "talks/dengue_class.html#thoughts",
+    "title": "Dengue cases screening",
+    "section": "Thoughts",
+    "text": "Thoughts\n\nSensitivity: ability to designate an individual with disease as positive\nSpecificity: ability to designate an individual who does not have a disease as negative\nFor cases screening, a high specificity is desired: ruled-in cases can be directed to laboratory diagnosis for confirmation"
+  },
+  {
+    "objectID": "talks/dengue_class.html#confusion-matrix",
+    "href": "talks/dengue_class.html#confusion-matrix",
+    "title": "Dengue cases screening",
+    "section": "Confusion matrix",
+    "text": "Confusion matrix\n                      Truth\nPrediction             Discarded Positive Chikungunya Positive Dengue\n  Discarded                 5440                 1177            2415\n  Positive Chikungunya      2788                 9942            1362\n  Positive Dengue           4272                 1381            8723"
+  },
+  {
+    "objectID": "talks/dengue_class.html#strenghts-of-the-paper-so-far",
+    "href": "talks/dengue_class.html#strenghts-of-the-paper-so-far",
+    "title": "Dengue cases screening",
+    "section": "Strenghts of the paper, so far",
+    "text": "Strenghts of the paper, so far\n\nCountry-wide representative sample\nRelatively high specificity model\nMore realistic discussion on ML models for cases screening\nNew discussion on human performance"
+  },
+  {
+    "objectID": "talks/dengue_class.html#human-vs-machine",
+    "href": "talks/dengue_class.html#human-vs-machine",
+    "title": "Dengue cases screening",
+    "section": "Human vs machine",
+    "text": "Human vs machine"
   }
 ]
