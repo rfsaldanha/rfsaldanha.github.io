@@ -8,6 +8,7 @@ project:
 website:
   favicon: logo.png
   title: "Raphael Saldanha"
+  site-url: https://rfsaldanha.github.io
   page-navigation: true
   back-to-top-navigation: true
   google-analytics: "G-2M7VLSRDCB"
@@ -32,6 +33,8 @@ website:
       - talks.qmd
       - photos/photos.qmd
       - blog.qmd
+      - icon: rss
+        href: blog.xml
 
 format:
   html:
