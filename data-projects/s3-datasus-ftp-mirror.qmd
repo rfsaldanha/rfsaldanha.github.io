@@ -40,8 +40,6 @@ The mirror is synced daily at 3:00 am Brazilian time. On each update, some file 
 -   [Directory tree](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_dirs_tree.txt)
 -   [Files tree](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_files_tree.txt)
 -   [Full path list](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_full_path.txt)
--   [Last update log](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_log.txt)
--   [All logs on rclone-logs folder](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_logs.txt)
 
 ::: {.callout-caution}
 The mirror is not a backup system. Modificated files at the FTP server will be updated at the mirror. Deleted files at the FTP server will be deleted at the mirror.
@@ -55,6 +53,29 @@ Example: [SIM file for Bahia, 2022](https://datasus-ftp-mirror.nyc3.cdn.digitalo
 
 ```
 https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/SIM/CID10/DORES/DOBA2022.dbc
+```
+
+## Update logs
+
+A log of the last update is provided and all update logs are stored in the folder `rclone-logs`
+
+-   [Last update log](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_log.txt)
+-   [All logs on rclone-logs folder](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_logs.txt)
+
+### How to access an old update log?
+
+Fist, locate the log file name [here](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_logs.txt), then access the file. Example:
+
+```
+https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone-logs/rclone_datasus_log_2024-11-07_03:04:55.txt
+```
+
+## CDN
+
+The files are cached in a CDN (content delivery network) to increase transfer speeds. This cache is refreshed every hour. To access directly the file, without the CDN, remove the `cdn` from the address. Example:
+
+```
+https://datasus-ftp-mirror.nyc3.digitaloceanspaces.com/SIM/CID10/DORES/DOBA2022.dbc
 ```
 
 ## Costs

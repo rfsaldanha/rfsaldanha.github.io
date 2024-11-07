@@ -173,6 +173,11 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   <li><a href="#file-access" id="toc-file-access" class="nav-link" data-scroll-target="#file-access">File Access</a></li>
   <li><a href="#mirror-update-and-files-tree" id="toc-mirror-update-and-files-tree" class="nav-link" data-scroll-target="#mirror-update-and-files-tree">Mirror update and files tree</a></li>
   <li><a href="#how-to-access-a-file" id="toc-how-to-access-a-file" class="nav-link" data-scroll-target="#how-to-access-a-file">How to access a file?</a></li>
+  <li><a href="#update-logs" id="toc-update-logs" class="nav-link" data-scroll-target="#update-logs">Update logs</a>
+  <ul class="collapse">
+  <li><a href="#how-to-access-an-old-update-log" id="toc-how-to-access-an-old-update-log" class="nav-link" data-scroll-target="#how-to-access-an-old-update-log">How to access an old update log?</a></li>
+  </ul></li>
+  <li><a href="#cdn" id="toc-cdn" class="nav-link" data-scroll-target="#cdn">CDN</a></li>
   <li><a href="#costs" id="toc-costs" class="nav-link" data-scroll-target="#costs">Costs</a></li>
   <li><a href="#script" id="toc-script" class="nav-link" data-scroll-target="#script">Script</a></li>
   </ul>
@@ -228,8 +233,6 @@ Note
 <li><a href="https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_dirs_tree.txt">Directory tree</a></li>
 <li><a href="https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_files_tree.txt">Files tree</a></li>
 <li><a href="https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_full_path.txt">Full path list</a></li>
-<li><a href="https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_log.txt">Last update log</a></li>
-<li><a href="https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_logs.txt">All logs on rclone-logs folder</a></li>
 </ul>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -250,6 +253,24 @@ Caution
 <p>Check the desired file name at <a href="https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_full_path.txt">full path list</a> and append it to the endpoint access.</p>
 <p>Example: <a href="https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/SIM/CID10/DORES/DOBA2022.dbc">SIM file for Bahia, 2022</a></p>
 <pre><code>https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/SIM/CID10/DORES/DOBA2022.dbc</code></pre>
+</section>
+<section id="update-logs" class="level2">
+<h2 class="anchored" data-anchor-id="update-logs">Update logs</h2>
+<p>A log of the last update is provided and all update logs are stored in the folder <code>rclone-logs</code></p>
+<ul>
+<li><a href="https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_log.txt">Last update log</a></li>
+<li><a href="https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_logs.txt">All logs on rclone-logs folder</a></li>
+</ul>
+<section id="how-to-access-an-old-update-log" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-access-an-old-update-log">How to access an old update log?</h3>
+<p>Fist, locate the log file name <a href="https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_logs.txt">here</a>, then access the file. Example:</p>
+<pre><code>https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone-logs/rclone_datasus_log_2024-11-07_03:04:55.txt</code></pre>
+</section>
+</section>
+<section id="cdn" class="level2">
+<h2 class="anchored" data-anchor-id="cdn">CDN</h2>
+<p>The files are cached in a CDN (content delivery network) to increase transfer speeds. This cache is refreshed every hour. To access directly the file, without the CDN, remove the <code>cdn</code> from the address. Example:</p>
+<pre><code>https://datasus-ftp-mirror.nyc3.digitaloceanspaces.com/SIM/CID10/DORES/DOBA2022.dbc</code></pre>
 </section>
 <section id="costs" class="level2">
 <h2 class="anchored" data-anchor-id="costs">Costs</h2>

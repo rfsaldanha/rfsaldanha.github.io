@@ -1180,7 +1180,7 @@
     "href": "data-projects/s3-datasus-ftp-mirror.html#mirror-update-and-files-tree",
     "title": "S3 DataSUS FTP mirror",
     "section": "Mirror update and files tree",
-    "text": "Mirror update and files tree\nThe mirror is synced daily at 3:00 am Brazilian time. On each update, some file lists are produced:\n\nDirectory tree\nFiles tree\nFull path list\nLast update log\nAll logs on rclone-logs folder\n\n\n\n\n\n\n\nCaution\n\n\n\nThe mirror is not a backup system. Modificated files at the FTP server will be updated at the mirror. Deleted files at the FTP server will be deleted at the mirror."
+    "text": "Mirror update and files tree\nThe mirror is synced daily at 3:00 am Brazilian time. On each update, some file lists are produced:\n\nDirectory tree\nFiles tree\nFull path list\n\n\n\n\n\n\n\nCaution\n\n\n\nThe mirror is not a backup system. Modificated files at the FTP server will be updated at the mirror. Deleted files at the FTP server will be deleted at the mirror."
   },
   {
     "objectID": "data-projects/s3-datasus-ftp-mirror.html#how-to-access-a-file",
@@ -2623,5 +2623,19 @@
     "title": "How 2023 was hot in different Brazilian municipalities?",
     "section": "Juiz de Fora, MG",
     "text": "Juiz de Fora, MG\n\n\nCode\ncode_ref &lt;- 3136702\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Juiz de Fora, MG\",\n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
+  },
+  {
+    "objectID": "data-projects/s3-datasus-ftp-mirror.html#cdn",
+    "href": "data-projects/s3-datasus-ftp-mirror.html#cdn",
+    "title": "S3 DataSUS FTP mirror",
+    "section": "CDN",
+    "text": "CDN\nThe files are cached in a CDN (content delivery network) to increase transfer speeds. This cache is refreshed every hour. To access directly the file, without the CDN, remove the cdn from the address. Example:\nhttps://datasus-ftp-mirror.nyc3.digitaloceanspaces.com/SIM/CID10/DORES/DOBA2022.dbc"
+  },
+  {
+    "objectID": "data-projects/s3-datasus-ftp-mirror.html#update-logs",
+    "href": "data-projects/s3-datasus-ftp-mirror.html#update-logs",
+    "title": "S3 DataSUS FTP mirror",
+    "section": "Update logs",
+    "text": "Update logs\nA log of the last update is provided and all update logs are stored in the folder rclone-logs\n\nLast update log\nAll logs on rclone-logs folder\n\n\nHow to access an old update log?\nFist, locate the log file name here, then access the file. Example:\nhttps://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone-logs/rclone_datasus_log_2024-11-07_03:04:55.txt"
   }
 ]
