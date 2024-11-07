@@ -1180,7 +1180,7 @@
     "href": "data-projects/s3-datasus-ftp-mirror.html#mirror-update-and-files-tree",
     "title": "S3 DataSUS FTP mirror",
     "section": "Mirror update and files tree",
-    "text": "Mirror update and files tree\nThe mirror is synced daily at 3:00 am Brazilian time. On each update, some file lists are produced:\n\nDirectory tree\nFiles tree\nFull path list\n\n\n\n\n\n\n\nCaution\n\n\n\nThe mirror is not a backup system. Modificated files at the FTP server will be updated at the mirror. Deleted files at the FTP server will be deleted at the mirror."
+    "text": "Mirror update and files tree\nThe mirror is synced daily at 3:00 am Brazilian time. On each update, some file lists are produced:\n\nDirectory tree\nFiles tree\nFull path list\n\n\n\n\n\n\n\nTip\n\n\n\nThe S3 bucket versioning option was enabled on November 7, 2024. Since then, the version history of all files (including deleted files) has been kept."
   },
   {
     "objectID": "data-projects/s3-datasus-ftp-mirror.html#how-to-access-a-file",
@@ -2637,5 +2637,12 @@
     "title": "S3 DataSUS FTP mirror",
     "section": "Update logs",
     "text": "Update logs\nA log of the last update is provided and all update logs are stored in the folder rclone-logs\n\nLast update log\nAll logs on rclone-logs folder\n\n\nHow to access an old update log?\nFist, locate the log file name here, then access the file. Example:\nhttps://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone-logs/rclone_datasus_log_2024-11-07_03:04:55.txt"
+  },
+  {
+    "objectID": "data-projects/s3-datasus-ftp-mirror.html#versioning",
+    "href": "data-projects/s3-datasus-ftp-mirror.html#versioning",
+    "title": "S3 DataSUS FTP mirror",
+    "section": "Versioning",
+    "text": "Versioning\nThe S3 bucket versioning option was enabled on November 7, 2024. Since then, the version history of all files (including deleted files) has been kept."
   }
 ]
