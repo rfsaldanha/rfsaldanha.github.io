@@ -1180,7 +1180,7 @@
     "href": "data-projects/s3-datasus-ftp-mirror.html#mirror-update-and-files-tree",
     "title": "S3 DataSUS FTP mirror",
     "section": "Mirror update and files tree",
-    "text": "Mirror update and files tree\nThe mirror is synced daily at 3:00 am Brazilian time. On each update file lists are produced:\n\nDirectory tree\nFiles tree\nFull path list\nUpdate log\n\n\n\n\n\n\n\nCaution\n\n\n\nThe mirror is not a backup system. Modificated files at the FTP server will be updated at the mirror. Deleted files at the FTP server will be deleted at the mirror."
+    "text": "Mirror update and files tree\nThe mirror is synced daily at 3:00 am Brazilian time. On each update, some file lists are produced:\n\nDirectory tree\nFiles tree\nFull path list\nLast update log\nAll logs on rclone-logs folder\n\n\n\n\n\n\n\nCaution\n\n\n\nThe mirror is not a backup system. Modificated files at the FTP server will be updated at the mirror. Deleted files at the FTP server will be deleted at the mirror."
   },
   {
     "objectID": "data-projects/s3-datasus-ftp-mirror.html#how-to-access-a-file",
