@@ -9,7 +9,7 @@
 <link>https://rfsaldanha.github.io/blog.html</link>
 <atom:link href="https://rfsaldanha.github.io/blog.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.6.19</generator>
+<generator>quarto-1.5.57</generator>
 <lastBuildDate>Mon, 10 Jun 2024 22:00:00 GMT</lastBuildDate>
 <item>
   <title>Handling 187 millions hospital admissions in Brazil with DuckDB</title>
@@ -3314,7 +3314,7 @@ font-style: inherit;">gt</span>()</span><div class="code-annotation-gutter-bg"><
 
 <table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
-<tr class="gt_col_headings header">
+<tr class="header gt_col_headings">
 <th id="code_muni" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">code_muni</th>
 <th id="date" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">date</th>
 <th id="name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">name</th>
@@ -3900,7 +3900,7 @@ font-style: inherit;">gt</span>()</span></code></pre></div>
 
 <table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
-<tr class="gt_col_headings header">
+<tr class="header gt_col_headings">
 <th id="code_muni" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">code_muni</th>
 <th id="date" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">date</th>
 <th id="name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">name</th>
@@ -4521,7 +4521,7 @@ font-style: inherit;">gt</span>()</span></code></pre></div>
 
 <table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
-<tr class="gt_col_headings header">
+<tr class="header gt_col_headings">
 <th id="code_muni" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">code_muni</th>
 <th id="date_w" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">date_w</th>
 <th id="name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">name</th>
