@@ -91,6 +91,7 @@
   {
     "listing": "/talks.html",
     "items": [
+      "/talks/climate_br.html",
       "/talks/dengue_class.html",
       "/talks/bda_subsets_2024.html",
       "/talks/hpdasc_workshop_2024.html",

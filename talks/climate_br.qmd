@@ -1,0 +1,103 @@
+---
+title: "Climate data for Brazilian municipalities"
+#subtitle: ""
+author: "Raphael Saldanha et al."
+institute: "Fiocruz"
+date: "2024-11-20"
+#description: ""
+categories: [climate]
+#image: images/subsets_model_accuracy.png
+format:
+  revealjs: 
+    theme: inria_style.scss
+    # logo: inria_logo.png
+    transition: fade
+    background-transition: fade
+    pointer:
+      pointerSize: 40
+      color: '#e63312'
+code-link: true
+revealjs-plugins:
+  - pointer
+---
+
+## Overview
+
+-   Climate raw data sources (raster)
+-   Data on Braziliam municipalities spatial unit
+-   Climatological normals and indicators
+
+## Climate raw data sources
+
+-   [ERA5-Land]{.hl}: global coverage, hourly and daily data, regular updates
+-  [BR-DWGD]{.hl}: Brazil coverage, daily data, sensible to extreme events, sporadic updates
+-   [TerraClimate]{.hl}: global coverage, monthly data, higher resolution (~4km), regular updates
+
+More details [here](https://rfsaldanha.github.io/data-projects/era5land-daily-latin-america.html)
+
+## Climate data for Brazilian municipalities
+
+-   Zonal statistics computation
+-   Adoption of `{exactextractr}` package for cell's coverage weighted computations
+-   Creation of package `{zonalclim}` with helper functions to compute scalable zonal statistics with chunks strategy
+-   DAG system using the `{targets}` package to compute climate zonal statistics for Brazilian municipalities
+-   Publication on Environmental Data Science journal
+
+More details [here](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html)
+
+## Example
+
+![](../data-projects/images/zonal_brdwgd-01.png)
+
+## Climatological normals
+
+-   Climatological normals are computed only for weather stations and municipal references are needed for better climate change understanding
+-   Normals computed for each Brazilian municipality using the Zonal BR-DWGD from 1961 to 1990
+    -   Mean, 10th and 90th percentile
+    -   Temperature (max, min), precipitation, relative humidity, solar radiation, wind speed, and evapotranspiration
+
+##
+
+![](../data-projects/brazil_climate_normals_indicators_files/figure-html/unnamed-chunk-31-1.png)
+
+## Time-aggregated indicators
+
+-   Municipal daily data time series to monthly indicators
+-   Monthly statistics 
+    -   Average, median, standard deviation, standard error, maximum and minimum values, and percentiles
+-   Occurence of events 
+    -   22 indicators, in reference to normals or count sequence. Creation of `{nseq}` package
+    -   Heat waves, cold spells, count of warm days, count of dry and wet days, and others
+
+More details [here](https://rfsaldanha.github.io/data-projects/brazil_climate_normals_indicators.html).
+
+## 
+
+
+```{r}
+#| message: false
+#| warning: false
+
+library(dplyr)
+library(zendown)
+library(arrow)
+library(stringr)
+library(ggplot2)
+
+zen_file(13934888, "tmax_indi.parquet") |>
+    open_dataset() |>
+    filter(code_muni == 3304557) |>
+    select(year, month, hot_days) |>
+    collect() |>
+    mutate(date = as.Date(paste0(year, "-", str_pad(month, 2, pad = "0"), "-", "01"))) |>
+    ggplot(aes(x = date, y = hot_days)) +
+    geom_bar(stat = "identity") +
+    theme_bw() +
+    labs(x = "Date", y = "Count", title = "Warm days: max temperature above normal 90th percentile", subtitle = "Rio de Janeiro, RJ")
+```
+
+## Future work
+
+-   Compute zonal statistics weighted by populated areas
+-   Create other time-aggregated indicators
+-   Test the methodologies on other countries
