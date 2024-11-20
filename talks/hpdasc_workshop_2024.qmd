@@ -45,7 +45,7 @@ climate --> social(Social & economic \n determinants) --> health
 
 ## A time-lagged relationship
 
-::: columns
+::::: columns
 ::: {.column width="45%"}
 -   Vector life cycle from a time perspective
 -   Climate conditions from the **past** leads to the disease incidence of **tomorrow**
@@ -54,11 +54,11 @@ climate --> social(Social & economic \n determinants) --> health
 ::: {.column width="55%"}
 ![](images/aedes_cycle.png){fig-align="center"}
 :::
-:::
+:::::
 
 ## ERA5-Land reanalysis
 
-::: columns
+::::: columns
 ::: {.column width="40%"}
 -   Copernicus, ECMWF
 -   Global coverage
@@ -71,14 +71,14 @@ climate --> social(Social & economic \n determinants) --> health
 ::: {.column width="60%"}
 ![](images/NL161-Sabater-Fig1.jpg){fig-align="center"}
 :::
-:::
+:::::
 
 ## Challenge on data structures
 
 -   Climate indicators: grid data
 -   Disease incidence: tabular, individual cases aggregated by spatial regions and time spans
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 ![](images/temp.png){width="80%"}
 :::
@@ -86,7 +86,7 @@ climate --> social(Social & economic \n determinants) --> health
 ::: {.column width="50%"}
 ![](images/admin.png){width="80%"}
 :::
-:::
+:::::
 
 ## Zonal statistics
 
@@ -94,12 +94,11 @@ climate --> social(Social & economic \n determinants) --> health
 
 ## Resulting products {.small}
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 -   ERA5-Land daily datasets
     -   7,105 files, 658.7 GB
     -   24,242 downloads on Zenodo
-
 -   Daily zonal statistics of climate indicators
     -   8 selected indicators, 5,570 municipalities
     -   6,085,749,761 records covering 1950-2023
@@ -108,12 +107,11 @@ climate --> social(Social & economic \n determinants) --> health
 ::: {.column width="50%"}
 ![](images/era5-land-daily-aggregates.png){fig-align="center"}
 :::
-:::
-
+:::::
 
 ## Precipitation {.smaller}
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 ![](images/prec_map_2.png){fig-align="center" width="100%"}
 :::
@@ -121,7 +119,7 @@ climate --> social(Social & economic \n determinants) --> health
 ::: {.column width="50%"}
 ![](images/prec_map_1.png){fig-align="center" width="100%"}
 :::
-:::
+:::::
 
 Rio de Janeiro municipalities. January 1, 2010.
 
@@ -131,7 +129,7 @@ Rio de Janeiro municipalities. January 1, 2010.
 
 ## Publications & Products {.small}
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 -   Paper on [Environmental Data Science journal]{.hl} (Saldanha et al. 2024)
 -   Datasets on Zenodo: more than [34,000 downloads]{.hl}
@@ -141,11 +139,11 @@ Rio de Janeiro municipalities. January 1, 2010.
 ::: {.column width="50%"}
 [![](https://zenodo.org/badge/DOI/10.1017/eds.2024.3.svg)](https://doi.org/10.1017/eds.2024.3) ![](images/eds_paper.png)
 :::
-:::
+:::::
 
 ## Subset models for multivariate time series forecast {.small}
 
-::: columns
+::::: columns
 ::: {.column width="60%"}
 -   Data may present intrinsic [diversity]{.hl} of samples, affecting model's performance on [different parts of the input]{.hl}
 -   [Global models]{.hl}: use all available time series
@@ -156,7 +154,7 @@ Rio de Janeiro municipalities. January 1, 2010.
 ::: {.column width="40%"}
 -   Paper on **ICDE2024**, Multivariate Time Series Analytics workshop ![](images/icde.png){fig-align="center" width="50%"}
 :::
-:::
+:::::
 
 ## Case example
 
@@ -188,10 +186,9 @@ Rio de Janeiro municipalities. January 1, 2010.
 -   Train random forest [Subsets Models]{.hl}
 -   [Evaluate]{.hl} forecasting model's [performance]{.hl} on test data
 
-
 ## Clustering results
 
-::: columns
+::::: columns
 ::: {.column width="40%"}
 -   $k = 5$ returned the highest silhouette score
 -   Partition sizes: $g_1 = 69$, $g_2 = 62$, $g_3 = 82$, $g_4 = 102$, $g_5 = 18$
@@ -200,7 +197,7 @@ Rio de Janeiro municipalities. January 1, 2010.
 ::: {.column width="60%"}
 ![](images/subset_model_partitions_map.png){fig-align="center"}
 :::
-:::
+:::::
 
 ## Model results
 

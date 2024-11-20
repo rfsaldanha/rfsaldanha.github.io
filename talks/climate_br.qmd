@@ -23,17 +23,40 @@ revealjs-plugins:
 
 ## Overview
 
--   Climate raw data sources (raster)
+-   Climate raw data sources: ground level and reanalysis
 -   Data on Braziliam municipalities spatial unit
 -   Climatological normals and indicators
 
-## Climate raw data sources
+## Groud-level climate data
 
+::::: columns
+::: {.column width="55%"}
+-   Weather stations on Cametá and Mocajuba (north region)
+-   Data every 5 minutes, sent to Fiocruz Postgres server
+-   `{plugfieldapi}` package to retrieve data from stations with daily e-mail reports
+-   Error detection and notification for problems
+:::
+
+::: {.column width="45%"}
+![](images/estacao_mocajuba.mp4){autoplay="true" loop="true" muted="true"}
+:::
+:::::
+
+## ReAnalysis climate data
+
+::::: columns
+::: {.column width="50%"}
 -   [ERA5-Land]{.hl}: global coverage, hourly and daily data, regular updates
--  [BR-DWGD]{.hl}: Brazil coverage, daily data, sensible to extreme events, sporadic updates
--   [TerraClimate]{.hl}: global coverage, monthly data, higher resolution (~4km), regular updates
+-   [BR-DWGD]{.hl}: Brazil coverage, daily data, sensible to extreme events, sporadic updates
+-   [TerraClimate]{.hl}: global coverage, monthly data, higher resolution (\~4km), regular updates
+:::
+
+::: {.column width="50%"}
+![](../data-projects/era5land-daily-latin-america_files/figure-html/unnamed-chunk-1-1.png)
 
 More details [here](https://rfsaldanha.github.io/data-projects/era5land-daily-latin-america.html)
+:::
+:::::
 
 ## Climate data for Brazilian municipalities
 
@@ -56,23 +79,22 @@ More details [here](https://rfsaldanha.github.io/data-projects/brazil-climate-zo
     -   Mean, 10th and 90th percentile
     -   Temperature (max, min), precipitation, relative humidity, solar radiation, wind speed, and evapotranspiration
 
-##
+## 
 
 ![](../data-projects/brazil_climate_normals_indicators_files/figure-html/unnamed-chunk-31-1.png)
 
 ## Time-aggregated indicators
 
 -   Municipal daily data time series to monthly indicators
--   Monthly statistics 
+-   Monthly statistics
     -   Average, median, standard deviation, standard error, maximum and minimum values, and percentiles
--   Occurence of events 
+-   Occurence of events
     -   22 indicators, in reference to normals or count sequence. Creation of `{nseq}` package
     -   Heat waves, cold spells, count of warm days, count of dry and wet days, and others
 
 More details [here](https://rfsaldanha.github.io/data-projects/brazil_climate_normals_indicators.html).
 
 ## 
-
 
 ```{r}
 #| message: false

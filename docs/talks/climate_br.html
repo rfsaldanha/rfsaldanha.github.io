@@ -350,10 +350,25 @@ Raphael Saldanha et al.
   <p class="date">2024-11-20</p>
 </section><section id="overview" class="slide level2"><h2>Overview</h2>
 <ul>
-<li>Climate raw data sources (raster)</li>
+<li>Climate raw data sources: ground level and reanalysis</li>
 <li>Data on Braziliam municipalities spatial unit</li>
 <li>Climatological normals and indicators</li>
-</ul></section><section id="climate-raw-data-sources" class="slide level2"><h2>Climate raw data sources</h2>
+</ul></section><section id="groud-level-climate-data" class="slide level2"><h2>Groud-level climate data</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<ul>
+<li>Weather stations on Cametá and Mocajuba (north region)</li>
+<li>Data every 5 minutes, sent to Fiocruz Postgres server</li>
+<li>
+<a href="https://rfsaldanha.github.io/plugfieldapi/">plugfieldapi</a> package to retrieve data from stations with daily e-mail reports</li>
+<li>Error detection and notification for problems</li>
+</ul>
+</div><div class="column" style="width:45%;">
+<p><video data-src="images/estacao_mocajuba.mp4" autoplay="true" loop="true" muted="true" controls=""><a href="images/estacao_mocajuba.mp4">Video</a></video></p>
+</div></div>
+</section><section id="reanalysis-climate-data" class="slide level2"><h2>ReAnalysis climate data</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
 <li>
 <span class="hl">ERA5-Land</span>: global coverage, hourly and daily data, regular updates</li>
@@ -362,7 +377,10 @@ Raphael Saldanha et al.
 <li>
 <span class="hl">TerraClimate</span>: global coverage, monthly data, higher resolution (~4km), regular updates</li>
 </ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="../data-projects/era5land-daily-latin-america_files/figure-html/unnamed-chunk-1-1.png"></p>
 <p>More details <a href="https://rfsaldanha.github.io/data-projects/era5land-daily-latin-america.html">here</a></p>
+</div></div>
 </section><section id="climate-data-for-brazilian-municipalities" class="slide level2"><h2>Climate data for Brazilian municipalities</h2>
 <ul>
 <li>Zonal statistics computation</li>

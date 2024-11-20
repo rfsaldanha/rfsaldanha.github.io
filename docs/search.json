@@ -1943,14 +1943,14 @@
     "href": "talks/climate_br.html#overview",
     "title": "Climate data for Brazilian municipalities",
     "section": "Overview",
-    "text": "Overview\n\nClimate raw data sources (raster)\nData on Braziliam municipalities spatial unit\nClimatological normals and indicators"
+    "text": "Overview\n\nClimate raw data sources: ground level and reanalysis\nData on Braziliam municipalities spatial unit\nClimatological normals and indicators"
   },
   {
     "objectID": "talks/climate_br.html#climate-raw-data-sources",
     "href": "talks/climate_br.html#climate-raw-data-sources",
     "title": "Climate data for Brazilian municipalities",
     "section": "Climate raw data sources",
-    "text": "Climate raw data sources\n\n\nERA5-Land: global coverage, hourly and daily data, regular updates\n\nBR-DWGD: Brazil coverage, daily data, sensible to extreme events, sporadic updates\n\nTerraClimate: global coverage, monthly data, higher resolution (~4km), regular updates\n\nMore details here"
+    "text": "Climate raw data sources\n\n\nGround-level data with weather stations\n\nCametá station on a urban environment\nMocajuba station in a forest area\n\n\nData collected every 5 minutes, sent to Fiocruz Postgres server\nR scripts and plugfieldapi package to retrieve data from stations\nDaily e-mail reports\nError detection scripts and notificaton for database and data retrieval problems\nERA5-Land: global coverage, hourly and daily data, regular updates\nBR-DWGD: Brazil coverage, daily data, sensible to extreme events, sporadic updates\nTerraClimate: global coverage, monthly data, higher resolution (~4km), regular updates\n\nMore details here"
   },
   {
     "objectID": "talks/climate_br.html#climate-data-for-brazilian-municipalities",
@@ -2686,5 +2686,26 @@
     "title": "How 2023 was hot in different Brazilian municipalities?",
     "section": "Juiz de Fora, MG",
     "text": "Juiz de Fora, MG\n\n\nCode\ncode_ref &lt;- 3136702\n\ntemp_list &lt;- list(\n  temp = temp %&gt;% filter(code_muni == code_ref),\n  temp_23 = temp_23 %&gt;% filter(code_muni == code_ref)\n)\n\nggplot() +\n  geom_line(\n    data = temp_list$temp, \n    aes(x = date, y = value, color = year, group = year),\n    alpha = .3, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n  scale_color_viridis(option = \"plasma\") +\n  geom_line(\n    data = temp_list$temp_23, \n    aes(x = date, y = value), \n    color = \"red\",\n    lwd = 1, alpha = .7, \n    stat = \"smooth\", \n    method = \"loess\"\n  ) +\n    geom_dl(\n    data = temp_list$temp_23, \n    aes(x = date, y = value, label = \"2023\"),\n    method = list(dl.combine(\"last.points\")), \n    color = \"red\",\n    cex = 0.8\n  ) +\n  ylim(15, 35) +\n  scale_x_date(date_breaks = \"1 month\", date_labels = \"%b\") +\n  dark_theme_gray() +\n  theme(\n    legend.position = \"bottom\",\n    legend.direction = \"horizontal\"\n  ) +\n  labs(\n    title = \"Juiz de Fora, MG\",\n    x = \"Date\",\n    y = \"Average temperature (°C)\", \n    color = NULL\n  )"
+  },
+  {
+    "objectID": "talks/climate_br.html#groud-level-climate-data",
+    "href": "talks/climate_br.html#groud-level-climate-data",
+    "title": "Climate data for Brazilian municipalities",
+    "section": "Groud-level climate data",
+    "text": "Groud-level climate data\n\n\n\nWeather stations on Cametá and Mocajuba (north region)\nData every 5 minutes, sent to Fiocruz Postgres server\n\nplugfieldapi package to retrieve data from stations with daily e-mail reports\nError detection and notification for problems\n\n\nVideo"
+  },
+  {
+    "objectID": "talks/climate_br.html#reanalysis-climate-data",
+    "href": "talks/climate_br.html#reanalysis-climate-data",
+    "title": "Climate data for Brazilian municipalities",
+    "section": "ReAnalysis climate data",
+    "text": "ReAnalysis climate data\n\n\n\n\nERA5-Land: global coverage, hourly and daily data, regular updates\n\nBR-DWGD: Brazil coverage, daily data, sensible to extreme events, sporadic updates\n\nTerraClimate: global coverage, monthly data, higher resolution (~4km), regular updates\n\n\n\nMore details here"
+  },
+  {
+    "objectID": "talks/climate_br.html#section",
+    "href": "talks/climate_br.html#section",
+    "title": "Climate data for Brazilian municipalities",
+    "section": "",
+    "text": "Video"
   }
 ]
