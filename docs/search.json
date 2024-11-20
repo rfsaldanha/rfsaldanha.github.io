@@ -1978,7 +1978,7 @@
     "href": "talks/climate_br.html#time-aggregated-indicators",
     "title": "Climate data for Brazilian municipalities",
     "section": "Time-aggregated indicators",
-    "text": "Time-aggregated indicators\n\nMunicipal daily data time series to monthly indicators\nMonthly statistics\n\nAverage, median, standard deviation, standard error, maximum and minimum values, and percentiles\n\n\nOccurence of events\n\n22 indicators, in reference to normals or count sequence. Creation of nseq package\nHeat waves, cold spells, count of warm days, count of dry and wet days, and others\n\n\n\nMore details here."
+    "text": "Time-aggregated indicators\n\nMunicipal daily data time series to monthly indicators\nMonthly statistics\n\nAverage, median, standard deviation, standard error, maximum and minimum values, and percentiles\n\n\nOccurence of events\n\n22 indicators, in reference to normals or count sequence. Creation of nseq and climindi packages\nHeat waves, cold spells, count of warm days, count of dry and wet days, and others\n\n\n\nMore details here."
   },
   {
     "objectID": "talks/climate_br.html#future-work",

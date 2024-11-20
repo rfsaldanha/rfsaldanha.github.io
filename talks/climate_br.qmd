@@ -89,7 +89,7 @@ More details [here](https://rfsaldanha.github.io/data-projects/brazil-climate-zo
 -   Monthly statistics
     -   Average, median, standard deviation, standard error, maximum and minimum values, and percentiles
 -   Occurence of events
-    -   22 indicators, in reference to normals or count sequence. Creation of `{nseq}` package
+    -   22 indicators, in reference to normals or count sequence. Creation of `{nseq}` and `{climindi}` packages
     -   Heat waves, cold spells, count of warm days, count of dry and wet days, and others
 
 More details [here](https://rfsaldanha.github.io/data-projects/brazil_climate_normals_indicators.html).
