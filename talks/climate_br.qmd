@@ -120,6 +120,7 @@ zen_file(13934888, "tmax_indi.parquet") |>
 
 ## Future work
 
--   Compute zonal statistics weighted by populated areas
+-   Dashboards for weather stations
+-   Compute zonal statistics with populated areas weights
 -   Create other time-aggregated indicators
 -   Test the methodologies on other countries

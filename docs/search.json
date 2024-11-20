@@ -1985,7 +1985,7 @@
     "href": "talks/climate_br.html#future-work",
     "title": "Climate data for Brazilian municipalities",
     "section": "Future work",
-    "text": "Future work\n\nCompute zonal statistics weighted by populated areas\nCreate other time-aggregated indicators\nTest the methodologies on other countries"
+    "text": "Future work\n\nDashboards for weather stations\nCompute zonal statistics with populated areas weights\nCreate other time-aggregated indicators\nTest the methodologies on other countries"
   },
   {
     "objectID": "photos/photos.html",
