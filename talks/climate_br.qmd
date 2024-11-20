@@ -42,6 +42,14 @@ revealjs-plugins:
 :::
 :::::
 
+##
+
+![](../talks/images/estacoes_temp.png)
+
+##
+
+![](../talks/images/estacoes_moon.png)
+
 ## ReAnalysis climate data
 
 ::::: columns
