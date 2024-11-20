@@ -124,3 +124,4 @@ zen_file(13934888, "tmax_indi.parquet") |>
 -   Compute zonal statistics with populated areas weights
 -   Create other time-aggregated indicators
 -   Test the methodologies on other countries
+-   Compare ground-level data from weather stations with climate reanalysis datasets
