@@ -27,7 +27,7 @@ revealjs-plugins:
 -   Data on Braziliam municipalities spatial unit
 -   Climatological normals and indicators
 
-## Groud-level climate data
+## Ground-level climate data
 
 ::::: columns
 ::: {.column width="55%"}
