@@ -48,7 +48,7 @@ revealjs-plugins:
 
 ##
 
-![](../talks/images/estacoes_moon.png)
+![](../talks/images/estacoes_moon2.png)
 
 ## ReAnalysis climate data
 
