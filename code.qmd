@@ -78,6 +78,12 @@ R package to download dengue data from the OpenDengue project.
 
 [![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/opendenguedata-blue)](https://rfsaldanha.github.io/opendenguedata/) [![](https://img.shields.io/github/stars/rfsaldanha/opendenguedata)](https://github.com/rfsaldanha/opendenguedata) [![](https://github.com/rfsaldanha/opendenguedata/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/opendenguedata/actions/workflows/R-CMD-check.yaml)
 
+### inmetrss
+
+R package to fetch and parse INMET alerts RSS feed.
+
+[![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/inmetrss-blue)](https://rfsaldanha.github.io/inmetrss/) [![](https://img.shields.io/github/stars/rfsaldanha/inmetrss)](https://github.com/rfsaldanha/inmetrss)
+
 ## Packages download statistics
 
 Download statistics of packages on CRAN are available [here](https://rfsaldanha.github.io/pkgdash/#packages-on-cran).

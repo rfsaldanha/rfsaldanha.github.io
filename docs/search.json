@@ -661,8 +661,8 @@
     "objectID": "talks/hpdasc_workshop_2024.html#context-of-climate-sensitive-diseases",
     "href": "talks/hpdasc_workshop_2024.html#context-of-climate-sensitive-diseases",
     "title": "Advances in climate features engineering and subsets modeling",
-    "section": "Context of Climate-Sensitive diseases",
-    "text": "Context of Climate-Sensitive diseases\n\nDirect relationship: floods, droughts, heat waves…\nIndirect relationship\n\n\n\n\n\n\n%%{\n  init: {\n    'theme': 'base',\n    'themeVariables': {\n      'fontSize': '30px'\n    }\n  }\n}%%\nflowchart LR\n\nclimate(Climate) --&gt; vector(Disease vectors) --&gt; health(Human health)\nclimate --&gt; health\nclimate --&gt; social(Social & economic \\n determinants) --&gt; health"
+    "section": "",
+    "text": "Direct relationship: floods, droughts, heat waves…\nIndirect relationship\n\n\n\n\n\n\n%%{\n  init: {\n    'theme': 'base',\n    'themeVariables': {\n      'fontSize': '30px'\n    }\n  }\n}%%\nflowchart LR\n\nclimate(Climate) --&gt; vector(Disease vectors) --&gt; health(Human health)\nclimate --&gt; health\nclimate --&gt; social(Social & economic \\n determinants) --&gt; health"
   },
   {
     "objectID": "talks/hpdasc_workshop_2024.html#a-time-lagged-relationship",
@@ -704,7 +704,7 @@
     "href": "talks/hpdasc_workshop_2024.html#precipitation",
     "title": "Advances in climate features engineering and subsets modeling",
     "section": "Precipitation",
-    "text": "Precipitation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRio de Janeiro municipalities. January 1, 2010."
+    "text": "Precipitation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRio de Janeiro municipalities. January 1, 2010."
   },
   {
     "objectID": "talks/hpdasc_workshop_2024.html#angra-dos-reis",
@@ -1292,7 +1292,7 @@
     "href": "code.html#r-packages",
     "title": "Packages & Code",
     "section": "R packages",
-    "text": "R packages\n\nmicrodatasus\nR package to download and pre-process datasets from DataSUS, Brazilian Health Ministry.\n  \n\n\nbrpop\nR package with Brazilian population estimates.\n   \n\n\ntidyrates\nR package to compute age-standardized epidemiological rates in a tidy way.\n   \n\n\nzendown\nR package to download and cache files from Zenodo deposits.\n   \n\n\nzenstats\nR package to fetch statistics of views, downloads and volume from Zenodo deposits.\n   \n\n\nnseq\nR package to compute counts and statistics of occurrence of events in sequences that meets a criterion.\n   \n\n\nrspell\nR package to grammar check documents inside RStudio.\n  \n\n\nzonalclim\nR package to compute zonal statistics of climate indicators.\n  \n\n\nbrclimr\nR package to retrieve municipal climate indicators of Brazilian municipalities.\n   \n\n\nzonalclim\nR package with helper functions to compute zonal statistics using NetCDF and sf objects for climate studies.\n  \n\n\nplugfieldapi\nR package to access the Plugfield API and retrieve data from weather stations.\n  \n\n\nopendenguedata\nR package to download dengue data from the OpenDengue project."
+    "text": "R packages\n\nmicrodatasus\nR package to download and pre-process datasets from DataSUS, Brazilian Health Ministry.\n  \n\n\nbrpop\nR package with Brazilian population estimates.\n   \n\n\ntidyrates\nR package to compute age-standardized epidemiological rates in a tidy way.\n   \n\n\nzendown\nR package to download and cache files from Zenodo deposits.\n   \n\n\nzenstats\nR package to fetch statistics of views, downloads and volume from Zenodo deposits.\n   \n\n\nnseq\nR package to compute counts and statistics of occurrence of events in sequences that meets a criterion.\n   \n\n\nrspell\nR package to grammar check documents inside RStudio.\n  \n\n\nzonalclim\nR package to compute zonal statistics of climate indicators.\n  \n\n\nbrclimr\nR package to retrieve municipal climate indicators of Brazilian municipalities.\n   \n\n\nzonalclim\nR package with helper functions to compute zonal statistics using NetCDF and sf objects for climate studies.\n  \n\n\nplugfieldapi\nR package to access the Plugfield API and retrieve data from weather stations.\n  \n\n\nopendenguedata\nR package to download dengue data from the OpenDengue project.\n  \n\n\ninmetrss\nR package to fetch and parse INMET alerts RSS feed."
   },
   {
     "objectID": "code.html#packages-download-statistics",
@@ -2714,5 +2714,12 @@
     "title": "Climate data for Brazilian municipalities",
     "section": "Ground-level climate data",
     "text": "Ground-level climate data\n\n\n\nWeather stations on Cametá and Mocajuba (north region)\nData every 5 minutes, sent to Fiocruz Postgres server\n\nplugfieldapi package to retrieve data from stations with daily e-mail reports\nError detection and notification for problems\n\n\nVideo"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html",
+    "href": "talks/hpdasc_workshop_2024.html",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "",
+    "text": "Direct relationship: floods, droughts, heat waves…\nIndirect relationship\n\n\n\n\n\n\n%%{\n  init: {\n    'theme': 'base',\n    'themeVariables': {\n      'fontSize': '30px'\n    }\n  }\n}%%\nflowchart LR\n\nclimate(Climate) --&gt; vector(Disease vectors) --&gt; health(Human health)\nclimate --&gt; health\nclimate --&gt; social(Social & economic \\n determinants) --&gt; health"
   }
 ]
