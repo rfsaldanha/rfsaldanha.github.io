@@ -10,9 +10,6 @@ about:
     - icon: bluesky
       text: Bluesky
       href: https://bsky.app/profile/rfsaldanha.bsky.social
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com/rfsaldanhario
     - icon: mastodon
       text: Mastodon
       href: https://fosstodon.org/@rfsaldanha
