@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,10 +35,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-e9b4ec11f797501df37599d434131c15.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -155,6 +155,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   <div class="about-entity">
     <img src="profile2.jpg" class="about-image
   rounded " style="width: 20em;">
+<header id="title-block-header" class="quarto-title-block"></header>
     <div class="about-links">
   <a href="https://github.com/rfsaldanha" class="about-link" rel="" target="">
     <i class="bi bi-github"></i>
@@ -187,10 +188,10 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 </div>
   </div>
   <div class="about-contents"><main class="content" id="quarto-document-content">
-<p>Postdoctoral researcher at&nbsp;<a href="https://www.inria.fr/fr">Inria</a>&nbsp;and&nbsp;<a href="https://www.gov.br/lncc/pt-br">LNCC</a>, research assistant at&nbsp;<a href="https://portal.fiocruz.br/">Fiocruz</a>.</p>
-<p>Associate editor of <a href="https://www.reciis.icict.fiocruz.br">RECIIS</a></p>
+<p>Research assistant at&nbsp;<a href="https://portal.fiocruz.br/">Fiocruz</a>, &nbsp;<a href="https://www.inria.fr/fr">Inria</a>&nbsp;alumni.</p>
+<p>Associate editor of <a href="https://www.reciis.icict.fiocruz.br">RECIIS</a>.</p>
 <p>Health geographer and health data scientist. Undergraduate in Geography, specialization in Statistics, master’s in Public Health, and Ph.D.&nbsp;in Health Information.</p>
-<p>Brazilian from Nova Friburgo (RJ), lived for several years on Minas Gerais and Rio de Janeiro. Currently based on Montpellier, France.</p>
+<p>Brazilian from Nova Friburgo (RJ), lived for several years on Minas Gerais, Rio de Janeiro and Montpellier, France. Currently based on Rio de Janeiro.</p>
 <p>Loves to code and crunch huge health and climate datasets with R.</p>
 
 
@@ -272,8 +273,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -384,7 +383,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

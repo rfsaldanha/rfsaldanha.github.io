@@ -26,12 +26,12 @@ about:
       href: "mailto:raphael.de-freitas-saldanha@inria.fr"
 ---
 
-Postdoctoral researcher at [Inria](https://www.inria.fr/fr) and [LNCC](https://www.gov.br/lncc/pt-br), research assistant at [Fiocruz](https://portal.fiocruz.br/).
+Research assistant at [Fiocruz](https://portal.fiocruz.br/),  [Inria](https://www.inria.fr/fr) alumni.
 
-Associate editor of [RECIIS](https://www.reciis.icict.fiocruz.br)
+Associate editor of [RECIIS](https://www.reciis.icict.fiocruz.br).
 
 Health geographer and health data scientist. Undergraduate in Geography, specialization in Statistics, master's in Public Health, and Ph.D. in Health Information.
 
-Brazilian from Nova Friburgo (RJ), lived for several years on Minas Gerais and Rio de Janeiro. Currently based on Montpellier, France.
+Brazilian from Nova Friburgo (RJ), lived for several years on Minas Gerais, Rio de Janeiro and Montpellier, France. Currently based on Rio de Janeiro.
 
 Loves to code and crunch huge health and climate datasets with R.
