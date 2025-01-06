@@ -23,7 +23,7 @@ about:
     - text: "{{< ai lattes >}} Lattes"
       href: http://lattes.cnpq.br/4545189714279226
     - text: "@ e-mail"
-      href: "mailto:raphael.de-freitas-saldanha@inria.fr"
+      href: "mailto:raphael.saldanha@fiocruz.br"
 ---
 
 Research assistant at [Fiocruz](https://portal.fiocruz.br/),  [Inria](https://www.inria.fr/fr) alumni.
