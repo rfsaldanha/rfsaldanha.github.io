@@ -9,8 +9,8 @@
 <link>https://rfsaldanha.github.io/blog.html</link>
 <atom:link href="https://rfsaldanha.github.io/blog.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.5.57</generator>
-<lastBuildDate>Mon, 10 Jun 2024 22:00:00 GMT</lastBuildDate>
+<generator>quarto-1.6.42</generator>
+<lastBuildDate>Tue, 11 Jun 2024 03:00:00 GMT</lastBuildDate>
 <item>
   <title>Handling 187 millions hospital admissions in Brazil with DuckDB</title>
   <link>https://rfsaldanha.github.io/posts/hospital_admissions_flow.html</link>
@@ -1106,7 +1106,7 @@ Xavier, Diego Ricardo, Ricardo Antunes Dantas de Oliveira, Christovam Barcellos,
   <category>duckdb</category>
   <category>sih</category>
   <guid>https://rfsaldanha.github.io/posts/hospital_admissions_flow.html</guid>
-  <pubDate>Mon, 10 Jun 2024 22:00:00 GMT</pubDate>
+  <pubDate>Tue, 11 Jun 2024 03:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Persistent heat in Brazil: 1993 and 2023</title>
@@ -2436,7 +2436,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>climate</category>
   <guid>https://rfsaldanha.github.io/posts/persistent_heat.html</guid>
-  <pubDate>Sun, 21 Apr 2024 22:00:00 GMT</pubDate>
+  <pubDate>Mon, 22 Apr 2024 03:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Writing R packages with large datasets</title>
@@ -2746,7 +2746,7 @@ font-style: inherit;">"..."</span>)</span></code></pre></div>
   <category>package</category>
   <category>data</category>
   <guid>https://rfsaldanha.github.io/posts/data_package_guide.html</guid>
-  <pubDate>Wed, 10 Apr 2024 22:00:00 GMT</pubDate>
+  <pubDate>Thu, 11 Apr 2024 03:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Query local parquet files</title>
@@ -3314,7 +3314,7 @@ font-style: inherit;">gt</span>()</span><div class="code-annotation-gutter-bg"><
 
 <table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
-<tr class="header gt_col_headings">
+<tr class="gt_col_headings header">
 <th id="code_muni" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">code_muni</th>
 <th id="date" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">date</th>
 <th id="name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">name</th>
@@ -3900,7 +3900,7 @@ font-style: inherit;">gt</span>()</span></code></pre></div>
 
 <table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
-<tr class="header gt_col_headings">
+<tr class="gt_col_headings header">
 <th id="code_muni" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">code_muni</th>
 <th id="date" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">date</th>
 <th id="name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">name</th>
@@ -4521,7 +4521,7 @@ font-style: inherit;">gt</span>()</span></code></pre></div>
 
 <table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
-<tr class="header gt_col_headings">
+<tr class="gt_col_headings header">
 <th id="code_muni" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">code_muni</th>
 <th id="date_w" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">date_w</th>
 <th id="name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">name</th>
@@ -4757,7 +4757,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>parquet</category>
   <category>arrow</category>
   <guid>https://rfsaldanha.github.io/posts/query_local_parquet_files.html</guid>
-  <pubDate>Wed, 03 Apr 2024 22:00:00 GMT</pubDate>
+  <pubDate>Thu, 04 Apr 2024 03:00:00 GMT</pubDate>
 </item>
 <item>
   <title>How 2023 was hot in different Brazilian municipalities?</title>
@@ -12379,7 +12379,7 @@ font-style: inherit;">NULL</span></span>
   <category>climate</category>
   <category>zonal statistics</category>
   <guid>https://rfsaldanha.github.io/posts/hot_2023.html</guid>
-  <pubDate>Sun, 26 Nov 2023 23:00:00 GMT</pubDate>
+  <pubDate>Mon, 27 Nov 2023 03:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Univariate and multivariate time series clustering</title>
@@ -13912,7 +13912,7 @@ loaded via a namespace (and not attached):
   <category>time series</category>
   <category>dtwclust</category>
   <guid>https://rfsaldanha.github.io/posts/time_series_clustering.html</guid>
-  <pubDate>Mon, 13 Nov 2023 23:00:00 GMT</pubDate>
+  <pubDate>Tue, 14 Nov 2023 03:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Age-adjusted COVID-19 mortality rates for Brazilian municipalities</title>
@@ -15769,7 +15769,7 @@ loaded via a namespace (and not attached):
   <category>covid19</category>
   <category>tidyrates</category>
   <guid>https://rfsaldanha.github.io/posts/std_br_covid_rates.html</guid>
-  <pubDate>Mon, 06 Nov 2023 23:00:00 GMT</pubDate>
+  <pubDate>Tue, 07 Nov 2023 03:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Counting consecutive sequences of events: run length encoding and warm spell occurence example</title>
@@ -16522,7 +16522,7 @@ loaded via a namespace (and not attached):
   <category>warm spell</category>
   <category>sequences</category>
   <guid>https://rfsaldanha.github.io/posts/run_length_encoding.html</guid>
-  <pubDate>Sun, 05 Nov 2023 23:00:00 GMT</pubDate>
+  <pubDate>Mon, 06 Nov 2023 03:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Crude and adjusted rates in a tidy way</title>
@@ -17526,299 +17526,7 @@ loaded via a namespace (and not attached):
   <category>epidemiology</category>
   <category>tidyrates</category>
   <guid>https://rfsaldanha.github.io/posts/rates.html</guid>
-  <pubDate>Tue, 31 Oct 2023 23:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>SQLite database conversion to DuckDB and Parquet files</title>
-  <link>https://rfsaldanha.github.io/posts/sqlite_to_duckdb_and_parquet.html</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p><a href="https://duckdb.org">DuckDB</a> is a relatively new database that works in a file, just like SQLite, but is very fast and designed for data science workflows.</p>
-<p>I am writing this post to cover the following scenario: you already have a SQLite database and want to convert it to DuckDB, and also export it to a <a href="https://parquet.apache.org">parquet</a> file.</p>
-<section id="sqlite-database" class="level2">
-<h2 class="anchored" data-anchor-id="sqlite-database">SQLite database</h2>
-<p>We need a SQLite database example to later convert it to DuckDB. Let’s use the <code>mtcars</code> dataset.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(dplyr)</span>
-<span id="cb1-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(lubridate)</span>
-<span id="cb1-3"></span>
-<span id="cb1-4"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">glimpse</span>(mtcars)</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Rows: 32
-Columns: 11
-$ mpg  &lt;dbl&gt; 21.0, 21.0, 22.8, 21.4, 18.7, 18.1, 14.3, 24.4, 22.8, 19.2, 17.8,…
-$ cyl  &lt;dbl&gt; 6, 6, 4, 6, 8, 6, 8, 4, 4, 6, 6, 8, 8, 8, 8, 8, 8, 4, 4, 4, 4, 8,…
-$ disp &lt;dbl&gt; 160.0, 160.0, 108.0, 258.0, 360.0, 225.0, 360.0, 146.7, 140.8, 16…
-$ hp   &lt;dbl&gt; 110, 110, 93, 110, 175, 105, 245, 62, 95, 123, 123, 180, 180, 180…
-$ drat &lt;dbl&gt; 3.90, 3.90, 3.85, 3.08, 3.15, 2.76, 3.21, 3.69, 3.92, 3.92, 3.92,…
-$ wt   &lt;dbl&gt; 2.620, 2.875, 2.320, 3.215, 3.440, 3.460, 3.570, 3.190, 3.150, 3.…
-$ qsec &lt;dbl&gt; 16.46, 17.02, 18.61, 19.44, 17.02, 20.22, 15.84, 20.00, 22.90, 18…
-$ vs   &lt;dbl&gt; 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0,…
-$ am   &lt;dbl&gt; 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0,…
-$ gear &lt;dbl&gt; 4, 4, 4, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 4, 4, 4, 3, 3,…
-$ carb &lt;dbl&gt; 4, 4, 1, 1, 2, 1, 4, 2, 2, 4, 4, 3, 3, 3, 4, 4, 4, 1, 2, 1, 1, 2,…</code></pre>
-</div>
-</div>
-<p>And write <code>mtcars</code> in a SQLite database.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">sqlite_database_file <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">tempfile</span>()</span>
-<span id="cb3-2"></span>
-<span id="cb3-3">conn_sqlite <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> DBI<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">dbConnect</span>(</span>
-<span id="cb3-4">  RSQLite<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">SQLite</span>(), </span>
-<span id="cb3-5">  sqlite_database_file, </span>
-<span id="cb3-6">  <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">extended_types =</span> <span class="cn" style="color: #8f5902;
-background-color: null;
-font-style: inherit;">TRUE</span></span>
-<span id="cb3-7">)</span>
-<span id="cb3-8"></span>
-<span id="cb3-9">DBI<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">dbWriteTable</span>(conn_sqlite, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">name =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"mtcars_table"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">value =</span> mtcars, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">overwrite =</span> <span class="cn" style="color: #8f5902;
-background-color: null;
-font-style: inherit;">TRUE</span>)</span></code></pre></div>
-</div>
-<p>Let’s take a look.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">tbl</span>(conn_sqlite, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"mtcars_table"</span>) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">head</span>() <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">collect</span>()</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 11
-    mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
-  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-1  21       6   160   110  3.9   2.62  16.5     0     1     4     4
-2  21       6   160   110  3.9   2.88  17.0     0     1     4     4
-3  22.8     4   108    93  3.85  2.32  18.6     1     1     4     1
-4  21.4     6   258   110  3.08  3.22  19.4     1     0     3     1
-5  18.7     8   360   175  3.15  3.44  17.0     0     0     3     2
-6  18.1     6   225   105  2.76  3.46  20.2     1     0     3     1</code></pre>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Note that this database could be written directly using DuckDB, but this is an example about database conversion.</p>
-</div>
-</div>
-</section>
-<section id="from-sqlite-to-duckdb" class="level2">
-<h2 class="anchored" data-anchor-id="from-sqlite-to-duckdb">From SQLite to DuckDB</h2>
-<p>First, we need to create our DuckDB database.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1">duckdb_database_file <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">tempfile</span>()</span>
-<span id="cb6-2"></span>
-<span id="cb6-3">conn_duckdb <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> DBI<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">dbConnect</span>(</span>
-<span id="cb6-4">  duckdb<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">duckdb</span>(), </span>
-<span id="cb6-5">  duckdb_database_file</span>
-<span id="cb6-6">)</span></code></pre></div>
-</div>
-<p>To import our data, we can use a <a href="https://duckdb.org/docs/guides/import/query_sqlite.html">DuckDB extension to read SQLite databases</a>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1">DBI<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">dbExecute</span>(conn_duckdb, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"INSTALL sqlite;"</span>)</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1">DBI<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">dbExecute</span>(conn_duckdb, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"LOAD sqlite;"</span>)</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1">DBI<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">dbExecute</span>(conn_duckdb, glue<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">glue</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"CREATE TABLE mtcars_table AS SELECT * FROM sqlite_scan('{sqlite_database_file}', 'mtcars_table');"</span>))</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 32</code></pre>
-</div>
-</div>
-<p>Great! Now we have the same database on DuckDB.</p>
-</section>
-<section id="from-duckdb-to-parquet" class="level2">
-<h2 class="anchored" data-anchor-id="from-duckdb-to-parquet">From DuckDB to Parquet</h2>
-<p>It is very simple to <a href="https://duckdb.org/docs/guides/import/parquet_export">export</a> a DuckDB table to a parquet file.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1">parquet_file <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">tempfile</span>()</span>
-<span id="cb13-2"></span>
-<span id="cb13-3">DBI<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">dbExecute</span>(conn_duckdb, glue<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">glue</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"COPY (SELECT * FROM 'mtcars_table') TO '{parquet_file}' (FORMAT 'PARQUET')"</span>))</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 32</code></pre>
-</div>
-</div>
-<p>And that’s it! Let’s close the connections.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1">DBI<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">dbDisconnect</span>(conn_sqlite)</span>
-<span id="cb15-2">DBI<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">dbDisconnect</span>(conn_duckdb, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">shutdown =</span> <span class="cn" style="color: #8f5902;
-background-color: null;
-font-style: inherit;">TRUE</span>)</span></code></pre></div>
-</div>
-</section>
-<section id="session-info" class="level2">
-<h2 class="anchored" data-anchor-id="session-info">Session info</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>R version 4.3.1 (2023-06-16)
-Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.3 LTS
-
-Matrix products: default
-BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.10.0 
-LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.10.0
-
-locale:
- [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
- [3] LC_TIME=en_CA.UTF-8        LC_COLLATE=en_US.UTF-8    
- [5] LC_MONETARY=en_CA.UTF-8    LC_MESSAGES=en_US.UTF-8   
- [7] LC_PAPER=en_CA.UTF-8       LC_NAME=C                 
- [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-[11] LC_MEASUREMENT=en_CA.UTF-8 LC_IDENTIFICATION=C       
-
-time zone: Europe/Paris
-tzcode source: system (glibc)
-
-attached base packages:
-[1] stats     graphics  grDevices utils     datasets  methods   base     
-
-other attached packages:
-[1] lubridate_1.9.3 dplyr_1.1.3    
-
-loaded via a namespace (and not attached):
- [1] vctrs_0.6.4       cli_3.6.1         knitr_1.44        rlang_1.1.1      
- [5] xfun_0.40         DBI_1.1.3         purrr_1.0.2       generics_0.1.3   
- [9] jsonlite_1.8.7    bit_4.0.5         glue_1.6.2        dbplyr_2.3.4     
-[13] htmltools_0.5.6.1 hms_1.1.3         fansi_1.0.5       rmarkdown_2.25   
-[17] evaluate_0.22     tibble_3.2.1      fastmap_1.1.1     yaml_2.3.7       
-[21] lifecycle_1.0.3   memoise_2.0.1     duckdb_0.9.1      compiler_4.3.1   
-[25] blob_1.2.4        RSQLite_2.3.1     htmlwidgets_1.6.2 timechange_0.2.0 
-[29] pkgconfig_2.0.3   rstudioapi_0.15.0 digest_0.6.33     R6_2.5.1         
-[33] tidyselect_1.2.0  utf8_1.2.4        pillar_1.9.0      magrittr_2.0.3   
-[37] bit64_4.0.5       tools_4.3.1       cachem_1.0.8     </code></pre>
-</div>
-</div>
-
-
-</section>
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>database</category>
-  <category>sqlite</category>
-  <category>duckdb</category>
-  <category>parquet</category>
-  <guid>https://rfsaldanha.github.io/posts/sqlite_to_duckdb_and_parquet.html</guid>
-  <pubDate>Mon, 23 Oct 2023 22:00:00 GMT</pubDate>
+  <pubDate>Wed, 01 Nov 2023 03:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Query remote parquet files with DuckDB</title>
@@ -18157,7 +17865,299 @@ loaded via a namespace (and not attached):
   <category>duckdb</category>
   <category>parquet</category>
   <guid>https://rfsaldanha.github.io/posts/query_remot_parquet_file.html</guid>
-  <pubDate>Mon, 23 Oct 2023 22:00:00 GMT</pubDate>
+  <pubDate>Tue, 24 Oct 2023 03:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>SQLite database conversion to DuckDB and Parquet files</title>
+  <link>https://rfsaldanha.github.io/posts/sqlite_to_duckdb_and_parquet.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><a href="https://duckdb.org">DuckDB</a> is a relatively new database that works in a file, just like SQLite, but is very fast and designed for data science workflows.</p>
+<p>I am writing this post to cover the following scenario: you already have a SQLite database and want to convert it to DuckDB, and also export it to a <a href="https://parquet.apache.org">parquet</a> file.</p>
+<section id="sqlite-database" class="level2">
+<h2 class="anchored" data-anchor-id="sqlite-database">SQLite database</h2>
+<p>We need a SQLite database example to later convert it to DuckDB. Let’s use the <code>mtcars</code> dataset.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(dplyr)</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(lubridate)</span>
+<span id="cb1-3"></span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">glimpse</span>(mtcars)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 32
+Columns: 11
+$ mpg  &lt;dbl&gt; 21.0, 21.0, 22.8, 21.4, 18.7, 18.1, 14.3, 24.4, 22.8, 19.2, 17.8,…
+$ cyl  &lt;dbl&gt; 6, 6, 4, 6, 8, 6, 8, 4, 4, 6, 6, 8, 8, 8, 8, 8, 8, 4, 4, 4, 4, 8,…
+$ disp &lt;dbl&gt; 160.0, 160.0, 108.0, 258.0, 360.0, 225.0, 360.0, 146.7, 140.8, 16…
+$ hp   &lt;dbl&gt; 110, 110, 93, 110, 175, 105, 245, 62, 95, 123, 123, 180, 180, 180…
+$ drat &lt;dbl&gt; 3.90, 3.90, 3.85, 3.08, 3.15, 2.76, 3.21, 3.69, 3.92, 3.92, 3.92,…
+$ wt   &lt;dbl&gt; 2.620, 2.875, 2.320, 3.215, 3.440, 3.460, 3.570, 3.190, 3.150, 3.…
+$ qsec &lt;dbl&gt; 16.46, 17.02, 18.61, 19.44, 17.02, 20.22, 15.84, 20.00, 22.90, 18…
+$ vs   &lt;dbl&gt; 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0,…
+$ am   &lt;dbl&gt; 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0,…
+$ gear &lt;dbl&gt; 4, 4, 4, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 4, 4, 4, 3, 3,…
+$ carb &lt;dbl&gt; 4, 4, 1, 1, 2, 1, 4, 2, 2, 4, 4, 3, 3, 3, 4, 4, 4, 1, 2, 1, 1, 2,…</code></pre>
+</div>
+</div>
+<p>And write <code>mtcars</code> in a SQLite database.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">sqlite_database_file <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">tempfile</span>()</span>
+<span id="cb3-2"></span>
+<span id="cb3-3">conn_sqlite <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> DBI<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">dbConnect</span>(</span>
+<span id="cb3-4">  RSQLite<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">SQLite</span>(), </span>
+<span id="cb3-5">  sqlite_database_file, </span>
+<span id="cb3-6">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">extended_types =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span></span>
+<span id="cb3-7">)</span>
+<span id="cb3-8"></span>
+<span id="cb3-9">DBI<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">dbWriteTable</span>(conn_sqlite, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">name =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"mtcars_table"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">value =</span> mtcars, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">overwrite =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>)</span></code></pre></div>
+</div>
+<p>Let’s take a look.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">tbl</span>(conn_sqlite, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"mtcars_table"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">head</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">collect</span>()</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 11
+    mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
+  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1  21       6   160   110  3.9   2.62  16.5     0     1     4     4
+2  21       6   160   110  3.9   2.88  17.0     0     1     4     4
+3  22.8     4   108    93  3.85  2.32  18.6     1     1     4     1
+4  21.4     6   258   110  3.08  3.22  19.4     1     0     3     1
+5  18.7     8   360   175  3.15  3.44  17.0     0     0     3     2
+6  18.1     6   225   105  2.76  3.46  20.2     1     0     3     1</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Note that this database could be written directly using DuckDB, but this is an example about database conversion.</p>
+</div>
+</div>
+</section>
+<section id="from-sqlite-to-duckdb" class="level2">
+<h2 class="anchored" data-anchor-id="from-sqlite-to-duckdb">From SQLite to DuckDB</h2>
+<p>First, we need to create our DuckDB database.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1">duckdb_database_file <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">tempfile</span>()</span>
+<span id="cb6-2"></span>
+<span id="cb6-3">conn_duckdb <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> DBI<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">dbConnect</span>(</span>
+<span id="cb6-4">  duckdb<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">duckdb</span>(), </span>
+<span id="cb6-5">  duckdb_database_file</span>
+<span id="cb6-6">)</span></code></pre></div>
+</div>
+<p>To import our data, we can use a <a href="https://duckdb.org/docs/guides/import/query_sqlite.html">DuckDB extension to read SQLite databases</a>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1">DBI<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">dbExecute</span>(conn_duckdb, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"INSTALL sqlite;"</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1">DBI<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">dbExecute</span>(conn_duckdb, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"LOAD sqlite;"</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1">DBI<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">dbExecute</span>(conn_duckdb, glue<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">glue</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"CREATE TABLE mtcars_table AS SELECT * FROM sqlite_scan('{sqlite_database_file}', 'mtcars_table');"</span>))</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 32</code></pre>
+</div>
+</div>
+<p>Great! Now we have the same database on DuckDB.</p>
+</section>
+<section id="from-duckdb-to-parquet" class="level2">
+<h2 class="anchored" data-anchor-id="from-duckdb-to-parquet">From DuckDB to Parquet</h2>
+<p>It is very simple to <a href="https://duckdb.org/docs/guides/import/parquet_export">export</a> a DuckDB table to a parquet file.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1">parquet_file <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">tempfile</span>()</span>
+<span id="cb13-2"></span>
+<span id="cb13-3">DBI<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">dbExecute</span>(conn_duckdb, glue<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">glue</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"COPY (SELECT * FROM 'mtcars_table') TO '{parquet_file}' (FORMAT 'PARQUET')"</span>))</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 32</code></pre>
+</div>
+</div>
+<p>And that’s it! Let’s close the connections.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1">DBI<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">dbDisconnect</span>(conn_sqlite)</span>
+<span id="cb15-2">DBI<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">dbDisconnect</span>(conn_duckdb, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">shutdown =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>)</span></code></pre></div>
+</div>
+</section>
+<section id="session-info" class="level2">
+<h2 class="anchored" data-anchor-id="session-info">Session info</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sessionInfo</span>()</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>R version 4.3.1 (2023-06-16)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 22.04.3 LTS
+
+Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.10.0 
+LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.10.0
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_CA.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_CA.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_CA.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_CA.UTF-8 LC_IDENTIFICATION=C       
+
+time zone: Europe/Paris
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] lubridate_1.9.3 dplyr_1.1.3    
+
+loaded via a namespace (and not attached):
+ [1] vctrs_0.6.4       cli_3.6.1         knitr_1.44        rlang_1.1.1      
+ [5] xfun_0.40         DBI_1.1.3         purrr_1.0.2       generics_0.1.3   
+ [9] jsonlite_1.8.7    bit_4.0.5         glue_1.6.2        dbplyr_2.3.4     
+[13] htmltools_0.5.6.1 hms_1.1.3         fansi_1.0.5       rmarkdown_2.25   
+[17] evaluate_0.22     tibble_3.2.1      fastmap_1.1.1     yaml_2.3.7       
+[21] lifecycle_1.0.3   memoise_2.0.1     duckdb_0.9.1      compiler_4.3.1   
+[25] blob_1.2.4        RSQLite_2.3.1     htmlwidgets_1.6.2 timechange_0.2.0 
+[29] pkgconfig_2.0.3   rstudioapi_0.15.0 digest_0.6.33     R6_2.5.1         
+[33] tidyselect_1.2.0  utf8_1.2.4        pillar_1.9.0      magrittr_2.0.3   
+[37] bit64_4.0.5       tools_4.3.1       cachem_1.0.8     </code></pre>
+</div>
+</div>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>database</category>
+  <category>sqlite</category>
+  <category>duckdb</category>
+  <category>parquet</category>
+  <guid>https://rfsaldanha.github.io/posts/sqlite_to_duckdb_and_parquet.html</guid>
+  <pubDate>Tue, 24 Oct 2023 03:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Some tips to work with SQLite database</title>
@@ -18606,7 +18606,7 @@ loaded via a namespace (and not attached):
   <category>database</category>
   <category>sqlite</category>
   <guid>https://rfsaldanha.github.io/posts/some-tips-for-sqlite.html</guid>
-  <pubDate>Thu, 19 Oct 2023 22:00:00 GMT</pubDate>
+  <pubDate>Fri, 20 Oct 2023 03:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -90,10 +90,10 @@ div.csl-indent {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-e9b4ec11f797501df37599d434131c15.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -272,7 +272,7 @@ window.Quarto = {
 <p><img src="images/zonal_brdwgd-01.png" class="img-fluid"></p>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Climate indicators are used on several statistical models for many research areas and are specially important for modelling Climate Sensitive Diseases (CSD) incidence. Those models usually adopts a lattice structure, where its data is aggregated at administrative boundaries (e.g.&nbsp;disease incidence), but climate indicators are usually presented in a continuous regular grid format.</p>
+<p>Climate indicators are used on several statistical models for many research areas and are specially important for modeling Climate Sensitive Diseases (CSD) incidence. Those models usually adopts a lattice structure, where its data is aggregated at administrative boundaries (e.g.&nbsp;disease incidence), but climate indicators are usually presented in a continuous regular grid format.</p>
 <p>To make climate indicators compatible with lattice structures, zonal statistics may be adopted. Zonal statistics are descriptive statistics calculated using a set of cells that spatially intersects a given spatial boundary. For each boundary in a map, statistics like average, maximum value, minimum value, standard deviation, and sum are obtained to represent the cell’s values that intersect the boundary.</p>
 <p>I created some zonal statistics of climate indicators datasets for Brazilian municipalities from some climate data products.</p>
 </section>
@@ -285,8 +285,8 @@ window.Quarto = {
 <p>The following indicators and aggregations were computed.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 26%">
-<col style="width: 39%">
+<col style="width: 27%">
+<col style="width: 38%">
 <col style="width: 33%">
 </colgroup>
 <thead>
@@ -331,6 +331,19 @@ window.Quarto = {
 </table>
 <p>A paper with the full methodology was published in the Environmental Data Science journal.</p>
 <p><a href="https://doi.org/10.1017/eds.2024.3"><img src="https://zenodo.org/badge/DOI/10.1017/eds.2024.3.svg" class="img-fluid"></a></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Those files are in parquet format. Not sure how to open parquet files? Take a look on this <a href="https://rfsaldanha.github.io/posts/query_local_parquet_files.html">blog post</a>.</p>
+</div>
+</div>
 <section id="usage-statistics" class="level3">
 <h3 class="anchored" data-anchor-id="usage-statistics">Usage statistics</h3>
 <p>Usage statistics of this and other datasets are available <a href="https://rfsaldanha.github.io/pkgdash/#datasets">here</a>.</p>
@@ -339,13 +352,13 @@ window.Quarto = {
 <section id="zonal-br-dwgd" class="level2">
 <h2 class="anchored" data-anchor-id="zonal-br-dwgd">Zonal BR-DWGD</h2>
 <p>1961-01-01 to 2024-03-20: <a href="https://doi.org/10.5281/zenodo.13906834"><img src="https://img.shields.io/badge/download-10.5281/zenodo.13906834-green.svg" class="img-fluid"></a></p>
-<p>The BR-DWGD dataset <span class="citation" data-cites="xavier2022">(<a href="#ref-xavier2022" role="doc-biblioref">Xavier et al. 2022</a>)</span> presents daily meteorological data interpolated to a grid with 0.1° × 0.1° of spatial resolution for the Brazilian territory, with daily data starting on January 1, 1961. It uses data from several weather stationsrain gauges in its interpolation methods, cross-validated to the selection of the best method for each weather indicator.</p>
+<p>The BR-DWGD dataset <span class="citation" data-cites="xavier2022">(<a href="#ref-xavier2022" role="doc-biblioref">Xavier et al. 2022</a>)</span> presents daily meteorological data interpolated to a grid with 0.1° × 0.1° of spatial resolution for the Brazilian territory, with daily data starting on January 1, 1961. It uses data from several weather stations rain gauges in its interpolation methods, cross-validated to the selection of the best method for each weather indicator.</p>
 <p>The following weather indicators are available from the BR-DWGD study: precipitation (mm), minimum temperature (°C), maximum temperature (°C), solar radiation (MJ⋅m−2 ), wind speed at 2m height (m⋅s−1) and relative humidity (%).</p>
 <p>The following zonal statistics were computed.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 26%">
-<col style="width: 39%">
+<col style="width: 27%">
+<col style="width: 38%">
 <col style="width: 33%">
 </colgroup>
 <thead>
@@ -388,6 +401,19 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Those files are in parquet format. Not sure how to open parquet files? Take a look on this <a href="https://rfsaldanha.github.io/posts/query_local_parquet_files.html">blog post</a>.</p>
+</div>
+</div>
 </section>
 <section id="zonal-terraclimate" class="level2">
 <h2 class="anchored" data-anchor-id="zonal-terraclimate">Zonal TerraClimate</h2>
@@ -563,6 +589,19 @@ window.Quarto = {
 </div>
 </div>
 <p>The results are availabe as parquet files, available at <a href="https://zenodo.org/records/7825777">Zenodo</a> and can be also accessed with the <a href="https://rfsaldanha.github.io/brclimr">brclimr</a> R package.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Those files are in parquet format. Not sure how to open parquet files? Take a look on this <a href="https://rfsaldanha.github.io/posts/query_local_parquet_files.html">blog post</a>.</p>
+</div>
+</div>
 
 
 
@@ -661,8 +700,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -773,7 +810,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
