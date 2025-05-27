@@ -396,7 +396,7 @@
     "href": "talks/climate_br.html#ground-level-climate-data",
     "title": "Climate data for Brazilian municipalities",
     "section": "Ground-level climate data",
-    "text": "Ground-level climate data\n\n\n\nWeather stations on Cametá and Mocajuba (north region)\nData every 5 minutes, sent to Fiocruz Postgres server\n\nplugfieldapi package to retrieve data from stations with daily e-mail reports\nError detection and notification for problems\n\n\nVideo"
+    "text": "Ground-level climate data\n\n\n\nWeather stations on Cametá and Mocajuba (north region)\nData every 5 minutes, sent to Fiocruz Postgres server\n\n{plugfieldapi} package to retrieve data from stations with daily e-mail reports\nError detection and notification for problems\n\n\nVideo"
   },
   {
     "objectID": "talks/climate_br.html#reanalysis-climate-data",
@@ -410,7 +410,7 @@
     "href": "talks/climate_br.html#climate-data-for-brazilian-municipalities",
     "title": "Climate data for Brazilian municipalities",
     "section": "Climate data for Brazilian municipalities",
-    "text": "Climate data for Brazilian municipalities\n\nZonal statistics computation\nAdoption of exactextractr package for cell’s coverage weighted computations\nCreation of package zonalclim with helper functions to compute scalable zonal statistics with chunks strategy\nDAG system using the targets package to compute climate zonal statistics for Brazilian municipalities\nPublication on Environmental Data Science journal\n\nMore details here"
+    "text": "Climate data for Brazilian municipalities\n\nZonal statistics computation\nAdoption of exactextractr package for cell’s coverage weighted computations\nCreation of package {zonalclim} with helper functions to compute scalable zonal statistics with chunks strategy\nDAG system using the targets package to compute climate zonal statistics for Brazilian municipalities\nPublication on Environmental Data Science journal\n\nMore details here"
   },
   {
     "objectID": "talks/climate_br.html#example",
