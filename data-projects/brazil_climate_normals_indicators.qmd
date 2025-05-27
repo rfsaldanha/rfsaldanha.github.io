@@ -557,7 +557,7 @@ write_csv2(x = rh_indi, file = "rh_indi.csv")
 
 The climatological normals and aggregated indicators of Brazilian municipalities can be downloaded from Zenodo on CSV and parquet formats. Click the link bellow to access and download the data.
 
-[![](https://zenodo.org/badge/DOI/10.5281/zenodo.13934888.svg)](https://doi.org/10.5281/zenodo.13934888)
+[![](https://zenodo.org/badge/DOI/10.5281/zenodo.15519719.svg)](https://doi.org/10.5281/zenodo.15519719)
 
 You can also download the dataset directly from R, using the [{zendown}](https://rfsaldanha.github.io/zendown/) package.
 
@@ -579,7 +579,7 @@ tmax_data <- zen_file(13906834, "Tmax_3.2.3.parquet") |>
   select(-name) |>
   collect()
 
-tmax_normal <- zen_file(13934888, "tmax_normal.parquet") |>
+tmax_normal <- zen_file(15519719, "tmax_normal.parquet") |>
   open_dataset() |>
   filter(code_muni == 3304557) |>
   collect()
@@ -629,7 +629,7 @@ ggplot() +
 #| warning: false
 library(gt)
 
-zen_file(13934888, "tmax_indi.parquet") |>
+zen_file(15519719, "tmax_indi.parquet") |>
   open_dataset() |>
   filter(code_muni == 3304557) |>
   filter(year == 2023) |>
