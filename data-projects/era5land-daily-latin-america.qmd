@@ -6,7 +6,10 @@ bibliography: references.bib
 ```{r}
 #| message: false
 #| echo: false
-nc_file <- zendown::zen_file(10036132, "2m_temperature_2019-02-01_2019-02-28_day_max.nc")
+nc_file <- zendown::zen_file(
+  10036132,
+  "2m_temperature_2019-02-01_2019-02-28_day_max.nc"
+)
 nc_rast <- terra::rast(nc_file)
 
 terra::plot(nc_rast[[1:4]])
@@ -115,6 +118,7 @@ The resulting NetCDF files are available for download at Zenodo.
 | 2021 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10036161-green.svg)](https://doi.org/10.5281/zenodo.10036161) |
 | 2022 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10036167-green.svg)](https://doi.org/10.5281/zenodo.10036167) |
 | 2023 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10889682-green.svg)](https://doi.org/10.5281/zenodo.10889682) |
+| 2024 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.15741854-green.svg)](https://doi.org/10.5281/zenodo.15741854) |
 
 ### Usage statistics
 
