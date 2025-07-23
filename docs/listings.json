@@ -77,11 +77,12 @@
   {
     "listing": "/data.html",
     "items": [
-      "/data-projects/s3-datasus-ftp-mirror.html",
+      "/data-projects/brazil_air_pollutants.html",
       "/data-projects/brazil-climate-zonal-indicators.html",
       "/data-projects/brazil_climate_normals_indicators.html",
       "/data-projects/era5land-daily-latin-america.html",
       "/data-projects/era5land-daily-africa.html",
+      "/data-projects/s3-datasus-ftp-mirror.html",
       "/data-projects/brazil_road_distances.html",
       "/data-projects/usa_road_distances.html",
       "/data-projects/health-indicators.html",

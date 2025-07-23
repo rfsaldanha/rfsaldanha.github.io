@@ -1,0 +1,28 @@
+---
+title: "Air pollutants averages for Brazilian municipalities"
+bibliography: references.bib
+---
+
+![](images/air_pollutant_pm25.png)
+
+## Introduction
+
+Air pollutants, including particulate matter, nitrogen dioxide, sulfur dioxide, ozone, and carbon monoxide, are critical indicators in public health studies due to their impacts on human health. These pollutants originate from various sources such as vehicle emissions, industrial activities, and biomass burning. Exposure to air pollution has been linked to a range of health effects, including respiratory and cardiovascular diseases, adverse birth outcomes, and increased mortality rates. In public health research, air pollutants are used to assess environmental exposure, identify at-risk populations, and quantify the burden of disease attributable to poor air quality.
+
+I created some datasets on air pollutants for Brazilian municipalities using a zonal statistics procedure with data available from the Copernicus Atmosphere Monitoring Service (CAMS) global reanalysis (EAC4).
+
+## PM2.5
+
+Particulate Matter with a diameter of less than 2.5 micrometers (PM2.5) is a widely used indicator in public health studies due to its association with adverse health outcomes. These fine particles can penetrate deep into the respiratory system, reaching the alveoli and the bloodstream, leading to increased risks of cardiovascular and respiratory diseases, premature mortality, and other chronic health conditions. In epidemiological research, PM2.5 levels are often used to assess population exposure to air pollution and to estimate the burden of disease attributable to environmental factors.
+
+The PM2.5 data indicator was downloaded from the Copernicus' Atmosphere Data Store and processed to provide three daily indicators for the Brazilian municipalities:
+
+-   Minimum values: for each municipality boundary and day, the hourly minimum values of PM2.5 of all intersecting cells are averaged, resulting in the municipality's minimum daily indicator.
+-   Maximum values: for each municipality boundary and day, the hourly maximum values of PM2.5 of all intersecting cells are averaged, resulting in the municipality's maximum daily indicator.
+-   Average values: for each municipality boundary and day, the hourly average values of PM2.5 of all intersecting cells are averaged, resulting in the municipality's average daily indicator.
+
+Those indicators are presented in Parquet and CSV formats. The computational codes used to create those datasets are openly available [here](https://github.com/rfsaldanha/camsdata).
+
+The dataset is available to download here:
+
+2003-2024: [![](https://img.shields.io/badge/download-10.5281/zenodo.16374139-green.svg)](https://doi.org/10.5281/zenodo.16374139)
