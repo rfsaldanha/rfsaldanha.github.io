@@ -11,7 +11,7 @@ Air pollutants, including particulate matter, nitrogen dioxide, sulfur dioxide, 
 
 I created some datasets on air pollutants for Brazilian municipalities using a zonal statistics procedure with data available from the Copernicus Atmosphere Monitoring Service (CAMS) global reanalysis (EAC4).
 
-## PM2.5
+## PM 2.5
 
 Particulate Matter with a diameter of less than 2.5 micrometers (PM2.5) is a widely used indicator in public health studies due to its association with adverse health outcomes. These fine particles can penetrate deep into the respiratory system, reaching the alveoli and the bloodstream, leading to increased risks of cardiovascular and respiratory diseases, premature mortality, and other chronic health conditions. In epidemiological research, PM2.5 levels are often used to assess population exposure to air pollution and to estimate the burden of disease attributable to environmental factors.
 
@@ -26,3 +26,19 @@ Those indicators are presented in Parquet and CSV formats. The computational cod
 The dataset is available to download here:
 
 2003-2024: [![](https://img.shields.io/badge/download-10.5281/zenodo.16374139-green.svg)](https://doi.org/10.5281/zenodo.16374139)
+
+## Carbon monoxide (CO)
+
+Carbon monoxide (CO) is produced primarily by the incomplete combustion of carbon-containing fuels, such as those used in motor vehicles, industrial processes, and biomass burning. In public health studies, CO concentration is an important indicator of air quality and a marker of combustion-related pollution. Elevated CO levels can impair oxygen delivery in the body by binding to hemoglobin more effectively than oxygen, leading to symptoms ranging from headaches and dizziness to, in extreme cases, cardiovascular stress and death.
+
+The CO data indicator was downloaded from the Copernicus' Atmosphere Data Store and processed to provide three daily indicators for the Brazilian municipalities:
+
+-   Minimum values: for each municipality boundary and day, the hourly minimum values of CO of all intersecting cells are averaged, resulting in the municipality's minimum daily indicator.
+-   Maximum values: for each municipality boundary and day, the hourly maximum values of CO of all intersecting cells are averaged, resulting in the municipality's maximum daily indicator.
+-   Average values: for each municipality boundary and day, the hourly average values of CO of all intersecting cells are averaged, resulting in the municipality's average daily indicator.
+
+Those indicators are presented in Parquet and CSV formats. The computational codes used to create those datasets are openly available [here](https://github.com/rfsaldanha/camsdata).
+
+The dataset is available to download here:
+
+2003-2024: [![](https://img.shields.io/badge/download-10.5281/zenodo.16414590-green.svg)](https://doi.org/10.5281/zenodo.16414590)
