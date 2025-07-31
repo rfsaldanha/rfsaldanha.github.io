@@ -1,0 +1,229 @@
+---
+title: "Democratização de acesso a dados de saúde, ambiente e clima com o R"
+subtitle: "a experiência do LIS,/ICICT/Fiocruz"
+author: "Raphael Saldanha"
+institute: "Fiocruz"
+date: "04/08/2025"
+#description: ""
+categories: [climate]
+#image: images/subsets_model_accuracy.png
+format:
+  revealjs: 
+    theme: icict_style.scss
+    logo: images/logo_icict_6.png
+    transition: fade
+    background-transition: fade
+    pointer:
+      pointerSize: 40
+      color: '#e63312'
+code-link: true
+revealjs-plugins:
+  - pointer
+---
+
+## Raphael Saldanha
+
+::::: columns
+::: {.column width="55%"}
+-   Geógrafo (UFJF)
+-   Especialista em Métodos Estatísticos Computacionais (UFJF)
+-   Mestre em Saúde Coletiva (UFJF)
+-   Doutor em Informação e Comunicação em Saúde (Fiocruz)
+:::
+
+::: {.column width="45%"}
+-  Assistente de pesquisa na Fiocruz
+-  Observatório de Clima e Saúde
+-  Plataforma de Ciência de Dados Aplicada à Saúde (PCDaS)
+:::
+:::::
+
+## Raphael Saldanha e o R
+
+::::: columns
+::: {.column width="55%"}
+-   R 2.1 (2005)
+-   Lembra do Tinn-R?
+-   Desenvolvedor de pacotes
+:::
+
+::: {.column width="45%"}
+-   {microdatasus}
+-   {brpop}
+-   {nseq} e outros
+:::
+:::::
+
+## {microdatasus}
+
+-   Facilitar o acesso e processamento de dados dos Sistemas de Informação em Saúde do Brasil
+-   Dados de nascimentos, mortalidade, internações hospitalares, procedimentos ambulatoriais, casos suspeitos de doenças e outros
+-   Início do desenvolvimento: Maio de 2017 (8 anos)
+
+## {microdatasus}
+
+-   Formato legado de arquivo: DBC (versão compactada do DBF)
+-   Download de dados: servidor FTP
+-   Dados sem rótulos
+-   Aplicativo oficial: TabWin (apenas para Windows)
+-   Necessidade de integrar o processo de acesso e pré-processamento dos dados em um único ambiente (R)
+
+## {microdatasus}
+
+-   Download de dados: função `fetch_datasus()`
+-   Pré-processamento: família de funções `process_sim()`, `process_sinasc()`, `process_*()`
+
+## {microdatasus}
+
+```{r}
+#| echo: true
+library(microdatasus)
+
+raw_data <- fetch_datasus(
+  year_start = 2022,
+  year_end = 2023,
+  uf = "ES",
+  information_system = "SIM-DO"
+)
+
+tibble::tibble(raw_data)
+```
+
+## {microdatasus}
+
+```{r}
+#| echo: true
+p_data <- process_sim(raw_data)
+
+tibble::tibble(p_data)
+```
+
+##  {.big_text .center data-menu-title="{microdatasus}"}
+
+::: big_text
+[https://rfsaldanha.github.io/microdatasus](https://rfsaldanha.github.io/microdatasus)
+:::
+
+##  {.big_text .center data-menu-title="{sis}"}
+
+::: big_text
+[https://rfsaldanha.github.io/sis](https://rfsaldanha.github.io/sis)
+:::
+
+##
+
+![](../talks/images/microdatasus_testimonials.png)
+
+## {microdatasus}
+
+-   Agradecimentos a Daniela Petruzalek, pacote {read.dbc}
+-   165 menções no Google Scholar
+-   Issues: [https://github.com/rfsaldanha/microdatasus/issues](https://github.com/rfsaldanha/microdatasus/issues)
+-   Publicação: [Cadernos de Saúde Pública](https://doi.org/10.1590/0102-311x00032419)
+
+
+## Pandemia: MonitoraCovid-19
+
+-   Cenário de chegada da Covid-19 no Brasil
+-   Simulação de cenários de casos e óbitos
+-   Dificuldade com dados oficiais, apagão de dados
+-   Importante parceiro: brasil.io (Turicas)
+-   Informar o gestor e o cidadão em uma realidade de negacionismo científico
+
+## MonitoraCovid-19
+
+-   Painel em R Shiny
+-   Uma das respostas institucionais da Fiocruz frente a pandemia
+-   Monitoramento da situação da pandemia além de casos e óbitos
+-   Circulação de pessoas, vacinação, medidas de combate...
+-   Mais de 10 fontes de dados
+-   Impacto nacional e internacional
+
+
+## 
+
+![](../talks/images/monitoracovid19.png)
+
+## MonitoraCovid-19
+
+-   Atualização diária de dados (17h)
+-   Script manual
+-   Script "semi"-automático
+-   Saída: arquivo `rdata` para o painel
+
+## MonitoraCovid-19
+
+-   Shiny server local
+-   Efeito "Atila Iamarino"
+-   Load balancer
+
+![](../talks/images/monitoracovid19_acessos.png)
+
+## MonitoraCovid-19
+
+-   1,025 milhões de acessos
+-   324 mil usuários de todos os continentes
+-   793 inserções na mídia
+-   38 notas técnicas, comunicações breves e artigos relacionados
+-   Premiado pela ENAP
+
+## Dados ambientais e climáticos
+
+-   R + SIG
+-   Compatibilizar dados de superfície (raster) com dados lattice (limites municipais)
+-   Estatísticas zonais
+
+![](../talks/images/zonal_statistics.png)
+
+## Dados ambientais e climáticos
+
+-   Desafio: dados horários e diários, desde 1950
+-   5.570 municípios
+-   Pacote {zonalclim}: [https://rfsaldanha.github.io/zonalclim/](https://rfsaldanha.github.io/zonalclim/)
+-  {exactextractr} on steroids
+-  Blocos de tarefas computacionais para computação em paralelo
+
+## De dados para eventos climáticos
+
+-  Desafio: observar em séries temporais climáticas eventos de interesse
+-  Ondas de calor, chuvas persistentes, períodos de seca, anomalias e normais climatológicas...
+-  Pacote {climindi}: [https://rfsaldanha.github.io/climindi/](https://rfsaldanha.github.io/climindi/)
+-  Pacote {nseq}: [https://rfsaldanha.github.io/nseq/](https://rfsaldanha.github.io/nseq/)
+
+## Publicação de conjuntos de dados
+
+-   Agregação diária de indicadores do ERA5-Land para [América Latina](https://rfsaldanha.github.io/data-projects/era5land-daily-latin-america.html) e [África](https://rfsaldanha.github.io/data-projects/era5land-daily-africa.html)
+-   [Indicadores de clima](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html) para municípios brasileiros
+-   [Indicadores de eventos climáticos](https://rfsaldanha.github.io/data-projects/brazil_climate_normals_indicators.html) para municípios brasileiros
+-   [Indicadores de poluição do ar](https://rfsaldanha.github.io/data-projects/brazil_air_pollutants.html) para municípios brasileiros
+-   [Espelho S3](https://rfsaldanha.github.io/data-projects/s3-datasus-ftp-mirror.html) do FTP do DataSUS
+
+## Outros pacotes
+
+-   [{brpop}](): Estimativas populacionais
+-   [{tidyrates}](): *Tidy* taxas padronizadas por idade
+-   [{zendown}](): Download e cache de arquivos depositados no Zenodo
+-   [{zenstats}](): Estatísticas de depósitos no Zenodo
+
+##
+
+![](../talks/images/pkg_stats.png)
+
+## Método de trabalho
+
+-   Identificação de uma necessidade de dados
+-   Pacote R para produção de dados
+-   Disponibilização de dados no Zenodo (política de dados **plenamente** abertos)
+-   Download de dados com {zendown}
+
+##  {.big_text .center data-menu-title="Obrigado"}
+
+::: big_text
+Obrigado!
+
+raphael.saldanha@fiocruz.br
+
+rfsaldanha.github.io
+:::
+
+## 
