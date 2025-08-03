@@ -7,11 +7,11 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.7.32">
 <meta name="author" content="Raphael Saldanha">
-<meta name="dcterms.date" content="2025-04-08">
+<meta name="dcterms.date" content="2025-08-04">
 <title>Raphael Saldanha – Democratização de acesso a dados de saúde, ambiente e clima com o R</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -31,8 +31,9 @@
       vertical-align: middle;
     }
     /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -43,7 +44,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -96,7 +97,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-59a9223f0a5b2906f012f702fe2afdaf.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-c2f825e50a311f67554dc3576f242da2.css">
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2M7VLSRDCB"></script><script type="text/javascript">
 
   window.dataLayer = window.dataLayer || [];
@@ -201,7 +202,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center"><h1 class="title">Democratização de acesso a dados de saúde, ambiente e clima com o R</h1>
-  <p class="subtitle">a experiência do LIS,/ICICT/Fiocruz</p>
+  <p class="subtitle">a experiência do LIS/ICICT/Fiocruz</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -214,7 +215,7 @@ Raphael Saldanha
     </div>
 </div>
 
-  <p class="date">2025-04-08</p>
+  <p class="date">2025-08-04</p>
 </section><section id="raphael-saldanha" class="slide level2"><h2>Raphael Saldanha</h2>
 <div class="columns">
 <div class="column" style="width:55%;">
@@ -237,7 +238,7 @@ Raphael Saldanha
 <ul>
 <li>R 2.1 (2005)</li>
 <li>Lembra do Tinn-R?</li>
-<li>Desenvolvedor de pacotes</li>
+<li>Desenvolvedor de pacotes, painéis e conjuntos de dados de clima, ambiente e saúde</li>
 </ul>
 </div><div class="column" style="width:45%;">
 <ul>
@@ -248,13 +249,13 @@ Raphael Saldanha
 </div></div>
 </section><section id="microdatasus" class="slide level2"><h2>{microdatasus}</h2>
 <ul>
+<li>Início: Maio de 2017 (8 anos)</li>
 <li>Facilitar o acesso e processamento de dados dos Sistemas de Informação em Saúde do Brasil</li>
 <li>Dados de nascimentos, mortalidade, internações hospitalares, procedimentos ambulatoriais, casos suspeitos de doenças e outros</li>
-<li>Início do desenvolvimento: Maio de 2017 (8 anos)</li>
 </ul></section><section id="microdatasus-1" class="slide level2"><h2>{microdatasus}</h2>
 <ul>
 <li>Formato legado de arquivo: DBC (versão compactada do DBF)</li>
-<li>Download de dados: servidor FTP</li>
+<li>Download de dados em servidor FTP</li>
 <li>Dados sem rótulos</li>
 <li>Aplicativo oficial: TabWin (apenas para Windows)</li>
 <li>Necessidade de integrar o processo de acesso e pré-processamento dos dados em um único ambiente (R)</li>
@@ -329,13 +330,9 @@ Raphael Saldanha
 </div>
 </section><section id="section" class="slide level2 big_text center" data-menu-title="{microdatasus}"><h2></h2>
 <div class="big_text">
-<p><a href="https://rfsaldanha.github.io/microdatasus">https://rfsaldanha.github.io/microdatasus</a></p>
+<p>https://rfsaldanha.github.io/ microdatasus</p>
 </div>
-</section><section id="section-1" class="slide level2 big_text center" data-menu-title="{sis}"><h2></h2>
-<div class="big_text">
-<p><a href="https://rfsaldanha.github.io/sis">https://rfsaldanha.github.io/sis</a></p>
-</div>
-</section><section id="section-2" class="slide level2"><h2></h2>
+</section><section id="section-1" class="slide level2"><h2></h2>
 
 <img data-src="../talks/images/microdatasus_testimonials.png" class="r-stretch"></section><section id="microdatasus-5" class="slide level2"><h2>{microdatasus}</h2>
 <ul>
@@ -343,8 +340,11 @@ Raphael Saldanha
 <li>165 menções no Google Scholar</li>
 <li>Issues: <a href="https://github.com/rfsaldanha/microdatasus/issues">https://github.com/rfsaldanha/microdatasus/issues</a>
 </li>
-<li>Publicação: <a href="https://doi.org/10.1590/0102-311x00032419">Cadernos de Saúde Pública</a>
+<li>Artigo na <a href="https://doi.org/10.1590/0102-311x00032419">Cadernos de Saúde Pública</a>
 </li>
+<li>Capítulo no livro <a href="https://avaliasus.org">Avaliação de impacto das políticas públicas de saúde: um guia para o SUS</a>
+</li>
+<li>Lançamento de um curso em breve…</li>
 </ul></section><section id="pandemia-monitoracovid-19" class="slide level2"><h2>Pandemia: MonitoraCovid-19</h2>
 <ul>
 <li>Cenário de chegada da Covid-19 no Brasil</li>
@@ -360,10 +360,11 @@ Raphael Saldanha
 <li>Circulação de pessoas, vacinação, medidas de combate…</li>
 <li>Mais de 10 fontes de dados</li>
 <li>Impacto nacional e internacional</li>
-</ul></section><section id="section-3" class="slide level2"><h2></h2>
+</ul></section><section id="section-2" class="slide level2"><h2></h2>
 
 <img data-src="../talks/images/monitoracovid19.png" class="r-stretch"></section><section id="monitoracovid-19-1" class="slide level2"><h2>MonitoraCovid-19</h2>
 <ul>
+<li>Frontend e backend</li>
 <li>Atualização diária de dados (17h)</li>
 <li>Script manual</li>
 <li>Script “semi”-automático</li>
@@ -378,26 +379,41 @@ Raphael Saldanha
 <img data-src="../talks/images/monitoracovid19_acessos.png" class="r-stretch"></section><section id="monitoracovid-19-3" class="slide level2"><h2>MonitoraCovid-19</h2>
 <ul>
 <li>1,025 milhões de acessos</li>
-<li>324 mil usuários de todos os continentes</li>
+<li>324 mil usuários, de todos os continentes</li>
 <li>793 inserções na mídia</li>
 <li>38 notas técnicas, comunicações breves e artigos relacionados</li>
 <li>Premiado pela ENAP</li>
+<li>Versatilidade do R + Shiny para comunicação científica</li>
 </ul></section><section id="dados-ambientais-e-climáticos" class="slide level2"><h2>Dados ambientais e climáticos</h2>
 <ul>
-<li>R + SIG</li>
+<li>Interface do R com dados geográficos (SIG)</li>
 <li>Compatibilizar dados de superfície (raster) com dados lattice (limites municipais)</li>
 <li>Estatísticas zonais</li>
 </ul>
 
-<img data-src="../talks/images/zonal_statistics.png" class="r-stretch"></section><section id="dados-ambientais-e-climáticos-1" class="slide level2"><h2>Dados ambientais e climáticos</h2>
+<img data-src="../talks/images/zonal_statistics.png" class="r-stretch"></section><section id="section-3" class="slide level2"><h2></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="../talks/images/era5-land-daily-aggregates.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="../talks/images/pop_era5_grid_overlay.png"></p>
+</div></div>
+</section><section id="dados-ambientais-e-climáticos-1" class="slide level2"><h2>Dados ambientais e climáticos</h2>
 <ul>
-<li>Desafio: dados horários e diários, desde 1950</li>
+<li>Desafio: dados horários e diários, desde 1950 (ERA5-Land)</li>
 <li>5.570 municípios</li>
 <li>Pacote {zonalclim}: <a href="https://rfsaldanha.github.io/zonalclim/">https://rfsaldanha.github.io/zonalclim/</a>
 </li>
 <li>{exactextractr} on steroids</li>
 <li>Blocos de tarefas computacionais para computação em paralelo</li>
-</ul></section><section id="de-dados-para-eventos-climáticos" class="slide level2"><h2>De dados para eventos climáticos</h2>
+</ul></section><section id="section-4" class="slide level2"><h2></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="../talks/images/tmin_map.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="../talks/images/tmax_map.png"></p>
+</div></div>
+</section><section id="de-dados-para-eventos-climáticos" class="slide level2"><h2>De dados para eventos climáticos</h2>
 <ul>
 <li>Desafio: observar em séries temporais climáticas eventos de interesse</li>
 <li>Ondas de calor, chuvas persistentes, períodos de seca, anomalias e normais climatológicas…</li>
@@ -405,7 +421,9 @@ Raphael Saldanha
 </li>
 <li>Pacote {nseq}: <a href="https://rfsaldanha.github.io/nseq/">https://rfsaldanha.github.io/nseq/</a>
 </li>
-</ul></section><section id="publicação-de-conjuntos-de-dados" class="slide level2"><h2>Publicação de conjuntos de dados</h2>
+</ul></section><section><section id="section-5" class="title-slide slide level1 center"><h1></h1>
+
+<img data-src="../talks/images/climindi.png" class="r-stretch"></section><section id="publicação-de-conjuntos-de-dados" class="slide level2"><h2>Publicação de conjuntos de dados</h2>
 <ul>
 <li>Agregação diária de indicadores do ERA5-Land para <a href="https://rfsaldanha.github.io/data-projects/era5land-daily-latin-america.html">América Latina</a> e <a href="https://rfsaldanha.github.io/data-projects/era5land-daily-africa.html">África</a>
 </li>
@@ -420,34 +438,27 @@ Raphael Saldanha
 </ul></section><section id="outros-pacotes" class="slide level2"><h2>Outros pacotes</h2>
 <ul>
 <li>
-<a href="">{brpop}</a>: Estimativas populacionais</li>
+<a href="https://rfsaldanha.github.io/brpop/">{brpop}</a>: Estimativas populacionais</li>
 <li>
-<a href="">{tidyrates}</a>: <em>Tidy</em> taxas padronizadas por idade</li>
+<a href="https://rfsaldanha.github.io/tidyrates/">{tidyrates}</a>: <em>Tidy</em> taxas padronizadas por idade</li>
 <li>
-<a href="">{zendown}</a>: Download e cache de arquivos depositados no Zenodo</li>
+<a href="https://rfsaldanha.github.io/zendown/">{zendown}</a>: Download e cache de arquivos depositados no Zenodo</li>
 <li>
-<a href="">{zenstats}</a>: Estatísticas de depósitos no Zenodo</li>
-</ul></section><section id="section-4" class="slide level2"><h2></h2>
+<a href="https://rfsaldanha.github.io/zenstats/">{zenstats}</a>: Estatísticas de depósitos no Zenodo</li>
+</ul></section><section id="section-6" class="slide level2"><h2></h2>
 
-<img data-src="../talks/images/pkg_stats.png" class="r-stretch"></section><section id="método-de-trabalho" class="slide level2"><h2>Método de trabalho</h2>
-<ul>
-<li>Identificação de uma necessidade de dados</li>
-<li>Pacote R para produção de dados</li>
-<li>Disponibilização de dados no Zenodo (política de dados <strong>plenamente</strong> abertos)</li>
-<li>Download de dados com {zendown}</li>
-</ul></section><section id="section-5" class="slide level2 big_text center" data-menu-title="Obrigado"><h2></h2>
+<img data-src="rbras69_2025_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section><section id="section-7" class="slide level2 big_text center" data-menu-title="{Obrigado!}"><h2></h2>
 <div class="big_text">
 <p>Obrigado!</p>
 <p>raphael.saldanha@fiocruz.br</p>
-<p>rfsaldanha.github.io</p>
+<p>https://rfsaldanha.github.io</p>
 </div>
-</section><section id="section-6" class="slide level2"><h2></h2>
 
 
-</section>
+</section></section>
 </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="images/logo_icict_6.png" class="slide-logo"></p>
+<p><img src="images/logo_icict_150.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
 </div>
@@ -681,190 +692,172 @@ Raphael Saldanha
 
       })();
     </script><script id="quarto-html-after-body" type="application/javascript">
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-      const toggleBodyColorMode = (bsSheetEl) => {
-        const mode = bsSheetEl.getAttribute("data-mode");
-        const bodyEl = window.document.querySelector("body");
-        if (mode === "dark") {
-          bodyEl.classList.add("quarto-dark");
-          bodyEl.classList.remove("quarto-light");
-        } else {
-          bodyEl.classList.add("quarto-light");
-          bodyEl.classList.remove("quarto-dark");
-        }
-      }
-      const toggleBodyColorPrimary = () => {
-        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-        if (bsSheetEl) {
-          toggleBodyColorMode(bsSheetEl);
-        }
-      }
-      toggleBodyColorPrimary();  
-      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
-      tabsets.forEach(function(tabset) {
-        const tabby = new Tabby('#' + tabset.id);
-      });
-      const isCodeAnnotation = (el) => {
-        for (const clz of el.classList) {
-          if (clz.startsWith('code-annotation-')) {                     
-            return true;
-          }
-        }
-        return false;
-      }
-      const onCopySuccess = function(e) {
-        // button target
-        const button = e.trigger;
-        // don't keep focus
-        button.blur();
-        // flash "checked"
-        button.classList.add('code-copy-button-checked');
-        var currentTitle = button.getAttribute("title");
-        button.setAttribute("title", "Copied!");
-        let tooltip;
-        if (window.bootstrap) {
-          button.setAttribute("data-bs-toggle", "tooltip");
-          button.setAttribute("data-bs-placement", "left");
-          button.setAttribute("data-bs-title", "Copied!");
-          tooltip = new bootstrap.Tooltip(button, 
-            { trigger: "manual", 
-              customClass: "code-copy-button-tooltip",
-              offset: [0, -8]});
-          tooltip.show();    
-        }
-        setTimeout(function() {
-          if (tooltip) {
-            tooltip.hide();
-            button.removeAttribute("data-bs-title");
-            button.removeAttribute("data-bs-toggle");
-            button.removeAttribute("data-bs-placement");
-          }
-          button.setAttribute("title", currentTitle);
-          button.classList.remove('code-copy-button-checked');
-        }, 1000);
-        // clear code selection
-        e.clearSelection();
-      }
-      const getTextToCopy = function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
             }
           }
-          return codeEl.innerText;
-      }
-      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-        text: getTextToCopy
-      });
-      clipboard.on('success', onCopySuccess);
-      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-          text: getTextToCopy,
-          container: window.document.getElementById('quarto-embedded-source-code-modal')
-        });
-        clipboardModal.on('success', onCopySuccess);
-      }
-        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-        var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp("https:\/\/rfsaldanha\.github\.io");
-        var isInternal = (href) => {
-            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          return false;
         }
-        // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-        for (var i=0; i<links.length; i++) {
-          const link = links[i];
-          if (!isInternal(link.href)) {
-            // undo the damage that might have been done by quarto-nav.js in the case of
-            // links that we want to consider external
-            if (link.dataset.originalHref !== undefined) {
-              link.href = link.dataset.originalHref;
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
             }
-          }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
         }
-      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-        const config = {
-          allowHTML: true,
-          maxWidth: 500,
-          delay: 100,
-          arrow: false,
-          appendTo: function(el) {
-              return el.closest('section.slide') || el.parentElement;
-          },
-          interactive: true,
-          interactiveBorder: 10,
-          theme: 'light-border',
-          placement: 'bottom-start',
-        };
-        if (contentFn) {
-          config.content = contentFn;
-        }
-        if (onTriggerFn) {
-          config.onTrigger = onTriggerFn;
-        }
-        if (onUntriggerFn) {
-          config.onUntrigger = onUntriggerFn;
-        }
-          config['offset'] = [0,0];
-          config['maxWidth'] = 700;
-        window.tippy(el, config); 
-      }
-      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-      for (var i=0; i<noterefs.length; i++) {
-        const ref = noterefs[i];
-        tippyHover(ref, function() {
-          // use id or data attribute instead here
-          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-          try { href = new URL(href).hash; } catch {}
-          const id = href.replace(/^#\/?/, "");
-          const note = window.document.getElementById(id);
-          if (note) {
-            return note.innerHTML;
-          } else {
-            return "";
-          }
-        });
-      }
-      const findCites = (el) => {
-        const parentEl = el.parentElement;
-        if (parentEl) {
-          const cites = parentEl.dataset.cites;
-          if (cites) {
-            return {
-              el,
-              cites: cites.split(' ')
-            };
-          } else {
-            return findCites(el.parentElement)
-          }
-        } else {
-          return undefined;
-        }
-      };
-      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-      for (var i=0; i<bibliorefs.length; i++) {
-        const ref = bibliorefs[i];
-        const citeInfo = findCites(ref);
-        if (citeInfo) {
-          tippyHover(citeInfo.el, function() {
-            var popup = window.document.createElement('div');
-            citeInfo.cites.forEach(function(cite) {
-              var citeDiv = window.document.createElement('div');
-              citeDiv.classList.add('hanging-indent');
-              citeDiv.classList.add('csl-entry');
-              var biblioDiv = window.document.getElementById('ref-' + cite);
-              if (biblioDiv) {
-                citeDiv.innerHTML = biblioDiv.innerHTML;
+        const getTextToCopy = function(trigger) {
+            const codeEl = trigger.previousElementSibling.cloneNode(true);
+            for (const childEl of codeEl.children) {
+              if (isCodeAnnotation(childEl)) {
+                childEl.remove();
               }
-              popup.appendChild(citeDiv);
-            });
-            return popup.innerHTML;
+            }
+            return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/rfsaldanha\.github\.io");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
           });
         }
-      }
-    });
-    </script>
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
 
 
 </body></html>

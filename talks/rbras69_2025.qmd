@@ -1,16 +1,16 @@
 ---
 title: "Democratização de acesso a dados de saúde, ambiente e clima com o R"
-subtitle: "a experiência do LIS,/ICICT/Fiocruz"
+subtitle: "a experiência do LIS/ICICT/Fiocruz"
 author: "Raphael Saldanha"
 institute: "Fiocruz"
-date: "04/08/2025"
+date: "2025-08-04"
 #description: ""
 categories: [climate]
 #image: images/subsets_model_accuracy.png
 format:
   revealjs: 
     theme: icict_style.scss
-    logo: images/logo_icict_6.png
+    logo: images/logo_icict_150.png
     transition: fade
     background-transition: fade
     pointer:
@@ -44,7 +44,7 @@ revealjs-plugins:
 ::: {.column width="55%"}
 -   R 2.1 (2005)
 -   Lembra do Tinn-R?
--   Desenvolvedor de pacotes
+-   Desenvolvedor de pacotes, painéis e conjuntos de dados de clima, ambiente e saúde
 :::
 
 ::: {.column width="45%"}
@@ -56,14 +56,14 @@ revealjs-plugins:
 
 ## {microdatasus}
 
+-   Início: Maio de 2017 (8 anos)
 -   Facilitar o acesso e processamento de dados dos Sistemas de Informação em Saúde do Brasil
 -   Dados de nascimentos, mortalidade, internações hospitalares, procedimentos ambulatoriais, casos suspeitos de doenças e outros
--   Início do desenvolvimento: Maio de 2017 (8 anos)
 
 ## {microdatasus}
 
 -   Formato legado de arquivo: DBC (versão compactada do DBF)
--   Download de dados: servidor FTP
+-   Download de dados em servidor FTP
 -   Dados sem rótulos
 -   Aplicativo oficial: TabWin (apenas para Windows)
 -   Necessidade de integrar o processo de acesso e pré-processamento dos dados em um único ambiente (R)
@@ -101,16 +101,11 @@ tibble::tibble(p_data)
 ##  {.big_text .center data-menu-title="{microdatasus}"}
 
 ::: big_text
-[https://rfsaldanha.github.io/microdatasus](https://rfsaldanha.github.io/microdatasus)
+https://rfsaldanha.github.io/
+microdatasus
 :::
 
-##  {.big_text .center data-menu-title="{sis}"}
-
-::: big_text
-[https://rfsaldanha.github.io/sis](https://rfsaldanha.github.io/sis)
-:::
-
-##
+## 
 
 ![](../talks/images/microdatasus_testimonials.png)
 
@@ -119,8 +114,9 @@ tibble::tibble(p_data)
 -   Agradecimentos a Daniela Petruzalek, pacote {read.dbc}
 -   165 menções no Google Scholar
 -   Issues: [https://github.com/rfsaldanha/microdatasus/issues](https://github.com/rfsaldanha/microdatasus/issues)
--   Publicação: [Cadernos de Saúde Pública](https://doi.org/10.1590/0102-311x00032419)
-
+-   Artigo na [Cadernos de Saúde Pública](https://doi.org/10.1590/0102-311x00032419)
+-   Capítulo no livro [Avaliação de impacto das políticas públicas de saúde: um guia para o SUS](https://avaliasus.org)
+-   Lançamento de um curso em breve...
 
 ## Pandemia: MonitoraCovid-19
 
@@ -139,13 +135,13 @@ tibble::tibble(p_data)
 -   Mais de 10 fontes de dados
 -   Impacto nacional e internacional
 
-
 ## 
 
 ![](../talks/images/monitoracovid19.png)
 
 ## MonitoraCovid-19
 
+-   Frontend e backend 
 -   Atualização diária de dados (17h)
 -   Script manual
 -   Script "semi"-automático
@@ -162,26 +158,51 @@ tibble::tibble(p_data)
 ## MonitoraCovid-19
 
 -   1,025 milhões de acessos
--   324 mil usuários de todos os continentes
+-   324 mil usuários, de todos os continentes
 -   793 inserções na mídia
 -   38 notas técnicas, comunicações breves e artigos relacionados
 -   Premiado pela ENAP
+-   Versatilidade do R + Shiny para comunicação científica
 
 ## Dados ambientais e climáticos
 
--   R + SIG
+-   Interface do R com dados geográficos (SIG)
 -   Compatibilizar dados de superfície (raster) com dados lattice (limites municipais)
 -   Estatísticas zonais
 
 ![](../talks/images/zonal_statistics.png)
 
+## 
+
+::::: columns
+::: {.column width="50%"}
+![](../talks/images/era5-land-daily-aggregates.png)
+:::
+
+::: {.column width="50%"}
+![](../talks/images/pop_era5_grid_overlay.png)
+:::
+:::::
+
 ## Dados ambientais e climáticos
 
--   Desafio: dados horários e diários, desde 1950
+-   Desafio: dados horários e diários, desde 1950 (ERA5-Land)
 -   5.570 municípios
 -   Pacote {zonalclim}: [https://rfsaldanha.github.io/zonalclim/](https://rfsaldanha.github.io/zonalclim/)
 -  {exactextractr} on steroids
 -  Blocos de tarefas computacionais para computação em paralelo
+
+## 
+
+::::: columns
+::: {.column width="50%"}
+![](../talks/images/tmin_map.png)
+:::
+
+::: {.column width="50%"}
+![](../talks/images/tmax_map.png)
+:::
+:::::
 
 ## De dados para eventos climáticos
 
@@ -189,6 +210,10 @@ tibble::tibble(p_data)
 -  Ondas de calor, chuvas persistentes, períodos de seca, anomalias e normais climatológicas...
 -  Pacote {climindi}: [https://rfsaldanha.github.io/climindi/](https://rfsaldanha.github.io/climindi/)
 -  Pacote {nseq}: [https://rfsaldanha.github.io/nseq/](https://rfsaldanha.github.io/nseq/)
+
+#
+
+![](../talks/images/climindi.png)
 
 ## Publicação de conjuntos de dados
 
@@ -200,30 +225,59 @@ tibble::tibble(p_data)
 
 ## Outros pacotes
 
--   [{brpop}](): Estimativas populacionais
--   [{tidyrates}](): *Tidy* taxas padronizadas por idade
--   [{zendown}](): Download e cache de arquivos depositados no Zenodo
--   [{zenstats}](): Estatísticas de depósitos no Zenodo
+-   [{brpop}](https://rfsaldanha.github.io/brpop/): Estimativas populacionais
+-   [{tidyrates}](https://rfsaldanha.github.io/tidyrates/): *Tidy* taxas padronizadas por idade
+-   [{zendown}](https://rfsaldanha.github.io/zendown/): Download e cache de arquivos depositados no Zenodo
+-   [{zenstats}](https://rfsaldanha.github.io/zenstats/): Estatísticas de depósitos no Zenodo
 
 ##
 
-![](../talks/images/pkg_stats.png)
+```{r}
+library(dplyr)
+library(cranlogs)
+library(ggplot2)
 
-## Método de trabalho
+# Packages list
+pkgs <- list(
+  list(name = "nseq", start_date = "2024-05-31"),
+  list(name = "zendown", start_date = "2024-04-12"),
+  list(name = "zenstats", start_date = "2024-05-31"),
+  list(name = "brpop", start_date = "2022-07-06"),
+  list(name = "tidyrates", start_date = "2024-03-19"),
+  list(name = "brclimr", start_date = "2023-03-07"),
+  list(name = "microdatasus", start_date = "2024-06-16")
+)
 
--   Identificação de uma necessidade de dados
--   Pacote R para produção de dados
--   Disponibilização de dados no Zenodo (política de dados **plenamente** abertos)
--   Download de dados com {zendown}
+# Download stats
+logs <- tibble()
+for (p in 1:length(pkgs)) {
+  tmp <- cran_downloads(
+    packages = pkgs[[p]]$name,
+    from = pkgs[[p]]$start_date,
+    to = "last-day"
+  )
+  logs <- bind_rows(logs, tmp)
+}
+rm(tmp, p)
 
-##  {.big_text .center data-menu-title="Obrigado"}
+logs |>
+  group_by(package) |>
+  arrange(date) |>
+  mutate(count = cumsum(count)) |>
+  ungroup() |>
+  ggplot(aes(x = date, y = count, colour = package)) +
+  geom_line(linewidth = 1, alpha = .7) +
+  theme_bw() +
+  theme(legend.position = "bottom", legend.direction = "horizontal") +
+  labs(x = "Date", y = "Cumulative downloads", colour = "")
+```
+
+##  {.big_text .center data-menu-title="{Obrigado!}"}
 
 ::: big_text
 Obrigado!
 
 raphael.saldanha@fiocruz.br
 
-rfsaldanha.github.io
+https://rfsaldanha.github.io
 :::
-
-## 
