@@ -10,7 +10,7 @@ categories: [climate]
 format:
   revealjs: 
     theme: icict_style.scss
-    logo: images/logo_icict_150.png
+    logo: images/logo_icict_6.png
     transition: fade
     background-transition: fade
     pointer:
