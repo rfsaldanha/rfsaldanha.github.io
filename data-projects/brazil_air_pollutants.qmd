@@ -32,3 +32,19 @@ The datasets are available to download here:
 ### PM 10
 
 2003-2024: [![](https://img.shields.io/badge/download-10.5281/zenodo.16419737-green.svg)](https://doi.org/10.5281/zenodo.16419737)
+
+## CO
+
+Carbon monoxide (CO) is a gas produced mainly by incomplete combustion of fossil fuels, and it represents a serious threat to public health. Short-term exposure to high concentrations can cause dizziness, headaches, impaired vision, confusion, and, in severe cases, death, while chronic low-level exposure has been associated with cardiovascular and neurological problems. Monitoring CO levels in the environment and enforcing air quality standards are therefore essential measures for preventing both acute poisoning incidents and longer-term health burdens in urban populations.
+
+The PM data indicators were downloaded from the Copernicus' Atmosphere Data Store and processed to provide three daily indicators for the Brazilian municipalities:
+
+-   Minimum values: for each municipality boundary and day, the hourly minimum values of CO of all intersecting cells are averaged, resulting in the municipality's minimum daily indicator.
+-   Maximum values: for each municipality boundary and day, the hourly maximum values of CO of all intersecting cells are averaged, resulting in the municipality's maximum daily indicator.
+-   Average values: for each municipality boundary and day, the hourly average values of CO of all intersecting cells are averaged, resulting in the municipality's average daily indicator.
+
+Those indicators are presented in Parquet and CSV formats. The computational codes used to create those datasets are openly available [here](https://github.com/rfsaldanha/camsdata).
+
+The datasets are available to download here:
+
+2003-2024: [![](https://img.shields.io/badge/download-10.5281/zenodo.16984341-green.svg)](https://doi.org/10.5281/zenodo.16984341)

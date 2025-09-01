@@ -175,6 +175,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   <li><a href="#pm-2.5" id="toc-pm-2.5" class="nav-link" data-scroll-target="#pm-2.5">PM 2.5</a></li>
   <li><a href="#pm-10" id="toc-pm-10" class="nav-link" data-scroll-target="#pm-10">PM 10</a></li>
   </ul></li>
+  <li><a href="#co" id="toc-co" class="nav-link" data-scroll-target="#co">CO</a></li>
   </ul>
 </nav>
     </div>
@@ -209,9 +210,22 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <section id="pm-10" class="level3">
 <h3 class="anchored" data-anchor-id="pm-10">PM 10</h3>
 <p>2003-2024: <a href="https://doi.org/10.5281/zenodo.16419737"><img src="https://img.shields.io/badge/download-10.5281/zenodo.16419737-green.svg" class="img-fluid"></a></p>
-
-
 </section>
+</section>
+<section id="co" class="level2">
+<h2 class="anchored" data-anchor-id="co">CO</h2>
+<p>Carbon monoxide (CO) is a gas produced mainly by incomplete combustion of fossil fuels, and it represents a serious threat to public health. Short-term exposure to high concentrations can cause dizziness, headaches, impaired vision, confusion, and, in severe cases, death, while chronic low-level exposure has been associated with cardiovascular and neurological problems. Monitoring CO levels in the environment and enforcing air quality standards are therefore essential measures for preventing both acute poisoning incidents and longer-term health burdens in urban populations.</p>
+<p>The PM data indicators were downloaded from the Copernicus’ Atmosphere Data Store and processed to provide three daily indicators for the Brazilian municipalities:</p>
+<ul>
+<li>Minimum values: for each municipality boundary and day, the hourly minimum values of CO of all intersecting cells are averaged, resulting in the municipality’s minimum daily indicator.</li>
+<li>Maximum values: for each municipality boundary and day, the hourly maximum values of CO of all intersecting cells are averaged, resulting in the municipality’s maximum daily indicator.</li>
+<li>Average values: for each municipality boundary and day, the hourly average values of CO of all intersecting cells are averaged, resulting in the municipality’s average daily indicator.</li>
+</ul>
+<p>Those indicators are presented in Parquet and CSV formats. The computational codes used to create those datasets are openly available <a href="https://github.com/rfsaldanha/camsdata">here</a>.</p>
+<p>The datasets are available to download here:</p>
+<p>2003-2024: <a href="https://doi.org/10.5281/zenodo.16984341"><img src="https://img.shields.io/badge/download-10.5281/zenodo.16984341-green.svg" class="img-fluid"></a></p>
+
+
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
