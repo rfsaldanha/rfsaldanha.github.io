@@ -1,0 +1,32 @@
+---
+title: "NDVI averages for Brazilian municipalities"
+bibliography: references.bib
+---
+
+![](images/ndvi.png)
+
+## Introduction
+
+The Normalized Difference Vegetation Index (NDVI) is a indicator that quantifies vegetation cover and health by measuring the difference between near-infrared (strongly reflected by healthy plants) and red light (absorbed by chlorophyll). Its has the ability to capture environmental conditions that influence disease dynamics, nutrition, and overall well-being. For example, NDVI helps identify areas at risk of vector-borne diseases such as malaria, dengue, and leishmaniasis, since vegetation cover and humidity create favorable habitats for vectors like mosquitoes and sandflies. NDVI also supports urban health research by assessing the distribution of green spaces, which are linked to reduced air pollution exposure, better mental health, and mitigation of heat stress.
+
+I created this dataset with NDVI averages for Brazilian municipalities using a zonal statistics procedure with data available from the [Copernicus Land Monitoring Service](land.copernicus.eu/).
+
+## Source data
+
+The following source data were used.
+
+-   From January 1, 1999 to December 31, 2019, raster data with 1km spatial resolution was used ([NDVI 1999-2020 (raster 1 km), global, 10-daily – version 3](https://land.copernicus.eu/en/products/vegetation/normalised-difference-vegetation-index-v3-0-1km)).
+
+-   From January 1, 2020 to June 30, 2020, raster data with 300m spatial resolution was used ([NDVI 2014-2020 (raster 300 m), global, 10-daily – version 1](https://land.copernicus.eu/en/products/vegetation/normalized-difference-vegetation-index-300m-v1.0)).
+
+-   From July 1, 2020 to December 31, 2024, raster data with 300m spatial resolution was used ([NDVI 2020-present (raster 300 m), global, 10-daily – version 2](https://land.copernicus.eu/en/products/vegetation/normalised-difference-vegetation-index-v2-0-300m)).
+
+## Methods
+
+First, the available data for each month was averaged, generating monthly NDVI files. Then, for each month, the following zonal statistics were computed for each Brazilian municipality: mean, maximum value, minimum value, standard variation.
+
+The R scripts for download, processing and export data are available [here](https://github.com/rfsaldanha/landdata).
+
+## Download
+
+1999-2024: [![](https://img.shields.io/badge/download-10.5281/zenodo.17093199-green.svg)](https://doi.org/10.5281/zenodo.17093199)
