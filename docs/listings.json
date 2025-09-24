@@ -17,6 +17,7 @@
   {
     "listing": "/data.html",
     "items": [
+      "/data-projects/brazil_ndvi.html",
       "/data-projects/brazil_air_pollutants.html",
       "/data-projects/brazil-climate-zonal-indicators.html",
       "/data-projects/brazil_climate_normals_indicators.html",

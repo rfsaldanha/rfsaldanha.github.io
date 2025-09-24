@@ -2,6 +2,7 @@
 title: "Datasets"
 listing:
   contents:
+    - data-projects/brazil_ndvi.qmd
     - data-projects/brazil_air_pollutants.qmd
     - data-projects/brazil-climate-zonal-indicators.qmd
     - data-projects/brazil_climate_normals_indicators.qmd
