@@ -30,3 +30,31 @@ The R scripts for download, processing and export data are available [here](http
 ## Download
 
 1999-2024: [![](https://img.shields.io/badge/download-10.5281/zenodo.17093199-green.svg)](https://doi.org/10.5281/zenodo.17093199)
+
+## Data example
+
+
+```{r}
+#| message: false
+library(dplyr)
+library(zendown)
+library(arrow)
+library(ggplot2)
+
+zen_file(deposit_id = 17093199, file_name = "ndvi_mean.parquet") |>
+  open_dataset() |>
+  filter(code_muni == 2510808) |>
+  collect() |>
+  ggplot(aes(x = date, y = value)) +
+  geom_line() +
+  ylim(0, 1) +
+  labs(title = "Monthly average NDVI", subtitle = "Patos, PB") +
+  theme_bw()
+```
+
+## Session info
+
+
+```{r}
+sessioninfo::session_info()
+```
