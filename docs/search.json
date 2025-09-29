@@ -1516,7 +1516,7 @@
     "href": "data-projects/brazil_inmet_alerts.html#introduction",
     "title": "INMET RSS alerts",
     "section": "Introduction",
-    "text": "Introduction\nINMET is the Brazilian official source of meteorological forecasts. It also maintains the ALERT-AS, an weather alert center for the Brazilian territory.\nThe alerts are broadcasted in the RSS format and there is no official record history of alerts available. Thus, I started to run a daily script to record those alerts and made them available to the public."
+    "text": "Introduction\nINMET is the Brazilian official source of meteorological forecasts. It also maintains the ALERT-AS, an weather alert center for the Brazilian territory.\nThe alerts are broadcasted in the RSS format and there is no official record history of alerts available. Thus, I started to run a daily script to record those alerts and made them available to the public. The record started on September 29, 2025 at 4pm."
   },
   {
     "objectID": "data-projects/brazil_inmet_alerts.html#data",
