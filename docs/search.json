@@ -1656,7 +1656,7 @@
     "href": "data-projects/s3-datasus-ftp-mirror.html#available-health-information-systems-and-files",
     "title": "S3 DataSUS FTP mirror",
     "section": "Available health information systems and files",
-    "text": "Available health information systems and files\nCurrently, the following health information systems are mirrored:\n\nSIM – Sistema de Informações de Mortalidade\nSINASC – Sistema de Informações de Nascidos Vivos\nSINAN – Sistema de Informações de Agravos de Notificação\nSIH – Sistema de Informações Hospitalares do SUS\nSIA – Sistema de Informações Ambulatoriais do SUS\nCNES – Cadastro Nacional de Estalecimentos de Saúde"
+    "text": "Available health information systems and files\nCurrently, the following health information systems are mirrored:\n\nSIM – Sistema de Informações de Mortalidade\nSINASC – Sistema de Informações de Nascidos Vivos\nSINAN – Sistema de Informações de Agravos de Notificação\nSIH – Sistema de Informações Hospitalares do SUS\nSIA – Sistema de Informações Ambulatoriais do SUS\nCNES – Cadastro Nacional de Estalecimentos de Saúde\nPasta E-SUS Notifica\nPasta Dados Abertos"
   },
   {
     "objectID": "data-projects/s3-datasus-ftp-mirror.html#file-access",

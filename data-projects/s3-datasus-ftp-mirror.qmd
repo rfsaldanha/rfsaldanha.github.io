@@ -13,24 +13,26 @@ In order to offer an alternative way to access those files, I created a partial 
 
 Currently, the following health information systems are mirrored:
 
-- SIM -- Sistema de Informações de Mortalidade
-- SINASC -- Sistema de Informações de Nascidos Vivos
-- SINAN -- Sistema de Informações de Agravos de Notificação
-- SIH -- Sistema de Informações Hospitalares do SUS
-- SIA -- Sistema de Informações Ambulatoriais do SUS
-- CNES -- Cadastro Nacional de Estalecimentos de Saúde
+-   SIM -- Sistema de Informações de Mortalidade
+-   SINASC -- Sistema de Informações de Nascidos Vivos
+-   SINAN -- Sistema de Informações de Agravos de Notificação
+-   SIH -- Sistema de Informações Hospitalares do SUS
+-   SIA -- Sistema de Informações Ambulatoriais do SUS
+-   CNES -- Cadastro Nacional de Estalecimentos de Saúde
+-   Pasta E-SUS Notifica
+-   Pasta Dados Abertos
 
 ## File Access
 
 The S3 mirror is available at this endpoint:
 
-```
+```         
 https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com
 ```
 
-::::: {.callout-note}
-- The file structure at the S3 mirror follows the same directory structure of the FTP server.
-- All files available at the FTP are mirrored, except expanded XML and CSV files.
+::: callout-note
+-   The file structure at the S3 mirror follows the same directory structure of the FTP server.
+-   All files available at the FTP are mirrored, except expanded XML and CSV files.
 :::
 
 ## Mirror update and files tree
@@ -41,7 +43,7 @@ The mirror is synced daily at 3:00 am Brazilian time. On each update, some file 
 -   [Files tree](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_files_tree.txt)
 -   [Full path list](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_full_path.txt)
 
-::: {.callout-tip}
+::: callout-tip
 The S3 bucket **versioning** option was **enabled** on November 7, 2024. Since then, the version history of all files (including deleted files) has been kept.
 :::
 
@@ -51,7 +53,7 @@ Check the desired file name at [full path list](https://datasus-ftp-mirror.nyc3.
 
 Example: [SIM file for Bahia, 2022](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/SIM/CID10/DORES/DOBA2022.dbc)
 
-```
+```         
 https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/SIM/CID10/DORES/DOBA2022.dbc
 ```
 
@@ -66,7 +68,7 @@ A log of the last update is provided and all update logs are stored in the folde
 
 Fist, locate the log file name [here](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_logs.txt), then access the file. Example:
 
-```
+```         
 https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone-logs/rclone_datasus_log_2024-11-07_03:04:55.txt
 ```
 
@@ -74,13 +76,13 @@ https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone-logs/rclone_da
 
 The files are cached in a CDN (content delivery network) to increase transfer speeds. This cache is refreshed every hour. To access directly the file, without the CDN, remove the `cdn` from the address. Example:
 
-```
+```         
 https://datasus-ftp-mirror.nyc3.digitaloceanspaces.com/SIM/CID10/DORES/DOBA2022.dbc
 ```
 
 ## Costs
 
-This S3 mirror is available for free use, but I have running costs for storage and transfer volume at Digital Ocean. Please use it carefully and consciously. 
+This S3 mirror is available for free use, but I have running costs for storage and transfer volume at Digital Ocean. Please use it carefully and consciously.
 
 ## Script
 
