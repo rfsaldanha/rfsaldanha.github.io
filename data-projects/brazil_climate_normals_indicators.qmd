@@ -9,7 +9,7 @@ Climatological normals are averages of climate variables observed for a given ti
 
 The normals are usually computed with surface meteorological stations data, maintained by government meteorological institutions, and its distribution over the territory may be scarce or uneven, like in Brazil. Thus, the availability of climatological normals to different regions and administrative divisions like municipalities is difficult to obtain.
 
-I propose here a method to compute monthly climatological normals for the 1961--1990 and monthly aggregated climate indicators from 1991 to 2023 for Brazilian municipalities using a climate reanalysis dataset.
+I propose here a method to compute monthly climatological normals and monthly aggregated climate indicators using a climate reanalysis datasets.
 
 ::: callout-tip
 In a hurry? Jump to the [download](#sec-download) section ;-)
@@ -21,9 +21,9 @@ A climatological normal can be computed with data from different sources, includ
 
 Some research methods demands that climate data must be aggregated in the same spatial and temporal units of other data to be used in statistical models, being a fairly common procedure in epidemiology and economy studies. In order to approach this issue, spatial gridded data can be aggregated using *zonal statistics* [@saldanhaZonalStatisticsDatasets2024].
 
-I used the same methodology from the study above to create zonal statistics of climate indicators from the BR-DWGD project [@xavier2022]. This data is available [here](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html#zonal-br-dwgd), presenting climatological indicators from 1961 to March 2024 for all Brazilian municipalities. I propose here to compute the climatological normals and other climate aggregated indicators from this dataset of zonal statistics.
+The updated climate zonal statistics datasets for the Brazilian municipalities from ERA5-Land was used to compute climatological normals and monthly event indicators.
 
-In order to compute these indicators, I created an R package named [{climindi}](https://rfsaldanha.github.io/climindi). The package provides helper functions to compute climatological normals and other aggregated indicators in a [tidy](https://www.tidyverse.org) way.
+For this, an R package named [{climindi}](https://rfsaldanha.github.io/climindi) was created. The package provides helper functions to compute climatological normals and other aggregated indicators in a [tidy](https://www.tidyverse.org) way.
 
 ### Normal indicators
 
@@ -63,9 +63,15 @@ The {climindi} package present functions to compute the following statistics for
     -   Count of sequences of 3 and 5 days or more with solar radiation bellow the climatological normal
     -   Count of sequences of 3 and 5 days or more with solar radiation above the climatological normal
 
+::: callout-important
+The package functions needs data in the correct units. Please certify that your data is in the correct unit before running the functions.
+:::
+
 ### Data source
 
-The zonal statistics for the Brazilian municipalities computed with the BR-DWGD project is described [here](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html#zonal-br-dwgd). We can use the [{zendown}](https://rfsaldanha.github.io/zendown/) package to download the data files directly from from Zenodo.
+The zonal statistics for the Brazilian municipalities computed with the Copernicus ERA5-Land is described [here](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html#zonal-era5-land). We can use the [{zendown}](https://rfsaldanha.github.io/zendown/) package to download the data files directly from from Zenodo.
+
+We will use the data from 1961 to 1990 to compute the climatological normals and the data from 1991 to 2024 to compute monthly climatological indicators.
 
 ### Packages
 
@@ -81,7 +87,7 @@ library(zendown) # https://rfsaldanha.github.io/zendown/
 ```
 
 ::: callout-warning
-To perform those computations, I needed to increase the envinroment variable `R_MAX_VSIZE`, as explained [here](https://stackoverflow.com/questions/51248293/error-vector-memory-exhausted-limit-reached-r-3-5-0-macos).
+To perform those computations, I needed to increase the envinroment variable `R_MAX_VSIZE` to 100GB, as explained [here](https://stackoverflow.com/questions/51248293/error-vector-memory-exhausted-limit-reached-r-3-5-0-macos).
 :::
 
 ### Precipitation (mm)
@@ -90,20 +96,28 @@ To perform those computations, I needed to increase the envinroment variable `R_
 
 ```{r}
 #| eval: false
-pr_data <- zen_file(13906834, "pr_3.2.3.parquet") |>
-  open_dataset() |>
-  filter(name == "pr_3.2.3_mean") |>
+prec_1950_2022 <- zen_file(10036212, "total_precipitation_sum.parquet")
+prec_2023 <- zen_file(10947952, "total_precipitation_sum.parquet")
+prec_2024 <- zen_file(15748125, "total_precipitation_sum.parquet")
+
+prec_data <- open_dataset(sources = c(prec_1950_2022, prec_2023, prec_2024)) |>
+  # Average precipitation
+  filter(name == "total_precipitation_sum_mean") |>
+  # Time filter
   filter(date >= as.Date("1961-01-01")) |>
-  filter(date <= as.Date("2023-12-31")) |>
+  filter(date <= as.Date("2024-12-31")) |>
+  # Unit conversion from m to mm
+  mutate(value = round(value * 1000, digits = 2)) |>
   select(-name) |>
+  arrange(code_muni, date) |>
   collect()
 ```
 
-#### Normal
+#### Climatological normal
 
 ```{r}
 #| eval: false
-pr_normal <- pr_data |>
+prec_normal <- prec_data |>
   # Identify month
   mutate(month = month(date)) |>
   # Group by id variable and month
@@ -119,11 +133,11 @@ pr_normal <- pr_data |>
   ungroup()
 ```
 
-#### Indicators
+#### Climatological indicators
 
 ```{r}
 #| eval: false
-pr_indi <- pr_data |>
+prec_indi <- prec_data |>
   # Identify year
   mutate(year = year(date)) |>
   # Identify month
@@ -135,7 +149,7 @@ pr_indi <- pr_data |>
   # Compute precipitation indicators
   summarise_precipitation(
     value_var = value,
-    normals_df = pr_normal
+    normals_df = prec_normal
   ) |>
   # Ungroup
   ungroup()
@@ -145,77 +159,10 @@ pr_indi <- pr_data |>
 
 ```{r}
 #| eval: false
-write_parquet(x = pr_normal, sink = "pr_normal.parquet")
-write_csv2(x = pr_normal, file = "pr_normal.csv")
-write_parquet(x = pr_indi, sink = "pr_indi.parquet")
-write_csv2(x = pr_indi, file = "pr_indi.csv")
-```
-
-### Evapotranspiration (mm)
-
-#### Data
-
-```{r}
-#| eval: false
-eto_data <- zen_file(13906834, "ETo_3.2.3.parquet") |>
-  open_dataset() |>
-  filter(name == "ETo_3.2.3_mean") |>
-  filter(date >= as.Date("1961-01-01")) |>
-  filter(date <= as.Date("2023-12-31")) |>
-  select(-name) |>
-  collect()
-```
-
-#### Normal
-
-```{r}
-#| eval: false
-eto_normal <- eto_data |>
-  # Identify month
-  mutate(month = month(date)) |>
-  # Group by id variable and month
-  group_by(code_muni, month) |>
-  # Compute normal
-  summarise_normal(
-    date_var = date,
-    value_var = value,
-    year_start = 1961,
-    year_end = 1990
-  ) |>
-  # Ungroup
-  ungroup()
-```
-
-#### Indicators
-
-```{r}
-#| eval: false
-eto_indi <- eto_data |>
-  # Identify year
-  mutate(year = year(date)) |>
-  # Identify month
-  mutate(month = month(date)) |>
-  # Filter year
-  filter(year >= 1991) |>
-  # Group by id variable, year and month
-  group_by(code_muni, year, month) |>
-  # Compute precipitation indicators
-  summarise_evapotrapiration(
-    value_var = value,
-    normals_df = eto_normal
-  ) |>
-  # Ungroup
-  ungroup()
-```
-
-#### Export
-
-```{r}
-#| eval: false
-write_parquet(x = eto_normal, sink = "eto_normal.parquet")
-write_csv2(x = eto_normal, file = "eto_normal.csv")
-write_parquet(x = eto_indi, sink = "eto_indi.parquet")
-write_csv2(x = eto_indi, file = "eto_indi.csv")
+write_parquet(x = prec_normal, sink = "prec_normal.parquet")
+write_csv2(x = prec_normal, file = "prec_normal.csv")
+write_parquet(x = prec_indi, sink = "prec_indi.parquet")
+write_csv2(x = prec_indi, file = "prec_indi.csv")
 ```
 
 ### Maximum temperature (°C)
@@ -224,16 +171,24 @@ write_csv2(x = eto_indi, file = "eto_indi.csv")
 
 ```{r}
 #| eval: false
-tmax_data <- zen_file(13906834, "Tmax_3.2.3.parquet") |>
-  open_dataset() |>
-  filter(name == "Tmax_3.2.3_mean") |>
+tmax_1950_2022 <- zen_file(10036212, "2m_temperature_max.parquet")
+tmax_2023 <- zen_file(10947952, "2m_temperature_max.parquet")
+tmax_2024 <- zen_file(15748125, "2m_temperature_max.parquet")
+
+tmax_data <- open_dataset(sources = c(tmax_1950_2022, tmax_2023, tmax_2024)) |>
+  # Average maximum temperature
+  filter(name == "2m_temperature_max_mean") |>
+  # Time filter
   filter(date >= as.Date("1961-01-01")) |>
-  filter(date <= as.Date("2023-12-31")) |>
+  filter(date <= as.Date("2024-12-31")) |>
+  # Unit conversion form Kelvin to Celsius degrees
+  mutate(value = round(value - 273.15, digits = 2)) |>
   select(-name) |>
+  arrange(code_muni, date) |>
   collect()
 ```
 
-#### Normal
+#### Climatological normal
 
 ```{r}
 #| eval: false
@@ -253,7 +208,7 @@ tmax_normal <- tmax_data |>
   ungroup()
 ```
 
-#### Indicators
+#### Climatological indicators
 
 ```{r}
 #| eval: false
@@ -291,16 +246,24 @@ write_csv2(x = tmax_indi, file = "tmax_indi.csv")
 
 ```{r}
 #| eval: false
-tmin_data <- zen_file(13906834, "Tmin_3.2.3.parquet") |>
-  open_dataset() |>
-  filter(name == "Tmin_3.2.3_mean") |>
+tmin_1950_2022 <- zen_file(10036212, "2m_temperature_min.parquet")
+tmin_2023 <- zen_file(10947952, "2m_temperature_min.parquet")
+tmin_2024 <- zen_file(15748125, "2m_temperature_min.parquet")
+
+tmin_data <- open_dataset(sources = c(tmin_1950_2022, tmin_2023, tmin_2024)) |>
+  # Average minimum temperature
+  filter(name == "2m_temperature_min_mean") |>
+  # Filter period
   filter(date >= as.Date("1961-01-01")) |>
-  filter(date <= as.Date("2023-12-31")) |>
+  filter(date <= as.Date("2024-12-31")) |>
+  # Unit conversion
+  mutate(value = round(value - 273.15, digits = 2)) |>
   select(-name) |>
+  arrange(code_muni, date) |>
   collect()
 ```
 
-#### Normal
+#### Climatological normal
 
 ```{r}
 #| eval: false
@@ -320,7 +283,7 @@ tmin_normal <- tmin_data |>
   ungroup()
 ```
 
-#### Indicators
+#### Climatologial indicators
 
 ```{r}
 #| eval: false
@@ -352,89 +315,51 @@ write_parquet(x = tmin_indi, sink = "tmin_indi.parquet")
 write_csv2(x = tmin_indi, file = "tmin_indi.csv")
 ```
 
-### Solar radiation (MJm-2)
-
-#### Data
-
-```{r}
-#| eval: false
-rs_data <- zen_file(13906834, "Rs_3.2.3.parquet") |>
-  open_dataset() |>
-  filter(name == "Rs_3.2.3_mean") |>
-  filter(date >= as.Date("1961-01-01")) |>
-  filter(date <= as.Date("2023-12-31")) |>
-  select(-name) |>
-  collect()
-```
-
-#### Normal
-
-```{r}
-#| eval: false
-rs_normal <- rs_data |>
-  # Identify month
-  mutate(month = month(date)) |>
-  # Group by id variable and month
-  group_by(code_muni, month) |>
-  # Compute normal
-  summarise_normal(
-    date_var = date,
-    value_var = value,
-    year_start = 1961,
-    year_end = 1990
-  ) |>
-  # Ungroup
-  ungroup()
-```
-
-#### Indicators
-
-```{r}
-#| eval: false
-rs_indi <- rs_data |>
-  # Identify year
-  mutate(year = year(date)) |>
-  # Identify month
-  mutate(month = month(date)) |>
-  # Filter year
-  filter(year >= 1991) |>
-  # Group by id variable, year and month
-  group_by(code_muni, year, month) |>
-  # Compute precipitation indicators
-  summarise_solar_radiation(
-    value_var = value,
-    normals_df = rs_normal
-  ) |>
-  # Ungroup
-  ungroup()
-```
-
-#### Export
-
-```{r}
-#| eval: false
-write_parquet(x = rs_normal, sink = "rs_normal.parquet")
-write_csv2(x = rs_normal, file = "rs_normal.csv")
-write_parquet(x = rs_indi, sink = "rs_indi.parquet")
-write_csv2(x = rs_indi, file = "rs_indi.csv")
-```
-
 ### Wind speed at 2m height (m/s)
 
 #### Data
 
 ```{r}
 #| eval: false
+wu_1950_2022 <- zen_file(10036212, "10m_u_component_of_wind_mean.parquet")
+wu_2023 <- zen_file(10947952, "10m_u_component_of_wind_mean.parquet")
+wu_2024 <- zen_file(15748125, "10m_u_component_of_wind_mean.parquet")
+
+wv_1950_2022 <- zen_file(10036212, "10m_v_component_of_wind_mean.parquet")
+wv_2023 <- zen_file(10947952, "10m_v_component_of_wind_mean.parquet")
+wv_2024 <- zen_file(15748125, "10m_v_component_of_wind_mean.parquet")
+
+wu_data <- open_dataset(sources = c(wu_1950_2022, wu_2023, wu_2024)) |>
+  # Average minimum temperature
+  filter(name == "10m_u_component_of_wind_mean_mean") |>
+  # Filter period
+  filter(date >= as.Date("1961-01-01")) |>
+  filter(date <= as.Date("2024-12-31")) |>
+  select(-name) |>
+  arrange(code_muni, date) |>
+  collect()
+
+wv_data <- open_dataset(sources = c(wv_1950_2022, wv_2023, wv_2024)) |>
+  # Average minimum temperature
+  filter(name == "10m_u_component_of_wind_mean_mean") |>
+  # Filter period
+  filter(date >= as.Date("1961-01-01")) |>
+  filter(date <= as.Date("2024-12-31")) |>
+  select(-name) |>
+  arrange(code_muni, date) |>
+  collect()
+
+
 u2_data <- zen_file(13906834, "u2_3.2.3.parquet") |>
   open_dataset() |>
   filter(name == "u2_3.2.3_mean") |>
   filter(date >= as.Date("1961-01-01")) |>
-  filter(date <= as.Date("2023-12-31")) |>
+  filter(date <= as.Date("2024-12-31")) |>
   select(-name) |>
   collect()
 ```
 
-#### Normal
+#### Climatological normal
 
 ```{r}
 #| eval: false
@@ -454,7 +379,7 @@ u2_normal <- u2_data |>
   ungroup()
 ```
 
-#### Indicators
+#### Climatological indicators
 
 ```{r}
 #| eval: false
@@ -496,7 +421,7 @@ rh_data <- zen_file(13906834, "RH_3.2.3.parquet") |>
   open_dataset() |>
   filter(name == "RH_3.2.3_mean") |>
   filter(date >= as.Date("1961-01-01")) |>
-  filter(date <= as.Date("2023-12-31")) |>
+  filter(date <= as.Date("2024-12-31")) |>
   select(-name) |>
   collect()
 ```

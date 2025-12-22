@@ -23,7 +23,7 @@ about:
       href: "mailto:raphael.saldanha@fiocruz.br"
 ---
 
-Research assistant at [Fiocruz](https://portal.fiocruz.br/),  [Inria](https://www.inria.fr/fr) alumni.
+Researcher at [Fiocruz](https://portal.fiocruz.br/),  [Inria](https://www.inria.fr/fr) alumni.
 
 Associate editor of [RECIIS](https://www.reciis.icict.fiocruz.br).
 
