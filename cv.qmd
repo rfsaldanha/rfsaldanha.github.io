@@ -8,11 +8,21 @@ title: "CV"
 
 -   Date of birth: April 18, 1985
 
--   Languages: Portuguese, English, French
+-   Languages: Portuguese, English
+
+## Experience
+
+-   2025 - Present. **Permanent researcher** at Fiocruz -- Fundação Oswaldo Cruz.
+
+-   2024 - Present. **Fellow researcher** at Pasteur Network.
+
+-   2025 - 2025. **Research assistant** at Fiocruz -- Fundação Oswaldo Cruz.
+
+-   2023 - 2024. **Post-doctoral** researcher at Inria and LNCC. 
+
+-   2021 - 2023. **Research assistant** at Fiocruz -- Fundação Oswaldo Cruz.
 
 ## Education
-
--   2022 - current. **Post-doctoral** researcher at Inria and LNCC. *Artificial Intelligence applications on Public Health and Climate-Sensitive Diseases forecast.*
 
 -   2018 - 2021. **Doctorate** at Fiocruz, PPGICS. Information and Communication in Health. *Data Science Applications for Public Health*.
 
@@ -24,6 +34,13 @@ title: "CV"
 
 ## Academic interests
 
+### Fields 
+
+-   Climate and Health
+-   Environment and air pollution
+-   Health geography
+-   Digital Health
+
 ### Data science
 
 -   R
@@ -31,10 +48,8 @@ title: "CV"
 -   tidyverse, tidymodels
 -   Shiny apps
 -   Quarto
--   Plotly
--   duckdb, SQLite
+-   duckdb
 -   ElasticSearch
--   Kibana
 
 ### GIS
 
@@ -52,10 +67,6 @@ title: "CV"
 ## Work and teaching experience
 
 -   2024 - current. Associate editor of RECIIS.
-
--   2017 - current. Research assistant at Fiocruz, ICICT, PCDaS.
-
--   2017 - current. Research assistant at Fiocruz, ICICT, Observatório de Clima e Saúde.
 
 -   2021 - 2022 Research assistant at Fiocruz, IOC, Lathema Lab (ArboAlvo).
 
