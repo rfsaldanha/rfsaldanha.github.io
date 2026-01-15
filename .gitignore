@@ -8,3 +8,5 @@
 *.parquet
 *.rds
 *.csv
+
+**/*.quarto_ipynb
