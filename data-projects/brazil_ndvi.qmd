@@ -19,7 +19,7 @@ The following source data were used.
 
 -   From January 1, 2020 to June 30, 2020, raster data with 300m spatial resolution was used ([NDVI 2014-2020 (raster 300 m), global, 10-daily – version 1](https://land.copernicus.eu/en/products/vegetation/normalized-difference-vegetation-index-300m-v1.0)).
 
--   From July 1, 2020 to December 31, 2024, raster data with 300m spatial resolution was used ([NDVI 2020-present (raster 300 m), global, 10-daily – version 2](https://land.copernicus.eu/en/products/vegetation/normalised-difference-vegetation-index-v2-0-300m)).
+-   From July 1, 2020, raster data with 300m spatial resolution was used ([NDVI 2020-present (raster 300 m), global, 10-daily – version 2](https://land.copernicus.eu/en/products/vegetation/normalised-difference-vegetation-index-v2-0-300m)).
 
 ## Methods
 
@@ -30,6 +30,8 @@ The R scripts for download, processing and export data are available [here](http
 ## Download
 
 1999-2024: [![](https://img.shields.io/badge/download-10.5281/zenodo.17093199-green.svg)](https://doi.org/10.5281/zenodo.17093199)
+
+2025: [![](https://img.shields.io/badge/download-10.5281/zenodo.18329383-green.svg)](https://doi.org/10.5281/zenodo.18329383)
 
 ## Data example
 
@@ -49,6 +51,16 @@ zen_file(deposit_id = 17093199, file_name = "ndvi_mean.parquet") |>
   geom_line() +
   ylim(0, 1) +
   labs(title = "Monthly average NDVI", subtitle = "Patos, PB") +
+  theme_bw()
+
+zen_file(deposit_id = 18329383, file_name = "ndvi_mean.parquet") |>
+  open_dataset() |>
+  filter(code_muni == 2312908) |>
+  collect() |>
+  ggplot(aes(x = date, y = value)) +
+  geom_line() +
+  ylim(0, 1) +
+  labs(title = "Monthly average NDVI", subtitle = "Sobral, CE") +
   theme_bw()
 ```
 
