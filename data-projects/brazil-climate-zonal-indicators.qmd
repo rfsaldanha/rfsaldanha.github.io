@@ -31,12 +31,12 @@ The following indicators and aggregations were computed.
 
 | ERA5-Land indicators | Daily time-aggregating functions | Spatial zonal statistics |
 |--------------------|----------------------------|------------------------|
-| Temperature (2m) | mean, max, min | max, min, stdev, count |
-| Dewpoint temp. (2m) | mean | max, min, stdev, count |
-| $u$ component of wind | mean | max, min, stdev, count |
-| $v$ component of wind | mean | max, min, stdev, count |
-| Surface pressure | mean | max, min, stdev, count |
-| Total precipitation | sum | max, min, stdev, count, sum |
+| Temperature (2m) | mean, max, min | mean, max, min, stdev, count |
+| Dewpoint temp. (2m) | mean | mean, max, min, stdev, count |
+| $u$ component of wind | mean | mean, max, min, stdev, count |
+| $v$ component of wind | mean | mean, max, min, stdev, count |
+| Surface pressure | mean | mean, max, min, stdev, count |
+| Total precipitation | sum | mean, max, min, stdev, count, sum |
 
 A paper with the full methodology was published in the Environmental Data Science journal.
 
