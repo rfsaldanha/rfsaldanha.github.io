@@ -119,6 +119,7 @@ The resulting NetCDF files are available for download at Zenodo.
 | 2022 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10036167-green.svg)](https://doi.org/10.5281/zenodo.10036167) |
 | 2023 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.10889682-green.svg)](https://doi.org/10.5281/zenodo.10889682) |
 | 2024 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.15748090-green.svg)](https://doi.org/10.5281/zenodo.15748090) |
+| 2025 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.18256859-green.svg)](https://doi.org/10.5281/zenodo.18256859) |
 
 ### Usage statistics
 
