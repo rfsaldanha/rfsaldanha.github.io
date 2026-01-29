@@ -3,8 +3,8 @@
     "objectID": "talks/zenith_seminar_2024.html#introduction",
     "href": "talks/zenith_seminar_2024.html#introduction",
     "title": "Disease and climate data fusion for modeling",
-    "section": "Introduction",
-    "text": "Introduction\n\nPostdoctoral researcher at Inria, Zenith team\nMaster’s at Public Health, Doctorate on Health Information\nData Science applied to Public Health"
+    "section": "",
+    "text": "Postdoctoral researcher at Inria, Zenith team\nMaster’s at Public Health, Doctorate on Health Information\nData Science applied to Public Health"
   },
   {
     "objectID": "talks/zenith_seminar_2024.html#climate-sensitive-diseases",
@@ -67,7 +67,7 @@
     "href": "talks/zenith_seminar_2024.html#era5-land-daily-datasets",
     "title": "Disease and climate data fusion for modeling",
     "section": "ERA5-Land Daily datasets",
-    "text": "ERA5-Land Daily datasets\n\n\n\nOpen data, available at Zenodo\n7,105 files, 658.7 GB\nReproducible R scripts\nPlans to continuously update this dataset and add more indicators\n\n\n\n\n\n\n\nhttps://rfsaldanha.github.io/data-projects/era5land-daily-latin-america.html"
+    "text": "ERA5-Land Daily datasets\n\n\n\nOpen data, available at Zenodo\n7,105 files, 658.7 GB\nReproducible R scripts\nPlans to continuously update this dataset and add more indicators\n\n\n\n\n\n\n\n\nhttps://rfsaldanha.github.io/data-projects/era5land-daily-latin-america.html"
   },
   {
     "objectID": "talks/zenith_seminar_2024.html#zonal-statistics",
@@ -95,7 +95,7 @@
     "href": "talks/zenith_seminar_2024.html#precipitation",
     "title": "Disease and climate data fusion for modeling",
     "section": "Precipitation",
-    "text": "Precipitation\n\n\n\n\n\n\n\n\n\n\n\n\nRio de Janeiro municipalities. January 1, 2010."
+    "text": "Precipitation\n\n\n\n\n\n\n\n\n\n\n\n\n\nRio de Janeiro municipalities. January 1, 2010."
   },
   {
     "objectID": "talks/zenith_seminar_2024.html#angra-dos-reis",
@@ -185,8 +185,8 @@
     "objectID": "talks/multisa_subsets_2024.html#introduction",
     "href": "talks/multisa_subsets_2024.html#introduction",
     "title": "Subset Models for Multivariate Time Series Forecast",
-    "section": "Introduction",
-    "text": "Introduction\n\nAbundant multivariate time series, good opportunity for forecasting machine learning methods\nData may present intrinsic diversity of samples, affecting model’s performance on different parts of the input\nGlobal models: use all available time series\nLocal models: use only time series pertaining to each sample\nData subsets models: our proposal"
+    "section": "",
+    "text": "Abundant multivariate time series, good opportunity for forecasting machine learning methods\nData may present intrinsic diversity of samples, affecting model’s performance on different parts of the input\nGlobal models: use all available time series\nLocal models: use only time series pertaining to each sample\nData subsets models: our proposal"
   },
   {
     "objectID": "talks/multisa_subsets_2024.html#case-example",
@@ -255,8 +255,8 @@
     "objectID": "talks/hpdasc_workshop_2024.html#context-of-climate-sensitive-diseases",
     "href": "talks/hpdasc_workshop_2024.html#context-of-climate-sensitive-diseases",
     "title": "Advances in climate features engineering and subsets modeling",
-    "section": "Context of Climate-Sensitive diseases",
-    "text": "Context of Climate-Sensitive diseases\n\nDirect relationship: floods, droughts, heat waves…\nIndirect relationship\n\n\n\n\n\n\n%%{\n  init: {\n    'theme': 'base',\n    'themeVariables': {\n      'fontSize': '30px'\n    }\n  }\n}%%\nflowchart LR\n\nclimate(Climate) --&gt; vector(Disease vectors) --&gt; health(Human health)\nclimate --&gt; health\nclimate --&gt; social(Social & economic \\n determinants) --&gt; health"
+    "section": "",
+    "text": "Direct relationship: floods, droughts, heat waves…\nIndirect relationship\n\n\n\n\n\n\n%%{\n  init: {\n    'theme': 'base',\n    'themeVariables': {\n      'fontSize': '30px'\n    }\n  }\n}%%\nflowchart LR\n\nclimate(Climate) --&gt; vector(Disease vectors) --&gt; health(Human health)\nclimate --&gt; health\nclimate --&gt; social(Social & economic \\n determinants) --&gt; health"
   },
   {
     "objectID": "talks/hpdasc_workshop_2024.html#a-time-lagged-relationship",
@@ -298,7 +298,7 @@
     "href": "talks/hpdasc_workshop_2024.html#precipitation",
     "title": "Advances in climate features engineering and subsets modeling",
     "section": "Precipitation",
-    "text": "Precipitation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRio de Janeiro municipalities. January 1, 2010."
+    "text": "Precipitation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRio de Janeiro municipalities. January 1, 2010."
   },
   {
     "objectID": "talks/hpdasc_workshop_2024.html#angra-dos-reis",
@@ -360,8 +360,8 @@
     "objectID": "talks/climate_health_workshop_2023.html#introduction",
     "href": "talks/climate_health_workshop_2023.html#introduction",
     "title": "Disease and climate data fusion for modelling",
-    "section": "Introduction",
-    "text": "Introduction\n\nPostdoctoral researcher at Inria, a French research institute for digital science and technology\nFiocruz, Climate and Health Observatory collaborator\nBSC, Global Health Resilience collaborator"
+    "section": "",
+    "text": "Postdoctoral researcher at Inria, a French research institute for digital science and technology\nFiocruz, Climate and Health Observatory collaborator\nBSC, Global Health Resilience collaborator"
   },
   {
     "objectID": "talks/climate_health_workshop_2023.html#climate-sensitive-diseases",
@@ -438,7 +438,7 @@
     "href": "talks/climate_health_workshop_2023.html#era5-land-daily-datasets",
     "title": "Disease and climate data fusion for modelling",
     "section": "ERA5-Land Daily datasets",
-    "text": "ERA5-Land Daily datasets\n\n\n\nOpen data, available at Zenodo\n7,105 files, 658.7 GB\nReproducible R scripts\nPlans to continuously update this dataset and add more indicators\n\n\n\n\n\n\n\nhttps://rfsaldanha.github.io/data-projects/era5land-daily-latin-america.html"
+    "text": "ERA5-Land Daily datasets\n\n\n\nOpen data, available at Zenodo\n7,105 files, 658.7 GB\nReproducible R scripts\nPlans to continuously update this dataset and add more indicators\n\n\n\n\n\n\n\n\nhttps://rfsaldanha.github.io/data-projects/era5land-daily-latin-america.html"
   },
   {
     "objectID": "talks/climate_health_workshop_2023.html#zonal-statistics",
@@ -480,7 +480,7 @@
     "href": "talks/climate_health_workshop_2023.html#precipitation",
     "title": "Disease and climate data fusion for modelling",
     "section": "Precipitation",
-    "text": "Precipitation\n\n\n\n\n\n\n\n\n\n\n\n\nRio de Janeiro municipalities. January 1, 2010."
+    "text": "Precipitation\n\n\n\n\n\n\n\n\n\n\n\n\n\nRio de Janeiro municipalities. January 1, 2010."
   },
   {
     "objectID": "talks/climate_health_workshop_2023.html#resolution-and-spatial-variability",
@@ -507,8 +507,8 @@
     "objectID": "talks/bilis_2023.html#bilis",
     "href": "talks/bilis_2023.html#bilis",
     "title": "BILIS",
-    "section": "BILIS",
-    "text": "BILIS\n\nBanco de Indicadores do Laboratório de Informação em Saúde, ICICT\nA proposal to create an unified health indicators database"
+    "section": "",
+    "text": "Banco de Indicadores do Laboratório de Informação em Saúde, ICICT\nA proposal to create an unified health indicators database"
   },
   {
     "objectID": "talks/bilis_2023.html#motivation",
@@ -822,8 +822,8 @@
     "objectID": "pres/bsc2024.html#main-fields-of-work-and-projects",
     "href": "pres/bsc2024.html#main-fields-of-work-and-projects",
     "title": "Research Experience & Plans",
-    "section": "Main fields of work and projects",
-    "text": "Main fields of work and projects\n\nData handling tools: author of ten R packages to handle health and climate datasets and indicators.\n\n{microdatasus}, {brpop}, {tidyrates}, {zendown}, {zenstats}, {nseq}, {rspell}, {brclimr}, {zonalclim}, {opendenguedata}\n\nVisualization: malaria and COVID-19 interactive visualization dashboards (IRD-FR and Fiocruz-BR)\nAnalysis and modeling of climate-sensitive diseases (Fiocruz-BR, LNCC-BR, BSC, Inria-FR, IRD-FR)"
+    "section": "",
+    "text": "Data handling tools: author of ten R packages to handle health and climate datasets and indicators.\n\n{microdatasus}, {brpop}, {tidyrates}, {zendown}, {zenstats}, {nseq}, {rspell}, {brclimr}, {zonalclim}, {opendenguedata}\n\nVisualization: malaria and COVID-19 interactive visualization dashboards (IRD-FR and Fiocruz-BR)\nAnalysis and modeling of climate-sensitive diseases (Fiocruz-BR, LNCC-BR, BSC, Inria-FR, IRD-FR)"
   },
   {
     "objectID": "pres/bsc2024.html#health-and-climate-indicators",
@@ -1705,7 +1705,7 @@
     "href": "data-projects/brazil-climate-zonal-indicators.html#zonal-era5-land",
     "title": "Zonal statistics of climate indicators for Brazilian municipalities",
     "section": "Zonal ERA5-Land",
-    "text": "Zonal ERA5-Land\n1950-2022: \n2023: \n2024: \n2025: \nThe ERA5-Land data (Muñoz-Sabater et al. 2021) presents hourly climate indicators at 0.1° × 0.1° horizontal resolution with global coverage, from 1950 to present.\nSelected indicators hourly data were downloaded and aggregated at daily basis to compute zonal statistics for the Brazilian municipalities.\nThe following indicators and aggregations were computed.\n\n\n\n\n\n\n\n\nERA5-Land indicators\nDaily time-aggregating functions\nSpatial zonal statistics\n\n\n\n\nTemperature (2m)\nmean, max, min\nmean, max, min, stdev, count\n\n\nDewpoint temp. (2m)\nmean\nmean, max, min, stdev, count\n\n\n\\(u\\) component of wind\nmean\nmean, max, min, stdev, count\n\n\n\\(v\\) component of wind\nmean\nmean, max, min, stdev, count\n\n\nSurface pressure\nmean\nmean, max, min, stdev, count\n\n\nTotal precipitation\nsum\nmean, max, min, stdev, count, sum\n\n\n\nA paper with the full methodology was published in the Environmental Data Science journal.\n\n\n\n\n\n\n\nTip\n\n\n\nThose files are in parquet format. Not sure how to open parquet files? Take a look on this blog post.\n\n\n\nUsage statistics\nUsage statistics of this and other datasets are available here."
+    "text": "Zonal ERA5-Land\n1950-2022: \n2023: \n2024: \n2025: \nRelative humidity (1950 - 2025): \nWind speed (1950 - 2025): \nThe ERA5-Land data (Muñoz-Sabater et al. 2021) presents hourly climate indicators at 0.1° × 0.1° horizontal resolution with global coverage, from 1950 to present.\nSelected indicators hourly data were downloaded and aggregated at daily basis to compute zonal statistics for the Brazilian municipalities.\nThe following indicators and aggregations were computed.\n\n\n\n\n\n\n\n\nERA5-Land indicators\nDaily time-aggregating functions\nSpatial zonal statistics\n\n\n\n\nTemperature (2m)\nmean, max, min\nmean, max, min, stdev, count\n\n\nDewpoint temp. (2m)\nmean\nmean, max, min, stdev, count\n\n\n\\(u\\) component of wind\nmean\nmean, max, min, stdev, count\n\n\n\\(v\\) component of wind\nmean\nmean, max, min, stdev, count\n\n\nSurface pressure\nmean\nmean, max, min, stdev, count\n\n\nTotal precipitation\nsum\nmean, max, min, stdev, count, sum\n\n\nRelative humidity\nmean\nmean\n\n\nWind speed\nmean\nmean\n\n\n\nA paper with the full methodology was published in the Environmental Data Science journal.\n\n\n\n\n\n\n\nTip\n\n\n\nThose files are in parquet format. Not sure how to open parquet files? Take a look on this blog post.\n\n\n\nUsage statistics\nUsage statistics of this and other datasets are available here."
   },
   {
     "objectID": "data-projects/brazil-climate-zonal-indicators.html#zonal-br-dwgd",
@@ -2020,7 +2020,7 @@
     "href": "posts/query_remot_parquet_file.html#httpfs-extension",
     "title": "Query remote parquet files with DuckDB",
     "section": "httpfs extension",
-    "text": "httpfs extension\nNow, we need to load the httpfs extension.\n\nDBI::dbExecute(conn, \"INSTALL httpfs;\")\n\n[1] 0\n\nDBI::dbExecute(conn, \"LOAD httpfs;\")\n\n[1] 0\n\n\n\n\n\n\n\n\nWarningWindows users\n\n\n\nThe last time I checked, the httpfs extension was not working on Windows."
+    "text": "httpfs extension\nNow, we need to load the httpfs extension.\n\nDBI::dbExecute(conn, \"INSTALL httpfs;\")\n\n[1] 0\n\nDBI::dbExecute(conn, \"LOAD httpfs;\")\n\n[1] 0\n\n\n\n\n\n\n\n\nWindows users\n\n\n\nThe last time I checked, the httpfs extension was not working on Windows."
   },
   {
     "objectID": "posts/query_remot_parquet_file.html#query",
@@ -2166,8 +2166,8 @@
     "objectID": "pres/ird2024.html#about-me",
     "href": "pres/ird2024.html#about-me",
     "title": "Introduction and Research Proposal",
-    "section": "About me",
-    "text": "About me\n\nBrazilian from Rio de Janeiro\nHusband, father of two dogs and a cat\nLoves cycling and take pictures\nResearcher on Health Geography and Climate-Sensitive Diseases\nR developer"
+    "section": "",
+    "text": "Brazilian from Rio de Janeiro\nHusband, father of two dogs and a cat\nLoves cycling and take pictures\nResearcher on Health Geography and Climate-Sensitive Diseases\nR developer"
   },
   {
     "objectID": "pres/ird2024.html#academic-formation",
@@ -2537,8 +2537,8 @@
     "objectID": "talks/bda_subsets_2024.html#introduction",
     "href": "talks/bda_subsets_2024.html#introduction",
     "title": "Subset Models for Multivariate Time Series Forecast",
-    "section": "Introduction",
-    "text": "Introduction\n\nPreviously presented at MulTiSA workshop (ICDE 2024)\nAbundant multivariate time series, good opportunity for forecasting machine learning methods\nData may present intrinsic diversity of samples, affecting model’s performance on different parts of the input\nGlobal models: use all available time series\nLocal models: use only time series pertaining to each sample\nData subsets models: our proposal"
+    "section": "",
+    "text": "Previously presented at MulTiSA workshop (ICDE 2024)\nAbundant multivariate time series, good opportunity for forecasting machine learning methods\nData may present intrinsic diversity of samples, affecting model’s performance on different parts of the input\nGlobal models: use all available time series\nLocal models: use only time series pertaining to each sample\nData subsets models: our proposal"
   },
   {
     "objectID": "talks/bda_subsets_2024.html#case-example",
@@ -2607,8 +2607,8 @@
     "objectID": "talks/climate_br.html#overview",
     "href": "talks/climate_br.html#overview",
     "title": "Climate data for Brazilian municipalities",
-    "section": "Overview",
-    "text": "Overview\n\nClimate raw data sources: ground level and reanalysis\nData on Braziliam municipalities spatial unit\nClimatological normals and indicators"
+    "section": "",
+    "text": "Climate raw data sources: ground level and reanalysis\nData on Braziliam municipalities spatial unit\nClimatological normals and indicators"
   },
   {
     "objectID": "talks/climate_br.html#ground-level-climate-data",
@@ -2629,7 +2629,7 @@
     "href": "talks/climate_br.html#climate-data-for-brazilian-municipalities",
     "title": "Climate data for Brazilian municipalities",
     "section": "Climate data for Brazilian municipalities",
-    "text": "Climate data for Brazilian municipalities\n\nZonal statistics computation\nAdoption of exactextractr package for cell’s coverage weighted computations\nCreation of package zonalclim with helper functions to compute scalable zonal statistics with chunks strategy\nDAG system using the targets package to compute climate zonal statistics for Brazilian municipalities\nPublication on Environmental Data Science journal\n\nMore details here"
+    "text": "Climate data for Brazilian municipalities\n\nZonal statistics computation\nAdoption of exactextractr package for cell’s coverage weighted computations\nCreation of package {zonalclim} with helper functions to compute scalable zonal statistics with chunks strategy\nDAG system using the targets package to compute climate zonal statistics for Brazilian municipalities\nPublication on Environmental Data Science journal\n\nMore details here"
   },
   {
     "objectID": "talks/climate_br.html#example",
@@ -2650,7 +2650,7 @@
     "href": "talks/climate_br.html#time-aggregated-indicators",
     "title": "Climate data for Brazilian municipalities",
     "section": "Time-aggregated indicators",
-    "text": "Time-aggregated indicators\n\nMunicipal daily data time series to monthly indicators\nMonthly statistics\n\nAverage, median, standard deviation, standard error, maximum and minimum values, and percentiles\n\n\nOccurence of events\n\n22 indicators, in reference to normals or count sequence. Creation of nseq and climindi packages\nHeat waves, cold spells, count of warm days, count of dry and wet days, and others\n\n\n\nMore details here."
+    "text": "Time-aggregated indicators\n\nMunicipal daily data time series to monthly indicators\nMonthly statistics\n\nAverage, median, standard deviation, standard error, maximum and minimum values, and percentiles\n\n\nOccurence of events\n\n22 indicators, in reference to normals or count sequence. Creation of nseq and {climindi} packages\nHeat waves, cold spells, count of warm days, count of dry and wet days, and others\n\n\n\nMore details here."
   },
   {
     "objectID": "talks/climate_br.html#future-work",
@@ -2663,8 +2663,8 @@
     "objectID": "talks/dengue_class.html#the-case-itinerary",
     "href": "talks/dengue_class.html#the-case-itinerary",
     "title": "Dengue cases screening",
-    "section": "The case itinerary",
-    "text": "The case itinerary\n\nAfter a clinical assessement, a patient can be pointed as a suspected dengue/chikungunya case, based on its symptoms, clinical conditions and history (anamnesis)\n\nFever, arthralgia, myalgia, headache, and retroorbital pain\n\nThe suspected case is immediately notified to the health authorities (SINAN dataset)\nThe diagnosis must be verified to adequate the health treatment"
+    "section": "",
+    "text": "After a clinical assessement, a patient can be pointed as a suspected dengue/chikungunya case, based on its symptoms, clinical conditions and history (anamnesis)\n\nFever, arthralgia, myalgia, headache, and retroorbital pain\n\nThe suspected case is immediately notified to the health authorities (SINAN dataset)\nThe diagnosis must be verified to adequate the health treatment"
   },
   {
     "objectID": "talks/dengue_class.html#possible-case-classifications",
@@ -2775,8 +2775,8 @@
     "objectID": "talks/isntd_conference_2023.html#introduction",
     "href": "talks/isntd_conference_2023.html#introduction",
     "title": "Disease and climate data fusion for modelling",
-    "section": "Introduction",
-    "text": "Introduction\n\nPostdoc researcher at Inria, a French research institute for digital science and technology\nBSC, Global Health Resilience collaborator\nFiocruz, Climate and Health Observatory"
+    "section": "",
+    "text": "Postdoc researcher at Inria, a French research institute for digital science and technology\nBSC, Global Health Resilience collaborator\nFiocruz, Climate and Health Observatory"
   },
   {
     "objectID": "talks/isntd_conference_2023.html#climate-sensitive-diseases",
@@ -2866,8 +2866,8 @@
     "objectID": "talks/rbras69_2025.html#raphael-saldanha",
     "href": "talks/rbras69_2025.html#raphael-saldanha",
     "title": "Democratização de acesso a dados de saúde, ambiente e clima com o R",
-    "section": "Raphael Saldanha",
-    "text": "Raphael Saldanha\n\n\n\nGeógrafo (UFJF)\nEspecialista em Métodos Estatísticos Computacionais (UFJF)\nMestre em Saúde Coletiva (UFJF)\nDoutor em Informação e Comunicação em Saúde (Fiocruz)\n\n\n\nAssistente de pesquisa na Fiocruz\nObservatório de Clima e Saúde\nPlataforma de Ciência de Dados Aplicada à Saúde (PCDaS)"
+    "section": "",
+    "text": "Geógrafo (UFJF)\nEspecialista em Métodos Estatísticos Computacionais (UFJF)\nMestre em Saúde Coletiva (UFJF)\nDoutor em Informação e Comunicação em Saúde (Fiocruz)\n\n\n\nAssistente de pesquisa na Fiocruz\nObservatório de Clima e Saúde\nPlataforma de Ciência de Dados Aplicada à Saúde (PCDaS)"
   },
   {
     "objectID": "talks/rbras69_2025.html#raphael-saldanha-e-o-r",
@@ -3001,5 +3001,89 @@
     "title": "Democratização de acesso a dados de saúde, ambiente e clima com o R",
     "section": "",
     "text": "Obrigado!\nraphael.saldanha@fiocruz.br\nhttps://rfsaldanha.github.io"
+  },
+  {
+    "objectID": "talks/zenith_seminar_2024.html",
+    "href": "talks/zenith_seminar_2024.html",
+    "title": "Disease and climate data fusion for modeling",
+    "section": "",
+    "text": "Postdoctoral researcher at Inria, Zenith team\nMaster’s at Public Health, Doctorate on Health Information\nData Science applied to Public Health"
+  },
+  {
+    "objectID": "talks/multisa_subsets_2024.html",
+    "href": "talks/multisa_subsets_2024.html",
+    "title": "Subset Models for Multivariate Time Series Forecast",
+    "section": "",
+    "text": "Abundant multivariate time series, good opportunity for forecasting machine learning methods\nData may present intrinsic diversity of samples, affecting model’s performance on different parts of the input\nGlobal models: use all available time series\nLocal models: use only time series pertaining to each sample\nData subsets models: our proposal"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html",
+    "href": "talks/hpdasc_workshop_2024.html",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "",
+    "text": "Direct relationship: floods, droughts, heat waves…\nIndirect relationship\n\n\n\n\n\n\n%%{\n  init: {\n    'theme': 'base',\n    'themeVariables': {\n      'fontSize': '30px'\n    }\n  }\n}%%\nflowchart LR\n\nclimate(Climate) --&gt; vector(Disease vectors) --&gt; health(Human health)\nclimate --&gt; health\nclimate --&gt; social(Social & economic \\n determinants) --&gt; health"
+  },
+  {
+    "objectID": "talks/climate_health_workshop_2023.html",
+    "href": "talks/climate_health_workshop_2023.html",
+    "title": "Disease and climate data fusion for modelling",
+    "section": "",
+    "text": "Postdoctoral researcher at Inria, a French research institute for digital science and technology\nFiocruz, Climate and Health Observatory collaborator\nBSC, Global Health Resilience collaborator"
+  },
+  {
+    "objectID": "talks/bilis_2023.html",
+    "href": "talks/bilis_2023.html",
+    "title": "BILIS",
+    "section": "",
+    "text": "Banco de Indicadores do Laboratório de Informação em Saúde, ICICT\nA proposal to create an unified health indicators database"
+  },
+  {
+    "objectID": "pres/bsc2024.html",
+    "href": "pres/bsc2024.html",
+    "title": "Research Experience & Plans",
+    "section": "",
+    "text": "Data handling tools: author of ten R packages to handle health and climate datasets and indicators.\n\n{microdatasus}, {brpop}, {tidyrates}, {zendown}, {zenstats}, {nseq}, {rspell}, {brclimr}, {zonalclim}, {opendenguedata}\n\nVisualization: malaria and COVID-19 interactive visualization dashboards (IRD-FR and Fiocruz-BR)\nAnalysis and modeling of climate-sensitive diseases (Fiocruz-BR, LNCC-BR, BSC, Inria-FR, IRD-FR)"
+  },
+  {
+    "objectID": "pres/ird2024.html",
+    "href": "pres/ird2024.html",
+    "title": "Introduction and Research Proposal",
+    "section": "",
+    "text": "Brazilian from Rio de Janeiro\nHusband, father of two dogs and a cat\nLoves cycling and take pictures\nResearcher on Health Geography and Climate-Sensitive Diseases\nR developer"
+  },
+  {
+    "objectID": "talks/bda_subsets_2024.html",
+    "href": "talks/bda_subsets_2024.html",
+    "title": "Subset Models for Multivariate Time Series Forecast",
+    "section": "",
+    "text": "Previously presented at MulTiSA workshop (ICDE 2024)\nAbundant multivariate time series, good opportunity for forecasting machine learning methods\nData may present intrinsic diversity of samples, affecting model’s performance on different parts of the input\nGlobal models: use all available time series\nLocal models: use only time series pertaining to each sample\nData subsets models: our proposal"
+  },
+  {
+    "objectID": "talks/climate_br.html",
+    "href": "talks/climate_br.html",
+    "title": "Climate data for Brazilian municipalities",
+    "section": "",
+    "text": "Climate raw data sources: ground level and reanalysis\nData on Braziliam municipalities spatial unit\nClimatological normals and indicators"
+  },
+  {
+    "objectID": "talks/dengue_class.html",
+    "href": "talks/dengue_class.html",
+    "title": "Dengue cases screening",
+    "section": "",
+    "text": "After a clinical assessement, a patient can be pointed as a suspected dengue/chikungunya case, based on its symptoms, clinical conditions and history (anamnesis)\n\nFever, arthralgia, myalgia, headache, and retroorbital pain\n\nThe suspected case is immediately notified to the health authorities (SINAN dataset)\nThe diagnosis must be verified to adequate the health treatment"
+  },
+  {
+    "objectID": "talks/isntd_conference_2023.html",
+    "href": "talks/isntd_conference_2023.html",
+    "title": "Disease and climate data fusion for modelling",
+    "section": "",
+    "text": "Postdoc researcher at Inria, a French research institute for digital science and technology\nBSC, Global Health Resilience collaborator\nFiocruz, Climate and Health Observatory"
+  },
+  {
+    "objectID": "talks/rbras69_2025.html",
+    "href": "talks/rbras69_2025.html",
+    "title": "Democratização de acesso a dados de saúde, ambiente e clima com o R",
+    "section": "",
+    "text": "Geógrafo (UFJF)\nEspecialista em Métodos Estatísticos Computacionais (UFJF)\nMestre em Saúde Coletiva (UFJF)\nDoutor em Informação e Comunicação em Saúde (Fiocruz)\n\n\n\nAssistente de pesquisa na Fiocruz\nObservatório de Clima e Saúde\nPlataforma de Ciência de Dados Aplicada à Saúde (PCDaS)"
   }
 ]
