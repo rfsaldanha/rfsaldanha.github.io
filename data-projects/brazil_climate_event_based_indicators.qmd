@@ -1,0 +1,591 @@
+---
+title: "Climate event-based indicators"
+bibliography: references.bib
+---
+
+## Introduction
+
+Climate and health research has traditionally represented environmental exposure using nominal meteorological variables, such as mean temperature or total precipitation, included as continuous covariates in epidemiological models. Although these indicators are widely available and straightforward to implement, they often inadequately represent the persistent, extreme, and threshold-exceeding conditions through which climate variability and change affect human health. Many health impacts are driven by discrete climate events - such as heat waves, cold spells, prolonged rainfall, and dry spells - whose effects depend on duration, intensity, and temporal clustering rather than on average conditions alone.
+
+I propose here a method to compute monthly climatological normals and a set of monthly aggregated climate indicators using a climate reanalysis datasets, applied to Brazilian municipalities.
+
+::: callout-tip
+In a hurry? Jump to the [download](#sec-download) section ;-)
+:::
+
+## Methods
+
+A climatological normal can be computed with data from different sources, including remote sensing sensors and "area averages or points in gridded datasets" [@wmoWMOGuidelinesCalculation2017]. Some gridded climatological datasets are available for the Brazilian territory, including the ERA5-Land from Copernicus [@muñoz-sabater2021] and the BR-DWGD dataset [@xavier2022], offering several climatological indicators for a long time range, and continuously updates.
+
+Some research methods demands that climate data must be aggregated in the same spatial and temporal units of other data to be used in statistical models, being a fairly common procedure in epidemiology and economy studies. In order to approach this issue, spatial gridded data can be aggregated using *zonal statistics* [@saldanhaZonalStatisticsDatasets2024].
+
+The updated climate zonal statistics datasets for the Brazilian municipalities from ERA5-Land was used to compute climatological normals and monthly event indicators.
+
+For this, an R package named [{climindi}](https://rfsaldanha.github.io/climindi) was created. The package provides helper functions to compute climatological normals and event-based climate indicators in a [tidy](https://www.tidyverse.org) way.
+
+### Normal indicators
+
+The {climindi} package computes the average, 10th and 90th percentile as climatological normals.
+
+### Event-based indicators
+
+The {climindi} package present functions to compute the following statistics for time-aggregated data: count of data points, average, median, standard deviation, standard error, maximum and minimum values, the 10th, 25th, 75th and 90th percentiles, and event-based indicators, listed bellow.
+
+-   Precipitation
+    -   Rain spells: count of rain spells occurrences, with 3 and 5 or more consecutive days with rain above the climatological normal average value
+    -   Count of days with precipitation above 1mm, 5mm, 10mm, 50mm, and 100mm
+    -   Count of sequences of 3 days, 5 days, 10 days, 15 days, 20 days, and 25 days or more without precipitation
+-   Maximum temperature
+    -   Heat waves: Count of heat waves occurrences, with 3 and 5 or more consecutive days with maximum temperature above the climatological normal value plus 5 Celsius degrees
+    -   Hot days: count of warm days, when the maximum temperature is above the normal 90th percentile
+    -   Count of days with temperatures above or equal to 25, 30, 35, and 40 Celsius degrees
+-   Minimum temperature
+    -   Cold spells: count of cold spells occurrences, with 3 and 5 or more consecutive days with minimum temperature bellow the climatological normal value minus 5 Celsius degrees
+    -   Cold days: count of cold days, when the minimum temperature is bellow the normal 10th percentile
+    -   Count of days with temperatures bellow or equal to 0, 5, 10, 15, and 20 Celsius degrees
+-   Relative humidity
+    -   Count of dry spells occurrences, with 3 and 5 or more consecutive days with relative humidity bellow the climatological normal value minus 10 percent
+    -   Count of wet spells occurrences, with 3 and 5 or more consecutive days with relative humidity above the climatological normal value plus 10 percent
+    -   Count of dry days, when the relative humidity is bellow the normal 10th percentile
+    -   Count of wet days, when the relative humidity is above the normal 90th percentile
+    -   Count of days with relative humidity between 21% and 30% (Attention level)
+    -   Count of days with relative humidity between 12% and 20% (Alert level)
+    -   Count of days with relative humidity bellow 12% (Emergence level)
+-   Wind speed
+    -   Count of sequences of 3 and 5 days or more with wind speed bellow the climatological average normal
+    -   Count of sequences of 3 and 5 days or more with wind speed above the climatological average normal
+
+::: callout-important
+The package functions needs data in the correct units. Please certify that your data is in the correct unit before running the functions.
+:::
+
+### Data source
+
+The zonal statistics for the Brazilian municipalities computed with the Copernicus ERA5-Land is described [here](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html#zonal-era5-land). We can use the [{zendown}](https://rfsaldanha.github.io/zendown/) package to download the data files directly from from Zenodo.
+
+We will use the data from 1981 to 2010 to compute the climatological normals and the data from 2011 to compute climate event-based indicators.
+
+### Packages
+
+```{r}
+#| message: false
+#| warning: false
+library(dplyr)
+library(lubridate)
+library(arrow)
+library(readr)
+library(climindi) # http://rfsaldanha.github.io/climindi/
+library(zendown) # https://rfsaldanha.github.io/zendown/
+```
+
+::: callout-warning
+To perform those computations, I needed to increase the envinroment variable `R_MAX_VSIZE` to 100GB, as explained [here](https://stackoverflow.com/questions/51248293/error-vector-memory-exhausted-limit-reached-r-3-5-0-macos).
+:::
+
+### Precipitation (mm)
+
+#### Data
+
+```{r}
+#| eval: false
+prec_1950_2022 <- zen_file(10036212, "total_precipitation_sum.parquet")
+prec_2023 <- zen_file(10947952, "total_precipitation_sum.parquet")
+prec_2024 <- zen_file(15748125, "total_precipitation_sum.parquet")
+prec_2025 <- zen_file(18257037, "total_precipitation_sum.parquet")
+
+prec_data <- open_dataset(
+  sources = c(prec_1950_2022, prec_2023, prec_2024, prec_2025)
+) |>
+  # Average precipitation
+  filter(name == "total_precipitation_sum_mean") |>
+  # Time filter
+  filter(date >= as.Date("1981-01-01")) |>
+  # Unit conversion from m to mm
+  mutate(value = round(value * 1000, digits = 2)) |>
+  select(-name) |>
+  arrange(code_muni, date) |>
+  collect()
+```
+
+#### Climatological normal
+
+```{r}
+#| eval: false
+prec_normal <- prec_data |>
+  # Identify month
+  mutate(month = month(date)) |>
+  # Group by id variable and month
+  group_by(code_muni, month) |>
+  # Compute normal
+  summarise_normal(
+    date_var = date,
+    value_var = value,
+    year_start = 1981,
+    year_end = 2010
+  ) |>
+  # Ungroup
+  ungroup()
+```
+
+#### Climatological indicators
+
+```{r}
+#| eval: false
+prec_indi <- prec_data |>
+  # Identify year
+  mutate(year = year(date)) |>
+  # Identify month
+  mutate(month = month(date)) |>
+  # Filter year
+  filter(year >= 2011) |>
+  # Create wave variables
+  dplyr::group_by(code_muni) |>
+  dplyr::arrange(date) |>
+  add_wave(
+    normals_df = prec_normal,
+    threshold = 0,
+    threshold_cond = "gte",
+    size = 3,
+    var_name = "rs3"
+  ) |>
+  add_wave(
+    normals_df = prec_normal,
+    threshold = 0,
+    threshold_cond = "gte",
+    size = 5,
+    var_name = "rs5"
+  ) |>
+  dplyr::ungroup() |>
+  # Group by id variable, year and month
+  group_by(code_muni, year, month) |>
+  # Compute precipitation indicators
+  summarise_precipitation(
+    value_var = value,
+    normals_df = prec_normal
+  ) |>
+  # Ungroup
+  ungroup()
+```
+
+#### Export
+
+```{r}
+#| eval: false
+write_parquet(x = prec_normal, sink = "prec_normal.parquet")
+write_csv2(x = prec_normal, file = "prec_normal.csv")
+write_parquet(x = prec_indi, sink = "prec_indi.parquet")
+write_csv2(x = prec_indi, file = "prec_indi.csv")
+```
+
+### Maximum temperature (°C)
+
+#### Data
+
+```{r}
+#| eval: false
+tmax_1950_2022 <- zen_file(10036212, "2m_temperature_max.parquet")
+tmax_2023 <- zen_file(10947952, "2m_temperature_max.parquet")
+tmax_2024 <- zen_file(15748125, "2m_temperature_max.parquet")
+
+tmax_data <- open_dataset(sources = c(tmax_1950_2022, tmax_2023, tmax_2024)) |>
+  # Average maximum temperature
+  filter(name == "2m_temperature_max_mean") |>
+  # Time filter
+  filter(date >= as.Date("1961-01-01")) |>
+  filter(date <= as.Date("2024-12-31")) |>
+  # Unit conversion form Kelvin to Celsius degrees
+  mutate(value = round(value - 273.15, digits = 2)) |>
+  select(-name) |>
+  arrange(code_muni, date) |>
+  collect()
+```
+
+#### Climatological normal
+
+```{r}
+#| eval: false
+tmax_normal <- tmax_data |>
+  # Identify month
+  mutate(month = month(date)) |>
+  # Group by id variable and month
+  group_by(code_muni, month) |>
+  # Compute normal
+  summarise_normal(
+    date_var = date,
+    value_var = value,
+    year_start = 1961,
+    year_end = 1990
+  ) |>
+  # Ungroup
+  ungroup()
+```
+
+#### Climatological indicators
+
+```{r}
+#| eval: false
+tmax_indi <- tmax_data |>
+  # Identify year
+  mutate(year = year(date)) |>
+  # Identify month
+  mutate(month = month(date)) |>
+  # Filter year
+  filter(year >= 1991) |>
+  # Group by id variable, year and month
+  group_by(code_muni, year, month) |>
+  # Compute precipitation indicators
+  summarise_temp_max(
+    value_var = value,
+    normals_df = tmax_normal
+  ) |>
+  # Ungroup
+  ungroup()
+```
+
+#### Export
+
+```{r}
+#| eval: false
+write_parquet(x = tmax_normal, sink = "tmax_normal.parquet")
+write_csv2(x = tmax_normal, file = "tmax_normal.csv")
+write_parquet(x = tmax_indi, sink = "tmax_indi.parquet")
+write_csv2(x = tmax_indi, file = "tmax_indi.csv")
+```
+
+### Minimum temperature (°C)
+
+#### Data
+
+```{r}
+#| eval: false
+tmin_1950_2022 <- zen_file(10036212, "2m_temperature_min.parquet")
+tmin_2023 <- zen_file(10947952, "2m_temperature_min.parquet")
+tmin_2024 <- zen_file(15748125, "2m_temperature_min.parquet")
+
+tmin_data <- open_dataset(sources = c(tmin_1950_2022, tmin_2023, tmin_2024)) |>
+  # Average minimum temperature
+  filter(name == "2m_temperature_min_mean") |>
+  # Filter period
+  filter(date >= as.Date("1961-01-01")) |>
+  filter(date <= as.Date("2024-12-31")) |>
+  # Unit conversion
+  mutate(value = round(value - 273.15, digits = 2)) |>
+  select(-name) |>
+  arrange(code_muni, date) |>
+  collect()
+```
+
+#### Climatological normal
+
+```{r}
+#| eval: false
+tmin_normal <- tmin_data |>
+  # Identify month
+  mutate(month = month(date)) |>
+  # Group by id variable and month
+  group_by(code_muni, month) |>
+  # Compute normal
+  summarise_normal(
+    date_var = date,
+    value_var = value,
+    year_start = 1961,
+    year_end = 1990
+  ) |>
+  # Ungroup
+  ungroup()
+```
+
+#### Climatologial indicators
+
+```{r}
+#| eval: false
+tmin_indi <- tmin_data |>
+  # Identify year
+  mutate(year = year(date)) |>
+  # Identify month
+  mutate(month = month(date)) |>
+  # Filter year
+  filter(year >= 1991) |>
+  # Group by id variable, year and month
+  group_by(code_muni, year, month) |>
+  # Compute precipitation indicators
+  summarise_temp_min(
+    value_var = value,
+    normals_df = tmin_normal
+  ) |>
+  # Ungroup
+  ungroup()
+```
+
+#### Export
+
+```{r}
+#| eval: false
+write_parquet(x = tmin_normal, sink = "tmin_normal.parquet")
+write_csv2(x = tmin_normal, file = "tmin_normal.csv")
+write_parquet(x = tmin_indi, sink = "tmin_indi.parquet")
+write_csv2(x = tmin_indi, file = "tmin_indi.csv")
+```
+
+### Wind speed at 2m height (m/s)
+
+#### Data
+
+```{r}
+#| eval: false
+wu_1950_2022 <- zen_file(10036212, "10m_u_component_of_wind_mean.parquet")
+wu_2023 <- zen_file(10947952, "10m_u_component_of_wind_mean.parquet")
+wu_2024 <- zen_file(15748125, "10m_u_component_of_wind_mean.parquet")
+
+wv_1950_2022 <- zen_file(10036212, "10m_v_component_of_wind_mean.parquet")
+wv_2023 <- zen_file(10947952, "10m_v_component_of_wind_mean.parquet")
+wv_2024 <- zen_file(15748125, "10m_v_component_of_wind_mean.parquet")
+
+wu_data <- open_dataset(sources = c(wu_1950_2022, wu_2023, wu_2024)) |>
+  # Average minimum temperature
+  filter(name == "10m_u_component_of_wind_mean_mean") |>
+  # Filter period
+  filter(date >= as.Date("1961-01-01")) |>
+  filter(date <= as.Date("2024-12-31")) |>
+  select(-name) |>
+  arrange(code_muni, date) |>
+  collect()
+
+wv_data <- open_dataset(sources = c(wv_1950_2022, wv_2023, wv_2024)) |>
+  # Average minimum temperature
+  filter(name == "10m_u_component_of_wind_mean_mean") |>
+  # Filter period
+  filter(date >= as.Date("1961-01-01")) |>
+  filter(date <= as.Date("2024-12-31")) |>
+  select(-name) |>
+  arrange(code_muni, date) |>
+  collect()
+
+
+u2_data <- zen_file(13906834, "u2_3.2.3.parquet") |>
+  open_dataset() |>
+  filter(name == "u2_3.2.3_mean") |>
+  filter(date >= as.Date("1961-01-01")) |>
+  filter(date <= as.Date("2024-12-31")) |>
+  select(-name) |>
+  collect()
+```
+
+#### Climatological normal
+
+```{r}
+#| eval: false
+u2_normal <- u2_data |>
+  # Identify month
+  mutate(month = month(date)) |>
+  # Group by id variable and month
+  group_by(code_muni, month) |>
+  # Compute normal
+  summarise_normal(
+    date_var = date,
+    value_var = value,
+    year_start = 1961,
+    year_end = 1990
+  ) |>
+  # Ungroup
+  ungroup()
+```
+
+#### Climatological indicators
+
+```{r}
+#| eval: false
+u2_indi <- u2_data |>
+  # Identify year
+  mutate(year = year(date)) |>
+  # Identify month
+  mutate(month = month(date)) |>
+  # Filter year
+  filter(year >= 1991) |>
+  # Group by id variable, year and month
+  group_by(code_muni, year, month) |>
+  # Compute precipitation indicators
+  summarise_windspeed(
+    value_var = value,
+    normals_df = u2_normal
+  ) |>
+  # Ungroup
+  ungroup()
+```
+
+#### Export
+
+```{r}
+#| eval: false
+write_parquet(x = u2_normal, sink = "u2_normal.parquet")
+write_csv2(x = u2_normal, file = "u2_normal.csv")
+write_parquet(x = u2_indi, sink = "u2_indi.parquet")
+write_csv2(x = u2_indi, file = "u2_indi.csv")
+```
+
+### Relative humidity (%)
+
+#### Data
+
+```{r}
+#| eval: false
+rh_data <- zen_file(13906834, "RH_3.2.3.parquet") |>
+  open_dataset() |>
+  filter(name == "RH_3.2.3_mean") |>
+  filter(date >= as.Date("1961-01-01")) |>
+  filter(date <= as.Date("2024-12-31")) |>
+  select(-name) |>
+  collect()
+```
+
+#### Normal
+
+```{r}
+#| eval: false
+rh_normal <- rh_data |>
+  # Identify month
+  mutate(month = month(date)) |>
+  # Group by id variable and month
+  group_by(code_muni, month) |>
+  # Compute normal
+  summarise_normal(
+    date_var = date,
+    value_var = value,
+    year_start = 1961,
+    year_end = 1990
+  ) |>
+  # Ungroup
+  ungroup()
+```
+
+#### Indicators
+
+```{r}
+#| eval: false
+rh_indi <- rh_data |>
+  # Identify year
+  mutate(year = year(date)) |>
+  # Identify month
+  mutate(month = month(date)) |>
+  # Filter year
+  filter(year >= 1991) |>
+  # Group by id variable, year and month
+  group_by(code_muni, year, month) |>
+  # Compute precipitation indicators
+  summarise_rel_humidity(
+    value_var = value,
+    normals_df = rh_normal
+  ) |>
+  # Ungroup
+  ungroup()
+```
+
+#### Export
+
+```{r}
+#| eval: false
+write_parquet(x = rh_normal, sink = "rh_normal.parquet")
+write_csv2(x = rh_normal, file = "rh_normal.csv")
+write_parquet(x = rh_indi, sink = "rh_indi.parquet")
+write_csv2(x = rh_indi, file = "rh_indi.csv")
+```
+
+## Results and dataset download {#sec-download}
+
+The climatological normals and aggregated indicators of Brazilian municipalities can be downloaded from Zenodo on CSV and parquet formats. Click the link bellow to access and download the data.
+
+[![](https://zenodo.org/badge/DOI/10.5281/zenodo.15519719.svg)](https://doi.org/10.5281/zenodo.15519719)
+
+You can also download the dataset directly from R, using the [{zendown}](https://rfsaldanha.github.io/zendown/) package.
+
+Let's check some results.
+
+### Maximum temperature, Rio de Janeiro, RJ, 2023
+
+#### Observed and normal
+
+```{r}
+#| eval: false
+#| message: false
+#| warning: false
+tmax_data <- zen_file(13906834, "Tmax_3.2.3.parquet") |>
+  open_dataset() |>
+  filter(name == "Tmax_3.2.3_mean") |>
+  filter(code_muni == 3304557) |>
+  filter(date >= as.Date("2023-01-01")) |>
+  filter(date <= as.Date("2023-12-31")) |>
+  select(-name) |>
+  collect()
+
+tmax_normal <- zen_file(15519719, "tmax_normal.parquet") |>
+  open_dataset() |>
+  filter(code_muni == 3304557) |>
+  collect()
+```
+
+```{r}
+#| eval: false
+#| message: false
+#| warning: false
+#| classes: preview-image
+library(ggplot2)
+library(tidyr)
+
+tmax_normal_exp <- tmax_normal |>
+  mutate(date = as_date(paste0("2023-", month, "-01"))) |>
+  group_by(month) %>%
+  expand(
+    date = seq.Date(
+      floor_date(date, unit = "month"),
+      ceiling_date(date, unit = "month") - days(1),
+      by = "day"
+    ),
+    normal_mean,
+    normal_p10,
+    normal_p90
+  ) |>
+  pivot_longer(cols = starts_with("normal_")) |>
+  mutate(name = substr(name, 8, 100))
+
+ggplot() +
+  geom_line(data = tmax_data, aes(x = date, y = value)) +
+  geom_line(data = tmax_normal_exp, aes(x = date, y = value, color = name)) +
+  theme_bw() +
+  labs(
+    title = "Maximum temperature and climatological normal",
+    subtitle = "Rio de Janeiro, RJ",
+    color = "Normal (1961-1990)",
+    x = "Date",
+    y = "Celsius degrees"
+  ) +
+  theme(legend.position = "bottom", legend.direction = "horizontal")
+```
+
+#### Indicators
+
+```{r}
+#| eval: false
+#| message: false
+#| warning: false
+library(gt)
+
+zen_file(15519719, "tmax_indi.parquet") |>
+  open_dataset() |>
+  filter(code_muni == 3304557) |>
+  filter(year == 2023) |>
+  select(-code_muni, -year) |>
+  collect() |>
+  gt() |>
+  fmt_number(
+    columns = where(is.double),
+    decimals = 2,
+    use_seps = FALSE
+  )
+
+```
+
+## Session info
+
+```{r}
+sessioninfo::session_info()
+```

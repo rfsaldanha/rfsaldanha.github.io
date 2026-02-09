@@ -27,11 +27,13 @@ The datasets are available to download here:
 
 ### PM 2.5
 
-2003-2024: [![](https://img.shields.io/badge/download-10.5281/zenodo.16374139-green.svg)](https://doi.org/10.5281/zenodo.16374139)
+-  2003-2024: [![](https://img.shields.io/badge/download-10.5281/zenodo.16374139-green.svg)](https://doi.org/10.5281/zenodo.16374139)
+-  Jan 2025 - Aug 2025: [![](https://img.shields.io/badge/download-10.5281/zenodo.18552120-green.svg)](https://doi.org/10.5281/zenodo.18552120)
 
 ### PM 10
 
-2003-2024: [![](https://img.shields.io/badge/download-10.5281/zenodo.16419737-green.svg)](https://doi.org/10.5281/zenodo.16419737)
+-  2003-2024: [![](https://img.shields.io/badge/download-10.5281/zenodo.16419737-green.svg)](https://doi.org/10.5281/zenodo.16419737)
+-  Jan 2025 - Aug 2025: [![](https://img.shields.io/badge/download-10.5281/zenodo.18554403-green.svg)](https://doi.org/10.5281/zenodo.18554403)
 
 ## CO
 
@@ -47,7 +49,8 @@ Those indicators are presented in Parquet and CSV formats. The computational cod
 
 The datasets are available to download here:
 
-2003-2024: [![](https://img.shields.io/badge/download-10.5281/zenodo.16984341-green.svg)](https://doi.org/10.5281/zenodo.16984341)
+-  2003-2024: [![](https://img.shields.io/badge/download-10.5281/zenodo.16984341-green.svg)](https://doi.org/10.5281/zenodo.16984341)
+-  Jan 2025 - Aug 2025: [![](https://img.shields.io/badge/download-10.5281/zenodo.18555894-green.svg)](https://doi.org/10.5281/zenodo.18555894)
 
 ## NO2 
 
@@ -63,7 +66,8 @@ Those indicators are presented in Parquet and CSV formats. The computational cod
 
 The datasets are available to download here:
 
-2003-2024: [![](https://img.shields.io/badge/download-10.5281/zenodo.17019753-green.svg)](https://doi.org/10.5281/zenodo.17019753)
+-  2003-2024: [![](https://img.shields.io/badge/download-10.5281/zenodo.17019753-green.svg)](https://doi.org/10.5281/zenodo.17019753)
+-  Jan 2025 - Aug 2025: [![](https://img.shields.io/badge/download-10.5281/zenodo.18556588-green.svg)](https://doi.org/10.5281/zenodo.18556588)
 
 ## O3
 
@@ -79,7 +83,8 @@ Those indicators are presented in Parquet and CSV formats. The computational cod
 
 The datasets are available to download here:
 
-2003-2024: [![](https://img.shields.io/badge/download-10.5281/zenodo.17025187-green.svg)](https://doi.org/10.5281/zenodo.17025187)
+-  2003-2024: [![](https://img.shields.io/badge/download-10.5281/zenodo.17025187-green.svg)](https://doi.org/10.5281/zenodo.17025187)
+-  Jan 2025 - Aug 2025: [![](https://img.shields.io/badge/download-10.5281/zenodo.18558668-green.svg)](https://doi.org/10.5281/zenodo.18558668)
 
 ## SO2
 
@@ -95,4 +100,5 @@ Those indicators are presented in Parquet and CSV formats. The computational cod
 
 The datasets are available to download here:
 
-2003-2024: [![](https://img.shields.io/badge/download-10.5281/zenodo.17047073-green.svg)](https://doi.org/10.5281/zenodo.17047073)
+-  2003-2024: [![](https://img.shields.io/badge/download-10.5281/zenodo.17047073-green.svg)](https://doi.org/10.5281/zenodo.17047073)
+-  Jan 2025 - Aug 2025: [![](https://img.shields.io/badge/download-10.5281/zenodo.18559084-green.svg)](https://doi.org/10.5281/zenodo.18559084)
