@@ -37,43 +37,77 @@ For each climate indicator, a set of standard indicators and a set of specific i
 
 #### Standard indicators
 
--  Count of data points
--  Average
--  Median
--  Standard deviation
--  Standard error
--  Maximum value
--  Minimum value
--  10th percentile
--  25th percentile
--  75th percentile
--  90th percentile
+-  `count` Count of data points
+-  `mean` Mean value
+-  `median` Median
+-  `sd` Standard deviation
+-  `se` Standard error
+-  `max` Maximum value
+-  `min` Minimum value
+-  `p10` 10th percentile
+-  `p25` 25th percentile
+-  `p75` 75th percentile
+-  `p90` 90th percentile
 
 #### Specific indicators
 
 -   Precipitation
-    -   Rain spells: count of rain spells occurrences, with 3 and 5 or more consecutive days with rain above the climatological normal average value
-    -   Count of days with precipitation above 1mm, 5mm, 10mm, 50mm, and 100mm
-    -   Count of sequences of 3 days, 5 days, 10 days, 15 days, 20 days, and 25 days or more without precipitation
+    -   `rs3` Rain spells: count of rain spells occurrences, with 3 and 5 or more consecutive days with rain above the climatological normal average value
+    -  `p_1` Count of days with precipitation above 1mm
+    -  `p_5` Count of days with precipitation above 5mm
+    -  `p_10` Count of days with precipitation above 10mm
+    -  `p_50` Count of days with precipitation above 50mm
+    -  `p_100` Count of days with precipitation above 100mm
+    -   `d_3` Count of sequences of 3 days or more without precipitation
+    -   `d_5` Count of sequences of 5 days or more without precipitation
+    -   `d_10` Count of sequences of 10 days or more without precipitation
+    -   `d_15` Count of sequences of 15 days or more without precipitation
+    -   `d_20` Count of sequences of 20 days or more without precipitation
+    -   `d_25` Count of sequences of 25 days or more without precipitation
 -   Maximum temperature
-    -   Heat waves: Count of heat waves occurrences, with 3 and 5 or more consecutive days with maximum temperature above the climatological normal value plus 5 Celsius degrees
-    -   Hot days: count of warm days, when the maximum temperature is above the normal 90th percentile
-    -   Count of days with temperatures above or equal to 25, 30, 35, and 40 Celsius degrees
+    -   `hw3` Count of heat waves occurrences with 3 or more consecutive days with maximum temperature above the climatological normal value plus 5 Celsius degrees
+    -   `hw5` Count of heat waves occurrences with 5 or more consecutive days with maximum temperature above the climatological normal value plus 5 Celsius degrees
+    -   `hot_days` Count of hot days, when the maximum temperature is above the normal 90th percentile
+    -   `t_25` Count of days with temperatures above or equal to 25 Celsius degrees
+    -   `t_30` Count of days with temperatures above or equal to 30 Celsius degrees 
+    -   `t_35` Count of days with temperatures above or equal to 35 Celsius degrees 
+    -   `t_40` Count of days with temperatures above or equal to 40 Celsius degrees
 -   Minimum temperature
-    -   Cold spells: count of cold spells occurrences, with 3 and 5 or more consecutive days with minimum temperature bellow the climatological normal value minus 5 Celsius degrees
-    -   Cold days: count of cold days, when the minimum temperature is bellow the normal 10th percentile
-    -   Count of days with temperatures bellow or equal to 0, 5, 10, 15, and 20 Celsius degrees
+    -   `cw3` Count of cold spells occurrences with 3 or more consecutive days with minimum temperature bellow the climatological normal value minus 5 Celsius degrees
+    -   `cw5` Count of cold spells occurrences with 5 or more consecutive days with minimum temperature bellow the climatological normal value minus 5 Celsius degrees
+    -   `cold_days` Count of cold days, when the minimum temperature is bellow the normal 10th percentile
+    -   `t_0` Count of days with temperatures bellow or equal to 0 Celsius degrees
+    -   `t_5` Count of days with temperatures bellow or equal to 5 Celsius degrees
+    -   `t_10` Count of days with temperatures bellow or equal to 10 Celsius degrees
+    -   `t_15` Count of days with temperatures bellow or equal to 15 Celsius degrees
+    -   `t_20` Count of days with temperatures bellow or equal to 20 Celsius degrees
 -   Relative humidity
-    -   Count of dry spells occurrences, with 3 and 5 or more consecutive days with relative humidity bellow the climatological normal value minus 10 percent
-    -   Count of wet spells occurrences, with 3 and 5 or more consecutive days with relative humidity above the climatological normal value plus 10 percent
-    -   Count of dry days, when the relative humidity is bellow the normal 10th percentile
-    -   Count of wet days, when the relative humidity is above the normal 90th percentile
-    -   Count of days with relative humidity between 21% and 30% (Attention level)
-    -   Count of days with relative humidity between 12% and 20% (Alert level)
-    -   Count of days with relative humidity bellow 12% (Emergence level)
+    -   `ds3` Count of dry spells occurrences with 3 or more consecutive days with relative humidity bellow the climatological normal value minus 10 percent
+    -   `ds5` Count of dry spells occurrences with 5 or more consecutive days with relative humidity bellow the climatological normal value minus 10 percent
+    -   `ws3` Count of wet spells occurrences with 3 or more consecutive days with relative humidity above the climatological normal value plus 10 percent
+    -   `ws5` Count of wet spells occurrences with 5 or more consecutive days with relative humidity above the climatological normal value plus 10 percent
+    -   `dry_days` Count of dry days, when the relative humidity is bellow the normal 10th percentile
+    -   `wet_days` Count of wet days, when the relative humidity is above the normal 90th percentile
+    -   `h_21_30` Count of days with relative humidity between 21% and 30% (Attention level)
+    -   `h_12_20` Count of days with relative humidity between 12% and 20% (Alert level)
+    -   `h_11` Count of days with relative humidity bellow 12% (Emergence level)
 -   Wind speed
-    -   Count of sequences of 3 and 5 days or more with wind speed bellow the climatological average normal
-    -   Count of sequences of 3 and 5 days or more with wind speed above the climatological average normal
+    -   `l_eto_3` Count of sequences of 3 or more consecutive days with wind speed bellow the climatological average normal
+    -   `l_eto_5` Count of sequences of 5 or more consecutive days with wind speed bellow the climatological average normal
+    -   `h_eto_3` Count of sequences of 3 or more consecutive days with wind speed above the climatological average normal
+    -   `h_eto_5` Count of sequences of 5 or more consecutive days with wind speed above the climatological average normal
+    -  `b1` Count of days classified as level 1 on Beaufort scale
+    -  `b2` Count of days classified as level 2 on Beaufort scale
+    -  `b3` Count of days classified as level 3 on Beaufort scale
+    -  `b4` Count of days classified as level 4 on Beaufort scale
+    -  `b5` Count of days classified as level 5 on Beaufort scale
+    -  `b6` Count of days classified as level 6 on Beaufort scale
+    -  `b7` Count of days classified as level 7 on Beaufort scale
+    -  `b8` Count of days classified as level 8 on Beaufort scale
+    -  `b9` Count of days classified as level 9 on Beaufort scale
+    -  `b10` Count of days classified as level 10 on Beaufort scale
+    -  `b11` Count of days classified as level 11 on Beaufort scale
+    -  `b12` Count of days classified as level 12 on Beaufort scale
 
 ::: callout-important
 The package functions needs data in specific units. Please certify that your data is in the required unit before running the functions.
@@ -160,7 +194,51 @@ ggplot() +
   geom_line(data = tmax_normal_exp, aes(x = date, y = value, color = name)) +
   theme_bw() +
   labs(
-    title = "2024 maximum temperatures and climatological normals",
+    title = "Maximum temperatures and monthly climatological normals",
+    subtitle = "Rio de Janeiro, RJ",
+    color = "Normal (1981-2010)",
+    x = "Date",
+    y = "Celsius degrees"
+  ) +
+  theme(legend.position = "bottom", legend.direction = "horizontal")
+```
+
+```{r}
+#| message: false
+#| warning: false
+#| classes: preview-image
+#| code-fold: true
+
+#  normals
+tmax_normal <- zen_file(18612340, "tmax_weekly_normal_n1981_2010.parquet") |>
+  open_dataset() |>
+  filter(code_muni == 3304557) |>
+  collect()
+
+tmax_normal_exp <- tmax_normal |>
+  filter_out(week == 53) |>
+  mutate(date = as.Date(paste(2024, week, 1, sep = "-"), "%Y-%U-%u")) |>
+  group_by(week) %>%
+  expand(
+    date = seq.Date(
+      floor_date(date, unit = "week"),
+      ceiling_date(date, unit = "week") - days(1),
+      by = "day"
+    ),
+    normal_mean,
+    normal_p10,
+    normal_p90
+  ) |>
+  pivot_longer(cols = starts_with("normal_")) |>
+  mutate(name = substr(name, 8, 100))
+
+# Plot
+ggplot() +
+  geom_line(data = tmax_data, aes(x = date, y = value)) +
+  geom_line(data = tmax_normal_exp, aes(x = date, y = value, color = name)) +
+  theme_bw() +
+  labs(
+    title = "Maximum temperatures and weekly climatological normals, 2024",
     subtitle = "Rio de Janeiro, RJ",
     color = "Normal (1981-2010)",
     x = "Date",
@@ -248,7 +326,7 @@ ggplot() +
   geom_line(data = tmin_normal_exp, aes(x = date, y = value, color = name)) +
   theme_bw() +
   labs(
-    title = "2025 minimum temperatures and climatological normals",
+    title = "Minimum temperatures and monthly climatological normals, 2025",
     subtitle = "Urupema, SC",
     color = "Normal (1981-2010)",
     x = "Date",
@@ -335,7 +413,7 @@ ggplot() +
   geom_line(data = rh_normal_exp, aes(x = date, y = value, color = name)) +
   theme_bw() +
   labs(
-    title = "2025 relative humidity and climatological normals",
+    title = "Relative humidity and monthly climatological normals, 2025",
     subtitle = "Aquidauana, MS",
     color = "Normal (1981-2010)",
     x = "Date",
@@ -423,7 +501,7 @@ ggplot() +
   geom_line(data = prec_normal_exp, aes(x = date, y = value, color = name)) +
   theme_bw() +
   labs(
-    title = "2025 precipitation and climatological normals",
+    title = "Precipitation and monthly climatological normals, 2025",
     subtitle = "Calçoene, AP",
     color = "Normal (1981-2010)",
     x = "Date",
@@ -510,7 +588,7 @@ ggplot() +
   geom_line(data = ws_normal_exp, aes(x = date, y = value, color = name)) +
   theme_bw() +
   labs(
-    title = "2025 wind speed and climatological normals",
+    title = "Wind speed and monthly climatological normals, 2025",
     subtitle = "Caetité, BA",
     color = "Normal (1981-2010)",
     x = "Date",

@@ -289,17 +289,17 @@ Tip
 <section id="standard-indicators" class="level4">
 <h4 class="anchored" data-anchor-id="standard-indicators">Standard indicators</h4>
 <ul>
-<li>Count of data points</li>
-<li>Average</li>
-<li>Median</li>
-<li>Standard deviation</li>
-<li>Standard error</li>
-<li>Maximum value</li>
-<li>Minimum value</li>
-<li>10th percentile</li>
-<li>25th percentile</li>
-<li>75th percentile</li>
-<li>90th percentile</li>
+<li><code>count</code> Count of data points</li>
+<li><code>mean</code> Mean value</li>
+<li><code>median</code> Median</li>
+<li><code>sd</code> Standard deviation</li>
+<li><code>se</code> Standard error</li>
+<li><code>max</code> Maximum value</li>
+<li><code>min</code> Minimum value</li>
+<li><code>p10</code> 10th percentile</li>
+<li><code>p25</code> 25th percentile</li>
+<li><code>p75</code> 75th percentile</li>
+<li><code>p90</code> 90th percentile</li>
 </ul>
 </section>
 <section id="specific-indicators" class="level4">
@@ -307,36 +307,70 @@ Tip
 <ul>
 <li>Precipitation
 <ul>
-<li>Rain spells: count of rain spells occurrences, with 3 and 5 or more consecutive days with rain above the climatological normal average value</li>
-<li>Count of days with precipitation above 1mm, 5mm, 10mm, 50mm, and 100mm</li>
-<li>Count of sequences of 3 days, 5 days, 10 days, 15 days, 20 days, and 25 days or more without precipitation</li>
+<li><code>rs3</code> Rain spells: count of rain spells occurrences, with 3 and 5 or more consecutive days with rain above the climatological normal average value</li>
+<li><code>p_1</code> Count of days with precipitation above 1mm</li>
+<li><code>p_5</code> Count of days with precipitation above 5mm</li>
+<li><code>p_10</code> Count of days with precipitation above 10mm</li>
+<li><code>p_50</code> Count of days with precipitation above 50mm</li>
+<li><code>p_100</code> Count of days with precipitation above 100mm</li>
+<li><code>d_3</code> Count of sequences of 3 days or more without precipitation</li>
+<li><code>d_5</code> Count of sequences of 5 days or more without precipitation</li>
+<li><code>d_10</code> Count of sequences of 10 days or more without precipitation</li>
+<li><code>d_15</code> Count of sequences of 15 days or more without precipitation</li>
+<li><code>d_20</code> Count of sequences of 20 days or more without precipitation</li>
+<li><code>d_25</code> Count of sequences of 25 days or more without precipitation</li>
 </ul></li>
 <li>Maximum temperature
 <ul>
-<li>Heat waves: Count of heat waves occurrences, with 3 and 5 or more consecutive days with maximum temperature above the climatological normal value plus 5 Celsius degrees</li>
-<li>Hot days: count of warm days, when the maximum temperature is above the normal 90th percentile</li>
-<li>Count of days with temperatures above or equal to 25, 30, 35, and 40 Celsius degrees</li>
+<li><code>hw3</code> Count of heat waves occurrences with 3 or more consecutive days with maximum temperature above the climatological normal value plus 5 Celsius degrees</li>
+<li><code>hw5</code> Count of heat waves occurrences with 5 or more consecutive days with maximum temperature above the climatological normal value plus 5 Celsius degrees</li>
+<li><code>hot_days</code> Count of hot days, when the maximum temperature is above the normal 90th percentile</li>
+<li><code>t_25</code> Count of days with temperatures above or equal to 25 Celsius degrees</li>
+<li><code>t_30</code> Count of days with temperatures above or equal to 30 Celsius degrees</li>
+<li><code>t_35</code> Count of days with temperatures above or equal to 35 Celsius degrees</li>
+<li><code>t_40</code> Count of days with temperatures above or equal to 40 Celsius degrees</li>
 </ul></li>
 <li>Minimum temperature
 <ul>
-<li>Cold spells: count of cold spells occurrences, with 3 and 5 or more consecutive days with minimum temperature bellow the climatological normal value minus 5 Celsius degrees</li>
-<li>Cold days: count of cold days, when the minimum temperature is bellow the normal 10th percentile</li>
-<li>Count of days with temperatures bellow or equal to 0, 5, 10, 15, and 20 Celsius degrees</li>
+<li><code>cw3</code> Count of cold spells occurrences with 3 or more consecutive days with minimum temperature bellow the climatological normal value minus 5 Celsius degrees</li>
+<li><code>cw5</code> Count of cold spells occurrences with 5 or more consecutive days with minimum temperature bellow the climatological normal value minus 5 Celsius degrees</li>
+<li><code>cold_days</code> Count of cold days, when the minimum temperature is bellow the normal 10th percentile</li>
+<li><code>t_0</code> Count of days with temperatures bellow or equal to 0 Celsius degrees</li>
+<li><code>t_5</code> Count of days with temperatures bellow or equal to 5 Celsius degrees</li>
+<li><code>t_10</code> Count of days with temperatures bellow or equal to 10 Celsius degrees</li>
+<li><code>t_15</code> Count of days with temperatures bellow or equal to 15 Celsius degrees</li>
+<li><code>t_20</code> Count of days with temperatures bellow or equal to 20 Celsius degrees</li>
 </ul></li>
 <li>Relative humidity
 <ul>
-<li>Count of dry spells occurrences, with 3 and 5 or more consecutive days with relative humidity bellow the climatological normal value minus 10 percent</li>
-<li>Count of wet spells occurrences, with 3 and 5 or more consecutive days with relative humidity above the climatological normal value plus 10 percent</li>
-<li>Count of dry days, when the relative humidity is bellow the normal 10th percentile</li>
-<li>Count of wet days, when the relative humidity is above the normal 90th percentile</li>
-<li>Count of days with relative humidity between 21% and 30% (Attention level)</li>
-<li>Count of days with relative humidity between 12% and 20% (Alert level)</li>
-<li>Count of days with relative humidity bellow 12% (Emergence level)</li>
+<li><code>ds3</code> Count of dry spells occurrences with 3 or more consecutive days with relative humidity bellow the climatological normal value minus 10 percent</li>
+<li><code>ds5</code> Count of dry spells occurrences with 5 or more consecutive days with relative humidity bellow the climatological normal value minus 10 percent</li>
+<li><code>ws3</code> Count of wet spells occurrences with 3 or more consecutive days with relative humidity above the climatological normal value plus 10 percent</li>
+<li><code>ws5</code> Count of wet spells occurrences with 5 or more consecutive days with relative humidity above the climatological normal value plus 10 percent</li>
+<li><code>dry_days</code> Count of dry days, when the relative humidity is bellow the normal 10th percentile</li>
+<li><code>wet_days</code> Count of wet days, when the relative humidity is above the normal 90th percentile</li>
+<li><code>h_21_30</code> Count of days with relative humidity between 21% and 30% (Attention level)</li>
+<li><code>h_12_20</code> Count of days with relative humidity between 12% and 20% (Alert level)</li>
+<li><code>h_11</code> Count of days with relative humidity bellow 12% (Emergence level)</li>
 </ul></li>
 <li>Wind speed
 <ul>
-<li>Count of sequences of 3 and 5 days or more with wind speed bellow the climatological average normal</li>
-<li>Count of sequences of 3 and 5 days or more with wind speed above the climatological average normal</li>
+<li><code>l_eto_3</code> Count of sequences of 3 or more consecutive days with wind speed bellow the climatological average normal</li>
+<li><code>l_eto_5</code> Count of sequences of 5 or more consecutive days with wind speed bellow the climatological average normal</li>
+<li><code>h_eto_3</code> Count of sequences of 3 or more consecutive days with wind speed above the climatological average normal</li>
+<li><code>h_eto_5</code> Count of sequences of 5 or more consecutive days with wind speed above the climatological average normal</li>
+<li><code>b1</code> Count of days classified as level 1 on Beaufort scale</li>
+<li><code>b2</code> Count of days classified as level 2 on Beaufort scale</li>
+<li><code>b3</code> Count of days classified as level 3 on Beaufort scale</li>
+<li><code>b4</code> Count of days classified as level 4 on Beaufort scale</li>
+<li><code>b5</code> Count of days classified as level 5 on Beaufort scale</li>
+<li><code>b6</code> Count of days classified as level 6 on Beaufort scale</li>
+<li><code>b7</code> Count of days classified as level 7 on Beaufort scale</li>
+<li><code>b8</code> Count of days classified as level 8 on Beaufort scale</li>
+<li><code>b9</code> Count of days classified as level 9 on Beaufort scale</li>
+<li><code>b10</code> Count of days classified as level 10 on Beaufort scale</li>
+<li><code>b11</code> Count of days classified as level 11 on Beaufort scale</li>
+<li><code>b12</code> Count of days classified as level 12 on Beaufort scale</li>
 </ul></li>
 </ul>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -426,7 +460,7 @@ Important
 <span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> tmax_normal_exp, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value, <span class="at">color =</span> name)) <span class="sc">+</span></span>
 <span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
 <span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"2024 maximum temperatures and climatological normals"</span>,</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Maximum temperatures and monthly climatological normals"</span>,</span>
 <span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Rio de Janeiro, RJ"</span>,</span>
 <span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Normal (1981-2010)"</span>,</span>
 <span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Date"</span>,</span>
@@ -442,46 +476,94 @@ Important
 </div>
 </div>
 </div>
+<div class="cell preview-image">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#  normals</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>tmax_normal <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">18612340</span>, <span class="st">"tmax_weekly_normal_n1981_2010.parquet"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">3304557</span>) <span class="sc">|&gt;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>tmax_normal_exp <span class="ot">&lt;-</span> tmax_normal <span class="sc">|&gt;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter_out</span>(week <span class="sc">==</span> <span class="dv">53</span>) <span class="sc">|&gt;</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">as.Date</span>(<span class="fu">paste</span>(<span class="dv">2024</span>, week, <span class="dv">1</span>, <span class="at">sep =</span> <span class="st">"-"</span>), <span class="st">"%Y-%U-%u"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(week) <span class="sc">%&gt;%</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expand</span>(</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">date =</span> <span class="fu">seq.Date</span>(</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>      <span class="fu">floor_date</span>(date, <span class="at">unit =</span> <span class="st">"week"</span>),</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ceiling_date</span>(date, <span class="at">unit =</span> <span class="st">"week"</span>) <span class="sc">-</span> <span class="fu">days</span>(<span class="dv">1</span>),</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>      <span class="at">by =</span> <span class="st">"day"</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    normal_mean,</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    normal_p10,</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    normal_p90</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">"normal_"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">substr</span>(name, <span class="dv">8</span>, <span class="dv">100</span>))</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> tmax_data, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value)) <span class="sc">+</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> tmax_normal_exp, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value, <span class="at">color =</span> name)) <span class="sc">+</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Maximum temperatures and weekly climatological normals, 2024"</span>,</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Rio de Janeiro, RJ"</span>,</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Normal (1981-2010)"</span>,</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Date"</span>,</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Celsius degrees"</span></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>, <span class="at">legend.direction =</span> <span class="st">"horizontal"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="brazil_climate_event_based_indicators_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="indicators" class="level4">
 <h4 class="anchored" data-anchor-id="indicators">Indicators</h4>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load event-based indicators and filter for 2024</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">zen_file</span>(<span class="dv">18612340</span>, <span class="st">"tmax_monthly_indi_n1981_2010.parquet"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">3304557</span>) <span class="sc">|&gt;</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2024</span>) <span class="sc">|&gt;</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>code_muni, <span class="sc">-</span>year) <span class="sc">|&gt;</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>() <span class="sc">|&gt;</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_number</span>(</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">where</span>(is.double),</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">decimals =</span> <span class="dv">2</span>,</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">use_seps =</span> <span class="cn">FALSE</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load event-based indicators and filter for 2024</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">zen_file</span>(<span class="dv">18612340</span>, <span class="st">"tmax_monthly_indi_n1981_2010.parquet"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">3304557</span>) <span class="sc">|&gt;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2024</span>) <span class="sc">|&gt;</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>code_muni, <span class="sc">-</span>year) <span class="sc">|&gt;</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>() <span class="sc">|&gt;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_number</span>(</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">where</span>(is.double),</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">decimals =</span> <span class="dv">2</span>,</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">use_seps =</span> <span class="cn">FALSE</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
-<div id="ajhhptqfer" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ajhhptqfer table {
+<div id="xuprhvckjc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#xuprhvckjc table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ajhhptqfer thead, #ajhhptqfer tbody, #ajhhptqfer tfoot, #ajhhptqfer tr, #ajhhptqfer td, #ajhhptqfer th {
+#xuprhvckjc thead, #xuprhvckjc tbody, #xuprhvckjc tfoot, #xuprhvckjc tr, #xuprhvckjc td, #xuprhvckjc th {
   border-style: none;
 }
 
-#ajhhptqfer p {
+#xuprhvckjc p {
   margin: 0;
   padding: 0;
 }
 
-#ajhhptqfer .gt_table {
+#xuprhvckjc .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -507,12 +589,12 @@ Important
   border-left-color: #D3D3D3;
 }
 
-#ajhhptqfer .gt_caption {
+#xuprhvckjc .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ajhhptqfer .gt_title {
+#xuprhvckjc .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -524,7 +606,7 @@ Important
   border-bottom-width: 0;
 }
 
-#ajhhptqfer .gt_subtitle {
+#xuprhvckjc .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -536,7 +618,7 @@ Important
   border-top-width: 0;
 }
 
-#ajhhptqfer .gt_heading {
+#xuprhvckjc .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -548,13 +630,13 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#ajhhptqfer .gt_bottom_border {
+#xuprhvckjc .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ajhhptqfer .gt_col_headings {
+#xuprhvckjc .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -569,7 +651,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#ajhhptqfer .gt_col_heading {
+#xuprhvckjc .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -589,7 +671,7 @@ Important
   overflow-x: hidden;
 }
 
-#ajhhptqfer .gt_column_spanner_outer {
+#xuprhvckjc .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -601,15 +683,15 @@ Important
   padding-right: 4px;
 }
 
-#ajhhptqfer .gt_column_spanner_outer:first-child {
+#xuprhvckjc .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ajhhptqfer .gt_column_spanner_outer:last-child {
+#xuprhvckjc .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ajhhptqfer .gt_column_spanner {
+#xuprhvckjc .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -621,11 +703,11 @@ Important
   width: 100%;
 }
 
-#ajhhptqfer .gt_spanner_row {
+#xuprhvckjc .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ajhhptqfer .gt_group_heading {
+#xuprhvckjc .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -651,7 +733,7 @@ Important
   text-align: left;
 }
 
-#ajhhptqfer .gt_empty_group_heading {
+#xuprhvckjc .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -666,15 +748,15 @@ Important
   vertical-align: middle;
 }
 
-#ajhhptqfer .gt_from_md > :first-child {
+#xuprhvckjc .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ajhhptqfer .gt_from_md > :last-child {
+#xuprhvckjc .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ajhhptqfer .gt_row {
+#xuprhvckjc .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -693,7 +775,7 @@ Important
   overflow-x: hidden;
 }
 
-#ajhhptqfer .gt_stub {
+#xuprhvckjc .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -706,7 +788,7 @@ Important
   padding-right: 5px;
 }
 
-#ajhhptqfer .gt_stub_row_group {
+#xuprhvckjc .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -720,15 +802,15 @@ Important
   vertical-align: top;
 }
 
-#ajhhptqfer .gt_row_group_first td {
+#xuprhvckjc .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ajhhptqfer .gt_row_group_first th {
+#xuprhvckjc .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ajhhptqfer .gt_summary_row {
+#xuprhvckjc .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -738,16 +820,16 @@ Important
   padding-right: 5px;
 }
 
-#ajhhptqfer .gt_first_summary_row {
+#xuprhvckjc .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ajhhptqfer .gt_first_summary_row.thick {
+#xuprhvckjc .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ajhhptqfer .gt_last_summary_row {
+#xuprhvckjc .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -757,7 +839,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#ajhhptqfer .gt_grand_summary_row {
+#xuprhvckjc .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -767,7 +849,7 @@ Important
   padding-right: 5px;
 }
 
-#ajhhptqfer .gt_first_grand_summary_row {
+#xuprhvckjc .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -777,7 +859,7 @@ Important
   border-top-color: #D3D3D3;
 }
 
-#ajhhptqfer .gt_last_grand_summary_row_top {
+#xuprhvckjc .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -787,11 +869,11 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#ajhhptqfer .gt_striped {
+#xuprhvckjc .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ajhhptqfer .gt_table_body {
+#xuprhvckjc .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -800,7 +882,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#ajhhptqfer .gt_footnotes {
+#xuprhvckjc .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -814,7 +896,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#ajhhptqfer .gt_footnote {
+#xuprhvckjc .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -823,7 +905,7 @@ Important
   padding-right: 5px;
 }
 
-#ajhhptqfer .gt_sourcenotes {
+#xuprhvckjc .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -837,7 +919,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#ajhhptqfer .gt_sourcenote {
+#xuprhvckjc .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -845,72 +927,72 @@ Important
   padding-right: 5px;
 }
 
-#ajhhptqfer .gt_left {
+#xuprhvckjc .gt_left {
   text-align: left;
 }
 
-#ajhhptqfer .gt_center {
+#xuprhvckjc .gt_center {
   text-align: center;
 }
 
-#ajhhptqfer .gt_right {
+#xuprhvckjc .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ajhhptqfer .gt_font_normal {
+#xuprhvckjc .gt_font_normal {
   font-weight: normal;
 }
 
-#ajhhptqfer .gt_font_bold {
+#xuprhvckjc .gt_font_bold {
   font-weight: bold;
 }
 
-#ajhhptqfer .gt_font_italic {
+#xuprhvckjc .gt_font_italic {
   font-style: italic;
 }
 
-#ajhhptqfer .gt_super {
+#xuprhvckjc .gt_super {
   font-size: 65%;
 }
 
-#ajhhptqfer .gt_footnote_marks {
+#xuprhvckjc .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ajhhptqfer .gt_asterisk {
+#xuprhvckjc .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ajhhptqfer .gt_indent_1 {
+#xuprhvckjc .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ajhhptqfer .gt_indent_2 {
+#xuprhvckjc .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ajhhptqfer .gt_indent_3 {
+#xuprhvckjc .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ajhhptqfer .gt_indent_4 {
+#xuprhvckjc .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ajhhptqfer .gt_indent_5 {
+#xuprhvckjc .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ajhhptqfer .katex-display {
+#xuprhvckjc .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ajhhptqfer div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#xuprhvckjc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1246,63 +1328,63 @@ Important
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2025 data</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>tmin_data <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">18257037</span>, <span class="st">"2m_temperature_min.parquet"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"2m_temperature_min_mean"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">4218954</span>) <span class="sc">|&gt;</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>name) <span class="sc">|&gt;</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">value =</span> <span class="fu">round</span>(value <span class="sc">-</span> <span class="fl">273.15</span>, <span class="at">digits =</span> <span class="dv">2</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co"># normals</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>tmin_normal <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">18612340</span>, <span class="st">"tmin_monthly_normal_n1981_2010.parquet"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">4218954</span>) <span class="sc">|&gt;</span></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2025 data</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>tmin_data <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">18257037</span>, <span class="st">"2m_temperature_min.parquet"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"2m_temperature_min_mean"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">4218954</span>) <span class="sc">|&gt;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>name) <span class="sc">|&gt;</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">value =</span> <span class="fu">round</span>(value <span class="sc">-</span> <span class="fl">273.15</span>, <span class="at">digits =</span> <span class="dv">2</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co"># normals</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>tmin_normal <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">18612340</span>, <span class="st">"tmin_monthly_normal_n1981_2010.parquet"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">4218954</span>) <span class="sc">|&gt;</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="cell preview-image">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare data for graph</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>tmin_normal_exp <span class="ot">&lt;-</span> tmin_normal <span class="sc">|&gt;</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">as_date</span>(<span class="fu">paste0</span>(<span class="st">"2025-"</span>, month, <span class="st">"-01"</span>))) <span class="sc">|&gt;</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(month) <span class="sc">%&gt;%</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expand</span>(</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">date =</span> <span class="fu">seq.Date</span>(</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>      <span class="fu">floor_date</span>(date, <span class="at">unit =</span> <span class="st">"month"</span>),</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ceiling_date</span>(date, <span class="at">unit =</span> <span class="st">"month"</span>) <span class="sc">-</span> <span class="fu">days</span>(<span class="dv">1</span>),</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>      <span class="at">by =</span> <span class="st">"day"</span></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    normal_mean,</span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    normal_p10,</span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    normal_p90</span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">"normal_"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">substr</span>(name, <span class="dv">8</span>, <span class="dv">100</span>))</span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> tmin_data, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value)) <span class="sc">+</span></span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> tmin_normal_exp, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value, <span class="at">color =</span> name)) <span class="sc">+</span></span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"2025 minimum temperatures and climatological normals"</span>,</span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Urupema, SC"</span>,</span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Normal (1981-2010)"</span>,</span>
-<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Date"</span>,</span>
-<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Celsius degrees"</span></span>
-<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>, <span class="at">legend.direction =</span> <span class="st">"horizontal"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare data for graph</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>tmin_normal_exp <span class="ot">&lt;-</span> tmin_normal <span class="sc">|&gt;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">as_date</span>(<span class="fu">paste0</span>(<span class="st">"2025-"</span>, month, <span class="st">"-01"</span>))) <span class="sc">|&gt;</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(month) <span class="sc">%&gt;%</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expand</span>(</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">date =</span> <span class="fu">seq.Date</span>(</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>      <span class="fu">floor_date</span>(date, <span class="at">unit =</span> <span class="st">"month"</span>),</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ceiling_date</span>(date, <span class="at">unit =</span> <span class="st">"month"</span>) <span class="sc">-</span> <span class="fu">days</span>(<span class="dv">1</span>),</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>      <span class="at">by =</span> <span class="st">"day"</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    normal_mean,</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    normal_p10,</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    normal_p90</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">"normal_"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">substr</span>(name, <span class="dv">8</span>, <span class="dv">100</span>))</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> tmin_data, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value)) <span class="sc">+</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> tmin_normal_exp, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value, <span class="at">color =</span> name)) <span class="sc">+</span></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Minimum temperatures and monthly climatological normals, 2025"</span>,</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Urupema, SC"</span>,</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Normal (1981-2010)"</span>,</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Date"</span>,</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Celsius degrees"</span></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>, <span class="at">legend.direction =</span> <span class="st">"horizontal"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="brazil_climate_event_based_indicators_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="brazil_climate_event_based_indicators_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1313,40 +1395,40 @@ Important
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load event-based indicators and filter for 2024</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">zen_file</span>(<span class="dv">18612340</span>, <span class="st">"tmin_monthly_indi_n1981_2010.parquet"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">4218954</span>) <span class="sc">|&gt;</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2025</span>) <span class="sc">|&gt;</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>code_muni, <span class="sc">-</span>year) <span class="sc">|&gt;</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>() <span class="sc">|&gt;</span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_number</span>(</span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">where</span>(is.double),</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">decimals =</span> <span class="dv">2</span>,</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">use_seps =</span> <span class="cn">FALSE</span></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load event-based indicators and filter for 2024</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">zen_file</span>(<span class="dv">18612340</span>, <span class="st">"tmin_monthly_indi_n1981_2010.parquet"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">4218954</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2025</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>code_muni, <span class="sc">-</span>year) <span class="sc">|&gt;</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>() <span class="sc">|&gt;</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_number</span>(</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">where</span>(is.double),</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">decimals =</span> <span class="dv">2</span>,</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">use_seps =</span> <span class="cn">FALSE</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
-<div id="tsalzoeowu" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#tsalzoeowu table {
+<div id="ktfajecavb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ktfajecavb table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#tsalzoeowu thead, #tsalzoeowu tbody, #tsalzoeowu tfoot, #tsalzoeowu tr, #tsalzoeowu td, #tsalzoeowu th {
+#ktfajecavb thead, #ktfajecavb tbody, #ktfajecavb tfoot, #ktfajecavb tr, #ktfajecavb td, #ktfajecavb th {
   border-style: none;
 }
 
-#tsalzoeowu p {
+#ktfajecavb p {
   margin: 0;
   padding: 0;
 }
 
-#tsalzoeowu .gt_table {
+#ktfajecavb .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1372,12 +1454,12 @@ Important
   border-left-color: #D3D3D3;
 }
 
-#tsalzoeowu .gt_caption {
+#ktfajecavb .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#tsalzoeowu .gt_title {
+#ktfajecavb .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1389,7 +1471,7 @@ Important
   border-bottom-width: 0;
 }
 
-#tsalzoeowu .gt_subtitle {
+#ktfajecavb .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1401,7 +1483,7 @@ Important
   border-top-width: 0;
 }
 
-#tsalzoeowu .gt_heading {
+#ktfajecavb .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1413,13 +1495,13 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#tsalzoeowu .gt_bottom_border {
+#ktfajecavb .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#tsalzoeowu .gt_col_headings {
+#ktfajecavb .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1434,7 +1516,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#tsalzoeowu .gt_col_heading {
+#ktfajecavb .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1454,7 +1536,7 @@ Important
   overflow-x: hidden;
 }
 
-#tsalzoeowu .gt_column_spanner_outer {
+#ktfajecavb .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1466,15 +1548,15 @@ Important
   padding-right: 4px;
 }
 
-#tsalzoeowu .gt_column_spanner_outer:first-child {
+#ktfajecavb .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#tsalzoeowu .gt_column_spanner_outer:last-child {
+#ktfajecavb .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#tsalzoeowu .gt_column_spanner {
+#ktfajecavb .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1486,11 +1568,11 @@ Important
   width: 100%;
 }
 
-#tsalzoeowu .gt_spanner_row {
+#ktfajecavb .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#tsalzoeowu .gt_group_heading {
+#ktfajecavb .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1516,7 +1598,7 @@ Important
   text-align: left;
 }
 
-#tsalzoeowu .gt_empty_group_heading {
+#ktfajecavb .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1531,15 +1613,15 @@ Important
   vertical-align: middle;
 }
 
-#tsalzoeowu .gt_from_md > :first-child {
+#ktfajecavb .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#tsalzoeowu .gt_from_md > :last-child {
+#ktfajecavb .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#tsalzoeowu .gt_row {
+#ktfajecavb .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1558,7 +1640,7 @@ Important
   overflow-x: hidden;
 }
 
-#tsalzoeowu .gt_stub {
+#ktfajecavb .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1571,7 +1653,7 @@ Important
   padding-right: 5px;
 }
 
-#tsalzoeowu .gt_stub_row_group {
+#ktfajecavb .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1585,15 +1667,15 @@ Important
   vertical-align: top;
 }
 
-#tsalzoeowu .gt_row_group_first td {
+#ktfajecavb .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#tsalzoeowu .gt_row_group_first th {
+#ktfajecavb .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#tsalzoeowu .gt_summary_row {
+#ktfajecavb .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1603,16 +1685,16 @@ Important
   padding-right: 5px;
 }
 
-#tsalzoeowu .gt_first_summary_row {
+#ktfajecavb .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#tsalzoeowu .gt_first_summary_row.thick {
+#ktfajecavb .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#tsalzoeowu .gt_last_summary_row {
+#ktfajecavb .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1622,7 +1704,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#tsalzoeowu .gt_grand_summary_row {
+#ktfajecavb .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1632,7 +1714,7 @@ Important
   padding-right: 5px;
 }
 
-#tsalzoeowu .gt_first_grand_summary_row {
+#ktfajecavb .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1642,7 +1724,7 @@ Important
   border-top-color: #D3D3D3;
 }
 
-#tsalzoeowu .gt_last_grand_summary_row_top {
+#ktfajecavb .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1652,11 +1734,11 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#tsalzoeowu .gt_striped {
+#ktfajecavb .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#tsalzoeowu .gt_table_body {
+#ktfajecavb .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1665,7 +1747,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#tsalzoeowu .gt_footnotes {
+#ktfajecavb .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1679,7 +1761,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#tsalzoeowu .gt_footnote {
+#ktfajecavb .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1688,7 +1770,7 @@ Important
   padding-right: 5px;
 }
 
-#tsalzoeowu .gt_sourcenotes {
+#ktfajecavb .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1702,7 +1784,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#tsalzoeowu .gt_sourcenote {
+#ktfajecavb .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1710,72 +1792,72 @@ Important
   padding-right: 5px;
 }
 
-#tsalzoeowu .gt_left {
+#ktfajecavb .gt_left {
   text-align: left;
 }
 
-#tsalzoeowu .gt_center {
+#ktfajecavb .gt_center {
   text-align: center;
 }
 
-#tsalzoeowu .gt_right {
+#ktfajecavb .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#tsalzoeowu .gt_font_normal {
+#ktfajecavb .gt_font_normal {
   font-weight: normal;
 }
 
-#tsalzoeowu .gt_font_bold {
+#ktfajecavb .gt_font_bold {
   font-weight: bold;
 }
 
-#tsalzoeowu .gt_font_italic {
+#ktfajecavb .gt_font_italic {
   font-style: italic;
 }
 
-#tsalzoeowu .gt_super {
+#ktfajecavb .gt_super {
   font-size: 65%;
 }
 
-#tsalzoeowu .gt_footnote_marks {
+#ktfajecavb .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#tsalzoeowu .gt_asterisk {
+#ktfajecavb .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#tsalzoeowu .gt_indent_1 {
+#ktfajecavb .gt_indent_1 {
   text-indent: 5px;
 }
 
-#tsalzoeowu .gt_indent_2 {
+#ktfajecavb .gt_indent_2 {
   text-indent: 10px;
 }
 
-#tsalzoeowu .gt_indent_3 {
+#ktfajecavb .gt_indent_3 {
   text-indent: 15px;
 }
 
-#tsalzoeowu .gt_indent_4 {
+#ktfajecavb .gt_indent_4 {
   text-indent: 20px;
 }
 
-#tsalzoeowu .gt_indent_5 {
+#ktfajecavb .gt_indent_5 {
   text-indent: 25px;
 }
 
-#tsalzoeowu .katex-display {
+#ktfajecavb .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#tsalzoeowu div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ktfajecavb div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2124,62 +2206,62 @@ Important
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2025 data</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>rh_data <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">18392587</span>, <span class="st">"rh_mean_mean_2025.parquet"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"rh_mean_mean"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">5001102</span>) <span class="sc">|&gt;</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>name) <span class="sc">|&gt;</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co"># normals</span></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>rh_normal <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">18612340</span>, <span class="st">"rh_normal_monthly_n1981_2010.parquet"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">5001102</span>) <span class="sc">|&gt;</span></span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2025 data</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>rh_data <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">18392587</span>, <span class="st">"rh_mean_mean_2025.parquet"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"rh_mean_mean"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">5001102</span>) <span class="sc">|&gt;</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>name) <span class="sc">|&gt;</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co"># normals</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>rh_normal <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">18612340</span>, <span class="st">"rh_normal_monthly_n1981_2010.parquet"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">5001102</span>) <span class="sc">|&gt;</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="cell preview-image">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare data for graph</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>rh_normal_exp <span class="ot">&lt;-</span> rh_normal <span class="sc">|&gt;</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">as_date</span>(<span class="fu">paste0</span>(<span class="st">"2025-"</span>, month, <span class="st">"-01"</span>))) <span class="sc">|&gt;</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(month) <span class="sc">%&gt;%</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expand</span>(</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">date =</span> <span class="fu">seq.Date</span>(</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>      <span class="fu">floor_date</span>(date, <span class="at">unit =</span> <span class="st">"month"</span>),</span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ceiling_date</span>(date, <span class="at">unit =</span> <span class="st">"month"</span>) <span class="sc">-</span> <span class="fu">days</span>(<span class="dv">1</span>),</span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>      <span class="at">by =</span> <span class="st">"day"</span></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    normal_mean,</span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    normal_p10,</span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    normal_p90</span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">"normal_"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">substr</span>(name, <span class="dv">8</span>, <span class="dv">100</span>))</span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
-<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> rh_data, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value)) <span class="sc">+</span></span>
-<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> rh_normal_exp, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value, <span class="at">color =</span> name)) <span class="sc">+</span></span>
-<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"2025 relative humidity and climatological normals"</span>,</span>
-<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Aquidauana, MS"</span>,</span>
-<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Normal (1981-2010)"</span>,</span>
-<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Date"</span>,</span>
-<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"%"</span></span>
-<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>, <span class="at">legend.direction =</span> <span class="st">"horizontal"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare data for graph</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>rh_normal_exp <span class="ot">&lt;-</span> rh_normal <span class="sc">|&gt;</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">as_date</span>(<span class="fu">paste0</span>(<span class="st">"2025-"</span>, month, <span class="st">"-01"</span>))) <span class="sc">|&gt;</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(month) <span class="sc">%&gt;%</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expand</span>(</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">date =</span> <span class="fu">seq.Date</span>(</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>      <span class="fu">floor_date</span>(date, <span class="at">unit =</span> <span class="st">"month"</span>),</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ceiling_date</span>(date, <span class="at">unit =</span> <span class="st">"month"</span>) <span class="sc">-</span> <span class="fu">days</span>(<span class="dv">1</span>),</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>      <span class="at">by =</span> <span class="st">"day"</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    normal_mean,</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    normal_p10,</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    normal_p90</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">"normal_"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">substr</span>(name, <span class="dv">8</span>, <span class="dv">100</span>))</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> rh_data, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value)) <span class="sc">+</span></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> rh_normal_exp, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value, <span class="at">color =</span> name)) <span class="sc">+</span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Relative humidity and monthly climatological normals, 2025"</span>,</span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Aquidauana, MS"</span>,</span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Normal (1981-2010)"</span>,</span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Date"</span>,</span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"%"</span></span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>, <span class="at">legend.direction =</span> <span class="st">"horizontal"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="brazil_climate_event_based_indicators_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="brazil_climate_event_based_indicators_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -2190,40 +2272,40 @@ Important
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load event-based indicators and filter for 2024</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">zen_file</span>(<span class="dv">18612340</span>, <span class="st">"rh_indi_monthly_n1981_2010.parquet"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">5001102</span>) <span class="sc">|&gt;</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2025</span>) <span class="sc">|&gt;</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>code_muni, <span class="sc">-</span>year) <span class="sc">|&gt;</span></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>() <span class="sc">|&gt;</span></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span></span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_number</span>(</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">where</span>(is.double),</span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">decimals =</span> <span class="dv">2</span>,</span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">use_seps =</span> <span class="cn">FALSE</span></span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load event-based indicators and filter for 2024</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">zen_file</span>(<span class="dv">18612340</span>, <span class="st">"rh_indi_monthly_n1981_2010.parquet"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">5001102</span>) <span class="sc">|&gt;</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2025</span>) <span class="sc">|&gt;</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>code_muni, <span class="sc">-</span>year) <span class="sc">|&gt;</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>() <span class="sc">|&gt;</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_number</span>(</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">where</span>(is.double),</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">decimals =</span> <span class="dv">2</span>,</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">use_seps =</span> <span class="cn">FALSE</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
-<div id="jzkpczcvsk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#jzkpczcvsk table {
+<div id="cfejculyuz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#cfejculyuz table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#jzkpczcvsk thead, #jzkpczcvsk tbody, #jzkpczcvsk tfoot, #jzkpczcvsk tr, #jzkpczcvsk td, #jzkpczcvsk th {
+#cfejculyuz thead, #cfejculyuz tbody, #cfejculyuz tfoot, #cfejculyuz tr, #cfejculyuz td, #cfejculyuz th {
   border-style: none;
 }
 
-#jzkpczcvsk p {
+#cfejculyuz p {
   margin: 0;
   padding: 0;
 }
 
-#jzkpczcvsk .gt_table {
+#cfejculyuz .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2249,12 +2331,12 @@ Important
   border-left-color: #D3D3D3;
 }
 
-#jzkpczcvsk .gt_caption {
+#cfejculyuz .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#jzkpczcvsk .gt_title {
+#cfejculyuz .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2266,7 +2348,7 @@ Important
   border-bottom-width: 0;
 }
 
-#jzkpczcvsk .gt_subtitle {
+#cfejculyuz .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2278,7 +2360,7 @@ Important
   border-top-width: 0;
 }
 
-#jzkpczcvsk .gt_heading {
+#cfejculyuz .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2290,13 +2372,13 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#jzkpczcvsk .gt_bottom_border {
+#cfejculyuz .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#jzkpczcvsk .gt_col_headings {
+#cfejculyuz .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2311,7 +2393,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#jzkpczcvsk .gt_col_heading {
+#cfejculyuz .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2331,7 +2413,7 @@ Important
   overflow-x: hidden;
 }
 
-#jzkpczcvsk .gt_column_spanner_outer {
+#cfejculyuz .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2343,15 +2425,15 @@ Important
   padding-right: 4px;
 }
 
-#jzkpczcvsk .gt_column_spanner_outer:first-child {
+#cfejculyuz .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#jzkpczcvsk .gt_column_spanner_outer:last-child {
+#cfejculyuz .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#jzkpczcvsk .gt_column_spanner {
+#cfejculyuz .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2363,11 +2445,11 @@ Important
   width: 100%;
 }
 
-#jzkpczcvsk .gt_spanner_row {
+#cfejculyuz .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#jzkpczcvsk .gt_group_heading {
+#cfejculyuz .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2393,7 +2475,7 @@ Important
   text-align: left;
 }
 
-#jzkpczcvsk .gt_empty_group_heading {
+#cfejculyuz .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2408,15 +2490,15 @@ Important
   vertical-align: middle;
 }
 
-#jzkpczcvsk .gt_from_md > :first-child {
+#cfejculyuz .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#jzkpczcvsk .gt_from_md > :last-child {
+#cfejculyuz .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#jzkpczcvsk .gt_row {
+#cfejculyuz .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2435,7 +2517,7 @@ Important
   overflow-x: hidden;
 }
 
-#jzkpczcvsk .gt_stub {
+#cfejculyuz .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2448,7 +2530,7 @@ Important
   padding-right: 5px;
 }
 
-#jzkpczcvsk .gt_stub_row_group {
+#cfejculyuz .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2462,15 +2544,15 @@ Important
   vertical-align: top;
 }
 
-#jzkpczcvsk .gt_row_group_first td {
+#cfejculyuz .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#jzkpczcvsk .gt_row_group_first th {
+#cfejculyuz .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#jzkpczcvsk .gt_summary_row {
+#cfejculyuz .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2480,16 +2562,16 @@ Important
   padding-right: 5px;
 }
 
-#jzkpczcvsk .gt_first_summary_row {
+#cfejculyuz .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#jzkpczcvsk .gt_first_summary_row.thick {
+#cfejculyuz .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#jzkpczcvsk .gt_last_summary_row {
+#cfejculyuz .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2499,7 +2581,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#jzkpczcvsk .gt_grand_summary_row {
+#cfejculyuz .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2509,7 +2591,7 @@ Important
   padding-right: 5px;
 }
 
-#jzkpczcvsk .gt_first_grand_summary_row {
+#cfejculyuz .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2519,7 +2601,7 @@ Important
   border-top-color: #D3D3D3;
 }
 
-#jzkpczcvsk .gt_last_grand_summary_row_top {
+#cfejculyuz .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2529,11 +2611,11 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#jzkpczcvsk .gt_striped {
+#cfejculyuz .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#jzkpczcvsk .gt_table_body {
+#cfejculyuz .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2542,7 +2624,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#jzkpczcvsk .gt_footnotes {
+#cfejculyuz .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2556,7 +2638,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#jzkpczcvsk .gt_footnote {
+#cfejculyuz .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2565,7 +2647,7 @@ Important
   padding-right: 5px;
 }
 
-#jzkpczcvsk .gt_sourcenotes {
+#cfejculyuz .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2579,7 +2661,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#jzkpczcvsk .gt_sourcenote {
+#cfejculyuz .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2587,72 +2669,72 @@ Important
   padding-right: 5px;
 }
 
-#jzkpczcvsk .gt_left {
+#cfejculyuz .gt_left {
   text-align: left;
 }
 
-#jzkpczcvsk .gt_center {
+#cfejculyuz .gt_center {
   text-align: center;
 }
 
-#jzkpczcvsk .gt_right {
+#cfejculyuz .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#jzkpczcvsk .gt_font_normal {
+#cfejculyuz .gt_font_normal {
   font-weight: normal;
 }
 
-#jzkpczcvsk .gt_font_bold {
+#cfejculyuz .gt_font_bold {
   font-weight: bold;
 }
 
-#jzkpczcvsk .gt_font_italic {
+#cfejculyuz .gt_font_italic {
   font-style: italic;
 }
 
-#jzkpczcvsk .gt_super {
+#cfejculyuz .gt_super {
   font-size: 65%;
 }
 
-#jzkpczcvsk .gt_footnote_marks {
+#cfejculyuz .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#jzkpczcvsk .gt_asterisk {
+#cfejculyuz .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#jzkpczcvsk .gt_indent_1 {
+#cfejculyuz .gt_indent_1 {
   text-indent: 5px;
 }
 
-#jzkpczcvsk .gt_indent_2 {
+#cfejculyuz .gt_indent_2 {
   text-indent: 10px;
 }
 
-#jzkpczcvsk .gt_indent_3 {
+#cfejculyuz .gt_indent_3 {
   text-indent: 15px;
 }
 
-#jzkpczcvsk .gt_indent_4 {
+#cfejculyuz .gt_indent_4 {
   text-indent: 20px;
 }
 
-#jzkpczcvsk .gt_indent_5 {
+#cfejculyuz .gt_indent_5 {
   text-indent: 25px;
 }
 
-#jzkpczcvsk .katex-display {
+#cfejculyuz .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#jzkpczcvsk div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#cfejculyuz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3014,63 +3096,63 @@ Important
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2025 data</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>prec_data <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">18257037</span>, <span class="st">"total_precipitation_sum.parquet"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"total_precipitation_sum_mean"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">1600204</span>) <span class="sc">|&gt;</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">value =</span> <span class="fu">round</span>(value <span class="sc">*</span> <span class="dv">1000</span>, <span class="at">digits =</span> <span class="dv">2</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>name) <span class="sc">|&gt;</span></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="co"># normals</span></span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>prec_normal <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">18612340</span>, <span class="st">"prec_monthly_normal_n1981_2010.parquet"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">1600204</span>) <span class="sc">|&gt;</span></span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2025 data</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>prec_data <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">18257037</span>, <span class="st">"total_precipitation_sum.parquet"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"total_precipitation_sum_mean"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">1600204</span>) <span class="sc">|&gt;</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">value =</span> <span class="fu">round</span>(value <span class="sc">*</span> <span class="dv">1000</span>, <span class="at">digits =</span> <span class="dv">2</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>name) <span class="sc">|&gt;</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="co"># normals</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>prec_normal <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">18612340</span>, <span class="st">"prec_monthly_normal_n1981_2010.parquet"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">1600204</span>) <span class="sc">|&gt;</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="cell preview-image">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare data for graph</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>prec_normal_exp <span class="ot">&lt;-</span> prec_normal <span class="sc">|&gt;</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">as_date</span>(<span class="fu">paste0</span>(<span class="st">"2025-"</span>, month, <span class="st">"-01"</span>))) <span class="sc">|&gt;</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(month) <span class="sc">%&gt;%</span></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expand</span>(</span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">date =</span> <span class="fu">seq.Date</span>(</span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>      <span class="fu">floor_date</span>(date, <span class="at">unit =</span> <span class="st">"month"</span>),</span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ceiling_date</span>(date, <span class="at">unit =</span> <span class="st">"month"</span>) <span class="sc">-</span> <span class="fu">days</span>(<span class="dv">1</span>),</span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>      <span class="at">by =</span> <span class="st">"day"</span></span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>    normal_mean,</span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>    normal_p10,</span>
-<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>    normal_p90</span>
-<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">"normal_"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">substr</span>(name, <span class="dv">8</span>, <span class="dv">100</span>))</span>
-<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
-<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> prec_data, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value)) <span class="sc">+</span></span>
-<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> prec_normal_exp, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value, <span class="at">color =</span> name)) <span class="sc">+</span></span>
-<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"2025 precipitation and climatological normals"</span>,</span>
-<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Calçoene, AP"</span>,</span>
-<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Normal (1981-2010)"</span>,</span>
-<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Date"</span>,</span>
-<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"mm"</span></span>
-<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>, <span class="at">legend.direction =</span> <span class="st">"horizontal"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare data for graph</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>prec_normal_exp <span class="ot">&lt;-</span> prec_normal <span class="sc">|&gt;</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">as_date</span>(<span class="fu">paste0</span>(<span class="st">"2025-"</span>, month, <span class="st">"-01"</span>))) <span class="sc">|&gt;</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(month) <span class="sc">%&gt;%</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expand</span>(</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">date =</span> <span class="fu">seq.Date</span>(</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>      <span class="fu">floor_date</span>(date, <span class="at">unit =</span> <span class="st">"month"</span>),</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ceiling_date</span>(date, <span class="at">unit =</span> <span class="st">"month"</span>) <span class="sc">-</span> <span class="fu">days</span>(<span class="dv">1</span>),</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>      <span class="at">by =</span> <span class="st">"day"</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>    normal_mean,</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>    normal_p10,</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>    normal_p90</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">"normal_"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">substr</span>(name, <span class="dv">8</span>, <span class="dv">100</span>))</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> prec_data, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value)) <span class="sc">+</span></span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> prec_normal_exp, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value, <span class="at">color =</span> name)) <span class="sc">+</span></span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Precipitation and monthly climatological normals, 2025"</span>,</span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Calçoene, AP"</span>,</span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Normal (1981-2010)"</span>,</span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Date"</span>,</span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"mm"</span></span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>, <span class="at">legend.direction =</span> <span class="st">"horizontal"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="brazil_climate_event_based_indicators_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="brazil_climate_event_based_indicators_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -3081,40 +3163,40 @@ Important
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load event-based indicators and filter for 2024</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">zen_file</span>(<span class="dv">18612340</span>, <span class="st">"prec_monthly_indi_n1981_2010.parquet"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">5001102</span>) <span class="sc">|&gt;</span></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2025</span>) <span class="sc">|&gt;</span></span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>code_muni, <span class="sc">-</span>year) <span class="sc">|&gt;</span></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>() <span class="sc">|&gt;</span></span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span></span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_number</span>(</span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">where</span>(is.double),</span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">decimals =</span> <span class="dv">2</span>,</span>
-<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">use_seps =</span> <span class="cn">FALSE</span></span>
-<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load event-based indicators and filter for 2024</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">zen_file</span>(<span class="dv">18612340</span>, <span class="st">"prec_monthly_indi_n1981_2010.parquet"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">5001102</span>) <span class="sc">|&gt;</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2025</span>) <span class="sc">|&gt;</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>code_muni, <span class="sc">-</span>year) <span class="sc">|&gt;</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>() <span class="sc">|&gt;</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_number</span>(</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">where</span>(is.double),</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">decimals =</span> <span class="dv">2</span>,</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">use_seps =</span> <span class="cn">FALSE</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
-<div id="lmbbjxmvne" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#lmbbjxmvne table {
+<div id="bwqehcoohy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#bwqehcoohy table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#lmbbjxmvne thead, #lmbbjxmvne tbody, #lmbbjxmvne tfoot, #lmbbjxmvne tr, #lmbbjxmvne td, #lmbbjxmvne th {
+#bwqehcoohy thead, #bwqehcoohy tbody, #bwqehcoohy tfoot, #bwqehcoohy tr, #bwqehcoohy td, #bwqehcoohy th {
   border-style: none;
 }
 
-#lmbbjxmvne p {
+#bwqehcoohy p {
   margin: 0;
   padding: 0;
 }
 
-#lmbbjxmvne .gt_table {
+#bwqehcoohy .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3140,12 +3222,12 @@ Important
   border-left-color: #D3D3D3;
 }
 
-#lmbbjxmvne .gt_caption {
+#bwqehcoohy .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#lmbbjxmvne .gt_title {
+#bwqehcoohy .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3157,7 +3239,7 @@ Important
   border-bottom-width: 0;
 }
 
-#lmbbjxmvne .gt_subtitle {
+#bwqehcoohy .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3169,7 +3251,7 @@ Important
   border-top-width: 0;
 }
 
-#lmbbjxmvne .gt_heading {
+#bwqehcoohy .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3181,13 +3263,13 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#lmbbjxmvne .gt_bottom_border {
+#bwqehcoohy .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#lmbbjxmvne .gt_col_headings {
+#bwqehcoohy .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3202,7 +3284,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#lmbbjxmvne .gt_col_heading {
+#bwqehcoohy .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3222,7 +3304,7 @@ Important
   overflow-x: hidden;
 }
 
-#lmbbjxmvne .gt_column_spanner_outer {
+#bwqehcoohy .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3234,15 +3316,15 @@ Important
   padding-right: 4px;
 }
 
-#lmbbjxmvne .gt_column_spanner_outer:first-child {
+#bwqehcoohy .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#lmbbjxmvne .gt_column_spanner_outer:last-child {
+#bwqehcoohy .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#lmbbjxmvne .gt_column_spanner {
+#bwqehcoohy .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3254,11 +3336,11 @@ Important
   width: 100%;
 }
 
-#lmbbjxmvne .gt_spanner_row {
+#bwqehcoohy .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#lmbbjxmvne .gt_group_heading {
+#bwqehcoohy .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3284,7 +3366,7 @@ Important
   text-align: left;
 }
 
-#lmbbjxmvne .gt_empty_group_heading {
+#bwqehcoohy .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3299,15 +3381,15 @@ Important
   vertical-align: middle;
 }
 
-#lmbbjxmvne .gt_from_md > :first-child {
+#bwqehcoohy .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#lmbbjxmvne .gt_from_md > :last-child {
+#bwqehcoohy .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#lmbbjxmvne .gt_row {
+#bwqehcoohy .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3326,7 +3408,7 @@ Important
   overflow-x: hidden;
 }
 
-#lmbbjxmvne .gt_stub {
+#bwqehcoohy .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3339,7 +3421,7 @@ Important
   padding-right: 5px;
 }
 
-#lmbbjxmvne .gt_stub_row_group {
+#bwqehcoohy .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3353,15 +3435,15 @@ Important
   vertical-align: top;
 }
 
-#lmbbjxmvne .gt_row_group_first td {
+#bwqehcoohy .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#lmbbjxmvne .gt_row_group_first th {
+#bwqehcoohy .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#lmbbjxmvne .gt_summary_row {
+#bwqehcoohy .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3371,16 +3453,16 @@ Important
   padding-right: 5px;
 }
 
-#lmbbjxmvne .gt_first_summary_row {
+#bwqehcoohy .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#lmbbjxmvne .gt_first_summary_row.thick {
+#bwqehcoohy .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#lmbbjxmvne .gt_last_summary_row {
+#bwqehcoohy .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3390,7 +3472,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#lmbbjxmvne .gt_grand_summary_row {
+#bwqehcoohy .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3400,7 +3482,7 @@ Important
   padding-right: 5px;
 }
 
-#lmbbjxmvne .gt_first_grand_summary_row {
+#bwqehcoohy .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3410,7 +3492,7 @@ Important
   border-top-color: #D3D3D3;
 }
 
-#lmbbjxmvne .gt_last_grand_summary_row_top {
+#bwqehcoohy .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3420,11 +3502,11 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#lmbbjxmvne .gt_striped {
+#bwqehcoohy .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#lmbbjxmvne .gt_table_body {
+#bwqehcoohy .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3433,7 +3515,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#lmbbjxmvne .gt_footnotes {
+#bwqehcoohy .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3447,7 +3529,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#lmbbjxmvne .gt_footnote {
+#bwqehcoohy .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3456,7 +3538,7 @@ Important
   padding-right: 5px;
 }
 
-#lmbbjxmvne .gt_sourcenotes {
+#bwqehcoohy .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3470,7 +3552,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#lmbbjxmvne .gt_sourcenote {
+#bwqehcoohy .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3478,72 +3560,72 @@ Important
   padding-right: 5px;
 }
 
-#lmbbjxmvne .gt_left {
+#bwqehcoohy .gt_left {
   text-align: left;
 }
 
-#lmbbjxmvne .gt_center {
+#bwqehcoohy .gt_center {
   text-align: center;
 }
 
-#lmbbjxmvne .gt_right {
+#bwqehcoohy .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#lmbbjxmvne .gt_font_normal {
+#bwqehcoohy .gt_font_normal {
   font-weight: normal;
 }
 
-#lmbbjxmvne .gt_font_bold {
+#bwqehcoohy .gt_font_bold {
   font-weight: bold;
 }
 
-#lmbbjxmvne .gt_font_italic {
+#bwqehcoohy .gt_font_italic {
   font-style: italic;
 }
 
-#lmbbjxmvne .gt_super {
+#bwqehcoohy .gt_super {
   font-size: 65%;
 }
 
-#lmbbjxmvne .gt_footnote_marks {
+#bwqehcoohy .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#lmbbjxmvne .gt_asterisk {
+#bwqehcoohy .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#lmbbjxmvne .gt_indent_1 {
+#bwqehcoohy .gt_indent_1 {
   text-indent: 5px;
 }
 
-#lmbbjxmvne .gt_indent_2 {
+#bwqehcoohy .gt_indent_2 {
   text-indent: 10px;
 }
 
-#lmbbjxmvne .gt_indent_3 {
+#bwqehcoohy .gt_indent_3 {
   text-indent: 15px;
 }
 
-#lmbbjxmvne .gt_indent_4 {
+#bwqehcoohy .gt_indent_4 {
   text-indent: 20px;
 }
 
-#lmbbjxmvne .gt_indent_5 {
+#bwqehcoohy .gt_indent_5 {
   text-indent: 25px;
 }
 
-#lmbbjxmvne .katex-display {
+#bwqehcoohy .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#lmbbjxmvne div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#bwqehcoohy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3957,62 +4039,62 @@ Important
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2025 data</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>ws_data <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">18390794</span>, <span class="st">"wind_speed_mean_mean_2025.parquet"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"wind_speed_mean_mean"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">1600204</span>) <span class="sc">|&gt;</span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>name) <span class="sc">|&gt;</span></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="co"># normals</span></span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>ws_normal <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">18612340</span>, <span class="st">"ws_monthly_normal_n1981_2010.parquet"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">1600204</span>) <span class="sc">|&gt;</span></span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2025 data</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>ws_data <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">18390794</span>, <span class="st">"wind_speed_mean_mean_2025.parquet"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"wind_speed_mean_mean"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">1600204</span>) <span class="sc">|&gt;</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>name) <span class="sc">|&gt;</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="co"># normals</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>ws_normal <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">18612340</span>, <span class="st">"ws_monthly_normal_n1981_2010.parquet"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">1600204</span>) <span class="sc">|&gt;</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="cell preview-image">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare data for graph</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>ws_normal_exp <span class="ot">&lt;-</span> ws_normal <span class="sc">|&gt;</span></span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">as_date</span>(<span class="fu">paste0</span>(<span class="st">"2025-"</span>, month, <span class="st">"-01"</span>))) <span class="sc">|&gt;</span></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(month) <span class="sc">%&gt;%</span></span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expand</span>(</span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">date =</span> <span class="fu">seq.Date</span>(</span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>      <span class="fu">floor_date</span>(date, <span class="at">unit =</span> <span class="st">"month"</span>),</span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ceiling_date</span>(date, <span class="at">unit =</span> <span class="st">"month"</span>) <span class="sc">-</span> <span class="fu">days</span>(<span class="dv">1</span>),</span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>      <span class="at">by =</span> <span class="st">"day"</span></span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>    normal_mean,</span>
-<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>    normal_p10,</span>
-<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>    normal_p90</span>
-<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">"normal_"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">substr</span>(name, <span class="dv">8</span>, <span class="dv">100</span>))</span>
-<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
-<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> ws_data, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value)) <span class="sc">+</span></span>
-<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> ws_normal_exp, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value, <span class="at">color =</span> name)) <span class="sc">+</span></span>
-<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"2025 wind speed and climatological normals"</span>,</span>
-<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Caetité, BA"</span>,</span>
-<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Normal (1981-2010)"</span>,</span>
-<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Date"</span>,</span>
-<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"m/s"</span></span>
-<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>, <span class="at">legend.direction =</span> <span class="st">"horizontal"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare data for graph</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>ws_normal_exp <span class="ot">&lt;-</span> ws_normal <span class="sc">|&gt;</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">as_date</span>(<span class="fu">paste0</span>(<span class="st">"2025-"</span>, month, <span class="st">"-01"</span>))) <span class="sc">|&gt;</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(month) <span class="sc">%&gt;%</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expand</span>(</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">date =</span> <span class="fu">seq.Date</span>(</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>      <span class="fu">floor_date</span>(date, <span class="at">unit =</span> <span class="st">"month"</span>),</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ceiling_date</span>(date, <span class="at">unit =</span> <span class="st">"month"</span>) <span class="sc">-</span> <span class="fu">days</span>(<span class="dv">1</span>),</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>      <span class="at">by =</span> <span class="st">"day"</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>    normal_mean,</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>    normal_p10,</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>    normal_p90</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">"normal_"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">substr</span>(name, <span class="dv">8</span>, <span class="dv">100</span>))</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> ws_data, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value)) <span class="sc">+</span></span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> ws_normal_exp, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value, <span class="at">color =</span> name)) <span class="sc">+</span></span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Wind speed and monthly climatological normals, 2025"</span>,</span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Caetité, BA"</span>,</span>
+<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Normal (1981-2010)"</span>,</span>
+<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Date"</span>,</span>
+<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"m/s"</span></span>
+<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb16-33"><a href="#cb16-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>, <span class="at">legend.direction =</span> <span class="st">"horizontal"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="brazil_climate_event_based_indicators_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="brazil_climate_event_based_indicators_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -4023,40 +4105,40 @@ Important
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load event-based indicators and filter for 2024</span></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="fu">zen_file</span>(<span class="dv">18612340</span>, <span class="st">"ws_monthly_indi_n1981_2010.parquet"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">5001102</span>) <span class="sc">|&gt;</span></span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2025</span>) <span class="sc">|&gt;</span></span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>code_muni, <span class="sc">-</span>year) <span class="sc">|&gt;</span></span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>() <span class="sc">|&gt;</span></span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span></span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_number</span>(</span>
-<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">where</span>(is.double),</span>
-<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">decimals =</span> <span class="dv">2</span>,</span>
-<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">use_seps =</span> <span class="cn">FALSE</span></span>
-<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load event-based indicators and filter for 2024</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="fu">zen_file</span>(<span class="dv">18612340</span>, <span class="st">"ws_monthly_indi_n1981_2010.parquet"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">5001102</span>) <span class="sc">|&gt;</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2025</span>) <span class="sc">|&gt;</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>code_muni, <span class="sc">-</span>year) <span class="sc">|&gt;</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>() <span class="sc">|&gt;</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_number</span>(</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">where</span>(is.double),</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">decimals =</span> <span class="dv">2</span>,</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">use_seps =</span> <span class="cn">FALSE</span></span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
-<div id="iiekkkbzoo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#iiekkkbzoo table {
+<div id="htqznmtdyl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#htqznmtdyl table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#iiekkkbzoo thead, #iiekkkbzoo tbody, #iiekkkbzoo tfoot, #iiekkkbzoo tr, #iiekkkbzoo td, #iiekkkbzoo th {
+#htqznmtdyl thead, #htqznmtdyl tbody, #htqznmtdyl tfoot, #htqznmtdyl tr, #htqznmtdyl td, #htqznmtdyl th {
   border-style: none;
 }
 
-#iiekkkbzoo p {
+#htqznmtdyl p {
   margin: 0;
   padding: 0;
 }
 
-#iiekkkbzoo .gt_table {
+#htqznmtdyl .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -4082,12 +4164,12 @@ Important
   border-left-color: #D3D3D3;
 }
 
-#iiekkkbzoo .gt_caption {
+#htqznmtdyl .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#iiekkkbzoo .gt_title {
+#htqznmtdyl .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -4099,7 +4181,7 @@ Important
   border-bottom-width: 0;
 }
 
-#iiekkkbzoo .gt_subtitle {
+#htqznmtdyl .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -4111,7 +4193,7 @@ Important
   border-top-width: 0;
 }
 
-#iiekkkbzoo .gt_heading {
+#htqznmtdyl .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -4123,13 +4205,13 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#iiekkkbzoo .gt_bottom_border {
+#htqznmtdyl .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#iiekkkbzoo .gt_col_headings {
+#htqznmtdyl .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4144,7 +4226,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#iiekkkbzoo .gt_col_heading {
+#htqznmtdyl .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4164,7 +4246,7 @@ Important
   overflow-x: hidden;
 }
 
-#iiekkkbzoo .gt_column_spanner_outer {
+#htqznmtdyl .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4176,15 +4258,15 @@ Important
   padding-right: 4px;
 }
 
-#iiekkkbzoo .gt_column_spanner_outer:first-child {
+#htqznmtdyl .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#iiekkkbzoo .gt_column_spanner_outer:last-child {
+#htqznmtdyl .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#iiekkkbzoo .gt_column_spanner {
+#htqznmtdyl .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4196,11 +4278,11 @@ Important
   width: 100%;
 }
 
-#iiekkkbzoo .gt_spanner_row {
+#htqznmtdyl .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#iiekkkbzoo .gt_group_heading {
+#htqznmtdyl .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4226,7 +4308,7 @@ Important
   text-align: left;
 }
 
-#iiekkkbzoo .gt_empty_group_heading {
+#htqznmtdyl .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4241,15 +4323,15 @@ Important
   vertical-align: middle;
 }
 
-#iiekkkbzoo .gt_from_md > :first-child {
+#htqznmtdyl .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#iiekkkbzoo .gt_from_md > :last-child {
+#htqznmtdyl .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#iiekkkbzoo .gt_row {
+#htqznmtdyl .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4268,7 +4350,7 @@ Important
   overflow-x: hidden;
 }
 
-#iiekkkbzoo .gt_stub {
+#htqznmtdyl .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4281,7 +4363,7 @@ Important
   padding-right: 5px;
 }
 
-#iiekkkbzoo .gt_stub_row_group {
+#htqznmtdyl .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4295,15 +4377,15 @@ Important
   vertical-align: top;
 }
 
-#iiekkkbzoo .gt_row_group_first td {
+#htqznmtdyl .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#iiekkkbzoo .gt_row_group_first th {
+#htqznmtdyl .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#iiekkkbzoo .gt_summary_row {
+#htqznmtdyl .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4313,16 +4395,16 @@ Important
   padding-right: 5px;
 }
 
-#iiekkkbzoo .gt_first_summary_row {
+#htqznmtdyl .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#iiekkkbzoo .gt_first_summary_row.thick {
+#htqznmtdyl .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#iiekkkbzoo .gt_last_summary_row {
+#htqznmtdyl .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4332,7 +4414,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#iiekkkbzoo .gt_grand_summary_row {
+#htqznmtdyl .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4342,7 +4424,7 @@ Important
   padding-right: 5px;
 }
 
-#iiekkkbzoo .gt_first_grand_summary_row {
+#htqznmtdyl .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4352,7 +4434,7 @@ Important
   border-top-color: #D3D3D3;
 }
 
-#iiekkkbzoo .gt_last_grand_summary_row_top {
+#htqznmtdyl .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4362,11 +4444,11 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#iiekkkbzoo .gt_striped {
+#htqznmtdyl .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#iiekkkbzoo .gt_table_body {
+#htqznmtdyl .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4375,7 +4457,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#iiekkkbzoo .gt_footnotes {
+#htqznmtdyl .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4389,7 +4471,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#iiekkkbzoo .gt_footnote {
+#htqznmtdyl .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4398,7 +4480,7 @@ Important
   padding-right: 5px;
 }
 
-#iiekkkbzoo .gt_sourcenotes {
+#htqznmtdyl .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4412,7 +4494,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#iiekkkbzoo .gt_sourcenote {
+#htqznmtdyl .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4420,72 +4502,72 @@ Important
   padding-right: 5px;
 }
 
-#iiekkkbzoo .gt_left {
+#htqznmtdyl .gt_left {
   text-align: left;
 }
 
-#iiekkkbzoo .gt_center {
+#htqznmtdyl .gt_center {
   text-align: center;
 }
 
-#iiekkkbzoo .gt_right {
+#htqznmtdyl .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#iiekkkbzoo .gt_font_normal {
+#htqznmtdyl .gt_font_normal {
   font-weight: normal;
 }
 
-#iiekkkbzoo .gt_font_bold {
+#htqznmtdyl .gt_font_bold {
   font-weight: bold;
 }
 
-#iiekkkbzoo .gt_font_italic {
+#htqznmtdyl .gt_font_italic {
   font-style: italic;
 }
 
-#iiekkkbzoo .gt_super {
+#htqznmtdyl .gt_super {
   font-size: 65%;
 }
 
-#iiekkkbzoo .gt_footnote_marks {
+#htqznmtdyl .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#iiekkkbzoo .gt_asterisk {
+#htqznmtdyl .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#iiekkkbzoo .gt_indent_1 {
+#htqznmtdyl .gt_indent_1 {
   text-indent: 5px;
 }
 
-#iiekkkbzoo .gt_indent_2 {
+#htqznmtdyl .gt_indent_2 {
   text-indent: 10px;
 }
 
-#iiekkkbzoo .gt_indent_3 {
+#htqznmtdyl .gt_indent_3 {
   text-indent: 15px;
 }
 
-#iiekkkbzoo .gt_indent_4 {
+#htqznmtdyl .gt_indent_4 {
   text-indent: 20px;
 }
 
-#iiekkkbzoo .gt_indent_5 {
+#htqznmtdyl .gt_indent_5 {
   text-indent: 25px;
 }
 
-#iiekkkbzoo .katex-display {
+#htqznmtdyl .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#iiekkkbzoo div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#htqznmtdyl div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -4948,7 +5030,7 @@ Important
 <section id="session-info" class="level2">
 <h2 class="anchored" data-anchor-id="session-info">Session info</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────
  setting  value
@@ -4960,7 +5042,7 @@ Important
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/Sao_Paulo
- date     2026-02-11
+ date     2026-02-12
  pandoc   3.6.3 @ /Applications/Positron.app/Contents/Resources/app/quarto/bin/tools/aarch64/ (via rmarkdown)
  quarto   1.8.27 @ /Applications/Positron.app/Contents/Resources/app/quarto/bin/quarto
 
