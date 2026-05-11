@@ -225,10 +225,12 @@ Frase-chave: problema no território → dado produzido → indicador → ferram
 **Produtos e formação**
 
 -   artigos científicos e manuscritos em desenvolvimento;
--   notas técnicas e relatórios;
+-   notas técnicas e relatórios, incluindo a crise de saúde da população Yanomami;
 -   cursos, disciplinas e oficinas;
 -   materiais de comunicação e apoio à decisão;
 -   diálogo com redes, gestores e territórios.
+
+**Exemplo aplicado:** a nota técnica sobre a Terra Indígena Yanomami mostrou como dados territoriais podem apoiar a identificação de áreas críticas e o direcionamento de respostas em situações de emergência sanitária.
 :::
 :::::
 
@@ -330,7 +332,11 @@ O monitoramento integrado permite produzir evidências sobre:
 :::
 :::::
 
-Essas evidências podem apoiar planos locais, pedidos de resposta emergencial, comunicação pública e defesa de direitos territoriais.
+Essas evidências podem apoiar planos locais, pedidos de resposta emergencial, comunicação pública e defesa de direitos territoriais. Na crise de saúde Yanomami, esse tipo de abordagem orientou uma nota técnica com cenários de impacto para apoiar intervenções na Terra Indígena Yanomami.
+
+::: notes
+Mencionar rapidamente a nota técnica Yanomami como exemplo de aplicação dos dados territoriais em uma emergência real. Não detalhar demais para preservar o tempo: a ideia é mostrar que os dados podem apoiar priorização de áreas, resposta pública e defesa de direitos.
+:::
 
 ## Como começar um monitoramento territorial de clima e saúde
 
@@ -398,6 +404,8 @@ A pergunta final não é apenas “que dados temos?”, mas “que dados ajudam 
 -   Instagram: observatorio_climaesaude
 -   AlertAr Saúde: <https://shiny.icict.fiocruz.br/alertarsaude/>
 -   Página sobre o AlertAr Saúde: <https://climaesaude.icict.fiocruz.br/conheca-o-alertar-saude>
+-   Notas técnicas do Observatório: <https://climaesaude.icict.fiocruz.br/pagina/notas-tecnicas>
+-   Notícia Fiocruz sobre a crise Yanomami: <https://fiocruz.br/noticia/2023/06/mais-da-metade-das-comunidades-yanomami-vivem-em-situacao-de-risco-de-saude>
 -   Pacote `{climindi}`: <https://rfsaldanha.github.io/climindi/>
 -   Pacote `{rpcdas}`: <https://rfsaldanha.github.io/rpcdas/>
 -   Esta apresentação e outros materiais: <https://rfsaldanha.github.io/>

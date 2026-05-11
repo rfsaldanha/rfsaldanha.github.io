@@ -2986,7 +2986,7 @@
     "href": "talks/mti2026.html#ferramentas-e-publicações",
     "title": "Metodologias e impactos das mudanças climáticas sobre a saúde de corpos e territórios na Amazônia",
     "section": "Ferramentas e publicações",
-    "text": "Ferramentas e publicações\n\n\nFerramentas e bases\n\nAlertAr Saúde: previsão e acompanhamento da qualidade do ar;\nMapas do Observatório: indicadores climáticos, ambientais e de saúde;\n{climindi}: indicadores climáticos baseados em eventos;\n{rpcdas}: acesso programático a dados de saúde da PCDaS;\nbases municipalizadas de clima, umidade, chuva e poluição.\n\n\n\nProdutos e formação\n\nartigos científicos e manuscritos em desenvolvimento;\nnotas técnicas e relatórios;\ncursos, disciplinas e oficinas;\nmateriais de comunicação e apoio à decisão;\ndiálogo com redes, gestores e territórios."
+    "text": "Ferramentas e publicações\n\n\nFerramentas e bases\n\nAlertAr Saúde: previsão e acompanhamento da qualidade do ar;\nMapas do Observatório: indicadores climáticos, ambientais e de saúde;\n{climindi}: indicadores climáticos baseados em eventos;\n{rpcdas}: acesso programático a dados de saúde da PCDaS;\nbases municipalizadas de clima, umidade, chuva e poluição.\n\n\n\nProdutos e formação\n\nartigos científicos e manuscritos em desenvolvimento;\nnotas técnicas e relatórios, incluindo a crise de saúde da população Yanomami;\ncursos, disciplinas e oficinas;\nmateriais de comunicação e apoio à decisão;\ndiálogo com redes, gestores e territórios.\n\nExemplo aplicado: a nota técnica sobre a Terra Indígena Yanomami mostrou como dados territoriais podem apoiar a identificação de áreas críticas e o direcionamento de respostas em situações de emergência sanitária."
   },
   {
     "objectID": "talks/mti2026.html#alertar-saúde-o-que-é",
@@ -3021,7 +3021,7 @@
     "href": "talks/mti2026.html#evidências-sobre-impactos-na-saúde",
     "title": "Metodologias e impactos das mudanças climáticas sobre a saúde de corpos e territórios na Amazônia",
     "section": "Evidências sobre impactos na saúde",
-    "text": "Evidências sobre impactos na saúde\nO monitoramento integrado permite produzir evidências sobre:\n\n\n\nperíodos e territórios com maior exposição à fumaça;\nrelação entre eventos extremos e procura por serviços de saúde;\ninterrupção de acesso a cuidado, escola, trabalho e transporte.\n\n\n\n\ndesigualdades de exposição e resposta;\ngrupos mais vulnerabilizados;\nefeitos acumulados de seca, fumaça, calor e cheias.\n\n\n\nEssas evidências podem apoiar planos locais, pedidos de resposta emergencial, comunicação pública e defesa de direitos territoriais."
+    "text": "Evidências sobre impactos na saúde\nO monitoramento integrado permite produzir evidências sobre:\n\n\n\nperíodos e territórios com maior exposição à fumaça;\nrelação entre eventos extremos e procura por serviços de saúde;\ninterrupção de acesso a cuidado, escola, trabalho e transporte.\n\n\n\n\ndesigualdades de exposição e resposta;\ngrupos mais vulnerabilizados;\nefeitos acumulados de seca, fumaça, calor e cheias.\n\n\n\nEssas evidências podem apoiar planos locais, pedidos de resposta emergencial, comunicação pública e defesa de direitos territoriais. Na crise de saúde Yanomami, esse tipo de abordagem orientou uma nota técnica com cenários de impacto para apoiar intervenções na Terra Indígena Yanomami.\n\nMencionar rapidamente a nota técnica Yanomami como exemplo de aplicação dos dados territoriais em uma emergência real. Não detalhar demais para preservar o tempo: a ideia é mostrar que os dados podem apoiar priorização de áreas, resposta pública e defesa de direitos."
   },
   {
     "objectID": "talks/mti2026.html#como-começar-um-monitoramento-territorial-de-clima-e-saúde",
@@ -3049,7 +3049,7 @@
     "href": "talks/mti2026.html#fontes-e-links-úteis",
     "title": "Metodologias e impactos das mudanças climáticas sobre a saúde de corpos e territórios na Amazônia",
     "section": "Fontes e links úteis",
-    "text": "Fontes e links úteis\n\nObservatório de Clima e Saúde: https://climaesaude.icict.fiocruz.br/\nInstagram: observatorio_climaesaude\nAlertAr Saúde: https://shiny.icict.fiocruz.br/alertarsaude/\nPágina sobre o AlertAr Saúde: https://climaesaude.icict.fiocruz.br/conheca-o-alertar-saude\nPacote {climindi}: https://rfsaldanha.github.io/climindi/\nPacote {rpcdas}: https://rfsaldanha.github.io/rpcdas/\nEsta apresentação e outros materiais: https://rfsaldanha.github.io/\n\nraphael.saldanha@fiocruz.br"
+    "text": "Fontes e links úteis\n\nObservatório de Clima e Saúde: https://climaesaude.icict.fiocruz.br/\nInstagram: observatorio_climaesaude\nAlertAr Saúde: https://shiny.icict.fiocruz.br/alertarsaude/\nPágina sobre o AlertAr Saúde: https://climaesaude.icict.fiocruz.br/conheca-o-alertar-saude\nNotas técnicas do Observatório: https://climaesaude.icict.fiocruz.br/pagina/notas-tecnicas\nNotícia Fiocruz sobre a crise Yanomami: https://fiocruz.br/noticia/2023/06/mais-da-metade-das-comunidades-yanomami-vivem-em-situacao-de-risco-de-saude\nPacote {climindi}: https://rfsaldanha.github.io/climindi/\nPacote {rpcdas}: https://rfsaldanha.github.io/rpcdas/\nEsta apresentação e outros materiais: https://rfsaldanha.github.io/\n\nraphael.saldanha@fiocruz.br"
   },
   {
     "objectID": "talks/rbras69_2025.html#raphael-saldanha",
