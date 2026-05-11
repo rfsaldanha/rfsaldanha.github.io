@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-label="Fluxo problema no território, dado, indicador, ferramenta e ação comunitária">
+  <rect width="1200" height="650" fill="#fffaf0"/>
+  <text x="70" y="86" font-size="42" font-weight="800" fill="#103f2f">Da experiência no território à ação</text>
+  <g font-family="Arial, sans-serif" font-size="23" fill="#103f2f" font-weight="700">
+    <rect x="80" y="175" width="190" height="210" rx="24" fill="#edf4e5" stroke="#1b5e45" stroke-width="5"/>
+    <text x="175" y="230" text-anchor="middle">Problema</text><text x="175" y="265" text-anchor="middle">sentido</text><text x="175" y="318" text-anchor="middle" font-size="20" font-weight="400">fumaça, calor,</text><text x="175" y="347" text-anchor="middle" font-size="20" font-weight="400">seca ou cheia</text>
+    <rect x="305" y="175" width="190" height="210" rx="24" fill="#edf4e5" stroke="#1b5e45" stroke-width="5"/>
+    <text x="400" y="230" text-anchor="middle">Dado</text><text x="400" y="265" text-anchor="middle">produzido</text><text x="400" y="318" text-anchor="middle" font-size="20" font-weight="400">clima, ar,</text><text x="400" y="347" text-anchor="middle" font-size="20" font-weight="400">saúde, relatos</text>
+    <rect x="530" y="175" width="190" height="210" rx="24" fill="#edf4e5" stroke="#1b5e45" stroke-width="5"/>
+    <text x="625" y="230" text-anchor="middle">Indicador</text><text x="625" y="265" text-anchor="middle">útil</text><text x="625" y="318" text-anchor="middle" font-size="20" font-weight="400">PM2.5, chuva,</text><text x="625" y="347" text-anchor="middle" font-size="20" font-weight="400">onda de calor</text>
+    <rect x="755" y="175" width="190" height="210" rx="24" fill="#edf4e5" stroke="#1b5e45" stroke-width="5"/>
+    <text x="850" y="230" text-anchor="middle">Ferramenta</text><text x="850" y="265" text-anchor="middle">aberta</text><text x="850" y="318" text-anchor="middle" font-size="20" font-weight="400">mapa, painel,</text><text x="850" y="347" text-anchor="middle" font-size="20" font-weight="400">boletim</text>
+    <rect x="980" y="175" width="190" height="210" rx="24" fill="#edf4e5" stroke="#1b5e45" stroke-width="5"/>
+    <text x="1075" y="230" text-anchor="middle">Ação</text><text x="1075" y="265" text-anchor="middle">comunitária</text><text x="1075" y="318" text-anchor="middle" font-size="20" font-weight="400">cuidado, alerta,</text><text x="1075" y="347" text-anchor="middle" font-size="20" font-weight="400">incidência</text>
+  </g>
+  <g stroke="#d4a017" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M275 280 H300"/><path d="M500 280 H525"/><path d="M725 280 H750"/><path d="M950 280 H975"/>
+  </g>
+  <text x="80" y="500" font-size="28" fill="#1f2d28">Pergunta orientadora: quais indicadores ajudam a proteger este território agora?</text>
+</svg>
