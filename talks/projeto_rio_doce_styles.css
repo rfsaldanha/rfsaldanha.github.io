@@ -1,0 +1,157 @@
+/*-- scss:defaults --*/
+
+/*-- scss:rules --*/
+
+/* Estilo simples para Quarto + reveal.js */
+:root {
+  --rio: #1f6f78;
+  --terra: #a66a35;
+  --lama: #6f5a43;
+  --verde: #2f6f4e;
+  --claro: #f6f2ea;
+  --texto: #21313a;
+}
+
+.reveal {
+  font-family: "Source Sans Pro", "Inter", "Arial", sans-serif;
+  color: var(--texto);
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+  color: var(--rio);
+  font-weight: 750;
+  letter-spacing: -0.02em;
+}
+
+.reveal h1 { font-size: 2.3em; }
+.reveal h2 { font-size: 1.65em; }
+.reveal h3 { font-size: 1.15em; }
+.reveal p, .reveal li { font-size: 0.82em; line-height: 1.25; }
+.reveal ul { margin-left: 1em; }
+.reveal strong { color: var(--terra); }
+
+.title-slide {
+  background: linear-gradient(135deg, #f6f2ea 0%, #ffffff 58%, #e7f1ef 100%);
+}
+
+.kicker {
+  color: var(--terra);
+  text-transform: uppercase;
+  font-size: 0.7em;
+  letter-spacing: .08em;
+  font-weight: 700;
+}
+
+.big {
+  font-size: 1.25em;
+  line-height: 1.2;
+}
+
+.callout {
+  border-left: 8px solid var(--rio);
+  background: #eef7f6;
+  padding: 0.8em 1em;
+  margin: 0.8em 0;
+}
+
+.note {
+  color: #5b646a;
+  font-size: 0.68em;
+}
+
+.cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1em;
+  align-items: start;
+}
+
+.cols-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.9em;
+}
+
+.card {
+  background: var(--claro);
+  border-radius: 18px;
+  padding: 0.85em 0.95em;
+  min-height: 150px;
+}
+
+.card h3 { margin-top: 0; }
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8em;
+  margin-top: 1em;
+}
+
+.step {
+  border-top: 8px solid var(--rio);
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 0.7em;
+  min-height: 140px;
+}
+
+.step:nth-child(2) { border-top-color: var(--terra); }
+.step:nth-child(3) { border-top-color: var(--verde); }
+.step:nth-child(4) { border-top-color: var(--lama); }
+
+.matrix {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8em;
+  margin-top: 0.7em;
+}
+
+.matrix .cell {
+  background: #fff;
+  border: 2px solid #e5e1d8;
+  border-radius: 14px;
+  padding: 0.75em;
+}
+
+.badge {
+  display: inline-block;
+  background: var(--rio);
+  color: white;
+  border-radius: 999px;
+  padding: 0.15em 0.55em;
+  font-size: 0.65em;
+  font-weight: 700;
+  margin-right: .25em;
+}
+
+.footer-source {
+  font-size: 0.55em;
+  color: #69767c;
+  margin-top: 1.2em;
+}
+
+.cols-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75em;
+  align-items: stretch;
+}
+
+.card.compact {
+  min-height: 125px;
+  padding: 0.7em 0.75em;
+}
+
+.card.accent, .accent-cell {
+  background: #eef7f1;
+  border-color: #cfe5d7 !important;
+}
+
+.reveal .slides section .fragment.highlight-current-current {
+  color: var(--terra);
+}

@@ -1,0 +1,272 @@
+---
+title: "Eixo Sala de Situação de Saúde"
+subtitle: "Rede de Pesquisa em Saúde do Rio Doce"
+author: "Diego Ricardo Xavier"
+date: "12/05/2026"
+format:
+  revealjs:
+    theme: [simple, projeto_rio_doce_styles.scss]
+---
+
+## Apresentação
+
+**Apresentação realizada por Raphael Saldanha, em nome de Diego Ricardo Xavier.**
+
+> **Pergunta orientadora**\
+> Quais são os desafios e potencialidades das análises de situação de saúde em pesquisas sobre desastres em barragens de mineração?
+
+A Sala de Situação não substitui os estudos epidemiológicos, toxicológicos ou de avaliação de risco. Ela conecta essas evidências ao **território**, ao **SUS** e à **tomada de decisão**.
+
+<aside class="notes">
+
+Abrir explicitando que a fala será feita em nome de Diego Ricardo Xavier. Sugestão: “Vou apresentar uma leitura sintética do eixo Sala de Situação de Saúde, enfatizando onde a experiência do Observatório de Clima e Saúde pode contribuir para a Rede Rio Doce.”
+
+</aside>
+
+## Eixos de trabalho
+
+| Eixo | Ênfase |
+|------------------------------------|------------------------------------|
+| **Epidemiologia** | Padrões, associações, riscos, tendências e efeitos em saúde. |
+| **Toxicologia** | Exposição humana, biomarcadores e efeitos toxicológicos. |
+| **Avaliação de risco** | Risco à saúde humana em territórios atingidos. |
+| **Sala de situação** | Integração, monitoramento, comunicação e apoio à decisão. |
+
+<aside class="notes">
+
+Enfatizar que a programação coloca “Epidemiologia e Situação de Saúde” juntas, mas elas não são a mesma coisa. O valor da fala é esclarecer essa complementaridade.
+
+</aside>
+
+## O desafio Rio Doce
+
+<p class="big">
+
+O desastre do Fundão não cabe em uma única pergunta epidemiológica, nem em um único território administrativo.
+
+</p>
+
+-   Percurso de bacia: do rompimento à foz e à região costeira.
+-   Mais de 40 municípios e mais de 2 milhões de pessoas atingidas.
+-   Efeitos ambientais, sociais, econômicos, psicossociais e sanitários.
+-   Populações com diferentes exposições, vulnerabilidades e capacidade de resposta.
+-   Necessidade de produzir evidências úteis para o SUS, não apenas resultados acadêmicos.
+
+<aside class="notes">
+
+Destacar que a unidade “bacia” é essencial para entender o desastre, mas o SUS se organiza por municípios, regiões de saúde, serviços e fluxos assistenciais. Esse desencontro é um problema típico para a Sala de Situação.
+
+</aside>
+
+## O que muda quando pensamos em situação de saúde?
+
+> A análise de situação de saúde pergunta: **o que está acontecendo, onde, com quem, por quê, com quais recursos e quais prioridades de ação?**
+
+Ela precisa integrar:
+
+-   agravos, atendimentos, internações, óbitos e saúde mental;
+-   exposição ambiental e risco toxicológico;
+-   vulnerabilidades sociais, modos de vida e trabalho;
+-   oferta, acesso e sobrecarga dos serviços de saúde;
+-   evidências qualitativas, institucionais e comunitárias.
+
+<aside class="notes">
+
+Essa é a ponte com a experiência do Observatório: análise territorial, integração de dados e produção de sínteses orientadas à decisão.
+
+</aside>
+
+## Epidemiologia ≠ Análise de situação de saúde
+
+| Epidemiologia | Análise de situação de saúde |
+|------------------------------------|------------------------------------|
+| Pergunta sobre **associação, risco, causalidade e efeito**. | Pergunta sobre **necessidades, desigualdades, prioridades e capacidade de resposta**. |
+| Usa desenhos analíticos, comparação, controle de vieses e inferência. | Integra dados quantitativos, qualitativos, ambientais, territoriais e institucionais. |
+| Produz medidas: incidência, prevalência, risco relativo, razão de taxas e tendências. | Produz leitura territorial, cenários, alertas, boletins e recomendações. |
+| Responde: **“houve aumento?”**, **“qual o risco?”**, **“qual a associação?”** | Responde: **“onde agir?”**, **“com quem?”**, **“com que urgência?”**, **“com quais serviços?”** |
+
+<aside class="notes">
+
+Frase-chave: epidemiologia produz evidência analítica; análise de situação transforma evidências diversas em inteligência territorial para decisão. Uma depende da outra, mas seus produtos e usos são diferentes.
+
+</aside>
+
+## Uma cautela importante
+
+<p class="big">
+
+Sala de Situação não deve prometer causalidade sozinha.
+
+</p>
+
+| O que ela não faz sozinha | O que ela faz muito bem |
+|------------------------------------|------------------------------------|
+| Demonstrar causalidade individual. | Organizar evidências e incertezas. |
+| Substituir estudos epidemiológicos, toxicológicos ou de risco. | Detectar sinais e lacunas. |
+| Resolver limitações de qualidade dos dados por visualização. | Formular perguntas melhores. |
+|  | Apoiar pactuação de prioridades e resposta do SUS. |
+
+<aside class="notes">
+
+Esse slide evita uma promessa excessiva. A Sala é uma infraestrutura de inteligência e governança da informação, não um atalho metodológico.
+
+</aside>
+
+## Por que uma Sala de Situação no Rio Doce?
+
+> Em desastres complexos, **evidência dispersa não vira ação automaticamente**.
+
+A Sala de Situação pode organizar uma rotina para:
+
+-   reunir dados secundários, estudos prévios e achados dos quatro eixos;
+-   acompanhar séries temporais antes e depois do desastre;
+-   comparar municípios, bacia, regiões de saúde e áreas de exposição;
+-   devolver sínteses compreensíveis para gestores, serviços e comunidades;
+-   apoiar planos municipais e estaduais de ação em saúde.
+
+<aside class="notes">
+
+Enfatizar “rotina”. A Sala não é um produto final; é um modo de trabalho contínuo para transformar dados em decisão.
+
+</aside>
+
+## A lógica operacional da Sala
+
+| Etapa | O que envolve |
+|------------------------------------|------------------------------------|
+| **1. Captar** | SUS, ambiente, território, estudos de campo, documentos, relatos e demandas locais. |
+| **2. Integrar** | Padronizar, georreferenciar, documentar, validar e tornar comparável. |
+| **3. Interpretar** | Ler tendências, desigualdades, vulnerabilidades, lacunas e capacidade assistencial. |
+| **4. Devolver** | Painéis, mapas, boletins, notas técnicas e recomendações para ação. |
+
+<aside class="notes">
+
+Não apresentar como uma cadeia puramente técnica. Em cada etapa há escolhas políticas e metodológicas: fontes, periodicidade, recortes territoriais, responsáveis e formas de uso.
+
+</aside>
+
+## Desafios específicos em desastres de barragens
+
+| Dados e método | Território e SUS |
+|------------------------------------|------------------------------------|
+| Definir população atingida e população de referência. | Bacia hidrográfica não coincide com municípios, regiões de saúde ou áreas de atenção. |
+| Combinar períodos pré, pós e longo prazo. | Serviços de saúde também são impactados pelo desastre. |
+| Distinguir mudança real de saúde, mudança de acesso e mudança de registro. | Comunidades tradicionais e grupos vulnerabilizados exigem recortes próprios. |
+| Integrar dados agregados, individuais, ambientais e qualitativos. | Evidências precisam virar ações viáveis no cotidiano dos serviços. |
+
+<aside class="notes">
+
+Exemplo para fala: aumento de atendimento pode significar maior adoecimento, maior busca por cuidado, mudança na oferta, melhoria ou piora do registro, ou tudo isso ao mesmo tempo. ASIS ajuda a interpretar essas ambiguidades.
+
+</aside>
+
+## Potencialidades da Sala de Situação
+
+| Monitorar | Priorizar | Integrar |
+|------------------------|------------------------|------------------------|
+| Sinais em saúde, ambiente, serviços e vulnerabilidades ao longo do tempo. | Territórios, grupos, agravos e serviços que exigem resposta mais rápida. | Epidemiologia, toxicologia, avaliação de risco, vigilância, atenção e participação social. |
+
+> A potência está menos no painel e mais na capacidade de transformar dados em **perguntas melhores, decisões mais transparentes e respostas mais oportunas**.
+
+<aside class="notes">
+
+Essa frase pode ser repetida no fechamento. É a ideia-força da apresentação.
+
+</aside>
+
+## O que a Sala de Situação pode entregar
+
+| Produtos técnicos | Produtos para gestão |
+|------------------------------------|------------------------------------|
+| Matriz de indicadores. | Priorização de territórios e grupos. |
+| Painel analítico com mapas e séries. | Sínteses para pactuação interinstitucional. |
+| Boletins de situação. | Subsídios aos planos municipais e estaduais. |
+| Notas interpretativas por tema ou território. | Alertas interpretativos quando houver sinais relevantes. |
+| Dicionário de dados e documentação metodológica. | Agenda de lacunas para os demais eixos. |
+
+<aside class="notes">
+
+Usar “pode entregar” e não “vai entregar”, para preservar flexibilidade do plano de trabalho. Produtos devem ser pactuados com o projeto e com os atores do SUS.
+
+</aside>
+
+## Observatório de Clima e Saúde, Fiocruz
+
+| Experiência acumulada | Para o eixo Sala de Situação |
+|------------------------------------|------------------------------------|
+| Integração de dados de saúde, clima, ambiente e território. | Arquitetura de dados e governança da informação. |
+| Séries históricas e indicadores municipais. | Definição e documentação de indicadores. |
+| Mapas, painéis, relatórios e dados abertos. | Visualização geográfica e temporal. |
+| Apoio à vigilância e à análise territorial. | Rotina de boletins e sínteses para decisão. |
+|  | Integração técnica com epidemiologia, risco e toxicologia. |
+
+<aside class="notes">
+
+Aqui você fala com mais segurança, pois é o terreno do Observatório. Não precisa prometer desenvolvimento de sistema fechado; enfatize método, infraestrutura analítica e experiência acumulada.
+
+</aside>
+
+## Um caminho de implantação
+
+| Etapa | Produto inicial |
+|------------------------------------|------------------------------------|
+| **1. Inventário** | Fontes, indicadores, escalas, periodicidade, responsáveis e lacunas. |
+| **2. Matriz** | Indicadores de saúde, exposição, vulnerabilidade, serviços, ambiente e território. |
+| **3. Protótipo** | Mapas, séries temporais, filtros territoriais e notas interpretativas. |
+| **4. Rotina** | Boletins periódicos, reuniões de interpretação e atualização pactuada. |
+
+<aside class="notes">
+
+Propor uma entrada realista: começar pelo inventário e matriz de indicadores. O painel vem depois, como consequência da governança e dos dados disponíveis.
+
+</aside>
+
+## Integração com os demais eixos
+
+**A Sala organiza perguntas**
+
+-   Onde há sinais? Onde há lacunas? Que territórios exigem aprofundamento? Que achados precisam virar ação?
+
+**Os eixos aprofundam respostas**
+
+-   Epidemiologia estima padrões e associações. Toxicologia e avaliação de risco caracterizam exposição e plausibilidade.
+-   ASIS integra, interpreta e devolve ao SUS.
+
+> A Sala de Situação pode funcionar como **ponte entre produção de conhecimento e uso social da evidência**.
+
+<aside class="notes">
+
+Evitar qualquer ideia de concorrência entre eixos. A Sala depende dos outros eixos e, ao mesmo tempo, ajuda a orientar perguntas e devolutivas.
+
+</aside>
+
+## Para discussão
+
+1.  Pactuar governança: quem produz, valida, interpreta e usa os produtos.
+2.  Definir matriz inicial de indicadores e recortes territoriais.
+3.  Criar rotina de atualização, documentação e controle de qualidade.
+4.  Produzir boletins curtos para gestores, serviços e comunidades.
+5.  Manter integração permanente com epidemiologia, toxicologia e avaliação de risco.
+6.  Registrar incertezas e lacunas como parte do produto da Sala.
+
+<aside class="notes">
+
+Este slide ajuda você a entrar no debate da oficina. Se perguntarem “por onde começar?”, responda: inventário, matriz, governança e uma primeira devolutiva curta.
+
+</aside>
+
+## Conclusão
+
+<p class="big">
+
+A análise de situação de saúde ajuda a responder não só “o que aconteceu com a saúde?”, mas também “o que o SUS precisa fazer agora, onde, com quem e com quais prioridades?”
+
+</p>
+
+> A contribuição do Observatório de Clima e Saúde pode ser oferecer método, infraestrutura analítica e experiência em vigilância territorial integrada para transformar dados dispersos em inteligência para reparação, vigilância e cuidado.
+
+<aside class="notes">
+
+Fechar com tom institucional: “Esse é o lugar em que a experiência do Observatório pode contribuir com a Rede Rio Doce: apoiar a construção de uma leitura integrada, territorializada e útil para a ação do SUS.”
+
+</aside>
