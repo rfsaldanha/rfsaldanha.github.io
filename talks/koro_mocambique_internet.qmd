@@ -22,6 +22,34 @@ execute:
   warning: false
 ---
 
+## Fontes oficiais do governo
+
+::: big
+Não há sinal claro de uma base pública oficial específica sobre Koro.
+:::
+
+:::::: cards
+::: card
+**MISAU / SIS-MA**\
+Sistema nacional de informação em saúde, baseado em DHIS2, com dados agregados, vigilância e módulos de programas.
+:::
+
+::: card
+**INS / vigilância**\
+Instituto Nacional de Saúde, SIGILA e unidades de inquéritos/vigilância para eventos laboratoriais e epidemiológicos.
+:::
+
+::: card
+**INE**\
+Censos, projeções, estatísticas provinciais e denominadores populacionais para interpretar desigualdades territoriais.
+:::
+
+::: card
+**INCM / INTIC**\
+Regulação, qualidade de telecomunicações, indicadores TIC, cobertura e governança digital.
+:::
+::::::
+
 ## Acesso à Internet: base nacional
 
 -   Em outubro de 2025, Moçambique tinha cerca de **7,12 milhões de usuários de Internet**, com penetração de **19,8%**; 80,2% da população seguia offline segundo o DataReportal.
@@ -147,9 +175,21 @@ Principal conclusão: buscar Koro na Internet em Moçambique é menos uma pergun
 
 -   DataReportal: [Digital 2026: Mozambique](https://datareportal.com/reports/digital-2026-mozambique)
 -   Internet Society Pulse: [Country Report for Mozambique](https://pulse.internetsociety.org/en/reports/mz/)
--   Amnesty International: [Mozambique post-2024 election crackdown](https://www.amnesty.org/en/latest/research/2025/04/mozambique-police-protest-crackdown/)
+-   MISAU: [SIS-MA](https://sisma.misau.gov.mz/)
+-   INS: [SIGILA](https://sigila.ins.gov.mz/) e [Departamento de Inquéritos e Vigilância em Saúde](https://ins.gov.mz/institucional/unidade-organicas/direccoes/direccao-de-inqueritos-e-observacao-de-saude/departamento-de-inqueritos-e-vigilancia-em-saude/)
+-   INS: [Comunicados](https://ins.gov.mz/publicacoes/comunicados/)
+-   INE: [Instituto Nacional de Estatística](https://www.ine.gov.mz/) e [OpenData](https://nso-mozambique.opendataforafrica.org/?lang=pt)
+-   INCM: [Qualidade de Serviço de Telecomunicações 2024](https://www.incm.gov.mz/index.php/mercado/qualidade-de-servico/331-resumo-do-relato-rio-qualidade-de-servico-de-telecomunicacoes-2024)
+-   INTIC: [Sistematização dos Indicadores de TIC em Moçambique: 2017-2024](https://intic.gov.mz/wp-content/uploads/2025/05/MEDICAO_DA_SOCIEDADE_DE_INFORMACAO_EM_MOCAMBIQUE_assinado.pdf)
+-   Portal do Governo: [Comunicados de imprensa](https://portaldogoverno.gov.mz/comunicados-de-imprensa/)
+-   Imprensa Nacional: [Boletim da República](https://www.inm.gov.mz/pt-br/bulletin)
+-   CSIRT.GOV: [Equipa de Resposta a Incidentes de Segurança Cibernética](https://csirt.gov.mz/)
+
+## Fontes técnicas e abertas {.smaller}
+
 -   Natural Earth: [Admin 1 states/provinces](https://github.com/nvkelso/natural-earth-vector)
 -   GDELT Cloud: [API v2 documentation](https://docs.gdeltcloud.com/api-reference/v2)
 -   SOMAR/ICPSR: [Meta Content Library](https://www.icpsr.umich.edu/sites/somar/meta-content-library)
 -   TikTok for Developers: [Research API FAQ](https://developers.tiktok.com/doc/research-api-faq)
 -   Google for Developers: [YouTube Data API overview](https://developers.google.com/youtube/v3/getting-started)
+-   Amnesty International: [Mozambique post-2024 election crackdown](https://www.amnesty.org/en/latest/research/2025/04/mozambique-police-protest-crackdown/)

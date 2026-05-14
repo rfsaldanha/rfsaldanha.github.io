@@ -3133,7 +3133,7 @@
     "href": "talks/koro_mocambique_internet.html#fontes-principais",
     "title": "Busca de sinais digitais sobre Síndrome de Koro em Moçambique",
     "section": "Fontes principais",
-    "text": "Fontes principais\n\nDataReportal: Digital 2026: Mozambique\nInternet Society Pulse: Country Report for Mozambique\nAmnesty International: Mozambique post-2024 election crackdown\nNatural Earth: Admin 1 states/provinces\nGDELT Cloud: API v2 documentation\nSOMAR/ICPSR: Meta Content Library\nTikTok for Developers: Research API FAQ\nGoogle for Developers: YouTube Data API overview"
+    "text": "Fontes principais\n\nDataReportal: Digital 2026: Mozambique\nInternet Society Pulse: Country Report for Mozambique\nMISAU: SIS-MA\nINS: SIGILA e Departamento de Inquéritos e Vigilância em Saúde\nINS: Comunicados\nINE: Instituto Nacional de Estatística e OpenData\nINCM: Qualidade de Serviço de Telecomunicações 2024\nINTIC: Sistematização dos Indicadores de TIC em Moçambique: 2017-2024\nPortal do Governo: Comunicados de imprensa\nImprensa Nacional: Boletim da República\nCSIRT.GOV: Equipa de Resposta a Incidentes de Segurança Cibernética"
   },
   {
     "objectID": "talks/multisa_subsets_2024.html#introduction",
@@ -3344,5 +3344,19 @@
     "title": "Democratização de acesso a dados de saúde, ambiente e clima com o R",
     "section": "",
     "text": "Obrigado!\nraphael.saldanha@fiocruz.br\nhttps://rfsaldanha.github.io"
+  },
+  {
+    "objectID": "talks/koro_mocambique_internet.html#fontes-oficiais-do-governo",
+    "href": "talks/koro_mocambique_internet.html#fontes-oficiais-do-governo",
+    "title": "Busca de sinais digitais sobre Síndrome de Koro em Moçambique",
+    "section": "Fontes oficiais do governo",
+    "text": "Fontes oficiais do governo\n\nNão há sinal claro de uma base pública oficial específica sobre Koro.\n\n\n\nMISAU / SIS-MA\nSistema nacional de informação em saúde, baseado em DHIS2, com dados agregados, vigilância e módulos de programas.\n\n\nINS / vigilância\nInstituto Nacional de Saúde, SIGILA e unidades de inquéritos/vigilância para eventos laboratoriais e epidemiológicos.\n\n\nINE\nCensos, projeções, estatísticas provinciais e denominadores populacionais para interpretar desigualdades territoriais.\n\n\nINCM / INTIC\nRegulação, qualidade de telecomunicações, indicadores TIC, cobertura e governança digital."
+  },
+  {
+    "objectID": "talks/koro_mocambique_internet.html#fontes-técnicas-e-abertas",
+    "href": "talks/koro_mocambique_internet.html#fontes-técnicas-e-abertas",
+    "title": "Busca de sinais digitais sobre Síndrome de Koro em Moçambique",
+    "section": "Fontes técnicas e abertas",
+    "text": "Fontes técnicas e abertas\n\nNatural Earth: Admin 1 states/provinces\nGDELT Cloud: API v2 documentation\nSOMAR/ICPSR: Meta Content Library\nTikTok for Developers: Research API FAQ\nGoogle for Developers: YouTube Data API overview\nAmnesty International: Mozambique post-2024 election crackdown"
   }
 ]
