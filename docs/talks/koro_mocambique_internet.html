@@ -7,18 +7,18 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
-<meta name="author" content="Raphael Saldanha et al.">
-<meta name="dcterms.date" content="2024-11-20">
-<title>Raphael Saldanha – Climate data for Brazilian municipalities</title>
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-<link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
-<link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
-<style>
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.37">
+
+  <meta name="author" content="Raphael Saldanha | Observatório de Clima e Saúde | Fiocruz">
+  <meta name="dcterms.date" content="2027-02-05">
+  <title>Raphael Saldanha – Busca de sinais digitais sobre Síndrome de Koro em Moçambique</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
@@ -34,19 +34,24 @@
       vertical-align: middle;
     }
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-4cbb34d3161b77b056ff4d13ef6eed0f.css">
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2M7VLSRDCB"></script><script type="text/javascript">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-0427d8d92a431aa6a6430e53ec02a470.css">
+  <link rel="stylesheet" href="mti_styles.css">
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2M7VLSRDCB"></script>
+
+  <script type="text/javascript">
 
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
-  </script><link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-<link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-<link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-<link href="../site_libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
-<link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-<style type="text/css">
+  </script>
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
       overflow: auto;
@@ -138,133 +143,201 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center"><h1 class="title">Climate data for Brazilian municipalities</h1>
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Busca de sinais digitais sobre Síndrome de Koro em Moçambique</h1>
+  <p class="subtitle">Fontes abertas, cobertura de Internet e limites de vigilância baseada na web</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Raphael Saldanha et al. 
+Raphael Saldanha | Observatório de Clima e Saúde | Fiocruz 
 </div>
-        <p class="quarto-title-affiliation">
-            Fiocruz
-          </p>
-    </div>
+</div>
 </div>
 
-  <p class="date">2024-11-20</p>
-</section><section id="overview" class="slide level2"><h2>Overview</h2>
+  <p class="date">2027-02-05</p>
+</section>
+<section id="acesso-à-internet-base-nacional" class="slide level2">
+<h2>Acesso à Internet: base nacional</h2>
 <ul>
-<li>Climate raw data sources: ground level and reanalysis</li>
-<li>Data on Braziliam municipalities spatial unit</li>
-<li>Climatological normals and indicators</li>
-</ul></section><section id="ground-level-climate-data" class="slide level2"><h2>Ground-level climate data</h2>
-<div class="columns">
-<div class="column" style="width:55%;">
-<ul>
-<li>Weather stations on Cametá and Mocajuba (north region)</li>
-<li>Data every 5 minutes, sent to Fiocruz Postgres server</li>
-<li>
-<a href="https://rfsaldanha.github.io/plugfieldapi/">plugfieldapi</a> package to retrieve data from stations with daily e-mail reports</li>
-<li>Error detection and notification for problems</li>
+<li>Em outubro de 2025, Moçambique tinha cerca de <strong>7,12 milhões de usuários de Internet</strong>, com penetração de <strong>19,8%</strong>; 80,2% da população seguia offline segundo o DataReportal.</li>
+<li>Havia <strong>19,1 milhões de conexões móveis celulares</strong>, equivalentes a <strong>53,1%</strong> da população; nem toda conexão móvel inclui dados.</li>
+<li>A população era majoritariamente rural: <strong>60% rural</strong> e <strong>40% urbana</strong> em 2025.</li>
+<li>A Internet Society estima penetração nacional próxima de <strong>21%</strong> e registra, em dados comparáveis de 2017, forte desigualdade urbano-rural: <strong>18% urbana</strong> versus <strong>3% rural</strong>.</li>
 </ul>
-</div><div class="column" style="width:45%;">
-<p><video data-src="images/estacao_mocajuba.mp4" autoplay="true" loop="true" muted="true" controls=""><a href="images/estacao_mocajuba.mp4">Video</a></video></p>
+<div class="callout callout-none no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<p>Implicação para Koro: sinais digitais tendem a super-representar centros urbanos, homens, pessoas com maior renda/escolaridade, usuários de smartphone e áreas cobertas por operadores móveis.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="cobertura-regional-leitura-operacional" class="slide level2">
+<h2>Cobertura regional: leitura operacional</h2>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p><img data-src="images/koro_mocambique_cobertura.png" alt="Mapa de Moçambique com classificação operacional de sinal digital esperado por província."></p>
+</div><div class="column" style="width:52%;">
+<div class="timeline">
+<p><strong>Norte</strong><br>
+Niassa: muito baixo. Cabo Delgado: muito baixo e instável. Nampula: médio nos centros urbanos, baixo no interior.</p>
+<p><strong>Centro</strong><br>
+Zambézia e Manica: baixo fora dos centros. Tete e Sofala: médio em corredores urbanos, mineração e Beira; baixo no interior.</p>
+<p><strong>Sul</strong><br>
+Gaza: baixo fora de Xai-Xai. Inhambane: médio em centros e áreas turísticas. Maputo província e Cidade de Maputo: maior sinal digital.</p>
+</div>
 </div></div>
-</section><section id="section" class="slide level2"><h2></h2>
-
-<img data-src="../talks/images/estacoes_temp.png" class="r-stretch"></section><section id="section-1" class="slide level2"><h2></h2>
-
-<img data-src="../talks/images/estacoes_moon2.png" class="r-stretch"></section><section id="reanalysis-climate-data" class="slide level2"><h2>ReAnalysis climate data</h2>
+<aside class="notes">
+<p>Este mapa cobre as dez províncias e a Cidade de Maputo, mas a classificação é deliberadamente operacional. Não há uma base pública recente, granular e completa de usuários de Internet por província; o quadro combina dados nacionais, ruralidade, infraestrutura móvel, conflito e evidências abertas sobre cobertura.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="redes-sociais-e-acesso-a-dados" class="slide level2">
+<h2>Redes sociais e acesso a dados</h2>
+<p>Em 2025, as maiores audiências observáveis por ferramentas de publicidade eram:</p>
+<div class="threecols">
+<div class="colbox">
+<p><strong>Facebook</strong><br>
+4,10 milhões de usuários; principal plataforma para busca ampla e grupos locais.</p>
+</div>
+<div class="colbox">
+<p><strong>TikTok</strong><br>
+3,70 milhões de adultos alcançáveis por anúncios; útil para vídeos curtos, rumor e linguagem popular.</p>
+</div>
+<div class="colbox">
+<p><strong>Instagram / LinkedIn / X</strong><br>
+729 mil, 880 mil membros e 150 mil usuários, respectivamente; mais segmentados.</p>
+</div>
+</div>
+<p><strong>Restrições práticas</strong></p>
+<ul>
+<li>WhatsApp é provavelmente central para circulação local, mas é fechado, criptografado e sem API pública adequada para leitura de grupos.</li>
+<li>Facebook/Instagram exigem caminhos controlados, como Meta Content Library/API para pesquisadores elegíveis.</li>
+<li>TikTok Research API requer aprovação e impõe critérios e cotas.</li>
+<li>YouTube é mais acessível via API, mas tem cotas e viés para conteúdo público indexado.</li>
+<li>Durante a crise pós-eleitoral de 2024, houve evidências de bloqueios ou limitações a Facebook, Instagram e WhatsApp em alguns provedores.</li>
+</ul>
+</section>
+<section id="gdelt-como-camada-de-notícias" class="slide level2">
+<h2>GDELT como camada de notícias</h2>
+<div class="big">
+<p>GDELT é uma base global de notícias online: monitora matérias publicadas na web, identifica eventos, temas, atores, lugares e disponibiliza consultas por API.</p>
+</div>
+<p>Para Koro em Moçambique, funciona como <strong>camada de imprensa e web aberta</strong>, não como vigilância de casos.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
+<p><strong>Possibilidades</strong></p>
 <ul>
-<li>
-<span class="hl">ERA5-Land</span>: global coverage, hourly and daily data, regular updates</li>
-<li>
-<span class="hl">BR-DWGD</span>: Brazil coverage, daily data, sensible to extreme events, sporadic updates</li>
-<li>
-<span class="hl">TerraClimate</span>: global coverage, monthly data, higher resolution (~4km), regular updates</li>
+<li>buscar <code>Koro</code>, variantes locais e termos associados;</li>
+<li>filtrar por <strong>Moçambique</strong>, províncias e janelas curtas;</li>
+<li>gerar séries temporais, alertas e mapas;</li>
+<li>combinar <code>stories</code> e <code>events</code>.</li>
 </ul>
 </div><div class="column" style="width:50%;">
-<p><img data-src="../data-projects/era5land-daily-latin-america_files/figure-html/unnamed-chunk-1-1.png"></p>
-<p>More details <a href="https://rfsaldanha.github.io/data-projects/era5land-daily-latin-america.html">here</a></p>
+<p><strong>Limitações</strong></p>
+<ul>
+<li>depende de fontes jornalísticas indexadas;</li>
+<li>perde WhatsApp, rádio, línguas nacionais e relatos orais;</li>
+<li>geocodificação e classificação podem errar;</li>
+<li>rumor, violência e saúde podem se misturar.</li>
+</ul>
 </div></div>
-</section><section id="climate-data-for-brazilian-municipalities" class="slide level2"><h2>Climate data for Brazilian municipalities</h2>
+</section>
+<section id="uma-possível-estratégia" class="slide level2">
+<h2>Uma possível estratégia</h2>
+<div class="cards">
+<div class="card">
+<p><strong>1. Vocabulário vivo</strong><br>
+Começar com Koro e expandir termos por província, idioma, metáforas locais e expressões usadas pela imprensa e redes.</p>
+</div>
+<div class="card">
+<p><strong>2. Fontes em camadas</strong><br>
+GDELT + busca web + páginas públicas + TikTok/YouTube + imprensa local + fontes institucionais e humanitárias.</p>
+</div>
+<div class="card">
+<p><strong>3. Triangulação territorial</strong><br>
+Separar Maputo/sul urbano, centros de Nampula/Zambézia e norte rural/conflito para não confundir silêncio digital com ausência de evento.</p>
+</div>
+<div class="card">
+<p><strong>4. Ética e segurança</strong><br>
+Evitar identificação de pessoas e comunidades; tratar rumores como risco social, não como confirmação clínica.</p>
+</div>
+</div>
+<div class="callout callout-none no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<p>Principal conclusão: buscar Koro na Internet em Moçambique é menos uma pergunta sobre “onde há casos” e mais uma pergunta sobre <strong>onde há sinal digital observável</strong>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="fontes-principais" class="slide level2 smaller">
+<h2>Fontes principais</h2>
 <ul>
-<li>Zonal statistics computation</li>
-<li>Adoption of <a href="https://isciences.gitlab.io/exactextractr/">exactextractr</a> package for cell’s coverage weighted computations</li>
-<li>Creation of package <code>{zonalclim}</code> with helper functions to compute scalable zonal statistics with chunks strategy</li>
-<li>DAG system using the <a href="https://docs.ropensci.org/targets/">targets</a> package to compute climate zonal statistics for Brazilian municipalities</li>
-<li>Publication on Environmental Data Science journal</li>
-</ul>
-<p>More details <a href="https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html">here</a></p>
-</section><section id="example" class="slide level2"><h2>Example</h2>
-
-<img data-src="../data-projects/images/zonal_brdwgd-01.png" class="r-stretch"></section><section id="climatological-normals" class="slide level2"><h2>Climatological normals</h2>
-<ul>
-<li>Climatological normals are computed only for weather stations and municipal references are needed for better climate change understanding</li>
-<li>Normals computed for each Brazilian municipality using the Zonal BR-DWGD from 1961 to 1990
-<ul>
-<li>Mean, 10th and 90th percentile</li>
-<li>Temperature (max, min), precipitation, relative humidity, solar radiation, wind speed, and evapotranspiration</li>
-</ul>
-</li>
-</ul></section><section id="section-2" class="slide level2"><h2></h2>
-
-<img data-src="../data-projects/brazil_climate_normals_indicators_files/figure-html/unnamed-chunk-31-1.png" class="r-stretch"></section><section id="time-aggregated-indicators" class="slide level2"><h2>Time-aggregated indicators</h2>
-<ul>
-<li>Municipal daily data time series to monthly indicators</li>
-<li>Monthly statistics
-<ul>
-<li>Average, median, standard deviation, standard error, maximum and minimum values, and percentiles</li>
-</ul>
-</li>
-<li>Occurence of events
-<ul>
-<li>22 indicators, in reference to normals or count sequence. Creation of <a href="https://rfsaldanha.github.io/nseq/">nseq</a> and <a href="https://github.com/rfsaldanha/climindi">climindi</a> packages</li>
-<li>Heat waves, cold spells, count of warm days, count of dry and wet days, and others</li>
-</ul>
-</li>
-</ul>
-<p>More details <a href="https://rfsaldanha.github.io/data-projects/brazil_climate_normals_indicators.html">here</a>.</p>
-</section><section id="section-3" class="slide level2"><h2></h2>
-
-<img data-src="climate_br_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section><section id="future-work" class="slide level2"><h2>Future work</h2>
-<ul>
-<li>Dashboards for weather stations</li>
-<li>Compute zonal statistics with populated areas weights</li>
-<li>Create other time-aggregated indicators</li>
-<li>Test the methodologies on other countries</li>
-<li>Compare ground-level data from weather stations with climate reanalysis datasets</li>
+<li>DataReportal: <a href="https://datareportal.com/reports/digital-2026-mozambique">Digital 2026: Mozambique</a></li>
+<li>Internet Society Pulse: <a href="https://pulse.internetsociety.org/en/reports/mz/">Country Report for Mozambique</a></li>
+<li>Amnesty International: <a href="https://www.amnesty.org/en/latest/research/2025/04/mozambique-police-protest-crackdown/">Mozambique post-2024 election crackdown</a></li>
+<li>Natural Earth: <a href="https://github.com/nvkelso/natural-earth-vector">Admin 1 states/provinces</a></li>
+<li>GDELT Cloud: <a href="https://docs.gdeltcloud.com/api-reference/v2">API v2 documentation</a></li>
+<li>SOMAR/ICPSR: <a href="https://www.icpsr.umich.edu/sites/somar/meta-content-library">Meta Content Library</a></li>
+<li>TikTok for Developers: <a href="https://developers.tiktok.com/doc/research-api-faq">Research API FAQ</a></li>
+<li>Google for Developers: <a href="https://developers.google.com/youtube/v3/getting-started">YouTube Data API overview</a></li>
 </ul>
 
 
 </section>
-</div>
+    </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-
+<p>Observatório de Clima e Saúde | Fiocruz</p>
 </div>
 </div></div>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="../site_libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="../site_libs/revealjs/plugin/reveal-pointer/pointer.js"></script><script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script><script src="../site_libs/revealjs/plugin/notes/notes.js"></script><script src="../site_libs/revealjs/plugin/search/search.js"></script><script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script><script src="../site_libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
 
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
-'controlsAuto': true,
-'previewLinksAuto': false,
+'controlsAuto': false,
+'previewLinksAuto': true,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'pointer': {"key":"q","color":"#e63312","pointerSize":40,"alwaysVisible":false},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
-        controls: false,
+        controls: true,
 
         // Help the user learn the controls by providing hints, for example by
         // bouncing the down arrow when they first encounter a vertical slide
@@ -281,7 +354,7 @@ Raphael Saldanha et al.
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -393,7 +466,7 @@ Raphael Saldanha et al.
 
         // Transition style for full page slide backgrounds
         // (none/fade/slide/convex/concave/zoom)
-        backgroundTransition: 'fade',
+        backgroundTransition: 'none',
 
         // Number of slides away from the current that are visible
         viewDistance: 3,
@@ -406,9 +479,9 @@ Raphael Saldanha et al.
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1050,
+        width: 1280,
 
-        height: 700,
+        height: 720,
 
         // Factor of the display size that should remain empty around the content
         margin: 0.1,
@@ -431,7 +504,7 @@ Raphael Saldanha et al.
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealPointer, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
           RevealNotes,
@@ -439,42 +512,8 @@ Raphael Saldanha et al.
           RevealZoom
         ]
       });
-    </script><script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script><script id="quarto-html-after-body" type="application/javascript">
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
         tabsets.forEach(function(tabset) {
@@ -642,6 +681,6 @@ Raphael Saldanha et al.
         }
       });
       </script>
-
+    
 
 </body></html>

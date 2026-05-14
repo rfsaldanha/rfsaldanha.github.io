@@ -669,7 +669,7 @@
     "href": "talks/climate_br.html#climate-data-for-brazilian-municipalities",
     "title": "Climate data for Brazilian municipalities",
     "section": "Climate data for Brazilian municipalities",
-    "text": "Climate data for Brazilian municipalities\n\nZonal statistics computation\nAdoption of exactextractr package for cell’s coverage weighted computations\nCreation of package zonalclim with helper functions to compute scalable zonal statistics with chunks strategy\nDAG system using the targets package to compute climate zonal statistics for Brazilian municipalities\nPublication on Environmental Data Science journal\n\nMore details here"
+    "text": "Climate data for Brazilian municipalities\n\nZonal statistics computation\nAdoption of exactextractr package for cell’s coverage weighted computations\nCreation of package {zonalclim} with helper functions to compute scalable zonal statistics with chunks strategy\nDAG system using the targets package to compute climate zonal statistics for Brazilian municipalities\nPublication on Environmental Data Science journal\n\nMore details here"
   },
   {
     "objectID": "talks/climate_br.html#example",
@@ -774,7 +774,7 @@
     "href": "publications/xavierRegioesSaudeNo2019.html#reference",
     "title": "As Regiões de Saúde no Brasil segundo internações: método para apoio na regionalização de saúde",
     "section": "Reference",
-    "text": "Reference\n\n\nXAVIER, D. R. et al. As Regiões de Saúde no Brasil segundo internações: método para apoio na regionalização de saúde. Cadernos de Saúde Pública, v. 35, p. e00076118, Jun. 2019."
+    "text": "Reference\n\n\nXAVIER, D. R. et al. As Regiões de Saúde no Brasil segundo internações: método para apoio na regionalização de saúde. Cadernos de Saúde Pública, v. 35, p. e00076118, June 2019."
   },
   {
     "objectID": "publications/xavierRegioesSaudeNo2019.html#abstract",
@@ -802,7 +802,7 @@
     "href": "publications/soutoDatasetInfantMortality2023.html#reference",
     "title": "Dataset on infant mortality rates in Brazil",
     "section": "Reference",
-    "text": "Reference\n\n\nSOUTO, G. et al. Dataset on infant mortality rates in Brazil. BMC Research Notes, v. 16, n. 1, p. 149, Jul. 2023."
+    "text": "Reference\n\n\nSOUTO, G. et al. Dataset on infant mortality rates in Brazil. BMC Research Notes, v. 16, n. 1, p. 149, July 2023."
   },
   {
     "objectID": "publications/soutoDatasetInfantMortality2023.html#abstract",
@@ -816,7 +816,7 @@
     "href": "publications/sallesComprehensiveIntegratedDataset2023a.html#reference",
     "title": "A comprehensive integrated dataset on Brazilian health facilities: from 2005 to 2021",
     "section": "Reference",
-    "text": "Reference\n\n\nSALLES, R. et al. A comprehensive integrated dataset on Brazilian health facilities: From 2005 to 2021. BMC Research Notes, v. 16, n. 1, p. 151, Jul. 2023."
+    "text": "Reference\n\n\nSALLES, R. et al. A comprehensive integrated dataset on Brazilian health facilities: From 2005 to 2021. BMC Research Notes, v. 16, n. 1, p. 151, July 2023."
   },
   {
     "objectID": "publications/sallesComprehensiveIntegratedDataset2023a.html#abstract",
@@ -858,7 +858,7 @@
     "href": "publications/saldanhaMicrodatasusPacotePara2019.html#reference",
     "title": "Microdatasus: pacote para download e pré-processamento de microdados do Departamento de Informática do SUS (DATASUS)",
     "section": "Reference",
-    "text": "Reference\n\n\nSALDANHA, R. DE F.; BASTOS, R. R.; BARCELLOS, C. Microdatasus: pacote para download e pré-processamento de microdados do Departamento de Informática do SUS (DATASUS). Cadernos de Saúde Pública, v. 35, p. e00032419, Sep. 2019."
+    "text": "Reference\n\n\nSALDANHA, R. DE F.; BASTOS, R. R.; BARCELLOS, C. Microdatasus: pacote para download e pré-processamento de microdados do Departamento de Informática do SUS (DATASUS). Cadernos de Saúde Pública, v. 35, p. e00032419, Sept. 2019."
   },
   {
     "objectID": "publications/saldanhaMicrodatasusPacotePara2019.html#abstract",
@@ -872,7 +872,7 @@
     "href": "publications/saldanhaEstudoAnaliseRede2019.html#reference",
     "title": "Estudo de análise de rede do fluxo de pacientes de câncer de mama no Brasil entre 2014 e 2016",
     "section": "Reference",
-    "text": "Reference\n\n\nSALDANHA, R. DE F. et al. Estudo de análise de rede do fluxo de pacientes de câncer de mama no Brasil entre 2014 e 2016. Cadernos de Saúde Pública, v. 35, p. e00090918, Jul. 2019."
+    "text": "Reference\n\n\nSALDANHA, R. DE F. et al. Estudo de análise de rede do fluxo de pacientes de câncer de mama no Brasil entre 2014 e 2016. Cadernos de Saúde Pública, v. 35, p. e00090918, July 2019."
   },
   {
     "objectID": "publications/saldanhaEstudoAnaliseRede2019.html#abstract",
@@ -914,7 +914,7 @@
     "href": "publications/marinhoBurdenDiseaseBrazil2018.html#reference",
     "title": "Burden of disease in Brazil, 1990–2016: a systematic subnational analysis for the Global Burden of Disease Study 2016",
     "section": "Reference",
-    "text": "Reference\n\n\nMARINHO, F. et al. Burden of disease in Brazil, 1990: A systematic subnational analysis for the Global Burden of Disease Study 2016. The Lancet, v. 392, n. 10149, p. 760–775, Sep. 2018."
+    "text": "Reference\n\n\nMARINHO, F. et al. Burden of disease in Brazil, 1990: A systematic subnational analysis for the Global Burden of Disease Study 2016. The Lancet, v. 392, n. 10149, p. 760–775, Sept. 2018."
   },
   {
     "objectID": "publications/marinhoBurdenDiseaseBrazil2018.html#abstract",
@@ -928,7 +928,7 @@
     "href": "publications/guimaraesIncreasingImpactCOVID192021b.html#reference",
     "title": "Increasing impact of COVID-19 on young adults: evidence from hospitalisations in Brazil",
     "section": "Reference",
-    "text": "Reference\n\n\nGUIMARÃES, R. et al. Increasing impact of COVID-19 on young adults: Evidence from hospitalisations in Brazil. Public Health, v. 198, p. 297–300, Sep. 2021."
+    "text": "Reference\n\n\nGUIMARÃES, R. et al. Increasing impact of COVID-19 on young adults: Evidence from hospitalisations in Brazil. Public Health, v. 198, p. 297–300, Sept. 2021."
   },
   {
     "objectID": "publications/guimaraesIncreasingImpactCOVID192021b.html#abstract",
@@ -970,201 +970,12 @@
     "href": "publications/araujoWHATHAVEWE2019a.html",
     "title": "What have we learned from Mariana? The importance of names, places and affections",
     "section": "",
-    "text": "Metodologias e impactos das mudanças climáticas sobre a saúde de corpos e territórios na Amazônia\n\n\nDados territoriais, monitoramento comunitário e AlertAr Saúde\n\n\n\n\n\n\n\n\nDec 5, 2026\n\n\nRaphael Saldanha | Observatório de Clima e Saúde | Fiocruz\n\n\n\n\n\n\n\n\n\n\n\n\nEixo Sala de Situação de Saúde\n\n\nRede de Pesquisa em Saúde do Rio Doce\n\n\n\n\n\n\n\n\nDec 5, 2026\n\n\nDiego Ricardo Xavier\n\n\n\n\n\n\n\n\n\n\n\n\nDemocratização de acesso a dados de saúde, ambiente e clima com o R\n\n\na experiência do LIS/ICICT/Fiocruz\n\n\n\nclimate\n\n\n\n\n\n\n\n\n\nAug 4, 2025\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nClimate data for Brazilian municipalities\n\n\n\n\n\n\nclimate\n\n\n\n\n\n\n\n\n\nNov 20, 2024\n\n\nRaphael Saldanha et al.\n\n\n\n\n\n\n\n\n\n\n\n\nDengue cases screening\n\n\n\n\n\n\nmachine learning\n\n\n\n\n\n\n\n\n\nNov 5, 2024\n\n\nRaphael Saldanha et al.\n\n\n\n\n\n\n\n\n\n\n\n\nSubset Models for Multivariate Time Series Forecast\n\n\nBDA 2024, Orléans\n\n\n\nsubsets\n\nmachine learning\n\n\n\nPresentation at BDA2024 conference.\n\n\n\n\n\nOct 22, 2024\n\n\nRaphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, Patrick Valduriez, Fabio Porto\n\n\n\n\n\n\n\n\n\n\n\n\nAdvances in climate features engineering and subsets modeling\n\n\nfor Dengue forecasting\n\n\n\nbrclim\n\n\n\nTalk at the HPDaSc Workshop on Data Driven Science.\n\n\n\n\n\nMay 31, 2024\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nSubset Models for Multivariate Time Series Forecast\n\n\n1st MulTiSA, ICDE 2024\n\n\n\nsubsets\n\nmachine learning\n\n\n\nPresentation at 1st MulTiSA workshop, ICDE 2024 conference.\n\n\n\n\n\nMay 13, 2024\n\n\nRaphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, Patrick Valduriez, Fabio Porto\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modeling\n\n\nAn application case for Brazil\n\n\n\nbrclim\n\n\n\nTalk at the Inria Zenith’s Team Seminar.\n\n\n\n\n\nMar 21, 2024\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nBILIS\n\n\nAn unified indicators database\n\n\n\nbilis\n\n\n\nTalk at the Climate and Health for Health Situation Studies Workshop, IRD.\n\n\n\n\n\nDec 18, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modelling\n\n\nAn application case for Brazil\n\n\n\nbrclim\n\n\n\nTalk at the Climate and Health for Health Situation Studies Workshop, IRD.\n\n\n\n\n\nDec 18, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modelling\n\n\nAn application case for Brazil\n\n\n\nisntd\n\nclimate\n\ndata\n\n\n\nTalk at the ISNTD Climate & Health Conference, Global Health Resilience panel\n\n\n\n\n\nNov 22, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\nNo matching items\n Back to top"
+    "text": "ARAÚJO, N. et al. WHAT HAVE WE LEARNED FROM MARIANA? THE IMPORTANCE OF NAMES, PLACES AND AFFECTIONS. Ambiente & Sociedade, v. 22, p. e00002, May 2019.\n\n\nNaming is an ambitious task. Naming an object or event means recognizing, distinguishing and giving importance to it. Whoever names acquires power over what was previously indescribable. The name is sign and meaning, skewed in origin and use. Naming and understanding the complexity of what occurred in the city of Mariana and its causes and consequences represents a challenge for which disciplinary approaches centered on scientific knowledge are insufficient. Thus, our search for studies on what happened in Mariana after the failure of the Fundão Dam in November 2015 should be complemented by the stories of residents of that place, by their knowledge. We recognize that this approach to examining such an issue would only be a limited contribution and thus constitutes the primary condition for an interdisciplinary exercise."
   },
   {
-    "objectID": "publications/victor2023.html#reference",
-    "href": "publications/victor2023.html#reference",
-    "title": "Subset modelling: A domain partitioning strategy for data-efficient machine-learning",
-    "section": "Reference",
-    "text": "Reference\n\n\nRIBEIRO, V. et al. Subset modelling: A domain partitioning strategy for data-efficient machine-learning. Anais do XXXVIII simpósio brasileiro de bancos de dados. Anais...Porto Alegre, RS, Brasil: SBC, 2023."
-  },
-  {
-    "objectID": "publications/victor2023.html#abstract",
-    "href": "publications/victor2023.html#abstract",
-    "title": "Subset modelling: A domain partitioning strategy for data-efficient machine-learning",
-    "section": "Abstract",
-    "text": "Abstract\nThe success of machine learning (ML) systems depends on data availability, volume, quality, and efficient computing resources. A challenge in this context is to reduce computational costs while maintaining adequate accuracy of the models. This paper presents a framework to address this challenge. The idea is to identify “subdomains” within the input space, train local models that produce better predictions for samples from that specific subdomain, instead of training a single global model on the full dataset. We experimentally evaluate our approach on two real-world datasets. Our results indicate that subset modelling (i) improves the predictive performance compared to a single global model and (ii) allows data-efficient training."
-  },
-  {
-    "objectID": "publications/souzajuniorComparisonSamplingDesigns2022b.html#reference",
-    "href": "publications/souzajuniorComparisonSamplingDesigns2022b.html#reference",
-    "title": "Comparison of sampling designs from the two editions of the Brazilian National Health Survey, 2013 and 2019",
-    "section": "Reference",
-    "text": "Reference\n\n\nSOUZA JÚNIOR, P. R. B. DE et al. Comparison of sampling designs from the two editions of the Brazilian National Health Survey, 2013 and 2019. Cadernos de Saúde Pública, v. 38, p. e00164321, July 2022."
-  },
-  {
-    "objectID": "publications/souzajuniorComparisonSamplingDesigns2022b.html#abstract",
-    "href": "publications/souzajuniorComparisonSamplingDesigns2022b.html#abstract",
-    "title": "Comparison of sampling designs from the two editions of the Brazilian National Health Survey, 2013 and 2019",
-    "section": "Abstract",
-    "text": "Abstract\nOur objective is to describe the differences in the sampling plans of the two editions of the Brazilian National Health Survey (PNS 2013 and 2019) and to evaluate how the changes affected the coefficient of variation (CV) and the design effect (Deff) of some estimated indicators. Variables from different parts of the questionnaire were analyzed to cover proportions with different magnitudes. The prevalence of obesity was included in the analysis since anthropometry measurement in the 2019 survey was performed in a subsample. The value of the point estimate, CV, and the Deff were calculated for each indicator, considering the stratification of the primary sampling units, the weighting of the sampling units, and the clustering effect. The CV and the Deff were lower in the 2019 estimates for most indicators. Concerning the questionnaire indicators of all household members, the Deffs were high and reached values greater than 18 for having a health insurance plan. Regarding the indicators of the individual questionnaire, for the prevalence of obesity, the Deff ranged from 2.7 to 4.2, in 2013, and from 2.7 to 10.2, in 2019. The prevalence of hypertension and diabetes per Federative Unit had a higher CV and lower Deff. Expanding the sample size to meet the diverse health objectives and the high Deff are significant challenges for developing probabilistic household-based national survey. New probabilistic sampling strategies should be considered to reduce costs and clustering effects."
-  },
-  {
-    "objectID": "publications/silvaTemporalSpatialDistribution2022.html#reference",
-    "href": "publications/silvaTemporalSpatialDistribution2022.html#reference",
-    "title": "Temporal and spatial distribution trends of polio vaccine coverage in children in Brazil, 2011-2021",
-    "section": "Reference",
-    "text": "Reference\n\n\nSILVA, T. M. R. D. et al. Temporal and spatial distribution trends of polio vaccine coverage in children in Brazil, 2011-2021. [s.l.] In Review, Aug. 2022. Acesso em: 30 sept. 2023."
-  },
-  {
-    "objectID": "publications/silvaTemporalSpatialDistribution2022.html#abstract",
-    "href": "publications/silvaTemporalSpatialDistribution2022.html#abstract",
-    "title": "Temporal and spatial distribution trends of polio vaccine coverage in children in Brazil, 2011-2021",
-    "section": "Abstract",
-    "text": "Abstract\nBackground: Low polio vaccine coverage can result in the spread of Poliovirus to areas free from viral circulation. This study analyzed the temporal trends and spatial distribution of polio vaccine coverage for children under five years of age in Brazil, between 2011 and 2021. Methods: This is an ecological, time-series study (2011 to 2021) with annual vaccine coverages against poliomyelitis, extracted from the Information System of the National Immunization Program from regions of the 27 Brazilian states. The percentage reductions in vaccination coverage in Brazil and in the Regions were calculated. Prais-Winsten regression models were used to analyze time series for the Regions and States, and spatial analysis identified the distribution of clusters (high-high; low-low; high-low and lowhigh) of vaccination coverages across Brazilian municipalities, using a 5% significance level. Results: From 2011 to 2021, the coverage of polio vaccines decreased by 46.1%. There was a progressive increase observed in clusters resulting in low vaccination coverages (136 low-low Brazilian municipalities in 2011 vs 614 in 2021), mostly reported in the North and Northeast regions of the country. There was a downward trend in vaccination coverages in 8 of the 27 States (p ≤ 0.05). Conclusions: The reduction in polio vaccine coverage, as observed in the North and Northeast regions of Brazil, may favor the spread of Poliovirus. Therefore, vaccination strategies should be prioritized for children residing in areas with sharp and recurrent declines in vaccination coverages, including travelers, migrants and refugees."
-  },
-  {
-    "objectID": "publications/saldanhaZonalStatistics2024.html#reference",
-    "href": "publications/saldanhaZonalStatistics2024.html#reference",
-    "title": "Zonal statistics datasets of climate indicators for Brazilian municipalities",
-    "section": "Reference",
-    "text": "Reference\n\n\nSALDANHA, R. et al. Zonal statistics datasets of climate indicators for Brazilian municipalities. Environmental Data Science, v. 3, p. e2, 2024."
-  },
-  {
-    "objectID": "publications/saldanhaZonalStatistics2024.html#abstract",
-    "href": "publications/saldanhaZonalStatistics2024.html#abstract",
-    "title": "Zonal statistics datasets of climate indicators for Brazilian municipalities",
-    "section": "Abstract",
-    "text": "Abstract\nClimate trends and weather indicators are used in several research fields due to their importance in statistical modeling, frequently used as covariates. Usually, climate indicators are available as grid files with different spatial and time resolutions. The availability of a time series of climate indicators compatible with administrative boundaries is scattered in Brazil, not fully available for several years, and produced with diverse methodologies. In this paper, we propose time series of climate indicators for the Brazilian municipalities produced using zonal statistics derived from the ERA5-Land reanalysis indicators. As a result, we present datasets with zonal statistics of climate indicators with daily data, covering the period from 1950 to 2022."
-  },
-  {
-    "objectID": "publications/saldanhaSIS2025.html#reference",
-    "href": "publications/saldanhaSIS2025.html#reference",
-    "title": "Sistemas de Informação em Saúde no Brasil",
-    "section": "Reference",
-    "text": "Reference\n\n\nSALDANHA, R. Sistemas de Informação em Saúde no Brasil. Rio de Janeiro: e-book, 2025."
-  },
-  {
-    "objectID": "publications/saldanhaSIS2025.html#abstract",
-    "href": "publications/saldanhaSIS2025.html#abstract",
-    "title": "Sistemas de Informação em Saúde no Brasil",
-    "section": "Abstract",
-    "text": "Abstract\nThis e-book offers a comprehensive and systematic overview of the principal health information systems (SIS) used in Brazil, detailing their historical development, organizational structure, available data, key applications, and core indicators. It contextualizes the evolution of health information systems within the Brazilian health landscape and provides in-depth descriptions of major national systems, including mortality (SIM), live births (SINASC), hospitalizations (SIH), ambulatory care (SIA), notifiable diseases (SINAN), health establishments (CNES), public health budgets (SIOPS), water quality surveillance (SISAGUA), primary care (SISAB), and national immunization (SI-PNI). Each chapter elucidates the purpose, data elements, and analytical uses of these systems, enabling readers to understand how health events and services are recorded, monitored, and interpreted for epidemiological surveillance, health planning, and policy formulation. Supplementary appendices provide essential reference materials such as ICD classifications, municipal coding schemes, population estimates, and additional surveillance systems, further enhancing the utility of the work for researchers, public health professionals, and policymakers. Authored by Raphael de Freitas Saldanha, this e-book serves as both a foundational guide and a practical reference for engaging with Brazil’s diverse health information infrastructure."
-  },
-  {
-    "objectID": "publications/saldanhaPesquisaCientificaNa2022.html#reference",
-    "href": "publications/saldanhaPesquisaCientificaNa2022.html#reference",
-    "title": "Book review: A pesquisa científica na era do Big data: cinco maneiras que mostram como o Big data prejudica a ciência, e como podemos salvá-la",
-    "section": "Reference",
-    "text": "Reference\n\n\nSALDANHA, R. D. F. A pesquisa científica na era do Big data: cinco maneiras que mostram como o Big data prejudica a ciência, e como podemos salvá-la. Revista Eletrônica de Comunicação, Informação & Inovação em Saúde, v. 16, n. 3, p. 742–745, Sept. 2022."
-  },
-  {
-    "objectID": "publications/saldanhaPesquisaCientificaNa2022.html#abstract",
-    "href": "publications/saldanhaPesquisaCientificaNa2022.html#abstract",
-    "title": "Book review: A pesquisa científica na era do Big data: cinco maneiras que mostram como o Big data prejudica a ciência, e como podemos salvá-la",
-    "section": "Abstract",
-    "text": "Abstract\nThe book titled A pesquisa científica na era do Big Data: cinco maneiras que mostram como o Big Data prejudica a ciência, e como podemos salvá-la [The scientific research in the age of Big Data: five ways that show how the Big Data harms the science, and how we can save it], by Sabina Leonelli, published in 2002, by Editora Fiocruz, explores in its chapters the definitions of Big Data and its negative impacts on scientific research. Then, the author reveals a new epistemological approach to Big data and finally she presents a set of proposals for developing a good scientific research. The literature review and updating of definitions as well as the important reflections and questions for a conscious use of Big data in scientific research make the work an important contribution to the researcher’s library of the information and communication about health."
-  },
-  {
-    "objectID": "publications/saldanhaMicrodatasus2023.html#reference",
-    "href": "publications/saldanhaMicrodatasus2023.html#reference",
-    "title": "Acesso aos dados agregados e microdados do SUS",
-    "section": "Reference",
-    "text": "Reference\n\n\nSALDANHA, R.; PEDROSO, M.; MAGALHÃES, M. DE A. F. M. Acesso aos dados agregados e microdados do SUS. In: Avaliação de impacto das políticas públicas de saúde: Um guia para o SUS. 1. ed. Brasília: Ministério da Saúde, 2023. p. 418–434."
-  },
-  {
-    "objectID": "publications/saldanhaMicrodatasus2023.html#abstract",
-    "href": "publications/saldanhaMicrodatasus2023.html#abstract",
-    "title": "Acesso aos dados agregados e microdados do SUS",
-    "section": "Abstract",
-    "text": "Abstract\nThis chapter presents a historical overview about health data dissemination in Brazil and the creation of the DataSUS. Some of the main Brazilian Health Information Systems characteristics and usage are described. Access tools like TabWin and TabNe are presented, and also an R package called “microdatasus”, for data download and pre-processing."
-  },
-  {
-    "objectID": "publications/saldanhaContributingEliminationCrossBorder2020.html#reference",
-    "href": "publications/saldanhaContributingEliminationCrossBorder2020.html#reference",
-    "title": "Contributing to Elimination of Cross-Border Malaria Through a Standardized Solution for Case Surveillance, Data Sharing, and Data Interpretation: Development of a Cross-Border Monitoring System",
-    "section": "Reference",
-    "text": "Reference\n\n\nSALDANHA, R. et al. Contributing to Elimination of Cross-Border Malaria Through a Standardized Solution for Case Surveillance, Data Sharing, and Data Interpretation: Development of a Cross-Border Monitoring System. JMIR Public Health and Surveillance, v. 6, n. 3, p. e15409, Sept. 2020."
-  },
-  {
-    "objectID": "publications/saldanhaContributingEliminationCrossBorder2020.html#abstract",
-    "href": "publications/saldanhaContributingEliminationCrossBorder2020.html#abstract",
-    "title": "Contributing to Elimination of Cross-Border Malaria Through a Standardized Solution for Case Surveillance, Data Sharing, and Data Interpretation: Development of a Cross-Border Monitoring System",
-    "section": "Abstract",
-    "text": "Abstract\n\nBackground\nCross-border malaria is a significant obstacle to achieving malaria control and elimination worldwide. Objective: This study aimed to build a cross-border surveillance system that can make comparable and qualified data available to all parties involved in malaria control between French Guiana and Brazil.\n\n\nMethods\nData reconciliation rules based on expert knowledge were defined and applied to the heterogeneous data provided by the existing malaria surveillance systems of both countries. Visualization dashboards were designed to facilitate progressive data exploration, analysis, and interpretation. Dedicated advanced open source and robust software solutions were chosen to facilitate solution sharing and reuse.\n\n\nResults\nA database gathering the harmonized data on cross-border malaria epidemiology is updated monthly with new individual malaria cases from both countries. Online dashboards permit a progressi ve and user-friendly visualization of raw data and epidemiological indicators, in the form of time series, maps, and data quality indexes. The monitoring system was shown to be able to identify changes in time series that are related to control actions, as well as differentiated changes according to space and to population subgroups.\n\n\nConclusions\nThis cross-border monitoring tool could help produce new scientific evidence on cross-border malaria dynamics, implementing cross-border cooperation for malaria control and elimination, and can be quickly adapted to other cross-border contexts."
-  },
-  {
-    "objectID": "publications/pedrosoDataSciencePlatform2023.html#reference",
-    "href": "publications/pedrosoDataSciencePlatform2023.html#reference",
-    "title": "Data Science Platform Applied to Health in Contribution to the Brazilian Unified Health System",
-    "section": "Reference",
-    "text": "Reference\n\n\nPEDROSO, M. et al. Data Science Platform Applied to Health in Contribution to the Brazilian Unified Health System. 49ª International Conference on Very Large Data Bases, 2023.\n\n\nThe Data Science Platform Applied to Health (PCDaS) is a research and technological development project that aims to develop and apply novel data analysis methods to public health data. It fills a technological gap between the variety of data sources available in legacy and unstandardized formats and the current needs and possibilities of Data Science applications to consume and explore data for the benefit of the Brazilian Health System. PCDaS provides democratic access to health-related datasets and information by requiring fewer technological abilities from its users while maintaining a continuously updated stack of technologies. As a data ecosystem, our primary goal is to provide secure and remote access to health data, technological tools, and a robust infrastructure provided by our platform to process and analyze a large amount of data that generally demand computational power often unavailable to researchers. The infrastructure consists of multi-region on-premise and cloud servers prepared to deal with the heavy analysis of Big Data from anywhere from multiple users simultaneously. Providing secure and remote access to health databases, whether in their original form or processed, is a daily breakthrough for a public health researcher. Knowing that there is a place where they can access integrated data in a standard format makes the research process much more manageable. To ensure quality, our data engineering and governance teams process these data sources following a gold standard based on cross-tables provided by the Health Ministry (the TabNET system) and decoding the original variables into meaningful names provided by the sources. It is very relevant to emphasize the comprehensive documentation of metadata, attributes, and the ETL (Extract, Transform, Load) process for databases. Every part of these steps is described in detail on the PCDaS website, ensuring the comprehension and reproducibility of the process. These features ensure that PCDaS users can effectively leverage the platform’s resources and capabilities, enabling them to conduct research, perform data analysis, and collaborate within a secure and supportive environment to contribute to the Brazilian Health System."
-  },
-  {
-    "objectID": "publications/mosnierResurgenceRiskMalaria2020a.html#reference",
-    "href": "publications/mosnierResurgenceRiskMalaria2020a.html#reference",
-    "title": "Resurgence risk for malaria, and the characterization of a recent outbreak in an Amazonian border area between French Guiana and Brazil",
-    "section": "Reference",
-    "text": "Reference\n\n\nMOSNIER, E. et al. Resurgence risk for malaria, and the characterization of a recent outbreak in an Amazonian border area between French Guiana and Brazil. BMC Infectious Diseases, v. 20, n. 1, p. 373, May 2020."
-  },
-  {
-    "objectID": "publications/mosnierResurgenceRiskMalaria2020a.html#abstract",
-    "href": "publications/mosnierResurgenceRiskMalaria2020a.html#abstract",
-    "title": "Resurgence risk for malaria, and the characterization of a recent outbreak in an Amazonian border area between French Guiana and Brazil",
-    "section": "Abstract",
-    "text": "Abstract\n\nBackground\nIn 2017, inhabitants along the border between French Guiana and Brazil were affected by a malaria outbreak primarily due to Plasmodium vivax (Pv). While malaria cases have steadily declined between 2005 and 2016 in this Amazonian region, a resurgence was observed in 2017.\n\n\nMethods\nTwo investigations were performed according to different spatial scales and information details: (1) a local study on the French Guiana border, which enabled a thorough investigation of malaria cases treated at a local village health center and the entomological circumstances in the most affected neighborhood, and (2) a regional and cross-border study, which enabled exploration of the regional spatiotemporal epidemic dynamic. Number and location of malaria cases were estimated using French and Brazilian surveillance systems.\n\n\nResults\nOn the French Guianese side of the border in Saint-Georges de l’Oyapock, the attack rate was 5.5% (n = 4000), reaching 51.4% (n = 175) in one Indigenous neighborhood. Entomological findings suggest a peak of Anopheles darlingi density in August and September. Two female An. darlingi (n = 1104, 0.18%) were found to be Pvpositive during this peak. During the same period, aggregated data from passive surveillance conducted by Brazilian and French Guianese border health centers identified 1566 cases of Pv infection. Temporal distribution during the 2007–2018 period displayed seasonal patterns with a peak in November 2017. Four clusters were identified among epidemic profiles of cross-border area localities. All localities of the first two clusters were Brazilian. The localization of the first cluster suggests an onset of the outbreak in an Indigenous reservation, subsequently expanding to French Indigenous neighborhoods and non-Native communities.\n\n\nConclusions\nThe current findings demonstrate a potential increase in malaria cases in an area with otherwise declining numbers. This is a transborder region where human mobility and remote populations challenge malaria control programs. This investigation illustrates the importance of international border surveillance and collaboration for malaria control, particularly in Indigenous villages and mobile populations."
-  },
-  {
-    "objectID": "publications/guimaraesItTimeTalk2020b.html#reference",
-    "href": "publications/guimaraesItTimeTalk2020b.html#reference",
-    "title": "Is it time to talk about the end of social distancing? A joinpoint analysis of COVID-19 time series in Brazilian capitals",
-    "section": "Reference",
-    "text": "Reference\n\n\nGUIMARÃES, R. M. et al. Is it time to talk about the end of social distancing? A joinpoint analysis of COVID-19 time series in Brazilian capitals. Revista da Sociedade Brasileira de Medicina Tropical, v. 53, p. e20200469, Sept. 2020."
-  },
-  {
-    "objectID": "publications/guimaraesItTimeTalk2020b.html#abstract",
-    "href": "publications/guimaraesItTimeTalk2020b.html#abstract",
-    "title": "Is it time to talk about the end of social distancing? A joinpoint analysis of COVID-19 time series in Brazilian capitals",
-    "section": "Abstract",
-    "text": "Abstract\n\nIntroduction\nMonitoring coronavirus disease (COVID-19)-related infections and deaths in Brazil is controversial, with increasing pressure to ease social distance measures. However, no evidence of a sustained, widespread fall in cases exists.\n\n\nMethods\nWe used segmented (joinpoint) regression analysis to describe the behavior of COVID-19 infections in Brazilian capital cities.\n\n\nResults\nAll capitals showed an exponential or a near-exponential increase in cases through May. A decline in reported cases was subsequently noted in 20 cities but was only significant for 8 (29.6%) and was followed in two by a renewed increase.\n\n\nConclusions\nCaution is warranted when considering the relaxation of restrictions."
-  },
-  {
-    "objectID": "publications/guimaraesHowOvercomeStagnation2022a.html#reference",
-    "href": "publications/guimaraesHowOvercomeStagnation2022a.html#reference",
-    "title": "How to overcome the stagnation of the first dose vaccine coverage curve against coronavirus disease 2019 in Brazil?",
-    "section": "Reference",
-    "text": "Reference\n\n\nGUIMARÃES, R. M. et al. How to overcome the stagnation of the first dose vaccine coverage curve against coronavirus disease 2019 in Brazil? Revista da Sociedade Brasileira de Medicina Tropical, v. 55, p. e0722, June 2022."
-  },
-  {
-    "objectID": "publications/guimaraesHowOvercomeStagnation2022a.html#abstract",
-    "href": "publications/guimaraesHowOvercomeStagnation2022a.html#abstract",
-    "title": "How to overcome the stagnation of the first dose vaccine coverage curve against coronavirus disease 2019 in Brazil?",
-    "section": "Abstract",
-    "text": "Abstract\nBackground: A large percentage of the population has not yet started vaccination, for which the increase in coverage is almost null. Methods: We used segmented regression analysis to estimate trends in the first dose coverage curve. Results: There has been a slowdown in the application of the first doses in Brazil since epidemiological week 36 (average percent change [APC] 0.83%, 95% confidence interval [CI] 0.75-0.91%), with a trend close to stagnation. Conclusions: It is important to develop strategies to increase access to vaccination posts. Furthermore, it is recommended to expand vaccination to children, thereby increasing the eligible population."
-  },
-  {
-    "objectID": "publications/fonsecaGeographicAccessibilityCancer2022a.html#reference",
-    "href": "publications/fonsecaGeographicAccessibilityCancer2022a.html#reference",
-    "title": "Geographic accessibility to cancer treatment in Brazil: A network analysis",
-    "section": "Reference",
-    "text": "Reference\n\n\nFONSECA, B. DE P. et al. Geographic accessibility to cancer treatment in Brazil: A network analysis. The Lancet Regional Health - Americas, v. 7, p. 100153, Mar. 2022."
-  },
-  {
-    "objectID": "publications/fonsecaGeographicAccessibilityCancer2022a.html#abstract",
-    "href": "publications/fonsecaGeographicAccessibilityCancer2022a.html#abstract",
-    "title": "Geographic accessibility to cancer treatment in Brazil: A network analysis",
-    "section": "Abstract",
-    "text": "Abstract\n\nBackground\nGeographic accessibility to healthcare services is a fundamental component in achieving universal health coverage, the central commitment of the Brazilian Unified Health System (SUS). For cancer patients, poor accessibility has been associated with inadequate treatment, worse prognosis, and poorer quality of life.\n\n\nMethods\nWe explored nationwide healthcare data from the SUS health information systems, and mapped the geographic accessibility to cancer treatment in two time-frames: 2009–2010 and 2017–2018. We applied social network analysis (SNA) to estimate the commuting route, flow, and distances travelled by cancer patients to undergo surgical, radiotherapy, and chemotherapy treatment.\n\n\nFindings\nA total of 12,751,728 treatment procedures were analyzed. Overall, more than half of the patients (49·2 to 60·7%) needed to travel beyond their municipality of residence for treatment, a fact that did not change over time. Marked regional differences were observed, as patients living in the northern and midwestern regions of the country had to travel longer distances (weighted average of 296 to 870 km). Cancer care hubs and attraction poles were mostly identified in the southeast and northeast regions, with Barretos being the main hub for all types of treatment throughout time.\n\n\nInterpretation\nImportant regional disparities in the accessibility to cancer treatment in Brazil were revealed, suggesting the need to review the distribution of specialized care in the country. The data presented here contribute to ongoing research on improving access to cancer care and can provide reference to other countries, offering relevant data for oncological and healthcare service evaluation, monitoring, and strategic planning.\n\n\nFunding\nThis work was funded by the Oswaldo Cruz Foundation - Fiocruz (Inova - no. 8451635123 to BPF) and the National Council for Scientific and Technological Development - CNPq (no. 407060/2018–9 to BPF); Coordination for the Improvement of Higher Education Personnel – CAPES (scholarship to PCA, Finance Code 001); and Instituto Nacional de Ciência e Tecnologia de Inovação em Doenças de Populações Negligenciadas (INCT-IDPN)."
-  },
-  {
-    "objectID": "publications/baroniNeonatalMortalityRates2021b.html#reference",
-    "href": "publications/baroniNeonatalMortalityRates2021b.html#reference",
-    "title": "Neonatal mortality rates in Brazilian municipalities: from 1996 to 2017",
-    "section": "Reference",
-    "text": "Reference\n\n\nBARONI, L. et al. Neonatal mortality rates in Brazilian municipalities: From 1996 to 2017. BMC Research Notes, v. 14, n. 1, p. 55, Feb. 2021."
-  },
-  {
-    "objectID": "publications/baroniNeonatalMortalityRates2021b.html#abstract",
-    "href": "publications/baroniNeonatalMortalityRates2021b.html#abstract",
-    "title": "Neonatal mortality rates in Brazilian municipalities: from 1996 to 2017",
-    "section": "Abstract",
-    "text": "Abstract\nNeonatal mortality is a global public health problem, and the efforts to reduce child mortality is one of the goals of the 2030 Agenda for Sustainable Development, launched in 2015 by the United Nations. The availability of historical neonatal mortality rates (NMR) data in Brazilian municipalities is crucial to evaluate trends at local, regional and national level, identifying gaps and vulnerable territories. Therefore, the objective of this article is to offer an integrated dataset containing monthly data in a historical series from 1996 to 2017 with information on all births, neonatal deaths, and NMR (total, early and late components) enriched with information related to the municipality."
-  },
-  {
-    "objectID": "publications.html",
-    "href": "publications.html",
-    "title": "Publications",
+    "objectID": "publications/araujoWHATHAVEWE2019a.html#reference",
+    "href": "publications/araujoWHATHAVEWE2019a.html#reference",
+    "title": "What have we learned from Mariana? The importance of names, places and affections",
     "section": "",
     "text": "ARAÚJO, N. et al. WHAT HAVE WE LEARNED FROM MARIANA? THE IMPORTANCE OF NAMES, PLACES AND AFFECTIONS. Ambiente & Sociedade, v. 22, p. e00002, May 2019.\n\n\nNaming is an ambitious task. Naming an object or event means recognizing, distinguishing and giving importance to it. Whoever names acquires power over what was previously indescribable. The name is sign and meaning, skewed in origin and use. Naming and understanding the complexity of what occurred in the city of Mariana and its causes and consequences represents a challenge for which disciplinary approaches centered on scientific knowledge are insufficient. Thus, our search for studies on what happened in Mariana after the failure of the Fundão Dam in November 2015 should be complemented by the stories of residents of that place, by their knowledge. We recognize that this approach to examining such an issue would only be a limited contribution and thus constitutes the primary condition for an interdisciplinary exercise."
   },
@@ -2804,7 +2615,7 @@
     "href": "publications/guimaraesHowOvercomeStagnation2022a.html#reference",
     "title": "How to overcome the stagnation of the first dose vaccine coverage curve against coronavirus disease 2019 in Brazil?",
     "section": "Reference",
-    "text": "Reference\n\n\nGUIMARÃES, R. M. et al. How to overcome the stagnation of the first dose vaccine coverage curve against coronavirus disease 2019 in Brazil? Revista da Sociedade Brasileira de Medicina Tropical, v. 55, p. e0722, Jun. 2022."
+    "text": "Reference\n\n\nGUIMARÃES, R. M. et al. How to overcome the stagnation of the first dose vaccine coverage curve against coronavirus disease 2019 in Brazil? Revista da Sociedade Brasileira de Medicina Tropical, v. 55, p. e0722, June 2022."
   },
   {
     "objectID": "publications/guimaraesHowOvercomeStagnation2022a.html#abstract",
@@ -2818,7 +2629,7 @@
     "href": "publications/guimaraesItTimeTalk2020b.html#reference",
     "title": "Is it time to talk about the end of social distancing? A joinpoint analysis of COVID-19 time series in Brazilian capitals",
     "section": "Reference",
-    "text": "Reference\n\n\nGUIMARÃES, R. M. et al. Is it time to talk about the end of social distancing? A joinpoint analysis of COVID-19 time series in Brazilian capitals. Revista da Sociedade Brasileira de Medicina Tropical, v. 53, p. e20200469, Sep. 2020."
+    "text": "Reference\n\n\nGUIMARÃES, R. M. et al. Is it time to talk about the end of social distancing? A joinpoint analysis of COVID-19 time series in Brazilian capitals. Revista da Sociedade Brasileira de Medicina Tropical, v. 53, p. e20200469, Sept. 2020."
   },
   {
     "objectID": "publications/guimaraesItTimeTalk2020b.html#abstract",
@@ -2853,7 +2664,7 @@
     "href": "publications/saldanhaContributingEliminationCrossBorder2020.html#reference",
     "title": "Contributing to Elimination of Cross-Border Malaria Through a Standardized Solution for Case Surveillance, Data Sharing, and Data Interpretation: Development of a Cross-Border Monitoring System",
     "section": "Reference",
-    "text": "Reference\n\n\nSALDANHA, R. et al. Contributing to Elimination of Cross-Border Malaria Through a Standardized Solution for Case Surveillance, Data Sharing, and Data Interpretation: Development of a Cross-Border Monitoring System. JMIR Public Health and Surveillance, v. 6, n. 3, p. e15409, Sep. 2020."
+    "text": "Reference\n\n\nSALDANHA, R. et al. Contributing to Elimination of Cross-Border Malaria Through a Standardized Solution for Case Surveillance, Data Sharing, and Data Interpretation: Development of a Cross-Border Monitoring System. JMIR Public Health and Surveillance, v. 6, n. 3, p. e15409, Sept. 2020."
   },
   {
     "objectID": "publications/saldanhaContributingEliminationCrossBorder2020.html#abstract",
@@ -2881,7 +2692,7 @@
     "href": "publications/saldanhaPesquisaCientificaNa2022.html#reference",
     "title": "Book review: A pesquisa científica na era do Big data: cinco maneiras que mostram como o Big data prejudica a ciência, e como podemos salvá-la",
     "section": "Reference",
-    "text": "Reference\n\n\nSALDANHA, R. D. F. A pesquisa científica na era do Big data: cinco maneiras que mostram como o Big data prejudica a ciência, e como podemos salvá-la. Revista Eletrônica de Comunicação, Informação & Inovação em Saúde, v. 16, n. 3, p. 742–745, Sep. 2022."
+    "text": "Reference\n\n\nSALDANHA, R. D. F. A pesquisa científica na era do Big data: cinco maneiras que mostram como o Big data prejudica a ciência, e como podemos salvá-la. Revista Eletrônica de Comunicação, Informação & Inovação em Saúde, v. 16, n. 3, p. 742–745, Sept. 2022."
   },
   {
     "objectID": "publications/saldanhaPesquisaCientificaNa2022.html#abstract",
@@ -2923,7 +2734,7 @@
     "href": "publications/silvaTemporalSpatialDistribution2022.html#reference",
     "title": "Temporal and spatial distribution trends of polio vaccine coverage in children in Brazil, 2011-2021",
     "section": "Reference",
-    "text": "Reference\n\n\nSILVA, T. M. R. D. et al. Temporal and spatial distribution trends of polio vaccine coverage in children in Brazil, 2011-2021. [s.l.] In Review, Aug. 2022. Acesso em: 30 sep. 2023."
+    "text": "Reference\n\n\nSILVA, T. M. R. D. et al. Temporal and spatial distribution trends of polio vaccine coverage in children in Brazil, 2011-2021. [s.l.] In Review, Aug. 2022. Acesso em: 30 sept. 2023."
   },
   {
     "objectID": "publications/silvaTemporalSpatialDistribution2022.html#abstract",
@@ -2937,7 +2748,7 @@
     "href": "publications/souzajuniorComparisonSamplingDesigns2022b.html#reference",
     "title": "Comparison of sampling designs from the two editions of the Brazilian National Health Survey, 2013 and 2019",
     "section": "Reference",
-    "text": "Reference\n\n\nSOUZA JÚNIOR, P. R. B. DE et al. Comparison of sampling designs from the two editions of the Brazilian National Health Survey, 2013 and 2019. Cadernos de Saúde Pública, v. 38, p. e00164321, Jul. 2022."
+    "text": "Reference\n\n\nSOUZA JÚNIOR, P. R. B. DE et al. Comparison of sampling designs from the two editions of the Brazilian National Health Survey, 2013 and 2019. Cadernos de Saúde Pública, v. 38, p. e00164321, July 2022."
   },
   {
     "objectID": "publications/souzajuniorComparisonSamplingDesigns2022b.html#abstract",
@@ -2965,7 +2776,7 @@
     "href": "talks.html",
     "title": "Talks",
     "section": "",
-    "text": "Metodologias e impactos das mudanças climáticas sobre a saúde de corpos e territórios na Amazônia\n\n\nDados territoriais, monitoramento comunitário e AlertAr Saúde\n\n\n\n\n\n\n\n\nDec 5, 2026\n\n\nRaphael Saldanha | Observatório de Clima e Saúde | Fiocruz\n\n\n\n\n\n\n\n\n\n\n\n\nEixo Sala de Situação de Saúde\n\n\nRede de Pesquisa em Saúde do Rio Doce\n\n\n\n\n\n\n\n\nDec 5, 2026\n\n\nDiego Ricardo Xavier\n\n\n\n\n\n\n\n\n\n\n\n\nDemocratização de acesso a dados de saúde, ambiente e clima com o R\n\n\na experiência do LIS/ICICT/Fiocruz\n\n\n\nclimate\n\n\n\n\n\n\n\n\n\nAug 4, 2025\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nClimate data for Brazilian municipalities\n\n\n\n\n\n\nclimate\n\n\n\n\n\n\n\n\n\nNov 20, 2024\n\n\nRaphael Saldanha et al.\n\n\n\n\n\n\n\n\n\n\n\n\nDengue cases screening\n\n\n\n\n\n\nmachine learning\n\n\n\n\n\n\n\n\n\nNov 5, 2024\n\n\nRaphael Saldanha et al.\n\n\n\n\n\n\n\n\n\n\n\n\nSubset Models for Multivariate Time Series Forecast\n\n\nBDA 2024, Orléans\n\n\n\nsubsets\n\nmachine learning\n\n\n\nPresentation at BDA2024 conference.\n\n\n\n\n\nOct 22, 2024\n\n\nRaphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, Patrick Valduriez, Fabio Porto\n\n\n\n\n\n\n\n\n\n\n\n\nAdvances in climate features engineering and subsets modeling\n\n\nfor Dengue forecasting\n\n\n\nbrclim\n\n\n\nTalk at the HPDaSc Workshop on Data Driven Science.\n\n\n\n\n\nMay 31, 2024\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nSubset Models for Multivariate Time Series Forecast\n\n\n1st MulTiSA, ICDE 2024\n\n\n\nsubsets\n\nmachine learning\n\n\n\nPresentation at 1st MulTiSA workshop, ICDE 2024 conference.\n\n\n\n\n\nMay 13, 2024\n\n\nRaphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, Patrick Valduriez, Fabio Porto\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modeling\n\n\nAn application case for Brazil\n\n\n\nbrclim\n\n\n\nTalk at the Inria Zenith’s Team Seminar.\n\n\n\n\n\nMar 21, 2024\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nBILIS\n\n\nAn unified indicators database\n\n\n\nbilis\n\n\n\nTalk at the Climate and Health for Health Situation Studies Workshop, IRD.\n\n\n\n\n\nDec 18, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modelling\n\n\nAn application case for Brazil\n\n\n\nbrclim\n\n\n\nTalk at the Climate and Health for Health Situation Studies Workshop, IRD.\n\n\n\n\n\nDec 18, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modelling\n\n\nAn application case for Brazil\n\n\n\nisntd\n\nclimate\n\ndata\n\n\n\nTalk at the ISNTD Climate & Health Conference, Global Health Resilience panel\n\n\n\n\n\nNov 22, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\nNo matching items\n Back to top"
+    "text": "Busca de sinais digitais sobre Síndrome de Koro em Moçambique\n\n\nFontes abertas, cobertura de Internet e limites de vigilância baseada na web\n\n\n\n\n\n\n\n\nFeb 5, 2027\n\n\nRaphael Saldanha | Observatório de Clima e Saúde | Fiocruz\n\n\n\n\n\n\n\n\n\n\n\n\nMetodologias e impactos das mudanças climáticas sobre a saúde de corpos e territórios na Amazônia\n\n\nDados territoriais, monitoramento comunitário e AlertAr Saúde\n\n\n\n\n\n\n\n\nDec 5, 2026\n\n\nRaphael Saldanha | Observatório de Clima e Saúde | Fiocruz\n\n\n\n\n\n\n\n\n\n\n\n\nEixo Sala de Situação de Saúde\n\n\nRede de Pesquisa em Saúde do Rio Doce\n\n\n\n\n\n\n\n\nDec 5, 2026\n\n\nDiego Ricardo Xavier\n\n\n\n\n\n\n\n\n\n\n\n\nDemocratização de acesso a dados de saúde, ambiente e clima com o R\n\n\na experiência do LIS/ICICT/Fiocruz\n\n\n\nclimate\n\n\n\n\n\n\n\n\n\nAug 4, 2025\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nClimate data for Brazilian municipalities\n\n\n\n\n\n\nclimate\n\n\n\n\n\n\n\n\n\nNov 20, 2024\n\n\nRaphael Saldanha et al.\n\n\n\n\n\n\n\n\n\n\n\n\nDengue cases screening\n\n\n\n\n\n\nmachine learning\n\n\n\n\n\n\n\n\n\nNov 5, 2024\n\n\nRaphael Saldanha et al.\n\n\n\n\n\n\n\n\n\n\n\n\nSubset Models for Multivariate Time Series Forecast\n\n\nBDA 2024, Orléans\n\n\n\nsubsets\n\nmachine learning\n\n\n\nPresentation at BDA2024 conference.\n\n\n\n\n\nOct 22, 2024\n\n\nRaphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, Patrick Valduriez, Fabio Porto\n\n\n\n\n\n\n\n\n\n\n\n\nAdvances in climate features engineering and subsets modeling\n\n\nfor Dengue forecasting\n\n\n\nbrclim\n\n\n\nTalk at the HPDaSc Workshop on Data Driven Science.\n\n\n\n\n\nMay 31, 2024\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nSubset Models for Multivariate Time Series Forecast\n\n\n1st MulTiSA, ICDE 2024\n\n\n\nsubsets\n\nmachine learning\n\n\n\nPresentation at 1st MulTiSA workshop, ICDE 2024 conference.\n\n\n\n\n\nMay 13, 2024\n\n\nRaphael Saldanha, Victor Ribeiro, Eduardo Pena, Marcel Pedroso, Reza Akbarinia, Patrick Valduriez, Fabio Porto\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modeling\n\n\nAn application case for Brazil\n\n\n\nbrclim\n\n\n\nTalk at the Inria Zenith’s Team Seminar.\n\n\n\n\n\nMar 21, 2024\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nBILIS\n\n\nAn unified indicators database\n\n\n\nbilis\n\n\n\nTalk at the Climate and Health for Health Situation Studies Workshop, IRD.\n\n\n\n\n\nDec 18, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modelling\n\n\nAn application case for Brazil\n\n\n\nbrclim\n\n\n\nTalk at the Climate and Health for Health Situation Studies Workshop, IRD.\n\n\n\n\n\nDec 18, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\n\n\n\n\n\n\n\nDisease and climate data fusion for modelling\n\n\nAn application case for Brazil\n\n\n\nisntd\n\nclimate\n\ndata\n\n\n\nTalk at the ISNTD Climate & Health Conference, Global Health Resilience panel\n\n\n\n\n\nNov 22, 2023\n\n\nRaphael Saldanha\n\n\n\n\n\nNo matching items\n Back to top"
   },
   {
     "objectID": "talks/bilis_2023.html#bilis",
@@ -2996,11 +2807,11 @@
     "text": "Solutions\n\nPrimarly use already existing sources of secondary data\n\nDeath records, new born records, hospitalization records, etc\n\nEasy to use R packages to compute health indicators\nOne package, one specific mission"
   },
   {
-    "objectID": "publications/guimaraesIncreasingImpactCOVID192021b.html#reference",
-    "href": "publications/guimaraesIncreasingImpactCOVID192021b.html#reference",
-    "title": "Increasing impact of COVID-19 on young adults: evidence from hospitalisations in Brazil",
-    "section": "Reference",
-    "text": "Reference\n\n\nGUIMARÃES, R. et al. Increasing impact of COVID-19 on young adults: Evidence from hospitalisations in Brazil. Public Health, v. 198, p. 297–300, Sept. 2021."
+    "objectID": "talks/bilis_2023.html#packages",
+    "href": "talks/bilis_2023.html#packages",
+    "title": "BILIS",
+    "section": "Packages",
+    "text": "Packages\n\nbrpop: yearly population estimates for Brazilian administrative levels, including age groups and sex (for standardized indicators)\nrpcdas: query SIM, SINASC, SIH and other health information systems stored at PCDaS ElasticSearch stack, returning aggregated data per administrative level and time\nrecbilis: query other health information systems stored at ICICT Postgres instance"
   },
   {
     "objectID": "talks/bilis_2023.html#packages-1",
@@ -3010,233 +2821,9 @@
     "text": "Packages\n\nbilis: compute health indicators at several combinations of administrative levels (municipality, health region and state) and time units (weekly, monthly and yearly)"
   },
   {
-    "objectID": "publications/marinhoBurdenDiseaseBrazil2018.html#reference",
-    "href": "publications/marinhoBurdenDiseaseBrazil2018.html#reference",
-    "title": "Burden of disease in Brazil, 1990–2016: a systematic subnational analysis for the Global Burden of Disease Study 2016",
-    "section": "Reference",
-    "text": "Reference\n\n\nMARINHO, F. et al. Burden of disease in Brazil, 1990: A systematic subnational analysis for the Global Burden of Disease Study 2016. The Lancet, v. 392, n. 10149, p. 760–775, Sept. 2018."
-  },
-  {
-    "objectID": "publications/marinhoBurdenDiseaseBrazil2018.html#abstract",
-    "href": "publications/marinhoBurdenDiseaseBrazil2018.html#abstract",
-    "title": "Burden of disease in Brazil, 1990–2016: a systematic subnational analysis for the Global Burden of Disease Study 2016",
-    "section": "Abstract",
-    "text": "Abstract\n\nBackground\nPolitical, economic, and epidemiological changes in Brazil have affected health and the health system. We used the Global Burden of Disease Study 2016 (GBD 2016) results to understand changing health patterns and inform policy responses.\n\n\nMethods\nWe analysed GBD 2016 estimates for life expectancy at birth (LE), healthy life expectancy (HALE), all-cause and cause-specific mortality, years of life lost (YLLs), years lived with disability (YLDs), disability-adjusted life-years (DALYs), and risk factors for Brazil, its 26 states, and the Federal District from 1990 to 2016, and compared these with national estimates for ten comparator countries.\n\n\nFindings\nNationally, LE increased from 68·4 years (95% uncertainty interval [UI] 68·0–68·9) in 1990 to 75·2 years (74·7–75·7) in 2016, and HALE increased from 59·8 years (57·1–62·1) to 65·5 years (62·5–68·0). All-cause agestandardised mortality rates decreased by 34·0% (33·4–34·5), while all-cause age-standardised DALY rates decreased by 30·2% (27·7–32·8); the magnitude of declines varied among states. In 2016, ischaemic heart disease was the leading cause of age-standardised YLLs, followed by interpersonal violence. Low back and neck pain, sense organ diseases, and skin diseases were the main causes of YLDs in 1990 and 2016. Leading risk factors contributing to DALYs in 2016 were alcohol and drug use, high blood pressure, and high body-mass index.\n\n\nInterpretation\nHealth improved from 1990 to 2016, but improvements and disease burden varied between states. An epidemiological transition towards non-communicable diseases and related risks occurred nationally, but later in some states, while interpersonal violence grew as a health concern. Policy makers can use these results to address health disparities.\n\n\nFunding\nBill & Melinda Gates Foundation and the Brazilian Ministry of Health."
-  },
-  {
-    "objectID": "publications/paixaoEstimationCOVID19UnderReporting2021a.html#reference",
-    "href": "publications/paixaoEstimationCOVID19UnderReporting2021a.html#reference",
-    "title": "Estimation of COVID-19 Under-Reporting in the Brazilian States Through SARI",
-    "section": "Reference",
-    "text": "Reference\n\n\nPAIXÃO, B. et al. Estimation of COVID-19 Under-Reporting in the Brazilian States Through SARI. New Generation Computing, v. 39, n. 3, p. 623–645, Nov. 2021."
-  },
-  {
-    "objectID": "publications/paixaoEstimationCOVID19UnderReporting2021a.html#abstract",
-    "href": "publications/paixaoEstimationCOVID19UnderReporting2021a.html#abstract",
-    "title": "Estimation of COVID-19 Under-Reporting in the Brazilian States Through SARI",
-    "section": "Abstract",
-    "text": "Abstract\nDue to its impact, COVID-19 has been stressing the academy to search for curing, mitigating, or controlling it. It is believed that under-reporting is a relevant factor in determining the actual mortality rate and, if not considered, can cause significant misinformation. Therefore, this work aims to estimate the under-reporting of cases and deaths of COVID-19 in Brazilian states using data from the InfoGripe. InfoGripe targets notifications of Severe Acute Respiratory Infection (SARI). The methodology is based on the combination of data analytics (event detection methods) and time series modeling (inertia and novelty concepts) over hospitalized SARI cases. The estimate of real cases of the disease, called novelty, is calculated by comparing the difference in SARI cases in 2020 (after COVID-19) with the total expected cases in recent years (2016–2019). The expected cases are derived from a seasonal exponential moving average. The results show that under-reporting rates vary significantly between states and that there are no general patterns for states in the same region in Brazil. The states of Minas Gerais and Mato Grosso have the highest rates of under-reporting of cases. The rate of under-reporting of deaths is high in the Rio Grande do Sul and the Minas Gerais. This work can be highlighted for the combination of data analytics and time series modeling. Our calculation of under-reporting rates based on SARI is conservative and better characterized by deaths than for cases."
-  },
-  {
-    "objectID": "publications/saldanhaCienciaDadosBig2021a.html#reference",
-    "href": "publications/saldanhaCienciaDadosBig2021a.html#reference",
-    "title": "Ciência de dados e big data: o que isso significa para estudos populacionais e da saúde?",
-    "section": "Reference",
-    "text": "Reference\n\n\nSALDANHA, R. DE F.; BARCELLOS, C.; PEDROSO, M. DE M. Ciência de dados e big data: o que isso significa para estudos populacionais e da saúde? Cadernos Saúde Coletiva, v. 29, p. 51–58, Nov. 2021."
-  },
-  {
-    "objectID": "publications/saldanhaCienciaDadosBig2021a.html#abstract",
-    "href": "publications/saldanhaCienciaDadosBig2021a.html#abstract",
-    "title": "Ciência de dados e big data: o que isso significa para estudos populacionais e da saúde?",
-    "section": "Abstract",
-    "text": "Abstract\n\nBackground\nThe term big data is no longer new in the academic environment and has become more common in scientific publications and research grants, leading to a profound revision of the way science is being made and taught.\n\n\nObjective\nTo reflect on the possible changes that data science can induce in population and health related studies\n\n\nMethod\nTo foster this debate, scientific articles selected from the big data field in health and demography were contrasted with books and other scientific productions.\n\n\nResults\nIt is argued that volume is not the most promising characteristic of big data for population and health related studies, but rather the complexity of data and the possibilities of integration with traditional studies by means of interdisciplinary teams.\n\n\nConclusion\nIn population and health related studies, the possibilities of integration between new and traditional methods are broad, and include new toolboxes for analysis, monitoring, prediction of events (cases) and health-disease processes in the population, and for the study of sociodemographic and environmental determinants."
-  },
-  {
-    "objectID": "publications/saldanhaEstudoAnaliseRede2019.html#reference",
-    "href": "publications/saldanhaEstudoAnaliseRede2019.html#reference",
-    "title": "Estudo de análise de rede do fluxo de pacientes de câncer de mama no Brasil entre 2014 e 2016",
-    "section": "Reference",
-    "text": "Reference\n\n\nSALDANHA, R. DE F. et al. Estudo de análise de rede do fluxo de pacientes de câncer de mama no Brasil entre 2014 e 2016. Cadernos de Saúde Pública, v. 35, p. e00090918, July 2019."
-  },
-  {
-    "objectID": "publications/saldanhaEstudoAnaliseRede2019.html#abstract",
-    "href": "publications/saldanhaEstudoAnaliseRede2019.html#abstract",
-    "title": "Estudo de análise de rede do fluxo de pacientes de câncer de mama no Brasil entre 2014 e 2016",
-    "section": "Abstract",
-    "text": "Abstract\nThis study aims to analyze the flow of breast cancer patients treated outside of their municipality of residence, based on hospital admissions and chemotherapy and radiotherapy in the Brazilian Unified National Health System (SUS) from 2014 to 2016. Network analysis was used, considering the municipality of residence and of treatment as nodes in a graph, thus consisting of a “health system organizational network study”. In addition, highway distances and travel time were estimated via the best feasible route according to the Open Street Maps highway project. According to the results, 51.34% of breast cancer patients in Brazil were treated outside their municipality of residence, following regionalized flows that respect state borders, generally towards the state capital or other large cities. The results also point to specific exceptions, where some municipalities occupy outstanding positions that extrapolate state borders. Median travel time from the municipality of residence to the municipality of care was nearly 3 hours, and 75% of trips totaled 324km for chemotherapy, 287km for radiotherapy, and 282km for hospitalizations. These results are indicative of the difficulties in access to oncology services, potentially aggravating the illness experience with cancer in terms of impact on the individuals and their families."
-  },
-  {
-    "objectID": "publications/saldanhaMicrodatasusPacotePara2019.html#reference",
-    "href": "publications/saldanhaMicrodatasusPacotePara2019.html#reference",
-    "title": "Microdatasus: pacote para download e pré-processamento de microdados do Departamento de Informática do SUS (DATASUS)",
-    "section": "Reference",
-    "text": "Reference\n\n\nSALDANHA, R. DE F.; BASTOS, R. R.; BARCELLOS, C. Microdatasus: pacote para download e pré-processamento de microdados do Departamento de Informática do SUS (DATASUS). Cadernos de Saúde Pública, v. 35, p. e00032419, Sept. 2019."
-  },
-  {
-    "objectID": "publications/saldanhaMicrodatasusPacotePara2019.html#abstract",
-    "href": "publications/saldanhaMicrodatasusPacotePara2019.html#abstract",
-    "title": "Microdatasus: pacote para download e pré-processamento de microdados do Departamento de Informática do SUS (DATASUS)",
-    "section": "Abstract",
-    "text": "Abstract\nThis study aimed to develop an algorithm for downloading and preprocessing microdata furnished by the Brazilian Health Informatics Department (DATASUS) for various health information systems, using the R statistical programming language. The package allows downloading and preprocessing data from various health information systems, with the inclusion of labeling categorical fields in the files. The download function was capable of directly accessing and reducing the workload for the selection of microdata files and variables in DATASUS, while the preprocessing function enabled automatic coding of various categorical fields. The package thus enables a continuous workflow in the same program, in which the algorithm allows downloading and preprocessing and other packages in R allow analyzing data from the health information systems in the Brazilian Unified National Health System (SUS)."
-  },
-  {
-    "objectID": "publications/saldanhaPropostaUmObservatorio2017.html#reference",
-    "href": "publications/saldanhaPropostaUmObservatorio2017.html#reference",
-    "title": "Proposta de um observatório epidemiológico do Sistema Único de Saúde",
-    "section": "Reference",
-    "text": "Reference\n\n\nSALDANHA, R. DE F. et al. Proposta de um observatório epidemiológico do Sistema Único de Saúde. Cadernos de Saúde Pública, v. 33, p. e00113216, Jan. 2017."
-  },
-  {
-    "objectID": "publications/saldanhaPropostaUmObservatorio2017.html#abstract",
-    "href": "publications/saldanhaPropostaUmObservatorio2017.html#abstract",
-    "title": "Proposta de um observatório epidemiológico do Sistema Único de Saúde",
-    "section": "Abstract",
-    "text": "Abstract\nFollowing the creation of the Brazilian Unified National Health System (SUS), the Brazilian Health Informatics Department (DATASUS) was established in 1991, aimed at organizing information systems and databases in health. Online data access and viewing is free and open, using tables and graphs of aggregate data and access to raw data. However, the current form of data access does not fully meet the demands by health system administrators and other users for a flexible, user-friendly tool that allows dealing with various relevant health issues in the knowledge search and decision-making. We propose an ancillary system capable of generating monthly summary reports that are easy to access and understand, with an emphasis on viewing information through graphs and maps."
-  },
-  {
-    "objectID": "publications/saldanhaSubsetModelsMultivariate2024a.html#reference",
-    "href": "publications/saldanhaSubsetModelsMultivariate2024a.html#reference",
-    "title": "Subset Models for Multivariate Time Series Forecast",
-    "section": "Reference",
-    "text": "Reference\n\n\nSALDANHA, R. et al. Subset Models for Multivariate Time Series Forecast. 2024 IEEE 40th International Conference on Data Engineering Workshops. Anais...Netherlands: 2024."
-  },
-  {
-    "objectID": "publications/saldanhaSubsetModelsMultivariate2024a.html#abstract",
-    "href": "publications/saldanhaSubsetModelsMultivariate2024a.html#abstract",
-    "title": "Subset Models for Multivariate Time Series Forecast",
-    "section": "Abstract",
-    "text": "Abstract\nMultivariate time series ﬁnd extensive applications in conjunction with machine learning methodologies for scenario forecasting across various domains. Nevertheless, certain domains exhibit inherent complexities and diversities, which detrimentally impact the predictive efﬁcacy of global models. This ongoing study introduces a Subset Modeling Framework designed to acknowledge the inherent diversity within a domain’s multivariate space. Comparative assessments between subset models and global models are conducted in terms of performance, revealing compelling ﬁndings and suggesting the potential for further exploration and reﬁnement of this novel framework."
-  },
-  {
-    "objectID": "publications/sallesComprehensiveIntegratedDataset2023a.html#reference",
-    "href": "publications/sallesComprehensiveIntegratedDataset2023a.html#reference",
-    "title": "A comprehensive integrated dataset on Brazilian health facilities: from 2005 to 2021",
-    "section": "Reference",
-    "text": "Reference\n\n\nSALLES, R. et al. A comprehensive integrated dataset on Brazilian health facilities: From 2005 to 2021. BMC Research Notes, v. 16, n. 1, p. 151, July 2023."
-  },
-  {
-    "objectID": "publications/sallesComprehensiveIntegratedDataset2023a.html#abstract",
-    "href": "publications/sallesComprehensiveIntegratedDataset2023a.html#abstract",
-    "title": "A comprehensive integrated dataset on Brazilian health facilities: from 2005 to 2021",
-    "section": "Abstract",
-    "text": "Abstract\n\nObjectives\nThe National Registry of Healthcare Facilities is a system with the registry of every healthcare facility in Brazil with information on the capacity building and healthcare workforce regarding its public or private nature. Despite being publicly available, it can only be accessed in separated disjoint tables, with different primary units of analysis. The objective is to offer an interoperable dataset containing monthly data from 2005 to 2021 with information on healthcare facilities, including their physical and human resources, services and teams, enriched with municipal information.\n\n\nData description\nDatabase with historical data and geographic information for each health facility in Brazil. It is composed by 5 distinct tables, organized according to combinations of time, space, and types of resources, services and teams. This database opens up a range of possibilities for research topics, from case studies in a single health facility and period, analysis of a group of health facilities with characteristics of interest, to a broader study using the entire dataset and aggregated data by municipality. Furthermore, the fact that there is a row for each health facility/month/ year facilitates the integration with other datasets from the Brazilian healthcare system. In addition to being a potential object of study in the health area, the dataset is also convenient in data science, especially for studies focused on time series."
-  },
-  {
-    "objectID": "publications/soutoDatasetInfantMortality2023.html#reference",
-    "href": "publications/soutoDatasetInfantMortality2023.html#reference",
-    "title": "Dataset on infant mortality rates in Brazil",
-    "section": "Reference",
-    "text": "Reference\n\n\nSOUTO, G. et al. Dataset on infant mortality rates in Brazil. BMC Research Notes, v. 16, n. 1, p. 149, July 2023."
-  },
-  {
-    "objectID": "publications/soutoDatasetInfantMortality2023.html#abstract",
-    "href": "publications/soutoDatasetInfantMortality2023.html#abstract",
-    "title": "Dataset on infant mortality rates in Brazil",
-    "section": "Abstract",
-    "text": "Abstract\n\nObjectives\nSurveillance of infant and fetal deaths is of paramount importance in thinking about government strategies to reduce these rates, provide greater visibility of these mortality figures in the country, enable the adoption of prevention measures, as well as contribute to a better record of deaths.\n\n\nData description\nThe dataset comprises fetal, neonatal, early neonatal, late neonatal, and perinatal Mortality Rates of Brazilian municipalities with their respective information, between 2010 to 2020, aggregated by epidemiological week."
-  },
-  {
-    "objectID": "publications/szwarcwaldAdesaoMedidasRestricao2020a.html#reference",
-    "href": "publications/szwarcwaldAdesaoMedidasRestricao2020a.html#reference",
-    "title": "Adesão às medidas de restrição de contato físico e disseminação da COVID-19 no Brasil",
-    "section": "Reference",
-    "text": "Reference\n\n\nSZWARCWALD, C. L. et al. Adesão às medidas de restrição de contato físico e disseminação da COVID-19 no Brasil. Epidemiologia e Serviços de Saúde, v. 29, p. e2020432, Nov. 2020."
-  },
-  {
-    "objectID": "publications/szwarcwaldAdesaoMedidasRestricao2020a.html#abstract",
-    "href": "publications/szwarcwaldAdesaoMedidasRestricao2020a.html#abstract",
-    "title": "Adesão às medidas de restrição de contato físico e disseminação da COVID-19 no Brasil",
-    "section": "Abstract",
-    "text": "Abstract\nObjetivo: Analisar a adesão da população às medidas de restrição de contato físico e disseminação da COVID-19 no Brasil. Métodos: Inquérito de saúde, realizado pela internet, com amostragem em cadeia, no período de 24 de abril a 24 de maio de 2020. A intensidade da adesão à restrição de contato físico foi analisada segundo características sociodemográficas, utilizando-se modelos de regressão logística para investigar associações com ‘Nenhuma/pouca adesão’. Resultados: Dos 45.161 participantes, 74,2% (73,8-74,6%) relataram intensa adesão às medidas. O grupo que não aderiu às medidas foi composto homens (31,7%), com idade de 30 a 49 anos (36,4%), baixa escolaridade (33,0%), trabalhando durante a pandemia (81,3%), residentes nas regiões Norte (28,1%) e Centro-Oeste (28,5%) do país. Houve importante redução das taxas de crescimento diário, de 45,4 para 5,0%. Conclusão: Grande parte da população brasileira aderiu às medidas de restrição de contato físico, o que, possivelmente, contribuiu para reduzir a disseminação da COVID-19."
-  },
-  {
-    "objectID": "publications/xavierRegioesSaudeNo2019.html#reference",
-    "href": "publications/xavierRegioesSaudeNo2019.html#reference",
-    "title": "As Regiões de Saúde no Brasil segundo internações: método para apoio na regionalização de saúde",
-    "section": "Reference",
-    "text": "Reference\n\n\nXAVIER, D. R. et al. As Regiões de Saúde no Brasil segundo internações: método para apoio na regionalização de saúde. Cadernos de Saúde Pública, v. 35, p. e00076118, June 2019."
-  },
-  {
-    "objectID": "publications/xavierRegioesSaudeNo2019.html#abstract",
-    "href": "publications/xavierRegioesSaudeNo2019.html#abstract",
-    "title": "As Regiões de Saúde no Brasil segundo internações: método para apoio na regionalização de saúde",
-    "section": "Abstract",
-    "text": "Abstract\nThis study addressed health regionalization on various spatial scales based on patient flow. The article analyzed data through data linkage on the origin and destination of admissions at the municipal level in Brazil in 2016. The analysis is based on graph theory and uses a modularity algorithm that seeks to group municipalities in communities with a large number of interlinks. The algorithm optimizes the number of hospital admissions and discharges, taking patient flow into account. The results are shown, considering different political and administrative spatial structures. Considering patient flow without spatial restrictions, 29 communities were created in the country, compared to 64 communities when the boundaries of the major geographic regions were respected, and 164 when considering only patient flows within the respective states. The results show the importance of historically constituted regions, ignoring formal administrative boundaries, in order to implement access to health services. They also reveal adherence to administrative boundaries in many states of Brazil, demonstrating this spatial scale’s importance in the context of access to hospital admissions. The methodology makes relevant contributions to regional health planning."
-  },
-  {
-    "objectID": "talks/bda_subsets_2024.html#introduction",
-    "href": "talks/bda_subsets_2024.html#introduction",
-    "title": "Subset Models for Multivariate Time Series Forecast",
-    "section": "Introduction",
-    "text": "Introduction\n\nPreviously presented at MulTiSA workshop (ICDE 2024)\nAbundant multivariate time series, good opportunity for forecasting machine learning methods\nData may present intrinsic diversity of samples, affecting model’s performance on different parts of the input\nGlobal models: use all available time series\nLocal models: use only time series pertaining to each sample\nData subsets models: our proposal"
-  },
-  {
-    "objectID": "talks/bda_subsets_2024.html#case-example",
-    "href": "talks/bda_subsets_2024.html#case-example",
-    "title": "Subset Models for Multivariate Time Series Forecast",
-    "section": "Case example",
-    "text": "Case example\n\nDengue disease is transmitted by mosquitoes and is a Public Health concern. Record number cases on 2024 in Brazil, tendency to increase with climate change\nA typical forecasting model is targeted to predict number of cases based on climate indicators (rain and temperature)\nA global model would use data from all municipalities, facing difficulties related to distinct temporal and spatial disease transmission patterns"
-  },
-  {
-    "objectID": "talks/bda_subsets_2024.html#objective",
-    "href": "talks/bda_subsets_2024.html#objective",
-    "title": "Subset Models for Multivariate Time Series Forecast",
-    "section": "Objective",
-    "text": "Objective\n\nPropose a subset modeling framework\nAccommodate regional variations across diverse units (e.g. municipalities)\nCost-effective training with robust prediction capabilities in comparison with global models"
-  },
-  {
-    "objectID": "talks/bda_subsets_2024.html#framework-proposal",
-    "href": "talks/bda_subsets_2024.html#framework-proposal",
-    "title": "Subset Models for Multivariate Time Series Forecast",
-    "section": "Framework proposal",
-    "text": "Framework proposal\n\n\n\nIdentify subsets within the dataset with similar patterns\nTrain models for each subset\nUse the model trained on the subset data for prediction"
-  },
-  {
-    "objectID": "talks/bda_subsets_2024.html#datasets",
-    "href": "talks/bda_subsets_2024.html#datasets",
-    "title": "Subset Models for Multivariate Time Series Forecast",
-    "section": "Datasets",
-    "text": "Datasets\n\nDengue dataset. Weekly cases count, from 2011 to 2020, for 333 municipalities.\nClimate dataset. Average maximum and minimum temperature, total precipitation. Same time and spatial units and coverage, derived from Copernicus ERA5-Land.\nAll indicators were standardized (with zero mean and one SD)"
-  },
-  {
-    "objectID": "talks/bda_subsets_2024.html#experimental-setup",
-    "href": "talks/bda_subsets_2024.html#experimental-setup",
-    "title": "Subset Models for Multivariate Time Series Forecast",
-    "section": "Experimental setup",
-    "text": "Experimental setup\n\nIdentify data subsets considering dengue cases and covariates patterns across municipalities with DTW distance.\n\nSelect the optimum number of subsets (\\(k\\)) considering silhouette score\n\nTrain random forest Global Model with and without the subset id feature information\nTrain random forest Subsets Models\nEvaluate forecasting model’s performance on test data"
-  },
-  {
-    "objectID": "talks/bda_subsets_2024.html#clustering-results",
-    "href": "talks/bda_subsets_2024.html#clustering-results",
-    "title": "Subset Models for Multivariate Time Series Forecast",
-    "section": "Clustering results",
-    "text": "Clustering results\n\n\n\n\\(k = 5\\) returned the highest silhouette score\nPartition sizes: \\(g_1 = 69\\), \\(g_2 = 62\\), \\(g_3 = 82\\), \\(g_4 = 102\\), \\(g_5 = 18\\)"
-  },
-  {
-    "objectID": "talks/bda_subsets_2024.html#model-results",
-    "href": "talks/bda_subsets_2024.html#model-results",
-    "title": "Subset Models for Multivariate Time Series Forecast",
-    "section": "Model results",
-    "text": "Model results"
-  },
-  {
-    "objectID": "talks/bda_subsets_2024.html#conclusions-and-next-steps",
-    "href": "talks/bda_subsets_2024.html#conclusions-and-next-steps",
-    "title": "Subset Models for Multivariate Time Series Forecast",
-    "section": "Conclusions and next steps",
-    "text": "Conclusions and next steps\n\nSubsets models rendered better performance than global models on 116 municipalities from 333 (34.83%)\nSubsets models overall performance is related to the partition’s size. Bigger partitions (more municipalities) have more training data.\nWe are currently testing different clustering strategies (including constraints in partition size and featured-based approaches) and investigating different learners performance on model training\nLooking for datasets of different domains. Suggestions?"
-  },
-  {
-    "objectID": "talks/bda_subsets_2024.html#thanks",
-    "href": "talks/bda_subsets_2024.html#thanks",
-    "title": "Subset Models for Multivariate Time Series Forecast",
-    "section": "Thanks!",
-    "text": "Thanks!\nContact and more info at\nrfsaldanha.github.io"
-  },
-  {
-    "objectID": "talks/climate_br.html#overview",
-    "href": "talks/climate_br.html#overview",
-    "title": "Climate data for Brazilian municipalities",
+    "objectID": "talks/bilis_2023.html#overview",
+    "href": "talks/bilis_2023.html#overview",
+    "title": "BILIS",
     "section": "Overview",
     "text": "Overview\n\n\n\n\n\nflowchart LR\nsources_1(SIM, SINASC, SIH) --&gt; pcdas_api(PCDaS API)\npcdas_api --&gt; rpcdas[rpcdas]\nsources_2(SINAN, \\n Sivep-Malária) --&gt; postgres(PostgreSQL Server)\npostgres --&gt; recbilis[recbilis]\npop(Population count) --&gt; brpop[brpop]\nrpcdas --&gt; bilis[bilis]\nrecbilis --&gt; bilis\nbrpop --&gt; bilis\nbilis --&gt; csv(CSV files)\nbilis --&gt; parquet(Parquet files)\nbilis --&gt; db(Databases and destinations)"
   },
@@ -3400,6 +2987,153 @@
     "title": "Disease and climate data fusion for modelling",
     "section": "Thanks!",
     "text": "Thanks!\nContact, data links, R packages and short tutorials available at rfsaldanha.github.io"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#context-of-climate-sensitive-diseases",
+    "href": "talks/hpdasc_workshop_2024.html#context-of-climate-sensitive-diseases",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Context of Climate-Sensitive diseases",
+    "text": "Context of Climate-Sensitive diseases\n\nDirect relationship: floods, droughts, heat waves…\nIndirect relationship\n\n\n\n\n\n\n%%{\n  init: {\n    'theme': 'base',\n    'themeVariables': {\n      'fontSize': '30px'\n    }\n  }\n}%%\nflowchart LR\n\nclimate(Climate) --&gt; vector(Disease vectors) --&gt; health(Human health)\nclimate --&gt; health\nclimate --&gt; social(Social & economic \\n determinants) --&gt; health"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#a-time-lagged-relationship",
+    "href": "talks/hpdasc_workshop_2024.html#a-time-lagged-relationship",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "A time-lagged relationship",
+    "text": "A time-lagged relationship\n\n\n\nVector life cycle from a time perspective\nClimate conditions from the past leads to the disease incidence of tomorrow"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#era5-land-reanalysis",
+    "href": "talks/hpdasc_workshop_2024.html#era5-land-reanalysis",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "ERA5-Land reanalysis",
+    "text": "ERA5-Land reanalysis\n\n\n\nCopernicus, ECMWF\nGlobal coverage\nHourly data\n1950 to the present (one week delay)\nSpatial resolution ~9km\nSeveral climate indicators"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#challenge-on-data-structures",
+    "href": "talks/hpdasc_workshop_2024.html#challenge-on-data-structures",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Challenge on data structures",
+    "text": "Challenge on data structures\n\nClimate indicators: grid data\nDisease incidence: tabular, individual cases aggregated by spatial regions and time spans"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#zonal-statistics",
+    "href": "talks/hpdasc_workshop_2024.html#zonal-statistics",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Zonal statistics",
+    "text": "Zonal statistics"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#resulting-products",
+    "href": "talks/hpdasc_workshop_2024.html#resulting-products",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Resulting products",
+    "text": "Resulting products\n\n\n\nERA5-Land daily datasets\n\n7,105 files, 658.7 GB\n24,242 downloads on Zenodo\n\nDaily zonal statistics of climate indicators\n\n8 selected indicators, 5,570 municipalities\n6,085,749,761 records covering 1950-2023"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#precipitation",
+    "href": "talks/hpdasc_workshop_2024.html#precipitation",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Precipitation",
+    "text": "Precipitation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRio de Janeiro municipalities. January 1, 2010."
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#angra-dos-reis",
+    "href": "talks/hpdasc_workshop_2024.html#angra-dos-reis",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Angra dos Reis",
+    "text": "Angra dos Reis"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#publications-products",
+    "href": "talks/hpdasc_workshop_2024.html#publications-products",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Publications & Products",
+    "text": "Publications & Products\n\n\n\nPaper on Environmental Data Science journal (Saldanha et al. 2024)\nDatasets on Zenodo: more than 34,000 downloads\nbrclimr package to retrieve climate data of Brazilian municipalities, Almost 4,000 downloads on CRAN."
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#subset-models-for-multivariate-time-series-forecast",
+    "href": "talks/hpdasc_workshop_2024.html#subset-models-for-multivariate-time-series-forecast",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Subset models for multivariate time series forecast",
+    "text": "Subset models for multivariate time series forecast\n\n\n\nData may present intrinsic diversity of samples, affecting model’s performance on different parts of the input\nGlobal models: use all available time series\nLocal models: use only time series pertaining to each sample\nData subsets models: our proposal\n\n\n\nPaper on ICDE2024, Multivariate Time Series Analytics workshop"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#case-example",
+    "href": "talks/hpdasc_workshop_2024.html#case-example",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Case example",
+    "text": "Case example\n\nDengue disease is transmitted by mosquitoes and is a Public Health concern. Record number cases on 2024 in Brazil, tendency to increase with global warming\nA typical forecasting model is targeted to predict number of cases based on climate indicators (rain and temperature)\nA global model would use data from all municipalities, facing difficulties related to distinct temporal and spatial disease transmission patterns"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#experimental-setup",
+    "href": "talks/hpdasc_workshop_2024.html#experimental-setup",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Experimental setup",
+    "text": "Experimental setup\n\nIdentify data subsets considering dengue cases and covariates patterns across municipalities with DTW distance.\n\nSelect the optimum number of subsets (\\(k\\)) considering silhouette score\n\nTrain random forest Global Model with and without the subset id feature information\nTrain random forest Subsets Models\nEvaluate forecasting model’s performance on test data"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#clustering-results",
+    "href": "talks/hpdasc_workshop_2024.html#clustering-results",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Clustering results",
+    "text": "Clustering results\n\n\n\n\\(k = 5\\) returned the highest silhouette score\nPartition sizes: \\(g_1 = 69\\), \\(g_2 = 62\\), \\(g_3 = 82\\), \\(g_4 = 102\\), \\(g_5 = 18\\)"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#model-results",
+    "href": "talks/hpdasc_workshop_2024.html#model-results",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Model results",
+    "text": "Model results"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html#conclusions-and-next-steps",
+    "href": "talks/hpdasc_workshop_2024.html#conclusions-and-next-steps",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "Conclusions and next steps",
+    "text": "Conclusions and next steps\n\nSubsets models rendered better performance than global models on 116 municipalities from 333 (34.83%)\nSubsets models overall performance is related to the partition’s size. Bigger partitions (more municipalities) have more training data.\nWe are working on different clustering strategies (constraints in size and featured-based approaches) and apply different learners on model training"
+  },
+  {
+    "objectID": "talks/koro_mocambique_internet.html#acesso-à-internet-base-nacional",
+    "href": "talks/koro_mocambique_internet.html#acesso-à-internet-base-nacional",
+    "title": "Busca de sinais digitais sobre Síndrome de Koro em Moçambique",
+    "section": "Acesso à Internet: base nacional",
+    "text": "Acesso à Internet: base nacional\n\nEm outubro de 2025, Moçambique tinha cerca de 7,12 milhões de usuários de Internet, com penetração de 19,8%; 80,2% da população seguia offline segundo o DataReportal.\nHavia 19,1 milhões de conexões móveis celulares, equivalentes a 53,1% da população; nem toda conexão móvel inclui dados.\nA população era majoritariamente rural: 60% rural e 40% urbana em 2025.\nA Internet Society estima penetração nacional próxima de 21% e registra, em dados comparáveis de 2017, forte desigualdade urbano-rural: 18% urbana versus 3% rural.\n\n\n\n\nImplicação para Koro: sinais digitais tendem a super-representar centros urbanos, homens, pessoas com maior renda/escolaridade, usuários de smartphone e áreas cobertas por operadores móveis."
+  },
+  {
+    "objectID": "talks/koro_mocambique_internet.html#cobertura-regional-leitura-operacional",
+    "href": "talks/koro_mocambique_internet.html#cobertura-regional-leitura-operacional",
+    "title": "Busca de sinais digitais sobre Síndrome de Koro em Moçambique",
+    "section": "Cobertura regional: leitura operacional",
+    "text": "Cobertura regional: leitura operacional\n\n\n\n\n\nNorte\nNiassa: muito baixo. Cabo Delgado: muito baixo e instável. Nampula: médio nos centros urbanos, baixo no interior.\nCentro\nZambézia e Manica: baixo fora dos centros. Tete e Sofala: médio em corredores urbanos, mineração e Beira; baixo no interior.\nSul\nGaza: baixo fora de Xai-Xai. Inhambane: médio em centros e áreas turísticas. Maputo província e Cidade de Maputo: maior sinal digital.\n\n\n\nEste mapa cobre as dez províncias e a Cidade de Maputo, mas a classificação é deliberadamente operacional. Não há uma base pública recente, granular e completa de usuários de Internet por província; o quadro combina dados nacionais, ruralidade, infraestrutura móvel, conflito e evidências abertas sobre cobertura."
+  },
+  {
+    "objectID": "talks/koro_mocambique_internet.html#redes-sociais-e-acesso-a-dados",
+    "href": "talks/koro_mocambique_internet.html#redes-sociais-e-acesso-a-dados",
+    "title": "Busca de sinais digitais sobre Síndrome de Koro em Moçambique",
+    "section": "Redes sociais e acesso a dados",
+    "text": "Redes sociais e acesso a dados\nEm 2025, as maiores audiências observáveis por ferramentas de publicidade eram:\n\n\nFacebook\n4,10 milhões de usuários; principal plataforma para busca ampla e grupos locais.\n\n\nTikTok\n3,70 milhões de adultos alcançáveis por anúncios; útil para vídeos curtos, rumor e linguagem popular.\n\n\nInstagram / LinkedIn / X\n729 mil, 880 mil membros e 150 mil usuários, respectivamente; mais segmentados.\n\n\nRestrições práticas\n\nWhatsApp é provavelmente central para circulação local, mas é fechado, criptografado e sem API pública adequada para leitura de grupos.\nFacebook/Instagram exigem caminhos controlados, como Meta Content Library/API para pesquisadores elegíveis.\nTikTok Research API requer aprovação e impõe critérios e cotas.\nYouTube é mais acessível via API, mas tem cotas e viés para conteúdo público indexado.\nDurante a crise pós-eleitoral de 2024, houve evidências de bloqueios ou limitações a Facebook, Instagram e WhatsApp em alguns provedores."
+  },
+  {
+    "objectID": "talks/koro_mocambique_internet.html#gdelt-como-camada-de-notícias",
+    "href": "talks/koro_mocambique_internet.html#gdelt-como-camada-de-notícias",
+    "title": "Busca de sinais digitais sobre Síndrome de Koro em Moçambique",
+    "section": "GDELT como camada de notícias",
+    "text": "GDELT como camada de notícias\n\nGDELT é uma base global de notícias online: monitora matérias publicadas na web, identifica eventos, temas, atores, lugares e disponibiliza consultas por API.\n\nPara Koro em Moçambique, funciona como camada de imprensa e web aberta, não como vigilância de casos.\n\n\nPossibilidades\n\nbuscar Koro, variantes locais e termos associados;\nfiltrar por Moçambique, províncias e janelas curtas;\ngerar séries temporais, alertas e mapas;\ncombinar stories e events.\n\n\nLimitações\n\ndepende de fontes jornalísticas indexadas;\nperde WhatsApp, rádio, línguas nacionais e relatos orais;\ngeocodificação e classificação podem errar;\nrumor, violência e saúde podem se misturar."
+  },
+  {
+    "objectID": "talks/koro_mocambique_internet.html#uma-possível-estratégia",
+    "href": "talks/koro_mocambique_internet.html#uma-possível-estratégia",
+    "title": "Busca de sinais digitais sobre Síndrome de Koro em Moçambique",
+    "section": "Uma possível estratégia",
+    "text": "Uma possível estratégia\n\n\n1. Vocabulário vivo\nComeçar com Koro e expandir termos por província, idioma, metáforas locais e expressões usadas pela imprensa e redes.\n\n\n2. Fontes em camadas\nGDELT + busca web + páginas públicas + TikTok/YouTube + imprensa local + fontes institucionais e humanitárias.\n\n\n3. Triangulação territorial\nSeparar Maputo/sul urbano, centros de Nampula/Zambézia e norte rural/conflito para não confundir silêncio digital com ausência de evento.\n\n\n4. Ética e segurança\nEvitar identificação de pessoas e comunidades; tratar rumores como risco social, não como confirmação clínica.\n\n\n\n\n\nPrincipal conclusão: buscar Koro na Internet em Moçambique é menos uma pergunta sobre “onde há casos” e mais uma pergunta sobre onde há sinal digital observável."
+  },
+  {
+    "objectID": "talks/koro_mocambique_internet.html#fontes-principais",
+    "href": "talks/koro_mocambique_internet.html#fontes-principais",
+    "title": "Busca de sinais digitais sobre Síndrome de Koro em Moçambique",
+    "section": "Fontes principais",
+    "text": "Fontes principais\n\nDataReportal: Digital 2026: Mozambique\nInternet Society Pulse: Country Report for Mozambique\nAmnesty International: Mozambique post-2024 election crackdown\nNatural Earth: Admin 1 states/provinces\nGDELT Cloud: API v2 documentation\nSOMAR/ICPSR: Meta Content Library\nTikTok for Developers: Research API FAQ\nGoogle for Developers: YouTube Data API overview"
   },
   {
     "objectID": "talks/multisa_subsets_2024.html#introduction",
@@ -3610,159 +3344,5 @@
     "title": "Democratização de acesso a dados de saúde, ambiente e clima com o R",
     "section": "",
     "text": "Obrigado!\nraphael.saldanha@fiocruz.br\nhttps://rfsaldanha.github.io"
-  },
-  {
-    "objectID": "talks/projeto_rio_doce.html#apresentação",
-    "href": "talks/projeto_rio_doce.html#apresentação",
-    "title": "Eixo Sala de Situação de Saúde",
-    "section": "Apresentação",
-    "text": "Apresentação\nApresentação realizada por Raphael Saldanha, em nome de Diego Ricardo Xavier.\n\nPergunta orientadora\nQuais são os desafios e potencialidades das análises de situação de saúde em pesquisas sobre desastres em barragens de mineração?\n\nA Sala de Situação não substitui os estudos epidemiológicos, toxicológicos ou de avaliação de risco. Ela conecta essas evidências ao território, ao SUS e à tomada de decisão.\n\nAbrir explicitando que a fala será feita em nome de Diego Ricardo Xavier. Sugestão: “Vou apresentar uma leitura sintética do eixo Sala de Situação de Saúde, enfatizando onde a experiência do Observatório de Clima e Saúde pode contribuir para a Rede Rio Doce.”"
-  },
-  {
-    "objectID": "talks/projeto_rio_doce.html#onde-esta-fala-entra-na-oficina",
-    "href": "talks/projeto_rio_doce.html#onde-esta-fala-entra-na-oficina",
-    "title": "Eixo Sala de Situação de Saúde",
-    "section": "Onde esta fala entra na oficina",
-    "text": "Onde esta fala entra na oficina\nA oficina busca transformar lições aprendidas em Brumadinho em encaminhamentos para a Rede Rio Doce.\n\n\n\n\n\n\n\nEixo\nÊnfase\n\n\n\n\nEpidemiologia\nPadrões, associações, riscos, tendências e efeitos em saúde.\n\n\nToxicologia\nExposição humana, biomarcadores e efeitos toxicológicos.\n\n\nAvaliação de risco\nRisco à saúde humana em territórios atingidos.\n\n\nSala de situação\nIntegração, monitoramento, comunicação e apoio à decisão.\n\n\n\n\nFonte: Programa da Oficina, 12–13 maio 2026.\n\n\nEnfatizar que a programação coloca “Epidemiologia e Situação de Saúde” juntas, mas elas não são a mesma coisa. O valor da fala é esclarecer essa complementaridade."
-  },
-  {
-    "objectID": "talks/projeto_rio_doce.html#o-desafio-rio-doce",
-    "href": "talks/projeto_rio_doce.html#o-desafio-rio-doce",
-    "title": "Eixo Sala de Situação de Saúde",
-    "section": "O desafio Rio Doce",
-    "text": "O desafio Rio Doce\n\nO desastre do Fundão não cabe em uma única pergunta epidemiológica, nem em um único território administrativo.\n\n\nPercurso de bacia: do rompimento à foz e à região costeira.\nMais de 40 municípios e mais de 2 milhões de pessoas atingidas.\nEfeitos ambientais, sociais, econômicos, psicossociais e sanitários.\nPopulações com diferentes exposições, vulnerabilidades e capacidade de resposta.\nNecessidade de produzir evidências úteis para o SUS, não apenas resultados acadêmicos.\n\n\nDestacar que a unidade “bacia” é essencial para entender o desastre, mas o SUS se organiza por municípios, regiões de saúde, serviços e fluxos assistenciais. Esse desencontro é um problema típico para a Sala de Situação."
-  },
-  {
-    "objectID": "talks/projeto_rio_doce.html#o-que-muda-quando-pensamos-em-situação-de-saúde",
-    "href": "talks/projeto_rio_doce.html#o-que-muda-quando-pensamos-em-situação-de-saúde",
-    "title": "Eixo Sala de Situação de Saúde",
-    "section": "O que muda quando pensamos em situação de saúde?",
-    "text": "O que muda quando pensamos em situação de saúde?\n\nA análise de situação de saúde pergunta: o que está acontecendo, onde, com quem, por quê, com quais recursos e quais prioridades de ação?\n\nEla precisa integrar:\n\nagravos, atendimentos, internações, óbitos e saúde mental;\nexposição ambiental e risco toxicológico;\nvulnerabilidades sociais, modos de vida e trabalho;\noferta, acesso e sobrecarga dos serviços de saúde;\nevidências qualitativas, institucionais e comunitárias.\n\n\nEssa é a ponte com a experiência do Observatório: análise territorial, integração de dados e produção de sínteses orientadas à decisão."
-  },
-  {
-    "objectID": "talks/projeto_rio_doce.html#epidemiologia-análise-de-situação-de-saúde",
-    "href": "talks/projeto_rio_doce.html#epidemiologia-análise-de-situação-de-saúde",
-    "title": "Eixo Sala de Situação de Saúde",
-    "section": "Epidemiologia ≠ Análise de situação de saúde",
-    "text": "Epidemiologia ≠ Análise de situação de saúde\n\n\n\n\n\n\n\nEpidemiologia\nAnálise de situação de saúde\n\n\n\n\nPergunta sobre associação, risco, causalidade e efeito.\nPergunta sobre necessidades, desigualdades, prioridades e capacidade de resposta.\n\n\nUsa desenhos analíticos, comparação, controle de vieses e inferência.\nIntegra dados quantitativos, qualitativos, ambientais, territoriais e institucionais.\n\n\nProduz medidas: incidência, prevalência, risco relativo, razão de taxas e tendências.\nProduz leitura territorial, cenários, alertas, boletins e recomendações.\n\n\nResponde: “houve aumento?”, “qual o risco?”, “qual a associação?”\nResponde: “onde agir?”, “com quem?”, “com que urgência?”, “com quais serviços?”\n\n\n\n\nFrase-chave: epidemiologia produz evidência analítica; análise de situação transforma evidências diversas em inteligência territorial para decisão. Uma depende da outra, mas seus produtos e usos são diferentes."
-  },
-  {
-    "objectID": "talks/projeto_rio_doce.html#uma-cautela-importante",
-    "href": "talks/projeto_rio_doce.html#uma-cautela-importante",
-    "title": "Eixo Sala de Situação de Saúde",
-    "section": "Uma cautela importante",
-    "text": "Uma cautela importante\n\nSala de Situação não deve prometer causalidade sozinha.\n\n\n\n\n\n\n\n\nO que ela não faz sozinha\nO que ela faz muito bem\n\n\n\n\nDemonstrar causalidade individual.\nOrganizar evidências e incertezas.\n\n\nSubstituir estudos epidemiológicos, toxicológicos ou de risco.\nDetectar sinais e lacunas.\n\n\nResolver limitações de qualidade dos dados por visualização.\nFormular perguntas melhores.\n\n\n\nApoiar pactuação de prioridades e resposta do SUS.\n\n\n\n\nEsse slide evita uma promessa excessiva. A Sala é uma infraestrutura de inteligência e governança da informação, não um atalho metodológico."
-  },
-  {
-    "objectID": "talks/projeto_rio_doce.html#por-que-uma-sala-de-situação-no-rio-doce",
-    "href": "talks/projeto_rio_doce.html#por-que-uma-sala-de-situação-no-rio-doce",
-    "title": "Eixo Sala de Situação de Saúde",
-    "section": "Por que uma Sala de Situação no Rio Doce?",
-    "text": "Por que uma Sala de Situação no Rio Doce?\n\nEm desastres complexos, evidência dispersa não vira ação automaticamente.\n\nA Sala de Situação pode organizar uma rotina para:\n\nreunir dados secundários, estudos prévios e achados dos quatro eixos;\nacompanhar séries temporais antes e depois do desastre;\ncomparar municípios, bacia, regiões de saúde e áreas de exposição;\ndevolver sínteses compreensíveis para gestores, serviços e comunidades;\napoiar planos municipais e estaduais de ação em saúde.\n\n\nEnfatizar “rotina”. A Sala não é um produto final; é um modo de trabalho contínuo para transformar dados em decisão."
-  },
-  {
-    "objectID": "talks/projeto_rio_doce.html#a-lógica-operacional-da-sala",
-    "href": "talks/projeto_rio_doce.html#a-lógica-operacional-da-sala",
-    "title": "Eixo Sala de Situação de Saúde",
-    "section": "A lógica operacional da Sala",
-    "text": "A lógica operacional da Sala\n\n\n\n\n\n\n\nEtapa\nO que envolve\n\n\n\n\n1. Captar\nSUS, ambiente, território, estudos de campo, documentos, relatos e demandas locais.\n\n\n2. Integrar\nPadronizar, georreferenciar, documentar, validar e tornar comparável.\n\n\n3. Interpretar\nLer tendências, desigualdades, vulnerabilidades, lacunas e capacidade assistencial.\n\n\n4. Devolver\nPainéis, mapas, boletins, notas técnicas e recomendações para ação.\n\n\n\n\nNão apresentar como uma cadeia puramente técnica. Em cada etapa há escolhas políticas e metodológicas: fontes, periodicidade, recortes territoriais, responsáveis e formas de uso."
-  },
-  {
-    "objectID": "talks/projeto_rio_doce.html#desafios-específicos-em-desastres-de-barragens",
-    "href": "talks/projeto_rio_doce.html#desafios-específicos-em-desastres-de-barragens",
-    "title": "Eixo Sala de Situação de Saúde",
-    "section": "Desafios específicos em desastres de barragens",
-    "text": "Desafios específicos em desastres de barragens\n\n\n\n\n\n\n\nDados e método\nTerritório e SUS\n\n\n\n\nDefinir população atingida e população de referência.\nBacia hidrográfica não coincide com municípios, regiões de saúde ou áreas de atenção.\n\n\nCombinar períodos pré, pós e longo prazo.\nServiços de saúde também são impactados pelo desastre.\n\n\nDistinguir mudança real de saúde, mudança de acesso e mudança de registro.\nComunidades tradicionais e grupos vulnerabilizados exigem recortes próprios.\n\n\nIntegrar dados agregados, individuais, ambientais e qualitativos.\nEvidências precisam virar ações viáveis no cotidiano dos serviços.\n\n\n\n\nExemplo para fala: aumento de atendimento pode significar maior adoecimento, maior busca por cuidado, mudança na oferta, melhoria ou piora do registro, ou tudo isso ao mesmo tempo. ASIS ajuda a interpretar essas ambiguidades."
-  },
-  {
-    "objectID": "talks/projeto_rio_doce.html#potencialidades-da-sala-de-situação",
-    "href": "talks/projeto_rio_doce.html#potencialidades-da-sala-de-situação",
-    "title": "Eixo Sala de Situação de Saúde",
-    "section": "Potencialidades da Sala de Situação",
-    "text": "Potencialidades da Sala de Situação\n\n\n\n\n\n\n\n\nMonitorar\nPriorizar\nIntegrar\n\n\n\n\nSinais em saúde, ambiente, serviços e vulnerabilidades ao longo do tempo.\nTerritórios, grupos, agravos e serviços que exigem resposta mais rápida.\nEpidemiologia, toxicologia, avaliação de risco, vigilância, atenção e participação social.\n\n\n\n\nA potência está menos no painel e mais na capacidade de transformar dados em perguntas melhores, decisões mais transparentes e respostas mais oportunas.\n\n\nEssa frase pode ser repetida no fechamento. É a ideia-força da apresentação."
-  },
-  {
-    "objectID": "talks/projeto_rio_doce.html#o-que-a-sala-de-situação-pode-entregar",
-    "href": "talks/projeto_rio_doce.html#o-que-a-sala-de-situação-pode-entregar",
-    "title": "Eixo Sala de Situação de Saúde",
-    "section": "O que a Sala de Situação pode entregar",
-    "text": "O que a Sala de Situação pode entregar\n\n\n\n\n\n\n\nProdutos técnicos\nProdutos para gestão\n\n\n\n\nMatriz de indicadores.\nPriorização de territórios e grupos.\n\n\nPainel analítico com mapas e séries.\nSínteses para pactuação interinstitucional.\n\n\nBoletins de situação.\nSubsídios aos planos municipais e estaduais.\n\n\nNotas interpretativas por tema ou território.\nAlertas interpretativos quando houver sinais relevantes.\n\n\nDicionário de dados e documentação metodológica.\nAgenda de lacunas para os demais eixos.\n\n\n\n\nUsar “pode entregar” e não “vai entregar”, para preservar flexibilidade do plano de trabalho. Produtos devem ser pactuados com o projeto e com os atores do SUS."
-  },
-  {
-    "objectID": "talks/projeto_rio_doce.html#contribuições-do-observatório-de-clima-e-saúde",
-    "href": "talks/projeto_rio_doce.html#contribuições-do-observatório-de-clima-e-saúde",
-    "title": "Eixo Sala de Situação de Saúde",
-    "section": "Contribuições do Observatório de Clima e Saúde",
-    "text": "Contribuições do Observatório de Clima e Saúde\n\n\n\n\n\n\n\nExperiência acumulada\nPara o eixo Sala de Situação\n\n\n\n\nIntegração de dados de saúde, clima, ambiente e território.\nArquitetura de dados e governança da informação.\n\n\nSéries históricas e indicadores municipais.\nDefinição e documentação de indicadores.\n\n\nMapas, painéis, relatórios e dados abertos.\nVisualização geográfica e temporal.\n\n\nApoio à vigilância e à análise territorial.\nRotina de boletins e sínteses para decisão.\n\n\n\nIntegração técnica com epidemiologia, risco e toxicologia.\n\n\n\n\nAqui você fala com mais segurança, pois é o terreno do Observatório. Não precisa prometer desenvolvimento de sistema fechado; enfatize método, infraestrutura analítica e experiência acumulada."
-  },
-  {
-    "objectID": "talks/projeto_rio_doce.html#um-caminho-de-implantação-simples",
-    "href": "talks/projeto_rio_doce.html#um-caminho-de-implantação-simples",
-    "title": "Eixo Sala de Situação de Saúde",
-    "section": "Um caminho de implantação simples",
-    "text": "Um caminho de implantação simples\n\n\n\n\n\n\n\nEtapa\nProduto inicial\n\n\n\n\n1. Inventário\nFontes, indicadores, escalas, periodicidade, responsáveis e lacunas.\n\n\n2. Matriz\nIndicadores de saúde, exposição, vulnerabilidade, serviços, ambiente e território.\n\n\n3. Protótipo\nMapas, séries temporais, filtros territoriais e notas interpretativas.\n\n\n4. Rotina\nBoletins periódicos, reuniões de interpretação e atualização pactuada.\n\n\n\n\nPropor uma entrada realista: começar pelo inventário e matriz de indicadores. O painel vem depois, como consequência da governança e dos dados disponíveis."
-  },
-  {
-    "objectID": "talks/projeto_rio_doce.html#integração-com-os-demais-eixos",
-    "href": "talks/projeto_rio_doce.html#integração-com-os-demais-eixos",
-    "title": "Eixo Sala de Situação de Saúde",
-    "section": "Integração com os demais eixos",
-    "text": "Integração com os demais eixos\nA Sala organiza perguntas\n\nOnde há sinais? Onde há lacunas? Que territórios exigem aprofundamento? Que achados precisam virar ação?\n\nOs eixos aprofundam respostas\n\nEpidemiologia estima padrões e associações. Toxicologia e avaliação de risco caracterizam exposição e plausibilidade.\nASIS integra, interpreta e devolve ao SUS.\n\n\nA Sala de Situação pode funcionar como ponte entre produção de conhecimento e uso social da evidência.\n\n\nEvitar qualquer ideia de concorrência entre eixos. A Sala depende dos outros eixos e, ao mesmo tempo, ajuda a orientar perguntas e devolutivas."
-  },
-  {
-    "objectID": "talks/projeto_rio_doce.html#encaminhamentos-para-discussão",
-    "href": "talks/projeto_rio_doce.html#encaminhamentos-para-discussão",
-    "title": "Eixo Sala de Situação de Saúde",
-    "section": "Encaminhamentos para discussão",
-    "text": "Encaminhamentos para discussão\n\nPactuar governança: quem produz, valida, interpreta e usa os produtos.\nDefinir matriz inicial de indicadores e recortes territoriais.\nCriar rotina de atualização, documentação e controle de qualidade.\nProduzir boletins curtos para gestores, serviços e comunidades.\nManter integração permanente com epidemiologia, toxicologia e avaliação de risco.\nRegistrar incertezas e lacunas como parte do produto da Sala.\n\n\nEste slide ajuda você a entrar no debate da oficina. Se perguntarem “por onde começar?”, responda: inventário, matriz, governança e uma primeira devolutiva curta."
-  },
-  {
-    "objectID": "talks/projeto_rio_doce.html#mensagem-final",
-    "href": "talks/projeto_rio_doce.html#mensagem-final",
-    "title": "Eixo Sala de Situação de Saúde",
-    "section": "Mensagem final",
-    "text": "Mensagem final\n\nEm desastres de mineração, a análise de situação de saúde ajuda a responder não só “o que aconteceu com a saúde?”, mas também “o que o SUS precisa fazer agora, onde, com quem e com quais prioridades?”\n\n\nA contribuição do Observatório de Clima e Saúde pode ser oferecer método, infraestrutura analítica e experiência em vigilância territorial integrada para transformar dados dispersos em inteligência para reparação, vigilância e cuidado.\n\n\nFechar com tom institucional: “Esse é o lugar em que a experiência do Observatório pode contribuir com a Rede Rio Doce: apoiar a construção de uma leitura integrada, territorializada e útil para a ação do SUS.”"
-  },
-  {
-    "objectID": "talks/projeto_rio_doce.html#fontes-consultadas",
-    "href": "talks/projeto_rio_doce.html#fontes-consultadas",
-    "title": "Eixo Sala de Situação de Saúde",
-    "section": "Fontes consultadas",
-    "text": "Fontes consultadas\n\nPrograma da Oficina “Projeto Saúde Brumadinho — Lições Aprendidas com a pesquisa em saúde sobre desastre de barragens de mineração”.\nProjeto para a Constituição da Rede de Pesquisas em Saúde do Vale do Rio Doce, Fiocruz, fev. 2023.\nMinuta de ofício sobre o Caso Samarco: Estudos de Saúde.\nProposta de repactuação Fiocruz/SVS/MS."
-  },
-  {
-    "objectID": "talks/projeto_rio_doce.html#eixos-de-trabalho",
-    "href": "talks/projeto_rio_doce.html#eixos-de-trabalho",
-    "title": "Eixo Sala de Situação de Saúde",
-    "section": "Eixos de trabalho",
-    "text": "Eixos de trabalho\n\n\n\n\n\n\n\nEixo\nÊnfase\n\n\n\n\nEpidemiologia\nPadrões, associações, riscos, tendências e efeitos em saúde.\n\n\nToxicologia\nExposição humana, biomarcadores e efeitos toxicológicos.\n\n\nAvaliação de risco\nRisco à saúde humana em territórios atingidos.\n\n\nSala de situação\nIntegração, monitoramento, comunicação e apoio à decisão.\n\n\n\n\nEnfatizar que a programação coloca “Epidemiologia e Situação de Saúde” juntas, mas elas não são a mesma coisa. O valor da fala é esclarecer essa complementaridade."
-  },
-  {
-    "objectID": "talks/projeto_rio_doce.html#observatório-de-clima-e-saúde-fiocruz",
-    "href": "talks/projeto_rio_doce.html#observatório-de-clima-e-saúde-fiocruz",
-    "title": "Eixo Sala de Situação de Saúde",
-    "section": "Observatório de Clima e Saúde, Fiocruz",
-    "text": "Observatório de Clima e Saúde, Fiocruz\n\n\n\n\n\n\n\nExperiência acumulada\nPara o eixo Sala de Situação\n\n\n\n\nIntegração de dados de saúde, clima, ambiente e território.\nArquitetura de dados e governança da informação.\n\n\nSéries históricas e indicadores municipais.\nDefinição e documentação de indicadores.\n\n\nMapas, painéis, relatórios e dados abertos.\nVisualização geográfica e temporal.\n\n\nApoio à vigilância e à análise territorial.\nRotina de boletins e sínteses para decisão.\n\n\n\nIntegração técnica com epidemiologia, risco e toxicologia.\n\n\n\n\nAqui você fala com mais segurança, pois é o terreno do Observatório. Não precisa prometer desenvolvimento de sistema fechado; enfatize método, infraestrutura analítica e experiência acumulada."
-  },
-  {
-    "objectID": "talks/projeto_rio_doce.html#um-caminho-de-implantação",
-    "href": "talks/projeto_rio_doce.html#um-caminho-de-implantação",
-    "title": "Eixo Sala de Situação de Saúde",
-    "section": "Um caminho de implantação",
-    "text": "Um caminho de implantação\n\n\n\n\n\n\n\nEtapa\nProduto inicial\n\n\n\n\n1. Inventário\nFontes, indicadores, escalas, periodicidade, responsáveis e lacunas.\n\n\n2. Matriz\nIndicadores de saúde, exposição, vulnerabilidade, serviços, ambiente e território.\n\n\n3. Protótipo\nMapas, séries temporais, filtros territoriais e notas interpretativas.\n\n\n4. Rotina\nBoletins periódicos, reuniões de interpretação e atualização pactuada.\n\n\n\n\nPropor uma entrada realista: começar pelo inventário e matriz de indicadores. O painel vem depois, como consequência da governança e dos dados disponíveis."
-  },
-  {
-    "objectID": "talks/projeto_rio_doce.html#para-discussão",
-    "href": "talks/projeto_rio_doce.html#para-discussão",
-    "title": "Eixo Sala de Situação de Saúde",
-    "section": "Para discussão",
-    "text": "Para discussão\n\nPactuar governança: quem produz, valida, interpreta e usa os produtos.\nDefinir matriz inicial de indicadores e recortes territoriais.\nCriar rotina de atualização, documentação e controle de qualidade.\nProduzir boletins curtos para gestores, serviços e comunidades.\nManter integração permanente com epidemiologia, toxicologia e avaliação de risco.\nRegistrar incertezas e lacunas como parte do produto da Sala.\n\n\nEste slide ajuda você a entrar no debate da oficina. Se perguntarem “por onde começar?”, responda: inventário, matriz, governança e uma primeira devolutiva curta."
-  },
-  {
-    "objectID": "talks/projeto_rio_doce.html#conclusão",
-    "href": "talks/projeto_rio_doce.html#conclusão",
-    "title": "Eixo Sala de Situação de Saúde",
-    "section": "Conclusão",
-    "text": "Conclusão\n\nA análise de situação de saúde ajuda a responder não só “o que aconteceu com a saúde?”, mas também “o que o SUS precisa fazer agora, onde, com quem e com quais prioridades?”\n\n\nA contribuição do Observatório de Clima e Saúde pode ser oferecer método, infraestrutura analítica e experiência em vigilância territorial integrada para transformar dados dispersos em inteligência para reparação, vigilância e cuidado.\n\n\nFechar com tom institucional: “Esse é o lugar em que a experiência do Observatório pode contribuir com a Rede Rio Doce: apoiar a construção de uma leitura integrada, territorializada e útil para a ação do SUS.”"
   }
 ]
