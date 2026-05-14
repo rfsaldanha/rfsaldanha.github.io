@@ -9,7 +9,7 @@
 <link>https://rfsaldanha.github.io/blog.html</link>
 <atom:link href="https://rfsaldanha.github.io/blog.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.8.27</generator>
+<generator>quarto-1.9.37</generator>
 <lastBuildDate>Tue, 11 Jun 2024 03:00:00 GMT</lastBuildDate>
 <item>
   <title>Handling 187 millions hospital admissions in Brazil with DuckDB</title>
@@ -1092,7 +1092,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-fonsecaGeographicAccessibilityCancer2022" class="csl-entry">
 Fonseca, Bruna De Paula, Priscila Costa Albuquerque, Raphael De Freitas Saldanha, and Fabio Zicker. 2022. <span>“Geographic Accessibility to Cancer Treatment in <span>Brazil</span>: <span>A</span> Network Analysis.”</span> <em>The Lancet Regional Health - Americas</em> 7 (March): 100153. <a href="https://doi.org/10.1016/j.lana.2021.100153">https://doi.org/10.1016/j.lana.2021.100153</a>.
 </div>
@@ -1100,7 +1100,7 @@ Fonseca, Bruna De Paula, Priscila Costa Albuquerque, Raphael De Freitas Saldanha
 Saldanha, Raphael de Freitas, Diego Ricardo Xavier, Keila de Morais Carnavalli, Kátia Lerner, and Christovam Barcellos. 2019. <span>“Estudo de an<span>á</span>lise de Rede Do Fluxo de Pacientes de c<span>â</span>ncer de Mama No <span>Brasil</span> Entre 2014 e 2016.”</span> <em>Cadernos de Sa<span>ú</span>de P<span>ú</span>blica</em> 35 (7). <a href="https://doi.org/10.1590/0102-311X00090918">https://doi.org/10.1590/0102-311X00090918</a>.
 </div>
 <div id="ref-Xavier2019" class="csl-entry">
-Xavier, Diego Ricardo, Ricardo Antunes Dantas de Oliveira, Christovam Barcellos, Raphael de Freitas Saldanha, Walter Massa Ramalho, Josué Laguardia, and Francisco Viacava. 2019. <span>“As <span class="nocase">Regi<span class="nocase">õ</span>es</span> de <span class="nocase">Sa<span class="nocase">ú</span>de</span> No <span>Brasil</span> Segundo Interna<span>ç</span><span>õ</span>es: M<span>é</span>todo Para Apoio Na Regionaliza<span>ç</span><span>ã</span>o de Sa<span>ú</span>de.”</span> <em>Cadernos de Sa<span>ú</span>de P<span>ú</span>blica</em> 35 (suppl 2): 1–15. <a href="https://doi.org/10.1590/0102-311x00076118">https://doi.org/10.1590/0102-311x00076118</a>.
+Xavier, Diego Ricardo, Ricardo Antunes Dantas de Oliveira, Christovam Barcellos, et al. 2019. <span>“As <span class="nocase">Regi<span class="nocase">õ</span>es</span> de <span class="nocase">Sa<span class="nocase">ú</span>de</span> No <span>Brasil</span> Segundo Interna<span>ç</span><span>õ</span>es: M<span>é</span>todo Para Apoio Na Regionaliza<span>ç</span><span>ã</span>o de Sa<span>ú</span>de.”</span> <em>Cadernos de Sa<span>ú</span>de P<span>ú</span>blica</em> 35 (suppl 2): 1–15. <a href="https://doi.org/10.1590/0102-311x00076118">https://doi.org/10.1590/0102-311x00076118</a>.
 </div>
 </div></section></div> ]]></description>
   <category>duckdb</category>

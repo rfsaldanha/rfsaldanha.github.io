@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-label="Esquema de eventos climáticos na Amazônia e efeitos no cotidiano">
+  <rect width="1200" height="650" fill="#fffaf0"/>
+  <path d="M120 420 C250 300, 320 210, 470 250 C620 290, 650 140, 805 190 C960 240, 955 365, 1080 420 C890 510, 740 535, 555 500 C360 463, 250 550, 120 420Z" fill="#dcebd2" stroke="#1b5e45" stroke-width="6"/>
+  <path d="M170 445 C285 410, 315 375, 445 385 C585 395, 660 355, 790 370 C930 385, 975 440, 1060 430" fill="none" stroke="#2f7aa1" stroke-width="15" stroke-linecap="round" opacity="0.75"/>
+  <circle cx="310" cy="270" r="58" fill="#d4a017" opacity="0.92"/>
+  <text x="310" y="278" text-anchor="middle" font-size="28" font-weight="700" fill="#103f2f">calor</text>
+  <g transform="translate(760 238)">
+    <path d="M0 40 C45 0, 95 5, 120 45 C170 42, 205 70, 205 110 C205 150,170 170,130 160 C100 190,40 185,20 150 C-25 150,-50 115,-35 80 C-30 60,-18 48,0 40Z" fill="#b7b0a0" opacity="0.8"/>
+    <text x="85" y="112" text-anchor="middle" font-size="28" font-weight="700" fill="#103f2f">fumaça</text>
+  </g>
+  <g transform="translate(520 420)">
+    <rect x="-105" y="-58" width="210" height="116" rx="20" fill="#edf4e5" stroke="#1b5e45" stroke-width="4"/>
+    <text x="0" y="-12" text-anchor="middle" font-size="24" font-weight="700" fill="#103f2f">rios</text>
+    <text x="0" y="25" text-anchor="middle" font-size="24" font-weight="700" fill="#103f2f">e acesso</text>
+  </g>
+  <g transform="translate(910 455)">
+    <rect x="-132" y="-58" width="264" height="116" rx="20" fill="#edf4e5" stroke="#1b5e45" stroke-width="4"/>
+    <text x="0" y="-12" text-anchor="middle" font-size="24" font-weight="700" fill="#103f2f">saúde</text>
+    <text x="0" y="25" text-anchor="middle" font-size="24" font-weight="700" fill="#103f2f">e cuidado</text>
+  </g>
+  <text x="70" y="80" font-size="36" font-weight="800" fill="#103f2f">Amazônia: eventos climáticos atravessam o cotidiano</text>
+  <text x="70" y="130" font-size="25" fill="#1f2d28">Seca, fumaça, calor e cheias mudam circulação, água, alimento, trabalho, escola e acesso aos serviços.</text>
+</svg>

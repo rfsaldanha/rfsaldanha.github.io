@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<link href="../logo.png" rel="icon" type="image/png">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.37">
+
+  <meta name="author" content="Raphael Saldanha | Observatório de Clima e Saúde | Fiocruz">
+  <meta name="dcterms.date" content="2026-12-05">
+  <title>Raphael Saldanha – Metodologias e impactos das mudanças climáticas sobre a saúde de corpos e territórios na Amazônia</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-0427d8d92a431aa6a6430e53ec02a470.css">
+  <link rel="stylesheet" href="mti_styles.css">
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2M7VLSRDCB"></script>
+
+  <script type="text/javascript">
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
+  </script>
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Metodologias e impactos das mudanças climáticas sobre a saúde de corpos e territórios na Amazônia</h1>
+  <p class="subtitle">Dados territoriais, monitoramento comunitário e AlertAr Saúde</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Raphael Saldanha | Observatório de Clima e Saúde | Fiocruz 
+</div>
+</div>
+</div>
+
+  <p class="date">2026-12-05</p>
+</section>
+<section id="uma-pergunta-para-começar" class="slide level2">
+<h2>Uma pergunta para começar</h2>
+<div class="big">
+<p>Quais sinais da mudança climática aparecem no território antes de aparecerem nos dados oficiais?</p>
+</div>
+<p>Pode ser a fumaça chegando, o rio baixando, a água mudando, o calor ficando insuportável, a escola suspendendo atividades ou a UBS recebendo mais pessoas com sintomas respiratórios.</p>
+<div class="callout callout-none no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<p>A proposta é aproximar os <strong>dados produzidos pelo Observatório de Clima e Saúde</strong> da Fiocruz com os saberes e práticas de <strong>monitoramento territorial independente</strong>.</p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Abrir perguntando ao público: “Que sinais vocês monitoram no território?”. A apresentação deve reconhecer que o território já produz evidências, mesmo quando elas ainda não estão em bases oficiais.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="impactos" class="slide level2">
+<h2>Impactos</h2>
+<div class="big">
+<p>As mudanças climáticas não afetam apenas o ambiente: elas atravessam <strong>corpos</strong>, <strong>modos de vida</strong> e <strong>territórios</strong>.</p>
+</div>
+<p>Para agir, precisamos combinar:</p>
+<div class="threecols">
+<div class="colbox">
+<p><strong>Dados públicos</strong><br>
+clima, ar, ambiente e saúde</p>
+</div>
+<div class="colbox">
+<p><strong>Monitoramento territorial</strong><br>
+saberes locais e vigilância popular</p>
+</div>
+<div class="colbox">
+<p><strong>Ferramentas abertas</strong><br>
+mapas, alertas e evidências</p>
+</div>
+</div>
+<aside class="notes">
+<p>Dizer que tecnologia não substitui monitoramento comunitário. A função dos sistemas é fortalecer a leitura do território e apoiar decisões.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="amazônia-eventos-climáticos-e-cotidiano" class="slide level2">
+<h2>Amazônia: eventos climáticos e cotidiano</h2>
+
+<img data-src="images/amazon_context.svg" alt="Esquema de eventos climáticos na Amazônia e efeitos no cotidiano" class="r-stretch"><aside class="notes">
+<p>Usar exemplos concretos: seca dos rios, fumaça de queimadas, calor extremo, interrupção de transporte, dificuldade de acesso à água e maior procura por serviços de saúde.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="por-que-falar-de-clima-e-saúde-na-amazônia" class="slide level2">
+<h2>Por que falar de clima e saúde na Amazônia?</h2>
+<p>A Amazônia concentra processos que se sobrepõem:</p>
+<div class="twocols">
+<div class="left">
+<ul>
+<li>queimadas, fumaça e poluição do ar;</li>
+<li>secas severas e seca dos rios;</li>
+<li>cheias, enchentes e inundações;</li>
+<li>calor extremo e noites quentes.</li>
+</ul>
+</div>
+<div class="right">
+<ul>
+<li>alteração do acesso à água e aos alimentos;</li>
+<li>isolamento de comunidades;</li>
+<li>pressão sobre territórios e modos de vida;</li>
+<li>interrupção de escola, trabalho, transporte e cuidado.</li>
+</ul>
+</div>
+</div>
+<p>Esses eventos afetam a saúde por caminhos diretos e indiretos: respiração, calor, água, alimentação, deslocamento, acesso aos serviços, saúde mental e organização comunitária.</p>
+</section>
+<section id="saúde-de-corpos-e-territórios" class="slide level2">
+<h2>Saúde de corpos e territórios</h2>
+<div class="quote">
+<p>Corpos adoecem quando territórios são degradados; territórios adoecem quando águas, florestas, caminhos, redes de cuidado e modos de vida são interrompidos.</p>
+</div>
+<p><strong>Corpos</strong> sentem a fumaça, o calor, a água contaminada, o medo, a perda e o esforço de viver em condições adversas.</p>
+<p><strong>Territórios</strong> registram mudanças no rio, na floresta, no ar, nos alimentos, na circulação e nos serviços.</p>
+<p><strong>Monitorar</strong> é transformar sinais do território em informação para proteger vidas e direitos.</p>
+</section>
+<section id="observatório-de-clima-e-saúde" class="slide level2">
+<h2>Observatório de Clima e Saúde</h2>
+<ol type="1">
+<li>produzir <strong>dados territoriais</strong> sobre clima, ambiente e saúde;</li>
+<li>transformar dados em <strong>indicadores compreensíveis</strong>;</li>
+<li>disponibilizar <strong>sistemas de visualização e alerta</strong>;</li>
+<li>apoiar pesquisa, gestão pública, comunicação de risco e monitoramento comunitário;</li>
+<li>construir pontes entre dados técnicos e evidências produzidas pelos territórios.</li>
+</ol>
+<aside class="notes">
+<p>Explicar que o Observatório atua com ciência de dados, geografia da saúde, epidemiologia, sistemas de informação e visualização territorial.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="como-atuamos" class="slide level2">
+<h2>Como atuamos</h2>
+<div class="timeline">
+<p><strong>1. Coleta e integração</strong><br>
+Bases públicas, sensoriamento remoto, reanálises climáticas, modelos atmosféricos e sistemas de saúde.</p>
+<p><strong>2. Territorialização</strong><br>
+Transformação de grades climáticas e atmosféricas em indicadores por município, região ou recorte territorial.</p>
+<p><strong>3. Indicadores</strong><br>
+Calor, chuva, seca, umidade, qualidade do ar, população exposta e agravos à saúde.</p>
+<p><strong>4. Sistemas e comunicação</strong><br>
+Mapas, gráficos, painéis, relatórios, cursos, notas técnicas e alertas.</p>
+</div>
+<aside class="notes">
+<p>Traduzir termos técnicos: reanálise climática é uma forma de reconstruir o clima combinando observações e modelos. Territorialização é transformar uma grade de dados em informação útil para municípios e territórios.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="alguns-dados-que-produzimos" class="slide level2">
+<h2>Alguns dados que produzimos</h2>
+<div class="threecols">
+<div class="colbox">
+<p><strong>Clima</strong><br>
+Temperatura, chuva, umidade, ondas de calor, noites quentes, estiagens e eventos extremos.</p>
+</div>
+<div class="colbox">
+<p><strong>Qualidade do ar</strong><br>
+PM2.5, PM10, ozônio, NO₂ e SO₂, com histórico e previsão para municípios brasileiros.</p>
+</div>
+<div class="colbox">
+<p><strong>Saúde e população</strong><br>
+Hospitalizações, mortalidade, doenças sensíveis ao clima, denominadores populacionais e indicadores territoriais.</p>
+</div>
+</div>
+<p>Esses dados são organizados para apoiar mapas, séries temporais, indicadores de risco e estudos sobre desigualdades territoriais em saúde.</p>
+</section>
+<section id="metodologia-de-monitoramento" class="slide level2">
+<h2>Metodologia de monitoramento</h2>
+<div class="cards">
+<div class="card">
+<p><strong>1. Dados climáticos e atmosféricos</strong><br>
+ERA5-Land, CAMS, satélites, modelos e previsões.</p>
+</div>
+<div class="card">
+<p><strong>2. Dados de saúde</strong><br>
+Sistemas do SUS, hospitalizações, mortalidade, agravos e indicadores populacionais.</p>
+</div>
+<div class="card">
+<p><strong>3. Indicadores territoriais</strong><br>
+Eventos extremos, exposição, vulnerabilidade, acesso a serviços e desigualdades.</p>
+</div>
+<div class="card">
+<p><strong>4. Ferramentas e uso social</strong><br>
+AlertAr Saúde, mapas, boletins, cursos, protocolos e comunicação acessível.</p>
+</div>
+</div>
+<aside class="notes">
+<p>Aqui vale dizer que a metodologia começa com perguntas reais do território, não com a base de dados. Os dados precisam responder a uma necessidade concreta.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="da-experiência-no-território-à-ação" class="slide level2">
+<h2>Da experiência no território à ação</h2>
+
+<img data-src="images/workflow.svg" alt="Fluxo problema no território, dado produzido, indicador, ferramenta e ação comunitária" class="r-stretch"><aside class="notes">
+<p>Frase-chave: problema no território → dado produzido → indicador → ferramenta → ação comunitária.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="temas-e-indicadores-prioritários" class="slide level2">
+<h2>Temas e indicadores prioritários</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tema</th>
+<th>Indicadores possíveis</th>
+<th>Perguntas para o território</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fumaça e ar</td>
+<td>PM2.5, PM10, previsão de poluentes</td>
+<td>Quando a fumaça chega? Quem precisa ser protegido primeiro?</td>
+</tr>
+<tr class="even">
+<td>Calor</td>
+<td>dias quentes, ondas de calor, noites quentes</td>
+<td>Quais grupos sofrem mais? Há locais de abrigo e hidratação?</td>
+</tr>
+<tr class="odd">
+<td>Seca</td>
+<td>chuva acumulada, dias secos, umidade</td>
+<td>Como muda o acesso à água, alimento, transporte e cuidado?</td>
+</tr>
+<tr class="even">
+<td>Cheias</td>
+<td>chuva extrema, áreas alagadas, acesso a serviços</td>
+<td>Quem fica isolado? Quais serviços são interrompidos?</td>
+</tr>
+<tr class="odd">
+<td>Saúde</td>
+<td>internações, sintomas, doenças infecciosas</td>
+<td>O evento climático aparece nos dados de saúde e nos relatos locais?</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ferramentas-e-publicações" class="slide level2">
+<h2>Ferramentas e publicações</h2>
+<div class="twocols">
+<div class="left">
+<p><strong>Ferramentas e bases</strong></p>
+<ul>
+<li><strong>AlertAr Saúde</strong>: previsão e acompanhamento da qualidade do ar;</li>
+<li><strong>Mapas do Observatório</strong>: indicadores climáticos, ambientais e de saúde;</li>
+<li><strong>{climindi}</strong>: indicadores climáticos baseados em eventos;</li>
+<li><strong>{rpcdas}</strong>: acesso programático a dados de saúde da PCDaS;</li>
+<li>bases municipalizadas de clima, umidade, chuva e poluição.</li>
+</ul>
+</div>
+<div class="right">
+<p><strong>Produtos e formação</strong></p>
+<ul>
+<li>artigos científicos e manuscritos em desenvolvimento;</li>
+<li>notas técnicas e relatórios, incluindo a crise de saúde da população Yanomami;</li>
+<li>cursos, disciplinas e oficinas;</li>
+<li>materiais de comunicação e apoio à decisão;</li>
+<li>diálogo com redes, gestores e territórios.</li>
+</ul>
+<p><strong>Exemplo aplicado:</strong> a nota técnica sobre a Terra Indígena Yanomami mostrou como dados territoriais podem apoiar a identificação de áreas críticas e o direcionamento de respostas em situações de emergência sanitária.</p>
+</div>
+</div>
+</section>
+<section id="alertar-saúde-o-que-é" class="slide level2">
+<h2>AlertAr Saúde: o que é</h2>
+<div class="big">
+<p>Sistema de alerta precoce sobre <strong>poluição do ar</strong> e efeitos na saúde para municípios brasileiros.</p>
+</div>
+<p>O sistema permite acompanhar:</p>
+<div class="twocols">
+<div class="left">
+<ul>
+<li>situação atual e previsão da qualidade do ar;</li>
+<li>deslocamento de poluentes;</li>
+<li>mapas e gráficos por município;</li>
+<li>previsão com horizonte de até 120 horas.</li>
+</ul>
+</div>
+<div class="right">
+<ul>
+<li>PM2.5 e PM10;</li>
+<li>ozônio;</li>
+<li>dióxido de nitrogênio;</li>
+<li>dióxido de enxofre;</li>
+<li>apoio à comunicação de risco.</li>
+</ul>
+</div>
+</div>
+<aside class="notes">
+<p>Explicar PM2.5 em linguagem simples: partículas muito pequenas, frequentemente associadas à fumaça, que podem entrar profundamente no sistema respiratório.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="alertar-saúde-na-prática" class="slide level2">
+<h2>AlertAr Saúde na prática</h2>
+
+<img data-src="images/alertarsaude.png" alt="Mockup didático do sistema AlertAr Saúde" class="r-stretch"><aside class="notes">
+<p>Este visual é um mockup didático. Se houver uma captura real do sistema, basta substituir o arquivo assets/alertar_mockup.svg por uma imagem PNG ou JPG com o mesmo nome ou ajustar o caminho no slide.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exemplo-episódio-de-fumaça-em-um-município-amazônico" class="slide level2">
+<h2>Exemplo: episódio de fumaça em um município amazônico</h2>
+<div class="scenario">
+<p><strong>Antes</strong><br>
+O AlertAr indica aumento de PM2.5 nos próximos dias. Lideranças e equipes locais observam fumaça, baixa visibilidade e relatos de irritação nos olhos.</p>
+<p><strong>Durante</strong><br>
+A comunidade registra sintomas, orienta grupos vulnerabilizados, dialoga com escolas, UBS e defesa civil, e evita atividades externas nos horários mais críticos.</p>
+<p><strong>Depois</strong><br>
+Os dados do sistema, os relatos comunitários e os registros de saúde são comparados para produzir evidência, memória do evento e demanda por resposta pública.</p>
+</div>
+<aside class="notes">
+<p>Dizer que o exemplo é fictício, mas baseado em situações comuns em períodos de seca e queimada. O objetivo é mostrar o uso da ferramenta no ciclo antes-durante-depois.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="como-o-alertar-pode-apoiar-territórios-amazônicos" class="slide level2">
+<h2>Como o AlertAr pode apoiar territórios amazônicos</h2>
+<p>Durante fumaça, queimada ou seca, o AlertAr pode ajudar a:</p>
+<div class="cards">
+<div class="card">
+<p><strong>Antecipar</strong><br>
+identificar dias críticos antes da exposição mais intensa.</p>
+</div>
+<div class="card">
+<p><strong>Comunicar</strong><br>
+traduzir previsão técnica em orientação local.</p>
+</div>
+<div class="card">
+<p><strong>Priorizar</strong><br>
+crianças, idosos, gestantes, pessoas com asma e trabalhadores expostos.</p>
+</div>
+<div class="card">
+<p><strong>Registrar</strong><br>
+comparar alertas, relatos comunitários e dados de saúde.</p>
+</div>
+</div>
+</section>
+<section id="evidências-sobre-impactos-na-saúde" class="slide level2">
+<h2>Evidências sobre impactos na saúde</h2>
+<p>O monitoramento integrado permite produzir evidências sobre:</p>
+<div class="twocols">
+<div class="left">
+<ul>
+<li>períodos e territórios com maior exposição à fumaça;</li>
+<li>relação entre eventos extremos e procura por serviços de saúde;</li>
+<li>interrupção de acesso a cuidado, escola, trabalho e transporte.</li>
+</ul>
+</div>
+<div class="right">
+<ul>
+<li>desigualdades de exposição e resposta;</li>
+<li>grupos mais vulnerabilizados;</li>
+<li>efeitos acumulados de seca, fumaça, calor e cheias.</li>
+</ul>
+</div>
+</div>
+<p>Essas evidências podem apoiar planos locais, pedidos de resposta emergencial, comunicação pública e defesa de direitos territoriais. Na crise de saúde Yanomami, esse tipo de abordagem orientou uma nota técnica com cenários de impacto para apoiar intervenções na Terra Indígena Yanomami.</p>
+<aside class="notes">
+<p>Mencionar rapidamente a nota técnica Yanomami como exemplo de aplicação dos dados territoriais em uma emergência real. Não detalhar demais para preservar o tempo: a ideia é mostrar que os dados podem apoiar priorização de áreas, resposta pública e defesa de direitos.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="como-começar-um-monitoramento-territorial-de-clima-e-saúde" class="slide level2">
+<h2>Como começar um monitoramento territorial de clima e saúde</h2>
+<div class="numbered">
+<ol type="1">
+<li>Escolher um problema sentido no território: fumaça, calor, seca ou cheia.</li>
+<li>Definir sinais locais: sintomas, água, deslocamento, escola, trabalho, alimento.</li>
+<li>Escolher indicadores complementares: ar, chuva, temperatura, saúde.</li>
+<li>Acompanhar antes, durante e depois do evento.</li>
+<li>Comunicar de forma simples: alerta, boletim, mapa, reunião ou áudio.</li>
+<li>Usar a evidência para cuidado, prevenção, incidência e proteção de direitos.</li>
+</ol>
+</div>
+<aside class="notes">
+<p>Este é um dos slides mais importantes para o público. Apresentar como convite prático, não como receita fechada.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="o-que-pode-ser-feito-junto-com-a-rede-mti" class="slide level2">
+<h2>O que pode ser feito junto com a Rede MTI?</h2>
+<div class="twocols">
+<div class="left">
+<p><strong>A partir dos dados</strong></p>
+<ul>
+<li>oficinas de leitura de mapas;</li>
+<li>protocolos simples de monitoramento;</li>
+<li>boletins territoriais;</li>
+<li>painéis por município ou região;</li>
+<li>comparação entre previsão, exposição e saúde.</li>
+</ul>
+</div>
+<div class="right">
+<p><strong>A partir dos territórios</strong></p>
+<ul>
+<li>validação comunitária dos indicadores;</li>
+<li>inclusão de relatos e sinais locais;</li>
+<li>definição de prioridades;</li>
+<li>comunicação acessível para ação rápida;</li>
+<li>construção de evidências para incidência.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-none no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<p>O próximo passo é aproximar os dados produzidos pelo Observatório dos registros comunitários da Rede MTI.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="conclusão" class="slide level2">
+<h2>Conclusão</h2>
+<div class="big">
+<p>Dados não substituem o conhecimento do território.<br>
+Eles podem fortalecer esse conhecimento.</p>
+</div>
+<p>Para enfrentar os impactos das mudanças climáticas na Amazônia, precisamos de monitoramento que seja:</p>
+<div class="keywords">
+<p><strong>territorial</strong> · <strong>participativo</strong> · <strong>aberto</strong> · <strong>compreensível</strong> · <strong>orientado à ação</strong></p>
+</div>
+<div class="quote">
+<p>A pergunta final não é apenas “que dados temos?”, mas “que dados ajudam a proteger vidas, territórios e direitos agora?”.</p>
+</div>
+</section>
+<section id="fontes-e-links-úteis" class="slide level2">
+<h2>Fontes e links úteis</h2>
+<ul>
+<li>Observatório de Clima e Saúde: <a href="https://climaesaude.icict.fiocruz.br/" class="uri">https://climaesaude.icict.fiocruz.br/</a></li>
+<li>Instagram: observatorio_climaesaude</li>
+<li>AlertAr Saúde: <a href="https://shiny.icict.fiocruz.br/alertarsaude/" class="uri">https://shiny.icict.fiocruz.br/alertarsaude/</a></li>
+<li>Página sobre o AlertAr Saúde: <a href="https://climaesaude.icict.fiocruz.br/conheca-o-alertar-saude" class="uri">https://climaesaude.icict.fiocruz.br/conheca-o-alertar-saude</a></li>
+<li>Notas técnicas do Observatório: <a href="https://climaesaude.icict.fiocruz.br/pagina/notas-tecnicas" class="uri">https://climaesaude.icict.fiocruz.br/pagina/notas-tecnicas</a></li>
+<li>Notícia Fiocruz sobre a crise Yanomami: <a href="https://fiocruz.br/noticia/2023/06/mais-da-metade-das-comunidades-yanomami-vivem-em-situacao-de-risco-de-saude" class="uri">https://fiocruz.br/noticia/2023/06/mais-da-metade-das-comunidades-yanomami-vivem-em-situacao-de-risco-de-saude</a></li>
+<li>Pacote <code>{climindi}</code>: <a href="https://rfsaldanha.github.io/climindi/" class="uri">https://rfsaldanha.github.io/climindi/</a></li>
+<li>Pacote <code>{rpcdas}</code>: <a href="https://rfsaldanha.github.io/rpcdas/" class="uri">https://rfsaldanha.github.io/rpcdas/</a></li>
+<li>Esta apresentação e outros materiais: <a href="https://rfsaldanha.github.io/" class="uri">https://rfsaldanha.github.io/</a></li>
+</ul>
+<p>raphael.saldanha@fiocruz.br</p>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p>Observatório de Clima e Saúde | Fiocruz</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1280,
+
+        height: 720,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/rfsaldanha\.github\.io");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
