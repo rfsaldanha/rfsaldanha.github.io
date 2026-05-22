@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -13,13 +13,9 @@
 <meta name="author" content="Reza Akbarinia">
 <meta name="author" content="Patrick Valduriez">
 <meta name="author" content="Fabio Porto">
-<meta name="dcterms.date" content="2024-05-13">
 
 <title>Subset Models for Multivariate Time Series Forecast – Raphael Saldanha</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -64,14 +60,15 @@ div.csl-indent {
 <link href="../logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-0c1497c822180f859fc410b87e91da95.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-9c801c0f987b87cb825544174f2aa3e8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -86,17 +83,17 @@ div.csl-indent {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
   }
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2M7VLSRDCB"></script>
@@ -127,8 +124,8 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
     <span class="navbar-title">Raphael Saldanha</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -139,19 +136,19 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../projects.html"> 
-<span class="menu-text">Projects</span></a>
+<span class="menu-text">Projetos</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../code.html"> 
-<span class="menu-text">Packages &amp; Code</span></a>
+<span class="menu-text">Pacotes &amp; Código</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../data.html"> 
-<span class="menu-text">Datasets</span></a>
+<span class="menu-text">Dados</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../publications.html"> 
-<span class="menu-text">Publications</span></a>
+<span class="menu-text">Publicações</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../talks.html"> 
@@ -159,11 +156,15 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../photos/photos.html"> 
-<span class="menu-text">Photos</span></a>
+<span class="menu-text">Fotos</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../blog.html"> 
 <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../en/"> 
+<span class="menu-text">English</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="../blog.xml"> <i class="bi bi-rss" role="img">
@@ -183,11 +184,11 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">Nesta página</h2>
    
   <ul>
-  <li><a href="#reference" id="toc-reference" class="nav-link active" data-scroll-target="#reference">Reference</a></li>
-  <li><a href="#abstract" id="toc-abstract" class="nav-link" data-scroll-target="#abstract">Abstract</a></li>
+  <li><a href="#referência" id="toc-referência" class="nav-link active" data-scroll-target="#referência">Referência</a></li>
+  <li><a href="#resumo" id="toc-resumo" class="nav-link" data-scroll-target="#resumo">Resumo</a></li>
   </ul>
 </nav>
     </div>
@@ -209,7 +210,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-heading">Autores</div>
     <div class="quarto-title-meta-contents">
              <p>Raphael Saldanha </p>
              <p>Victor Ribeiro </p>
@@ -222,9 +223,9 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   </div>
     
     <div>
-    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-heading">Data de Publicação</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 13, 2024</p>
+      <p class="date">13 de maio de 2024</p>
     </div>
   </div>
   
@@ -237,22 +238,22 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 
 
 <p><img src="images/clipboard-3121148281.png" class="img-fluid"></p>
-<section id="reference" class="level2">
-<h2 class="anchored" data-anchor-id="reference">Reference</h2>
+<section id="referência" class="level2">
+<h2 class="anchored" data-anchor-id="referência">Referência</h2>
 <div id="refs" class="references csl-bib-body" data-entry-spacing="1" role="list">
 <div id="ref-saldanhaSubsetModelsMultivariate2024" class="csl-entry" role="listitem">
 SALDANHA, R. et al. <strong><a href="https://doi.org/10.5281/zenodo.11190593">Subset <span>Models</span> for <span>Multivariate Time Series Forecast</span></a></strong>. 2024 <span>IEEE</span> 40th <span>International Conference</span> on <span>Data Engineering Workshops</span>. <strong>Anais</strong>...Netherlands: 2024.
 </div>
 </div>
 </section>
-<section id="abstract" class="level2">
-<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
-<p>Multivariate time series ﬁnd extensive applications in conjunction with machine learning methodologies for scenario forecasting across various domains. Nevertheless, certain domains exhibit inherent complexities and diversities, which detrimentally impact the predictive efﬁcacy of global models. This ongoing study introduces a Subset Modeling Framework designed to acknowledge the inherent diversity within a domain’s multivariate space. Comparative assessments between subset models and global models are conducted in terms of performance, revealing compelling ﬁndings and suggesting the potential for further exploration and reﬁnement of this novel framework.</p>
+<section id="resumo" class="level2">
+<h2 class="anchored" data-anchor-id="resumo">Resumo</h2>
+<p>Séries temporais multivariadas têm ampla aplicação em conjunto com metodologias de aprendizado de máquina para previsão de cenários em diversos domínios. No entanto, certos domínios apresentam complexidades e diversidades inerentes, que prejudicam a eficácia preditiva de modelos globais. Este estudo em andamento apresenta um Subset Modeling Framework projetado para reconhecer a diversidade inerente ao espaço multivariado de um domínio. Avaliações comparativas entre modelos de subconjuntos e modelos globais são conduzidas em termos de desempenho, revelando achados promissores e sugerindo potencial para exploração e refinamento adicionais deste novo arcabouço.</p>
 
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -278,12 +279,12 @@ SALDANHA, R. et al. <strong><a href="https://doi.org/10.5281/zenodo.11190593">Su
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Copiada");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Copiada");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",

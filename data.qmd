@@ -1,5 +1,5 @@
 ---
-title: "Datasets"
+title: "Bases de dados"
 listing:
   contents:
     - data-projects/brazil_inmet_alerts.qmd

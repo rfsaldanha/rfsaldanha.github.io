@@ -1,0 +1,32 @@
+---
+title: "Estudo de análise de rede do fluxo de pacientes de câncer de mama no Brasil entre 2014 e 2016"
+author:
+  - Raphael Saldanha
+  - Diego Xavier
+  - Keila Carnavalli
+  - Kátia Lerner
+  - Christovam Barcellos
+date: 2019-07-22
+categories: 
+  - breast cancer
+  - access to health services
+  - information systems
+bibliography: publications.bib
+csl: abnt.csl
+---
+
+---
+nocite: |
+  @saldanhaEstudoAnaliseRede2019
+---
+
+![](images/Screenshot from 2023-10-02 13-24-27.png)
+
+## Reference
+
+::: {#refs}
+:::
+
+## Abstract
+
+This study aims to analyze the flow of breast cancer patients treated outside of their municipality of residence, based on hospital admissions and chemotherapy and radiotherapy in the Brazilian Unified National Health System (SUS) from 2014 to 2016. Network analysis was used, considering the municipality of residence and of treatment as nodes in a graph, thus consisting of a "health system organizational network study". In addition, highway distances and travel time were estimated via the best feasible route according to the Open Street Maps highway project. According to the results, 51.34% of breast cancer patients in Brazil were treated outside their municipality of residence, following regionalized flows that respect state borders, generally towards the state capital or other large cities. The results also point to specific exceptions, where some municipalities occupy outstanding positions that extrapolate state borders. Median travel time from the municipality of residence to the municipality of care was nearly 3 hours, and 75% of trips totaled 324km for chemotherapy, 287km for radiotherapy, and 282km for hospitalizations. These results are indicative of the difficulties in access to oncology services, potentially aggravating the illness experience with cancer in terms of impact on the individuals and their families.

@@ -1,19 +1,15 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Fatima Marinho et al.">
-<meta name="dcterms.date" content="2018-09-01">
 
 <title>Burden of disease in Brazil, 1990–2016: a systematic subnational analysis for the Global Burden of Disease Study 2016 – Raphael Saldanha</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -58,14 +54,15 @@ div.csl-indent {
 <link href="../logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-0c1497c822180f859fc410b87e91da95.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-9c801c0f987b87cb825544174f2aa3e8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -80,17 +77,17 @@ div.csl-indent {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
   }
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2M7VLSRDCB"></script>
@@ -121,8 +118,8 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
     <span class="navbar-title">Raphael Saldanha</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -133,19 +130,19 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../projects.html"> 
-<span class="menu-text">Projects</span></a>
+<span class="menu-text">Projetos</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../code.html"> 
-<span class="menu-text">Packages &amp; Code</span></a>
+<span class="menu-text">Pacotes &amp; Código</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../data.html"> 
-<span class="menu-text">Datasets</span></a>
+<span class="menu-text">Dados</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../publications.html"> 
-<span class="menu-text">Publications</span></a>
+<span class="menu-text">Publicações</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../talks.html"> 
@@ -153,11 +150,15 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../photos/photos.html"> 
-<span class="menu-text">Photos</span></a>
+<span class="menu-text">Fotos</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../blog.html"> 
 <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../en/"> 
+<span class="menu-text">English</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="../blog.xml"> <i class="bi bi-rss" role="img">
@@ -177,17 +178,17 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">Nesta página</h2>
    
   <ul>
-  <li><a href="#reference" id="toc-reference" class="nav-link active" data-scroll-target="#reference">Reference</a></li>
-  <li><a href="#abstract" id="toc-abstract" class="nav-link" data-scroll-target="#abstract">Abstract</a>
+  <li><a href="#referência" id="toc-referência" class="nav-link active" data-scroll-target="#referência">Referência</a></li>
+  <li><a href="#resumo" id="toc-resumo" class="nav-link" data-scroll-target="#resumo">Resumo</a>
   <ul class="collapse">
-  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
-  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a></li>
-  <li><a href="#findings" id="toc-findings" class="nav-link" data-scroll-target="#findings">Findings</a></li>
-  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">Interpretation</a></li>
-  <li><a href="#funding" id="toc-funding" class="nav-link" data-scroll-target="#funding">Funding</a></li>
+  <li><a href="#contexto" id="toc-contexto" class="nav-link" data-scroll-target="#contexto">Contexto</a></li>
+  <li><a href="#métodos" id="toc-métodos" class="nav-link" data-scroll-target="#métodos">Métodos</a></li>
+  <li><a href="#resultados" id="toc-resultados" class="nav-link" data-scroll-target="#resultados">Resultados</a></li>
+  <li><a href="#interpretação" id="toc-interpretação" class="nav-link" data-scroll-target="#interpretação">Interpretação</a></li>
+  <li><a href="#financiamento" id="toc-financiamento" class="nav-link" data-scroll-target="#financiamento">Financiamento</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -209,16 +210,16 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">Autor</div>
     <div class="quarto-title-meta-contents">
              <p>Fatima Marinho et al. </p>
           </div>
   </div>
     
     <div>
-    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-heading">Data de Publicação</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 1, 2018</p>
+      <p class="date">1 de setembro de 2018</p>
     </div>
   </div>
   
@@ -231,41 +232,41 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 
 
 <p><img src="images/Screenshot from 2023-10-02 13-27-39.png" class="img-fluid"></p>
-<section id="reference" class="level2">
-<h2 class="anchored" data-anchor-id="reference">Reference</h2>
+<section id="referência" class="level2">
+<h2 class="anchored" data-anchor-id="referência">Referência</h2>
 <div id="refs" class="references csl-bib-body" data-entry-spacing="1" role="list">
 <div id="ref-marinhoBurdenDiseaseBrazil2018" class="csl-entry" role="listitem">
-MARINHO, F. et al. <a href="https://doi.org/10.1016/S0140-6736(18)31221-2">Burden of disease in <span>Brazil</span>, 1990: A systematic subnational analysis for the <span>Global Burden</span> of <span>Disease Study</span> 2016</a>. <strong>The Lancet</strong>, v. 392, n. 10149, p. 760–775, Sept. 2018.
+MARINHO, F. et al. <a href="https://doi.org/10.1016/S0140-6736(18)31221-2">Burden of Disease in <span>Brazil</span>, 1990: A Systematic Subnational Analysis for the <span>Global Burden</span> of <span>Disease Study</span> 2016</a>. <strong>The Lancet</strong>, v. 392, n. 10149, p. 760–775, set. 2018.
 </div>
 </div>
 </section>
-<section id="abstract" class="level2">
-<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
-<section id="background" class="level3">
-<h3 class="anchored" data-anchor-id="background">Background</h3>
-<p>Political, economic, and epidemiological changes in Brazil have affected health and the health system. We used the Global Burden of Disease Study 2016 (GBD 2016) results to understand changing health patterns and inform policy responses.</p>
+<section id="resumo" class="level2">
+<h2 class="anchored" data-anchor-id="resumo">Resumo</h2>
+<section id="contexto" class="level3">
+<h3 class="anchored" data-anchor-id="contexto">Contexto</h3>
+<p>Mudanças políticas, econômicas e epidemiológicas no Brasil afetaram a saúde e o sistema de saúde. Usamos os resultados do Global Burden of Disease Study 2016 (GBD 2016) para compreender mudanças nos padrões de saúde e subsidiar respostas de políticas públicas.</p>
 </section>
-<section id="methods" class="level3">
-<h3 class="anchored" data-anchor-id="methods">Methods</h3>
-<p>We analysed GBD 2016 estimates for life expectancy at birth (LE), healthy life expectancy (HALE), all-cause and cause-specific mortality, years of life lost (YLLs), years lived with disability (YLDs), disability-adjusted life-years (DALYs), and risk factors for Brazil, its 26 states, and the Federal District from 1990 to 2016, and compared these with national estimates for ten comparator countries.</p>
+<section id="métodos" class="level3">
+<h3 class="anchored" data-anchor-id="métodos">Métodos</h3>
+<p>Analisamos estimativas do GBD 2016 para esperança de vida ao nascer (EV), esperança de vida saudável (HALE), mortalidade por todas as causas e por causas específicas, anos de vida perdidos (YLLs), anos vividos com incapacidade (YLDs), anos de vida ajustados por incapacidade (DALYs) e fatores de risco para o Brasil, seus 26 estados e o Distrito Federal, de 1990 a 2016, comparando-as com estimativas nacionais de dez países de referência.</p>
 </section>
-<section id="findings" class="level3">
-<h3 class="anchored" data-anchor-id="findings">Findings</h3>
-<p>Nationally, LE increased from 68·4 years (95% uncertainty interval [UI] 68·0–68·9) in 1990 to 75·2 years (74·7–75·7) in 2016, and HALE increased from 59·8 years (57·1–62·1) to 65·5 years (62·5–68·0). All-cause agestandardised mortality rates decreased by 34·0% (33·4–34·5), while all-cause age-standardised DALY rates decreased by 30·2% (27·7–32·8); the magnitude of declines varied among states. In 2016, ischaemic heart disease was the leading cause of age-standardised YLLs, followed by interpersonal violence. Low back and neck pain, sense organ diseases, and skin diseases were the main causes of YLDs in 1990 and 2016. Leading risk factors contributing to DALYs in 2016 were alcohol and drug use, high blood pressure, and high body-mass index.</p>
+<section id="resultados" class="level3">
+<h3 class="anchored" data-anchor-id="resultados">Resultados</h3>
+<p>No país, a EV aumentou de 68,4 anos (intervalo de incerteza [II] de 95%: 68,0–68,9) em 1990 para 75,2 anos (74,7–75,7) em 2016, e a HALE aumentou de 59,8 anos (57,1–62,1) para 65,5 anos (62,5–68,0). As taxas de mortalidade padronizadas por idade por todas as causas diminuíram 34,0% (33,4–34,5), enquanto as taxas de DALY padronizadas por idade por todas as causas diminuíram 30,2% (27,7–32,8); a magnitude das reduções variou entre os estados. Em 2016, a doença isquêmica do coração foi a principal causa de YLLs padronizados por idade, seguida pela violência interpessoal. Dor lombar e cervical, doenças dos órgãos dos sentidos e doenças de pele foram as principais causas de YLDs em 1990 e 2016. Os principais fatores de risco que contribuíram para DALYs em 2016 foram uso de álcool e drogas, pressão arterial elevada e índice de massa corporal elevado.</p>
 </section>
-<section id="interpretation" class="level3">
-<h3 class="anchored" data-anchor-id="interpretation">Interpretation</h3>
-<p>Health improved from 1990 to 2016, but improvements and disease burden varied between states. An epidemiological transition towards non-communicable diseases and related risks occurred nationally, but later in some states, while interpersonal violence grew as a health concern. Policy makers can use these results to address health disparities.</p>
+<section id="interpretação" class="level3">
+<h3 class="anchored" data-anchor-id="interpretação">Interpretação</h3>
+<p>A saúde melhorou de 1990 a 2016, mas as melhorias e a carga de doença variaram entre os estados. Ocorreu no país uma transição epidemiológica em direção às doenças não transmissíveis e riscos relacionados, embora mais tardiamente em alguns estados, enquanto a violência interpessoal cresceu como preocupação de saúde. Gestores e formuladores de políticas podem usar esses resultados para enfrentar desigualdades em saúde.</p>
 </section>
-<section id="funding" class="level3">
-<h3 class="anchored" data-anchor-id="funding">Funding</h3>
-<p>Bill &amp; Melinda Gates Foundation and the Brazilian Ministry of Health.</p>
+<section id="financiamento" class="level3">
+<h3 class="anchored" data-anchor-id="financiamento">Financiamento</h3>
+<p>Bill &amp; Melinda Gates Foundation e Ministério da Saúde do Brasil.</p>
 
 
 </section>
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -291,12 +292,12 @@ MARINHO, F. et al. <a href="https://doi.org/10.1016/S0140-6736(18)31221-2">Burde
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Copiada");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Copiada");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",

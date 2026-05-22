@@ -1,12 +1,12 @@
 ---
 title: "Mauro"
-subtitle: "a Metadata Automatic Retrieval system for Updated References and cited Objects from Scielo."
+subtitle: "Um sistema de recuperação automática de metadados para referências atualizadas e objetos citados da SciELO."
 ---
 
-![Mauro main webpage.](images/mauro-1400.webp){fig-align="center"}
+![Página principal do Mauro.](images/mauro-1400.webp){fig-align="center"}
 
-"Mauro" was a research project that I initiated during my Ph.D. at Fiocruz, when I was taking some courses about technological information on health.
+"Mauro" foi um projeto de pesquisa que iniciei durante meu doutorado na Fiocruz, enquanto cursava disciplinas sobre informação tecnológica em saúde.
 
-The objectives of the project were (1) to download and organize bibliometric information available at "Scielo" from the Public Health, and Brazil collections. (2) Provide a simple and intuitive way for researchers to access its data through filters and visualize information.
+Os objetivos do projeto eram (1) baixar e organizar informações bibliométricas disponíveis na SciELO nas coleções Saúde Pública e Brasil; e (2) oferecer uma forma simples e intuitiva para pesquisadores acessarem os dados por filtros e visualizações.
 
-The ETL process and dashboard were developed with R and Shiny. The project is now deactivated.
+O processo de ETL e o painel foram desenvolvidos com R e Shiny. O projeto está desativado.

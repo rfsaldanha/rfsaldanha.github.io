@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,13 +17,9 @@
 <meta name="author" content="Rafaelli Coutinho">
 <meta name="author" content="Fabio Porto">
 <meta name="author" content="Eduardo Ogasawara">
-<meta name="dcterms.date" content="2021-11-01">
 
 <title>Estimation of COVID-19 Under-Reporting in the Brazilian States Through SARI – Raphael Saldanha</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -68,14 +64,15 @@ div.csl-indent {
 <link href="../logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-0c1497c822180f859fc410b87e91da95.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-9c801c0f987b87cb825544174f2aa3e8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -90,17 +87,17 @@ div.csl-indent {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
   }
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2M7VLSRDCB"></script>
@@ -131,8 +128,8 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
     <span class="navbar-title">Raphael Saldanha</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -143,19 +140,19 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../projects.html"> 
-<span class="menu-text">Projects</span></a>
+<span class="menu-text">Projetos</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../code.html"> 
-<span class="menu-text">Packages &amp; Code</span></a>
+<span class="menu-text">Pacotes &amp; Código</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../data.html"> 
-<span class="menu-text">Datasets</span></a>
+<span class="menu-text">Dados</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../publications.html"> 
-<span class="menu-text">Publications</span></a>
+<span class="menu-text">Publicações</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../talks.html"> 
@@ -163,11 +160,15 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../photos/photos.html"> 
-<span class="menu-text">Photos</span></a>
+<span class="menu-text">Fotos</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../blog.html"> 
 <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../en/"> 
+<span class="menu-text">English</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="../blog.xml"> <i class="bi bi-rss" role="img">
@@ -187,11 +188,11 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">Nesta página</h2>
    
   <ul>
-  <li><a href="#reference" id="toc-reference" class="nav-link active" data-scroll-target="#reference">Reference</a></li>
-  <li><a href="#abstract" id="toc-abstract" class="nav-link" data-scroll-target="#abstract">Abstract</a></li>
+  <li><a href="#referência" id="toc-referência" class="nav-link active" data-scroll-target="#referência">Referência</a></li>
+  <li><a href="#resumo" id="toc-resumo" class="nav-link" data-scroll-target="#resumo">Resumo</a></li>
   </ul>
 </nav>
     </div>
@@ -215,7 +216,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-heading">Autores</div>
     <div class="quarto-title-meta-contents">
              <p>Balthazar Paixão </p>
              <p>Lais Baroni </p>
@@ -232,9 +233,9 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   </div>
     
     <div>
-    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-heading">Data de Publicação</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 1, 2021</p>
+      <p class="date">1 de novembro de 2021</p>
     </div>
   </div>
   
@@ -247,22 +248,22 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 
 
 <p><img src="images/Screenshot from 2023-10-02 13-18-18.png" class="img-fluid"></p>
-<section id="reference" class="level2">
-<h2 class="anchored" data-anchor-id="reference">Reference</h2>
+<section id="referência" class="level2">
+<h2 class="anchored" data-anchor-id="referência">Referência</h2>
 <div id="refs" class="references csl-bib-body" data-entry-spacing="1" role="list">
 <div id="ref-paixaoEstimationCOVID19UnderReporting2021a" class="csl-entry" role="listitem">
-<span class="nocase">PAIXÃO, B. et al.</span> <a href="https://doi.org/10.1007/s00354-021-00125-3">Estimation of <span>COVID-19 Under-Reporting</span> in the <span>Brazilian States Through SARI</span></a>. <strong>New Generation Computing</strong>, v. 39, n. 3, p. 623–645, Nov. 2021.
+PAIXÃO, B. et al. <a href="https://doi.org/10.1007/s00354-021-00125-3">Estimation of <span>COVID-19 Under-Reporting</span> in the <span>Brazilian States Through SARI</span></a>. <strong>New Generation Computing</strong>, v. 39, n. 3, p. 623–645, nov. 2021.
 </div>
 </div>
 </section>
-<section id="abstract" class="level2">
-<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
-<p>Due to its impact, COVID-19 has been stressing the academy to search for curing, mitigating, or controlling it. It is believed that under-reporting is a relevant factor in determining the actual mortality rate and, if not considered, can cause significant misinformation. Therefore, this work aims to estimate the under-reporting of cases and deaths of COVID-19 in Brazilian states using data from the InfoGripe. InfoGripe targets notifications of Severe Acute Respiratory Infection (SARI). The methodology is based on the combination of data analytics (event detection methods) and time series modeling (inertia and novelty concepts) over hospitalized SARI cases. The estimate of real cases of the disease, called novelty, is calculated by comparing the difference in SARI cases in 2020 (after COVID-19) with the total expected cases in recent years (2016–2019). The expected cases are derived from a seasonal exponential moving average. The results show that under-reporting rates vary significantly between states and that there are no general patterns for states in the same region in Brazil. The states of Minas Gerais and Mato Grosso have the highest rates of under-reporting of cases. The rate of under-reporting of deaths is high in the Rio Grande do Sul and the Minas Gerais. This work can be highlighted for the combination of data analytics and time series modeling. Our calculation of under-reporting rates based on SARI is conservative and better characterized by deaths than for cases.</p>
+<section id="resumo" class="level2">
+<h2 class="anchored" data-anchor-id="resumo">Resumo</h2>
+<p>Devido ao seu impacto, a COVID-19 tem mobilizado a comunidade acadêmica na busca por formas de cura, mitigação ou controle. Acredita-se que a subnotificação seja um fator relevante para determinar a taxa real de mortalidade e que, se não considerada, possa gerar desinformação significativa. Assim, este trabalho tem como objetivo estimar a subnotificação de casos e óbitos por COVID-19 nos estados brasileiros usando dados do InfoGripe. O InfoGripe acompanha notificações de Síndrome Respiratória Aguda Grave (SRAG). A metodologia baseia-se na combinação de análise de dados (métodos de detecção de eventos) e modelagem de séries temporais (conceitos de inércia e novidade) sobre casos hospitalizados de SRAG. A estimativa dos casos reais da doença, chamada de novidade, é calculada comparando a diferença nos casos de SRAG em 2020 (após a COVID-19) com o total de casos esperados nos anos recentes (2016–2019). Os casos esperados são derivados de uma média móvel exponencial sazonal. Os resultados mostram que as taxas de subnotificação variam significativamente entre os estados e que não há padrões gerais para estados de uma mesma região do Brasil. Minas Gerais e Mato Grosso apresentam as maiores taxas de subnotificação de casos. A taxa de subnotificação de óbitos é alta no Rio Grande do Sul e em Minas Gerais. Este trabalho se destaca pela combinação de análise de dados e modelagem de séries temporais. Nosso cálculo das taxas de subnotificação com base em SRAG é conservador e é melhor caracterizado para óbitos do que para casos.</p>
 
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -288,12 +289,12 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Copiada");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Copiada");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",

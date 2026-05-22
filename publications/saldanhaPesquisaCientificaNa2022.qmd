@@ -17,11 +17,11 @@ nocite: |
 
 ![](images/Screenshot from 2023-10-02 13-15-15.png)
 
-## Reference
+## Referência
 
 ::: {#refs}
 :::
 
-## Abstract
+## Resumo
 
-The book titled A pesquisa científica na era do Big Data: cinco maneiras que mostram como o Big Data prejudica a ciência, e como podemos salvá-la \[The scientific research in the age of Big Data: five ways that show how the Big Data harms the science, and how we can save it\], by Sabina Leonelli, published in 2002, by Editora Fiocruz, explores in its chapters the definitions of Big Data and its negative impacts on scientific research. Then, the author reveals a new epistemological approach to Big data and finally she presents a set of proposals for developing a good scientific research. The literature review and updating of definitions as well as the important reflections and questions for a conscious use of Big data in scientific research make the work an important contribution to the researcher's library of the information and communication about health.
+O livro *A pesquisa científica na era do Big Data: cinco maneiras que mostram como o Big Data prejudica a ciência, e como podemos salvá-la*, de Sabina Leonelli, publicado em 2022 pela Editora Fiocruz, explora em seus capítulos as definições de Big Data e seus impactos negativos na pesquisa científica. Em seguida, a autora apresenta uma nova abordagem epistemológica para o Big Data e, por fim, um conjunto de propostas para desenvolver uma boa pesquisa científica. A revisão da literatura e a atualização de definições, assim como as reflexões e perguntas importantes para o uso consciente do Big Data na pesquisa científica, tornam a obra uma contribuição relevante para a biblioteca de pesquisadores da informação e comunicação em saúde.

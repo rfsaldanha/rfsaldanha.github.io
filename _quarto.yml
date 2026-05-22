@@ -3,7 +3,17 @@ project:
   output-dir: docs/
   render:
     - "*.qmd"
+    - "projects/*.qmd"
+    - "data-projects/*.qmd"
+    - "data-projects/health_indicators/*.qmd"
+    - "publications/*.qmd"
+    - "talks/*.qmd"
+    - "photos/photos.qmd"
     - "!posts_draft/"
+    - "!_en/"
+    - "!_en/**"
+
+lang: pt-BR
 
 website:
   favicon: logo.png
@@ -25,14 +35,24 @@ website:
     logo-alt: Raphael Saldanha
     search: true
     right:
-      - cv.qmd
-      - projects.qmd
-      - code.qmd
-      - data.qmd
-      - publications.qmd
-      - talks.qmd
-      - photos/photos.qmd
-      - blog.qmd
+      - text: "CV"
+        href: cv.qmd
+      - text: "Projetos"
+        href: projects.qmd
+      - text: "Pacotes & Código"
+        href: code.qmd
+      - text: "Dados"
+        href: data.qmd
+      - text: "Publicações"
+        href: publications.qmd
+      - text: "Talks"
+        href: talks.qmd
+      - text: "Fotos"
+        href: photos/photos.qmd
+      - text: "Blog"
+        href: blog.qmd
+      - text: "English"
+        href: en/
       - icon: rss
         href: blog.xml
 

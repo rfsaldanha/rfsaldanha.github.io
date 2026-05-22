@@ -1,0 +1,34 @@
+---
+title: "Subset Models for Multivariate Time Series Forecast"
+author:
+  - Raphael Saldanha
+  - Victor Ribeiro
+  - Eduardo Pena
+  - Marcel Pedroso
+  - Reza Akbarinia
+  - Patrick Valduriez 
+  - Fabio Porto
+date: 2024-05-13
+categories: 
+  - machine learning
+  - subsets
+  - dengue
+bibliography: publications.bib
+csl: abnt.csl
+---
+
+---
+nocite: |
+  @saldanhaSubsetModelsMultivariate2024
+---
+
+![](images/clipboard-3121148281.png)
+
+## Reference
+
+::: {#refs}
+:::
+
+## Abstract
+
+Multivariate time series ﬁnd extensive applications in conjunction with machine learning methodologies for scenario forecasting across various domains. Nevertheless, certain domains exhibit inherent complexities and diversities, which detrimentally impact the predictive efﬁcacy of global models. This ongoing study introduces a Subset Modeling Framework designed to acknowledge the inherent diversity within a domain’s multivariate space. Comparative assessments between subset models and global models are conducted in terms of performance, revealing compelling ﬁndings and suggesting the potential for further exploration and reﬁnement of this novel framework.

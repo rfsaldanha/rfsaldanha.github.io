@@ -1,104 +1,104 @@
 ---
-title: "Air pollutants averages for Brazilian municipalities"
+title: "Médias de poluentes atmosféricos para municípios brasileiros"
 bibliography: references.bib
 ---
 
 ![](images/air_pollutant_pm25.png)
 
-## Introduction
+## Introdução
 
-Air pollutants, including particulate matter, nitrogen dioxide, sulfur dioxide, ozone, and carbon monoxide, are critical indicators in public health studies due to their impacts on human health. These pollutants originate from various sources such as vehicle emissions, industrial activities, and biomass burning. Exposure to air pollution has been linked to a range of health effects, including respiratory and cardiovascular diseases, adverse birth outcomes, and increased mortality rates. In public health research, air pollutants are used to assess environmental exposure, identify at-risk populations, and quantify the burden of disease attributable to poor air quality.
+Poluentes atmosféricos, incluindo material particulado, dióxido de nitrogênio, dióxido de enxofre, ozônio e monóxido de carbono, são indicadores críticos em estudos de saúde pública por seus impactos na saúde humana. Esses poluentes têm várias fontes, como emissões veiculares, atividades industriais e queima de biomassa. A exposição à poluição do ar está associada a doenças respiratórias e cardiovasculares, desfechos adversos ao nascimento e aumento da mortalidade.
 
-I created some datasets on air pollutants for Brazilian municipalities using a zonal statistics procedure with data available from the Copernicus Atmosphere Monitoring Service (CAMS) global reanalysis (EAC4).
+Criei bases de dados de poluentes atmosféricos para municípios brasileiros usando estatísticas zonais com dados da reanálise global EAC4 do Copernicus Atmosphere Monitoring Service (CAMS).
 
-## Particulate Matter
+## Material particulado
 
-Particulate Matter is a widely used indicator in public health studies due to its association with adverse health outcomes. These fine particles can penetrate deep into the respiratory system, reaching the alveoli and the bloodstream, leading to increased risks of cardiovascular and respiratory diseases, premature mortality, and other chronic health conditions. In epidemiological research, PM levels are often used to assess population exposure to air pollution and to estimate the burden of disease attributable to environmental factors.
+Material particulado é um indicador amplamente usado em estudos de saúde pública por sua associação com desfechos adversos em saúde. Essas partículas finas podem penetrar profundamente no sistema respiratório, alcançar os alvéolos e a corrente sanguínea, aumentando os riscos de doenças cardiovasculares e respiratórias, mortalidade prematura e outras condições crônicas.
 
-The PM data indicators were downloaded from the Copernicus' Atmosphere Data Store and processed to provide three daily indicators for the Brazilian municipalities:
+Os indicadores de PM foram baixados do Atmosphere Data Store do Copernicus e processados para fornecer três indicadores diários para os municípios brasileiros:
 
--   Minimum values: for each municipality boundary and day, the hourly minimum values of PM of all intersecting cells are averaged, resulting in the municipality's minimum daily indicator.
--   Maximum values: for each municipality boundary and day, the hourly maximum values of PM of all intersecting cells are averaged, resulting in the municipality's maximum daily indicator.
--   Average values: for each municipality boundary and day, the hourly average values of PM of all intersecting cells are averaged, resulting in the municipality's average daily indicator.
+-   Valores mínimos: para cada limite municipal e dia, os valores horários mínimos de PM de todas as células que intersectam o município são promediados, resultando no indicador diário mínimo municipal.
+-   Valores máximos: para cada limite municipal e dia, os valores horários máximos de PM de todas as células que intersectam o município são promediados, resultando no indicador diário máximo municipal.
+-   Valores médios: para cada limite municipal e dia, os valores horários médios de PM de todas as células que intersectam o município são promediados, resultando no indicador diário médio municipal.
 
-Those indicators are presented in Parquet and CSV formats. The computational codes used to create those datasets are openly available [here](https://github.com/rfsaldanha/camsdata).
+Esses indicadores são apresentados nos formatos Parquet e CSV. Os códigos computacionais usados para criar as bases estão disponíveis abertamente [aqui](https://github.com/rfsaldanha/camsdata).
 
-The datasets are available to download here:
+As bases estão disponíveis para baixar aqui:
 
 ### PM 2.5
 
--  2003-2024: [![](https://img.shields.io/badge/download-10.5281/zenodo.16374139-green.svg)](https://doi.org/10.5281/zenodo.16374139)
--  Jan 2025 - Aug 2025: [![](https://img.shields.io/badge/download-10.5281/zenodo.18552120-green.svg)](https://doi.org/10.5281/zenodo.18552120)
+-  2003-2024: [![](https://img.shields.io/badge/baixar-10.5281/zenodo.16374139-green.svg)](https://doi.org/10.5281/zenodo.16374139)
+-  jan 2025 - ago 2025: [![](https://img.shields.io/badge/baixar-10.5281/zenodo.18552120-green.svg)](https://doi.org/10.5281/zenodo.18552120)
     
 ### PM 10
 
--  2003-2024: [![](https://img.shields.io/badge/download-10.5281/zenodo.16419737-green.svg)](https://doi.org/10.5281/zenodo.16419737)
--  Jan 2025 - Aug 2025: [![](https://img.shields.io/badge/download-10.5281/zenodo.18554403-green.svg)](https://doi.org/10.5281/zenodo.18554403)
+-  2003-2024: [![](https://img.shields.io/badge/baixar-10.5281/zenodo.16419737-green.svg)](https://doi.org/10.5281/zenodo.16419737)
+-  jan 2025 - ago 2025: [![](https://img.shields.io/badge/baixar-10.5281/zenodo.18554403-green.svg)](https://doi.org/10.5281/zenodo.18554403)
 
 ## CO
 
-Carbon monoxide (CO) is a gas produced mainly by incomplete combustion of fossil fuels, and it represents a serious threat to public health. Short-term exposure to high concentrations can cause dizziness, headaches, impaired vision, confusion, and, in severe cases, death, while chronic low-level exposure has been associated with cardiovascular and neurological problems. Monitoring CO levels in the environment and enforcing air quality standards are therefore essential measures for preventing both acute poisoning incidents and longer-term health burdens in urban populations.
+O monóxido de carbono (CO) é um gás produzido principalmente pela combustão incompleta de combustíveis fósseis e representa uma ameaça importante à saúde pública. A exposição de curto prazo a altas concentrações pode causar tontura, dor de cabeça, prejuízo visual, confusão e, em casos graves, morte. A exposição crônica a baixos níveis está associada a problemas cardiovasculares e neurológicos.
 
-The CO data indicators were downloaded from the Copernicus' Atmosphere Data Store and processed to provide three daily indicators for the Brazilian municipalities:
+Os indicadores de CO foram baixados do Atmosphere Data Store do Copernicus e processados para fornecer três indicadores diários para os municípios brasileiros:
 
--   Minimum values: for each municipality boundary and day, the hourly minimum values of CO of all intersecting cells are averaged, resulting in the municipality's minimum daily indicator.
--   Maximum values: for each municipality boundary and day, the hourly maximum values of CO of all intersecting cells are averaged, resulting in the municipality's maximum daily indicator.
--   Average values: for each municipality boundary and day, the hourly average values of CO of all intersecting cells are averaged, resulting in the municipality's average daily indicator.
+-   Valores mínimos: para cada limite municipal e dia, os valores horários mínimos de CO de todas as células que intersectam o município são promediados.
+-   Valores máximos: para cada limite municipal e dia, os valores horários máximos de CO de todas as células que intersectam o município são promediados.
+-   Valores médios: para cada limite municipal e dia, os valores horários médios de CO de todas as células que intersectam o município são promediados.
 
-Those indicators are presented in Parquet and CSV formats. The computational codes used to create those datasets are openly available [here](https://github.com/rfsaldanha/camsdata).
+Esses indicadores são apresentados nos formatos Parquet e CSV. Os códigos computacionais usados para criar as bases estão disponíveis abertamente [aqui](https://github.com/rfsaldanha/camsdata).
 
-The datasets are available to download here:
+As bases estão disponíveis para baixar aqui:
 
--  2003-2024: [![](https://img.shields.io/badge/download-10.5281/zenodo.18641834-green.svg)](https://doi.org/10.5281/zenodo.18641834)
--  Jan 2025 - Aug 2025: [![](https://img.shields.io/badge/download-10.5281/zenodo.18623650-green.svg)](https://doi.org/10.5281/zenodo.18623650)
+-  2003-2024: [![](https://img.shields.io/badge/baixar-10.5281/zenodo.18641834-green.svg)](https://doi.org/10.5281/zenodo.18641834)
+-  jan 2025 - ago 2025: [![](https://img.shields.io/badge/baixar-10.5281/zenodo.18623650-green.svg)](https://doi.org/10.5281/zenodo.18623650)
 
 ## NO2 
 
-Nitrogen dioxide (NO2) is a harmful air pollutant primarily generated by the combustion of fossil fuels, especially from vehicles, power plants, and industrial activities. Its is related to respiratory problems, as exposure can irritate the airways, reduce lung function, and increase the risk of asthma, bronchitis, and other chronic respiratory diseases. Children, the elderly, and individuals with preexisting health conditions are particularly vulnerable. Long-term exposure has also been linked to cardiovascular problems and premature mortality.
+O dióxido de nitrogênio (NO2) é um poluente atmosférico nocivo gerado principalmente pela combustão de combustíveis fósseis, especialmente por veículos, usinas e atividades industriais. Está relacionado a problemas respiratórios, pois a exposição pode irritar as vias aéreas, reduzir a função pulmonar e aumentar o risco de asma, bronquite e outras doenças respiratórias crônicas.
 
-The NO2 data indicators were downloaded from the Copernicus' Atmosphere Data Store and processed to provide three daily indicators for the Brazilian municipalities:
+Os indicadores de NO2 foram baixados do Atmosphere Data Store do Copernicus e processados para fornecer três indicadores diários para os municípios brasileiros:
 
--   Minimum values: for each municipality boundary and day, the hourly minimum values of NO2 of all intersecting cells are averaged, resulting in the municipality's minimum daily indicator.
--   Maximum values: for each municipality boundary and day, the hourly maximum values of NO2 of all intersecting cells are averaged, resulting in the municipality's maximum daily indicator.
--   Average values: for each municipality boundary and day, the hourly average values of NO2 of all intersecting cells are averaged, resulting in the municipality's average daily indicator.
+-   Valores mínimos: para cada limite municipal e dia, os valores horários mínimos de NO2 de todas as células que intersectam o município são promediados.
+-   Valores máximos: para cada limite municipal e dia, os valores horários máximos de NO2 de todas as células que intersectam o município são promediados.
+-   Valores médios: para cada limite municipal e dia, os valores horários médios de NO2 de todas as células que intersectam o município são promediados.
 
-Those indicators are presented in Parquet and CSV formats. The computational codes used to create those datasets are openly available [here](https://github.com/rfsaldanha/camsdata).
+Esses indicadores são apresentados nos formatos Parquet e CSV. Os códigos computacionais usados para criar as bases estão disponíveis abertamente [aqui](https://github.com/rfsaldanha/camsdata).
 
-The datasets are available to download here:
+As bases estão disponíveis para baixar aqui:
 
--  2003-2024: [![](https://img.shields.io/badge/download-10.5281/zenodo.18642048-green.svg)](https://doi.org/10.5281/zenodo.18642048)
--  Jan 2025 - Aug 2025: [![](https://img.shields.io/badge/download-10.5281/zenodo.18623369-green.svg)](https://doi.org/10.5281/zenodo.18623369)
+-  2003-2024: [![](https://img.shields.io/badge/baixar-10.5281/zenodo.18642048-green.svg)](https://doi.org/10.5281/zenodo.18642048)
+-  jan 2025 - ago 2025: [![](https://img.shields.io/badge/baixar-10.5281/zenodo.18623369-green.svg)](https://doi.org/10.5281/zenodo.18623369)
 
 ## O3
 
-Ozone (O3) at ground level is a major component of smog and an air pollutant. Unlike stratospheric ozone, which protects life from harmful ultraviolet radiation, tropospheric ozone is a harmful pollutant with significant public health implications. Short-term exposure can cause irritation of the eyes, nose, and throat, aggravate asthma, and reduce lung function, especially during outdoor physical activity. Prolonged exposure is associated with chronic respiratory diseases, increased hospital admissions, and premature mortality due to cardiovascular and pulmonary complications. Children, older adults, and individuals with preexisting health problems are most at risk.
+O ozônio (O3) ao nível do solo é um componente importante do smog e um poluente atmosférico. Diferentemente do ozônio estratosférico, que protege a vida da radiação ultravioleta, o ozônio troposférico é nocivo e tem implicações relevantes para a saúde pública. A exposição de curto prazo pode irritar olhos, nariz e garganta, agravar asma e reduzir a função pulmonar.
 
-The O3 data indicators were downloaded from the Copernicus' Atmosphere Data Store and processed to provide three daily indicators for the Brazilian municipalities:
+Os indicadores de O3 foram baixados do Atmosphere Data Store do Copernicus e processados para fornecer três indicadores diários para os municípios brasileiros:
 
--   Minimum values: for each municipality boundary and day, the hourly minimum values of O3 of all intersecting cells are averaged, resulting in the municipality's minimum daily indicator.
--   Maximum values: for each municipality boundary and day, the hourly maximum values of O3 of all intersecting cells are averaged, resulting in the municipality's maximum daily indicator.
--   Average values: for each municipality boundary and day, the hourly average values of O3 of all intersecting cells are averaged, resulting in the municipality's average daily indicator.
+-   Valores mínimos: para cada limite municipal e dia, os valores horários mínimos de O3 de todas as células que intersectam o município são promediados.
+-   Valores máximos: para cada limite municipal e dia, os valores horários máximos de O3 de todas as células que intersectam o município são promediados.
+-   Valores médios: para cada limite municipal e dia, os valores horários médios de O3 de todas as células que intersectam o município são promediados.
 
-Those indicators are presented in Parquet and CSV formats. The computational codes used to create those datasets are openly available [here](https://github.com/rfsaldanha/camsdata).
+Esses indicadores são apresentados nos formatos Parquet e CSV. Os códigos computacionais usados para criar as bases estão disponíveis abertamente [aqui](https://github.com/rfsaldanha/camsdata).
 
-The datasets are available to download here:
+As bases estão disponíveis para baixar aqui:
 
--  2003-2024: [![](https://img.shields.io/badge/download-10.5281/zenodo.18641945-green.svg)](https://doi.org/10.5281/zenodo.18641945)
--  Jan 2025 - Aug 2025: [![](https://img.shields.io/badge/download-10.5281/zenodo.18623357-green.svg)](https://doi.org/10.5281/zenodo.18623357)
+-  2003-2024: [![](https://img.shields.io/badge/baixar-10.5281/zenodo.18641945-green.svg)](https://doi.org/10.5281/zenodo.18641945)
+-  jan 2025 - ago 2025: [![](https://img.shields.io/badge/baixar-10.5281/zenodo.18623357-green.svg)](https://doi.org/10.5281/zenodo.18623357)
 
 ## SO2
 
-Sulfur dioxide (SO2) is a toxic gas mainly produced by the burning of fossil fuels containing sulfur, such as coal and oil, as well as by industrial processes like metal smelting and oil refining. SO2 concentrations irritate the respiratory system, causing coughing, throat irritation, and shortness of breath even at relatively low concentrations. People with asthma, children, and the elderly are particularly sensitive, as exposure can trigger asthma attacks and worsen existing cardiovascular and respiratory conditions. Long-term exposure contributes to chronic bronchitis, reduced lung function, and increased risk of premature death. 
+O dióxido de enxofre (SO2) é um gás tóxico produzido principalmente pela queima de combustíveis fósseis contendo enxofre, como carvão e petróleo, além de processos industriais como fundição de metais e refino de óleo. Concentrações de SO2 irritam o sistema respiratório, causando tosse, irritação na garganta e falta de ar mesmo em concentrações relativamente baixas.
 
-The SO2 data indicators were downloaded from the Copernicus' Atmosphere Data Store and processed to provide three daily indicators for the Brazilian municipalities:
+Os indicadores de SO2 foram baixados do Atmosphere Data Store do Copernicus e processados para fornecer três indicadores diários para os municípios brasileiros:
 
--   Minimum values: for each municipality boundary and day, the hourly minimum values of SO2 of all intersecting cells are averaged, resulting in the municipality's minimum daily indicator.
--   Maximum values: for each municipality boundary and day, the hourly maximum values of SO2 of all intersecting cells are averaged, resulting in the municipality's maximum daily indicator.
--   Average values: for each municipality boundary and day, the hourly average values of SO2 of all intersecting cells are averaged, resulting in the municipality's average daily indicator.
+-   Valores mínimos: para cada limite municipal e dia, os valores horários mínimos de SO2 de todas as células que intersectam o município são promediados.
+-   Valores máximos: para cada limite municipal e dia, os valores horários máximos de SO2 de todas as células que intersectam o município são promediados.
+-   Valores médios: para cada limite municipal e dia, os valores horários médios de SO2 de todas as células que intersectam o município são promediados.
 
-Those indicators are presented in Parquet and CSV formats. The computational codes used to create those datasets are openly available [here](https://github.com/rfsaldanha/camsdata).
+Esses indicadores são apresentados nos formatos Parquet e CSV. Os códigos computacionais usados para criar as bases estão disponíveis abertamente [aqui](https://github.com/rfsaldanha/camsdata).
 
-The datasets are available to download here:
+As bases estão disponíveis para baixar aqui:
 
--  2003-2024: [![](https://img.shields.io/badge/download-10.5281/zenodo.18642198-green.svg)](https://doi.org/10.5281/zenodo.18642198)
--  Jan 2025 - Aug 2025: [![](https://img.shields.io/badge/download-10.5281/zenodo.18623351-green.svg)](https://doi.org/10.5281/zenodo.18623351)
+-  2003-2024: [![](https://img.shields.io/badge/baixar-10.5281/zenodo.18642198-green.svg)](https://doi.org/10.5281/zenodo.18642198)
+-  jan 2025 - ago 2025: [![](https://img.shields.io/badge/baixar-10.5281/zenodo.18623351-green.svg)](https://doi.org/10.5281/zenodo.18623351)

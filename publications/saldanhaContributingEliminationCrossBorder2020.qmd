@@ -32,25 +32,25 @@ nocite: |
 
 ![](images/Screenshot%20from%202023-10-02%2013-21-07.png)
 
-## Reference
+## Referência
 
 ::: {#refs}
 :::
 
-## Abstract
+## Resumo
 
-### Background
+### Contexto
 
-Cross-border malaria is a significant obstacle to achieving malaria control and elimination worldwide. Objective: This study aimed to build a cross-border surveillance system that can make comparable and qualified data available to all parties involved in malaria control between French Guiana and Brazil.
+A malária transfronteiriça é um obstáculo importante para alcançar o controle e a eliminação da malária no mundo. Objetivo: este estudo teve como objetivo construir um sistema de vigilância transfronteiriça capaz de disponibilizar dados comparáveis e qualificados para todas as partes envolvidas no controle da malária entre a Guiana Francesa e o Brasil.
 
-### Methods
+### Métodos
 
-Data reconciliation rules based on expert knowledge were defined and applied to the heterogeneous data provided by the existing malaria surveillance systems of both countries. Visualization dashboards were designed to facilitate progressive data exploration, analysis, and interpretation. Dedicated advanced open source and robust software solutions were chosen to facilitate solution sharing and reuse.
+Regras de reconciliação de dados baseadas em conhecimento especializado foram definidas e aplicadas aos dados heterogêneos fornecidos pelos sistemas de vigilância da malária existentes nos dois países. Painéis de visualização foram desenhados para facilitar a exploração, análise e interpretação progressiva dos dados. Soluções de software livre avançadas e robustas foram escolhidas para facilitar o compartilhamento e a reutilização da solução.
 
-### Results
+### Resultados
 
-A database gathering the harmonized data on cross-border malaria epidemiology is updated monthly with new individual malaria cases from both countries. Online dashboards permit a progressi ve and user-friendly visualization of raw data and epidemiological indicators, in the form of time series, maps, and data quality indexes. The monitoring system was shown to be able to identify changes in time series that are related to control actions, as well as differentiated changes according to space and to population subgroups.
+Uma base de dados que reúne dados harmonizados sobre a epidemiologia da malária transfronteiriça é atualizada mensalmente com novos casos individuais de malária dos dois países. Painéis on-line permitem uma visualização progressiva e amigável dos dados brutos e de indicadores epidemiológicos, na forma de séries temporais, mapas e índices de qualidade dos dados. O sistema de monitoramento mostrou-se capaz de identificar mudanças em séries temporais relacionadas a ações de controle, bem como mudanças diferenciadas segundo o espaço e subgrupos populacionais.
 
-### Conclusions
+### Conclusões
 
-This cross-border monitoring tool could help produce new scientific evidence on cross-border malaria dynamics, implementing cross-border cooperation for malaria control and elimination, and can be quickly adapted to other cross-border contexts.
+Essa ferramenta de monitoramento transfronteiriço pode ajudar a produzir novas evidências científicas sobre a dinâmica da malária em áreas de fronteira, implementar a cooperação transfronteiriça para controle e eliminação da malária e ser rapidamente adaptada a outros contextos fronteiriços.

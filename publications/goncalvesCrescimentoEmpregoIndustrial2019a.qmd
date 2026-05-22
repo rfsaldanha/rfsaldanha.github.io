@@ -23,11 +23,11 @@ nocite: |
 
 ![](images/Screenshot from 2023-10-02 13-26-36.png)
 
-## Reference
+## Referência
 
 ::: {#refs}
 :::
 
-## Abstract
+## Resumo
 
-The aim of this paper is to revisit the debate on the degree of specialization and industrial diversification and the growth of local manufacturing employment in Brazil. A matrix of sectoral spillovers is built in which it is verified whether sectors, grouped by technological intensity, influence the performance of disaggregated manufacturing groups. Spatial data panel techniques are used to control non-observed local effects and possible spatial dependence over the period 1995-2014. The results show that specializations in low-technology manufacturing groups create stimulus for several other manufacturing groups regardless of the level of technological intensity. The spillovers coming from high technology manufacturing industries are less frequent, though they also occur depending on the industrial manufacturing group considered. In general, sectors of higher and lower technological intensity flourish with the presence of MAR externalities. We conclude that the diversification/specialization debate can vary considerably, requiring specific industrial and regional policies by manufacturing industries.
+O objetivo deste artigo é revisitar o debate sobre o grau de especialização e diversificação industrial e o crescimento do emprego industrial local no Brasil. É construída uma matriz de transbordamentos setoriais para verificar se setores agrupados por intensidade tecnológica influenciam o desempenho de grupos industriais desagregados. Técnicas de painel espacial são usadas para controlar efeitos locais não observados e possível dependência espacial no período de 1995 a 2014. Os resultados mostram que especializações em grupos industriais de baixa tecnologia estimulam vários outros grupos industriais, independentemente do nível de intensidade tecnológica. Os transbordamentos provenientes de indústrias de alta tecnologia são menos frequentes, embora também ocorram dependendo do grupo industrial considerado. Em geral, setores de maior e menor intensidade tecnológica prosperam na presença de externalidades MAR. Concluímos que o debate diversificação/especialização pode variar consideravelmente, exigindo políticas industriais e regionais específicas por segmento industrial.

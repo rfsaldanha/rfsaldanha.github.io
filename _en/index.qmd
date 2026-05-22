@@ -1,0 +1,36 @@
+---
+image: profile2.jpg
+about:
+  template: trestles
+  image-shape: rounded
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/rfsaldanha
+    - icon: bluesky
+      text: Bluesky
+      href: https://bsky.app/profile/rfsaldanha.bsky.social
+    - icon: mastodon
+      text: Mastodon
+      href: https://fosstodon.org/@rfsaldanha
+    - text: "{{< ai orcid >}} Orcid"
+      href: https://orcid.org/0000-0003-0652-8466
+    - text: "{{< ai google-scholar >}} Google Scholar"
+      href: https://scholar.google.com/citations?user=UiXjYXsAAAAJ
+    - text: "{{< ai lattes >}} Lattes"
+      href: http://lattes.cnpq.br/4545189714279226
+    - text: "@ e-mail"
+      href: "mailto:raphael.saldanha@fiocruz.br"
+---
+
+Researcher at [Fiocruz](https://portal.fiocruz.br/),  [Inria](https://www.inria.fr/fr) alumni.
+
+Associate editor of [RECIIS](https://www.reciis.icict.fiocruz.br).
+
+Pasteur Network [Climate & Health](https://pasteur-network.org/what-we-do/theory-of-change-pillars/epidemic-intelligence-preparedness-climate/) fellow.
+
+Health geographer and health data scientist. Undergraduate in Geography, specialization in Statistics, master's in Public Health, and Ph.D. in Health Information.
+
+Brazilian from Nova Friburgo (RJ), lived for several years on Minas Gerais, Rio de Janeiro and Montpellier, France. Currently based on Rio de Janeiro.
+
+Loves to code and crunch huge health and climate datasets with R.

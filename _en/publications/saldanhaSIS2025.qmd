@@ -1,0 +1,27 @@
+---
+title: "Sistemas de Informação em Saúde no Brasil"
+author:
+  - Raphael Saldanha
+date: 2025-03-01
+categories: 
+  - public health
+  - health information systems
+bibliography: publications.bib
+csl: abnt.csl
+---
+
+---
+nocite: |
+  @saldanhaSIS2025
+---
+
+![](images/ciclo_vida_sistemas.png)
+
+## Reference
+
+::: {#refs}
+:::
+
+## Abstract
+
+This e-book offers a comprehensive and systematic overview of the principal health information systems (SIS) used in Brazil, detailing their historical development, organizational structure, available data, key applications, and core indicators. It contextualizes the evolution of health information systems within the Brazilian health landscape and provides in-depth descriptions of major national systems, including mortality (SIM), live births (SINASC), hospitalizations (SIH), ambulatory care (SIA), notifiable diseases (SINAN), health establishments (CNES), public health budgets (SIOPS), water quality surveillance (SISAGUA), primary care (SISAB), and national immunization (SI-PNI). Each chapter elucidates the purpose, data elements, and analytical uses of these systems, enabling readers to understand how health events and services are recorded, monitored, and interpreted for epidemiological surveillance, health planning, and policy formulation. Supplementary appendices provide essential reference materials such as ICD classifications, municipal coding schemes, population estimates, and additional surveillance systems, further enhancing the utility of the work for researchers, public health professionals, and policymakers. Authored by Raphael de Freitas Saldanha, this e-book serves as both a foundational guide and a practical reference for engaging with Brazil’s diverse health information infrastructure.

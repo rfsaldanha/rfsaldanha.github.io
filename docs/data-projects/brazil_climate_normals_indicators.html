@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Climatological normals and indicators of Brazilian municipalities – Raphael Saldanha</title>
+<title>Normais climatológicas e indicadores dos municípios brasileiros – Raphael Saldanha</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -62,6 +59,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -90,14 +88,15 @@ div.csl-indent {
 <link href="../logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-0c1497c822180f859fc410b87e91da95.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-9c801c0f987b87cb825544174f2aa3e8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -112,17 +111,17 @@ div.csl-indent {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
   }
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2M7VLSRDCB"></script>
@@ -153,8 +152,8 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
     <span class="navbar-title">Raphael Saldanha</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -165,19 +164,19 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../projects.html"> 
-<span class="menu-text">Projects</span></a>
+<span class="menu-text">Projetos</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../code.html"> 
-<span class="menu-text">Packages &amp; Code</span></a>
+<span class="menu-text">Pacotes &amp; Código</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../data.html"> 
-<span class="menu-text">Datasets</span></a>
+<span class="menu-text">Dados</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../publications.html"> 
-<span class="menu-text">Publications</span></a>
+<span class="menu-text">Publicações</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../talks.html"> 
@@ -185,11 +184,15 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../photos/photos.html"> 
-<span class="menu-text">Photos</span></a>
+<span class="menu-text">Fotos</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../blog.html"> 
 <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../en/"> 
+<span class="menu-text">English</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="../blog.xml"> <i class="bi bi-rss" role="img">
@@ -207,7 +210,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Climatological normals and indicators of Brazilian municipalities</h1>
+      <h1 class="title">Normais climatológicas e indicadores dos municípios brasileiros</h1>
                       </div>
   </div>
     
@@ -225,29 +228,27 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">Nesta página</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a>
+  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução">Introdução</a></li>
+  <li><a href="#métodos" id="toc-métodos" class="nav-link" data-scroll-target="#métodos">Métodos</a>
   <ul class="collapse">
-  <li><a href="#normal-indicators" id="toc-normal-indicators" class="nav-link" data-scroll-target="#normal-indicators">Normal indicators</a></li>
-  <li><a href="#aggregated-indicators" id="toc-aggregated-indicators" class="nav-link" data-scroll-target="#aggregated-indicators">Aggregated indicators</a></li>
-  <li><a href="#data-source" id="toc-data-source" class="nav-link" data-scroll-target="#data-source">Data source</a></li>
-  <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
-  <li><a href="#precipitation-mm" id="toc-precipitation-mm" class="nav-link" data-scroll-target="#precipitation-mm">Precipitation (mm)</a></li>
-  <li><a href="#evapotranspiration-mm" id="toc-evapotranspiration-mm" class="nav-link" data-scroll-target="#evapotranspiration-mm">Evapotranspiration (mm)</a></li>
-  <li><a href="#maximum-temperature-c" id="toc-maximum-temperature-c" class="nav-link" data-scroll-target="#maximum-temperature-c">Maximum temperature (°C)</a></li>
-  <li><a href="#minimum-temperature-c" id="toc-minimum-temperature-c" class="nav-link" data-scroll-target="#minimum-temperature-c">Minimum temperature (°C)</a></li>
-  <li><a href="#solar-radiation-mjm-2" id="toc-solar-radiation-mjm-2" class="nav-link" data-scroll-target="#solar-radiation-mjm-2">Solar radiation (MJm-2)</a></li>
-  <li><a href="#wind-speed-at-2m-height-ms" id="toc-wind-speed-at-2m-height-ms" class="nav-link" data-scroll-target="#wind-speed-at-2m-height-ms">Wind speed at 2m height (m/s)</a></li>
-  <li><a href="#relative-humidity" id="toc-relative-humidity" class="nav-link" data-scroll-target="#relative-humidity">Relative humidity (%)</a></li>
+  <li><a href="#indicadores-normais" id="toc-indicadores-normais" class="nav-link" data-scroll-target="#indicadores-normais">Indicadores normais</a></li>
+  <li><a href="#indicadores-agregados" id="toc-indicadores-agregados" class="nav-link" data-scroll-target="#indicadores-agregados">Indicadores agregados</a></li>
+  <li><a href="#fonte-dos-dados" id="toc-fonte-dos-dados" class="nav-link" data-scroll-target="#fonte-dos-dados">Fonte dos dados</a></li>
+  <li><a href="#pacotes" id="toc-pacotes" class="nav-link" data-scroll-target="#pacotes">Pacotes</a></li>
+  <li><a href="#precipitação-mm" id="toc-precipitação-mm" class="nav-link" data-scroll-target="#precipitação-mm">Precipitação (mm)</a></li>
+  <li><a href="#temperatura-máxima-c" id="toc-temperatura-máxima-c" class="nav-link" data-scroll-target="#temperatura-máxima-c">Temperatura máxima (°C)</a></li>
+  <li><a href="#temperatura-mínima-c" id="toc-temperatura-mínima-c" class="nav-link" data-scroll-target="#temperatura-mínima-c">Temperatura mínima (°C)</a></li>
+  <li><a href="#velocidade-do-vento-a-2-m-de-altura-ms" id="toc-velocidade-do-vento-a-2-m-de-altura-ms" class="nav-link" data-scroll-target="#velocidade-do-vento-a-2-m-de-altura-ms">Velocidade do vento a 2 m de altura (m/s)</a></li>
+  <li><a href="#umidade-relativa" id="toc-umidade-relativa" class="nav-link" data-scroll-target="#umidade-relativa">Umidade relativa (%)</a></li>
   </ul></li>
-  <li><a href="#sec-download" id="toc-sec-download" class="nav-link" data-scroll-target="#sec-download">Results and dataset download</a>
+  <li><a href="#sec-download" id="toc-sec-download" class="nav-link" data-scroll-target="#sec-download">Resultados e base de dados</a>
   <ul class="collapse">
-  <li><a href="#maximum-temperature-rio-de-janeiro-rj-2023" id="toc-maximum-temperature-rio-de-janeiro-rj-2023" class="nav-link" data-scroll-target="#maximum-temperature-rio-de-janeiro-rj-2023">Maximum temperature, Rio de Janeiro, RJ, 2023</a></li>
+  <li><a href="#temperatura-máxima-rio-de-janeiro-rj-2023" id="toc-temperatura-máxima-rio-de-janeiro-rj-2023" class="nav-link" data-scroll-target="#temperatura-máxima-rio-de-janeiro-rj-2023">Temperatura máxima, Rio de Janeiro, RJ, 2023</a></li>
   </ul></li>
-  <li><a href="#session-info" id="toc-session-info" class="nav-link" data-scroll-target="#session-info">Session info</a></li>
+  <li><a href="#informações-da-sessão" id="toc-informações-da-sessão" class="nav-link" data-scroll-target="#informações-da-sessão">Informações da sessão</a></li>
   </ul>
 </nav>
     </div>
@@ -258,97 +259,111 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 
 
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Climatological normals are averages of climate variables observed for a given time – usually months – in a 30-year range. The normals are usually used as comparison benchmarks against recent or current conditions, being useful to recognize anomalies and to characterize global warming impacts.</p>
-<p>The normals are usually computed with surface meteorological stations data, maintained by government meteorological institutions, and its distribution over the territory may be scarce or uneven, like in Brazil. Thus, the availability of climatological normals to different regions and administrative divisions like municipalities is difficult to obtain.</p>
-<p>I propose here a method to compute monthly climatological normals for the 1961–1990 and monthly aggregated climate indicators from 1991 to 2023 for Brazilian municipalities using a climate reanalysis dataset.</p>
+<section id="introdução" class="level2">
+<h2 class="anchored" data-anchor-id="introdução">Introdução</h2>
+<p>Normais climatológicas são médias de variáveis climáticas observadas para um determinado período, geralmente meses, em um intervalo de 30 anos. As normais costumam ser usadas como referência de comparação com condições recentes ou atuais, sendo úteis para reconhecer anomalias e caracterizar impactos do aquecimento global.</p>
+<p>As normais geralmente são calculadas com dados de estações meteorológicas de superfície, mantidas por instituições meteorológicas governamentais, e sua distribuição no território pode ser escassa ou irregular, como no Brasil. Assim, a disponibilidade de normais climatológicas para diferentes regiões e divisões administrativas, como municípios, é difícil de obter.</p>
+<p>Proponho aqui um método para calcular normais climatológicas mensais e indicadores climáticos agregados mensalmente usando bases de reanálise climática.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+Dica
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>In a hurry? Jump to the <a href="#sec-download">download</a> section ;-)</p>
+<p>Com pressa? Vá direto para a seção de <a href="#sec-download">baixar</a> ;-)</p>
 </div>
 </div>
 </section>
-<section id="methods" class="level2">
-<h2 class="anchored" data-anchor-id="methods">Methods</h2>
-<p>A climatological normal can be computed with data from different sources, including remote sensing sensors and “area averages or points in gridded datasets” <span class="citation" data-cites="wmoWMOGuidelinesCalculation2017">(<a href="#ref-wmoWMOGuidelinesCalculation2017" role="doc-biblioref">WMO 2017</a>)</span>. Some gridded climatological datasets are available for the Brazilian territory, including the ERA5-Land from Copernicus <span class="citation" data-cites="muñoz-sabater2021">(<a href="#ref-muñoz-sabater2021" role="doc-biblioref">Muñoz-Sabater et al. 2021</a>)</span> and the BR-DWGD dataset <span class="citation" data-cites="xavier2022">(<a href="#ref-xavier2022" role="doc-biblioref">Xavier et al. 2022</a>)</span>, offering several climatological indicators for a long time range, and continuously updates.</p>
-<p>Some research methods demands that climate data must be aggregated in the same spatial and temporal units of other data to be used in statistical models, being a fairly common procedure in epidemiology and economy studies. In order to approach this issue, spatial gridded data can be aggregated using <em>zonal statistics</em> <span class="citation" data-cites="saldanhaZonalStatisticsDatasets2024">(<a href="#ref-saldanhaZonalStatisticsDatasets2024" role="doc-biblioref">Saldanha et al. 2024</a>)</span>.</p>
-<p>I used the same methodology from the study above to create zonal statistics of climate indicators from the BR-DWGD project <span class="citation" data-cites="xavier2022">(<a href="#ref-xavier2022" role="doc-biblioref">Xavier et al. 2022</a>)</span>. This data is available <a href="https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html#zonal-br-dwgd">here</a>, presenting climatological indicators from 1961 to March 2024 for all Brazilian municipalities. I propose here to compute the climatological normals and other climate aggregated indicators from this dataset of zonal statistics.</p>
-<p>In order to compute these indicators, I created an R package named <a href="https://rfsaldanha.github.io/climindi">{climindi}</a>. The package provides helper functions to compute climatological normals and other aggregated indicators in a <a href="https://www.tidyverse.org">tidy</a> way.</p>
-<section id="normal-indicators" class="level3">
-<h3 class="anchored" data-anchor-id="normal-indicators">Normal indicators</h3>
-<p>The {climindi} package computes the average, 10th and 90th percentile as climatological normals.</p>
+<section id="métodos" class="level2">
+<h2 class="anchored" data-anchor-id="métodos">Métodos</h2>
+<p>Uma normal climatológica pode ser calculada com dados de diferentes fontes, incluindo sensores de sensoriamento remoto e “médias de área ou pontos em bases em grade” <span class="citation" data-cites="wmoWMOGuidelinesCalculation2017">(<a href="#ref-wmoWMOGuidelinesCalculation2017" role="doc-biblioref">WMO 2017</a>)</span>. Algumas bases climatológicas em grade estão disponíveis para o território brasileiro, incluindo o ERA5-Land do Copernicus <span class="citation" data-cites="muñoz-sabater2021">(<a href="#ref-muñoz-sabater2021" role="doc-biblioref">Muñoz-Sabater et al. 2021</a>)</span> e a base BR-DWGD <span class="citation" data-cites="xavier2022">(<a href="#ref-xavier2022" role="doc-biblioref">Xavier et al. 2022</a>)</span>, oferecendo vários indicadores climatológicos em séries longas e com atualizações contínuas.</p>
+<p>Alguns métodos de pesquisa exigem que dados climáticos sejam agregados nas mesmas unidades espaciais e temporais de outros dados usados em modelos estatísticos, procedimento comum em estudos de epidemiologia e economia. Para lidar com essa necessidade, dados espaciais em grade podem ser agregados usando <em>estatísticas zonais</em> <span class="citation" data-cites="saldanhaZonalStatisticsDatasets2024">(<a href="#ref-saldanhaZonalStatisticsDatasets2024" role="doc-biblioref">Saldanha et al. 2024</a>)</span>.</p>
+<p>As bases atualizadas de estatísticas zonais climáticas do ERA5-Land para municípios brasileiros foram usadas para calcular normais climatológicas e indicadores mensais.</p>
+<p>Para isso, foi criado um pacote R chamado <a href="https://rfsaldanha.github.io/climindi">{climindi}</a>. O pacote fornece funções auxiliares para calcular normais climatológicas e outros indicadores agregados de forma <a href="https://www.tidyverse.org">tidy</a>.</p>
+<section id="indicadores-normais" class="level3">
+<h3 class="anchored" data-anchor-id="indicadores-normais">Indicadores normais</h3>
+<p>O pacote {climindi} calcula média, percentil 10 e percentil 90 como normais climatológicas.</p>
 </section>
-<section id="aggregated-indicators" class="level3">
-<h3 class="anchored" data-anchor-id="aggregated-indicators">Aggregated indicators</h3>
-<p>The {climindi} package present functions to compute the following statistics for time-aggregated data: count of data points, average, median, standard deviation, standard error, maximum and minimum values, the 10th, 25th, 75th and 90th percentiles, and indicator-specific indicators, listed bellow.</p>
+<section id="indicadores-agregados" class="level3">
+<h3 class="anchored" data-anchor-id="indicadores-agregados">Indicadores agregados</h3>
+<p>O pacote {climindi} apresenta funções para calcular as seguintes estatísticas para dados agregados no tempo: contagem de pontos, média, mediana, desvio padrão, erro padrão, valores máximo e mínimo, percentis 10, 25, 75 e 90, além de indicadores específicos por variável, listados abaixo.</p>
 <ul>
-<li>Precipitation
+<li>Precipitação
 <ul>
-<li>Rain spells: count of rain spells occurrences, with 3 and 5 or more consecutive days with rain above the climatological normal average value</li>
-<li>Count of days with precipitation above 1mm, 5mm, 10mm, 50mm, and 100mm</li>
-<li>Count of sequences of 3 days, 5 days, 10 days, 15 days, 20 days, and 25 days or more without precipitation</li>
+<li>Períodos chuvosos: contagem de ocorrências com 3 e 5 ou mais dias consecutivos com chuva acima do valor médio da normal climatológica</li>
+<li>Contagem de dias com precipitação acima de 1mm, 5mm, 10mm, 50mm e 100mm</li>
+<li>Contagem de sequências de 3, 5, 10, 15, 20 e 25 dias ou mais sem precipitação</li>
 </ul></li>
-<li>Maximum temperature
+<li>Temperatura máxima
 <ul>
-<li>Heat waves: Count of heat waves occurrences, with 3 and 5 or more consecutive days with maximum temperature above the climatological normal value plus 5 Celsius degrees</li>
-<li>Hot days: count of warm days, when the maximum temperature is above the normal 90th percentile</li>
-<li>Count of days with temperatures above or equal to 25, 30, 35, and 40 Celsius degrees</li>
+<li>Ondas de calor: contagem de ocorrências com 3 e 5 ou mais dias consecutivos com temperatura máxima acima da normal climatológica mais 5 graus Celsius</li>
+<li>Dias quentes: contagem de dias em que a temperatura máxima está acima do percentil 90 da normal</li>
+<li>Contagem de dias com temperaturas maiores ou iguais a 25, 30, 35 e 40 graus Celsius</li>
 </ul></li>
-<li>Minimum temperature
+<li>Temperatura mínima
 <ul>
-<li>Cold spells: count of cold spells occurrences, with 3 and 5 or more consecutive days with minimum temperature bellow the climatological normal value minus 5 Celsius degrees</li>
-<li>Cold days: count of cold days, when the minimum temperature is bellow the normal 10th percentile</li>
-<li>Count of days with temperatures bellow or equal to 0, 5, 10, 15, and 20 Celsius degrees</li>
+<li>Ondas de frio: contagem de ocorrências com 3 e 5 ou mais dias consecutivos com temperatura mínima abaixo da normal climatológica menos 5 graus Celsius</li>
+<li>Dias frios: contagem de dias em que a temperatura mínima está abaixo do percentil 10 da normal</li>
+<li>Contagem de dias com temperaturas menores ou iguais a 0, 5, 10, 15 e 20 graus Celsius</li>
 </ul></li>
-<li>Relative humidity
+<li>Umidade relativa
 <ul>
-<li>Count of dry spells occurrences, with 3 and 5 or more consecutive days with relative humidity bellow the climatological normal value minus 10 percent</li>
-<li>Count of wet spells occurrences, with 3 and 5 or more consecutive days with relative humidity above the climatological normal value plus 10 percent</li>
-<li>Count of dry days, when the relative humidity is bellow the normal 10th percentile</li>
-<li>Count of wet days, when the relative humidity is above the normal 90th percentile</li>
-<li>Count of days with relative humidity between 21% and 30% (Attention level)</li>
-<li>Count of days with relative humidity between 12% and 20% (Alert level)</li>
-<li>Count of days with relative humidity bellow 12% (Emergence level)</li>
+<li>Contagem de ocorrências de períodos secos com 3 e 5 ou mais dias consecutivos com umidade relativa abaixo da normal climatológica menos 10%</li>
+<li>Contagem de ocorrências de períodos úmidos com 3 e 5 ou mais dias consecutivos com umidade relativa acima da normal climatológica mais 10%</li>
+<li>Contagem de dias secos, quando a umidade relativa está abaixo do percentil 10 da normal</li>
+<li>Contagem de dias úmidos, quando a umidade relativa está acima do percentil 90 da normal</li>
+<li>Contagem de dias com umidade relativa entre 21% e 30% (nível de atenção)</li>
+<li>Contagem de dias com umidade relativa entre 12% e 20% (nível de alerta)</li>
+<li>Contagem de dias com umidade relativa abaixo de 12% (nível de emergência)</li>
 </ul></li>
-<li>Wind speed
+<li>Velocidade do vento
 <ul>
-<li>Count of sequences of 3 and 5 days or more with wind speed bellow the climatological average normal</li>
-<li>Count of sequences of 3 and 5 days or more with wind speed above the climatological average normal</li>
+<li>Contagem de sequências de 3 e 5 dias ou mais com velocidade do vento abaixo da normal climatológica média</li>
+<li>Contagem de sequências de 3 e 5 dias ou mais com velocidade do vento acima da normal climatológica média</li>
 </ul></li>
-<li>Evapotranspirations
+<li>Evapotranspiração
 <ul>
-<li>Count of sequences of 3 and 5 days or more with evapotranspirations bellow the climatological average normal</li>
-<li>Count of sequences of 3 and 5 days or more with evapotranspirations above the climatological average normal</li>
+<li>Contagem de sequências de 3 e 5 dias ou mais com evapotranspiração abaixo da normal climatológica média</li>
+<li>Contagem de sequências de 3 e 5 dias ou mais com evapotranspiração acima da normal climatológica média</li>
 </ul></li>
-<li>Solar radiation
+<li>Radiação solar
 <ul>
-<li>Count of sequences of 3 and 5 days or more with solar radiation bellow the climatological normal</li>
-<li>Count of sequences of 3 and 5 days or more with solar radiation above the climatological normal</li>
+<li>Contagem de sequências de 3 e 5 dias ou mais com radiação solar abaixo da normal climatológica</li>
+<li>Contagem de sequências de 3 e 5 dias ou mais com radiação solar acima da normal climatológica</li>
 </ul></li>
 </ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Importante
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>As funções do pacote precisam dos dados nas unidades corretas. Certifique-se de que seus dados estejam na unidade correta antes de executar as funções.</p>
+</div>
+</div>
 </section>
-<section id="data-source" class="level3">
-<h3 class="anchored" data-anchor-id="data-source">Data source</h3>
-<p>The zonal statistics for the Brazilian municipalities computed with the BR-DWGD project is described <a href="https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html#zonal-br-dwgd">here</a>. We can use the <a href="https://rfsaldanha.github.io/zendown/">{zendown}</a> package to download the data files directly from from Zenodo.</p>
+<section id="fonte-dos-dados" class="level3">
+<h3 class="anchored" data-anchor-id="fonte-dos-dados">Fonte dos dados</h3>
+<p>As estatísticas zonais para municípios brasileiros calculadas com o ERA5-Land do Copernicus estão descritas <a href="https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html#zonal-era5-land">aqui</a>. Podemos usar o pacote <a href="https://rfsaldanha.github.io/zendown/">{zendown}</a> para baixar os arquivos diretamente do Zenodo.</p>
+<p>Usaremos os dados de 1961 a 1990 para calcular as normais climatológicas e os dados de 1991 a 2024 para calcular indicadores climatológicos mensais.</p>
 </section>
-<section id="packages" class="level3">
-<h3 class="anchored" data-anchor-id="packages">Packages</h3>
+<section id="pacotes" class="level3">
+<h3 class="anchored" data-anchor-id="pacotes">Pacotes</h3>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(arrow)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(climindi) <span class="co"># http://rfsaldanha.github.io/climindi/</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(zendown) <span class="co"># https://rfsaldanha.github.io/zendown/</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(zendown) <span class="co"># https://rfsaldanha.github.io/zendown/</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -356,32 +371,40 @@ Tip
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Warning
+Aviso
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>To perform those computations, I needed to increase the envinroment variable <code>R_MAX_VSIZE</code>, as explained <a href="https://stackoverflow.com/questions/51248293/error-vector-memory-exhausted-limit-reached-r-3-5-0-macos">here</a>.</p>
+<p>Para realizar esses cálculos, precisei aumentar a variável de ambiente <code>R_MAX_VSIZE</code> para 100 GB, conforme explicado <a href="https://stackoverflow.com/questions/51248293/error-vector-memory-exhausted-limit-reached-r-3-5-0-macos">aqui</a>.</p>
 </div>
 </div>
 </section>
-<section id="precipitation-mm" class="level3">
-<h3 class="anchored" data-anchor-id="precipitation-mm">Precipitation (mm)</h3>
-<section id="data" class="level4">
-<h4 class="anchored" data-anchor-id="data">Data</h4>
+<section id="precipitação-mm" class="level3">
+<h3 class="anchored" data-anchor-id="precipitação-mm">Precipitação (mm)</h3>
+<section id="dados" class="level4">
+<h4 class="anchored" data-anchor-id="dados">Dados</h4>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pr_data <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">13906834</span>, <span class="st">"pr_3.2.3.parquet"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"pr_3.2.3_mean"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&gt;=</span> <span class="fu">as.Date</span>(<span class="st">"1961-01-01"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&lt;=</span> <span class="fu">as.Date</span>(<span class="st">"2023-12-31"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>name) <span class="sc">|&gt;</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>prec_1950_2022 <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">10036212</span>, <span class="st">"total_precipitation_sum.parquet"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>prec_2023 <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">10947952</span>, <span class="st">"total_precipitation_sum.parquet"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>prec_2024 <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">15748125</span>, <span class="st">"total_precipitation_sum.parquet"</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>prec_data <span class="ot">&lt;-</span> <span class="fu">open_dataset</span>(<span class="at">sources =</span> <span class="fu">c</span>(prec_1950_2022, prec_2023, prec_2024)) <span class="sc">|&gt;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Average precipitation</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"total_precipitation_sum_mean"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Time filter</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&gt;=</span> <span class="fu">as.Date</span>(<span class="st">"1961-01-01"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&lt;=</span> <span class="fu">as.Date</span>(<span class="st">"2024-12-31"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Unit conversion from m to mm</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">value =</span> <span class="fu">round</span>(value <span class="sc">*</span> <span class="dv">1000</span>, <span class="at">digits =</span> <span class="dv">2</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>name) <span class="sc">|&gt;</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(code_muni, date) <span class="sc">|&gt;</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="normal" class="level4">
-<h4 class="anchored" data-anchor-id="normal">Normal</h4>
+<section id="normal-climatológica" class="level4">
+<h4 class="anchored" data-anchor-id="normal-climatológica">Normal climatológica</h4>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>pr_normal <span class="ot">&lt;-</span> pr_data <span class="sc">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>prec_normal <span class="ot">&lt;-</span> prec_data <span class="sc">|&gt;</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Identify month</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">month =</span> <span class="fu">month</span>(date)) <span class="sc">|&gt;</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Group by id variable and month</span></span>
@@ -394,13 +417,13 @@ Warning
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">year_end =</span> <span class="dv">1990</span></span>
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Ungroup</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="indicators" class="level4">
-<h4 class="anchored" data-anchor-id="indicators">Indicators</h4>
+<section id="indicadores-climatológicos" class="level4">
+<h4 class="anchored" data-anchor-id="indicadores-climatológicos">Indicadores climatológicos</h4>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>pr_indi <span class="ot">&lt;-</span> pr_data <span class="sc">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>prec_indi <span class="ot">&lt;-</span> prec_data <span class="sc">|&gt;</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Identify year</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">year</span>(date)) <span class="sc">|&gt;</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Identify month</span></span>
@@ -412,40 +435,48 @@ Warning
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Compute precipitation indicators</span></span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_precipitation</span>(</span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">value_var =</span> value,</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">normals_df =</span> pr_normal</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">normals_df =</span> prec_normal</span>
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
 <span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Ungroup</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="export" class="level4">
-<h4 class="anchored" data-anchor-id="export">Export</h4>
+<section id="exportação" class="level4">
+<h4 class="anchored" data-anchor-id="exportação">Exportação</h4>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write_parquet</span>(<span class="at">x =</span> pr_normal, <span class="at">sink =</span> <span class="st">"pr_normal.parquet"</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv2</span>(<span class="at">x =</span> pr_normal, <span class="at">file =</span> <span class="st">"pr_normal.csv"</span>)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">write_parquet</span>(<span class="at">x =</span> pr_indi, <span class="at">sink =</span> <span class="st">"pr_indi.parquet"</span>)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv2</span>(<span class="at">x =</span> pr_indi, <span class="at">file =</span> <span class="st">"pr_indi.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write_parquet</span>(<span class="at">x =</span> prec_normal, <span class="at">sink =</span> <span class="st">"prec_normal.parquet"</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv2</span>(<span class="at">x =</span> prec_normal, <span class="at">file =</span> <span class="st">"prec_normal.csv"</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">write_parquet</span>(<span class="at">x =</span> prec_indi, <span class="at">sink =</span> <span class="st">"prec_indi.parquet"</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv2</span>(<span class="at">x =</span> prec_indi, <span class="at">file =</span> <span class="st">"prec_indi.csv"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 </section>
-<section id="evapotranspiration-mm" class="level3">
-<h3 class="anchored" data-anchor-id="evapotranspiration-mm">Evapotranspiration (mm)</h3>
-<section id="data-1" class="level4">
-<h4 class="anchored" data-anchor-id="data-1">Data</h4>
+<section id="temperatura-máxima-c" class="level3">
+<h3 class="anchored" data-anchor-id="temperatura-máxima-c">Temperatura máxima (°C)</h3>
+<section id="dados-1" class="level4">
+<h4 class="anchored" data-anchor-id="dados-1">Dados</h4>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>eto_data <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">13906834</span>, <span class="st">"ETo_3.2.3.parquet"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"ETo_3.2.3_mean"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&gt;=</span> <span class="fu">as.Date</span>(<span class="st">"1961-01-01"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&lt;=</span> <span class="fu">as.Date</span>(<span class="st">"2023-12-31"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>name) <span class="sc">|&gt;</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>tmax_1950_2022 <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">10036212</span>, <span class="st">"2m_temperature_max.parquet"</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>tmax_2023 <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">10947952</span>, <span class="st">"2m_temperature_max.parquet"</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>tmax_2024 <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">15748125</span>, <span class="st">"2m_temperature_max.parquet"</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>tmax_data <span class="ot">&lt;-</span> <span class="fu">open_dataset</span>(<span class="at">sources =</span> <span class="fu">c</span>(tmax_1950_2022, tmax_2023, tmax_2024)) <span class="sc">|&gt;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Average maximum temperature</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"2m_temperature_max_mean"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Time filter</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&gt;=</span> <span class="fu">as.Date</span>(<span class="st">"1961-01-01"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&lt;=</span> <span class="fu">as.Date</span>(<span class="st">"2024-12-31"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Unit conversion form Kelvin to graus Celsius</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">value =</span> <span class="fu">round</span>(value <span class="sc">-</span> <span class="fl">273.15</span>, <span class="at">digits =</span> <span class="dv">2</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>name) <span class="sc">|&gt;</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(code_muni, date) <span class="sc">|&gt;</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="normal-1" class="level4">
-<h4 class="anchored" data-anchor-id="normal-1">Normal</h4>
+<section id="normal-climatológica-1" class="level4">
+<h4 class="anchored" data-anchor-id="normal-climatológica-1">Normal climatológica</h4>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>eto_normal <span class="ot">&lt;-</span> eto_data <span class="sc">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>tmax_normal <span class="ot">&lt;-</span> tmax_data <span class="sc">|&gt;</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Identify month</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">month =</span> <span class="fu">month</span>(date)) <span class="sc">|&gt;</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Group by id variable and month</span></span>
@@ -458,13 +489,13 @@ Warning
 <span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">year_end =</span> <span class="dv">1990</span></span>
 <span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
 <span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Ungroup</span></span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="indicators-1" class="level4">
-<h4 class="anchored" data-anchor-id="indicators-1">Indicators</h4>
+<section id="indicadores-climatológicos-1" class="level4">
+<h4 class="anchored" data-anchor-id="indicadores-climatológicos-1">Indicadores climatológicos</h4>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>eto_indi <span class="ot">&lt;-</span> eto_data <span class="sc">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>tmax_indi <span class="ot">&lt;-</span> tmax_data <span class="sc">|&gt;</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Identify year</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">year</span>(date)) <span class="sc">|&gt;</span></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Identify month</span></span>
@@ -474,42 +505,50 @@ Warning
 <span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Group by id variable, year and month</span></span>
 <span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(code_muni, year, month) <span class="sc">|&gt;</span></span>
 <span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Compute precipitation indicators</span></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_evapotrapiration</span>(</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_temp_max</span>(</span>
 <span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">value_var =</span> value,</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">normals_df =</span> eto_normal</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">normals_df =</span> tmax_normal</span>
 <span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
 <span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Ungroup</span></span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="export-1" class="level4">
-<h4 class="anchored" data-anchor-id="export-1">Export</h4>
+<section id="exportação-1" class="level4">
+<h4 class="anchored" data-anchor-id="exportação-1">Exportação</h4>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write_parquet</span>(<span class="at">x =</span> eto_normal, <span class="at">sink =</span> <span class="st">"eto_normal.parquet"</span>)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv2</span>(<span class="at">x =</span> eto_normal, <span class="at">file =</span> <span class="st">"eto_normal.csv"</span>)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">write_parquet</span>(<span class="at">x =</span> eto_indi, <span class="at">sink =</span> <span class="st">"eto_indi.parquet"</span>)</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv2</span>(<span class="at">x =</span> eto_indi, <span class="at">file =</span> <span class="st">"eto_indi.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write_parquet</span>(<span class="at">x =</span> tmax_normal, <span class="at">sink =</span> <span class="st">"tmax_normal.parquet"</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv2</span>(<span class="at">x =</span> tmax_normal, <span class="at">file =</span> <span class="st">"tmax_normal.csv"</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">write_parquet</span>(<span class="at">x =</span> tmax_indi, <span class="at">sink =</span> <span class="st">"tmax_indi.parquet"</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv2</span>(<span class="at">x =</span> tmax_indi, <span class="at">file =</span> <span class="st">"tmax_indi.csv"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 </section>
-<section id="maximum-temperature-c" class="level3">
-<h3 class="anchored" data-anchor-id="maximum-temperature-c">Maximum temperature (°C)</h3>
-<section id="data-2" class="level4">
-<h4 class="anchored" data-anchor-id="data-2">Data</h4>
+<section id="temperatura-mínima-c" class="level3">
+<h3 class="anchored" data-anchor-id="temperatura-mínima-c">Temperatura mínima (°C)</h3>
+<section id="dados-2" class="level4">
+<h4 class="anchored" data-anchor-id="dados-2">Dados</h4>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>tmax_data <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">13906834</span>, <span class="st">"Tmax_3.2.3.parquet"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"Tmax_3.2.3_mean"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&gt;=</span> <span class="fu">as.Date</span>(<span class="st">"1961-01-01"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&lt;=</span> <span class="fu">as.Date</span>(<span class="st">"2023-12-31"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>name) <span class="sc">|&gt;</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>tmin_1950_2022 <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">10036212</span>, <span class="st">"2m_temperature_min.parquet"</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>tmin_2023 <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">10947952</span>, <span class="st">"2m_temperature_min.parquet"</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>tmin_2024 <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">15748125</span>, <span class="st">"2m_temperature_min.parquet"</span>)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>tmin_data <span class="ot">&lt;-</span> <span class="fu">open_dataset</span>(<span class="at">sources =</span> <span class="fu">c</span>(tmin_1950_2022, tmin_2023, tmin_2024)) <span class="sc">|&gt;</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Average minimum temperature</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"2m_temperature_min_mean"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Filter period</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&gt;=</span> <span class="fu">as.Date</span>(<span class="st">"1961-01-01"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&lt;=</span> <span class="fu">as.Date</span>(<span class="st">"2024-12-31"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Unit conversion</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">value =</span> <span class="fu">round</span>(value <span class="sc">-</span> <span class="fl">273.15</span>, <span class="at">digits =</span> <span class="dv">2</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>name) <span class="sc">|&gt;</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(code_muni, date) <span class="sc">|&gt;</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="normal-2" class="level4">
-<h4 class="anchored" data-anchor-id="normal-2">Normal</h4>
+<section id="normal-climatológica-2" class="level4">
+<h4 class="anchored" data-anchor-id="normal-climatológica-2">Normal climatológica</h4>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>tmax_normal <span class="ot">&lt;-</span> tmax_data <span class="sc">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>tmin_normal <span class="ot">&lt;-</span> tmin_data <span class="sc">|&gt;</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Identify month</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">month =</span> <span class="fu">month</span>(date)) <span class="sc">|&gt;</span></span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Group by id variable and month</span></span>
@@ -522,13 +561,13 @@ Warning
 <span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">year_end =</span> <span class="dv">1990</span></span>
 <span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
 <span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Ungroup</span></span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="indicators-2" class="level4">
-<h4 class="anchored" data-anchor-id="indicators-2">Indicators</h4>
+<section id="indicadores-climatológicos-2" class="level4">
+<h4 class="anchored" data-anchor-id="indicadores-climatológicos-2">Indicadores climatológicos</h4>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>tmax_indi <span class="ot">&lt;-</span> tmax_data <span class="sc">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>tmin_indi <span class="ot">&lt;-</span> tmin_data <span class="sc">|&gt;</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Identify year</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">year</span>(date)) <span class="sc">|&gt;</span></span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Identify month</span></span>
@@ -538,42 +577,71 @@ Warning
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Group by id variable, year and month</span></span>
 <span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(code_muni, year, month) <span class="sc">|&gt;</span></span>
 <span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Compute precipitation indicators</span></span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_temp_max</span>(</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_temp_min</span>(</span>
 <span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">value_var =</span> value,</span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">normals_df =</span> tmax_normal</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">normals_df =</span> tmin_normal</span>
 <span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
 <span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Ungroup</span></span>
-<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="export-2" class="level4">
-<h4 class="anchored" data-anchor-id="export-2">Export</h4>
+<section id="exportação-2" class="level4">
+<h4 class="anchored" data-anchor-id="exportação-2">Exportação</h4>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write_parquet</span>(<span class="at">x =</span> tmax_normal, <span class="at">sink =</span> <span class="st">"tmax_normal.parquet"</span>)</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv2</span>(<span class="at">x =</span> tmax_normal, <span class="at">file =</span> <span class="st">"tmax_normal.csv"</span>)</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">write_parquet</span>(<span class="at">x =</span> tmax_indi, <span class="at">sink =</span> <span class="st">"tmax_indi.parquet"</span>)</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv2</span>(<span class="at">x =</span> tmax_indi, <span class="at">file =</span> <span class="st">"tmax_indi.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write_parquet</span>(<span class="at">x =</span> tmin_normal, <span class="at">sink =</span> <span class="st">"tmin_normal.parquet"</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv2</span>(<span class="at">x =</span> tmin_normal, <span class="at">file =</span> <span class="st">"tmin_normal.csv"</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">write_parquet</span>(<span class="at">x =</span> tmin_indi, <span class="at">sink =</span> <span class="st">"tmin_indi.parquet"</span>)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv2</span>(<span class="at">x =</span> tmin_indi, <span class="at">file =</span> <span class="st">"tmin_indi.csv"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 </section>
-<section id="minimum-temperature-c" class="level3">
-<h3 class="anchored" data-anchor-id="minimum-temperature-c">Minimum temperature (°C)</h3>
-<section id="data-3" class="level4">
-<h4 class="anchored" data-anchor-id="data-3">Data</h4>
+<section id="velocidade-do-vento-a-2-m-de-altura-ms" class="level3">
+<h3 class="anchored" data-anchor-id="velocidade-do-vento-a-2-m-de-altura-ms">Velocidade do vento a 2 m de altura (m/s)</h3>
+<section id="dados-3" class="level4">
+<h4 class="anchored" data-anchor-id="dados-3">Dados</h4>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>tmin_data <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">13906834</span>, <span class="st">"Tmin_3.2.3.parquet"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"Tmin_3.2.3_mean"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&gt;=</span> <span class="fu">as.Date</span>(<span class="st">"1961-01-01"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&lt;=</span> <span class="fu">as.Date</span>(<span class="st">"2023-12-31"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>name) <span class="sc">|&gt;</span></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>wu_1950_2022 <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">10036212</span>, <span class="st">"10m_u_component_of_wind_mean.parquet"</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>wu_2023 <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">10947952</span>, <span class="st">"10m_u_component_of_wind_mean.parquet"</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>wu_2024 <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">15748125</span>, <span class="st">"10m_u_component_of_wind_mean.parquet"</span>)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>wv_1950_2022 <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">10036212</span>, <span class="st">"10m_v_component_of_wind_mean.parquet"</span>)</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>wv_2023 <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">10947952</span>, <span class="st">"10m_v_component_of_wind_mean.parquet"</span>)</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>wv_2024 <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">15748125</span>, <span class="st">"10m_v_component_of_wind_mean.parquet"</span>)</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>wu_data <span class="ot">&lt;-</span> <span class="fu">open_dataset</span>(<span class="at">sources =</span> <span class="fu">c</span>(wu_1950_2022, wu_2023, wu_2024)) <span class="sc">|&gt;</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Average minimum temperature</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"10m_u_component_of_wind_mean_mean"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Filter period</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&gt;=</span> <span class="fu">as.Date</span>(<span class="st">"1961-01-01"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&lt;=</span> <span class="fu">as.Date</span>(<span class="st">"2024-12-31"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>name) <span class="sc">|&gt;</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(code_muni, date) <span class="sc">|&gt;</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>wv_data <span class="ot">&lt;-</span> <span class="fu">open_dataset</span>(<span class="at">sources =</span> <span class="fu">c</span>(wv_1950_2022, wv_2023, wv_2024)) <span class="sc">|&gt;</span></span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Average minimum temperature</span></span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"10m_u_component_of_wind_mean_mean"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Filter period</span></span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&gt;=</span> <span class="fu">as.Date</span>(<span class="st">"1961-01-01"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&lt;=</span> <span class="fu">as.Date</span>(<span class="st">"2024-12-31"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>name) <span class="sc">|&gt;</span></span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(code_muni, date) <span class="sc">|&gt;</span></span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>u2_data <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">13906834</span>, <span class="st">"u2_3.2.3.parquet"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
+<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"u2_3.2.3_mean"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&gt;=</span> <span class="fu">as.Date</span>(<span class="st">"1961-01-01"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&lt;=</span> <span class="fu">as.Date</span>(<span class="st">"2024-12-31"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>name) <span class="sc">|&gt;</span></span>
+<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="normal-3" class="level4">
-<h4 class="anchored" data-anchor-id="normal-3">Normal</h4>
+<section id="normal-climatológica-3" class="level4">
+<h4 class="anchored" data-anchor-id="normal-climatológica-3">Normal climatológica</h4>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>tmin_normal <span class="ot">&lt;-</span> tmin_data <span class="sc">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>u2_normal <span class="ot">&lt;-</span> u2_data <span class="sc">|&gt;</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Identify month</span></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">month =</span> <span class="fu">month</span>(date)) <span class="sc">|&gt;</span></span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Group by id variable and month</span></span>
@@ -586,13 +654,13 @@ Warning
 <span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">year_end =</span> <span class="dv">1990</span></span>
 <span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
 <span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Ungroup</span></span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="indicators-3" class="level4">
-<h4 class="anchored" data-anchor-id="indicators-3">Indicators</h4>
+<section id="indicadores-climatológicos-3" class="level4">
+<h4 class="anchored" data-anchor-id="indicadores-climatológicos-3">Indicadores climatológicos</h4>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>tmin_indi <span class="ot">&lt;-</span> tmin_data <span class="sc">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>u2_indi <span class="ot">&lt;-</span> u2_data <span class="sc">|&gt;</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Identify year</span></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">year</span>(date)) <span class="sc">|&gt;</span></span>
 <span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Identify month</span></span>
@@ -602,42 +670,42 @@ Warning
 <span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Group by id variable, year and month</span></span>
 <span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(code_muni, year, month) <span class="sc">|&gt;</span></span>
 <span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Compute precipitation indicators</span></span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_temp_min</span>(</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_windspeed</span>(</span>
 <span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">value_var =</span> value,</span>
-<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">normals_df =</span> tmin_normal</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">normals_df =</span> u2_normal</span>
 <span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
 <span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Ungroup</span></span>
-<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="export-3" class="level4">
-<h4 class="anchored" data-anchor-id="export-3">Export</h4>
+<section id="exportação-3" class="level4">
+<h4 class="anchored" data-anchor-id="exportação-3">Exportação</h4>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write_parquet</span>(<span class="at">x =</span> tmin_normal, <span class="at">sink =</span> <span class="st">"tmin_normal.parquet"</span>)</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv2</span>(<span class="at">x =</span> tmin_normal, <span class="at">file =</span> <span class="st">"tmin_normal.csv"</span>)</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">write_parquet</span>(<span class="at">x =</span> tmin_indi, <span class="at">sink =</span> <span class="st">"tmin_indi.parquet"</span>)</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv2</span>(<span class="at">x =</span> tmin_indi, <span class="at">file =</span> <span class="st">"tmin_indi.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write_parquet</span>(<span class="at">x =</span> u2_normal, <span class="at">sink =</span> <span class="st">"u2_normal.parquet"</span>)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv2</span>(<span class="at">x =</span> u2_normal, <span class="at">file =</span> <span class="st">"u2_normal.csv"</span>)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">write_parquet</span>(<span class="at">x =</span> u2_indi, <span class="at">sink =</span> <span class="st">"u2_indi.parquet"</span>)</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv2</span>(<span class="at">x =</span> u2_indi, <span class="at">file =</span> <span class="st">"u2_indi.csv"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 </section>
-<section id="solar-radiation-mjm-2" class="level3">
-<h3 class="anchored" data-anchor-id="solar-radiation-mjm-2">Solar radiation (MJm-2)</h3>
-<section id="data-4" class="level4">
-<h4 class="anchored" data-anchor-id="data-4">Data</h4>
+<section id="umidade-relativa" class="level3">
+<h3 class="anchored" data-anchor-id="umidade-relativa">Umidade relativa (%)</h3>
+<section id="dados-4" class="level4">
+<h4 class="anchored" data-anchor-id="dados-4">Dados</h4>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>rs_data <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">13906834</span>, <span class="st">"Rs_3.2.3.parquet"</span>) <span class="sc">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>rh_data <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">13906834</span>, <span class="st">"RH_3.2.3.parquet"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"Rs_3.2.3_mean"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"RH_3.2.3_mean"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&gt;=</span> <span class="fu">as.Date</span>(<span class="st">"1961-01-01"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&lt;=</span> <span class="fu">as.Date</span>(<span class="st">"2023-12-31"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&lt;=</span> <span class="fu">as.Date</span>(<span class="st">"2024-12-31"</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>name) <span class="sc">|&gt;</span></span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="normal-4" class="level4">
-<h4 class="anchored" data-anchor-id="normal-4">Normal</h4>
+<section id="normal" class="level4">
+<h4 class="anchored" data-anchor-id="normal">Normal</h4>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>rs_normal <span class="ot">&lt;-</span> rs_data <span class="sc">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>rh_normal <span class="ot">&lt;-</span> rh_data <span class="sc">|&gt;</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Identify month</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">month =</span> <span class="fu">month</span>(date)) <span class="sc">|&gt;</span></span>
 <span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Group by id variable and month</span></span>
@@ -650,13 +718,13 @@ Warning
 <span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">year_end =</span> <span class="dv">1990</span></span>
 <span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
 <span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Ungroup</span></span>
-<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="indicators-4" class="level4">
-<h4 class="anchored" data-anchor-id="indicators-4">Indicators</h4>
+<section id="indicadores" class="level4">
+<h4 class="anchored" data-anchor-id="indicadores">Indicadores</h4>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>rs_indi <span class="ot">&lt;-</span> rs_data <span class="sc">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>rh_indi <span class="ot">&lt;-</span> rh_data <span class="sc">|&gt;</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Identify year</span></span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">year</span>(date)) <span class="sc">|&gt;</span></span>
 <span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Identify month</span></span>
@@ -666,254 +734,126 @@ Warning
 <span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Group by id variable, year and month</span></span>
 <span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(code_muni, year, month) <span class="sc">|&gt;</span></span>
 <span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Compute precipitation indicators</span></span>
-<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_solar_radiation</span>(</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_rel_humidity</span>(</span>
 <span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">value_var =</span> value,</span>
-<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">normals_df =</span> rs_normal</span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">normals_df =</span> rh_normal</span>
 <span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
 <span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Ungroup</span></span>
-<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="export-4" class="level4">
-<h4 class="anchored" data-anchor-id="export-4">Export</h4>
+<section id="exportação-4" class="level4">
+<h4 class="anchored" data-anchor-id="exportação-4">Exportação</h4>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write_parquet</span>(<span class="at">x =</span> rs_normal, <span class="at">sink =</span> <span class="st">"rs_normal.parquet"</span>)</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv2</span>(<span class="at">x =</span> rs_normal, <span class="at">file =</span> <span class="st">"rs_normal.csv"</span>)</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="fu">write_parquet</span>(<span class="at">x =</span> rs_indi, <span class="at">sink =</span> <span class="st">"rs_indi.parquet"</span>)</span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv2</span>(<span class="at">x =</span> rs_indi, <span class="at">file =</span> <span class="st">"rs_indi.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-</section>
-<section id="wind-speed-at-2m-height-ms" class="level3">
-<h3 class="anchored" data-anchor-id="wind-speed-at-2m-height-ms">Wind speed at 2m height (m/s)</h3>
-<section id="data-5" class="level4">
-<h4 class="anchored" data-anchor-id="data-5">Data</h4>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>u2_data <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">13906834</span>, <span class="st">"u2_3.2.3.parquet"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"u2_3.2.3_mean"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&gt;=</span> <span class="fu">as.Date</span>(<span class="st">"1961-01-01"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&lt;=</span> <span class="fu">as.Date</span>(<span class="st">"2023-12-31"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>name) <span class="sc">|&gt;</span></span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="normal-5" class="level4">
-<h4 class="anchored" data-anchor-id="normal-5">Normal</h4>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>u2_normal <span class="ot">&lt;-</span> u2_data <span class="sc">|&gt;</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Identify month</span></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">month =</span> <span class="fu">month</span>(date)) <span class="sc">|&gt;</span></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Group by id variable and month</span></span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(code_muni, month) <span class="sc">|&gt;</span></span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Compute normal</span></span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_normal</span>(</span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">date_var =</span> date,</span>
-<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">value_var =</span> value,</span>
-<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">year_start =</span> <span class="dv">1961</span>,</span>
-<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">year_end =</span> <span class="dv">1990</span></span>
-<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Ungroup</span></span>
-<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="indicators-5" class="level4">
-<h4 class="anchored" data-anchor-id="indicators-5">Indicators</h4>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>u2_indi <span class="ot">&lt;-</span> u2_data <span class="sc">|&gt;</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Identify year</span></span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">year</span>(date)) <span class="sc">|&gt;</span></span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Identify month</span></span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">month =</span> <span class="fu">month</span>(date)) <span class="sc">|&gt;</span></span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Filter year</span></span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">&gt;=</span> <span class="dv">1991</span>) <span class="sc">|&gt;</span></span>
-<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Group by id variable, year and month</span></span>
-<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(code_muni, year, month) <span class="sc">|&gt;</span></span>
-<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Compute precipitation indicators</span></span>
-<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_windspeed</span>(</span>
-<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">value_var =</span> value,</span>
-<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">normals_df =</span> u2_normal</span>
-<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Ungroup</span></span>
-<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="export-5" class="level4">
-<h4 class="anchored" data-anchor-id="export-5">Export</h4>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write_parquet</span>(<span class="at">x =</span> u2_normal, <span class="at">sink =</span> <span class="st">"u2_normal.parquet"</span>)</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv2</span>(<span class="at">x =</span> u2_normal, <span class="at">file =</span> <span class="st">"u2_normal.csv"</span>)</span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="fu">write_parquet</span>(<span class="at">x =</span> u2_indi, <span class="at">sink =</span> <span class="st">"u2_indi.parquet"</span>)</span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv2</span>(<span class="at">x =</span> u2_indi, <span class="at">file =</span> <span class="st">"u2_indi.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-</section>
-<section id="relative-humidity" class="level3">
-<h3 class="anchored" data-anchor-id="relative-humidity">Relative humidity (%)</h3>
-<section id="data-6" class="level4">
-<h4 class="anchored" data-anchor-id="data-6">Data</h4>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>rh_data <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">13906834</span>, <span class="st">"RH_3.2.3.parquet"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"RH_3.2.3_mean"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&gt;=</span> <span class="fu">as.Date</span>(<span class="st">"1961-01-01"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&lt;=</span> <span class="fu">as.Date</span>(<span class="st">"2023-12-31"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>name) <span class="sc">|&gt;</span></span>
-<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="normal-6" class="level4">
-<h4 class="anchored" data-anchor-id="normal-6">Normal</h4>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>rh_normal <span class="ot">&lt;-</span> rh_data <span class="sc">|&gt;</span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Identify month</span></span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">month =</span> <span class="fu">month</span>(date)) <span class="sc">|&gt;</span></span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Group by id variable and month</span></span>
-<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(code_muni, month) <span class="sc">|&gt;</span></span>
-<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Compute normal</span></span>
-<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_normal</span>(</span>
-<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">date_var =</span> date,</span>
-<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">value_var =</span> value,</span>
-<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">year_start =</span> <span class="dv">1961</span>,</span>
-<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">year_end =</span> <span class="dv">1990</span></span>
-<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Ungroup</span></span>
-<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="indicators-6" class="level4">
-<h4 class="anchored" data-anchor-id="indicators-6">Indicators</h4>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>rh_indi <span class="ot">&lt;-</span> rh_data <span class="sc">|&gt;</span></span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Identify year</span></span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">year</span>(date)) <span class="sc">|&gt;</span></span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Identify month</span></span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">month =</span> <span class="fu">month</span>(date)) <span class="sc">|&gt;</span></span>
-<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Filter year</span></span>
-<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">&gt;=</span> <span class="dv">1991</span>) <span class="sc">|&gt;</span></span>
-<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Group by id variable, year and month</span></span>
-<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(code_muni, year, month) <span class="sc">|&gt;</span></span>
-<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Compute precipitation indicators</span></span>
-<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_rel_humidity</span>(</span>
-<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">value_var =</span> value,</span>
-<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">normals_df =</span> rh_normal</span>
-<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Ungroup</span></span>
-<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="export-6" class="level4">
-<h4 class="anchored" data-anchor-id="export-6">Export</h4>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write_parquet</span>(<span class="at">x =</span> rh_normal, <span class="at">sink =</span> <span class="st">"rh_normal.parquet"</span>)</span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv2</span>(<span class="at">x =</span> rh_normal, <span class="at">file =</span> <span class="st">"rh_normal.csv"</span>)</span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="fu">write_parquet</span>(<span class="at">x =</span> rh_indi, <span class="at">sink =</span> <span class="st">"rh_indi.parquet"</span>)</span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv2</span>(<span class="at">x =</span> rh_indi, <span class="at">file =</span> <span class="st">"rh_indi.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write_parquet</span>(<span class="at">x =</span> rh_normal, <span class="at">sink =</span> <span class="st">"rh_normal.parquet"</span>)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv2</span>(<span class="at">x =</span> rh_normal, <span class="at">file =</span> <span class="st">"rh_normal.csv"</span>)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="fu">write_parquet</span>(<span class="at">x =</span> rh_indi, <span class="at">sink =</span> <span class="st">"rh_indi.parquet"</span>)</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv2</span>(<span class="at">x =</span> rh_indi, <span class="at">file =</span> <span class="st">"rh_indi.csv"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 </section>
 </section>
 <section id="sec-download" class="level2">
-<h2 class="anchored" data-anchor-id="sec-download">Results and dataset download</h2>
-<p>The climatological normals and aggregated indicators of Brazilian municipalities can be downloaded from Zenodo on CSV and parquet formats. Click the link bellow to access and download the data.</p>
+<h2 class="anchored" data-anchor-id="sec-download">Resultados e base de dados</h2>
+<p>As normais climatológicas e os indicadores agregados dos municípios brasileiros podem ser baixados do Zenodo nos formatos CSV e parquet. Clique no link abaixo para acessar e baixar os dados.</p>
 <p><a href="https://doi.org/10.5281/zenodo.15519719"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.15519719.svg" class="img-fluid"></a></p>
-<p>You can also download the dataset directly from R, using the <a href="https://rfsaldanha.github.io/zendown/">{zendown}</a> package.</p>
-<p>Let’s check some results.</p>
-<section id="maximum-temperature-rio-de-janeiro-rj-2023" class="level3">
-<h3 class="anchored" data-anchor-id="maximum-temperature-rio-de-janeiro-rj-2023">Maximum temperature, Rio de Janeiro, RJ, 2023</h3>
-<section id="observed-and-normal" class="level4">
-<h4 class="anchored" data-anchor-id="observed-and-normal">Observed and normal</h4>
+<p>Também é possível baixar a base diretamente pelo R usando o pacote <a href="https://rfsaldanha.github.io/zendown/">{zendown}</a>.</p>
+<p>Vamos verificar alguns resultados.</p>
+<section id="temperatura-máxima-rio-de-janeiro-rj-2023" class="level3">
+<h3 class="anchored" data-anchor-id="temperatura-máxima-rio-de-janeiro-rj-2023">Temperatura máxima, Rio de Janeiro, RJ, 2023</h3>
+<section id="observado-e-normal" class="level4">
+<h4 class="anchored" data-anchor-id="observado-e-normal">Observado e normal</h4>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>tmax_data <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">13906834</span>, <span class="st">"Tmax_3.2.3.parquet"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"Tmax_3.2.3_mean"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">3304557</span>) <span class="sc">|&gt;</span></span>
-<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&gt;=</span> <span class="fu">as.Date</span>(<span class="st">"2023-01-01"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&lt;=</span> <span class="fu">as.Date</span>(<span class="st">"2023-12-31"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>name) <span class="sc">|&gt;</span></span>
-<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span>
-<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>tmax_normal <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">15519719</span>, <span class="st">"tmax_normal.parquet"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
-<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">3304557</span>) <span class="sc">|&gt;</span></span>
-<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>tmax_data <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">13906834</span>, <span class="st">"Tmax_3.2.3.parquet"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"Tmax_3.2.3_mean"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">3304557</span>) <span class="sc">|&gt;</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&gt;=</span> <span class="fu">as.Date</span>(<span class="st">"2023-01-01"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&lt;=</span> <span class="fu">as.Date</span>(<span class="st">"2023-12-31"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>name) <span class="sc">|&gt;</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>tmax_normal <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">15519719</span>, <span class="st">"tmax_normal.parquet"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">3304557</span>) <span class="sc">|&gt;</span></span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell preview-image">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>tmax_normal_exp <span class="ot">&lt;-</span> tmax_normal <span class="sc">|&gt;</span></span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">as_date</span>(<span class="fu">paste0</span>(<span class="st">"2023-"</span>, month, <span class="st">"-01"</span>))) <span class="sc">|&gt;</span></span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(month) <span class="sc">%&gt;%</span></span>
-<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expand</span>(</span>
-<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">date =</span> <span class="fu">seq.Date</span>(</span>
-<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>      <span class="fu">floor_date</span>(date, <span class="at">unit =</span> <span class="st">"month"</span>),</span>
-<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ceiling_date</span>(date, <span class="at">unit =</span> <span class="st">"month"</span>) <span class="sc">-</span> <span class="fu">days</span>(<span class="dv">1</span>),</span>
-<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">by =</span> <span class="st">"day"</span></span>
-<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>    normal_mean,</span>
-<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>    normal_p10,</span>
-<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>    normal_p90</span>
-<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">"normal_"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">substr</span>(name, <span class="dv">8</span>, <span class="dv">100</span>))</span>
-<span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-20"><a href="#cb31-20" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb31-21"><a href="#cb31-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> tmax_data, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value)) <span class="sc">+</span></span>
-<span id="cb31-22"><a href="#cb31-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> tmax_normal_exp, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value, <span class="at">color =</span> name)) <span class="sc">+</span></span>
-<span id="cb31-23"><a href="#cb31-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb31-24"><a href="#cb31-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb31-25"><a href="#cb31-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Maximum temperature and climatological normal"</span>,</span>
-<span id="cb31-26"><a href="#cb31-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Rio de Janeiro, RJ"</span>,</span>
-<span id="cb31-27"><a href="#cb31-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Normal (1961-1990)"</span>,</span>
-<span id="cb31-28"><a href="#cb31-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Date"</span>,</span>
-<span id="cb31-29"><a href="#cb31-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Celsius degrees"</span></span>
-<span id="cb31-30"><a href="#cb31-30" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb31-31"><a href="#cb31-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>, <span class="at">legend.direction =</span> <span class="st">"horizontal"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>tmax_normal_exp <span class="ot">&lt;-</span> tmax_normal <span class="sc">|&gt;</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">as_date</span>(<span class="fu">paste0</span>(<span class="st">"2023-"</span>, month, <span class="st">"-01"</span>))) <span class="sc">|&gt;</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(month) <span class="sc">%&gt;%</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expand</span>(</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">date =</span> <span class="fu">seq.Date</span>(</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>      <span class="fu">floor_date</span>(date, <span class="at">unit =</span> <span class="st">"month"</span>),</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ceiling_date</span>(date, <span class="at">unit =</span> <span class="st">"month"</span>) <span class="sc">-</span> <span class="fu">days</span>(<span class="dv">1</span>),</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">by =</span> <span class="st">"day"</span></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>    normal_mean,</span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>    normal_p10,</span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>    normal_p90</span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">"normal_"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">substr</span>(name, <span class="dv">8</span>, <span class="dv">100</span>))</span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> tmax_data, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value)) <span class="sc">+</span></span>
+<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> tmax_normal_exp, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value, <span class="at">color =</span> name)) <span class="sc">+</span></span>
+<span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb23-24"><a href="#cb23-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb23-25"><a href="#cb23-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Temperatura máxima e normal climatológica"</span>,</span>
+<span id="cb23-26"><a href="#cb23-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Rio de Janeiro, RJ"</span>,</span>
+<span id="cb23-27"><a href="#cb23-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Normal (1961-1990)"</span>,</span>
+<span id="cb23-28"><a href="#cb23-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Data"</span>,</span>
+<span id="cb23-29"><a href="#cb23-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"graus Celsius"</span></span>
+<span id="cb23-30"><a href="#cb23-30" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb23-31"><a href="#cb23-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>, <span class="at">legend.direction =</span> <span class="st">"horizontal"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="brazil_climate_normals_indicators_files/figure-html/unnamed-chunk-31-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="brazil_climate_normals_indicators_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="indicators-7" class="level4">
-<h4 class="anchored" data-anchor-id="indicators-7">Indicators</h4>
+<section id="indicadores-1" class="level4">
+<h4 class="anchored" data-anchor-id="indicadores-1">Indicadores</h4>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="fu">zen_file</span>(<span class="dv">15519719</span>, <span class="st">"tmax_indi.parquet"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
-<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">3304557</span>) <span class="sc">|&gt;</span></span>
-<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2023</span>) <span class="sc">|&gt;</span></span>
-<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>code_muni, <span class="sc">-</span>year) <span class="sc">|&gt;</span></span>
-<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>() <span class="sc">|&gt;</span></span>
-<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span></span>
-<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_number</span>(</span>
-<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">where</span>(is.double),</span>
-<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">decimals =</span> <span class="dv">2</span>,</span>
-<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">use_seps =</span> <span class="cn">FALSE</span></span>
-<span id="cb32-14"><a href="#cb32-14" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="fu">zen_file</span>(<span class="dv">15519719</span>, <span class="st">"tmax_indi.parquet"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">3304557</span>) <span class="sc">|&gt;</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2023</span>) <span class="sc">|&gt;</span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>code_muni, <span class="sc">-</span>year) <span class="sc">|&gt;</span></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>() <span class="sc">|&gt;</span></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_number</span>(</span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">where</span>(is.double),</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">decimals =</span> <span class="dv">2</span>,</span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">use_seps =</span> <span class="cn">FALSE</span></span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="zjwjrrmfed" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#zjwjrrmfed table {
+<div id="ujsjvcexup" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ujsjvcexup table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#zjwjrrmfed thead, #zjwjrrmfed tbody, #zjwjrrmfed tfoot, #zjwjrrmfed tr, #zjwjrrmfed td, #zjwjrrmfed th {
+#ujsjvcexup thead, #ujsjvcexup tbody, #ujsjvcexup tfoot, #ujsjvcexup tr, #ujsjvcexup td, #ujsjvcexup th {
   border-style: none;
 }
 
-#zjwjrrmfed p {
+#ujsjvcexup p {
   margin: 0;
   padding: 0;
 }
 
-#zjwjrrmfed .gt_table {
+#ujsjvcexup .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -939,12 +879,12 @@ Warning
   border-left-color: #D3D3D3;
 }
 
-#zjwjrrmfed .gt_caption {
+#ujsjvcexup .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#zjwjrrmfed .gt_title {
+#ujsjvcexup .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -956,7 +896,7 @@ Warning
   border-bottom-width: 0;
 }
 
-#zjwjrrmfed .gt_subtitle {
+#ujsjvcexup .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -968,7 +908,7 @@ Warning
   border-top-width: 0;
 }
 
-#zjwjrrmfed .gt_heading {
+#ujsjvcexup .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -980,13 +920,13 @@ Warning
   border-right-color: #D3D3D3;
 }
 
-#zjwjrrmfed .gt_bottom_border {
+#ujsjvcexup .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#zjwjrrmfed .gt_col_headings {
+#ujsjvcexup .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1001,7 +941,7 @@ Warning
   border-right-color: #D3D3D3;
 }
 
-#zjwjrrmfed .gt_col_heading {
+#ujsjvcexup .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1021,7 +961,7 @@ Warning
   overflow-x: hidden;
 }
 
-#zjwjrrmfed .gt_column_spanner_outer {
+#ujsjvcexup .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1033,15 +973,15 @@ Warning
   padding-right: 4px;
 }
 
-#zjwjrrmfed .gt_column_spanner_outer:first-child {
+#ujsjvcexup .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#zjwjrrmfed .gt_column_spanner_outer:last-child {
+#ujsjvcexup .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#zjwjrrmfed .gt_column_spanner {
+#ujsjvcexup .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1053,11 +993,11 @@ Warning
   width: 100%;
 }
 
-#zjwjrrmfed .gt_spanner_row {
+#ujsjvcexup .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#zjwjrrmfed .gt_group_heading {
+#ujsjvcexup .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1083,7 +1023,7 @@ Warning
   text-align: left;
 }
 
-#zjwjrrmfed .gt_empty_group_heading {
+#ujsjvcexup .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1098,15 +1038,15 @@ Warning
   vertical-align: middle;
 }
 
-#zjwjrrmfed .gt_from_md > :first-child {
+#ujsjvcexup .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#zjwjrrmfed .gt_from_md > :last-child {
+#ujsjvcexup .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#zjwjrrmfed .gt_row {
+#ujsjvcexup .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1125,7 +1065,7 @@ Warning
   overflow-x: hidden;
 }
 
-#zjwjrrmfed .gt_stub {
+#ujsjvcexup .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1138,7 +1078,7 @@ Warning
   padding-right: 5px;
 }
 
-#zjwjrrmfed .gt_stub_row_group {
+#ujsjvcexup .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1152,15 +1092,15 @@ Warning
   vertical-align: top;
 }
 
-#zjwjrrmfed .gt_row_group_first td {
+#ujsjvcexup .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#zjwjrrmfed .gt_row_group_first th {
+#ujsjvcexup .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#zjwjrrmfed .gt_summary_row {
+#ujsjvcexup .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1170,16 +1110,16 @@ Warning
   padding-right: 5px;
 }
 
-#zjwjrrmfed .gt_first_summary_row {
+#ujsjvcexup .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#zjwjrrmfed .gt_first_summary_row.thick {
+#ujsjvcexup .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#zjwjrrmfed .gt_last_summary_row {
+#ujsjvcexup .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1189,7 +1129,7 @@ Warning
   border-bottom-color: #D3D3D3;
 }
 
-#zjwjrrmfed .gt_grand_summary_row {
+#ujsjvcexup .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1199,7 +1139,7 @@ Warning
   padding-right: 5px;
 }
 
-#zjwjrrmfed .gt_first_grand_summary_row {
+#ujsjvcexup .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1209,7 +1149,7 @@ Warning
   border-top-color: #D3D3D3;
 }
 
-#zjwjrrmfed .gt_last_grand_summary_row_top {
+#ujsjvcexup .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1219,11 +1159,11 @@ Warning
   border-bottom-color: #D3D3D3;
 }
 
-#zjwjrrmfed .gt_striped {
+#ujsjvcexup .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#zjwjrrmfed .gt_table_body {
+#ujsjvcexup .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1232,7 +1172,7 @@ Warning
   border-bottom-color: #D3D3D3;
 }
 
-#zjwjrrmfed .gt_footnotes {
+#ujsjvcexup .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1246,7 +1186,7 @@ Warning
   border-right-color: #D3D3D3;
 }
 
-#zjwjrrmfed .gt_footnote {
+#ujsjvcexup .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1255,7 +1195,7 @@ Warning
   padding-right: 5px;
 }
 
-#zjwjrrmfed .gt_sourcenotes {
+#ujsjvcexup .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1269,7 +1209,7 @@ Warning
   border-right-color: #D3D3D3;
 }
 
-#zjwjrrmfed .gt_sourcenote {
+#ujsjvcexup .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1277,72 +1217,72 @@ Warning
   padding-right: 5px;
 }
 
-#zjwjrrmfed .gt_left {
+#ujsjvcexup .gt_left {
   text-align: left;
 }
 
-#zjwjrrmfed .gt_center {
+#ujsjvcexup .gt_center {
   text-align: center;
 }
 
-#zjwjrrmfed .gt_right {
+#ujsjvcexup .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#zjwjrrmfed .gt_font_normal {
+#ujsjvcexup .gt_font_normal {
   font-weight: normal;
 }
 
-#zjwjrrmfed .gt_font_bold {
+#ujsjvcexup .gt_font_bold {
   font-weight: bold;
 }
 
-#zjwjrrmfed .gt_font_italic {
+#ujsjvcexup .gt_font_italic {
   font-style: italic;
 }
 
-#zjwjrrmfed .gt_super {
+#ujsjvcexup .gt_super {
   font-size: 65%;
 }
 
-#zjwjrrmfed .gt_footnote_marks {
+#ujsjvcexup .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#zjwjrrmfed .gt_asterisk {
+#ujsjvcexup .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#zjwjrrmfed .gt_indent_1 {
+#ujsjvcexup .gt_indent_1 {
   text-indent: 5px;
 }
 
-#zjwjrrmfed .gt_indent_2 {
+#ujsjvcexup .gt_indent_2 {
   text-indent: 10px;
 }
 
-#zjwjrrmfed .gt_indent_3 {
+#ujsjvcexup .gt_indent_3 {
   text-indent: 15px;
 }
 
-#zjwjrrmfed .gt_indent_4 {
+#ujsjvcexup .gt_indent_4 {
   text-indent: 20px;
 }
 
-#zjwjrrmfed .gt_indent_5 {
+#ujsjvcexup .gt_indent_5 {
   text-indent: 25px;
 }
 
-#zjwjrrmfed .katex-display {
+#ujsjvcexup .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#zjwjrrmfed div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ujsjvcexup div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1672,77 +1612,80 @@ Warning
 </section>
 </section>
 </section>
-<section id="session-info" class="level2">
-<h2 class="anchored" data-anchor-id="session-info">Session info</h2>
+<section id="informações-da-sessão" class="level2">
+<h2 class="anchored" data-anchor-id="informações-da-sessão">Informações da sessão</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────
  setting  value
  version  R version 4.3.3 (2024-02-29)
- os       Ubuntu 24.04.2 LTS
+ os       Ubuntu 24.04.4 LTS
  system   x86_64, linux-gnu
  ui       X11
  language (EN)
- collate  en_US.UTF-8
- ctype    pt_BR.UTF-8
+ collate  C.UTF-8
+ ctype    C.UTF-8
  tz       America/Sao_Paulo
- date     2025-05-27
+ date     2026-05-21
  pandoc   3.1.3 @ /usr/bin/ (via rmarkdown)
- quarto   1.6.42 @ /opt/quarto/bin/quarto
+ quarto   1.8.26 @ /usr/local/bin/quarto
 
 ─ Packages ───────────────────────────────────────────────────────────────────
- package      * version  date (UTC) lib source
- arrow        * 20.0.0.2 2025-05-26 [1] CRAN (R 4.3.3)
- assertthat     0.2.1    2019-03-21 [1] CRAN (R 4.3.3)
- backports      1.5.0    2024-05-23 [1] CRAN (R 4.3.3)
- bit            4.6.0    2025-03-06 [1] CRAN (R 4.3.3)
- bit64          4.6.0-1  2025-01-16 [1] CRAN (R 4.3.3)
- checkmate      2.3.2    2024-07-29 [1] CRAN (R 4.3.3)
- cli            3.6.5    2025-04-23 [1] CRAN (R 4.3.3)
- climindi     * 0.1.0    2025-05-27 [1] Github (rfsaldanha/climindi@3acbdb9)
- digest         0.6.37   2024-08-19 [1] CRAN (R 4.3.3)
- dplyr        * 1.1.4    2023-11-17 [1] CRAN (R 4.3.3)
- evaluate       1.0.3    2025-01-10 [1] CRAN (R 4.3.3)
- farver         2.1.2    2024-05-13 [1] CRAN (R 4.3.3)
- fastmap        1.2.0    2024-05-15 [1] CRAN (R 4.3.3)
- fs             1.6.6    2025-04-12 [1] CRAN (R 4.3.3)
- generics       0.1.4    2025-05-09 [1] CRAN (R 4.3.3)
- ggplot2      * 3.5.2    2025-04-09 [1] CRAN (R 4.3.3)
- glue           1.8.0    2024-09-30 [1] CRAN (R 4.3.3)
- gt           * 1.0.0    2025-04-05 [1] CRAN (R 4.3.3)
- gtable         0.3.6    2024-10-25 [1] CRAN (R 4.3.3)
- hms            1.1.3    2023-03-21 [1] CRAN (R 4.3.3)
- htmltools      0.5.8.1  2024-04-04 [1] CRAN (R 4.3.3)
- htmlwidgets    1.6.4    2023-12-06 [1] CRAN (R 4.3.3)
- jsonlite       2.0.0    2025-03-27 [1] CRAN (R 4.3.3)
- knitr          1.50     2025-03-16 [1] CRAN (R 4.3.3)
- labeling       0.4.3    2023-08-29 [1] CRAN (R 4.3.3)
- lifecycle      1.0.4    2023-11-07 [1] CRAN (R 4.3.3)
- lubridate    * 1.9.4    2024-12-08 [1] CRAN (R 4.3.3)
- magrittr       2.0.3    2022-03-30 [1] CRAN (R 4.3.3)
- pillar         1.10.2   2025-04-05 [1] CRAN (R 4.3.3)
- pkgconfig      2.0.3    2019-09-22 [1] CRAN (R 4.3.3)
- purrr          1.0.4    2025-02-05 [1] CRAN (R 4.3.3)
- R6             2.6.1    2025-02-15 [1] CRAN (R 4.3.3)
- RColorBrewer   1.1-3    2022-04-03 [1] CRAN (R 4.3.3)
- readr        * 2.1.5    2024-01-10 [1] CRAN (R 4.3.3)
- rlang          1.1.6    2025-04-11 [1] CRAN (R 4.3.3)
- rmarkdown      2.29     2024-11-04 [1] CRAN (R 4.3.3)
- sass           0.4.10   2025-04-11 [1] CRAN (R 4.3.3)
- scales         1.4.0    2025-04-24 [1] CRAN (R 4.3.3)
- sessioninfo    1.2.3    2025-02-05 [1] CRAN (R 4.3.3)
- tibble         3.2.1    2023-03-20 [1] CRAN (R 4.3.3)
- tidyr        * 1.3.1    2024-01-24 [1] CRAN (R 4.3.3)
- tidyselect     1.2.1    2024-03-11 [1] CRAN (R 4.3.3)
- timechange     0.3.0    2024-01-18 [1] CRAN (R 4.3.3)
- tzdb           0.5.0    2025-03-15 [1] CRAN (R 4.3.3)
- vctrs          0.6.5    2023-12-01 [1] CRAN (R 4.3.3)
- withr          3.0.2    2024-10-28 [1] CRAN (R 4.3.3)
- xfun           0.52     2025-04-02 [1] CRAN (R 4.3.3)
- xml2           1.3.8    2025-03-14 [1] CRAN (R 4.3.3)
- yaml           2.3.10   2024-07-26 [1] CRAN (R 4.3.3)
- zendown      * 0.1.0    2024-05-21 [1] CRAN (R 4.3.3)
+ package      * version date (UTC) lib source
+ arrow        * 24.0.0  2026-04-29 [1] CRAN (R 4.3.3)
+ assertthat     0.2.1   2019-03-21 [1] CRAN (R 4.3.3)
+ backports      1.5.1   2026-04-03 [1] CRAN (R 4.3.3)
+ bit            4.6.0   2025-03-06 [1] CRAN (R 4.3.3)
+ bit64          4.8.0   2026-04-21 [1] CRAN (R 4.3.3)
+ checkmate      2.3.4   2026-02-03 [1] CRAN (R 4.3.3)
+ cli            3.6.6   2026-04-09 [1] CRAN (R 4.3.3)
+ climindi     * 0.2.0   2026-02-23 [1] Github (rfsaldanha/climindi@55350b4)
+ dichromat      2.0-0.1 2022-05-02 [1] CRAN (R 4.3.3)
+ digest         0.6.39  2025-11-19 [1] CRAN (R 4.3.3)
+ dplyr        * 1.2.1   2026-04-03 [1] CRAN (R 4.3.3)
+ evaluate       1.0.5   2025-08-27 [1] CRAN (R 4.3.3)
+ farver         2.1.2   2024-05-13 [1] CRAN (R 4.3.3)
+ fastmap        1.2.0   2024-05-15 [1] CRAN (R 4.3.3)
+ fs             2.1.0   2026-04-18 [1] CRAN (R 4.3.3)
+ generics       0.1.4   2025-05-09 [1] CRAN (R 4.3.3)
+ ggplot2      * 4.0.3   2026-04-22 [1] CRAN (R 4.3.3)
+ glue           1.8.1   2026-04-17 [1] CRAN (R 4.3.3)
+ gt           * 1.3.0   2026-01-22 [1] CRAN (R 4.3.3)
+ gtable         0.3.6   2024-10-25 [1] CRAN (R 4.3.3)
+ hms            1.1.4   2025-10-17 [1] CRAN (R 4.3.3)
+ htmltools      0.5.9   2025-12-04 [1] CRAN (R 4.3.3)
+ htmlwidgets    1.6.4   2023-12-06 [1] CRAN (R 4.3.3)
+ jsonlite       2.0.0   2025-03-27 [1] CRAN (R 4.3.3)
+ knitr          1.51    2025-12-20 [1] CRAN (R 4.3.3)
+ labeling       0.4.3   2023-08-29 [1] CRAN (R 4.3.3)
+ lifecycle      1.0.5   2026-01-08 [1] CRAN (R 4.3.3)
+ lubridate    * 1.9.5   2026-02-04 [1] CRAN (R 4.3.3)
+ magrittr       2.0.5   2026-04-04 [1] CRAN (R 4.3.3)
+ otel           0.2.0   2025-08-29 [1] CRAN (R 4.3.3)
+ pillar         1.11.1  2025-09-17 [1] CRAN (R 4.3.3)
+ pkgconfig      2.0.3   2019-09-22 [1] CRAN (R 4.3.3)
+ purrr          1.2.2   2026-04-10 [1] CRAN (R 4.3.3)
+ R6             2.6.1   2025-02-15 [1] CRAN (R 4.3.3)
+ RColorBrewer   1.1-3   2022-04-03 [1] CRAN (R 4.3.3)
+ readr        * 2.2.0   2026-02-19 [1] CRAN (R 4.3.3)
+ rlang          1.2.0   2026-04-06 [1] CRAN (R 4.3.3)
+ rmarkdown      2.31    2026-03-26 [1] CRAN (R 4.3.3)
+ S7             0.2.2   2026-04-22 [1] CRAN (R 4.3.3)
+ sass           0.4.10  2025-04-11 [1] CRAN (R 4.3.3)
+ scales         1.4.0   2025-04-24 [1] CRAN (R 4.3.3)
+ sessioninfo    1.2.3   2025-02-05 [1] CRAN (R 4.3.3)
+ tibble         3.3.1   2026-01-11 [1] CRAN (R 4.3.3)
+ tidyr        * 1.3.2   2025-12-19 [1] CRAN (R 4.3.3)
+ tidyselect     1.2.1   2024-03-11 [1] CRAN (R 4.3.3)
+ timechange     0.4.0   2026-01-29 [1] CRAN (R 4.3.3)
+ tzdb           0.5.0   2025-03-15 [1] CRAN (R 4.3.3)
+ vctrs          0.7.3   2026-04-11 [1] CRAN (R 4.3.3)
+ withr          3.0.2   2024-10-28 [1] CRAN (R 4.3.3)
+ xfun           0.57    2026-03-20 [1] CRAN (R 4.3.3)
+ xml2           1.5.2   2026-01-17 [1] CRAN (R 4.3.3)
+ yaml           2.3.12  2025-12-10 [1] CRAN (R 4.3.3)
+ zendown      * 0.1.0   2024-05-21 [1] CRAN (R 4.3.3)
 
  [1] /home/raphaelsaldanha/R/x86_64-pc-linux-gnu-library/4.3
  [2] /usr/local/lib/R/site-library
@@ -1758,18 +1701,18 @@ Warning
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-muñoz-sabater2021" class="csl-entry" role="listitem">
-Muñoz-Sabater, Joaquín, Emanuel Dutra, Anna Agustí-Panareda, et al. 2021. <span>“ERA5-Land: A State-of-the-Art Global Reanalysis Dataset for Land Applications.”</span> <em>Earth System Science Data</em> 13 (9): 4349–83. <a href="https://doi.org/10.5194/essd-13-4349-2021">https://doi.org/10.5194/essd-13-4349-2021</a>.
+Muñoz-Sabater, Joaquín, Emanuel Dutra, Anna Agustí-Panareda, Clément Albergel, Gabriele Arduini, Gianpaolo Balsamo, Souhail Boussetta, et al. 2021. <span>“ERA5-Land: A state-of-the-art global reanalysis dataset for land applications”</span>. <em>Earth System Science Data</em> 13 (9): 4349–83. <a href="https://doi.org/10.5194/essd-13-4349-2021">https://doi.org/10.5194/essd-13-4349-2021</a>.
 </div>
 <div id="ref-saldanhaZonalStatisticsDatasets2024" class="csl-entry" role="listitem">
-Saldanha, Raphael, Reza Akbarinia, Marcel Pedroso, et al. 2024. <span>“Zonal Statistics Datasets of Climate Indicators for <span>Brazilian</span> Municipalities.”</span> <em>Environmental Data Science</em> 3: e2. <a href="https://doi.org/10.1017/eds.2024.3">https://doi.org/10.1017/eds.2024.3</a>.
+Saldanha, Raphael, Reza Akbarinia, Marcel Pedroso, Victor Ribeiro, Carlos Cardoso, Eduardo H. M. Pena, Patrick Valduriez, e Fabio Porto. 2024. <span>“Zonal Statistics Datasets of Climate Indicators for <span>Brazilian</span> Municipalities”</span>. <em>Environmental Data Science</em> 3: e2. <a href="https://doi.org/10.1017/eds.2024.3">https://doi.org/10.1017/eds.2024.3</a>.
 </div>
 <div id="ref-wmoWMOGuidelinesCalculation2017" class="csl-entry" role="listitem">
-WMO. 2017. <em><span>WMO Guidelines</span> on the <span>Calculation</span> of <span>Climate Normals</span></em>. WMO.
+WMO. 2017. <em><span>WMO Guidelines</span> on the <span>Calculation</span> of <span>Climate Normals</span></em>. Geneva: WMO.
 </div>
 <div id="ref-xavier2022" class="csl-entry" role="listitem">
-Xavier, Alexandre C., Bridget R. Scanlon, Carey W. King, and Aline I. Alves. 2022. <span>“New Improved <span>Brazilian</span> Daily Weather Gridded Data (1961).”</span> <em>International Journal of Climatology</em>, ahead of print, December. <a href="https://doi.org/10.1002/joc.7731">https://doi.org/10.1002/joc.7731</a>.
+Xavier, Alexandre C., Bridget R. Scanlon, Carey W. King, e Aline I. Alves. 2022. <span>“New Improved <span>Brazilian</span> Daily Weather Gridded Data (1961)”</span>. <em>International Journal of Climatology</em>, dezembro. <a href="https://doi.org/10.1002/joc.7731">https://doi.org/10.1002/joc.7731</a>.
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1797,12 +1740,12 @@ Xavier, Alexandre C., Bridget R. Scanlon, Carey W. King, and Aline I. Alves. 202
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Copiada");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Copiada");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
@@ -2194,7 +2137,7 @@ Xavier, Alexandre C., Bridget R. Scanlon, Carey W. King, and Aline I. Alves. 202
     script.dataset.emitMetadata = "0";
     script.dataset.inputPosition = "bottom";
     script.dataset.theme = getTheme();
-    script.dataset.lang = "en";
+    script.dataset.lang = "pt";
     script.crossOrigin = "anonymous";
     // Append the script to the desired div instead of at the end of the body
     document.getElementById("quarto-content").appendChild(script);

@@ -1,26 +1,26 @@
 ---
-title: "INMET RSS alerts"
+title: "Alertas RSS do INMET"
 ---
 
 ![](images/inmetrss.png)
 
-## Introduction
+## Introdução
 
-INMET is the Brazilian official source of meteorological forecasts. It also maintains the [ALERT-AS](https://alertas2.inmet.gov.br/), an weather alert center for the Brazilian territory. 
+O INMET é a fonte oficial brasileira de previsões meteorológicas. Ele também mantém o [ALERT-AS](https://alertas2.inmet.gov.br/), um centro de alertas meteorológicos para o território brasileiro.
 
-The alerts are broadcasted in the RSS format and there is no official record history of alerts available. Thus, I started to run a daily script to record those alerts and made them available to the public. The record started on September 29, 2025 at 4pm.
+Os alertas são publicados em formato RSS e não há um histórico oficial disponível. Por isso, comecei a executar um script diário para registrar esses alertas e disponibilizá-los ao público. O registro começou em 29 de setembro de 2025 às 16h.
 
-## Data
+## Dados
 
-The alerts are fetched daily at 1am using the [inmetrss](https://rfsaldanha.github.io/inmetrss/) R package. After fetching new alerts and updating the database, a parquet file is exported to an S3 storage, available at the link bellow:
+Os alertas são coletados diariamente à 1h usando o pacote R [inmetrss](https://rfsaldanha.github.io/inmetrss/). Após coletar novos alertas e atualizar a base, um arquivo parquet é exportado para um armazenamento S3, disponível no link abaixo:
 
 ```
 https://inmetalerts.nyc3.cdn.digitaloceanspaces.com/inmetalerts.parquet
 ```
 
-## Data usage
+## Uso dos dados
 
-The parquet data present the alerts in the original structure from INMET. The package [inmetrss](https://rfsaldanha.github.io/inmetrss/) presents a function to parse the alerts by municipality.
+O arquivo parquet apresenta os alertas na estrutura original do INMET. O pacote [inmetrss](https://rfsaldanha.github.io/inmetrss/) oferece uma função para processar os alertas por município.
 
 ```{r}
 #| messages: false
@@ -39,7 +39,7 @@ res_mun <- parse_mun(head(res, 10))
 datatable(res_mun)
 ```
 
-## Session info
+## Informações da sessão
 
 ```{r}
 sessioninfo::session_info()

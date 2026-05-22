@@ -23,12 +23,11 @@ nocite: |
 
 ![](images/Screenshot%20from%202024-02-14%2010-21-48.png)
 
-## Reference
+## Referência
 
 ::: {#refs}
 :::
 
-## Abstract
+## Resumo
 
-Climate trends and weather indicators are used in several research fields due to their importance in statistical modeling, frequently used as covariates. Usually, climate indicators are available as grid files with different spatial and time resolutions. The availability of a time series of climate indicators compatible with administrative boundaries is scattered in Brazil, not fully available for several years, and produced with diverse methodologies. In this paper, we propose time series of climate indicators for the Brazilian municipalities produced using zonal statistics derived from the ERA5-Land reanalysis indicators. As a result, we present datasets with zonal statistics of climate indicators with daily data, covering the period from 1950 to 2022.
-
+Tendências climáticas e indicadores meteorológicos são usados em vários campos de pesquisa devido à sua importância na modelagem estatística, frequentemente como covariáveis. Em geral, indicadores climáticos estão disponíveis como arquivos em grade, com diferentes resoluções espaciais e temporais. No Brasil, a disponibilidade de séries temporais de indicadores climáticos compatíveis com limites administrativos é dispersa, não está plenamente disponível para vários anos e é produzida com metodologias diversas. Neste artigo, propomos séries temporais de indicadores climáticos para os municípios brasileiros produzidas por estatísticas zonais derivadas dos indicadores da reanálise ERA5-Land. Como resultado, apresentamos bases de dados com estatísticas zonais de indicadores climáticos em escala diária, cobrindo o período de 1950 a 2022.

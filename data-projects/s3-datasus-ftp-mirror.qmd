@@ -1,17 +1,17 @@
 ---
-title: "S3 DataSUS FTP mirror"
+title: "Espelho S3 do FTP DataSUS"
 image: images/s3datasus.png
 ---
 
-The Department of Informatics (DataSUS) of the Brazilian Health Ministry hosts microdata anonymized files from several health information systems, covering themes such as mortality, newborns, hospitalization, and transmissible diseases.
+O Departamento de Informática do SUS (DataSUS), do Ministério da Saúde, hospeda arquivos anonimizados de microdados de vários sistemas de informação em saúde, cobrindo temas como mortalidade, nascidos vivos, internações e doenças transmissíveis.
 
-Those files are hosted in a public FTP server, but its access is geographically restricted to Brazil.
+Esses arquivos são hospedados em um servidor FTP público, mas o acesso é geograficamente restrito ao Brasil.
 
-In order to offer an alternative way to access those files, I created a partial mirror of the FTP server in a S3 object storage architecture. This structure allows worldwide access, CDN distribution of files, and a redudancy in case of failure of the DataSUS FTP server.
+Para oferecer uma forma alternativa de acesso, criei um espelho parcial do servidor FTP em uma arquitetura de armazenamento de objetos S3. Essa estrutura permite acesso mundial, distribuição por CDN e redundância em caso de falha do servidor FTP do DataSUS.
 
-## Available health information systems and files
+## Sistemas de informação em saúde e arquivos disponíveis
 
-Currently, the following health information systems are mirrored:
+Atualmente, os seguintes sistemas de informação em saúde são espelhados:
 
 -   SIM -- Sistema de Informações de Mortalidade
 -   SINASC -- Sistema de Informações de Nascidos Vivos
@@ -22,51 +22,51 @@ Currently, the following health information systems are mirrored:
 -   Pasta E-SUS Notifica
 -   Pasta Dados Abertos
 
-## File Access
+## Acesso aos arquivos
 
-The S3 mirror is available at this endpoint:
+O espelho S3 está disponível neste endpoint:
 
 ```         
 https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com
 ```
 
 ::: callout-note
--   The file structure at the S3 mirror follows the same directory structure of the FTP server.
--   All files available at the FTP are mirrored, except expanded XML and CSV files.
+-   A estrutura de arquivos no espelho S3 segue a mesma estrutura de diretórios do servidor FTP.
+-   Todos os arquivos disponíveis no FTP são espelhados, exceto arquivos XML e CSV expandidos.
 :::
 
-## Mirror update and files tree
+## Atualização do espelho e árvore de arquivos
 
-The mirror is synced daily at 3:00 am Brazilian time. On each update, some file lists are produced:
+O espelho é sincronizado diariamente às 3h, horário de Brasília. Em cada atualização, algumas listas de arquivos são produzidas:
 
--   [Directory tree](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_dirs_tree.txt)
--   [Files tree](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_files_tree.txt)
--   [Full path list](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_full_path.txt)
+-   [Árvore de diretórios](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_dirs_tree.txt)
+-   [Árvore de arquivos](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_files_tree.txt)
+-   [Lista de caminhos completos](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_full_path.txt)
 
 ::: callout-tip
-The S3 bucket **versioning** option was **enabled** on November 7, 2024. Since then, the version history of all files (including deleted files) has been kept.
+A opção de **versionamento** do bucket S3 foi **ativada** em 7 de novembro de 2024. Desde então, o histórico de versões de todos os arquivos, incluindo arquivos excluídos, é mantido.
 :::
 
-## How to access a file?
+## Como acessar um arquivo?
 
-Check the desired file name at [full path list](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_full_path.txt) and append it to the endpoint access.
+Verifique o nome do arquivo desejado na [lista de caminhos completos](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_full_path.txt) e acrescente esse caminho ao endpoint de acesso.
 
-Example: [SIM file for Bahia, 2022](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/SIM/CID10/DORES/DOBA2022.dbc)
+Exemplo: [arquivo do SIM para Bahia, 2022](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/SIM/CID10/DORES/DOBA2022.dbc)
 
 ```         
 https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/SIM/CID10/DORES/DOBA2022.dbc
 ```
 
-## Update logs
+## Logs de atualização
 
-A log of the last update is provided and all update logs are stored in the folder `rclone-logs`
+Um log da última atualização é disponibilizado, e todos os logs de atualização são armazenados na pasta `rclone-logs`.
 
--   [Last update log](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_log.txt)
--   [All logs on rclone-logs folder](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_logs.txt)
+-   [Log da última atualização](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_log.txt)
+-   [Todos os logs na pasta rclone-logs](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_logs.txt)
 
-### How to access an old update log?
+### Como acessar um log de atualização antigo?
 
-Fist, locate the log file name [here](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_logs.txt), then access the file. Example:
+Primeiro, localize o nome do arquivo de log [aqui](https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_logs.txt) e depois acesse o arquivo. Exemplo:
 
 ```         
 https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone-logs/rclone_datasus_log_2024-11-07_03:04:55.txt
@@ -74,16 +74,16 @@ https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone-logs/rclone_da
 
 ## CDN
 
-The files are cached in a CDN (content delivery network) to increase transfer speeds. This cache is refreshed every hour. To access directly the file, without the CDN, remove the `cdn` from the address. Example:
+Os arquivos são armazenados em cache em uma CDN (content delivery network) para aumentar a velocidade de transferência. Esse cache é atualizado a cada hora. Para acessar diretamente o arquivo, sem a CDN, remova `cdn` do endereço. Exemplo:
 
 ```         
 https://datasus-ftp-mirror.nyc3.digitaloceanspaces.com/SIM/CID10/DORES/DOBA2022.dbc
 ```
 
-## Costs
+## Custos
 
-This S3 mirror is available for free use, but I have running costs for storage and transfer volume at Digital Ocean. Please use it carefully and consciously.
+Este espelho S3 está disponível para uso gratuito, mas há custos recorrentes de armazenamento e transferência na Digital Ocean. Use com cuidado e consciência.
 
 ## Script
 
-If you are curious to see how this works, check this [code repository](https://github.com/rfsaldanha/rclone-datasus).
+Se tiver curiosidade de ver como isso funciona, consulte este [repositório de código](https://github.com/rfsaldanha/rclone-datasus).

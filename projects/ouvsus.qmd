@@ -1,14 +1,14 @@
 ---
 title: "OuvSUS"
-subtitle: "SUS Ombudsman."
+subtitle: "Ouvidoria do SUS."
 ---
 
 ![Manifestações dashboard.](images/ouvsus-1400.webp){fig-align="center"}
 
-A partnership between PCDaS, Instituto Aggeu Magalhães -- Fiocruz Pernambuco, and the Brazilian Ministry of Health ombudsman. The project aims to collect, organize and present data about population inquiries and information requisitions.
+Uma parceria entre PCDaS, Instituto Aggeu Magalhães -- Fiocruz Pernambuco e a Ouvidoria do Ministério da Saúde. O projeto tem como objetivo coletar, organizar e apresentar dados sobre manifestações e solicitações de informação da população.
 
-I oversee the team at PCDaS responsible for the ETL (extraction, transform and load) process and data dashboard.
+Coordeno a equipe do PCDaS responsável pelo processo de ETL (extração, transformação e carga) e pelo painel de dados.
 
-The project website address: https://www.gov.br/saude/pt-br/canais-de-atendimento/ouvidoria-do-sus/ouvidoria-em-numeros/paineis-de-dados
+Endereço do site do projeto: https://www.gov.br/saude/pt-br/canais-de-atendimento/ouvidoria-do-sus/ouvidoria-em-numeros/paineis-de-dados
 
-This work is supported by Brazilian Health Ministry.
+Este trabalho é apoiado pelo Ministério da Saúde.

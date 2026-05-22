@@ -17,29 +17,29 @@ nocite: |
 
 ![](images/Screenshot from 2023-10-02 13-27-39.png)
 
-## Reference
+## Referência
 
 ::: {#refs}
 :::
 
-## Abstract
+## Resumo
 
-### Background
+### Contexto
 
-Political, economic, and epidemiological changes in Brazil have affected health and the health system. We used the Global Burden of Disease Study 2016 (GBD 2016) results to understand changing health patterns and inform policy responses.
+Mudanças políticas, econômicas e epidemiológicas no Brasil afetaram a saúde e o sistema de saúde. Usamos os resultados do Global Burden of Disease Study 2016 (GBD 2016) para compreender mudanças nos padrões de saúde e subsidiar respostas de políticas públicas.
 
-### Methods
+### Métodos
 
-We analysed GBD 2016 estimates for life expectancy at birth (LE), healthy life expectancy (HALE), all-cause and cause-specific mortality, years of life lost (YLLs), years lived with disability (YLDs), disability-adjusted life-years (DALYs), and risk factors for Brazil, its 26 states, and the Federal District from 1990 to 2016, and compared these with national estimates for ten comparator countries.
+Analisamos estimativas do GBD 2016 para esperança de vida ao nascer (EV), esperança de vida saudável (HALE), mortalidade por todas as causas e por causas específicas, anos de vida perdidos (YLLs), anos vividos com incapacidade (YLDs), anos de vida ajustados por incapacidade (DALYs) e fatores de risco para o Brasil, seus 26 estados e o Distrito Federal, de 1990 a 2016, comparando-as com estimativas nacionais de dez países de referência.
 
-### Findings
+### Resultados
 
-Nationally, LE increased from 68·4 years (95% uncertainty interval \[UI\] 68·0--68·9) in 1990 to 75·2 years (74·7--75·7) in 2016, and HALE increased from 59·8 years (57·1--62·1) to 65·5 years (62·5--68·0). All-cause agestandardised mortality rates decreased by 34·0% (33·4--34·5), while all-cause age-standardised DALY rates decreased by 30·2% (27·7--32·8); the magnitude of declines varied among states. In 2016, ischaemic heart disease was the leading cause of age-standardised YLLs, followed by interpersonal violence. Low back and neck pain, sense organ diseases, and skin diseases were the main causes of YLDs in 1990 and 2016. Leading risk factors contributing to DALYs in 2016 were alcohol and drug use, high blood pressure, and high body-mass index.
+No país, a EV aumentou de 68,4 anos (intervalo de incerteza \[II\] de 95%: 68,0--68,9) em 1990 para 75,2 anos (74,7--75,7) em 2016, e a HALE aumentou de 59,8 anos (57,1--62,1) para 65,5 anos (62,5--68,0). As taxas de mortalidade padronizadas por idade por todas as causas diminuíram 34,0% (33,4--34,5), enquanto as taxas de DALY padronizadas por idade por todas as causas diminuíram 30,2% (27,7--32,8); a magnitude das reduções variou entre os estados. Em 2016, a doença isquêmica do coração foi a principal causa de YLLs padronizados por idade, seguida pela violência interpessoal. Dor lombar e cervical, doenças dos órgãos dos sentidos e doenças de pele foram as principais causas de YLDs em 1990 e 2016. Os principais fatores de risco que contribuíram para DALYs em 2016 foram uso de álcool e drogas, pressão arterial elevada e índice de massa corporal elevado.
 
-### Interpretation
+### Interpretação
 
-Health improved from 1990 to 2016, but improvements and disease burden varied between states. An epidemiological transition towards non-communicable diseases and related risks occurred nationally, but later in some states, while interpersonal violence grew as a health concern. Policy makers can use these results to address health disparities.
+A saúde melhorou de 1990 a 2016, mas as melhorias e a carga de doença variaram entre os estados. Ocorreu no país uma transição epidemiológica em direção às doenças não transmissíveis e riscos relacionados, embora mais tardiamente em alguns estados, enquanto a violência interpessoal cresceu como preocupação de saúde. Gestores e formuladores de políticas podem usar esses resultados para enfrentar desigualdades em saúde.
 
-### Funding
+### Financiamento
 
-Bill & Melinda Gates Foundation and the Brazilian Ministry of Health.
+Bill & Melinda Gates Foundation e Ministério da Saúde do Brasil.

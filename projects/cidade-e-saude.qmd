@@ -1,15 +1,14 @@
 ---
 title: "Cidade & Saúde"
-subtitle: "Accessible health information about Brazilian municipalities."
+subtitle: "Informação em saúde acessível sobre municípios brasileiros."
 ---
 
-![Cidade & Saúde main webpage.](images/cidadesaude-1400.webp){fig-align="center"}
+![Página principal do Cidade & Saúde.](images/cidadesaude-1400.webp){fig-align="center"}
 
-"Cidade & Saúde" is a self-funded Project that I started just after my master's and before my Ph.D.
+"Cidade & Saúde" é um projeto financiado com recursos próprios que iniciei logo após o mestrado e antes do doutorado.
 
-The project objective is to collect and aggregate health data at the municipality level and provide simple and visually compelling access with satellite images and graphs. The user is asked to type a city name and the system presents a webpage with the satellite image of that city and several socio-demographic and health information with graphs.
+O objetivo do projeto é coletar e agregar dados de saúde no nível municipal e oferecer acesso simples e visualmente atraente com imagens de satélite e gráficos. O usuário digita o nome de uma cidade e o sistema apresenta uma página com a imagem de satélite e informações sociodemográficas e de saúde em gráficos.
 
-The satellite image is used to put the socio-demographic and health data in context, with graphs and indicators definitions covering demographic aspects, mortality, hospital admissions, health units, and health budget.
+A imagem de satélite contextualiza os dados sociodemográficos e de saúde, com gráficos e definições de indicadores sobre aspectos demográficos, mortalidade, internações, unidades de saúde e orçamento em saúde.
 
-The project website is accessible by this address: https://cidadesaude.io. The project data is out of date, and waiting for financing.
-
+O site do projeto está disponível em: https://cidadesaude.io. Os dados estão desatualizados e aguardam financiamento.

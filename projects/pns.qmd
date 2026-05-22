@@ -3,13 +3,12 @@ title: "PNS"
 subtitle: "Pesquisa Nacional de Saúde."
 ---
 
-![PNS main webpage.](images/pns-1400.webp){fig-align="center"}
+![Página principal da PNS.](images/pns-1400.webp){fig-align="center"}
 
-This project is a partnership between PCDaS and other researchers at Fiocruz and IBGE. The PNS is a national inquiry about the population health conditions with two editions: 2013 and 2019. Its results cover major aspects of populations' health and involve special techniques for complex samples.
+Este projeto é uma parceria entre o PCDaS e pesquisadores da Fiocruz e do IBGE. A PNS é uma pesquisa nacional sobre as condições de saúde da população, com duas edições: 2013 e 2019. Seus resultados cobrem aspectos importantes da saúde da população e envolvem técnicas especiais para amostras complexas.
 
-I oversee the team at PCDaS responsible to create reproducible code notebooks about sample expansion and developing and maintain a website with project documentation and a data dashboard.
+Coordeno a equipe do PCDaS responsável por criar notebooks reprodutíveis sobre expansão amostral e por desenvolver e manter um site com documentação do projeto e painel de dados.
 
-Project website address: https://www.pns.icict.fiocruz.br
+Endereço do site do projeto: https://www.pns.icict.fiocruz.br
 
-This work is supported by Brazilian Health Ministry.
-
+Este trabalho é apoiado pelo Ministério da Saúde.

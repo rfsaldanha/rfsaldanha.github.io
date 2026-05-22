@@ -1,0 +1,63 @@
+project:
+  type: website
+  output-dir: ../docs/en
+  render:
+    - "*.qmd"
+    - "projects/*.qmd"
+    - "data-projects/*.qmd"
+    - "data-projects/health_indicators/*.qmd"
+    - "publications/*.qmd"
+    - "talks/*.qmd"
+    - "photos/photos.qmd"
+
+lang: en
+
+website:
+  favicon: logo.png
+  title: "Raphael Saldanha"
+  site-url: https://rfsaldanha.github.io/en
+  page-navigation: true
+  back-to-top-navigation: true
+  google-analytics: "G-2M7VLSRDCB"
+  page-footer:
+    background: light
+    left: "Copyright 2024, Raphael Saldanha"
+    right:
+      - icon: github
+        href: https://github.com/rfsaldanha
+      - icon: mastodon
+        href: https://fosstodon.org/@rfsaldanha
+  navbar:
+    logo: logo.png
+    logo-alt: Raphael Saldanha
+    search: true
+    right:
+      - text: "CV"
+        href: cv.qmd
+      - text: "Projects"
+        href: projects.qmd
+      - text: "Packages & Code"
+        href: code.qmd
+      - text: "Datasets"
+        href: data.qmd
+      - text: "Publications"
+        href: publications.qmd
+      - text: "Talks"
+        href: talks.qmd
+      - text: "Photos"
+        href: photos/photos.qmd
+      - text: "Blog"
+        href: ../blog.html
+      - text: "Português"
+        href: ../
+      - icon: rss
+        href: ../blog.xml
+
+format:
+  html:
+    theme:
+      - styles.scss
+    mainfont: Nunito
+    toc: true
+
+editor: visual

@@ -1,0 +1,210 @@
+---
+title: "Advances in climate features engineering and subsets modeling"
+subtitle: "for Dengue forecasting"
+author: "Raphael Saldanha"
+institute: "HPDaSc Workshop on Data Driven Science - Inria"
+date: "2024-05-31"
+description: "Talk at the HPDaSc Workshop on Data Driven Science."
+categories: [brclim]
+image: images/prec_map_1.png
+format:
+  revealjs: 
+    theme: inria_style.scss
+    logo: inria_logo.png
+    transition: fade
+    background-transition: fade
+    pointer:
+      pointerSize: 40
+      color: '#e63312'
+code-link: true
+revealjs-plugins:
+  - pointer
+---
+
+## Context of Climate-Sensitive diseases
+
+-   **Direct** relationship: floods, droughts, heat waves...
+
+-   **Indirect** relationship
+
+```{mermaid}
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'fontSize': '30px'
+    }
+  }
+}%%
+flowchart LR
+
+climate(Climate) --> vector(Disease vectors) --> health(Human health)
+climate --> health
+climate --> social(Social & economic \n determinants) --> health
+```
+
+## A time-lagged relationship
+
+::::: columns
+::: {.column width="45%"}
+-   Vector life cycle from a time perspective
+-   Climate conditions from the **past** leads to the disease incidence of **tomorrow**
+:::
+
+::: {.column width="55%"}
+![](images/aedes_cycle.png){fig-align="center"}
+:::
+:::::
+
+## ERA5-Land reanalysis
+
+::::: columns
+::: {.column width="40%"}
+-   Copernicus, ECMWF
+-   Global coverage
+-   Hourly data
+-   1950 to the present (one week delay)
+-   Spatial resolution \~9km
+-   Several climate indicators
+:::
+
+::: {.column width="60%"}
+![](images/NL161-Sabater-Fig1.jpg){fig-align="center"}
+:::
+:::::
+
+## Challenge on data structures
+
+-   Climate indicators: grid data
+-   Disease incidence: tabular, individual cases aggregated by spatial regions and time spans
+
+::::: columns
+::: {.column width="50%"}
+![](images/temp.png){width="80%"}
+:::
+
+::: {.column width="50%"}
+![](images/admin.png){width="80%"}
+:::
+:::::
+
+## Zonal statistics
+
+![](images/zonal_statistics.png)
+
+## Resulting products {.small}
+
+::::: columns
+::: {.column width="50%"}
+-   ERA5-Land daily datasets
+    -   7,105 files, 658.7 GB
+    -   24,242 downloads on Zenodo
+-   Daily zonal statistics of climate indicators
+    -   8 selected indicators, 5,570 municipalities
+    -   6,085,749,761 records covering 1950-2023
+:::
+
+::: {.column width="50%"}
+![](images/era5-land-daily-aggregates.png){fig-align="center"}
+:::
+:::::
+
+## Precipitation {.smaller}
+
+::::: columns
+::: {.column width="50%"}
+![](images/prec_map_2.png){fig-align="center" width="100%"}
+:::
+
+::: {.column width="50%"}
+![](images/prec_map_1.png){fig-align="center" width="100%"}
+:::
+:::::
+
+Rio de Janeiro municipalities. January 1, 2010.
+
+## Angra dos Reis
+
+![](images/angra.webp){fig-align="center" width="100%"}
+
+## Publications & Products {.small}
+
+::::: columns
+::: {.column width="50%"}
+-   Paper on [Environmental Data Science journal]{.hl} (Saldanha et al. 2024)
+-   Datasets on Zenodo: more than [34,000 downloads]{.hl}
+-   [brclimr package](https://rfsaldanha.github.io/brclimr/) to retrieve climate data of Brazilian municipalities, Almost 4,000 downloads on CRAN.
+:::
+
+::: {.column width="50%"}
+[![](https://zenodo.org/badge/DOI/10.1017/eds.2024.3.svg)](https://doi.org/10.1017/eds.2024.3) ![](images/eds_paper.png)
+:::
+:::::
+
+## Subset models for multivariate time series forecast {.small}
+
+::::: columns
+::: {.column width="60%"}
+-   Data may present intrinsic [diversity]{.hl} of samples, affecting model's performance on [different parts of the input]{.hl}
+-   [Global models]{.hl}: use all available time series
+-   [Local models]{.hl}: use only time series pertaining to each sample
+-   [Data subsets models]{.hl}: our proposal
+:::
+
+::: {.column width="40%"}
+-   Paper on **ICDE2024**, Multivariate Time Series Analytics workshop ![](images/icde.png){fig-align="center" width="50%"}
+:::
+:::::
+
+## Case example
+
+-   [Dengue]{.hl} disease is transmitted by mosquitoes and is a Public Health concern. Record number cases on 2024 in Brazil, tendency to increase with global warming
+-   A typical forecasting model is targeted to predict number of cases based on [climate indicators]{.hl} (rain and temperature)
+-   A [global model]{.hl} would use data from all municipalities, facing [difficulties]{.hl} related to [distinct]{.hl} temporal and spatial disease [transmission patterns]{.hl}
+
+## 
+
+![](images/subset_model_fig_a.png){fig-align="center"}
+
+## 
+
+![](images/subset_model_fig_b.png){fig-align="center"}
+
+## 
+
+![](images/subset_model_fig_c.png){fig-align="center"}
+
+## 
+
+![](images/subset_model_fig_d.png){fig-align="center"}
+
+## Experimental setup
+
+-   [Identify]{.hl} data subsets considering dengue cases and covariates patterns across municipalities with DTW distance.
+    -   Select the [optimum]{.hl} number of subsets ($k$) considering silhouette score
+-   Train random forest [Global Model]{.hl} with and without the [subset id]{.hl} feature information
+-   Train random forest [Subsets Models]{.hl}
+-   [Evaluate]{.hl} forecasting model's [performance]{.hl} on test data
+
+## Clustering results
+
+::::: columns
+::: {.column width="40%"}
+-   $k = 5$ returned the highest silhouette score
+-   Partition sizes: $g_1 = 69$, $g_2 = 62$, $g_3 = 82$, $g_4 = 102$, $g_5 = 18$
+:::
+
+::: {.column width="60%"}
+![](images/subset_model_partitions_map.png){fig-align="center"}
+:::
+:::::
+
+## Model results
+
+![](images/subsets_model_accuracy.png){fig-align="center"}
+
+## Conclusions and next steps
+
+-   Subsets models rendered [better performance]{.hl} than global models on [116 municipalities]{.hl} from 333 (34.83%)
+-   Subsets models overall performance is related to the [partition's size]{.hl}. Bigger partitions (more municipalities) have more training data.
+-   We are working on different clustering strategies (constraints in size and featured-based approaches) and apply different learners on model training

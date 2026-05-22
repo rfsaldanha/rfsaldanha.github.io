@@ -1,5 +1,5 @@
 ---
-title: "ERA5-Land selected indicators daily aggregates for Africa"
+title: "Agregados diários de indicadores selecionados do ERA5-Land para a África"
 bibliography: references.bib
 ---
 
@@ -12,34 +12,34 @@ nc_rast <- terra::rast(nc_file)
 terra::plot(nc_rast[[1:4]])
 ```
 
-## Introduction
+## Introdução
 
-The [ERA5-Land](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land?tab=overview) reanalysis from The Copernicus Programme is an incredible source of climate data with global coverage of land areas from 1950 to the present, at 10km spatial resolution. Its original data is at hourly interval, and monthly aggregates are also available at the [Copernicus Data Store](https://cds.climate.copernicus.eu) (CDS).
+A reanálise [ERA5-Land](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land?tab=overview), do Programa Copernicus, é uma excelente fonte de dados climáticos com cobertura global de áreas terrestres desde 1950 até o presente, em resolução espacial de 10 km. Os dados originais têm intervalo horário, e agregados mensais também estão disponíveis no [Copernicus Data Store](https://cds.climate.copernicus.eu) (CDS).
 
-For some applications like Climate-Sensitive Diseases (CSD) modelling, the hourly interval may be too much detailed, but the monthly aggregation is too coarse.
+Para algumas aplicações, como modelagem de doenças sensíveis ao clima, o intervalo horário pode ser detalhado demais, enquanto a agregação mensal pode ser grosseira demais.
 
-For this reason, I created daily aggregates from some ERA5-Land indicators for some regions.
+Por esse motivo, criei agregados diários de alguns indicadores ERA5-Land para algumas regiões.
 
-## Methodology
+## Metodologia
 
-I developed an [R script](https://github.com/rfsaldanha/era5daily) using the KrigR package [@kusch2022]. The script downloads a set of indicators, starting on 1950, for a geographical bounding box covering Africa (coordinates -47.11,71.01,34.88,71.38) and aggregates the data from hourly to daily, saving its results as NetCDF files. Each resulting file covers a year's month and presents data layers for each day of the respective month.
+Desenvolvi um [script em R](https://github.com/rfsaldanha/era5daily) usando o pacote KrigR [@kusch2022]. O script baixa um conjunto de indicadores, a partir de 1950, para uma caixa delimitadora cobrindo a África (coordenadas -47.11,71.01,34.88,71.38) e agrega os dados de horários para diários, salvando os resultados como arquivos NetCDF. Cada arquivo resultante cobre um mês de um ano e apresenta camadas de dados para cada dia do respectivo mês.
 
-The table bellow contains the time aggregation functions applied to each climate indicator.
+A tabela abaixo contém as funções de agregação temporal aplicadas a cada indicador climático.
 
-| Indicator               | Daily aggregation function |
+| Indicador               | Função de agregação diária |
 |-------------------------|----------------------------|
-| 2m temperature          | mean, max, min             |
-| 2m dewpoint temperature | mean                       |
-| u component of wind     | mean                       |
-| v component of wind     | mean                       |
-| surface pressure        | mean                       |
-| total precipitation     | sum                        |
+| Temperatura a 2 m       | média, máximo, mínimo      |
+| Temperatura do ponto de orvalho a 2 m | média       |
+| Componente u do vento   | média                      |
+| Componente v do vento   | média                      |
+| Pressão de superfície   | média                      |
+| Precipitação total      | soma                       |
 
-## Datasets
+## Bases de dados
 
-Data from 1950 to 2023 is ready to use and available on Zenodo. Data from 1950 to 1969 is being processed and will be made available soon.
+Os dados de 1950 a 2023 estão prontos para uso e disponíveis no Zenodo.
 
-| Year | Zenodo deposit                                                                                                     |
+| Ano | Depósito Zenodo                                                                                                     |
 |----------------|--------------------------------------------------------|
 | 1950 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.13884834-green.svg)](https://doi.org/10.5281/zenodo.13884834) |
 | 1951 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.13884819-green.svg)](https://doi.org/10.5281/zenodo.13884819) |
@@ -116,6 +116,6 @@ Data from 1950 to 2023 is ready to use and available on Zenodo. Data from 1950 t
 | 2022 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11126723-green.svg)](https://doi.org/10.5281/zenodo.11126723) |
 | 2023 | [![](https://img.shields.io/badge/doi-10.5281/zenodo.11105116-green.svg)](https://doi.org/10.5281/zenodo.11105116) |
 
-### Usage statistics
+### Estatísticas de uso
 
-Usage statistics of this and other datasets are available [here](https://rfsaldanha.github.io/pkgdash/#datasets).
+As estatísticas de uso desta e de outras bases estão disponíveis [aqui](https://rfsaldanha.github.io/pkgdash/#datasets).

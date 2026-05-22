@@ -1,0 +1,15 @@
+---
+title: "Harmonize"
+---
+
+![](images/harmonize-1400.webp){fig-align="center" width="400"}
+
+Harmonizing multi-scale spatiotemporal data for health in climate change hotspots.
+
+Harmonize is a project in partnership with the Health and Climate Observatory and several international partners, including the Barcelona Supercomputing Center (BSC).
+
+The project's objective is to collect, organize and analyze multi-scale spatiotemporal data for health in climate hotspots.
+
+I am working on this project to provide expert knowledge on Brazilian health data collection and analysis.
+
+This work is supported by the Wellcome Trust grant number 224694/Z/21/Z.

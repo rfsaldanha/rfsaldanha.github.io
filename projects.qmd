@@ -1,5 +1,5 @@
 ---
-title: "Projects"
+title: "Projetos"
 listing:
   contents:
     - projects/sauders.qmd

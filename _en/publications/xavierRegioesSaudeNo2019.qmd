@@ -1,0 +1,34 @@
+---
+title: "As Regiões de Saúde no Brasil segundo internações: método para apoio na regionalização de saúde"
+author:
+  - Diego Xavier
+  - Ricardo Oliveira
+  - Christovam Barcellos
+  - Raphael Saldanha
+  - Walter Ramalho
+  - Josué Laguardia
+  - Francisco Viacava
+date: 2019-06-13
+categories: 
+  - regionalization
+  - geographic information systems
+  - cities
+bibliography: publications.bib
+csl: abnt.csl
+---
+
+---
+nocite: |
+  @xavierRegioesSaudeNo2019
+---
+
+![](images/Screenshot from 2023-10-02 13-23-51.png)
+
+## Reference
+
+::: {#refs}
+:::
+
+## Abstract
+
+This study addressed health regionalization on various spatial scales based on patient flow. The article analyzed data through data linkage on the origin and destination of admissions at the municipal level in Brazil in 2016. The analysis is based on graph theory and uses a modularity algorithm that seeks to group municipalities in communities with a large number of interlinks. The algorithm optimizes the number of hospital admissions and discharges, taking patient flow into account. The results are shown, considering different political and administrative spatial structures. Considering patient flow without spatial restrictions, 29 communities were created in the country, compared to 64 communities when the boundaries of the major geographic regions were respected, and 164 when considering only patient flows within the respective states. The results show the importance of historically constituted regions, ignoring formal administrative boundaries, in order to implement access to health services. They also reveal adherence to administrative boundaries in many states of Brazil, demonstrating this spatial scale's importance in the context of access to hospital admissions. The methodology makes relevant contributions to regional health planning.

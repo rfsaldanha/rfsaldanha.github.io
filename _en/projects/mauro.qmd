@@ -1,0 +1,12 @@
+---
+title: "Mauro"
+subtitle: "a Metadata Automatic Retrieval system for Updated References and cited Objects from Scielo."
+---
+
+![Mauro main webpage.](images/mauro-1400.webp){fig-align="center"}
+
+"Mauro" was a research project that I initiated during my Ph.D. at Fiocruz, when I was taking some courses about technological information on health.
+
+The objectives of the project were (1) to download and organize bibliometric information available at "Scielo" from the Public Health, and Brazil collections. (2) Provide a simple and intuitive way for researchers to access its data through filters and visualize information.
+
+The ETL process and dashboard were developed with R and Shiny. The project is now deactivated.

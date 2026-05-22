@@ -1,0 +1,52 @@
+---
+title: "Dataset on infant mortality rates in Brazil"
+author:
+  - Gabriel Souto
+  - Matheus Miloski
+  - Carlos Cardoso
+  - Vinicius Kreischer
+  - Balthazar Paixão
+  - Victor Ribeiro
+  - Raquel Gritz
+  - Lucas Carraro
+  - Sérgio Cruz
+  - Carmen Bonifácio
+  - Raphael Saldanha
+  - Leandro Zirondi
+  - Gizelton Alencar
+  - Ariane Alves
+  - Nelson Nieiro Neto
+  - Rebecca Salles
+  - Jefferson Lima
+  - Marcel Pedroso
+date: 2023-07-17
+categories: 
+  - Health informatics
+  - Infant mortality rates
+  - Statistics
+  - Data science
+bibliography: publications.bib
+csl: abnt.csl
+---
+
+---
+nocite: |
+  @soutoDatasetInfantMortality2023
+---
+
+![](images/Screenshot%20from%202023-10-02%2013-36-00.png)
+
+## Reference
+
+::: {#refs}
+:::
+
+## Abstract
+
+### Objectives
+
+Surveillance of infant and fetal deaths is of paramount importance in thinking about government strategies to reduce these rates, provide greater visibility of these mortality figures in the country, enable the adoption of prevention measures, as well as contribute to a better record of deaths.
+
+### Data description
+
+The dataset comprises fetal, neonatal, early neonatal, late neonatal, and perinatal Mortality Rates of Brazilian municipalities with their respective information, between 2010 to 2020, aggregated by epidemiological week.

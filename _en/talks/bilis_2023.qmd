@@ -1,0 +1,97 @@
+---
+title: "BILIS"
+subtitle: "An unified indicators database"
+author: "Raphael Saldanha"
+institute: "LIS/ICICT/Fiocruz"
+date: "2023-12-18"
+description: "Talk at the Climate and Health for Health Situation Studies Workshop, IRD."
+categories: [bilis]
+format:
+  revealjs: 
+    theme: inria_style.scss
+    logo: logo_icict_150.png
+    transition: fade
+    background-transition: fade
+    pointer:
+      pointerSize: 40
+      color: '#e63312'
+code-link: true
+revealjs-plugins:
+  - pointer
+---
+
+## BILIS
+
+-   *Banco de Indicadores do Laboratório de Informação em Saúde*, ICICT
+-   A proposal to create an unified health indicators database
+
+## Motivation
+
+-   Health indicators are necessary at several projects
+
+-   Projects usually hires people to compute the indicators
+
+-   Several projects uses a common group of basic indicators
+
+-   The indicators may be computed with slight differences in methodology
+
+-   Dependent on project lifecycle
+
+## Objectives
+
+-   Provide a set of health indicators
+
+-   Standardized methodology
+
+-   Shared budget
+
+-   Long term, independent initiative
+
+## Solutions
+
+-   Primarly use already existing sources of secondary data
+
+    -   Death records, new born records, hospitalization records, etc
+
+-   Easy to use R packages to compute health indicators
+
+-   One package, one specific mission
+
+## Packages
+
+-   **brpop**: yearly population estimates for Brazilian administrative levels, including age groups and sex (for standardized indicators)
+
+-   **rpcdas**: query SIM, SINASC, SIH and other health information systems stored at [PCDaS](https://pcdas.icict.fiocruz.br) ElasticSearch stack, returning aggregated data per administrative level and time
+
+-   **recbilis**: query other health information systems stored at ICICT Postgres instance
+
+## Packages
+
+-   **bilis**: compute health indicators at several combinations of administrative levels (municipality, health region and state) and time units (weekly, monthly and yearly)
+
+## Overview
+
+```{mermaid}
+flowchart LR
+sources_1(SIM, SINASC, SIH) --> pcdas_api(PCDaS API)
+pcdas_api --> rpcdas[rpcdas]
+sources_2(SINAN, \n Sivep-Malária) --> postgres(PostgreSQL Server)
+postgres --> recbilis[recbilis]
+pop(Population count) --> brpop[brpop]
+rpcdas --> bilis[bilis]
+recbilis --> bilis
+brpop --> bilis
+bilis --> csv(CSV files)
+bilis --> parquet(Parquet files)
+bilis --> db(Databases and destinations)
+```
+
+## Initial results
+
+-   21 indicators based on [RIPSA](https://www.ripsa.org.br) formulations
+
+-   Crude rates
+
+-   Age standardized rates is the next step
+
+## Thanks!

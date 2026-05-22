@@ -1,18 +1,18 @@
 ---
-title: "Road distances and trip duration matrix for USA counties"
+title: "Matriz de distâncias rodoviárias e duração de viagens para condados dos EUA"
 bibliography: references.bib
 image: images/map_route_usa.png
 ---
 
-## Introduction
+## Introdução
 
-Distance information between places is useful to evaluate the proximity and interconnection of regions. The Euclidean distance between two places, although simple and easy to compute, is not realistic in terms of dislocation costs. This dataset present the **road distance and trip duration metrics** between all USA counties.
+Informações de distância entre lugares são úteis para avaliar a proximidade e a interconexão entre regiões. A distância euclidiana entre dois lugares, embora simples e fácil de calcular, não é realista em termos de custos de deslocamento. Esta base apresenta métricas de **distância rodoviária e duração de viagem** entre todos os condados dos EUA.
 
-## Methods
+## Métodos
 
-I used the county database from [Simple Maps](https://simplemaps.com/data/us-counties) (basic 2024 version), with 3,144 entries.
+Usei a base de condados da [Simple Maps](https://simplemaps.com/data/us-counties) (versão básica de 2024), com 3.144 registros.
 
-A list of pairs of counties is computed using simple combinatorial analysis. Example:
+Uma lista de pares de condados é calculada usando análise combinatória simples. Exemplo:
 
 ```{r}
 x <- c("a", "b", "c", "d")
@@ -21,20 +21,20 @@ combn(x, m = 2)
 ```
 
 ::: callout-note
-With this, I assume that the distance between two counties is the same, independently of the direction.
+Com isso, assumo que a distância entre dois condados é a mesma, independentemente do sentido.
 :::
 
-Thus, for the 3,144 counties, we will have a total number of routes to be computed:
+Assim, para os 3.144 condados, temos o seguinte número total de rotas a calcular:
 
 ```{r}
 choose(n = 3144, k = 2)
 ```
 
-To compute the road distance between pairs of counties, the [OSRM](http://project-osrm.org/) API service was used, with the [{osrm}](https://cran.r-project.org/package=osrm) package [@osrm_paper_2022]. More specifically, the table service was used, considering the "car" profile, returning as result the distance in **meters** and estimated trip duration in **minutes** for the **fastest** route found.
+Para calcular a distância rodoviária entre pares de condados, foi usado o serviço de API [OSRM](http://project-osrm.org/), com o pacote [{osrm}](https://cran.r-project.org/package=osrm) [@osrm_paper_2022]. Mais especificamente, foi usado o serviço de tabela, considerando o perfil "car", retornando como resultado a distância em **metros** e a duração estimada da viagem em **minutos** para a rota **mais rápida** encontrada.
 
-### Route example
+### Exemplo de rota
 
-For example, lets compute the road distance between New York County, NY and Los Angeles Counties, CA with the {osrm} package.
+Por exemplo, vamos calcular a distância rodoviária entre New York County, NY, e Los Angeles County, CA, com o pacote {osrm}.
 
 ```{r}
 #| message: false
@@ -54,12 +54,12 @@ route <- osrmRoute(
 ```
 
 ```{r}
-# Route distance, in meters
+# Distância da rota, em metros
 route$distance
 ```
 
 ```{r}
-# Route duration, in minutes
+# Duração da rota, em minutos
 route$duration
 ```
 
@@ -72,20 +72,20 @@ route |>
 ```
 
 ::: callout-important
-For some pairs of counties, the OSRM service is not able to determine a possible road route. This is expected, as some counties may be not reachable by road.
+Para alguns pares de condados, o serviço OSRM não consegue determinar uma rota rodoviária possível. Isso é esperado, já que alguns condados podem não ser acessíveis por estrada.
 :::
 
-The scripts used to prepare the dataset are available [here](https://github.com/rfsaldanha/distusa).
+Os scripts usados para preparar a base estão disponíveis [aqui](https://github.com/rfsaldanha/distusa).
 
-## Dataset download
+## Baixar a base de dados
 
-The dataset with the road distances and trip duration are available on Zenodo, on RDS format, parquet format, and CSV format.
+A base com as distâncias rodoviárias e durações de viagem está disponível no Zenodo nos formatos RDS, parquet e CSV.
 
-Click the link below to access and download the data.
+Clique no link abaixo para acessar e baixar os dados.
 
 [![](https://zenodo.org/badge/DOI/10.5281/zenodo.13906981.svg)](https://doi.org/10.5281/zenodo.13906981)
 
-You can also download the dataset directly from R, using the [{zendown}](https://rfsaldanha.github.io/zendown/) package.
+Também é possível baixar a base diretamente pelo R usando o pacote [{zendown}](https://rfsaldanha.github.io/zendown/).
 
 ```{r}
 #| message: false
@@ -100,7 +100,7 @@ dist_usa <- readRDS(dist_usa_file)
 head(dist_usa)
 ```
 
-### Graphs
+### Gráficos
 
 ```{r}
 #| message: false
@@ -110,8 +110,8 @@ library(ggplot2)
 ggplot(data = dist_usa, aes(x = dist/1000)) +
   geom_histogram(bins = 100) +
   labs(
-    title = "Fastest route road distance between USA counties", 
-    x = "Distance (km)", y = "count"
+    title = "Distância rodoviária da rota mais rápida entre condados dos EUA", 
+    x = "Distância (km)", y = "contagem"
   ) +
   theme_bw()
 ```
@@ -122,14 +122,14 @@ ggplot(data = dist_usa, aes(x = dist/1000)) +
 ggplot(data = dist_usa, aes(x = dur/60)) +
   geom_histogram(bins = 100) +
   labs(
-    title = "Fastest route estimated trip duration between USA counties", 
-    x = "Trip duration (hours)", y = "count"
+    title = "Duração estimada da rota mais rápida entre condados dos EUA", 
+    x = "Duração da viagem (horas)", y = "contagem"
   ) +
   theme_bw()
 ```
 
-## Future plans
+## Planos futuros
 
--   Compute routes using other available routing services.
+-   Calcular rotas usando outros serviços de roteamento disponíveis.
 
--   Yearly updates of the dataset, as the road infrastructure may change.
+-   Atualizar a base anualmente, já que a infraestrutura rodoviária pode mudar.

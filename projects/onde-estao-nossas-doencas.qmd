@@ -1,16 +1,16 @@
 ---
 title: "Onde estão nossas doenças?"
-subtitle: "Museum exhibition."
+subtitle: "Exposição museológica."
 ---
 
-![Exhibition visitors using the interactive map.](images/cavalarica2-1400.webp){fig-align="center"}
+![Visitantes da exposição usando o mapa interativo.](images/cavalarica2-1400.webp){fig-align="center"}
 
-This was a very special project, where we were invited to develop a museum exhibition at Fiocruz. On this set, we present to the visitors the relationship between health and space by using interactive maps in a wide display and also with printed and tactile special maps for visually impaired visitors.
+Este foi um projeto muito especial, no qual fomos convidados a desenvolver uma exposição museológica na Fiocruz. No espaço, apresentamos aos visitantes a relação entre saúde e espaço usando mapas interativos em uma tela ampla, além de mapas impressos e táteis para visitantes com deficiência visual.
 
-The exhibition is permanent and located at the Fiocruz Maré Campus.
+A exposição é permanente e fica no campus Fiocruz Maré.
 
-The interactive map can also be accessed here: https://rfsaldanha.github.io/app_cavalarica/
+O mapa interativo também pode ser acessado aqui: https://rfsaldanha.github.io/app_cavalarica/
 
-![Tactile map for visually impaired visitors.](images/cavalarica3-1400.webp){fig-align="center"}
+![Mapa tátil para visitantes com deficiência visual.](images/cavalarica3-1400.webp){fig-align="center"}
 
-![Fiocruz president, Dra. Nisia Trindade, contemplating the exhibition.](images/cavalarica1-1400.webp){fig-align="center"}
+![A presidente da Fiocruz, Dra. Nísia Trindade, contemplando a exposição.](images/cavalarica1-1400.webp){fig-align="center"}

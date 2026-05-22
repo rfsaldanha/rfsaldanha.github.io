@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,13 +10,9 @@
 <meta name="author" content="Priscila Albuquerque">
 <meta name="author" content="Raphael Saldanha">
 <meta name="author" content="Fabio Zicker">
-<meta name="dcterms.date" content="2022-03-01">
 
 <title>Geographic accessibility to cancer treatment in Brazil: A network analysis – Raphael Saldanha</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -61,14 +57,15 @@ div.csl-indent {
 <link href="../logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-0c1497c822180f859fc410b87e91da95.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-9c801c0f987b87cb825544174f2aa3e8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -83,17 +80,17 @@ div.csl-indent {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
   }
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2M7VLSRDCB"></script>
@@ -124,8 +121,8 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
     <span class="navbar-title">Raphael Saldanha</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -136,19 +133,19 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../projects.html"> 
-<span class="menu-text">Projects</span></a>
+<span class="menu-text">Projetos</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../code.html"> 
-<span class="menu-text">Packages &amp; Code</span></a>
+<span class="menu-text">Pacotes &amp; Código</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../data.html"> 
-<span class="menu-text">Datasets</span></a>
+<span class="menu-text">Dados</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../publications.html"> 
-<span class="menu-text">Publications</span></a>
+<span class="menu-text">Publicações</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../talks.html"> 
@@ -156,11 +153,15 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../photos/photos.html"> 
-<span class="menu-text">Photos</span></a>
+<span class="menu-text">Fotos</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../blog.html"> 
 <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../en/"> 
+<span class="menu-text">English</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="../blog.xml"> <i class="bi bi-rss" role="img">
@@ -180,17 +181,17 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">Nesta página</h2>
    
   <ul>
-  <li><a href="#reference" id="toc-reference" class="nav-link active" data-scroll-target="#reference">Reference</a></li>
-  <li><a href="#abstract" id="toc-abstract" class="nav-link" data-scroll-target="#abstract">Abstract</a>
+  <li><a href="#referência" id="toc-referência" class="nav-link active" data-scroll-target="#referência">Referência</a></li>
+  <li><a href="#resumo" id="toc-resumo" class="nav-link" data-scroll-target="#resumo">Resumo</a>
   <ul class="collapse">
-  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
-  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a></li>
-  <li><a href="#findings" id="toc-findings" class="nav-link" data-scroll-target="#findings">Findings</a></li>
-  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">Interpretation</a></li>
-  <li><a href="#funding" id="toc-funding" class="nav-link" data-scroll-target="#funding">Funding</a></li>
+  <li><a href="#contexto" id="toc-contexto" class="nav-link" data-scroll-target="#contexto">Contexto</a></li>
+  <li><a href="#métodos" id="toc-métodos" class="nav-link" data-scroll-target="#métodos">Métodos</a></li>
+  <li><a href="#resultados" id="toc-resultados" class="nav-link" data-scroll-target="#resultados">Resultados</a></li>
+  <li><a href="#interpretação" id="toc-interpretação" class="nav-link" data-scroll-target="#interpretação">Interpretação</a></li>
+  <li><a href="#financiamento" id="toc-financiamento" class="nav-link" data-scroll-target="#financiamento">Financiamento</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -215,7 +216,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-heading">Autores</div>
     <div class="quarto-title-meta-contents">
              <p>Bruna Fonseca </p>
              <p>Priscila Albuquerque </p>
@@ -225,9 +226,9 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   </div>
     
     <div>
-    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-heading">Data de Publicação</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 1, 2022</p>
+      <p class="date">1 de março de 2022</p>
     </div>
   </div>
   
@@ -240,41 +241,41 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 
 
 <p><img src="images/Screenshot from 2023-10-02 13-16-46.png" class="img-fluid"></p>
-<section id="reference" class="level2">
-<h2 class="anchored" data-anchor-id="reference">Reference</h2>
+<section id="referência" class="level2">
+<h2 class="anchored" data-anchor-id="referência">Referência</h2>
 <div id="refs" class="references csl-bib-body" data-entry-spacing="1" role="list">
 <div id="ref-fonsecaGeographicAccessibilityCancer2022a" class="csl-entry" role="listitem">
-FONSECA, B. DE P. et al. <a href="https://doi.org/10.1016/j.lana.2021.100153">Geographic accessibility to cancer treatment in <span>Brazil</span>: <span>A</span> network analysis</a>. <strong>The Lancet Regional Health - Americas</strong>, v. 7, p. 100153, Mar. 2022.
+FONSECA, B. DE P. et al. <a href="https://doi.org/10.1016/j.lana.2021.100153">Geographic Accessibility to Cancer Treatment in <span>Brazil</span>: <span>A</span> Network Analysis</a>. <strong>The Lancet Regional Health - Americas</strong>, v. 7, p. 100153, mar. 2022.
 </div>
 </div>
 </section>
-<section id="abstract" class="level2">
-<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
-<section id="background" class="level3">
-<h3 class="anchored" data-anchor-id="background">Background</h3>
-<p>Geographic accessibility to healthcare services is a fundamental component in achieving universal health coverage, the central commitment of the Brazilian Unified Health System (SUS). For cancer patients, poor accessibility has been associated with inadequate treatment, worse prognosis, and poorer quality of life.</p>
+<section id="resumo" class="level2">
+<h2 class="anchored" data-anchor-id="resumo">Resumo</h2>
+<section id="contexto" class="level3">
+<h3 class="anchored" data-anchor-id="contexto">Contexto</h3>
+<p>A acessibilidade geográfica aos serviços de saúde é um componente fundamental para alcançar a cobertura universal de saúde, compromisso central do Sistema Único de Saúde (SUS). Para pacientes com câncer, a baixa acessibilidade tem sido associada a tratamento inadequado, pior prognóstico e menor qualidade de vida.</p>
 </section>
-<section id="methods" class="level3">
-<h3 class="anchored" data-anchor-id="methods">Methods</h3>
-<p>We explored nationwide healthcare data from the SUS health information systems, and mapped the geographic accessibility to cancer treatment in two time-frames: 2009–2010 and 2017–2018. We applied social network analysis (SNA) to estimate the commuting route, flow, and distances travelled by cancer patients to undergo surgical, radiotherapy, and chemotherapy treatment.</p>
+<section id="métodos" class="level3">
+<h3 class="anchored" data-anchor-id="métodos">Métodos</h3>
+<p>Exploramos dados nacionais de saúde dos sistemas de informação do SUS e mapeamos a acessibilidade geográfica ao tratamento do câncer em dois períodos: 2009–2010 e 2017–2018. Aplicamos análise de redes sociais (ARS) para estimar rotas de deslocamento, fluxos e distâncias percorridas por pacientes com câncer para realizar tratamento cirúrgico, radioterápico e quimioterápico.</p>
 </section>
-<section id="findings" class="level3">
-<h3 class="anchored" data-anchor-id="findings">Findings</h3>
-<p>A total of 12,751,728 treatment procedures were analyzed. Overall, more than half of the patients (49·2 to 60·7%) needed to travel beyond their municipality of residence for treatment, a fact that did not change over time. Marked regional differences were observed, as patients living in the northern and midwestern regions of the country had to travel longer distances (weighted average of 296 to 870 km). Cancer care hubs and attraction poles were mostly identified in the southeast and northeast regions, with Barretos being the main hub for all types of treatment throughout time.</p>
+<section id="resultados" class="level3">
+<h3 class="anchored" data-anchor-id="resultados">Resultados</h3>
+<p>Foram analisados 12.751.728 procedimentos de tratamento. Em geral, mais da metade dos pacientes (49,2 a 60,7%) precisou se deslocar para fora do município de residência para tratamento, situação que não mudou ao longo do tempo. Foram observadas diferenças regionais marcantes, pois pacientes residentes nas regiões Norte e Centro-Oeste do país precisaram percorrer distâncias maiores (média ponderada de 296 a 870 km). Os polos de atenção oncológica e de atração foram identificados principalmente nas regiões Sudeste e Nordeste, com Barretos sendo o principal polo para todos os tipos de tratamento ao longo do período.</p>
 </section>
-<section id="interpretation" class="level3">
-<h3 class="anchored" data-anchor-id="interpretation">Interpretation</h3>
-<p>Important regional disparities in the accessibility to cancer treatment in Brazil were revealed, suggesting the need to review the distribution of specialized care in the country. The data presented here contribute to ongoing research on improving access to cancer care and can provide reference to other countries, offering relevant data for oncological and healthcare service evaluation, monitoring, and strategic planning.</p>
+<section id="interpretação" class="level3">
+<h3 class="anchored" data-anchor-id="interpretação">Interpretação</h3>
+<p>Foram reveladas importantes disparidades regionais na acessibilidade ao tratamento do câncer no Brasil, sugerindo a necessidade de revisar a distribuição da atenção especializada no país. Os dados apresentados contribuem para pesquisas em andamento sobre a melhoria do acesso ao cuidado oncológico e podem servir de referência para outros países, oferecendo informações relevantes para avaliação, monitoramento e planejamento estratégico de serviços oncológicos e de saúde.</p>
 </section>
-<section id="funding" class="level3">
-<h3 class="anchored" data-anchor-id="funding">Funding</h3>
-<p>This work was funded by the Oswaldo Cruz Foundation - Fiocruz (Inova - no. 8451635123 to BPF) and the National Council for Scientific and Technological Development - CNPq (no. 407060/2018–9 to BPF); Coordination for the Improvement of Higher Education Personnel – CAPES (scholarship to PCA, Finance Code 001); and Instituto Nacional de Ciência e Tecnologia de Inovação em Doenças de Populações Negligenciadas (INCT-IDPN).</p>
+<section id="financiamento" class="level3">
+<h3 class="anchored" data-anchor-id="financiamento">Financiamento</h3>
+<p>Este trabalho foi financiado pela Fundação Oswaldo Cruz - Fiocruz (Inova - nº 8451635123 para BPF) e pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico - CNPq (nº 407060/2018–9 para BPF); Coordenação de Aperfeiçoamento de Pessoal de Nível Superior - CAPES (bolsa para PCA, Código de Financiamento 001); e Instituto Nacional de Ciência e Tecnologia de Inovação em Doenças de Populações Negligenciadas (INCT-IDPN).</p>
 
 
 </section>
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -300,12 +301,12 @@ FONSECA, B. DE P. et al. <a href="https://doi.org/10.1016/j.lana.2021.100153">Ge
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Copiada");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Copiada");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",

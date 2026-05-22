@@ -32,11 +32,11 @@ nocite: |
 
 ![](images/Screenshot from 2023-10-02 13-19-41.png)
 
-## Reference
+## Referência
 
 ::: {#refs}
 :::
 
-## Abstract
+## Resumo
 
-Neonatal mortality is a global public health problem, and the efforts to reduce child mortality is one of the goals of the 2030 Agenda for Sustainable Development, launched in 2015 by the United Nations. The availability of historical neonatal mortality rates (NMR) data in Brazilian municipalities is crucial to evaluate trends at local, regional and national level, identifying gaps and vulnerable territories. Therefore, the objective of this article is to offer an integrated dataset containing monthly data in a historical series from 1996 to 2017 with information on all births, neonatal deaths, and NMR (total, early and late components) enriched with information related to the municipality.
+A mortalidade neonatal é um problema global de saúde pública, e os esforços para reduzir a mortalidade infantil estão entre os objetivos da Agenda 2030 para o Desenvolvimento Sustentável, lançada em 2015 pelas Nações Unidas. A disponibilidade de dados históricos sobre taxas de mortalidade neonatal (TMN) nos municípios brasileiros é essencial para avaliar tendências em níveis local, regional e nacional, identificando lacunas e territórios vulneráveis. Portanto, o objetivo deste artigo é oferecer uma base de dados integrada contendo dados mensais em uma série histórica de 1996 a 2017, com informações sobre todos os nascimentos, óbitos neonatais e TMN (total, componentes precoce e tardio), enriquecidas com informações relacionadas ao município.

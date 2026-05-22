@@ -36,17 +36,17 @@ nocite: |
 
 ![](images/Screenshot%20from%202023-10-02%2013-36-00.png)
 
-## Reference
+## Referência
 
 ::: {#refs}
 :::
 
-## Abstract
+## Resumo
 
-### Objectives
+### Objetivos
 
-Surveillance of infant and fetal deaths is of paramount importance in thinking about government strategies to reduce these rates, provide greater visibility of these mortality figures in the country, enable the adoption of prevention measures, as well as contribute to a better record of deaths.
+A vigilância dos óbitos infantis e fetais é de extrema importância para pensar estratégias governamentais de redução dessas taxas, dar maior visibilidade a esses indicadores de mortalidade no país, possibilitar a adoção de medidas de prevenção e contribuir para melhor registro dos óbitos.
 
-### Data description
+### Descrição dos dados
 
-The dataset comprises fetal, neonatal, early neonatal, late neonatal, and perinatal Mortality Rates of Brazilian municipalities with their respective information, between 2010 to 2020, aggregated by epidemiological week.
+A base de dados reúne taxas de mortalidade fetal, neonatal, neonatal precoce, neonatal tardia e perinatal dos municípios brasileiros, com suas respectivas informações, entre 2010 e 2020, agregadas por semana epidemiológica.

@@ -1,0 +1,9 @@
+---
+title: "Saúde RS"
+---
+
+![](images/sauders.png){fig-align="center" width="400"}
+
+Saúde RS is a fast response project to the [Rio Grande do Sul flooding disaster](https://en.wikipedia.org/wiki/2024_Rio_Grande_do_Sul_floods) that occurred in Brazil on May 2024. It presents maps and data sources about the flooding, with emphasis to map health units that are in risk areas.
+
+Access: <https://rfsaldanha.github.io/sauders>

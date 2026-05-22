@@ -24,25 +24,25 @@ nocite: |
 
 ![](images/Screenshot from 2023-10-02 13-22-34.png)
 
-## Reference
+## Referência
 
 ::: {#refs}
 :::
 
-## Abstract
+## Resumo
 
-### Introduction
+### Introdução
 
-Monitoring coronavirus disease (COVID-19)-related infections and deaths in Brazil is controversial, with increasing pressure to ease social distance measures. However, no evidence of a sustained, widespread fall in cases exists.
+O monitoramento de infecções e mortes relacionadas à doença pelo coronavírus (COVID-19) no Brasil é controverso, com pressão crescente para flexibilizar medidas de distanciamento social. No entanto, não há evidências de uma queda sustentada e disseminada dos casos.
 
-### Methods
+### Métodos
 
-We used segmented (joinpoint) regression analysis to describe the behavior of COVID-19 infections in Brazilian capital cities.
+Usamos análise de regressão segmentada (joinpoint) para descrever o comportamento das infecções por COVID-19 nas capitais brasileiras.
 
-### Results
+### Resultados
 
-All capitals showed an exponential or a near-exponential increase in cases through May. A decline in reported cases was subsequently noted in 20 cities but was only significant for 8 (29.6%) and was followed in two by a renewed increase.
+Todas as capitais apresentaram aumento exponencial ou quase exponencial dos casos até maio. Em seguida, foi observada queda nos casos notificados em 20 cidades, mas essa queda foi significativa em apenas 8 (29,6%) e foi seguida por novo aumento em duas delas.
 
-### Conclusions
+### Conclusões
 
-Caution is warranted when considering the relaxation of restrictions.
+É necessária cautela ao considerar a flexibilização das restrições.

@@ -1,0 +1,15 @@
+---
+title: "ArboAlvo"
+subtitle: "Stratifying arboviruses risk."
+---
+
+![ArboAlvo dashboard.](images/arboalvo-1400.webp){fig-align="center"}
+
+Conducted at the Instituto Oswaldo Cruz (IOC), the project ArboAlvo's objective is to stratify arboviruses risk into national and intra-municipal levels, considering epidemiolocal, entomological, and socio-demographic dimensions.
+
+I participated in this project by creating, reviewing, and optimizing code in the project data analysis, and developing data dashboards.
+
+![ArboAlvo dashboard running on Natal local server.](images/natal2-1400.webp){fig-align="center"}
+
+![With the Natal IT team, August 8, 2022.](images/natal1-1400.webp){fig-align="center"}
+

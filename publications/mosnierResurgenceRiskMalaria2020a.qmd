@@ -42,25 +42,25 @@ nocite: |
 
 ![](images/Screenshot from 2023-10-02 13-21-58.png)
 
-## Reference
+## Referência
 
 ::: {#refs}
 :::
 
-## Abstract
+## Resumo
 
-### Background
+### Contexto
 
-In 2017, inhabitants along the border between French Guiana and Brazil were affected by a malaria outbreak primarily due to Plasmodium vivax (Pv). While malaria cases have steadily declined between 2005 and 2016 in this Amazonian region, a resurgence was observed in 2017.
+Em 2017, moradores da fronteira entre a Guiana Francesa e o Brasil foram afetados por um surto de malária causado principalmente por Plasmodium vivax (Pv). Embora os casos de malária tenham diminuído de forma constante entre 2005 e 2016 nessa região amazônica, observou-se uma ressurgência em 2017.
 
-### Methods
+### Métodos
 
-Two investigations were performed according to different spatial scales and information details: (1) a local study on the French Guiana border, which enabled a thorough investigation of malaria cases treated at a local village health center and the entomological circumstances in the most affected neighborhood, and (2) a regional and cross-border study, which enabled exploration of the regional spatiotemporal epidemic dynamic. Number and location of malaria cases were estimated using French and Brazilian surveillance systems.
+Foram realizadas duas investigações em diferentes escalas espaciais e níveis de detalhe da informação: (1) um estudo local na fronteira da Guiana Francesa, que permitiu investigação detalhada dos casos de malária tratados em um centro de saúde de uma aldeia local e das circunstâncias entomológicas no bairro mais afetado; e (2) um estudo regional e transfronteiriço, que permitiu explorar a dinâmica epidêmica espaço-temporal regional. O número e a localização dos casos de malária foram estimados usando os sistemas de vigilância francês e brasileiro.
 
-### Results
+### Resultados
 
-On the French Guianese side of the border in Saint-Georges de l'Oyapock, the attack rate was 5.5% (n = 4000), reaching 51.4% (n = 175) in one Indigenous neighborhood. Entomological findings suggest a peak of Anopheles darlingi density in August and September. Two female An. darlingi (n = 1104, 0.18%) were found to be Pvpositive during this peak. During the same period, aggregated data from passive surveillance conducted by Brazilian and French Guianese border health centers identified 1566 cases of Pv infection. Temporal distribution during the 2007--2018 period displayed seasonal patterns with a peak in November 2017. Four clusters were identified among epidemic profiles of cross-border area localities. All localities of the first two clusters were Brazilian. The localization of the first cluster suggests an onset of the outbreak in an Indigenous reservation, subsequently expanding to French Indigenous neighborhoods and non-Native communities.
+No lado guianense da fronteira, em Saint-Georges de l'Oyapock, a taxa de ataque foi de 5,5% (n = 4000), chegando a 51,4% (n = 175) em um bairro indígena. Os achados entomológicos sugerem um pico de densidade de Anopheles darlingi em agosto e setembro. Duas fêmeas de An. darlingi (n = 1104, 0,18%) foram encontradas positivas para Pv durante esse pico. No mesmo período, dados agregados da vigilância passiva conduzida por centros de saúde de fronteira brasileiros e guianenses identificaram 1566 casos de infecção por Pv. A distribuição temporal no período de 2007--2018 apresentou padrões sazonais, com pico em novembro de 2017. Quatro agrupamentos foram identificados entre os perfis epidêmicos das localidades da área transfronteiriça. Todas as localidades dos dois primeiros agrupamentos eram brasileiras. A localização do primeiro agrupamento sugere início do surto em uma reserva indígena, com expansão posterior para bairros indígenas franceses e comunidades não indígenas.
 
-### Conclusions
+### Conclusões
 
-The current findings demonstrate a potential increase in malaria cases in an area with otherwise declining numbers. This is a transborder region where human mobility and remote populations challenge malaria control programs. This investigation illustrates the importance of international border surveillance and collaboration for malaria control, particularly in Indigenous villages and mobile populations.
+Os achados demonstram um potencial aumento dos casos de malária em uma área que, de outra forma, apresentava números em declínio. Trata-se de uma região transfronteiriça em que a mobilidade humana e populações remotas desafiam os programas de controle da malária. Esta investigação ilustra a importância da vigilância e da colaboração internacional em áreas de fronteira para o controle da malária, particularmente em aldeias indígenas e populações móveis.

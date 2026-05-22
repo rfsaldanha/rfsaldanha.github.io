@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="pt-BR"><head>
 <link href="../logo.png" rel="icon" type="image/png">
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-html/tabby.min.js"></script>
@@ -7,11 +7,11 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.8.26">
 <meta name="author" content="Raphael Saldanha">
 <meta name="dcterms.date" content="2023-12-18">
 <title>Raphael Saldanha – Disease and climate data fusion for modelling</title>
@@ -21,9 +21,6 @@
 <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
 <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
 <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -102,7 +99,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-4cbb34d3161b77b056ff4d13ef6eed0f.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-9ac444469c580610f267e872d8fc72d6.css">
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2M7VLSRDCB"></script><script type="text/javascript">
 
   window.dataLayer = window.dataLayer || [];
@@ -396,7 +393,7 @@ mun --&gt; zs(Zonal statistics)
 <span id="cb1-4"><a></a>             <span class="at">FUN =</span> <span class="st">"max"</span>,</span>
 <span id="cb1-5"><a></a>             <span class="at">Extent =</span> <span class="fu">extent</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="fl">118.47</span>,<span class="sc">-</span><span class="fl">34.1</span>,<span class="sc">-</span><span class="fl">56.65</span>, <span class="fl">33.28</span>)), </span>
 <span id="cb1-6"><a></a>             <span class="at">Dir =</span> <span class="st">"dir_name"</span>, <span class="at">FileName =</span> <span class="st">"file_name.nc"</span>, </span>
-<span id="cb1-7"><a></a>             <span class="at">API_User =</span> <span class="st">"api_user"</span>, <span class="at">API_Key =</span> <span class="st">"api_key"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-7"><a></a>             <span class="at">API_User =</span> <span class="st">"api_user"</span>, <span class="at">API_Key =</span> <span class="st">"api_key"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ul>
 <li>Took ~15 days to download and process the data from 8 climate indicators covering the Latin America region</li>
@@ -448,7 +445,7 @@ mun --&gt; zs(Zonal statistics)
 <span id="cb2-2"><a></a>  <span class="at">x =</span> rst,</span>
 <span id="cb2-3"><a></a>  <span class="at">y =</span> pol,</span>
 <span id="cb2-4"><a></a>  <span class="at">fun =</span> <span class="st">"mean"</span></span>
-<span id="cb2-5"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-5"><a></a>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section><section id="results" class="slide level2 smaller"><h2>Results</h2>
 <table class="caption-top" style="width:100%;">
@@ -830,12 +827,12 @@ mun --&gt; zs(Zonal statistics)
           // flash "checked"
           button.classList.add('code-copy-button-checked');
           var currentTitle = button.getAttribute("title");
-          button.setAttribute("title", "Copied!");
+          button.setAttribute("title", "Copiada");
           let tooltip;
           if (window.bootstrap) {
             button.setAttribute("data-bs-toggle", "tooltip");
             button.setAttribute("data-bs-placement", "left");
-            button.setAttribute("data-bs-title", "Copied!");
+            button.setAttribute("data-bs-title", "Copiada");
             tooltip = new bootstrap.Tooltip(button, 
               { trigger: "manual", 
                 customClass: "code-copy-button-tooltip",

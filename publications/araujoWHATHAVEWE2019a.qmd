@@ -22,10 +22,9 @@ nocite: |
   @araujoWHATHAVEWE2019a
 ---
 
-## Reference
+## Referência
 
 ::: {#refs}
 :::
 
-Naming is an ambitious task. Naming an object or event means recognizing, distinguishing and giving importance to it. Whoever names acquires power over what was previously indescribable. The name is sign and meaning, skewed in origin and use. Naming and understanding the complexity of what occurred in the city of Mariana and its causes and consequences represents a challenge for which disciplinary approaches centered on scientific knowledge are insufficient. Thus, our search for studies on what happened in Mariana after the failure of the Fundão Dam in November 2015 should be complemented by the stories of residents of that place, by their knowledge. We recognize that this approach to examining such an issue would only be a limited contribution and thus constitutes the primary condition for an interdisciplinary exercise.
-
+Nomear é uma tarefa ambiciosa. Nomear um objeto ou evento significa reconhecê-lo, distingui-lo e atribuir-lhe importância. Quem nomeia adquire poder sobre aquilo que antes era indescritível. O nome é signo e significado, enviesado em sua origem e em seu uso. Nomear e compreender a complexidade do que ocorreu na cidade de Mariana, suas causas e consequências, representa um desafio para o qual abordagens disciplinares centradas no conhecimento científico são insuficientes. Assim, nossa busca por estudos sobre o que aconteceu em Mariana após o rompimento da Barragem de Fundão em novembro de 2015 deve ser complementada pelas histórias dos moradores daquele lugar, por seus saberes. Reconhecemos que essa abordagem para examinar tal questão seria apenas uma contribuição limitada e, por isso, constitui a condição primária para um exercício interdisciplinar.

@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NDVI averages for Brazilian municipalities – Raphael Saldanha</title>
+<title>Médias de NDVI para municípios brasileiros – Raphael Saldanha</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -71,14 +68,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-0c1497c822180f859fc410b87e91da95.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-9c801c0f987b87cb825544174f2aa3e8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -93,17 +91,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
   }
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2M7VLSRDCB"></script>
@@ -134,8 +132,8 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
     <span class="navbar-title">Raphael Saldanha</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -146,19 +144,19 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../projects.html"> 
-<span class="menu-text">Projects</span></a>
+<span class="menu-text">Projetos</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../code.html"> 
-<span class="menu-text">Packages &amp; Code</span></a>
+<span class="menu-text">Pacotes &amp; Código</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../data.html"> 
-<span class="menu-text">Datasets</span></a>
+<span class="menu-text">Dados</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../publications.html"> 
-<span class="menu-text">Publications</span></a>
+<span class="menu-text">Publicações</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../talks.html"> 
@@ -166,11 +164,15 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../photos/photos.html"> 
-<span class="menu-text">Photos</span></a>
+<span class="menu-text">Fotos</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../blog.html"> 
 <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../en/"> 
+<span class="menu-text">English</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="../blog.xml"> <i class="bi bi-rss" role="img">
@@ -188,7 +190,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">NDVI averages for Brazilian municipalities</h1>
+      <h1 class="title">Médias de NDVI para municípios brasileiros</h1>
                       </div>
   </div>
     
@@ -206,15 +208,15 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">Nesta página</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#source-data" id="toc-source-data" class="nav-link" data-scroll-target="#source-data">Source data</a></li>
-  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a></li>
-  <li><a href="#download" id="toc-download" class="nav-link" data-scroll-target="#download">Download</a></li>
-  <li><a href="#data-example" id="toc-data-example" class="nav-link" data-scroll-target="#data-example">Data example</a></li>
-  <li><a href="#session-info" id="toc-session-info" class="nav-link" data-scroll-target="#session-info">Session info</a></li>
+  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução">Introdução</a></li>
+  <li><a href="#dados-de-origem" id="toc-dados-de-origem" class="nav-link" data-scroll-target="#dados-de-origem">Dados de origem</a></li>
+  <li><a href="#métodos" id="toc-métodos" class="nav-link" data-scroll-target="#métodos">Métodos</a></li>
+  <li><a href="#baixar-os-dados" id="toc-baixar-os-dados" class="nav-link" data-scroll-target="#baixar-os-dados">Baixar os dados</a></li>
+  <li><a href="#exemplo-com-os-dados" id="toc-exemplo-com-os-dados" class="nav-link" data-scroll-target="#exemplo-com-os-dados">Exemplo com os dados</a></li>
+  <li><a href="#informações-da-sessão" id="toc-informações-da-sessão" class="nav-link" data-scroll-target="#informações-da-sessão">Informações da sessão</a></li>
   </ul>
 </nav>
     </div>
@@ -226,32 +228,32 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 
 
 <p><img src="images/ndvi.png" class="img-fluid"></p>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>The Normalized Difference Vegetation Index (NDVI) is a indicator that quantifies vegetation cover and health by measuring the difference between near-infrared (strongly reflected by healthy plants) and red light (absorbed by chlorophyll). Its has the ability to capture environmental conditions that influence disease dynamics, nutrition, and overall well-being. For example, NDVI helps identify areas at risk of vector-borne diseases such as malaria, dengue, and leishmaniasis, since vegetation cover and humidity create favorable habitats for vectors like mosquitoes and sandflies. NDVI also supports urban health research by assessing the distribution of green spaces, which are linked to reduced air pollution exposure, better mental health, and mitigation of heat stress.</p>
-<p>I created this dataset with NDVI averages for Brazilian municipalities using a zonal statistics procedure with data available from the <a href="land.copernicus.eu/">Copernicus Land Monitoring Service</a>.</p>
+<section id="introdução" class="level2">
+<h2 class="anchored" data-anchor-id="introdução">Introdução</h2>
+<p>O Índice de Vegetação por Diferença Normalizada (NDVI) é um indicador que quantifica a cobertura e a saúde da vegetação medindo a diferença entre o infravermelho próximo, fortemente refletido por plantas saudáveis, e a luz vermelha, absorvida pela clorofila. Ele captura condições ambientais que influenciam a dinâmica de doenças, nutrição e bem-estar. Por exemplo, o NDVI ajuda a identificar áreas de risco para doenças transmitidas por vetores, como malária, dengue e leishmaniose, já que cobertura vegetal e umidade criam habitats favoráveis para mosquitos e flebotomíneos.</p>
+<p>Criei esta base com médias de NDVI para municípios brasileiros usando estatísticas zonais com dados disponíveis no <a href="land.copernicus.eu/">Copernicus Land Monitoring Service</a>.</p>
 </section>
-<section id="source-data" class="level2">
-<h2 class="anchored" data-anchor-id="source-data">Source data</h2>
-<p>The following source data were used.</p>
+<section id="dados-de-origem" class="level2">
+<h2 class="anchored" data-anchor-id="dados-de-origem">Dados de origem</h2>
+<p>Foram usados os seguintes dados de origem.</p>
 <ul>
-<li><p>From January 1, 1999 to December 31, 2019, raster data with 1km spatial resolution was used (<a href="https://land.copernicus.eu/en/products/vegetation/normalised-difference-vegetation-index-v3-0-1km">NDVI 1999-2020 (raster 1 km), global, 10-daily – version 3</a>).</p></li>
-<li><p>From January 1, 2020 to June 30, 2020, raster data with 300m spatial resolution was used (<a href="https://land.copernicus.eu/en/products/vegetation/normalized-difference-vegetation-index-300m-v1.0">NDVI 2014-2020 (raster 300 m), global, 10-daily – version 1</a>).</p></li>
-<li><p>From July 1, 2020, raster data with 300m spatial resolution was used (<a href="https://land.copernicus.eu/en/products/vegetation/normalised-difference-vegetation-index-v2-0-300m">NDVI 2020-present (raster 300 m), global, 10-daily – version 2</a>).</p></li>
+<li><p>De 1º de janeiro de 1999 a 31 de dezembro de 2019, foram usados dados raster com resolução espacial de 1 km (<a href="https://land.copernicus.eu/en/products/vegetation/normalised-difference-vegetation-index-v3-0-1km">NDVI 1999-2020 (raster 1 km), global, 10-daily – version 3</a>).</p></li>
+<li><p>De 1º de janeiro de 2020 a 30 de junho de 2020, foram usados dados raster com resolução espacial de 300 m (<a href="https://land.copernicus.eu/en/products/vegetation/normalized-difference-vegetation-index-300m-v1.0">NDVI 2014-2020 (raster 300 m), global, 10-daily – version 1</a>).</p></li>
+<li><p>A partir de 1º de julho de 2020, foram usados dados raster com resolução espacial de 300 m (<a href="https://land.copernicus.eu/en/products/vegetation/normalised-difference-vegetation-index-v2-0-300m">NDVI 2020-present (raster 300 m), global, 10-daily – version 2</a>).</p></li>
 </ul>
 </section>
-<section id="methods" class="level2">
-<h2 class="anchored" data-anchor-id="methods">Methods</h2>
-<p>First, the available data for each month was averaged, generating monthly NDVI files. Then, for each month, the following zonal statistics were computed for each Brazilian municipality: mean, maximum value, minimum value, standard variation.</p>
-<p>The R scripts for download, processing and export data are available <a href="https://github.com/rfsaldanha/landdata">here</a>.</p>
+<section id="métodos" class="level2">
+<h2 class="anchored" data-anchor-id="métodos">Métodos</h2>
+<p>Primeiro, os dados disponíveis de cada mês foram promediados, gerando arquivos mensais de NDVI. Em seguida, para cada mês, foram calculadas as seguintes estatísticas zonais para cada município brasileiro: média, valor máximo, valor mínimo e desvio padrão.</p>
+<p>Os scripts em R para baixar, processar e exportar os dados estão disponíveis <a href="https://github.com/rfsaldanha/landdata">aqui</a>.</p>
 </section>
-<section id="download" class="level2">
-<h2 class="anchored" data-anchor-id="download">Download</h2>
-<p>1999-2024: <a href="https://doi.org/10.5281/zenodo.17093199"><img src="https://img.shields.io/badge/download-10.5281/zenodo.17093199-green.svg" class="img-fluid"></a></p>
-<p>2025: <a href="https://doi.org/10.5281/zenodo.18329383"><img src="https://img.shields.io/badge/download-10.5281/zenodo.18329383-green.svg" class="img-fluid"></a></p>
+<section id="baixar-os-dados" class="level2">
+<h2 class="anchored" data-anchor-id="baixar-os-dados">Baixar os dados</h2>
+<p>1999-2024: <a href="https://doi.org/10.5281/zenodo.17093199"><img src="https://img.shields.io/badge/baixar-10.5281/zenodo.17093199-green.svg" class="img-fluid"></a></p>
+<p>2025: <a href="https://doi.org/10.5281/zenodo.18329383"><img src="https://img.shields.io/badge/baixar-10.5281/zenodo.18329383-green.svg" class="img-fluid"></a></p>
 </section>
-<section id="data-example" class="level2">
-<h2 class="anchored" data-anchor-id="data-example">Data example</h2>
+<section id="exemplo-com-os-dados" class="level2">
+<h2 class="anchored" data-anchor-id="exemplo-com-os-dados">Exemplo com os dados</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(zendown)</span>
@@ -265,8 +267,8 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value)) <span class="sc">+</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Monthly average NDVI"</span>, <span class="at">subtitle =</span> <span class="st">"Patos, PB"</span>) <span class="sc">+</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"NDVI médio mensal"</span>, <span class="at">subtitle =</span> <span class="st">"Patos, PB"</span>) <span class="sc">+</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -281,8 +283,8 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value)) <span class="sc">+</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Monthly average NDVI"</span>, <span class="at">subtitle =</span> <span class="st">"Sobral, CE"</span>) <span class="sc">+</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"NDVI médio mensal"</span>, <span class="at">subtitle =</span> <span class="st">"Sobral, CE"</span>) <span class="sc">+</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -292,70 +294,70 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 </div>
 </div>
 </section>
-<section id="session-info" class="level2">
-<h2 class="anchored" data-anchor-id="session-info">Session info</h2>
+<section id="informações-da-sessão" class="level2">
+<h2 class="anchored" data-anchor-id="informações-da-sessão">Informações da sessão</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────
  setting  value
  version  R version 4.3.3 (2024-02-29)
- os       Ubuntu 24.04.3 LTS
+ os       Ubuntu 24.04.4 LTS
  system   x86_64, linux-gnu
  ui       X11
  language (EN)
- collate  en_US.UTF-8
- ctype    pt_BR.UTF-8
+ collate  C.UTF-8
+ ctype    C.UTF-8
  tz       America/Sao_Paulo
- date     2026-01-21
- pandoc   3.6.3 @ /usr/share/positron/resources/app/quarto/bin/tools/x86_64/ (via rmarkdown)
- quarto   1.8.26 @ /opt/quarto/bin/quarto
+ date     2026-05-21
+ pandoc   3.1.3 @ /usr/bin/ (via rmarkdown)
+ quarto   1.8.26 @ /usr/local/bin/quarto
 
 ─ Packages ───────────────────────────────────────────────────────────────────
- package      * version  date (UTC) lib source
- arrow        * 22.0.0.1 2025-12-23 [1] CRAN (R 4.3.3)
- assertthat     0.2.1    2019-03-21 [1] CRAN (R 4.3.3)
- backports      1.5.0    2024-05-23 [1] CRAN (R 4.3.3)
- bit            4.6.0    2025-03-06 [1] CRAN (R 4.3.3)
- bit64          4.6.0-1  2025-01-16 [1] CRAN (R 4.3.3)
- checkmate      2.3.3    2025-08-18 [1] CRAN (R 4.3.3)
- cli            3.6.5    2025-04-23 [1] CRAN (R 4.3.3)
- dichromat      2.0-0.1  2022-05-02 [1] CRAN (R 4.3.3)
- digest         0.6.39   2025-11-19 [1] CRAN (R 4.3.3)
- dplyr        * 1.1.4    2023-11-17 [1] CRAN (R 4.3.3)
- evaluate       1.0.5    2025-08-27 [1] CRAN (R 4.3.3)
- farver         2.1.2    2024-05-13 [1] CRAN (R 4.3.3)
- fastmap        1.2.0    2024-05-15 [1] CRAN (R 4.3.3)
- fs             1.6.6    2025-04-12 [1] CRAN (R 4.3.3)
- generics       0.1.4    2025-05-09 [1] CRAN (R 4.3.3)
- ggplot2      * 4.0.1    2025-11-14 [1] CRAN (R 4.3.3)
- glue           1.8.0    2024-09-30 [1] CRAN (R 4.3.3)
- gtable         0.3.6    2024-10-25 [1] CRAN (R 4.3.3)
- htmltools      0.5.9    2025-12-04 [1] CRAN (R 4.3.3)
- htmlwidgets    1.6.4    2023-12-06 [1] CRAN (R 4.3.3)
- jsonlite       2.0.0    2025-03-27 [1] CRAN (R 4.3.3)
- knitr          1.51     2025-12-20 [1] CRAN (R 4.3.3)
- labeling       0.4.3    2023-08-29 [1] CRAN (R 4.3.3)
- lifecycle      1.0.5    2026-01-08 [1] CRAN (R 4.3.3)
- magrittr       2.0.4    2025-09-12 [1] CRAN (R 4.3.3)
- otel           0.2.0    2025-08-29 [1] CRAN (R 4.3.3)
- pillar         1.11.1   2025-09-17 [1] CRAN (R 4.3.3)
- pkgconfig      2.0.3    2019-09-22 [1] CRAN (R 4.3.3)
- purrr          1.2.1    2026-01-09 [1] CRAN (R 4.3.3)
- R6             2.6.1    2025-02-15 [1] CRAN (R 4.3.3)
- RColorBrewer   1.1-3    2022-04-03 [1] CRAN (R 4.3.3)
- rlang          1.1.7    2026-01-09 [1] CRAN (R 4.3.3)
- rmarkdown      2.30     2025-09-28 [1] CRAN (R 4.3.3)
- S7             0.2.1    2025-11-14 [1] CRAN (R 4.3.3)
- scales         1.4.0    2025-04-24 [1] CRAN (R 4.3.3)
- sessioninfo    1.2.3    2025-02-05 [1] CRAN (R 4.3.3)
- tibble         3.3.1    2026-01-11 [1] CRAN (R 4.3.3)
- tidyselect     1.2.1    2024-03-11 [1] CRAN (R 4.3.3)
- vctrs          0.7.0    2026-01-16 [1] CRAN (R 4.3.3)
- withr          3.0.2    2024-10-28 [1] CRAN (R 4.3.3)
- xfun           0.56     2026-01-18 [1] CRAN (R 4.3.3)
- yaml           2.3.12   2025-12-10 [1] CRAN (R 4.3.3)
- zendown      * 0.1.0    2024-05-21 [1] CRAN (R 4.3.3)
+ package      * version date (UTC) lib source
+ arrow        * 24.0.0  2026-04-29 [1] CRAN (R 4.3.3)
+ assertthat     0.2.1   2019-03-21 [1] CRAN (R 4.3.3)
+ backports      1.5.1   2026-04-03 [1] CRAN (R 4.3.3)
+ bit            4.6.0   2025-03-06 [1] CRAN (R 4.3.3)
+ bit64          4.8.0   2026-04-21 [1] CRAN (R 4.3.3)
+ checkmate      2.3.4   2026-02-03 [1] CRAN (R 4.3.3)
+ cli            3.6.6   2026-04-09 [1] CRAN (R 4.3.3)
+ dichromat      2.0-0.1 2022-05-02 [1] CRAN (R 4.3.3)
+ digest         0.6.39  2025-11-19 [1] CRAN (R 4.3.3)
+ dplyr        * 1.2.1   2026-04-03 [1] CRAN (R 4.3.3)
+ evaluate       1.0.5   2025-08-27 [1] CRAN (R 4.3.3)
+ farver         2.1.2   2024-05-13 [1] CRAN (R 4.3.3)
+ fastmap        1.2.0   2024-05-15 [1] CRAN (R 4.3.3)
+ fs             2.1.0   2026-04-18 [1] CRAN (R 4.3.3)
+ generics       0.1.4   2025-05-09 [1] CRAN (R 4.3.3)
+ ggplot2      * 4.0.3   2026-04-22 [1] CRAN (R 4.3.3)
+ glue           1.8.1   2026-04-17 [1] CRAN (R 4.3.3)
+ gtable         0.3.6   2024-10-25 [1] CRAN (R 4.3.3)
+ htmltools      0.5.9   2025-12-04 [1] CRAN (R 4.3.3)
+ htmlwidgets    1.6.4   2023-12-06 [1] CRAN (R 4.3.3)
+ jsonlite       2.0.0   2025-03-27 [1] CRAN (R 4.3.3)
+ knitr          1.51    2025-12-20 [1] CRAN (R 4.3.3)
+ labeling       0.4.3   2023-08-29 [1] CRAN (R 4.3.3)
+ lifecycle      1.0.5   2026-01-08 [1] CRAN (R 4.3.3)
+ magrittr       2.0.5   2026-04-04 [1] CRAN (R 4.3.3)
+ otel           0.2.0   2025-08-29 [1] CRAN (R 4.3.3)
+ pillar         1.11.1  2025-09-17 [1] CRAN (R 4.3.3)
+ pkgconfig      2.0.3   2019-09-22 [1] CRAN (R 4.3.3)
+ purrr          1.2.2   2026-04-10 [1] CRAN (R 4.3.3)
+ R6             2.6.1   2025-02-15 [1] CRAN (R 4.3.3)
+ RColorBrewer   1.1-3   2022-04-03 [1] CRAN (R 4.3.3)
+ rlang          1.2.0   2026-04-06 [1] CRAN (R 4.3.3)
+ rmarkdown      2.31    2026-03-26 [1] CRAN (R 4.3.3)
+ S7             0.2.2   2026-04-22 [1] CRAN (R 4.3.3)
+ scales         1.4.0   2025-04-24 [1] CRAN (R 4.3.3)
+ sessioninfo    1.2.3   2025-02-05 [1] CRAN (R 4.3.3)
+ tibble         3.3.1   2026-01-11 [1] CRAN (R 4.3.3)
+ tidyselect     1.2.1   2024-03-11 [1] CRAN (R 4.3.3)
+ vctrs          0.7.3   2026-04-11 [1] CRAN (R 4.3.3)
+ withr          3.0.2   2024-10-28 [1] CRAN (R 4.3.3)
+ xfun           0.57    2026-03-20 [1] CRAN (R 4.3.3)
+ yaml           2.3.12  2025-12-10 [1] CRAN (R 4.3.3)
+ zendown      * 0.1.0   2024-05-21 [1] CRAN (R 4.3.3)
 
  [1] /home/raphaelsaldanha/R/x86_64-pc-linux-gnu-library/4.3
  [2] /usr/local/lib/R/site-library
@@ -370,7 +372,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -396,12 +398,12 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Copiada");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Copiada");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
@@ -793,7 +795,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
     script.dataset.emitMetadata = "0";
     script.dataset.inputPosition = "bottom";
     script.dataset.theme = getTheme();
-    script.dataset.lang = "en";
+    script.dataset.lang = "pt";
     script.crossOrigin = "anonymous";
     // Append the script to the desired div instead of at the end of the body
     document.getElementById("quarto-content").appendChild(script);

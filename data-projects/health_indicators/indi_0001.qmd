@@ -30,7 +30,7 @@ Número de óbitos por causas externas (acidentes e violência), por 100 mil hab
 
 -   Anos de `r min(years_range)` a `r max(years_range)`
 
-## Download
+## Baixar os dados
 
 [![](https://zenodo.org/badge/DOI/10.5281/zenodo.10950019.svg)](https://doi.org/10.5281/zenodo.10950019)
 
@@ -75,7 +75,7 @@ read_parquet("health_indicators_data/indi_0001_uf_res_year.parquet") |>
 #| code-fold: true
 #| eval: false
 
-# UF of residence and year
+# UF de residência e ano
 brindi::expand_indi_parquet(
   agg = "uf_res", agg_time = "year", 
   anos = years_range, 
@@ -95,7 +95,7 @@ brindi::expand_indi_parquet(
   indi = "indi_0001"
 )
 
-# Health region of residence and year
+# Região de saúde de residência e ano
 brindi::expand_indi_parquet(
   agg = "regsaude_res", agg_time = "year", 
   anos = years_range, 
@@ -115,7 +115,7 @@ brindi::expand_indi_parquet(
   indi = "indi_0001"
 )
 
-# Municipality of residence and year
+# Município de residência e ano
 brindi::expand_indi_parquet(
   agg = "mun_res", agg_time = "year", 
   anos = years_range, 

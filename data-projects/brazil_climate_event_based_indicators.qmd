@@ -1,131 +1,131 @@
 ---
-title: "Event-based climate indicators for public health analysis"
+title: "Indicadores climáticos baseados em eventos para análises em saúde pública"
 bibliography: references.bib
 ---
 
-## Introduction
+## Introdução
 
-Climate and health research has traditionally represented environmental exposure using nominal meteorological variables, such as mean temperature or total precipitation, included as continuous covariates in epidemiological models. Although these indicators are widely available and straightforward to implement, they often inadequately represent the persistent, extreme, and threshold-exceeding conditions through which climate variability and change affect human health. Many health impacts are driven by discrete climate events - such as heat waves, cold spells, prolonged rainfall, and dry spells - whose effects depend on duration, intensity, and temporal clustering rather than on average conditions alone.
+A pesquisa em clima e saúde tradicionalmente representa a exposição ambiental usando variáveis meteorológicas nominais, como temperatura média ou precipitação total, incluídas como covariáveis contínuas em modelos epidemiológicos. Embora esses indicadores sejam amplamente disponíveis e simples de implementar, muitas vezes representam de forma limitada condições persistentes, extremas e acima de limiares pelas quais a variabilidade e a mudança climática afetam a saúde humana. Muitos impactos em saúde são causados por eventos climáticos discretos, como ondas de calor, ondas de frio, chuva prolongada e períodos secos, cujos efeitos dependem de duração, intensidade e agrupamento temporal, não apenas de condições médias.
 
-I propose here a method to compute, for each Brazilian municipality, a monthly or weekly set of event-based climate indicators and climatological normals.
+Proponho aqui um método para calcular, para cada município brasileiro, um conjunto mensal ou semanal de indicadores climáticos baseados em eventos e normais climatológicas.
 
 ::: callout-tip
-In a hurry? Jump to the [download](#sec-download) section ;-)
+Com pressa? Vá direto para a seção de [baixar](#sec-download) ;-)
 :::
 
-## Methods
+## Métodos
 
-A climatological normal can be computed with data from different sources, including remote sensing sensors and "area averages or points in gridded datasets" [@wmoWMOGuidelinesCalculation2017]. Some gridded climatological datasets are available for the Brazilian territory, including the ERA5-Land from Copernicus [@muñoz-sabater2021] and the BR-DWGD dataset [@xavier2022], offering several climatological indicators for a long time range, and continuously updates.
+Uma normal climatológica pode ser calculada com dados de diferentes fontes, incluindo sensores de sensoriamento remoto e "médias de área ou pontos em bases em grade" [@wmoWMOGuidelinesCalculation2017]. Algumas bases climatológicas em grade estão disponíveis para o território brasileiro, incluindo o ERA5-Land do Copernicus [@muñoz-sabater2021] e a base BR-DWGD [@xavier2022], oferecendo vários indicadores climatológicos em séries longas e com atualizações contínuas.
 
-Some research methods demands that climate data must be aggregated in the same spatial and temporal units of other data to be used in statistical models, being a fairly common procedure in epidemiology and economy studies. In order to approach this issue, spatial gridded data can be aggregated using *zonal statistics* [@saldanhaZonalStatisticsDatasets2024].
+Alguns métodos de pesquisa exigem que dados climáticos sejam agregados nas mesmas unidades espaciais e temporais de outros dados usados em modelos estatísticos, procedimento comum em estudos de epidemiologia e economia. Para lidar com essa necessidade, dados espaciais em grade podem ser agregados usando *estatísticas zonais* [@saldanhaZonalStatisticsDatasets2024].
 
-For this dataset, climate zonal statistics from ERA5-Land for the Brazilian municipalities (described [here](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html#zonal-era5-land)) was used to compute climatological normals and monthly/weekly event indicators.
+Para esta base, foram usadas estatísticas zonais climáticas do ERA5-Land para municípios brasileiros, descritas [aqui](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html#zonal-era5-land), para calcular normais climatológicas e indicadores de eventos mensais e semanais.
 
-To compute the event-based indicators and the climatologial normals, an R package named [{climindi}](https://rfsaldanha.github.io/climindi) was created. The package provides helper functions to compute climatological normals and event-based climate indicators in a [tidy](https://www.tidyverse.org) way.
+Para calcular os indicadores baseados em eventos e as normais climatológicas, foi criado um pacote R chamado [{climindi}](https://rfsaldanha.github.io/climindi). O pacote fornece funções auxiliares para calcular normais climatológicas e indicadores climáticos baseados em eventos de forma [tidy](https://www.tidyverse.org).
 
-### Normal indicators
+### Indicadores normais
 
-The {climindi} package computes the average, 10th and 90th percentile as climatological normals.
+O pacote {climindi} calcula média, percentil 10 e percentil 90 como normais climatológicas.
 
-Two climatologial normals were computed: 1961-1990 and 1981-2010.
+Foram calculadas duas normais climatológicas: 1961-1990 e 1981-2010.
 
-### Event-based indicators
+### Indicadores baseados em eventos
 
-Considering each climatological normal, a set of event-based indicators was computed using the {climindi} package for maximum and minimum temperature, total precipitation, average relative humidity and average wind speed.
+Considerando cada normal climatológica, um conjunto de indicadores baseados em eventos foi calculado com o pacote {climindi} para temperatura máxima e mínima, precipitação total, umidade relativa média e velocidade média do vento.
 
-For each climate indicator, a set of standard indicators and a set of specific indicators were computed. 
+Para cada indicador climático, foram calculados indicadores padrão e indicadores específicos.
 
-#### Standard indicators
+#### Indicadores padrão
 
--  `count` Count of data points
--  `mean` Mean value
--  `median` Median
--  `sd` Standard deviation
--  `se` Standard error
--  `max` Maximum value
--  `min` Minimum value
--  `p10` 10th percentile
+-  `count` Contagem de pontos de dados
+-  `mean` Valor médio
+-  `median` Mediana
+-  `sd` Desvio padrão
+-  `se` Erro padrão
+-  `max` Valor máximo
+-  `min` Valor mínimo
+-  `p10` Percentil 10
 -  `p25` 25th percentile
 -  `p75` 75th percentile
--  `p90` 90th percentile
+-  `p90` Percentil 90
 
-#### Specific indicators
+#### Indicadores específicos
 
--   Precipitation
-    -   `rs3` Rain spells: count of rain spells occurrences, with 3 and 5 or more consecutive days with rain above the climatological normal average value
-    -  `p_1` Count of days with precipitation above 1mm
-    -  `p_5` Count of days with precipitation above 5mm
-    -  `p_10` Count of days with precipitation above 10mm
-    -  `p_50` Count of days with precipitation above 50mm
-    -  `p_100` Count of days with precipitation above 100mm
-    -   `d_3` Count of sequences of 3 days or more without precipitation
-    -   `d_5` Count of sequences of 5 days or more without precipitation
-    -   `d_10` Count of sequences of 10 days or more without precipitation
-    -   `d_15` Count of sequences of 15 days or more without precipitation
-    -   `d_20` Count of sequences of 20 days or more without precipitation
-    -   `d_25` Count of sequences of 25 days or more without precipitation
--   Maximum temperature
-    -   `hw3` Count of heat waves occurrences with 3 or more consecutive days with maximum temperature above the climatological normal value plus 5 Celsius degrees
-    -   `hw5` Count of heat waves occurrences with 5 or more consecutive days with maximum temperature above the climatological normal value plus 5 Celsius degrees
-    -   `hot_days` Count of hot days, when the maximum temperature is above the normal 90th percentile
-    -   `t_25` Count of days with temperatures above or equal to 25 Celsius degrees
-    -   `t_30` Count of days with temperatures above or equal to 30 Celsius degrees 
-    -   `t_35` Count of days with temperatures above or equal to 35 Celsius degrees 
-    -   `t_40` Count of days with temperatures above or equal to 40 Celsius degrees
--   Minimum temperature
-    -   `cw3` Count of cold spells occurrences with 3 or more consecutive days with minimum temperature bellow the climatological normal value minus 5 Celsius degrees
-    -   `cw5` Count of cold spells occurrences with 5 or more consecutive days with minimum temperature bellow the climatological normal value minus 5 Celsius degrees
-    -   `cold_days` Count of cold days, when the minimum temperature is bellow the normal 10th percentile
-    -   `t_0` Count of days with temperatures bellow or equal to 0 Celsius degrees
-    -   `t_5` Count of days with temperatures bellow or equal to 5 Celsius degrees
-    -   `t_10` Count of days with temperatures bellow or equal to 10 Celsius degrees
-    -   `t_15` Count of days with temperatures bellow or equal to 15 Celsius degrees
-    -   `t_20` Count of days with temperatures bellow or equal to 20 Celsius degrees
--   Relative humidity
-    -   `ds3` Count of dry spells occurrences with 3 or more consecutive days with relative humidity bellow the climatological normal value minus 10 percent
-    -   `ds5` Count of dry spells occurrences with 5 or more consecutive days with relative humidity bellow the climatological normal value minus 10 percent
-    -   `ws3` Count of wet spells occurrences with 3 or more consecutive days with relative humidity above the climatological normal value plus 10 percent
-    -   `ws5` Count of wet spells occurrences with 5 or more consecutive days with relative humidity above the climatological normal value plus 10 percent
-    -   `dry_days` Count of dry days, when the relative humidity is bellow the normal 10th percentile
-    -   `wet_days` Count of wet days, when the relative humidity is above the normal 90th percentile
-    -   `h_21_30` Count of days with relative humidity between 21% and 30% (Attention level)
-    -   `h_12_20` Count of days with relative humidity between 12% and 20% (Alert level)
-    -   `h_11` Count of days with relative humidity bellow 12% (Emergence level)
--   Wind speed
-    -   `l_eto_3` Count of sequences of 3 or more consecutive days with wind speed bellow the climatological average normal
-    -   `l_eto_5` Count of sequences of 5 or more consecutive days with wind speed bellow the climatological average normal
-    -   `h_eto_3` Count of sequences of 3 or more consecutive days with wind speed above the climatological average normal
-    -   `h_eto_5` Count of sequences of 5 or more consecutive days with wind speed above the climatological average normal
-    -  `b1` Count of days classified as level 1 on Beaufort scale
-    -  `b2` Count of days classified as level 2 on Beaufort scale
-    -  `b3` Count of days classified as level 3 on Beaufort scale
-    -  `b4` Count of days classified as level 4 on Beaufort scale
-    -  `b5` Count of days classified as level 5 on Beaufort scale
-    -  `b6` Count of days classified as level 6 on Beaufort scale
-    -  `b7` Count of days classified as level 7 on Beaufort scale
-    -  `b8` Count of days classified as level 8 on Beaufort scale
-    -  `b9` Count of days classified as level 9 on Beaufort scale
-    -  `b10` Count of days classified as level 10 on Beaufort scale
-    -  `b11` Count of days classified as level 11 on Beaufort scale
-    -  `b12` Count of days classified as level 12 on Beaufort scale
+-   Precipitação
+    -   `rs3` Períodos chuvosos: contagem de ocorrências com 3 e 5 ou mais dias consecutivos com chuva acima do valor médio da normal climatológica
+    -  `p_1` Contagem de dias com precipitação acima de 1mm
+    -  `p_5` Contagem de dias com precipitação acima de 5mm
+    -  `p_10` Contagem de dias com precipitação acima de 10mm
+    -  `p_50` Contagem de dias com precipitação acima de 50mm
+    -  `p_100` Contagem de dias com precipitação acima de 100mm
+    -   `d_3` Contagem de sequências de 3 dias ou mais sem precipitação
+    -   `d_5` Contagem de sequências de 5 dias ou mais sem precipitação
+    -   `d_10` Contagem de sequências de 10 dias ou mais sem precipitação
+    -   `d_15` Contagem de sequências de 15 dias ou mais sem precipitação
+    -   `d_20` Contagem de sequências de 20 dias ou mais sem precipitação
+    -   `d_25` Contagem de sequências de 25 dias ou mais sem precipitação
+-   Temperatura máxima
+    -   `hw3` Contagem de ocorrências de ondas de calor com 3 ou mais dias consecutivos com temperatura máxima acima da normal climatológica mais 5 graus Celsius
+    -   `hw5` Contagem de ocorrências de ondas de calor com 5 ou mais dias consecutivos com temperatura máxima acima da normal climatológica mais 5 graus Celsius
+    -   `hot_days` Contagem de dias quentes, quando a temperatura máxima está acima do percentil 90 da normal
+    -   `t_25` Contagem de dias com temperaturas maiores ou iguais a 25 graus Celsius
+    -   `t_30` Contagem de dias com temperaturas maiores ou iguais a 30 graus Celsius 
+    -   `t_35` Contagem de dias com temperaturas maiores ou iguais a 35 graus Celsius 
+    -   `t_40` Contagem de dias com temperaturas maiores ou iguais a 40 graus Celsius
+-   Temperatura mínima
+    -   `cw3` Contagem de ocorrências de ondas de frio com 3 ou mais dias consecutivos com temperatura mínima abaixo da normal climatológica menos 5 graus Celsius
+    -   `cw5` Contagem de ocorrências de ondas de frio com 5 ou mais dias consecutivos com temperatura mínima abaixo da normal climatológica menos 5 graus Celsius
+    -   `cold_days` Contagem de dias frios, quando a temperatura mínima está abaixo do percentil 10 da normal
+    -   `t_0` Contagem de dias com temperaturas menores ou iguais a 0 graus Celsius
+    -   `t_5` Contagem de dias com temperaturas menores ou iguais a 5 graus Celsius
+    -   `t_10` Contagem de dias com temperaturas menores ou iguais a 10 graus Celsius
+    -   `t_15` Contagem de dias com temperaturas menores ou iguais a 15 graus Celsius
+    -   `t_20` Contagem de dias com temperaturas menores ou iguais a 20 graus Celsius
+-   Umidade relativa
+    -   `ds3` Contagem de ocorrências de períodos secos com 3 ou mais dias consecutivos com umidade relativa abaixo da normal climatológica menos 10%
+    -   `ds5` Contagem de ocorrências de períodos secos com 5 ou mais dias consecutivos com umidade relativa abaixo da normal climatológica menos 10%
+    -   `ws3` Contagem de ocorrências de períodos úmidos com 3 ou mais dias consecutivos com umidade relativa acima da normal climatológica mais 10%
+    -   `ws5` Contagem de ocorrências de períodos úmidos com 5 ou mais dias consecutivos com umidade relativa acima da normal climatológica mais 10%
+    -   `dry_days` Contagem de dias secos, quando a umidade relativa está abaixo do percentil 10 da normal
+    -   `wet_days` Contagem de dias úmidos, quando a umidade relativa está acima do percentil 90 da normal
+    -   `h_21_30` Contagem de dias com umidade relativa entre 21% and 30% (nível de atenção)
+    -   `h_12_20` Contagem de dias com umidade relativa entre 12% and 20% (nível de alerta)
+    -   `h_11` Contagem de dias com umidade relativa abaixo de 12% (nível de emergência)
+-   Velocidade do vento
+    -   `l_eto_3` Contagem de sequências de 3 ou mais dias consecutivos com velocidade do vento abaixo da normal climatológica média
+    -   `l_eto_5` Contagem de sequências de 5 ou mais dias consecutivos com velocidade do vento abaixo da normal climatológica média
+    -   `h_eto_3` Contagem de sequências de 3 ou mais dias consecutivos com velocidade do vento acima da normal climatológica média
+    -   `h_eto_5` Contagem de sequências de 5 ou mais dias consecutivos com velocidade do vento acima da normal climatológica média
+    -  `b1` Contagem de dias classificados como nível 1 na escala Beaufort
+    -  `b2` Contagem de dias classificados como nível 2 na escala Beaufort
+    -  `b3` Contagem de dias classificados como nível 3 na escala Beaufort
+    -  `b4` Contagem de dias classificados como nível 4 na escala Beaufort
+    -  `b5` Contagem de dias classificados como nível 5 na escala Beaufort
+    -  `b6` Contagem de dias classificados como nível 6 na escala Beaufort
+    -  `b7` Contagem de dias classificados como nível 7 na escala Beaufort
+    -  `b8` Contagem de dias classificados como nível 8 na escala Beaufort
+    -  `b9` Contagem de dias classificados como nível 9 na escala Beaufort
+    -  `b10` Contagem de dias classificados como nível 10 na escala Beaufort
+    -  `b11` Contagem de dias classificados como nível 11 na escala Beaufort
+    -  `b12` Contagem de dias classificados como nível 12 na escala Beaufort
 
 ::: callout-important
-The package functions needs data in specific units. Please certify that your data is in the required unit before running the functions.
+As funções do pacote precisam dos dados em unidades específicas. Certifique-se de que seus dados estejam na unidade exigida antes de executar as funções.
 :::
 
-The code used to compute this dataset is available [here](https://github.com/rfsaldanha/climate_event_based_events).
+O código usado para calcular esta base está disponível [aqui](https://github.com/rfsaldanha/climate_event_based_events).
 
-## Dataset download {#sec-download}
+## Baixar a base de dados {#sec-download}
 
-The climatological normals and event-based indicators be downloaded from Zenodo on CSV and parquet formats. Click the link bellow to access and download the data.
+As normais climatológicas e os indicadores baseados em eventos podem ser baixados do Zenodo nos formatos CSV e parquet. Clique no link abaixo para acessar e baixar os dados.
 
-[![](https://img.shields.io/badge/download-10.5281/zenodo.18612340-green.svg)](https://doi.org/10.5281/zenodo.18612340)
+[![](https://img.shields.io/badge/baixar-10.5281/zenodo.18612340-green.svg)](https://doi.org/10.5281/zenodo.18612340)
 
-You can also download the dataset directly from R, using the [{zendown}](https://rfsaldanha.github.io/zendown/) package.
+Também é possível baixar a base diretamente pelo R usando o pacote [{zendown}](https://rfsaldanha.github.io/zendown/).
 
-## Results preview
+## Prévia dos resultados
 
-Let's check some results using the monthly datasets and the 1981-2010 climatological normal.
+Vamos verificar alguns resultados usando as bases mensais e a normal climatológica 1981-2010.
 
 ```{r}
 #| message: false
@@ -138,16 +138,16 @@ library(arrow)
 library(zendown) # https://rfsaldanha.github.io/zendown/
 ```
 
-### Maximum temperature, Rio de Janeiro, RJ, 2024
+### Temperatura máxima, Rio de Janeiro, RJ, 2024
 
-#### Observed and normal
+#### Observado e normal
 
 ```{r}
 #| message: false
 #| warning: false
 #| code-fold: true
 
-# 2024 data
+# Dados de 2024
 tmax_data <- zen_file(15748125, "2m_temperature_max.parquet") |>
   open_dataset() |>
   filter(name == "2m_temperature_max_mean") |>
@@ -156,7 +156,7 @@ tmax_data <- zen_file(15748125, "2m_temperature_max.parquet") |>
   mutate(value = round(value - 273.15, digits = 2)) |>
   collect()
 
-#  normals
+# Normais climatológicas
 tmax_normal <- zen_file(18612340, "tmax_monthly_normal_n1981_2010.parquet") |>
   open_dataset() |>
   filter(code_muni == 3304557) |>
@@ -171,7 +171,7 @@ tmax_normal <- zen_file(18612340, "tmax_monthly_normal_n1981_2010.parquet") |>
 library(ggplot2)
 library(tidyr)
 
-# Prepare data for graph
+# Preparar dados para o gráfico
 tmax_normal_exp <- tmax_normal |>
   mutate(date = as_date(paste0("2024-", month, "-01"))) |>
   group_by(month) %>%
@@ -188,17 +188,17 @@ tmax_normal_exp <- tmax_normal |>
   pivot_longer(cols = starts_with("normal_")) |>
   mutate(name = substr(name, 8, 100))
 
-# Plot
+# Gráfico
 ggplot() +
   geom_line(data = tmax_data, aes(x = date, y = value)) +
   geom_line(data = tmax_normal_exp, aes(x = date, y = value, color = name)) +
   theme_bw() +
   labs(
-    title = "Maximum temperatures and monthly climatological normals",
+    title = "Temperaturas máximas e normais climatológicas mensais",
     subtitle = "Rio de Janeiro, RJ",
     color = "Normal (1981-2010)",
-    x = "Date",
-    y = "Celsius degrees"
+    x = "Data",
+    y = "graus Celsius"
   ) +
   theme(legend.position = "bottom", legend.direction = "horizontal")
 ```
@@ -209,7 +209,7 @@ ggplot() +
 #| classes: preview-image
 #| code-fold: true
 
-#  normals
+# Normais climatológicas
 tmax_normal <- zen_file(18612340, "tmax_weekly_normal_n1981_2010.parquet") |>
   open_dataset() |>
   filter(code_muni == 3304557) |>
@@ -232,22 +232,22 @@ tmax_normal_exp <- tmax_normal |>
   pivot_longer(cols = starts_with("normal_")) |>
   mutate(name = substr(name, 8, 100))
 
-# Plot
+# Gráfico
 ggplot() +
   geom_line(data = tmax_data, aes(x = date, y = value)) +
   geom_line(data = tmax_normal_exp, aes(x = date, y = value, color = name)) +
   theme_bw() +
   labs(
-    title = "Maximum temperatures and weekly climatological normals, 2024",
+    title = "Temperaturas máximas e normais climatológicas semanais, 2024",
     subtitle = "Rio de Janeiro, RJ",
     color = "Normal (1981-2010)",
-    x = "Date",
-    y = "Celsius degrees"
+    x = "Data",
+    y = "graus Celsius"
   ) +
   theme(legend.position = "bottom", legend.direction = "horizontal")
 ```
 
-#### Indicators
+#### Indicadores
 
 ```{r}
 #| message: false
@@ -255,7 +255,7 @@ ggplot() +
 #| code-fold: true
 library(gt)
 
-# Load event-based indicators and filter for 2024
+# Carregar indicadores baseados em eventos e filtrar o ano
 zen_file(18612340, "tmax_monthly_indi_n1981_2010.parquet") |>
   open_dataset() |>
   filter(code_muni == 3304557) |>
@@ -270,16 +270,16 @@ zen_file(18612340, "tmax_monthly_indi_n1981_2010.parquet") |>
   )
 ```
 
-### Minimum temperature, Urupema, SC, 2025
+### Temperatura mínima, Urupema, SC, 2025
 
-#### Observed and normal
+#### Observado e normal
 
 ```{r}
 #| message: false
 #| warning: false
 #| code-fold: true
 
-# 2025 data
+# Dados de 2025
 tmin_data <- zen_file(18257037, "2m_temperature_min.parquet") |>
   open_dataset() |>
   filter(name == "2m_temperature_min_mean") |>
@@ -288,7 +288,7 @@ tmin_data <- zen_file(18257037, "2m_temperature_min.parquet") |>
   mutate(value = round(value - 273.15, digits = 2)) |>
   collect()
 
-# normals
+# Normais climatológicas
 tmin_normal <- zen_file(18612340, "tmin_monthly_normal_n1981_2010.parquet") |>
   open_dataset() |>
   filter(code_muni == 4218954) |>
@@ -303,7 +303,7 @@ tmin_normal <- zen_file(18612340, "tmin_monthly_normal_n1981_2010.parquet") |>
 library(ggplot2)
 library(tidyr)
 
-# Prepare data for graph
+# Preparar dados para o gráfico
 tmin_normal_exp <- tmin_normal |>
   mutate(date = as_date(paste0("2025-", month, "-01"))) |>
   group_by(month) %>%
@@ -320,22 +320,22 @@ tmin_normal_exp <- tmin_normal |>
   pivot_longer(cols = starts_with("normal_")) |>
   mutate(name = substr(name, 8, 100))
 
-# Plot
+# Gráfico
 ggplot() +
   geom_line(data = tmin_data, aes(x = date, y = value)) +
   geom_line(data = tmin_normal_exp, aes(x = date, y = value, color = name)) +
   theme_bw() +
   labs(
-    title = "Minimum temperatures and monthly climatological normals, 2025",
+    title = "Temperaturas mínimas e normais climatológicas mensais, 2025",
     subtitle = "Urupema, SC",
     color = "Normal (1981-2010)",
-    x = "Date",
-    y = "Celsius degrees"
+    x = "Data",
+    y = "graus Celsius"
   ) +
   theme(legend.position = "bottom", legend.direction = "horizontal")
 ```
 
-#### Indicators
+#### Indicadores
 
 ```{r}
 #| message: false
@@ -343,7 +343,7 @@ ggplot() +
 #| code-fold: true
 library(gt)
 
-# Load event-based indicators and filter for 2024
+# Carregar indicadores baseados em eventos e filtrar o ano
 zen_file(18612340, "tmin_monthly_indi_n1981_2010.parquet") |>
   open_dataset() |>
   filter(code_muni == 4218954) |>
@@ -358,16 +358,16 @@ zen_file(18612340, "tmin_monthly_indi_n1981_2010.parquet") |>
   )
 ```
 
-### Relative humidity, Aquidauana, MS, 2025
+### Umidade relativa, Aquidauana, MS, 2025
 
-#### Observed and normal
+#### Observado e normal
 
 ```{r}
 #| message: false
 #| warning: false
 #| code-fold: true
 
-# 2025 data
+# Dados de 2025
 rh_data <- zen_file(18392587, "rh_mean_mean_2025.parquet") |>
   open_dataset() |>
   filter(name == "rh_mean_mean") |>
@@ -375,7 +375,7 @@ rh_data <- zen_file(18392587, "rh_mean_mean_2025.parquet") |>
   select(-name) |>
   collect()
 
-# normals
+# Normais climatológicas
 rh_normal <- zen_file(18612340, "rh_normal_monthly_n1981_2010.parquet") |>
   open_dataset() |>
   filter(code_muni == 5001102) |>
@@ -390,7 +390,7 @@ rh_normal <- zen_file(18612340, "rh_normal_monthly_n1981_2010.parquet") |>
 library(ggplot2)
 library(tidyr)
 
-# Prepare data for graph
+# Preparar dados para o gráfico
 rh_normal_exp <- rh_normal |>
   mutate(date = as_date(paste0("2025-", month, "-01"))) |>
   group_by(month) %>%
@@ -407,22 +407,22 @@ rh_normal_exp <- rh_normal |>
   pivot_longer(cols = starts_with("normal_")) |>
   mutate(name = substr(name, 8, 100))
 
-# Plot
+# Gráfico
 ggplot() +
   geom_line(data = rh_data, aes(x = date, y = value)) +
   geom_line(data = rh_normal_exp, aes(x = date, y = value, color = name)) +
   theme_bw() +
   labs(
-    title = "Relative humidity and monthly climatological normals, 2025",
+    title = "Umidade relativa e normais climatológicas mensais, 2025",
     subtitle = "Aquidauana, MS",
     color = "Normal (1981-2010)",
-    x = "Date",
+    x = "Data",
     y = "%"
   ) +
   theme(legend.position = "bottom", legend.direction = "horizontal")
 ```
 
-#### Indicators
+#### Indicadores
 
 ```{r}
 #| message: false
@@ -430,7 +430,7 @@ ggplot() +
 #| code-fold: true
 library(gt)
 
-# Load event-based indicators and filter for 2024
+# Carregar indicadores baseados em eventos e filtrar o ano
 zen_file(18612340, "rh_indi_monthly_n1981_2010.parquet") |>
   open_dataset() |>
   filter(code_muni == 5001102) |>
@@ -445,16 +445,16 @@ zen_file(18612340, "rh_indi_monthly_n1981_2010.parquet") |>
   )
 ```
 
-### Precipitation, Calçoene, AP, 2025
+### Precipitação, Calçoene, AP, 2025
 
-#### Observed and normal
+#### Observado e normal
 
 ```{r}
 #| message: false
 #| warning: false
 #| code-fold: true
 
-# 2025 data
+# Dados de 2025
 prec_data <- zen_file(18257037, "total_precipitation_sum.parquet") |>
   open_dataset() |>
   filter(name == "total_precipitation_sum_mean") |>
@@ -463,7 +463,7 @@ prec_data <- zen_file(18257037, "total_precipitation_sum.parquet") |>
   select(-name) |>
   collect()
 
-# normals
+# Normais climatológicas
 prec_normal <- zen_file(18612340, "prec_monthly_normal_n1981_2010.parquet") |>
   open_dataset() |>
   filter(code_muni == 1600204) |>
@@ -478,7 +478,7 @@ prec_normal <- zen_file(18612340, "prec_monthly_normal_n1981_2010.parquet") |>
 library(ggplot2)
 library(tidyr)
 
-# Prepare data for graph
+# Preparar dados para o gráfico
 prec_normal_exp <- prec_normal |>
   mutate(date = as_date(paste0("2025-", month, "-01"))) |>
   group_by(month) %>%
@@ -495,22 +495,22 @@ prec_normal_exp <- prec_normal |>
   pivot_longer(cols = starts_with("normal_")) |>
   mutate(name = substr(name, 8, 100))
 
-# Plot
+# Gráfico
 ggplot() +
   geom_line(data = prec_data, aes(x = date, y = value)) +
   geom_line(data = prec_normal_exp, aes(x = date, y = value, color = name)) +
   theme_bw() +
   labs(
-    title = "Precipitation and monthly climatological normals, 2025",
+    title = "Precipitação e normais climatológicas mensais, 2025",
     subtitle = "Calçoene, AP",
     color = "Normal (1981-2010)",
-    x = "Date",
+    x = "Data",
     y = "mm"
   ) +
   theme(legend.position = "bottom", legend.direction = "horizontal")
 ```
 
-#### Indicators
+#### Indicadores
 
 ```{r}
 #| message: false
@@ -518,7 +518,7 @@ ggplot() +
 #| code-fold: true
 library(gt)
 
-# Load event-based indicators and filter for 2024
+# Carregar indicadores baseados em eventos e filtrar o ano
 zen_file(18612340, "prec_monthly_indi_n1981_2010.parquet") |>
   open_dataset() |>
   filter(code_muni == 5001102) |>
@@ -533,16 +533,16 @@ zen_file(18612340, "prec_monthly_indi_n1981_2010.parquet") |>
   )
 ```
 
-### Wind speed, Caetité, BA, 2025
+### Velocidade do vento, Caetité, BA, 2025
 
-#### Observed and normal
+#### Observado e normal
 
 ```{r}
 #| message: false
 #| warning: false
 #| code-fold: true
 
-# 2025 data
+# Dados de 2025
 ws_data <- zen_file(18390794, "wind_speed_mean_mean_2025.parquet") |>
   open_dataset() |>
   filter(name == "wind_speed_mean_mean") |>
@@ -550,7 +550,7 @@ ws_data <- zen_file(18390794, "wind_speed_mean_mean_2025.parquet") |>
   select(-name) |>
   collect()
 
-# normals
+# Normais climatológicas
 ws_normal <- zen_file(18612340, "ws_monthly_normal_n1981_2010.parquet") |>
   open_dataset() |>
   filter(code_muni == 1600204) |>
@@ -565,7 +565,7 @@ ws_normal <- zen_file(18612340, "ws_monthly_normal_n1981_2010.parquet") |>
 library(ggplot2)
 library(tidyr)
 
-# Prepare data for graph
+# Preparar dados para o gráfico
 ws_normal_exp <- ws_normal |>
   mutate(date = as_date(paste0("2025-", month, "-01"))) |>
   group_by(month) %>%
@@ -582,22 +582,22 @@ ws_normal_exp <- ws_normal |>
   pivot_longer(cols = starts_with("normal_")) |>
   mutate(name = substr(name, 8, 100))
 
-# Plot
+# Gráfico
 ggplot() +
   geom_line(data = ws_data, aes(x = date, y = value)) +
   geom_line(data = ws_normal_exp, aes(x = date, y = value, color = name)) +
   theme_bw() +
   labs(
-    title = "Wind speed and monthly climatological normals, 2025",
+    title = "Velocidade do vento e normais climatológicas mensais, 2025",
     subtitle = "Caetité, BA",
     color = "Normal (1981-2010)",
-    x = "Date",
+    x = "Data",
     y = "m/s"
   ) +
   theme(legend.position = "bottom", legend.direction = "horizontal")
 ```
 
-#### Indicators
+#### Indicadores
 
 ```{r}
 #| message: false
@@ -605,7 +605,7 @@ ggplot() +
 #| code-fold: true
 library(gt)
 
-# Load event-based indicators and filter for 2024
+# Carregar indicadores baseados em eventos e filtrar o ano
 zen_file(18612340, "ws_monthly_indi_n1981_2010.parquet") |>
   open_dataset() |>
   filter(code_muni == 5001102) |>
@@ -620,7 +620,7 @@ zen_file(18612340, "ws_monthly_indi_n1981_2010.parquet") |>
   )
 ```
 
-## Session info
+## Informações da sessão
 
 ```{r}
 sessioninfo::session_info()

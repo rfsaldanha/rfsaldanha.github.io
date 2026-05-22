@@ -1,0 +1,46 @@
+---
+title: "INMET RSS alerts"
+---
+
+![](images/inmetrss.png)
+
+## Introduction
+
+INMET is the Brazilian official source of meteorological forecasts. It also maintains the [ALERT-AS](https://alertas2.inmet.gov.br/), an weather alert center for the Brazilian territory. 
+
+The alerts are broadcasted in the RSS format and there is no official record history of alerts available. Thus, I started to run a daily script to record those alerts and made them available to the public. The record started on September 29, 2025 at 4pm.
+
+## Data
+
+The alerts are fetched daily at 1am using the [inmetrss](https://rfsaldanha.github.io/inmetrss/) R package. After fetching new alerts and updating the database, a parquet file is exported to an S3 storage, available at the link bellow:
+
+```
+https://inmetalerts.nyc3.cdn.digitaloceanspaces.com/inmetalerts.parquet
+```
+
+## Data usage
+
+The parquet data present the alerts in the original structure from INMET. The package [inmetrss](https://rfsaldanha.github.io/inmetrss/) presents a function to parse the alerts by municipality.
+
+```{r}
+#| messages: false
+suppressMessages({
+  library(arrow)
+  library(DT)
+  library(inmetrss)
+})
+
+res <- read_parquet(
+  "https://inmetalerts.nyc3.cdn.digitaloceanspaces.com/inmetalerts.parquet"
+)
+
+res_mun <- parse_mun(head(res, 10))
+
+datatable(res_mun)
+```
+
+## Session info
+
+```{r}
+sessioninfo::session_info()
+```

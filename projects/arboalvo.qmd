@@ -1,15 +1,14 @@
 ---
 title: "ArboAlvo"
-subtitle: "Stratifying arboviruses risk."
+subtitle: "Estratificação do risco de arboviroses."
 ---
 
-![ArboAlvo dashboard.](images/arboalvo-1400.webp){fig-align="center"}
+![Painel do ArboAlvo.](images/arboalvo-1400.webp){fig-align="center"}
 
-Conducted at the Instituto Oswaldo Cruz (IOC), the project ArboAlvo's objective is to stratify arboviruses risk into national and intra-municipal levels, considering epidemiolocal, entomological, and socio-demographic dimensions.
+Conduzido no Instituto Oswaldo Cruz (IOC), o projeto ArboAlvo tem como objetivo estratificar o risco de arboviroses em níveis nacional e intramunicipal, considerando dimensões epidemiológicas, entomológicas e sociodemográficas.
 
-I participated in this project by creating, reviewing, and optimizing code in the project data analysis, and developing data dashboards.
+Participei deste projeto criando, revisando e otimizando código para as análises de dados e desenvolvendo painéis.
 
-![ArboAlvo dashboard running on Natal local server.](images/natal2-1400.webp){fig-align="center"}
+![Painel do ArboAlvo rodando no servidor local de Natal.](images/natal2-1400.webp){fig-align="center"}
 
-![With the Natal IT team, August 8, 2022.](images/natal1-1400.webp){fig-align="center"}
-
+![Com a equipe de TI de Natal, 8 de agosto de 2022.](images/natal1-1400.webp){fig-align="center"}

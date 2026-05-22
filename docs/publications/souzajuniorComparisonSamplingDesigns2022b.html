@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -16,13 +16,9 @@
 <meta name="author" content="Raphael Saldanha">
 <meta name="author" content="Jefferson Lima">
 <meta name="author" content="Sheila Stopa">
-<meta name="dcterms.date" content="2022-07-13">
 
 <title>Comparison of sampling designs from the two editions of the Brazilian National Health Survey, 2013 and 2019 – Raphael Saldanha</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -67,14 +63,15 @@ div.csl-indent {
 <link href="../logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-0c1497c822180f859fc410b87e91da95.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-9c801c0f987b87cb825544174f2aa3e8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -89,17 +86,17 @@ div.csl-indent {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
   }
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2M7VLSRDCB"></script>
@@ -130,8 +127,8 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
     <span class="navbar-title">Raphael Saldanha</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -142,19 +139,19 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../projects.html"> 
-<span class="menu-text">Projects</span></a>
+<span class="menu-text">Projetos</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../code.html"> 
-<span class="menu-text">Packages &amp; Code</span></a>
+<span class="menu-text">Pacotes &amp; Código</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../data.html"> 
-<span class="menu-text">Datasets</span></a>
+<span class="menu-text">Dados</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../publications.html"> 
-<span class="menu-text">Publications</span></a>
+<span class="menu-text">Publicações</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../talks.html"> 
@@ -162,11 +159,15 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../photos/photos.html"> 
-<span class="menu-text">Photos</span></a>
+<span class="menu-text">Fotos</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../blog.html"> 
 <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../en/"> 
+<span class="menu-text">English</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="../blog.xml"> <i class="bi bi-rss" role="img">
@@ -186,11 +187,11 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">Nesta página</h2>
    
   <ul>
-  <li><a href="#reference" id="toc-reference" class="nav-link active" data-scroll-target="#reference">Reference</a></li>
-  <li><a href="#abstract" id="toc-abstract" class="nav-link" data-scroll-target="#abstract">Abstract</a></li>
+  <li><a href="#referência" id="toc-referência" class="nav-link active" data-scroll-target="#referência">Referência</a></li>
+  <li><a href="#resumo" id="toc-resumo" class="nav-link" data-scroll-target="#resumo">Resumo</a></li>
   </ul>
 </nav>
     </div>
@@ -212,7 +213,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-heading">Autores</div>
     <div class="quarto-title-meta-contents">
              <p>Paulo Souza Júnior </p>
              <p>Celia Szwarcwald </p>
@@ -228,9 +229,9 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   </div>
     
     <div>
-    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-heading">Data de Publicação</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 13, 2022</p>
+      <p class="date">13 de julho de 2022</p>
     </div>
   </div>
   
@@ -243,22 +244,22 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 
 
 <p><img src="images/Screenshot from 2023-10-02 13-13-38.png" class="img-fluid"></p>
-<section id="reference" class="level2">
-<h2 class="anchored" data-anchor-id="reference">Reference</h2>
+<section id="referência" class="level2">
+<h2 class="anchored" data-anchor-id="referência">Referência</h2>
 <div id="refs" class="references csl-bib-body" data-entry-spacing="1" role="list">
 <div id="ref-souzajuniorComparisonSamplingDesigns2022b" class="csl-entry" role="listitem">
-SOUZA JÚNIOR, P. R. B. DE et al. <a href="https://doi.org/10.1590/0102-311X00164321">Comparison of sampling designs from the two editions of the <span><em>Brazilian National Health Survey</em></span>, 2013 and 2019</a>. <strong>Cadernos de Saúde Pública</strong>, v. 38, p. e00164321, July 2022.
+SOUZA JÚNIOR, P. R. B. DE et al. <a href="https://doi.org/10.1590/0102-311X00164321">Comparison of Sampling Designs from the Two Editions of the <span><em>Brazilian National Health Survey</em></span>, 2013 and 2019</a>. <strong>Cadernos de Saúde Pública</strong>, v. 38, p. e00164321, jul. 2022.
 </div>
 </div>
 </section>
-<section id="abstract" class="level2">
-<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
-<p>Our objective is to describe the differences in the sampling plans of the two editions of the Brazilian National Health Survey (PNS 2013 and 2019) and to evaluate how the changes affected the coefficient of variation (CV) and the design effect (Deff) of some estimated indicators. Variables from different parts of the questionnaire were analyzed to cover proportions with different magnitudes. The prevalence of obesity was included in the analysis since anthropometry measurement in the 2019 survey was performed in a subsample. The value of the point estimate, CV, and the Deff were calculated for each indicator, considering the stratification of the primary sampling units, the weighting of the sampling units, and the clustering effect. The CV and the Deff were lower in the 2019 estimates for most indicators. Concerning the questionnaire indicators of all household members, the Deffs were high and reached values greater than 18 for having a health insurance plan. Regarding the indicators of the individual questionnaire, for the prevalence of obesity, the Deff ranged from 2.7 to 4.2, in 2013, and from 2.7 to 10.2, in 2019. The prevalence of hypertension and diabetes per Federative Unit had a higher CV and lower Deff. Expanding the sample size to meet the diverse health objectives and the high Deff are significant challenges for developing probabilistic household-based national survey. New probabilistic sampling strategies should be considered to reduce costs and clustering effects.</p>
+<section id="resumo" class="level2">
+<h2 class="anchored" data-anchor-id="resumo">Resumo</h2>
+<p>Nosso objetivo é descrever as diferenças nos planos amostrais das duas edições da Pesquisa Nacional de Saúde (PNS 2013 e 2019) e avaliar como as mudanças afetaram o coeficiente de variação (CV) e o efeito do desenho (Deff) de alguns indicadores estimados. Variáveis de diferentes partes do questionário foram analisadas para abranger proporções com diferentes magnitudes. A prevalência de obesidade foi incluída na análise porque a medição antropométrica na pesquisa de 2019 foi realizada em uma subamostra. O valor da estimativa pontual, o CV e o Deff foram calculados para cada indicador, considerando a estratificação das unidades primárias de amostragem, a ponderação das unidades amostrais e o efeito de conglomerado. O CV e o Deff foram menores nas estimativas de 2019 para a maioria dos indicadores. Em relação aos indicadores do questionário de todos os moradores do domicílio, os Deffs foram elevados e alcançaram valores superiores a 18 para posse de plano de saúde. Quanto aos indicadores do questionário individual, para a prevalência de obesidade, o Deff variou de 2,7 a 4,2 em 2013 e de 2,7 a 10,2 em 2019. A prevalência de hipertensão e diabetes por Unidade da Federação apresentou maior CV e menor Deff. A ampliação do tamanho da amostra para atender a diversos objetivos de saúde e o alto Deff são desafios importantes para o desenvolvimento de inquéritos nacionais probabilísticos de base domiciliar. Novas estratégias de amostragem probabilística devem ser consideradas para reduzir custos e efeitos de conglomerado.</p>
 
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -284,12 +285,12 @@ SOUZA JÚNIOR, P. R. B. DE et al. <a href="https://doi.org/10.1590/0102-311X0016
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Copiada");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Copiada");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",

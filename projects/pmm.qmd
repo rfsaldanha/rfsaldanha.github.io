@@ -3,11 +3,10 @@ title: "PMM"
 subtitle: "Projeto Mais Médicos."
 ---
 
-![PMM main webpage.](images/pmm-1400.webp){fig-align="center"}
+![Página principal do PMM.](images/pmm-1400.webp){fig-align="center"}
 
-"Projeto Mais Médicos" was the first project that I got involved with at Fiocruz, through the PCDaS initiative. I was in charge of developing a data dashboard and to coordinate a team with other research assistants.
+O "Projeto Mais Médicos" foi o primeiro projeto em que me envolvi na Fiocruz, por meio da iniciativa PCDaS. Fui responsável por desenvolver um painel de dados e coordenar uma equipe com outros assistentes de pesquisa.
 
-The project aimed to present data about a federal project called "Mais Médicos", where a public health policy encouraged MDs to work in less developed regions in Brazil and also contracted foreign MDs from Cuba and other countries to work on those regions.
+O projeto tinha como objetivo apresentar dados sobre o programa federal "Mais Médicos", uma política pública de saúde que incentivou médicos a trabalhar em regiões menos desenvolvidas do Brasil e também contratou médicos estrangeiros de Cuba e de outros países para atuar nessas regiões.
 
-The project has been discontinued.
-
+O projeto foi descontinuado.

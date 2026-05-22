@@ -1,89 +1,83 @@
 ---
-title: "Packages & Code "
+title: "Pacotes & Código"
 ---
 
-[![](https://github-readme-stats.vercel.app/api?username=rfsaldanha&show_icons=true&theme:transparent)](https://github.com/rfsaldanha)
+Meu perfil no GitHub está disponível em [github.com/rfsaldanha](https://github.com/rfsaldanha).
 
-## R packages
+## Pacotes R
 
 ### microdatasus
 
-R package to download and pre-process datasets from DataSUS, Brazilian Health Ministry.
+Pacote R para baixar e pré-processar bases do DataSUS, do Ministério da Saúde do Brasil.
 
 [![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/microdatasus-blue)](https://rfsaldanha.github.io/microdatasus/) [![](https://img.shields.io/github/stars/rfsaldanha/microdatasus)](https://github.com/rfsaldanha/microdatasus) [![](https://github.com/rfsaldanha/microdatasus/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/microdatasus/actions/workflows/R-CMD-check.yaml)
 
 ### brpop
 
-R package with Brazilian population estimates.
+Pacote R com estimativas populacionais brasileiras.
 
 [![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/brpop-blue)](https://rfsaldanha.github.io/brpop/) [![](https://img.shields.io/github/stars/rfsaldanha/brpop)](https://github.com/rfsaldanha/brpop) [![](https://github.com/rfsaldanha/brpop/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/brpop/actions/workflows/R-CMD-check.yaml) [![](https://img.shields.io/cran/v/brpop)](https://cran.r-project.org/package=brpop)
 
 ### tidyrates
 
-R package to compute age-standardized epidemiological rates in a tidy way.
+Pacote R para calcular taxas epidemiológicas padronizadas por idade de forma tidy.
 
 [![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/tidyrates-blue)](https://rfsaldanha.github.io/tidyrates/) [![](https://img.shields.io/github/stars/rfsaldanha/tidyrates)](https://github.com/rfsaldanha/tidyrates) [![](https://github.com/rfsaldanha/tidyrates/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/tidyrates/actions/workflows/R-CMD-check.yaml) [![](https://img.shields.io/cran/v/tidyrates)](https://cran.r-project.org/package=tidyrates)
 
 ### zendown
 
-R package to download and cache files from Zenodo deposits.
+Pacote R para baixar e armazenar em cache arquivos de depósitos do Zenodo.
 
 [![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/zendown-blue)](https://rfsaldanha.github.io/zendown/) [![](https://img.shields.io/github/stars/rfsaldanha/zendown)](https://github.com/rfsaldanha/zendown) [![](https://github.com/rfsaldanha/zendown/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/zendown/actions/workflows/R-CMD-check.yaml) [![](https://img.shields.io/cran/v/zendown)](https://cran.r-project.org/package=zendown)
 
 ### zenstats
 
-R package to fetch statistics of views, downloads and volume from Zenodo deposits.
+Pacote R para obter estatísticas de visualizações, downloads e volume de depósitos do Zenodo.
 
 [![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/zenstats-blue)](https://rfsaldanha.github.io/zenstats/) [![](https://img.shields.io/github/stars/rfsaldanha/zenstats)](https://github.com/rfsaldanha/zenstats) [![](https://github.com/rfsaldanha/zenstats/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/zenstats/actions/workflows/R-CMD-check.yaml) [![](https://img.shields.io/cran/v/zenstats)](https://cran.r-project.org/package=zenstats)
 
 ### nseq
 
-R package to compute counts and statistics of occurrence of events in sequences that meets a criterion.
+Pacote R para calcular contagens e estatísticas de ocorrência de eventos em sequências que atendem a um critério.
 
 [![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/nseq-blue)](https://rfsaldanha.github.io/nseq/) [![](https://img.shields.io/github/stars/rfsaldanha/nseq)](https://github.com/rfsaldanha/nseq) [![](https://github.com/rfsaldanha/nseq/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/nseq/actions/workflows/R-CMD-check.yaml) [![](https://img.shields.io/cran/v/nseq)](https://cran.r-project.org/package=nseq)
 
 ### rspell
 
-R package to grammar check documents inside RStudio.
+Pacote R para revisar gramática de documentos dentro do RStudio.
 
 [![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/rspell-blue)](https://rfsaldanha.github.io/rspell/) [![](https://img.shields.io/github/stars/rfsaldanha/rspell)](https://github.com/rfsaldanha/rspell) [![](https://github.com/rfsaldanha/rspell/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/rspell/actions/workflows/R-CMD-check.yaml)
 
-### zonalclim
-
-R package to compute zonal statistics of climate indicators.
-
-[![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/zonalclim-blue)](https://rfsaldanha.github.io/zonalclim/) [![](https://img.shields.io/github/stars/rfsaldanha/rspell)](https://github.com/rfsaldanha/zonalclim) [![](https://github.com/rfsaldanha/zonalclim/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/zonalclim/actions/workflows/R-CMD-check.yaml)
-
 ### brclimr
 
-R package to retrieve municipal climate indicators of Brazilian municipalities.
+Pacote R para obter indicadores climáticos municipais do Brasil.
 
 [![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/brclimr-blue)](https://rfsaldanha.github.io/brclimr/) [![](https://img.shields.io/github/stars/rfsaldanha/brclimr)](https://github.com/rfsaldanha/brclimr) [![](https://github.com/rfsaldanha/brclimr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/brclimr/actions/workflows/R-CMD-check.yaml) [![](https://img.shields.io/cran/v/brclimr)](https://cran.r-project.org/package=brclimr)
 
 ### zonalclim
 
-R package with helper functions to compute zonal statistics using NetCDF and sf objects for climate studies.
+Pacote R com funções auxiliares para calcular estatísticas zonais usando NetCDF e objetos sf em estudos climáticos.
 
 [![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/zonalclim-blue)](https://rfsaldanha.github.io/zonalclim/) [![](https://img.shields.io/github/stars/rfsaldanha/zonalclim)](https://github.com/rfsaldanha/zonalclim) [![](https://github.com/rfsaldanha/zonalclim/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/zonalclim/actions/workflows/R-CMD-check.yaml)
 
 ### plugfieldapi
 
-R package to access the Plugfield API and retrieve data from weather stations.
+Pacote R para acessar a API Plugfield e obter dados de estações meteorológicas.
 
 [![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/plugfieldapi-blue)](https://rfsaldanha.github.io/plugfieldapi/) [![](https://img.shields.io/github/stars/rfsaldanha/plugfieldapi)](https://github.com/rfsaldanha/plugfieldapi) [![](https://github.com/rfsaldanha/plugfieldapi/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/plugfieldapi/actions/workflows/R-CMD-check.yaml)
 
 ### opendenguedata
 
-R package to download dengue data from the OpenDengue project.
+Pacote R para baixar dados de dengue do projeto OpenDengue.
 
 [![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/opendenguedata-blue)](https://rfsaldanha.github.io/opendenguedata/) [![](https://img.shields.io/github/stars/rfsaldanha/opendenguedata)](https://github.com/rfsaldanha/opendenguedata) [![](https://github.com/rfsaldanha/opendenguedata/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/opendenguedata/actions/workflows/R-CMD-check.yaml)
 
 ### inmetrss
 
-R package to fetch and parse INMET alerts RSS feed.
+Pacote R para obter e processar o feed RSS de alertas do INMET.
 
 [![](https://img.shields.io/badge/website-https://rfsaldanha.github.io/inmetrss-blue)](https://rfsaldanha.github.io/inmetrss/) [![](https://img.shields.io/github/stars/rfsaldanha/inmetrss)](https://github.com/rfsaldanha/inmetrss)
 
-## Packages download statistics
+## Estatísticas de download dos pacotes
 
-Download statistics of packages on CRAN are available [here](https://rfsaldanha.github.io/pkgdash/#packages-on-cran).
+As estatísticas de download dos pacotes no CRAN estão disponíveis [aqui](https://rfsaldanha.github.io/pkgdash/#packages-on-cran).

@@ -4,12 +4,12 @@ title: "Harmonize"
 
 ![](images/harmonize-1400.webp){fig-align="center" width="400"}
 
-Harmonizing multi-scale spatiotemporal data for health in climate change hotspots.
+Harmonização de dados espaço-temporais multiescala para saúde em áreas críticas de mudança climática.
 
-Harmonize is a project in partnership with the Health and Climate Observatory and several international partners, including the Barcelona Supercomputing Center (BSC).
+Harmonize é um projeto em parceria com o Observatório de Clima e Saúde e vários parceiros internacionais, incluindo o Barcelona Supercomputing Center (BSC).
 
-The project's objective is to collect, organize and analyze multi-scale spatiotemporal data for health in climate hotspots.
+O objetivo do projeto é coletar, organizar e analisar dados espaço-temporais multiescala para saúde em áreas críticas de clima.
 
-I am working on this project to provide expert knowledge on Brazilian health data collection and analysis.
+Atuo no projeto oferecendo conhecimento especializado sobre coleta e análise de dados de saúde no Brasil.
 
-This work is supported by the Wellcome Trust grant number 224694/Z/21/Z.
+Este trabalho é apoiado pelo Wellcome Trust, grant 224694/Z/21/Z.

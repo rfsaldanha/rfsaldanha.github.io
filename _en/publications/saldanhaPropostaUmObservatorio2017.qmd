@@ -1,0 +1,33 @@
+---
+title: "Proposta de um observatório epidemiológico do Sistema Único de Saúde"
+author:
+  - Raphael Saldanha
+  - Ronaldo Bastos
+  - Maria Bustamante-Teixeira
+  - Isabel Leite
+  - Estela Campos
+date: 2017-01-23
+categories: 
+  - information dissemination
+  - algorithms
+  - internet
+  - information system
+bibliography: publications.bib
+csl: abnt.csl
+---
+
+---
+nocite: |
+  @saldanhaPropostaUmObservatorio2017
+---
+
+![](images/Screenshot from 2023-10-02 13-28-12.png)
+
+## Reference
+
+::: {#refs}
+:::
+
+## Abstract
+
+Following the creation of the Brazilian Unified National Health System (SUS), the Brazilian Health Informatics Department (DATASUS) was established in 1991, aimed at organizing information systems and databases in health. Online data access and viewing is free and open, using tables and graphs of aggregate data and access to raw data. However, the current form of data access does not fully meet the demands by health system administrators and other users for a flexible, user-friendly tool that allows dealing with various relevant health issues in the knowledge search and decision-making. We propose an ancillary system capable of generating monthly summary reports that are easy to access and understand, with an emphasis on viewing information through graphs and maps.

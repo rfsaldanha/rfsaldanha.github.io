@@ -1,13 +1,12 @@
 ---
 title: "Redes de Cuidado"
-subtitle: "Cancer patients displacement and network analysis."
+subtitle: "Deslocamento de pacientes com câncer e análise de redes."
 ---
 
-![Commuting networks of patients that received cancer treatment within SUS, from article http://dx.doi.org/10.1016/j.lana.2021.100153.](images/redescuidado-1400.webp){fig-align="center"}
+![Redes de deslocamento de pacientes que receberam tratamento oncológico no SUS, do artigo http://dx.doi.org/10.1016/j.lana.2021.100153.](images/redescuidado-1400.webp){fig-align="center"}
 
-This project was a partnership with PCDaS and CDTS. The project studied the flow of cancer patients receiving treatment in Brazil between municipalities.
+Este projeto foi uma parceria entre o PCDaS e o CDTS. O projeto estudou o fluxo intermunicipal de pacientes em tratamento de câncer no Brasil.
 
-I was in charge to handle the large datasets about hospitalizations and treatments and perform some network analysis.
+Fui responsável por tratar grandes bases de dados sobre internações e tratamentos e realizar análises de redes.
 
-This work was supported by Inova Fiocruz and resulted in a published paper: http://dx.doi.org/10.1016/j.lana.2021.100153.
-
+Este trabalho foi apoiado pelo Inova Fiocruz e resultou em um artigo publicado: http://dx.doi.org/10.1016/j.lana.2021.100153.

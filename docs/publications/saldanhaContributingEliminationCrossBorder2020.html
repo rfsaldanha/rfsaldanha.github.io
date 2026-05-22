@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -21,13 +21,9 @@
 <meta name="author" content="Alice Sanna">
 <meta name="author" content="Benoît Van Gastel">
 <meta name="author" content="Emmanuel Roux">
-<meta name="dcterms.date" content="2019-06-13">
 
 <title>Contributing to Elimination of Cross-Border Malaria Through a Standardized Solution for Case Surveillance, Data Sharing, and Data Interpretation: Development of a Cross-Border Monitoring System – Raphael Saldanha</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -72,14 +68,15 @@ div.csl-indent {
 <link href="../logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-0c1497c822180f859fc410b87e91da95.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-9c801c0f987b87cb825544174f2aa3e8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -94,17 +91,17 @@ div.csl-indent {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
   }
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2M7VLSRDCB"></script>
@@ -135,8 +132,8 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
     <span class="navbar-title">Raphael Saldanha</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -147,19 +144,19 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../projects.html"> 
-<span class="menu-text">Projects</span></a>
+<span class="menu-text">Projetos</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../code.html"> 
-<span class="menu-text">Packages &amp; Code</span></a>
+<span class="menu-text">Pacotes &amp; Código</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../data.html"> 
-<span class="menu-text">Datasets</span></a>
+<span class="menu-text">Dados</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../publications.html"> 
-<span class="menu-text">Publications</span></a>
+<span class="menu-text">Publicações</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../talks.html"> 
@@ -167,11 +164,15 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../photos/photos.html"> 
-<span class="menu-text">Photos</span></a>
+<span class="menu-text">Fotos</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../blog.html"> 
 <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../en/"> 
+<span class="menu-text">English</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="../blog.xml"> <i class="bi bi-rss" role="img">
@@ -191,16 +192,16 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">Nesta página</h2>
    
   <ul>
-  <li><a href="#reference" id="toc-reference" class="nav-link active" data-scroll-target="#reference">Reference</a></li>
-  <li><a href="#abstract" id="toc-abstract" class="nav-link" data-scroll-target="#abstract">Abstract</a>
+  <li><a href="#referência" id="toc-referência" class="nav-link active" data-scroll-target="#referência">Referência</a></li>
+  <li><a href="#resumo" id="toc-resumo" class="nav-link" data-scroll-target="#resumo">Resumo</a>
   <ul class="collapse">
-  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
-  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a></li>
-  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
-  <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions">Conclusions</a></li>
+  <li><a href="#contexto" id="toc-contexto" class="nav-link" data-scroll-target="#contexto">Contexto</a></li>
+  <li><a href="#métodos" id="toc-métodos" class="nav-link" data-scroll-target="#métodos">Métodos</a></li>
+  <li><a href="#resultados" id="toc-resultados" class="nav-link" data-scroll-target="#resultados">Resultados</a></li>
+  <li><a href="#conclusões" id="toc-conclusões" class="nav-link" data-scroll-target="#conclusões">Conclusões</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -223,7 +224,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-heading">Autores</div>
     <div class="quarto-title-meta-contents">
              <p>Raphael Saldanha </p>
              <p>Émilie Mosnier </p>
@@ -244,9 +245,9 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   </div>
     
     <div>
-    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-heading">Data de Publicação</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 13, 2019</p>
+      <p class="date">13 de junho de 2019</p>
     </div>
   </div>
   
@@ -259,37 +260,37 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 
 
 <p><img src="images/Screenshot from 2023-10-02 13-21-07.png" class="img-fluid"></p>
-<section id="reference" class="level2">
-<h2 class="anchored" data-anchor-id="reference">Reference</h2>
+<section id="referência" class="level2">
+<h2 class="anchored" data-anchor-id="referência">Referência</h2>
 <div id="refs" class="references csl-bib-body" data-entry-spacing="1" role="list">
 <div id="ref-saldanhaContributingEliminationCrossBorder2020" class="csl-entry" role="listitem">
-SALDANHA, R. et al. <a href="https://doi.org/10.2196/15409">Contributing to <span>Elimination</span> of <span>Cross-Border Malaria Through</span> a <span>Standardized Solution</span> for <span>Case Surveillance</span>, <span>Data Sharing</span>, and <span>Data Interpretation</span>: <span>Development</span> of a <span>Cross-Border Monitoring System</span></a>. <strong>JMIR Public Health and Surveillance</strong>, v. 6, n. 3, p. e15409, Sept. 2020.
+SALDANHA, R. et al. <a href="https://doi.org/10.2196/15409">Contributing to <span>Elimination</span> of <span>Cross-Border Malaria Through</span> a <span>Standardized Solution</span> for <span>Case Surveillance</span>, <span>Data Sharing</span>, and <span>Data Interpretation</span>: <span>Development</span> of a <span>Cross-Border Monitoring System</span></a>. <strong>JMIR Public Health and Surveillance</strong>, v. 6, n. 3, p. e15409, set. 2020.
 </div>
 </div>
 </section>
-<section id="abstract" class="level2">
-<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
-<section id="background" class="level3">
-<h3 class="anchored" data-anchor-id="background">Background</h3>
-<p>Cross-border malaria is a significant obstacle to achieving malaria control and elimination worldwide. Objective: This study aimed to build a cross-border surveillance system that can make comparable and qualified data available to all parties involved in malaria control between French Guiana and Brazil.</p>
+<section id="resumo" class="level2">
+<h2 class="anchored" data-anchor-id="resumo">Resumo</h2>
+<section id="contexto" class="level3">
+<h3 class="anchored" data-anchor-id="contexto">Contexto</h3>
+<p>A malária transfronteiriça é um obstáculo importante para alcançar o controle e a eliminação da malária no mundo. Objetivo: este estudo teve como objetivo construir um sistema de vigilância transfronteiriça capaz de disponibilizar dados comparáveis e qualificados para todas as partes envolvidas no controle da malária entre a Guiana Francesa e o Brasil.</p>
 </section>
-<section id="methods" class="level3">
-<h3 class="anchored" data-anchor-id="methods">Methods</h3>
-<p>Data reconciliation rules based on expert knowledge were defined and applied to the heterogeneous data provided by the existing malaria surveillance systems of both countries. Visualization dashboards were designed to facilitate progressive data exploration, analysis, and interpretation. Dedicated advanced open source and robust software solutions were chosen to facilitate solution sharing and reuse.</p>
+<section id="métodos" class="level3">
+<h3 class="anchored" data-anchor-id="métodos">Métodos</h3>
+<p>Regras de reconciliação de dados baseadas em conhecimento especializado foram definidas e aplicadas aos dados heterogêneos fornecidos pelos sistemas de vigilância da malária existentes nos dois países. Painéis de visualização foram desenhados para facilitar a exploração, análise e interpretação progressiva dos dados. Soluções de software livre avançadas e robustas foram escolhidas para facilitar o compartilhamento e a reutilização da solução.</p>
 </section>
-<section id="results" class="level3">
-<h3 class="anchored" data-anchor-id="results">Results</h3>
-<p>A database gathering the harmonized data on cross-border malaria epidemiology is updated monthly with new individual malaria cases from both countries. Online dashboards permit a progressi ve and user-friendly visualization of raw data and epidemiological indicators, in the form of time series, maps, and data quality indexes. The monitoring system was shown to be able to identify changes in time series that are related to control actions, as well as differentiated changes according to space and to population subgroups.</p>
+<section id="resultados" class="level3">
+<h3 class="anchored" data-anchor-id="resultados">Resultados</h3>
+<p>Uma base de dados que reúne dados harmonizados sobre a epidemiologia da malária transfronteiriça é atualizada mensalmente com novos casos individuais de malária dos dois países. Painéis on-line permitem uma visualização progressiva e amigável dos dados brutos e de indicadores epidemiológicos, na forma de séries temporais, mapas e índices de qualidade dos dados. O sistema de monitoramento mostrou-se capaz de identificar mudanças em séries temporais relacionadas a ações de controle, bem como mudanças diferenciadas segundo o espaço e subgrupos populacionais.</p>
 </section>
-<section id="conclusions" class="level3">
-<h3 class="anchored" data-anchor-id="conclusions">Conclusions</h3>
-<p>This cross-border monitoring tool could help produce new scientific evidence on cross-border malaria dynamics, implementing cross-border cooperation for malaria control and elimination, and can be quickly adapted to other cross-border contexts.</p>
+<section id="conclusões" class="level3">
+<h3 class="anchored" data-anchor-id="conclusões">Conclusões</h3>
+<p>Essa ferramenta de monitoramento transfronteiriço pode ajudar a produzir novas evidências científicas sobre a dinâmica da malária em áreas de fronteira, implementar a cooperação transfronteiriça para controle e eliminação da malária e ser rapidamente adaptada a outros contextos fronteiriços.</p>
 
 
 </section>
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -315,12 +316,12 @@ SALDANHA, R. et al. <a href="https://doi.org/10.2196/15409">Contributing to <spa
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Copiada");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Copiada");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",

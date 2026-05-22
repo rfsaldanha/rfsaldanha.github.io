@@ -1,100 +1,100 @@
 ---
-title: "Zonal statistics of climate indicators for Brazilian municipalities"
+title: "Estatísticas zonais de indicadores climáticos para municípios brasileiros"
 bibliography: references.bib
 ---
 
 ![](images/zonal_brdwgd-01.png)
 
-## Introduction
+## Introdução
 
-Climate indicators are used on several statistical models for many research areas and are specially important for modeling Climate Sensitive Diseases (CSD) incidence. Those models usually adopts a lattice structure, where its data is aggregated at administrative boundaries (e.g. disease incidence), but climate indicators are usually presented in a continuous regular grid format.
+Indicadores climáticos são usados em vários modelos estatísticos de diferentes áreas de pesquisa e são especialmente importantes para modelar a incidência de doenças sensíveis ao clima. Esses modelos geralmente adotam uma estrutura espacial em que os dados são agregados por limites administrativos, enquanto os indicadores climáticos costumam ser apresentados em grades regulares contínuas.
 
-To make climate indicators compatible with lattice structures, zonal statistics may be adopted. Zonal statistics are descriptive statistics calculated using a set of cells that spatially intersects a given spatial boundary. For each boundary in a map, statistics like average, maximum value, minimum value, standard deviation, and sum are obtained to represent the cell's values that intersect the boundary.
+Para tornar indicadores climáticos compatíveis com essas estruturas, podem ser usadas estatísticas zonais. Estatísticas zonais são estatísticas descritivas calculadas a partir de células que intersectam um limite espacial. Para cada limite no mapa, estatísticas como média, máximo, mínimo, desvio padrão e soma representam os valores das células que intersectam a área.
 
-I created some zonal statistics of climate indicators datasets for Brazilian municipalities from some climate data products.
+Criei bases de estatísticas zonais de indicadores climáticos para municípios brasileiros a partir de diferentes produtos de dados climáticos.
 
-## Zonal ERA5-Land
+## Estatísticas zonais ERA5-Land
 
-1950-2022: [![](https://img.shields.io/badge/download-10.5281/zenodo.10036211-green.svg)](https://doi.org/10.5281/zenodo.10036211)
+1950-2022: [![](https://img.shields.io/badge/baixar-10.5281/zenodo.10036211-green.svg)](https://doi.org/10.5281/zenodo.10036211)
 
-2023: [![](https://img.shields.io/badge/download-10.5281/zenodo.10947952-green.svg)](https://doi.org/10.5281/zenodo.10947952)
+2023: [![](https://img.shields.io/badge/baixar-10.5281/zenodo.10947952-green.svg)](https://doi.org/10.5281/zenodo.10947952)
 
-2024: [![](https://img.shields.io/badge/download-10.5281/zenodo.15748125-green.svg)](https://doi.org/10.5281/zenodo.15748125)
+2024: [![](https://img.shields.io/badge/baixar-10.5281/zenodo.15748125-green.svg)](https://doi.org/10.5281/zenodo.15748125)
 
-2025: [![](https://img.shields.io/badge/download-10.5281/zenodo.18257037-green.svg)](https://doi.org/10.5281/zenodo.18257037)
+2025: [![](https://img.shields.io/badge/baixar-10.5281/zenodo.18257037-green.svg)](https://doi.org/10.5281/zenodo.18257037)
 
-Relative humidity (1950 - 2025): [![](https://img.shields.io/badge/download-10.5281/zenodo.18392587-green.svg)](https://doi.org/10.5281/zenodo.18392587)
+Umidade relativa (1950 - 2025): [![](https://img.shields.io/badge/baixar-10.5281/zenodo.18392587-green.svg)](https://doi.org/10.5281/zenodo.18392587)
 
-Wind speed (1950 - 2025): [![](https://img.shields.io/badge/download-10.5281/zenodo.18390794-green.svg)](https://doi.org/10.5281/zenodo.18390794)
+Velocidade do vento (1950 - 2025): [![](https://img.shields.io/badge/baixar-10.5281/zenodo.18390794-green.svg)](https://doi.org/10.5281/zenodo.18390794)
 
-The ERA5-Land data [@muñoz-sabater2021] presents hourly climate indicators at 0.1° × 0.1° horizontal resolution with global coverage, from 1950 to present.
+Os dados ERA5-Land [@muñoz-sabater2021] apresentam indicadores climáticos horários em resolução horizontal de 0,1° × 0,1°, com cobertura global, de 1950 até o presente.
 
-Selected indicators hourly data were [downloaded and aggregated at daily basis](http://localhost:6732/data-projects/era5land-daily-latin-america.html) to compute zonal statistics for the Brazilian municipalities.
+Dados horários de indicadores selecionados foram [baixados e agregados em escala diária](era5land-daily-latin-america.html) para calcular estatísticas zonais para os municípios brasileiros.
 
-The following indicators and aggregations were computed.
+Foram calculados os seguintes indicadores e agregações.
 
-| ERA5-Land indicators | Daily time-aggregating functions | Spatial zonal statistics |
+| Indicadores ERA5-Land | Funções de agregação diária | Estatísticas zonais espaciais |
 |--------------------|----------------------------|------------------------|
-| Temperature (2m) | mean, max, min | mean, max, min, stdev, count |
-| Dewpoint temp. (2m) | mean | mean, max, min, stdev, count |
-| $u$ component of wind | mean | mean, max, min, stdev, count |
-| $v$ component of wind | mean | mean, max, min, stdev, count |
-| Surface pressure | mean | mean, max, min, stdev, count |
-| Total precipitation | sum | mean, max, min, stdev, count, sum |
-| Relative humidity | mean | mean |
-| Wind speed | mean | mean |
+| Temperatura (2m) | média, máximo, mínimo | média, máximo, mínimo, desvio padrão, contagem |
+| Temperatura do ponto de orvalho (2m) | média | média, máximo, mínimo, desvio padrão, contagem |
+| Componente $u$ do vento | média | média, máximo, mínimo, desvio padrão, contagem |
+| Componente $v$ do vento | média | média, máximo, mínimo, desvio padrão, contagem |
+| Pressão de superfície | média | média, máximo, mínimo, desvio padrão, contagem |
+| Precipitação total | soma | média, máximo, mínimo, desvio padrão, contagem, soma |
+| Umidade relativa | média | média |
+| Velocidade do vento | média | média |
 
-A paper with the full methodology was published in the Environmental Data Science journal.
+Um artigo com a metodologia completa foi publicado na revista Environmental Data Science.
 
 [![](https://zenodo.org/badge/DOI/10.1017/eds.2024.3.svg)](https://doi.org/10.1017/eds.2024.3)
 
 ::: callout-tip
-Those files are in parquet format. Not sure how to open parquet files? Take a look on this [blog post](https://rfsaldanha.github.io/posts/query_local_parquet_files.html).
+Esses arquivos estão em formato parquet. Não sabe como abrir arquivos parquet? Veja este [post do blog](https://rfsaldanha.github.io/posts/query_local_parquet_files.html).
 :::
 
-### Usage statistics
+### Estatísticas de uso
 
-Usage statistics of this and other datasets are available [here](https://rfsaldanha.github.io/pkgdash/#datasets).
+As estatísticas de uso desta e de outras bases estão disponíveis [aqui](https://rfsaldanha.github.io/pkgdash/#datasets).
 
-## Zonal BR-DWGD
+## Estatísticas zonais BR-DWGD
 
-1961-01-01 to 2024-03-20: [![](https://img.shields.io/badge/download-10.5281/zenodo.13906834-green.svg)](https://doi.org/10.5281/zenodo.13906834)
+1961-01-01 a 2024-03-20: [![](https://img.shields.io/badge/baixar-10.5281/zenodo.13906834-green.svg)](https://doi.org/10.5281/zenodo.13906834)
 
-The BR-DWGD dataset [@xavier2022] presents daily meteorological data interpolated to a grid with 0.1° × 0.1° of spatial resolution for the Brazilian territory, with daily data starting on January 1, 1961. It uses data from several weather stations rain gauges in its interpolation methods, cross-validated to the selection of the best method for each weather indicator.
+A base BR-DWGD [@xavier2022] apresenta dados meteorológicos diários interpolados para uma grade com resolução espacial de 0,1° × 0,1° para o território brasileiro, com dados diários desde 1º de janeiro de 1961. Ela usa dados de pluviômetros de várias estações meteorológicas em seus métodos de interpolação, com validação cruzada para selecionar o melhor método para cada indicador meteorológico.
 
-The following weather indicators are available from the BR-DWGD study: precipitation (mm), minimum temperature (°C), maximum temperature (°C), solar radiation (MJ⋅m−2 ), wind speed at 2m height (m⋅s−1) and relative humidity (%).
+Os seguintes indicadores meteorológicos estão disponíveis no estudo BR-DWGD: precipitação (mm), temperatura mínima (°C), temperatura máxima (°C), radiação solar (MJ⋅m−2), velocidade do vento a 2 m de altura (m⋅s−1) e umidade relativa (%).
 
-The following zonal statistics were computed.
+Foram calculadas as seguintes estatísticas zonais.
 
-| BR-DGWD indicators | Daily time-aggregating functions | Spatial zonal statistics |
+| Indicadores BR-DWGD | Funções de agregação diária | Estatísticas zonais espaciais |
 |--------------------|----------------------------|------------------------|
-| Temperature | max, min | max, min, stdev, count |
-| Relative humidity | mean | max, min, stdev, count |
-| $u$ component of wind | mean | max, min, stdev, count |
-| Evapotranspiration | mean | max, min, stdev, count |
-| Solar radiation | mean | max, min, stdev, count |
-| Precipitation | sum | max, min, stdev, count, sum |
+| Temperatura | máximo, mínimo | máximo, mínimo, desvio padrão, contagem |
+| Umidade relativa | média | máximo, mínimo, desvio padrão, contagem |
+| Componente $u$ do vento | média | máximo, mínimo, desvio padrão, contagem |
+| Evapotranspiração | média | máximo, mínimo, desvio padrão, contagem |
+| Radiação solar | média | máximo, mínimo, desvio padrão, contagem |
+| Precipitação | soma | máximo, mínimo, desvio padrão, contagem, soma |
 
 ::: callout-tip
-Those files are in parquet format. Not sure how to open parquet files? Take a look on this [blog post](https://rfsaldanha.github.io/posts/query_local_parquet_files.html).
+Esses arquivos estão em formato parquet. Não sabe como abrir arquivos parquet? Veja este [post do blog](https://rfsaldanha.github.io/posts/query_local_parquet_files.html).
 :::
 
-## Zonal TerraClimate
+## Estatísticas zonais TerraClimate
 
-[![](https://img.shields.io/badge/download-10.5281/zenodo.7825777-green.svg)](https://doi.org/10.5281/zenodo.7825777)
+[![](https://img.shields.io/badge/baixar-10.5281/zenodo.7825777-green.svg)](https://doi.org/10.5281/zenodo.7825777)
 
-The TerraClimate [@abatzoglou2018] dataset presents monthly meteorological data interpolated to a grid with 0.04° × 0.04° (1/24th degree) of spatial resolution with world cover, with monthly data from January, 1958, to December, 2021.
+A base TerraClimate [@abatzoglou2018] apresenta dados meteorológicos mensais interpolados para uma grade com resolução espacial de 0,04° × 0,04° (1/24 de grau), com cobertura mundial e dados mensais de janeiro de 1958 a dezembro de 2021.
 
-The following weather indicators are available from the TerraClimate study: Actual Evapotranspiration (mm), Climate Water Deficit (mm), Potential evapotranspiration(mm), Precipitation (mm), Runoff (mm), Soil Moisture (mm), Downward surface shortwave radiation (W/m2), Snow water equivalent (mm), Minimum temperature (°C), Maximum temperature (°C), Vapor pressure (kPa), Wind speed (m/s), Vapor Pressure Deficit (kpa) and Palmer Drought Severity Index.
+Os seguintes indicadores meteorológicos estão disponíveis no estudo TerraClimate: evapotranspiração real (mm), déficit hídrico climático (mm), evapotranspiração potencial (mm), precipitação (mm), escoamento superficial (mm), umidade do solo (mm), radiação de onda curta descendente na superfície (W/m2), equivalente de água da neve (mm), temperatura mínima (°C), temperatura máxima (°C), pressão de vapor (kPa), velocidade do vento (m/s), déficit de pressão de vapor (kPa) e Palmer Drought Severity Index.
 
-The following zonal statistics were computed.
+Foram calculadas as seguintes estatísticas zonais.
 
 ```{r}
 brclimr::product_info(product = "terraclimate")
 ```
 
-The results are availabe as parquet files, available at [Zenodo](https://zenodo.org/records/7825777) and can be also accessed with the [brclimr](https://rfsaldanha.github.io/brclimr) R package.
+Os resultados estão disponíveis como arquivos parquet no [Zenodo](https://zenodo.org/records/7825777) e também podem ser acessados com o pacote R [brclimr](https://rfsaldanha.github.io/brclimr).
 
 ::: callout-tip
-Those files are in parquet format. Not sure how to open parquet files? Take a look on this [blog post](https://rfsaldanha.github.io/posts/query_local_parquet_files.html).
+Esses arquivos estão em formato parquet. Não sabe como abrir arquivos parquet? Veja este [post do blog](https://rfsaldanha.github.io/posts/query_local_parquet_files.html).
 :::

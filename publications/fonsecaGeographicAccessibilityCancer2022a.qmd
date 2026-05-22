@@ -24,29 +24,29 @@ nocite: |
 
 ![](images/Screenshot from 2023-10-02 13-16-46.png)
 
-## Reference
+## Referência
 
 ::: {#refs}
 :::
 
-## Abstract
+## Resumo
 
-### Background
+### Contexto
 
-Geographic accessibility to healthcare services is a fundamental component in achieving universal health coverage, the central commitment of the Brazilian Unified Health System (SUS). For cancer patients, poor accessibility has been associated with inadequate treatment, worse prognosis, and poorer quality of life.
+A acessibilidade geográfica aos serviços de saúde é um componente fundamental para alcançar a cobertura universal de saúde, compromisso central do Sistema Único de Saúde (SUS). Para pacientes com câncer, a baixa acessibilidade tem sido associada a tratamento inadequado, pior prognóstico e menor qualidade de vida.
 
-### Methods
+### Métodos
 
-We explored nationwide healthcare data from the SUS health information systems, and mapped the geographic accessibility to cancer treatment in two time-frames: 2009--2010 and 2017--2018. We applied social network analysis (SNA) to estimate the commuting route, flow, and distances travelled by cancer patients to undergo surgical, radiotherapy, and chemotherapy treatment.
+Exploramos dados nacionais de saúde dos sistemas de informação do SUS e mapeamos a acessibilidade geográfica ao tratamento do câncer em dois períodos: 2009--2010 e 2017--2018. Aplicamos análise de redes sociais (ARS) para estimar rotas de deslocamento, fluxos e distâncias percorridas por pacientes com câncer para realizar tratamento cirúrgico, radioterápico e quimioterápico.
 
-### Findings
+### Resultados
 
-A total of 12,751,728 treatment procedures were analyzed. Overall, more than half of the patients (49·2 to 60·7%) needed to travel beyond their municipality of residence for treatment, a fact that did not change over time. Marked regional differences were observed, as patients living in the northern and midwestern regions of the country had to travel longer distances (weighted average of 296 to 870 km). Cancer care hubs and attraction poles were mostly identified in the southeast and northeast regions, with Barretos being the main hub for all types of treatment throughout time.
+Foram analisados 12.751.728 procedimentos de tratamento. Em geral, mais da metade dos pacientes (49,2 a 60,7%) precisou se deslocar para fora do município de residência para tratamento, situação que não mudou ao longo do tempo. Foram observadas diferenças regionais marcantes, pois pacientes residentes nas regiões Norte e Centro-Oeste do país precisaram percorrer distâncias maiores (média ponderada de 296 a 870 km). Os polos de atenção oncológica e de atração foram identificados principalmente nas regiões Sudeste e Nordeste, com Barretos sendo o principal polo para todos os tipos de tratamento ao longo do período.
 
-### Interpretation
+### Interpretação
 
-Important regional disparities in the accessibility to cancer treatment in Brazil were revealed, suggesting the need to review the distribution of specialized care in the country. The data presented here contribute to ongoing research on improving access to cancer care and can provide reference to other countries, offering relevant data for oncological and healthcare service evaluation, monitoring, and strategic planning.
+Foram reveladas importantes disparidades regionais na acessibilidade ao tratamento do câncer no Brasil, sugerindo a necessidade de revisar a distribuição da atenção especializada no país. Os dados apresentados contribuem para pesquisas em andamento sobre a melhoria do acesso ao cuidado oncológico e podem servir de referência para outros países, oferecendo informações relevantes para avaliação, monitoramento e planejamento estratégico de serviços oncológicos e de saúde.
 
-### Funding
+### Financiamento
 
-This work was funded by the Oswaldo Cruz Foundation - Fiocruz (Inova - no. 8451635123 to BPF) and the National Council for Scientific and Technological Development - CNPq (no. 407060/2018--9 to BPF); Coordination for the Improvement of Higher Education Personnel -- CAPES (scholarship to PCA, Finance Code 001); and Instituto Nacional de Ciência e Tecnologia de Inovação em Doenças de Populações Negligenciadas (INCT-IDPN).
+Este trabalho foi financiado pela Fundação Oswaldo Cruz - Fiocruz (Inova - nº 8451635123 para BPF) e pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico - CNPq (nº 407060/2018--9 para BPF); Coordenação de Aperfeiçoamento de Pessoal de Nível Superior - CAPES (bolsa para PCA, Código de Financiamento 001); e Instituto Nacional de Ciência e Tecnologia de Inovação em Doenças de Populações Negligenciadas (INCT-IDPN).

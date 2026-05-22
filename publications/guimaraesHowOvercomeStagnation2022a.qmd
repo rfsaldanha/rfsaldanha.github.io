@@ -25,11 +25,11 @@ nocite: |
 
 ![](images/Screenshot from 2023-10-02 13-16-07.png)
 
-## Reference
+## Referência
 
 ::: {#refs}
 :::
 
-## Abstract
+## Resumo
 
-Background: A large percentage of the population has not yet started vaccination, for which the increase in coverage is almost null. Methods: We used segmented regression analysis to estimate trends in the first dose coverage curve. Results: There has been a slowdown in the application of the first doses in Brazil since epidemiological week 36 (average percent change \[APC\] 0.83%, 95% confidence interval \[CI\] 0.75-0.91%), with a trend close to stagnation. Conclusions: It is important to develop strategies to increase access to vaccination posts. Furthermore, it is recommended to expand vaccination to children, thereby increasing the eligible population.
+Contexto: Uma grande parcela da população ainda não iniciou a vacinação, e o aumento da cobertura nesse grupo é quase nulo. Métodos: Usamos análise de regressão segmentada para estimar tendências na curva de cobertura da primeira dose. Resultados: Houve desaceleração na aplicação das primeiras doses no Brasil a partir da semana epidemiológica 36 (variação percentual média \[APC\] de 0,83%, intervalo de confiança \[IC\] de 95%: 0,75-0,91%), com tendência próxima à estagnação. Conclusões: É importante desenvolver estratégias para ampliar o acesso aos postos de vacinação. Além disso, recomenda-se expandir a vacinação para crianças, aumentando assim a população elegível.

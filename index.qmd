@@ -23,14 +23,14 @@ about:
       href: "mailto:raphael.saldanha@fiocruz.br"
 ---
 
-Researcher at [Fiocruz](https://portal.fiocruz.br/),  [Inria](https://www.inria.fr/fr) alumni.
+Pesquisador da [Fiocruz](https://portal.fiocruz.br/) e egresso do [Inria](https://www.inria.fr/fr).
 
-Associate editor of [RECIIS](https://www.reciis.icict.fiocruz.br).
+Editor associado da [RECIIS](https://www.reciis.icict.fiocruz.br).
 
-Pasteur Network [Climate & Health](https://pasteur-network.org/what-we-do/theory-of-change-pillars/epidemic-intelligence-preparedness-climate/) fellow.
+Bolsista da área de [Clima & Saúde](https://pasteur-network.org/what-we-do/theory-of-change-pillars/epidemic-intelligence-preparedness-climate/) da Pasteur Network.
 
-Health geographer and health data scientist. Undergraduate in Geography, specialization in Statistics, master's in Public Health, and Ph.D. in Health Information.
+Geógrafo da saúde e cientista de dados em saúde. Graduado em Geografia, especialista em Estatística, mestre em Saúde Coletiva e doutor em Informação em Saúde.
 
-Brazilian from Nova Friburgo (RJ), lived for several years on Minas Gerais, Rio de Janeiro and Montpellier, France. Currently based on Rio de Janeiro.
+Brasileiro de Nova Friburgo (RJ), viveu por vários anos em Minas Gerais, no Rio de Janeiro e em Montpellier, França. Atualmente vive no Rio de Janeiro.
 
-Loves to code and crunch huge health and climate datasets with R.
+Gosta de programar e trabalhar com grandes bases de dados de saúde e clima usando R.

@@ -23,11 +23,11 @@ nocite: |
 
 ![](images/Screenshot from 2023-10-02 13-28-12.png)
 
-## Reference
+## Referência
 
 ::: {#refs}
 :::
 
-## Abstract
+## Resumo
 
-Following the creation of the Brazilian Unified National Health System (SUS), the Brazilian Health Informatics Department (DATASUS) was established in 1991, aimed at organizing information systems and databases in health. Online data access and viewing is free and open, using tables and graphs of aggregate data and access to raw data. However, the current form of data access does not fully meet the demands by health system administrators and other users for a flexible, user-friendly tool that allows dealing with various relevant health issues in the knowledge search and decision-making. We propose an ancillary system capable of generating monthly summary reports that are easy to access and understand, with an emphasis on viewing information through graphs and maps.
+Após a criação do Sistema Único de Saúde (SUS), o Departamento de Informática do SUS (DATASUS) foi criado em 1991 com o objetivo de organizar sistemas de informação e bases de dados em saúde. O acesso e a visualização de dados on-line são livres e abertos, por meio de tabelas e gráficos de dados agregados e acesso a dados brutos. No entanto, a forma atual de acesso aos dados não atende plenamente às demandas de gestores do sistema de saúde e de outros usuários por uma ferramenta flexível e amigável, capaz de lidar com diversas questões relevantes de saúde na busca por conhecimento e na tomada de decisão. Propomos um sistema auxiliar capaz de gerar relatórios mensais sintéticos, de fácil acesso e compreensão, com ênfase na visualização das informações por meio de gráficos e mapas.

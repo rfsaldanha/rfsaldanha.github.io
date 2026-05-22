@@ -1,5 +1,5 @@
 ---
-title: "Photos"
+title: "Fotos"
 title-block-banner: true
 page-layout: full
 freeze: true
@@ -24,7 +24,7 @@ descrip_exif <- function(x){
              "BatteryLevel", "SelfTimer", "DateTimeOriginal", "OffsetTime")
   )
   
-  glue::glue("{exif$Make} {exif$Model} Lens {exif$LensModel} <br>
+  glue::glue("{exif$Make} {exif$Model} Lente {exif$LensModel} <br>
              {exif$FocalLength}mm f/{exif$FNumber} 1/{round(1/exif$ExposureTime)} ISO {exif$ISO} <br>
              {lubridate::as_datetime(glue::glue('{exif$DateTimeOriginal} {exif$OffsetTime}'))} UTC")
 }
@@ -41,27 +41,27 @@ prepare_photos(
 ## Parc Naturel du Mejean, Lattes FR
 
 ::: {style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));grid-gap: 1em;"}
-![Greater flamingo](images/20240211_0325.jpg){description="`r descrip_exif('images/20240211_0325.jpg')`" desc-position="left" group="mejean"}
+![Flamingo-comum](images/20240211_0325.jpg){description="`r descrip_exif('images/20240211_0325.jpg')`" desc-position="left" group="mejean"}
 
-![Little Egret](images/20240211_0044.jpg){description="`r descrip_exif('images/20240211_0044.jpg')`" desc-position="left" group="mejean"}
+![Garça-branca-pequena](images/20240211_0044.jpg){description="`r descrip_exif('images/20240211_0044.jpg')`" desc-position="left" group="mejean"}
 
 ![Phragmites australis](images/20240211_0259.jpg){description="`r descrip_exif('images/20240211_0259.jpg')`" desc-position="left" group="mejean"}
 
-![White Stork](images/20240211_0504.jpg){description="`r descrip_exif('images/20240211_0504.jpg')`" desc-position="left" group="mejean"}
+![Cegonha-branca](images/20240211_0504.jpg){description="`r descrip_exif('images/20240211_0504.jpg')`" desc-position="left" group="mejean"}
 :::
 
-## Iceland
+## Islândia
 
 ::: {style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));grid-gap: 1em;"}
 ![Kirkjufell](images/20240115_0036.jpg){description="`r descrip_exif('images/20240115_0036.jpg')`" desc-position="left" group="iceland"}
 
-![Black pebble beach of Djúpalónssandur](images/20240115_0093.jpg){description="`r descrip_exif('images/20240115_0093.jpg')` " desc-position="left" group="iceland"}
+![Praia de seixos negros de Djúpalónssandur](images/20240115_0093.jpg){description="`r descrip_exif('images/20240115_0093.jpg')` " desc-position="left" group="iceland"}
 
 ![Arnarstapi](images/20240115_0204.jpg){description="`r descrip_exif('images/20240115_0204.jpg')` " desc-position="left" group="iceland"}
 
 ![Búðakirkja](images/20240115_0209.jpg){description="`r descrip_exif('images/20240115_0209.jpg')` " desc-position="left" group="iceland"}
 
-![Diamond beach](images/20240115_0268.jpg){description="`r descrip_exif('images/20240115_0268.jpg')` " desc-position="left" group="iceland"}
+![Praia dos Diamantes](images/20240115_0268.jpg){description="`r descrip_exif('images/20240115_0268.jpg')` " desc-position="left" group="iceland"}
 
 ![Skógafoss](images/20240115_0379.jpg){description="`r descrip_exif('images/20240115_0379.jpg')` " desc-position="left" group="iceland"}
 

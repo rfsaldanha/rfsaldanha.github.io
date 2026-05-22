@@ -24,11 +24,11 @@ nocite: |
 
 ![](images/clipboard-3121148281.png)
 
-## Reference
+## Referência
 
 ::: {#refs}
 :::
 
-## Abstract
+## Resumo
 
-Multivariate time series ﬁnd extensive applications in conjunction with machine learning methodologies for scenario forecasting across various domains. Nevertheless, certain domains exhibit inherent complexities and diversities, which detrimentally impact the predictive efﬁcacy of global models. This ongoing study introduces a Subset Modeling Framework designed to acknowledge the inherent diversity within a domain’s multivariate space. Comparative assessments between subset models and global models are conducted in terms of performance, revealing compelling ﬁndings and suggesting the potential for further exploration and reﬁnement of this novel framework.
+Séries temporais multivariadas têm ampla aplicação em conjunto com metodologias de aprendizado de máquina para previsão de cenários em diversos domínios. No entanto, certos domínios apresentam complexidades e diversidades inerentes, que prejudicam a eficácia preditiva de modelos globais. Este estudo em andamento apresenta um Subset Modeling Framework projetado para reconhecer a diversidade inerente ao espaço multivariado de um domínio. Avaliações comparativas entre modelos de subconjuntos e modelos globais são conduzidas em termos de desempenho, revelando achados promissores e sugerindo potencial para exploração e refinamento adicionais deste novo arcabouço.

@@ -1,0 +1,15 @@
+---
+title: "Cidade & Saúde"
+subtitle: "Accessible health information about Brazilian municipalities."
+---
+
+![Cidade & Saúde main webpage.](images/cidadesaude-1400.webp){fig-align="center"}
+
+"Cidade & Saúde" is a self-funded Project that I started just after my master's and before my Ph.D.
+
+The project objective is to collect and aggregate health data at the municipality level and provide simple and visually compelling access with satellite images and graphs. The user is asked to type a city name and the system presents a webpage with the satellite image of that city and several socio-demographic and health information with graphs.
+
+The satellite image is used to put the socio-demographic and health data in context, with graphs and indicators definitions covering demographic aspects, mortality, hospital admissions, health units, and health budget.
+
+The project website is accessible by this address: https://cidadesaude.io. The project data is out of date, and waiting for financing.
+

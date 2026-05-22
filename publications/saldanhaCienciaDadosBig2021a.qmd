@@ -22,29 +22,29 @@ nocite: |
 
 ![](images/Screenshot from 2023-10-02 13-17-24.png)
 
-## Reference
+## Referência
 
 ::: {#refs}
 :::
 
-## Abstract
+## Resumo
 
-### Background
+### Contexto
 
-The term big data is no longer new in the academic environment and has become more common in scientific publications and research grants, leading to a profound revision of the way science is being made and taught.
+O termo big data já não é novidade no ambiente acadêmico e tornou-se mais comum em publicações científicas e editais de pesquisa, levando a uma profunda revisão da forma como a ciência é produzida e ensinada.
 
-### Objective
+### Objetivo
 
-To reflect on the possible changes that data science can induce in population and health related studies
+Refletir sobre as possíveis mudanças que a ciência de dados pode induzir em estudos populacionais e de saúde.
 
-### Method
+### Método
 
-To foster this debate, scientific articles selected from the big data field in health and demography were contrasted with books and other scientific productions.
+Para fomentar esse debate, artigos científicos selecionados do campo de big data em saúde e demografia foram contrastados com livros e outras produções científicas.
 
-### Results
+### Resultados
 
-It is argued that volume is not the most promising characteristic of big data for population and health related studies, but rather the complexity of data and the possibilities of integration with traditional studies by means of interdisciplinary teams.
+Argumenta-se que o volume não é a característica mais promissora do big data para estudos populacionais e de saúde, mas sim a complexidade dos dados e as possibilidades de integração com estudos tradicionais por meio de equipes interdisciplinares.
 
-### Conclusion
+### Conclusão
 
-In population and health related studies, the possibilities of integration between new and traditional methods are broad, and include new toolboxes for analysis, monitoring, prediction of events (cases) and health-disease processes in the population, and for the study of sociodemographic and environmental determinants.
+Em estudos populacionais e de saúde, as possibilidades de integração entre métodos novos e tradicionais são amplas e incluem novas ferramentas para análise, monitoramento, predição de eventos (casos) e processos saúde-doença na população, bem como para o estudo de determinantes sociodemográficos e ambientais.

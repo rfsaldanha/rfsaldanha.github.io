@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Event-based climate indicators for public health analysis – Raphael Saldanha</title>
+<title>Indicadores climáticos baseados em eventos para análises em saúde pública – Raphael Saldanha</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -62,6 +59,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -90,14 +88,15 @@ div.csl-indent {
 <link href="../logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-0c1497c822180f859fc410b87e91da95.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-9c801c0f987b87cb825544174f2aa3e8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -112,17 +111,17 @@ div.csl-indent {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
   }
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2M7VLSRDCB"></script>
@@ -153,8 +152,8 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
     <span class="navbar-title">Raphael Saldanha</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -165,19 +164,19 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../projects.html"> 
-<span class="menu-text">Projects</span></a>
+<span class="menu-text">Projetos</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../code.html"> 
-<span class="menu-text">Packages &amp; Code</span></a>
+<span class="menu-text">Pacotes &amp; Código</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../data.html"> 
-<span class="menu-text">Datasets</span></a>
+<span class="menu-text">Dados</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../publications.html"> 
-<span class="menu-text">Publications</span></a>
+<span class="menu-text">Publicações</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../talks.html"> 
@@ -185,11 +184,15 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../photos/photos.html"> 
-<span class="menu-text">Photos</span></a>
+<span class="menu-text">Fotos</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../blog.html"> 
 <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../en/"> 
+<span class="menu-text">English</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="../blog.xml"> <i class="bi bi-rss" role="img">
@@ -207,7 +210,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Event-based climate indicators for public health analysis</h1>
+      <h1 class="title">Indicadores climáticos baseados em eventos para análises em saúde pública</h1>
                       </div>
   </div>
     
@@ -225,25 +228,25 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">Nesta página</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a>
+  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução">Introdução</a></li>
+  <li><a href="#métodos" id="toc-métodos" class="nav-link" data-scroll-target="#métodos">Métodos</a>
   <ul class="collapse">
-  <li><a href="#normal-indicators" id="toc-normal-indicators" class="nav-link" data-scroll-target="#normal-indicators">Normal indicators</a></li>
-  <li><a href="#event-based-indicators" id="toc-event-based-indicators" class="nav-link" data-scroll-target="#event-based-indicators">Event-based indicators</a></li>
+  <li><a href="#indicadores-normais" id="toc-indicadores-normais" class="nav-link" data-scroll-target="#indicadores-normais">Indicadores normais</a></li>
+  <li><a href="#indicadores-baseados-em-eventos" id="toc-indicadores-baseados-em-eventos" class="nav-link" data-scroll-target="#indicadores-baseados-em-eventos">Indicadores baseados em eventos</a></li>
   </ul></li>
-  <li><a href="#sec-download" id="toc-sec-download" class="nav-link" data-scroll-target="#sec-download">Dataset download</a></li>
-  <li><a href="#results-preview" id="toc-results-preview" class="nav-link" data-scroll-target="#results-preview">Results preview</a>
+  <li><a href="#sec-download" id="toc-sec-download" class="nav-link" data-scroll-target="#sec-download">Baixar a base de dados</a></li>
+  <li><a href="#prévia-dos-resultados" id="toc-prévia-dos-resultados" class="nav-link" data-scroll-target="#prévia-dos-resultados">Prévia dos resultados</a>
   <ul class="collapse">
-  <li><a href="#maximum-temperature-rio-de-janeiro-rj-2024" id="toc-maximum-temperature-rio-de-janeiro-rj-2024" class="nav-link" data-scroll-target="#maximum-temperature-rio-de-janeiro-rj-2024">Maximum temperature, Rio de Janeiro, RJ, 2024</a></li>
-  <li><a href="#minimum-temperature-urupema-sc-2025" id="toc-minimum-temperature-urupema-sc-2025" class="nav-link" data-scroll-target="#minimum-temperature-urupema-sc-2025">Minimum temperature, Urupema, SC, 2025</a></li>
-  <li><a href="#relative-humidity-aquidauana-ms-2025" id="toc-relative-humidity-aquidauana-ms-2025" class="nav-link" data-scroll-target="#relative-humidity-aquidauana-ms-2025">Relative humidity, Aquidauana, MS, 2025</a></li>
-  <li><a href="#precipitation-calçoene-ap-2025" id="toc-precipitation-calçoene-ap-2025" class="nav-link" data-scroll-target="#precipitation-calçoene-ap-2025">Precipitation, Calçoene, AP, 2025</a></li>
-  <li><a href="#wind-speed-caetité-ba-2025" id="toc-wind-speed-caetité-ba-2025" class="nav-link" data-scroll-target="#wind-speed-caetité-ba-2025">Wind speed, Caetité, BA, 2025</a></li>
+  <li><a href="#temperatura-máxima-rio-de-janeiro-rj-2024" id="toc-temperatura-máxima-rio-de-janeiro-rj-2024" class="nav-link" data-scroll-target="#temperatura-máxima-rio-de-janeiro-rj-2024">Temperatura máxima, Rio de Janeiro, RJ, 2024</a></li>
+  <li><a href="#temperatura-mínima-urupema-sc-2025" id="toc-temperatura-mínima-urupema-sc-2025" class="nav-link" data-scroll-target="#temperatura-mínima-urupema-sc-2025">Temperatura mínima, Urupema, SC, 2025</a></li>
+  <li><a href="#umidade-relativa-aquidauana-ms-2025" id="toc-umidade-relativa-aquidauana-ms-2025" class="nav-link" data-scroll-target="#umidade-relativa-aquidauana-ms-2025">Umidade relativa, Aquidauana, MS, 2025</a></li>
+  <li><a href="#precipitação-calçoene-ap-2025" id="toc-precipitação-calçoene-ap-2025" class="nav-link" data-scroll-target="#precipitação-calçoene-ap-2025">Precipitação, Calçoene, AP, 2025</a></li>
+  <li><a href="#velocidade-do-vento-caetité-ba-2025" id="toc-velocidade-do-vento-caetité-ba-2025" class="nav-link" data-scroll-target="#velocidade-do-vento-caetité-ba-2025">Velocidade do vento, Caetité, BA, 2025</a></li>
   </ul></li>
-  <li><a href="#session-info" id="toc-session-info" class="nav-link" data-scroll-target="#session-info">Session info</a></li>
+  <li><a href="#informações-da-sessão" id="toc-informações-da-sessão" class="nav-link" data-scroll-target="#informações-da-sessão">Informações da sessão</a></li>
   </ul>
 </nav>
     </div>
@@ -254,124 +257,124 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 
 
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Climate and health research has traditionally represented environmental exposure using nominal meteorological variables, such as mean temperature or total precipitation, included as continuous covariates in epidemiological models. Although these indicators are widely available and straightforward to implement, they often inadequately represent the persistent, extreme, and threshold-exceeding conditions through which climate variability and change affect human health. Many health impacts are driven by discrete climate events - such as heat waves, cold spells, prolonged rainfall, and dry spells - whose effects depend on duration, intensity, and temporal clustering rather than on average conditions alone.</p>
-<p>I propose here a method to compute, for each Brazilian municipality, a monthly or weekly set of event-based climate indicators and climatological normals.</p>
+<section id="introdução" class="level2">
+<h2 class="anchored" data-anchor-id="introdução">Introdução</h2>
+<p>A pesquisa em clima e saúde tradicionalmente representa a exposição ambiental usando variáveis meteorológicas nominais, como temperatura média ou precipitação total, incluídas como covariáveis contínuas em modelos epidemiológicos. Embora esses indicadores sejam amplamente disponíveis e simples de implementar, muitas vezes representam de forma limitada condições persistentes, extremas e acima de limiares pelas quais a variabilidade e a mudança climática afetam a saúde humana. Muitos impactos em saúde são causados por eventos climáticos discretos, como ondas de calor, ondas de frio, chuva prolongada e períodos secos, cujos efeitos dependem de duração, intensidade e agrupamento temporal, não apenas de condições médias.</p>
+<p>Proponho aqui um método para calcular, para cada município brasileiro, um conjunto mensal ou semanal de indicadores climáticos baseados em eventos e normais climatológicas.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+Dica
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>In a hurry? Jump to the <a href="#sec-download">download</a> section ;-)</p>
+<p>Com pressa? Vá direto para a seção de <a href="#sec-download">baixar</a> ;-)</p>
 </div>
 </div>
 </section>
-<section id="methods" class="level2">
-<h2 class="anchored" data-anchor-id="methods">Methods</h2>
-<p>A climatological normal can be computed with data from different sources, including remote sensing sensors and “area averages or points in gridded datasets” <span class="citation" data-cites="wmoWMOGuidelinesCalculation2017">(<a href="#ref-wmoWMOGuidelinesCalculation2017" role="doc-biblioref">WMO 2017</a>)</span>. Some gridded climatological datasets are available for the Brazilian territory, including the ERA5-Land from Copernicus <span class="citation" data-cites="muñoz-sabater2021">(<a href="#ref-muñoz-sabater2021" role="doc-biblioref">Muñoz-Sabater et al. 2021</a>)</span> and the BR-DWGD dataset <span class="citation" data-cites="xavier2022">(<a href="#ref-xavier2022" role="doc-biblioref">Xavier et al. 2022</a>)</span>, offering several climatological indicators for a long time range, and continuously updates.</p>
-<p>Some research methods demands that climate data must be aggregated in the same spatial and temporal units of other data to be used in statistical models, being a fairly common procedure in epidemiology and economy studies. In order to approach this issue, spatial gridded data can be aggregated using <em>zonal statistics</em> <span class="citation" data-cites="saldanhaZonalStatisticsDatasets2024">(<a href="#ref-saldanhaZonalStatisticsDatasets2024" role="doc-biblioref">Saldanha et al. 2024</a>)</span>.</p>
-<p>For this dataset, climate zonal statistics from ERA5-Land for the Brazilian municipalities (described <a href="https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html#zonal-era5-land">here</a>) was used to compute climatological normals and monthly/weekly event indicators.</p>
-<p>To compute the event-based indicators and the climatologial normals, an R package named <a href="https://rfsaldanha.github.io/climindi">{climindi}</a> was created. The package provides helper functions to compute climatological normals and event-based climate indicators in a <a href="https://www.tidyverse.org">tidy</a> way.</p>
-<section id="normal-indicators" class="level3">
-<h3 class="anchored" data-anchor-id="normal-indicators">Normal indicators</h3>
-<p>The {climindi} package computes the average, 10th and 90th percentile as climatological normals.</p>
-<p>Two climatologial normals were computed: 1961-1990 and 1981-2010.</p>
+<section id="métodos" class="level2">
+<h2 class="anchored" data-anchor-id="métodos">Métodos</h2>
+<p>Uma normal climatológica pode ser calculada com dados de diferentes fontes, incluindo sensores de sensoriamento remoto e “médias de área ou pontos em bases em grade” <span class="citation" data-cites="wmoWMOGuidelinesCalculation2017">(<a href="#ref-wmoWMOGuidelinesCalculation2017" role="doc-biblioref">WMO 2017</a>)</span>. Algumas bases climatológicas em grade estão disponíveis para o território brasileiro, incluindo o ERA5-Land do Copernicus <span class="citation" data-cites="muñoz-sabater2021">(<a href="#ref-muñoz-sabater2021" role="doc-biblioref">Muñoz-Sabater et al. 2021</a>)</span> e a base BR-DWGD <span class="citation" data-cites="xavier2022">(<a href="#ref-xavier2022" role="doc-biblioref">Xavier et al. 2022</a>)</span>, oferecendo vários indicadores climatológicos em séries longas e com atualizações contínuas.</p>
+<p>Alguns métodos de pesquisa exigem que dados climáticos sejam agregados nas mesmas unidades espaciais e temporais de outros dados usados em modelos estatísticos, procedimento comum em estudos de epidemiologia e economia. Para lidar com essa necessidade, dados espaciais em grade podem ser agregados usando <em>estatísticas zonais</em> <span class="citation" data-cites="saldanhaZonalStatisticsDatasets2024">(<a href="#ref-saldanhaZonalStatisticsDatasets2024" role="doc-biblioref">Saldanha et al. 2024</a>)</span>.</p>
+<p>Para esta base, foram usadas estatísticas zonais climáticas do ERA5-Land para municípios brasileiros, descritas <a href="https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html#zonal-era5-land">aqui</a>, para calcular normais climatológicas e indicadores de eventos mensais e semanais.</p>
+<p>Para calcular os indicadores baseados em eventos e as normais climatológicas, foi criado um pacote R chamado <a href="https://rfsaldanha.github.io/climindi">{climindi}</a>. O pacote fornece funções auxiliares para calcular normais climatológicas e indicadores climáticos baseados em eventos de forma <a href="https://www.tidyverse.org">tidy</a>.</p>
+<section id="indicadores-normais" class="level3">
+<h3 class="anchored" data-anchor-id="indicadores-normais">Indicadores normais</h3>
+<p>O pacote {climindi} calcula média, percentil 10 e percentil 90 como normais climatológicas.</p>
+<p>Foram calculadas duas normais climatológicas: 1961-1990 e 1981-2010.</p>
 </section>
-<section id="event-based-indicators" class="level3">
-<h3 class="anchored" data-anchor-id="event-based-indicators">Event-based indicators</h3>
-<p>Considering each climatological normal, a set of event-based indicators was computed using the {climindi} package for maximum and minimum temperature, total precipitation, average relative humidity and average wind speed.</p>
-<p>For each climate indicator, a set of standard indicators and a set of specific indicators were computed.</p>
-<section id="standard-indicators" class="level4">
-<h4 class="anchored" data-anchor-id="standard-indicators">Standard indicators</h4>
+<section id="indicadores-baseados-em-eventos" class="level3">
+<h3 class="anchored" data-anchor-id="indicadores-baseados-em-eventos">Indicadores baseados em eventos</h3>
+<p>Considerando cada normal climatológica, um conjunto de indicadores baseados em eventos foi calculado com o pacote {climindi} para temperatura máxima e mínima, precipitação total, umidade relativa média e velocidade média do vento.</p>
+<p>Para cada indicador climático, foram calculados indicadores padrão e indicadores específicos.</p>
+<section id="indicadores-padrão" class="level4">
+<h4 class="anchored" data-anchor-id="indicadores-padrão">Indicadores padrão</h4>
 <ul>
-<li><code>count</code> Count of data points</li>
-<li><code>mean</code> Mean value</li>
-<li><code>median</code> Median</li>
-<li><code>sd</code> Standard deviation</li>
-<li><code>se</code> Standard error</li>
-<li><code>max</code> Maximum value</li>
-<li><code>min</code> Minimum value</li>
-<li><code>p10</code> 10th percentile</li>
+<li><code>count</code> Contagem de pontos de dados</li>
+<li><code>mean</code> Valor médio</li>
+<li><code>median</code> Mediana</li>
+<li><code>sd</code> Desvio padrão</li>
+<li><code>se</code> Erro padrão</li>
+<li><code>max</code> Valor máximo</li>
+<li><code>min</code> Valor mínimo</li>
+<li><code>p10</code> Percentil 10</li>
 <li><code>p25</code> 25th percentile</li>
 <li><code>p75</code> 75th percentile</li>
-<li><code>p90</code> 90th percentile</li>
+<li><code>p90</code> Percentil 90</li>
 </ul>
 </section>
-<section id="specific-indicators" class="level4">
-<h4 class="anchored" data-anchor-id="specific-indicators">Specific indicators</h4>
+<section id="indicadores-específicos" class="level4">
+<h4 class="anchored" data-anchor-id="indicadores-específicos">Indicadores específicos</h4>
 <ul>
-<li>Precipitation
+<li>Precipitação
 <ul>
-<li><code>rs3</code> Rain spells: count of rain spells occurrences, with 3 and 5 or more consecutive days with rain above the climatological normal average value</li>
-<li><code>p_1</code> Count of days with precipitation above 1mm</li>
-<li><code>p_5</code> Count of days with precipitation above 5mm</li>
-<li><code>p_10</code> Count of days with precipitation above 10mm</li>
-<li><code>p_50</code> Count of days with precipitation above 50mm</li>
-<li><code>p_100</code> Count of days with precipitation above 100mm</li>
-<li><code>d_3</code> Count of sequences of 3 days or more without precipitation</li>
-<li><code>d_5</code> Count of sequences of 5 days or more without precipitation</li>
-<li><code>d_10</code> Count of sequences of 10 days or more without precipitation</li>
-<li><code>d_15</code> Count of sequences of 15 days or more without precipitation</li>
-<li><code>d_20</code> Count of sequences of 20 days or more without precipitation</li>
-<li><code>d_25</code> Count of sequences of 25 days or more without precipitation</li>
+<li><code>rs3</code> Períodos chuvosos: contagem de ocorrências com 3 e 5 ou mais dias consecutivos com chuva acima do valor médio da normal climatológica</li>
+<li><code>p_1</code> Contagem de dias com precipitação acima de 1mm</li>
+<li><code>p_5</code> Contagem de dias com precipitação acima de 5mm</li>
+<li><code>p_10</code> Contagem de dias com precipitação acima de 10mm</li>
+<li><code>p_50</code> Contagem de dias com precipitação acima de 50mm</li>
+<li><code>p_100</code> Contagem de dias com precipitação acima de 100mm</li>
+<li><code>d_3</code> Contagem de sequências de 3 dias ou mais sem precipitação</li>
+<li><code>d_5</code> Contagem de sequências de 5 dias ou mais sem precipitação</li>
+<li><code>d_10</code> Contagem de sequências de 10 dias ou mais sem precipitação</li>
+<li><code>d_15</code> Contagem de sequências de 15 dias ou mais sem precipitação</li>
+<li><code>d_20</code> Contagem de sequências de 20 dias ou mais sem precipitação</li>
+<li><code>d_25</code> Contagem de sequências de 25 dias ou mais sem precipitação</li>
 </ul></li>
-<li>Maximum temperature
+<li>Temperatura máxima
 <ul>
-<li><code>hw3</code> Count of heat waves occurrences with 3 or more consecutive days with maximum temperature above the climatological normal value plus 5 Celsius degrees</li>
-<li><code>hw5</code> Count of heat waves occurrences with 5 or more consecutive days with maximum temperature above the climatological normal value plus 5 Celsius degrees</li>
-<li><code>hot_days</code> Count of hot days, when the maximum temperature is above the normal 90th percentile</li>
-<li><code>t_25</code> Count of days with temperatures above or equal to 25 Celsius degrees</li>
-<li><code>t_30</code> Count of days with temperatures above or equal to 30 Celsius degrees</li>
-<li><code>t_35</code> Count of days with temperatures above or equal to 35 Celsius degrees</li>
-<li><code>t_40</code> Count of days with temperatures above or equal to 40 Celsius degrees</li>
+<li><code>hw3</code> Contagem de ocorrências de ondas de calor com 3 ou mais dias consecutivos com temperatura máxima acima da normal climatológica mais 5 graus Celsius</li>
+<li><code>hw5</code> Contagem de ocorrências de ondas de calor com 5 ou mais dias consecutivos com temperatura máxima acima da normal climatológica mais 5 graus Celsius</li>
+<li><code>hot_days</code> Contagem de dias quentes, quando a temperatura máxima está acima do percentil 90 da normal</li>
+<li><code>t_25</code> Contagem de dias com temperaturas maiores ou iguais a 25 graus Celsius</li>
+<li><code>t_30</code> Contagem de dias com temperaturas maiores ou iguais a 30 graus Celsius</li>
+<li><code>t_35</code> Contagem de dias com temperaturas maiores ou iguais a 35 graus Celsius</li>
+<li><code>t_40</code> Contagem de dias com temperaturas maiores ou iguais a 40 graus Celsius</li>
 </ul></li>
-<li>Minimum temperature
+<li>Temperatura mínima
 <ul>
-<li><code>cw3</code> Count of cold spells occurrences with 3 or more consecutive days with minimum temperature bellow the climatological normal value minus 5 Celsius degrees</li>
-<li><code>cw5</code> Count of cold spells occurrences with 5 or more consecutive days with minimum temperature bellow the climatological normal value minus 5 Celsius degrees</li>
-<li><code>cold_days</code> Count of cold days, when the minimum temperature is bellow the normal 10th percentile</li>
-<li><code>t_0</code> Count of days with temperatures bellow or equal to 0 Celsius degrees</li>
-<li><code>t_5</code> Count of days with temperatures bellow or equal to 5 Celsius degrees</li>
-<li><code>t_10</code> Count of days with temperatures bellow or equal to 10 Celsius degrees</li>
-<li><code>t_15</code> Count of days with temperatures bellow or equal to 15 Celsius degrees</li>
-<li><code>t_20</code> Count of days with temperatures bellow or equal to 20 Celsius degrees</li>
+<li><code>cw3</code> Contagem de ocorrências de ondas de frio com 3 ou mais dias consecutivos com temperatura mínima abaixo da normal climatológica menos 5 graus Celsius</li>
+<li><code>cw5</code> Contagem de ocorrências de ondas de frio com 5 ou mais dias consecutivos com temperatura mínima abaixo da normal climatológica menos 5 graus Celsius</li>
+<li><code>cold_days</code> Contagem de dias frios, quando a temperatura mínima está abaixo do percentil 10 da normal</li>
+<li><code>t_0</code> Contagem de dias com temperaturas menores ou iguais a 0 graus Celsius</li>
+<li><code>t_5</code> Contagem de dias com temperaturas menores ou iguais a 5 graus Celsius</li>
+<li><code>t_10</code> Contagem de dias com temperaturas menores ou iguais a 10 graus Celsius</li>
+<li><code>t_15</code> Contagem de dias com temperaturas menores ou iguais a 15 graus Celsius</li>
+<li><code>t_20</code> Contagem de dias com temperaturas menores ou iguais a 20 graus Celsius</li>
 </ul></li>
-<li>Relative humidity
+<li>Umidade relativa
 <ul>
-<li><code>ds3</code> Count of dry spells occurrences with 3 or more consecutive days with relative humidity bellow the climatological normal value minus 10 percent</li>
-<li><code>ds5</code> Count of dry spells occurrences with 5 or more consecutive days with relative humidity bellow the climatological normal value minus 10 percent</li>
-<li><code>ws3</code> Count of wet spells occurrences with 3 or more consecutive days with relative humidity above the climatological normal value plus 10 percent</li>
-<li><code>ws5</code> Count of wet spells occurrences with 5 or more consecutive days with relative humidity above the climatological normal value plus 10 percent</li>
-<li><code>dry_days</code> Count of dry days, when the relative humidity is bellow the normal 10th percentile</li>
-<li><code>wet_days</code> Count of wet days, when the relative humidity is above the normal 90th percentile</li>
-<li><code>h_21_30</code> Count of days with relative humidity between 21% and 30% (Attention level)</li>
-<li><code>h_12_20</code> Count of days with relative humidity between 12% and 20% (Alert level)</li>
-<li><code>h_11</code> Count of days with relative humidity bellow 12% (Emergence level)</li>
+<li><code>ds3</code> Contagem de ocorrências de períodos secos com 3 ou mais dias consecutivos com umidade relativa abaixo da normal climatológica menos 10%</li>
+<li><code>ds5</code> Contagem de ocorrências de períodos secos com 5 ou mais dias consecutivos com umidade relativa abaixo da normal climatológica menos 10%</li>
+<li><code>ws3</code> Contagem de ocorrências de períodos úmidos com 3 ou mais dias consecutivos com umidade relativa acima da normal climatológica mais 10%</li>
+<li><code>ws5</code> Contagem de ocorrências de períodos úmidos com 5 ou mais dias consecutivos com umidade relativa acima da normal climatológica mais 10%</li>
+<li><code>dry_days</code> Contagem de dias secos, quando a umidade relativa está abaixo do percentil 10 da normal</li>
+<li><code>wet_days</code> Contagem de dias úmidos, quando a umidade relativa está acima do percentil 90 da normal</li>
+<li><code>h_21_30</code> Contagem de dias com umidade relativa entre 21% and 30% (nível de atenção)</li>
+<li><code>h_12_20</code> Contagem de dias com umidade relativa entre 12% and 20% (nível de alerta)</li>
+<li><code>h_11</code> Contagem de dias com umidade relativa abaixo de 12% (nível de emergência)</li>
 </ul></li>
-<li>Wind speed
+<li>Velocidade do vento
 <ul>
-<li><code>l_eto_3</code> Count of sequences of 3 or more consecutive days with wind speed bellow the climatological average normal</li>
-<li><code>l_eto_5</code> Count of sequences of 5 or more consecutive days with wind speed bellow the climatological average normal</li>
-<li><code>h_eto_3</code> Count of sequences of 3 or more consecutive days with wind speed above the climatological average normal</li>
-<li><code>h_eto_5</code> Count of sequences of 5 or more consecutive days with wind speed above the climatological average normal</li>
-<li><code>b1</code> Count of days classified as level 1 on Beaufort scale</li>
-<li><code>b2</code> Count of days classified as level 2 on Beaufort scale</li>
-<li><code>b3</code> Count of days classified as level 3 on Beaufort scale</li>
-<li><code>b4</code> Count of days classified as level 4 on Beaufort scale</li>
-<li><code>b5</code> Count of days classified as level 5 on Beaufort scale</li>
-<li><code>b6</code> Count of days classified as level 6 on Beaufort scale</li>
-<li><code>b7</code> Count of days classified as level 7 on Beaufort scale</li>
-<li><code>b8</code> Count of days classified as level 8 on Beaufort scale</li>
-<li><code>b9</code> Count of days classified as level 9 on Beaufort scale</li>
-<li><code>b10</code> Count of days classified as level 10 on Beaufort scale</li>
-<li><code>b11</code> Count of days classified as level 11 on Beaufort scale</li>
-<li><code>b12</code> Count of days classified as level 12 on Beaufort scale</li>
+<li><code>l_eto_3</code> Contagem de sequências de 3 ou mais dias consecutivos com velocidade do vento abaixo da normal climatológica média</li>
+<li><code>l_eto_5</code> Contagem de sequências de 5 ou mais dias consecutivos com velocidade do vento abaixo da normal climatológica média</li>
+<li><code>h_eto_3</code> Contagem de sequências de 3 ou mais dias consecutivos com velocidade do vento acima da normal climatológica média</li>
+<li><code>h_eto_5</code> Contagem de sequências de 5 ou mais dias consecutivos com velocidade do vento acima da normal climatológica média</li>
+<li><code>b1</code> Contagem de dias classificados como nível 1 na escala Beaufort</li>
+<li><code>b2</code> Contagem de dias classificados como nível 2 na escala Beaufort</li>
+<li><code>b3</code> Contagem de dias classificados como nível 3 na escala Beaufort</li>
+<li><code>b4</code> Contagem de dias classificados como nível 4 na escala Beaufort</li>
+<li><code>b5</code> Contagem de dias classificados como nível 5 na escala Beaufort</li>
+<li><code>b6</code> Contagem de dias classificados como nível 6 na escala Beaufort</li>
+<li><code>b7</code> Contagem de dias classificados como nível 7 na escala Beaufort</li>
+<li><code>b8</code> Contagem de dias classificados como nível 8 na escala Beaufort</li>
+<li><code>b9</code> Contagem de dias classificados como nível 9 na escala Beaufort</li>
+<li><code>b10</code> Contagem de dias classificados como nível 10 na escala Beaufort</li>
+<li><code>b11</code> Contagem de dias classificados como nível 11 na escala Beaufort</li>
+<li><code>b12</code> Contagem de dias classificados como nível 12 na escala Beaufort</li>
 </ul></li>
 </ul>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -380,43 +383,43 @@ Tip
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Important
+Importante
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The package functions needs data in specific units. Please certify that your data is in the required unit before running the functions.</p>
+<p>As funções do pacote precisam dos dados em unidades específicas. Certifique-se de que seus dados estejam na unidade exigida antes de executar as funções.</p>
 </div>
 </div>
-<p>The code used to compute this dataset is available <a href="https://github.com/rfsaldanha/climate_event_based_events">here</a>.</p>
+<p>O código usado para calcular esta base está disponível <a href="https://github.com/rfsaldanha/climate_event_based_events">aqui</a>.</p>
 </section>
 </section>
 </section>
 <section id="sec-download" class="level2">
-<h2 class="anchored" data-anchor-id="sec-download">Dataset download</h2>
-<p>The climatological normals and event-based indicators be downloaded from Zenodo on CSV and parquet formats. Click the link bellow to access and download the data.</p>
-<p><a href="https://doi.org/10.5281/zenodo.18612340"><img src="https://img.shields.io/badge/download-10.5281/zenodo.18612340-green.svg" class="img-fluid"></a></p>
-<p>You can also download the dataset directly from R, using the <a href="https://rfsaldanha.github.io/zendown/">{zendown}</a> package.</p>
+<h2 class="anchored" data-anchor-id="sec-download">Baixar a base de dados</h2>
+<p>As normais climatológicas e os indicadores baseados em eventos podem ser baixados do Zenodo nos formatos CSV e parquet. Clique no link abaixo para acessar e baixar os dados.</p>
+<p><a href="https://doi.org/10.5281/zenodo.18612340"><img src="https://img.shields.io/badge/baixar-10.5281/zenodo.18612340-green.svg" class="img-fluid"></a></p>
+<p>Também é possível baixar a base diretamente pelo R usando o pacote <a href="https://rfsaldanha.github.io/zendown/">{zendown}</a>.</p>
 </section>
-<section id="results-preview" class="level2">
-<h2 class="anchored" data-anchor-id="results-preview">Results preview</h2>
-<p>Let’s check some results using the monthly datasets and the 1981-2010 climatological normal.</p>
+<section id="prévia-dos-resultados" class="level2">
+<h2 class="anchored" data-anchor-id="prévia-dos-resultados">Prévia dos resultados</h2>
+<p>Vamos verificar alguns resultados usando as bases mensais e a normal climatológica 1981-2010.</p>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(arrow)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(zendown) <span class="co"># https://rfsaldanha.github.io/zendown/</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(zendown) <span class="co"># https://rfsaldanha.github.io/zendown/</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<section id="maximum-temperature-rio-de-janeiro-rj-2024" class="level3">
-<h3 class="anchored" data-anchor-id="maximum-temperature-rio-de-janeiro-rj-2024">Maximum temperature, Rio de Janeiro, RJ, 2024</h3>
-<section id="observed-and-normal" class="level4">
-<h4 class="anchored" data-anchor-id="observed-and-normal">Observed and normal</h4>
+<section id="temperatura-máxima-rio-de-janeiro-rj-2024" class="level3">
+<h3 class="anchored" data-anchor-id="temperatura-máxima-rio-de-janeiro-rj-2024">Temperatura máxima, Rio de Janeiro, RJ, 2024</h3>
+<section id="observado-e-normal" class="level4">
+<h4 class="anchored" data-anchor-id="observado-e-normal">Observado e normal</h4>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2024 data</span></span>
+<summary>Código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dados de 2024</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>tmax_data <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">15748125</span>, <span class="st">"2m_temperature_max.parquet"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"2m_temperature_max_mean"</span>) <span class="sc">|&gt;</span></span>
@@ -425,20 +428,20 @@ Important
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">value =</span> <span class="fu">round</span>(value <span class="sc">-</span> <span class="fl">273.15</span>, <span class="at">digits =</span> <span class="dv">2</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co">#  normals</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Normais climatológicas</span></span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>tmax_normal <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">18612340</span>, <span class="st">"tmax_monthly_normal_n1981_2010.parquet"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">3304557</span>) <span class="sc">|&gt;</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="cell preview-image">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare data for graph</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Preparar dados para o gráfico</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>tmax_normal_exp <span class="ot">&lt;-</span> tmax_normal <span class="sc">|&gt;</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">as_date</span>(<span class="fu">paste0</span>(<span class="st">"2024-"</span>, month, <span class="st">"-01"</span>))) <span class="sc">|&gt;</span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(month) <span class="sc">%&gt;%</span></span>
@@ -455,19 +458,19 @@ Important
 <span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">"normal_"</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">substr</span>(name, <span class="dv">8</span>, <span class="dv">100</span>))</span>
 <span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Gráfico</span></span>
 <span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> tmax_data, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value)) <span class="sc">+</span></span>
 <span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> tmax_normal_exp, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value, <span class="at">color =</span> name)) <span class="sc">+</span></span>
 <span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
 <span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Maximum temperatures and monthly climatological normals"</span>,</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Temperaturas máximas e normais climatológicas mensais"</span>,</span>
 <span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Rio de Janeiro, RJ"</span>,</span>
 <span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Normal (1981-2010)"</span>,</span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Date"</span>,</span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Celsius degrees"</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Data"</span>,</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"graus Celsius"</span></span>
 <span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>, <span class="at">legend.direction =</span> <span class="st">"horizontal"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>, <span class="at">legend.direction =</span> <span class="st">"horizontal"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -479,8 +482,8 @@ Important
 </div>
 <div class="cell preview-image">
 <details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#  normals</span></span>
+<summary>Código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Normais climatológicas</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>tmax_normal <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">18612340</span>, <span class="st">"tmax_weekly_normal_n1981_2010.parquet"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">3304557</span>) <span class="sc">|&gt;</span></span>
@@ -503,19 +506,19 @@ Important
 <span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">"normal_"</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">substr</span>(name, <span class="dv">8</span>, <span class="dv">100</span>))</span>
 <span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Gráfico</span></span>
 <span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> tmax_data, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value)) <span class="sc">+</span></span>
 <span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> tmax_normal_exp, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value, <span class="at">color =</span> name)) <span class="sc">+</span></span>
 <span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
 <span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Maximum temperatures and weekly climatological normals, 2024"</span>,</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Temperaturas máximas e normais climatológicas semanais, 2024"</span>,</span>
 <span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Rio de Janeiro, RJ"</span>,</span>
 <span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Normal (1981-2010)"</span>,</span>
-<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Date"</span>,</span>
-<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Celsius degrees"</span></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Data"</span>,</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"graus Celsius"</span></span>
 <span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>, <span class="at">legend.direction =</span> <span class="st">"horizontal"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>, <span class="at">legend.direction =</span> <span class="st">"horizontal"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -526,14 +529,14 @@ Important
 </div>
 </div>
 </section>
-<section id="indicators" class="level4">
-<h4 class="anchored" data-anchor-id="indicators">Indicators</h4>
+<section id="indicadores" class="level4">
+<h4 class="anchored" data-anchor-id="indicadores">Indicadores</h4>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load event-based indicators and filter for 2024</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregar indicadores baseados em eventos e filtrar o ano</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">zen_file</span>(<span class="dv">18612340</span>, <span class="st">"tmax_monthly_indi_n1981_2010.parquet"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">3304557</span>) <span class="sc">|&gt;</span></span>
@@ -545,26 +548,26 @@ Important
 <span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">where</span>(is.double),</span>
 <span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">decimals =</span> <span class="dv">2</span>,</span>
 <span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">use_seps =</span> <span class="cn">FALSE</span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
-<div id="xuprhvckjc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#xuprhvckjc table {
+<div id="flrchluuzf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#flrchluuzf table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#xuprhvckjc thead, #xuprhvckjc tbody, #xuprhvckjc tfoot, #xuprhvckjc tr, #xuprhvckjc td, #xuprhvckjc th {
+#flrchluuzf thead, #flrchluuzf tbody, #flrchluuzf tfoot, #flrchluuzf tr, #flrchluuzf td, #flrchluuzf th {
   border-style: none;
 }
 
-#xuprhvckjc p {
+#flrchluuzf p {
   margin: 0;
   padding: 0;
 }
 
-#xuprhvckjc .gt_table {
+#flrchluuzf .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -590,12 +593,12 @@ Important
   border-left-color: #D3D3D3;
 }
 
-#xuprhvckjc .gt_caption {
+#flrchluuzf .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#xuprhvckjc .gt_title {
+#flrchluuzf .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -607,7 +610,7 @@ Important
   border-bottom-width: 0;
 }
 
-#xuprhvckjc .gt_subtitle {
+#flrchluuzf .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -619,7 +622,7 @@ Important
   border-top-width: 0;
 }
 
-#xuprhvckjc .gt_heading {
+#flrchluuzf .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -631,13 +634,13 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#xuprhvckjc .gt_bottom_border {
+#flrchluuzf .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#xuprhvckjc .gt_col_headings {
+#flrchluuzf .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -652,7 +655,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#xuprhvckjc .gt_col_heading {
+#flrchluuzf .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -672,7 +675,7 @@ Important
   overflow-x: hidden;
 }
 
-#xuprhvckjc .gt_column_spanner_outer {
+#flrchluuzf .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -684,15 +687,15 @@ Important
   padding-right: 4px;
 }
 
-#xuprhvckjc .gt_column_spanner_outer:first-child {
+#flrchluuzf .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#xuprhvckjc .gt_column_spanner_outer:last-child {
+#flrchluuzf .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#xuprhvckjc .gt_column_spanner {
+#flrchluuzf .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -704,11 +707,11 @@ Important
   width: 100%;
 }
 
-#xuprhvckjc .gt_spanner_row {
+#flrchluuzf .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#xuprhvckjc .gt_group_heading {
+#flrchluuzf .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -734,7 +737,7 @@ Important
   text-align: left;
 }
 
-#xuprhvckjc .gt_empty_group_heading {
+#flrchluuzf .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -749,15 +752,15 @@ Important
   vertical-align: middle;
 }
 
-#xuprhvckjc .gt_from_md > :first-child {
+#flrchluuzf .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#xuprhvckjc .gt_from_md > :last-child {
+#flrchluuzf .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#xuprhvckjc .gt_row {
+#flrchluuzf .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -776,7 +779,7 @@ Important
   overflow-x: hidden;
 }
 
-#xuprhvckjc .gt_stub {
+#flrchluuzf .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -789,7 +792,7 @@ Important
   padding-right: 5px;
 }
 
-#xuprhvckjc .gt_stub_row_group {
+#flrchluuzf .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -803,15 +806,15 @@ Important
   vertical-align: top;
 }
 
-#xuprhvckjc .gt_row_group_first td {
+#flrchluuzf .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#xuprhvckjc .gt_row_group_first th {
+#flrchluuzf .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#xuprhvckjc .gt_summary_row {
+#flrchluuzf .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -821,16 +824,16 @@ Important
   padding-right: 5px;
 }
 
-#xuprhvckjc .gt_first_summary_row {
+#flrchluuzf .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#xuprhvckjc .gt_first_summary_row.thick {
+#flrchluuzf .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#xuprhvckjc .gt_last_summary_row {
+#flrchluuzf .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -840,7 +843,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#xuprhvckjc .gt_grand_summary_row {
+#flrchluuzf .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -850,7 +853,7 @@ Important
   padding-right: 5px;
 }
 
-#xuprhvckjc .gt_first_grand_summary_row {
+#flrchluuzf .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -860,7 +863,7 @@ Important
   border-top-color: #D3D3D3;
 }
 
-#xuprhvckjc .gt_last_grand_summary_row_top {
+#flrchluuzf .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -870,11 +873,11 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#xuprhvckjc .gt_striped {
+#flrchluuzf .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#xuprhvckjc .gt_table_body {
+#flrchluuzf .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -883,7 +886,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#xuprhvckjc .gt_footnotes {
+#flrchluuzf .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -897,7 +900,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#xuprhvckjc .gt_footnote {
+#flrchluuzf .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -906,7 +909,7 @@ Important
   padding-right: 5px;
 }
 
-#xuprhvckjc .gt_sourcenotes {
+#flrchluuzf .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -920,7 +923,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#xuprhvckjc .gt_sourcenote {
+#flrchluuzf .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -928,72 +931,72 @@ Important
   padding-right: 5px;
 }
 
-#xuprhvckjc .gt_left {
+#flrchluuzf .gt_left {
   text-align: left;
 }
 
-#xuprhvckjc .gt_center {
+#flrchluuzf .gt_center {
   text-align: center;
 }
 
-#xuprhvckjc .gt_right {
+#flrchluuzf .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#xuprhvckjc .gt_font_normal {
+#flrchluuzf .gt_font_normal {
   font-weight: normal;
 }
 
-#xuprhvckjc .gt_font_bold {
+#flrchluuzf .gt_font_bold {
   font-weight: bold;
 }
 
-#xuprhvckjc .gt_font_italic {
+#flrchluuzf .gt_font_italic {
   font-style: italic;
 }
 
-#xuprhvckjc .gt_super {
+#flrchluuzf .gt_super {
   font-size: 65%;
 }
 
-#xuprhvckjc .gt_footnote_marks {
+#flrchluuzf .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#xuprhvckjc .gt_asterisk {
+#flrchluuzf .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#xuprhvckjc .gt_indent_1 {
+#flrchluuzf .gt_indent_1 {
   text-indent: 5px;
 }
 
-#xuprhvckjc .gt_indent_2 {
+#flrchluuzf .gt_indent_2 {
   text-indent: 10px;
 }
 
-#xuprhvckjc .gt_indent_3 {
+#flrchluuzf .gt_indent_3 {
   text-indent: 15px;
 }
 
-#xuprhvckjc .gt_indent_4 {
+#flrchluuzf .gt_indent_4 {
   text-indent: 20px;
 }
 
-#xuprhvckjc .gt_indent_5 {
+#flrchluuzf .gt_indent_5 {
   text-indent: 25px;
 }
 
-#xuprhvckjc .katex-display {
+#flrchluuzf .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#xuprhvckjc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#flrchluuzf div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1322,14 +1325,14 @@ Important
 </div>
 </section>
 </section>
-<section id="minimum-temperature-urupema-sc-2025" class="level3">
-<h3 class="anchored" data-anchor-id="minimum-temperature-urupema-sc-2025">Minimum temperature, Urupema, SC, 2025</h3>
-<section id="observed-and-normal-1" class="level4">
-<h4 class="anchored" data-anchor-id="observed-and-normal-1">Observed and normal</h4>
+<section id="temperatura-mínima-urupema-sc-2025" class="level3">
+<h3 class="anchored" data-anchor-id="temperatura-mínima-urupema-sc-2025">Temperatura mínima, Urupema, SC, 2025</h3>
+<section id="observado-e-normal-1" class="level4">
+<h4 class="anchored" data-anchor-id="observado-e-normal-1">Observado e normal</h4>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2025 data</span></span>
+<summary>Código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dados de 2025</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>tmin_data <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">18257037</span>, <span class="st">"2m_temperature_min.parquet"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"2m_temperature_min_mean"</span>) <span class="sc">|&gt;</span></span>
@@ -1338,20 +1341,20 @@ Important
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">value =</span> <span class="fu">round</span>(value <span class="sc">-</span> <span class="fl">273.15</span>, <span class="at">digits =</span> <span class="dv">2</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span>
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co"># normals</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Normais climatológicas</span></span>
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>tmin_normal <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">18612340</span>, <span class="st">"tmin_monthly_normal_n1981_2010.parquet"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
 <span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">4218954</span>) <span class="sc">|&gt;</span></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="cell preview-image">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare data for graph</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Preparar dados para o gráfico</span></span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>tmin_normal_exp <span class="ot">&lt;-</span> tmin_normal <span class="sc">|&gt;</span></span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">as_date</span>(<span class="fu">paste0</span>(<span class="st">"2025-"</span>, month, <span class="st">"-01"</span>))) <span class="sc">|&gt;</span></span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(month) <span class="sc">%&gt;%</span></span>
@@ -1368,19 +1371,19 @@ Important
 <span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">"normal_"</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">substr</span>(name, <span class="dv">8</span>, <span class="dv">100</span>))</span>
 <span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Gráfico</span></span>
 <span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> tmin_data, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value)) <span class="sc">+</span></span>
 <span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> tmin_normal_exp, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value, <span class="at">color =</span> name)) <span class="sc">+</span></span>
 <span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
 <span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Minimum temperatures and monthly climatological normals, 2025"</span>,</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Temperaturas mínimas e normais climatológicas mensais, 2025"</span>,</span>
 <span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Urupema, SC"</span>,</span>
 <span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Normal (1981-2010)"</span>,</span>
-<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Date"</span>,</span>
-<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Celsius degrees"</span></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Data"</span>,</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"graus Celsius"</span></span>
 <span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>, <span class="at">legend.direction =</span> <span class="st">"horizontal"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>, <span class="at">legend.direction =</span> <span class="st">"horizontal"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -1391,14 +1394,14 @@ Important
 </div>
 </div>
 </section>
-<section id="indicators-1" class="level4">
-<h4 class="anchored" data-anchor-id="indicators-1">Indicators</h4>
+<section id="indicadores-1" class="level4">
+<h4 class="anchored" data-anchor-id="indicadores-1">Indicadores</h4>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load event-based indicators and filter for 2024</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregar indicadores baseados em eventos e filtrar o ano</span></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">zen_file</span>(<span class="dv">18612340</span>, <span class="st">"tmin_monthly_indi_n1981_2010.parquet"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">4218954</span>) <span class="sc">|&gt;</span></span>
@@ -1410,26 +1413,26 @@ Important
 <span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">where</span>(is.double),</span>
 <span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">decimals =</span> <span class="dv">2</span>,</span>
 <span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">use_seps =</span> <span class="cn">FALSE</span></span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
-<div id="ktfajecavb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ktfajecavb table {
+<div id="bkzllewnka" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#bkzllewnka table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ktfajecavb thead, #ktfajecavb tbody, #ktfajecavb tfoot, #ktfajecavb tr, #ktfajecavb td, #ktfajecavb th {
+#bkzllewnka thead, #bkzllewnka tbody, #bkzllewnka tfoot, #bkzllewnka tr, #bkzllewnka td, #bkzllewnka th {
   border-style: none;
 }
 
-#ktfajecavb p {
+#bkzllewnka p {
   margin: 0;
   padding: 0;
 }
 
-#ktfajecavb .gt_table {
+#bkzllewnka .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1455,12 +1458,12 @@ Important
   border-left-color: #D3D3D3;
 }
 
-#ktfajecavb .gt_caption {
+#bkzllewnka .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ktfajecavb .gt_title {
+#bkzllewnka .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1472,7 +1475,7 @@ Important
   border-bottom-width: 0;
 }
 
-#ktfajecavb .gt_subtitle {
+#bkzllewnka .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1484,7 +1487,7 @@ Important
   border-top-width: 0;
 }
 
-#ktfajecavb .gt_heading {
+#bkzllewnka .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1496,13 +1499,13 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#ktfajecavb .gt_bottom_border {
+#bkzllewnka .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ktfajecavb .gt_col_headings {
+#bkzllewnka .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1517,7 +1520,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#ktfajecavb .gt_col_heading {
+#bkzllewnka .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1537,7 +1540,7 @@ Important
   overflow-x: hidden;
 }
 
-#ktfajecavb .gt_column_spanner_outer {
+#bkzllewnka .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1549,15 +1552,15 @@ Important
   padding-right: 4px;
 }
 
-#ktfajecavb .gt_column_spanner_outer:first-child {
+#bkzllewnka .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ktfajecavb .gt_column_spanner_outer:last-child {
+#bkzllewnka .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ktfajecavb .gt_column_spanner {
+#bkzllewnka .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1569,11 +1572,11 @@ Important
   width: 100%;
 }
 
-#ktfajecavb .gt_spanner_row {
+#bkzllewnka .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ktfajecavb .gt_group_heading {
+#bkzllewnka .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1599,7 +1602,7 @@ Important
   text-align: left;
 }
 
-#ktfajecavb .gt_empty_group_heading {
+#bkzllewnka .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1614,15 +1617,15 @@ Important
   vertical-align: middle;
 }
 
-#ktfajecavb .gt_from_md > :first-child {
+#bkzllewnka .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ktfajecavb .gt_from_md > :last-child {
+#bkzllewnka .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ktfajecavb .gt_row {
+#bkzllewnka .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1641,7 +1644,7 @@ Important
   overflow-x: hidden;
 }
 
-#ktfajecavb .gt_stub {
+#bkzllewnka .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1654,7 +1657,7 @@ Important
   padding-right: 5px;
 }
 
-#ktfajecavb .gt_stub_row_group {
+#bkzllewnka .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1668,15 +1671,15 @@ Important
   vertical-align: top;
 }
 
-#ktfajecavb .gt_row_group_first td {
+#bkzllewnka .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ktfajecavb .gt_row_group_first th {
+#bkzllewnka .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ktfajecavb .gt_summary_row {
+#bkzllewnka .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1686,16 +1689,16 @@ Important
   padding-right: 5px;
 }
 
-#ktfajecavb .gt_first_summary_row {
+#bkzllewnka .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ktfajecavb .gt_first_summary_row.thick {
+#bkzllewnka .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ktfajecavb .gt_last_summary_row {
+#bkzllewnka .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1705,7 +1708,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#ktfajecavb .gt_grand_summary_row {
+#bkzllewnka .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1715,7 +1718,7 @@ Important
   padding-right: 5px;
 }
 
-#ktfajecavb .gt_first_grand_summary_row {
+#bkzllewnka .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1725,7 +1728,7 @@ Important
   border-top-color: #D3D3D3;
 }
 
-#ktfajecavb .gt_last_grand_summary_row_top {
+#bkzllewnka .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1735,11 +1738,11 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#ktfajecavb .gt_striped {
+#bkzllewnka .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ktfajecavb .gt_table_body {
+#bkzllewnka .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1748,7 +1751,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#ktfajecavb .gt_footnotes {
+#bkzllewnka .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1762,7 +1765,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#ktfajecavb .gt_footnote {
+#bkzllewnka .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1771,7 +1774,7 @@ Important
   padding-right: 5px;
 }
 
-#ktfajecavb .gt_sourcenotes {
+#bkzllewnka .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1785,7 +1788,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#ktfajecavb .gt_sourcenote {
+#bkzllewnka .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1793,72 +1796,72 @@ Important
   padding-right: 5px;
 }
 
-#ktfajecavb .gt_left {
+#bkzllewnka .gt_left {
   text-align: left;
 }
 
-#ktfajecavb .gt_center {
+#bkzllewnka .gt_center {
   text-align: center;
 }
 
-#ktfajecavb .gt_right {
+#bkzllewnka .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ktfajecavb .gt_font_normal {
+#bkzllewnka .gt_font_normal {
   font-weight: normal;
 }
 
-#ktfajecavb .gt_font_bold {
+#bkzllewnka .gt_font_bold {
   font-weight: bold;
 }
 
-#ktfajecavb .gt_font_italic {
+#bkzllewnka .gt_font_italic {
   font-style: italic;
 }
 
-#ktfajecavb .gt_super {
+#bkzllewnka .gt_super {
   font-size: 65%;
 }
 
-#ktfajecavb .gt_footnote_marks {
+#bkzllewnka .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ktfajecavb .gt_asterisk {
+#bkzllewnka .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ktfajecavb .gt_indent_1 {
+#bkzllewnka .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ktfajecavb .gt_indent_2 {
+#bkzllewnka .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ktfajecavb .gt_indent_3 {
+#bkzllewnka .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ktfajecavb .gt_indent_4 {
+#bkzllewnka .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ktfajecavb .gt_indent_5 {
+#bkzllewnka .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ktfajecavb .katex-display {
+#bkzllewnka .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ktfajecavb div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#bkzllewnka div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2200,14 +2203,14 @@ Important
 </div>
 </section>
 </section>
-<section id="relative-humidity-aquidauana-ms-2025" class="level3">
-<h3 class="anchored" data-anchor-id="relative-humidity-aquidauana-ms-2025">Relative humidity, Aquidauana, MS, 2025</h3>
-<section id="observed-and-normal-2" class="level4">
-<h4 class="anchored" data-anchor-id="observed-and-normal-2">Observed and normal</h4>
+<section id="umidade-relativa-aquidauana-ms-2025" class="level3">
+<h3 class="anchored" data-anchor-id="umidade-relativa-aquidauana-ms-2025">Umidade relativa, Aquidauana, MS, 2025</h3>
+<section id="observado-e-normal-2" class="level4">
+<h4 class="anchored" data-anchor-id="observado-e-normal-2">Observado e normal</h4>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2025 data</span></span>
+<summary>Código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dados de 2025</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>rh_data <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">18392587</span>, <span class="st">"rh_mean_mean_2025.parquet"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"rh_mean_mean"</span>) <span class="sc">|&gt;</span></span>
@@ -2215,20 +2218,20 @@ Important
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>name) <span class="sc">|&gt;</span></span>
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span>
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co"># normals</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Normais climatológicas</span></span>
 <span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>rh_normal <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">18612340</span>, <span class="st">"rh_normal_monthly_n1981_2010.parquet"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
 <span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">5001102</span>) <span class="sc">|&gt;</span></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="cell preview-image">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare data for graph</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Preparar dados para o gráfico</span></span>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>rh_normal_exp <span class="ot">&lt;-</span> rh_normal <span class="sc">|&gt;</span></span>
 <span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">as_date</span>(<span class="fu">paste0</span>(<span class="st">"2025-"</span>, month, <span class="st">"-01"</span>))) <span class="sc">|&gt;</span></span>
 <span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(month) <span class="sc">%&gt;%</span></span>
@@ -2245,19 +2248,19 @@ Important
 <span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">"normal_"</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">substr</span>(name, <span class="dv">8</span>, <span class="dv">100</span>))</span>
 <span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Gráfico</span></span>
 <span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> rh_data, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value)) <span class="sc">+</span></span>
 <span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> rh_normal_exp, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value, <span class="at">color =</span> name)) <span class="sc">+</span></span>
 <span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
 <span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Relative humidity and monthly climatological normals, 2025"</span>,</span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Umidade relativa e normais climatológicas mensais, 2025"</span>,</span>
 <span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Aquidauana, MS"</span>,</span>
 <span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Normal (1981-2010)"</span>,</span>
-<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Date"</span>,</span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Data"</span>,</span>
 <span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"%"</span></span>
 <span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>, <span class="at">legend.direction =</span> <span class="st">"horizontal"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>, <span class="at">legend.direction =</span> <span class="st">"horizontal"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -2268,14 +2271,14 @@ Important
 </div>
 </div>
 </section>
-<section id="indicators-2" class="level4">
-<h4 class="anchored" data-anchor-id="indicators-2">Indicators</h4>
+<section id="indicadores-2" class="level4">
+<h4 class="anchored" data-anchor-id="indicadores-2">Indicadores</h4>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load event-based indicators and filter for 2024</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregar indicadores baseados em eventos e filtrar o ano</span></span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">zen_file</span>(<span class="dv">18612340</span>, <span class="st">"rh_indi_monthly_n1981_2010.parquet"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
 <span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">5001102</span>) <span class="sc">|&gt;</span></span>
@@ -2287,26 +2290,26 @@ Important
 <span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">where</span>(is.double),</span>
 <span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">decimals =</span> <span class="dv">2</span>,</span>
 <span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">use_seps =</span> <span class="cn">FALSE</span></span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
-<div id="cfejculyuz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#cfejculyuz table {
+<div id="cktgcutbzf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#cktgcutbzf table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#cfejculyuz thead, #cfejculyuz tbody, #cfejculyuz tfoot, #cfejculyuz tr, #cfejculyuz td, #cfejculyuz th {
+#cktgcutbzf thead, #cktgcutbzf tbody, #cktgcutbzf tfoot, #cktgcutbzf tr, #cktgcutbzf td, #cktgcutbzf th {
   border-style: none;
 }
 
-#cfejculyuz p {
+#cktgcutbzf p {
   margin: 0;
   padding: 0;
 }
 
-#cfejculyuz .gt_table {
+#cktgcutbzf .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2332,12 +2335,12 @@ Important
   border-left-color: #D3D3D3;
 }
 
-#cfejculyuz .gt_caption {
+#cktgcutbzf .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#cfejculyuz .gt_title {
+#cktgcutbzf .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2349,7 +2352,7 @@ Important
   border-bottom-width: 0;
 }
 
-#cfejculyuz .gt_subtitle {
+#cktgcutbzf .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2361,7 +2364,7 @@ Important
   border-top-width: 0;
 }
 
-#cfejculyuz .gt_heading {
+#cktgcutbzf .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2373,13 +2376,13 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#cfejculyuz .gt_bottom_border {
+#cktgcutbzf .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#cfejculyuz .gt_col_headings {
+#cktgcutbzf .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2394,7 +2397,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#cfejculyuz .gt_col_heading {
+#cktgcutbzf .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2414,7 +2417,7 @@ Important
   overflow-x: hidden;
 }
 
-#cfejculyuz .gt_column_spanner_outer {
+#cktgcutbzf .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2426,15 +2429,15 @@ Important
   padding-right: 4px;
 }
 
-#cfejculyuz .gt_column_spanner_outer:first-child {
+#cktgcutbzf .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#cfejculyuz .gt_column_spanner_outer:last-child {
+#cktgcutbzf .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#cfejculyuz .gt_column_spanner {
+#cktgcutbzf .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2446,11 +2449,11 @@ Important
   width: 100%;
 }
 
-#cfejculyuz .gt_spanner_row {
+#cktgcutbzf .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#cfejculyuz .gt_group_heading {
+#cktgcutbzf .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2476,7 +2479,7 @@ Important
   text-align: left;
 }
 
-#cfejculyuz .gt_empty_group_heading {
+#cktgcutbzf .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2491,15 +2494,15 @@ Important
   vertical-align: middle;
 }
 
-#cfejculyuz .gt_from_md > :first-child {
+#cktgcutbzf .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#cfejculyuz .gt_from_md > :last-child {
+#cktgcutbzf .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#cfejculyuz .gt_row {
+#cktgcutbzf .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2518,7 +2521,7 @@ Important
   overflow-x: hidden;
 }
 
-#cfejculyuz .gt_stub {
+#cktgcutbzf .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2531,7 +2534,7 @@ Important
   padding-right: 5px;
 }
 
-#cfejculyuz .gt_stub_row_group {
+#cktgcutbzf .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2545,15 +2548,15 @@ Important
   vertical-align: top;
 }
 
-#cfejculyuz .gt_row_group_first td {
+#cktgcutbzf .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#cfejculyuz .gt_row_group_first th {
+#cktgcutbzf .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#cfejculyuz .gt_summary_row {
+#cktgcutbzf .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2563,16 +2566,16 @@ Important
   padding-right: 5px;
 }
 
-#cfejculyuz .gt_first_summary_row {
+#cktgcutbzf .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#cfejculyuz .gt_first_summary_row.thick {
+#cktgcutbzf .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#cfejculyuz .gt_last_summary_row {
+#cktgcutbzf .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2582,7 +2585,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#cfejculyuz .gt_grand_summary_row {
+#cktgcutbzf .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2592,7 +2595,7 @@ Important
   padding-right: 5px;
 }
 
-#cfejculyuz .gt_first_grand_summary_row {
+#cktgcutbzf .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2602,7 +2605,7 @@ Important
   border-top-color: #D3D3D3;
 }
 
-#cfejculyuz .gt_last_grand_summary_row_top {
+#cktgcutbzf .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2612,11 +2615,11 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#cfejculyuz .gt_striped {
+#cktgcutbzf .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#cfejculyuz .gt_table_body {
+#cktgcutbzf .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2625,7 +2628,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#cfejculyuz .gt_footnotes {
+#cktgcutbzf .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2639,7 +2642,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#cfejculyuz .gt_footnote {
+#cktgcutbzf .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2648,7 +2651,7 @@ Important
   padding-right: 5px;
 }
 
-#cfejculyuz .gt_sourcenotes {
+#cktgcutbzf .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2662,7 +2665,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#cfejculyuz .gt_sourcenote {
+#cktgcutbzf .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2670,72 +2673,72 @@ Important
   padding-right: 5px;
 }
 
-#cfejculyuz .gt_left {
+#cktgcutbzf .gt_left {
   text-align: left;
 }
 
-#cfejculyuz .gt_center {
+#cktgcutbzf .gt_center {
   text-align: center;
 }
 
-#cfejculyuz .gt_right {
+#cktgcutbzf .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#cfejculyuz .gt_font_normal {
+#cktgcutbzf .gt_font_normal {
   font-weight: normal;
 }
 
-#cfejculyuz .gt_font_bold {
+#cktgcutbzf .gt_font_bold {
   font-weight: bold;
 }
 
-#cfejculyuz .gt_font_italic {
+#cktgcutbzf .gt_font_italic {
   font-style: italic;
 }
 
-#cfejculyuz .gt_super {
+#cktgcutbzf .gt_super {
   font-size: 65%;
 }
 
-#cfejculyuz .gt_footnote_marks {
+#cktgcutbzf .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#cfejculyuz .gt_asterisk {
+#cktgcutbzf .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#cfejculyuz .gt_indent_1 {
+#cktgcutbzf .gt_indent_1 {
   text-indent: 5px;
 }
 
-#cfejculyuz .gt_indent_2 {
+#cktgcutbzf .gt_indent_2 {
   text-indent: 10px;
 }
 
-#cfejculyuz .gt_indent_3 {
+#cktgcutbzf .gt_indent_3 {
   text-indent: 15px;
 }
 
-#cfejculyuz .gt_indent_4 {
+#cktgcutbzf .gt_indent_4 {
   text-indent: 20px;
 }
 
-#cfejculyuz .gt_indent_5 {
+#cktgcutbzf .gt_indent_5 {
   text-indent: 25px;
 }
 
-#cfejculyuz .katex-display {
+#cktgcutbzf .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#cfejculyuz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#cktgcutbzf div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3090,14 +3093,14 @@ Important
 </div>
 </section>
 </section>
-<section id="precipitation-calçoene-ap-2025" class="level3">
-<h3 class="anchored" data-anchor-id="precipitation-calçoene-ap-2025">Precipitation, Calçoene, AP, 2025</h3>
-<section id="observed-and-normal-3" class="level4">
-<h4 class="anchored" data-anchor-id="observed-and-normal-3">Observed and normal</h4>
+<section id="precipitação-calçoene-ap-2025" class="level3">
+<h3 class="anchored" data-anchor-id="precipitação-calçoene-ap-2025">Precipitação, Calçoene, AP, 2025</h3>
+<section id="observado-e-normal-3" class="level4">
+<h4 class="anchored" data-anchor-id="observado-e-normal-3">Observado e normal</h4>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2025 data</span></span>
+<summary>Código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dados de 2025</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>prec_data <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">18257037</span>, <span class="st">"total_precipitation_sum.parquet"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"total_precipitation_sum_mean"</span>) <span class="sc">|&gt;</span></span>
@@ -3106,20 +3109,20 @@ Important
 <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>name) <span class="sc">|&gt;</span></span>
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span>
 <span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="co"># normals</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Normais climatológicas</span></span>
 <span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>prec_normal <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">18612340</span>, <span class="st">"prec_monthly_normal_n1981_2010.parquet"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
 <span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">1600204</span>) <span class="sc">|&gt;</span></span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="cell preview-image">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare data for graph</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Preparar dados para o gráfico</span></span>
 <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>prec_normal_exp <span class="ot">&lt;-</span> prec_normal <span class="sc">|&gt;</span></span>
 <span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">as_date</span>(<span class="fu">paste0</span>(<span class="st">"2025-"</span>, month, <span class="st">"-01"</span>))) <span class="sc">|&gt;</span></span>
 <span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(month) <span class="sc">%&gt;%</span></span>
@@ -3136,19 +3139,19 @@ Important
 <span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">"normal_"</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">substr</span>(name, <span class="dv">8</span>, <span class="dv">100</span>))</span>
 <span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Gráfico</span></span>
 <span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> prec_data, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value)) <span class="sc">+</span></span>
 <span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> prec_normal_exp, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value, <span class="at">color =</span> name)) <span class="sc">+</span></span>
 <span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
 <span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Precipitation and monthly climatological normals, 2025"</span>,</span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Precipitação e normais climatológicas mensais, 2025"</span>,</span>
 <span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Calçoene, AP"</span>,</span>
 <span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Normal (1981-2010)"</span>,</span>
-<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Date"</span>,</span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Data"</span>,</span>
 <span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"mm"</span></span>
 <span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>, <span class="at">legend.direction =</span> <span class="st">"horizontal"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>, <span class="at">legend.direction =</span> <span class="st">"horizontal"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -3159,14 +3162,14 @@ Important
 </div>
 </div>
 </section>
-<section id="indicators-3" class="level4">
-<h4 class="anchored" data-anchor-id="indicators-3">Indicators</h4>
+<section id="indicadores-3" class="level4">
+<h4 class="anchored" data-anchor-id="indicadores-3">Indicadores</h4>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load event-based indicators and filter for 2024</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregar indicadores baseados em eventos e filtrar o ano</span></span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">zen_file</span>(<span class="dv">18612340</span>, <span class="st">"prec_monthly_indi_n1981_2010.parquet"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
 <span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">5001102</span>) <span class="sc">|&gt;</span></span>
@@ -3178,26 +3181,26 @@ Important
 <span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">where</span>(is.double),</span>
 <span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">decimals =</span> <span class="dv">2</span>,</span>
 <span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">use_seps =</span> <span class="cn">FALSE</span></span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
-<div id="bwqehcoohy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#bwqehcoohy table {
+<div id="cgodtsthrt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#cgodtsthrt table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#bwqehcoohy thead, #bwqehcoohy tbody, #bwqehcoohy tfoot, #bwqehcoohy tr, #bwqehcoohy td, #bwqehcoohy th {
+#cgodtsthrt thead, #cgodtsthrt tbody, #cgodtsthrt tfoot, #cgodtsthrt tr, #cgodtsthrt td, #cgodtsthrt th {
   border-style: none;
 }
 
-#bwqehcoohy p {
+#cgodtsthrt p {
   margin: 0;
   padding: 0;
 }
 
-#bwqehcoohy .gt_table {
+#cgodtsthrt .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3223,12 +3226,12 @@ Important
   border-left-color: #D3D3D3;
 }
 
-#bwqehcoohy .gt_caption {
+#cgodtsthrt .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#bwqehcoohy .gt_title {
+#cgodtsthrt .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3240,7 +3243,7 @@ Important
   border-bottom-width: 0;
 }
 
-#bwqehcoohy .gt_subtitle {
+#cgodtsthrt .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3252,7 +3255,7 @@ Important
   border-top-width: 0;
 }
 
-#bwqehcoohy .gt_heading {
+#cgodtsthrt .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3264,13 +3267,13 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#bwqehcoohy .gt_bottom_border {
+#cgodtsthrt .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#bwqehcoohy .gt_col_headings {
+#cgodtsthrt .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3285,7 +3288,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#bwqehcoohy .gt_col_heading {
+#cgodtsthrt .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3305,7 +3308,7 @@ Important
   overflow-x: hidden;
 }
 
-#bwqehcoohy .gt_column_spanner_outer {
+#cgodtsthrt .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3317,15 +3320,15 @@ Important
   padding-right: 4px;
 }
 
-#bwqehcoohy .gt_column_spanner_outer:first-child {
+#cgodtsthrt .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#bwqehcoohy .gt_column_spanner_outer:last-child {
+#cgodtsthrt .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#bwqehcoohy .gt_column_spanner {
+#cgodtsthrt .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3337,11 +3340,11 @@ Important
   width: 100%;
 }
 
-#bwqehcoohy .gt_spanner_row {
+#cgodtsthrt .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#bwqehcoohy .gt_group_heading {
+#cgodtsthrt .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3367,7 +3370,7 @@ Important
   text-align: left;
 }
 
-#bwqehcoohy .gt_empty_group_heading {
+#cgodtsthrt .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3382,15 +3385,15 @@ Important
   vertical-align: middle;
 }
 
-#bwqehcoohy .gt_from_md > :first-child {
+#cgodtsthrt .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#bwqehcoohy .gt_from_md > :last-child {
+#cgodtsthrt .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#bwqehcoohy .gt_row {
+#cgodtsthrt .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3409,7 +3412,7 @@ Important
   overflow-x: hidden;
 }
 
-#bwqehcoohy .gt_stub {
+#cgodtsthrt .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3422,7 +3425,7 @@ Important
   padding-right: 5px;
 }
 
-#bwqehcoohy .gt_stub_row_group {
+#cgodtsthrt .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3436,15 +3439,15 @@ Important
   vertical-align: top;
 }
 
-#bwqehcoohy .gt_row_group_first td {
+#cgodtsthrt .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#bwqehcoohy .gt_row_group_first th {
+#cgodtsthrt .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#bwqehcoohy .gt_summary_row {
+#cgodtsthrt .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3454,16 +3457,16 @@ Important
   padding-right: 5px;
 }
 
-#bwqehcoohy .gt_first_summary_row {
+#cgodtsthrt .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#bwqehcoohy .gt_first_summary_row.thick {
+#cgodtsthrt .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#bwqehcoohy .gt_last_summary_row {
+#cgodtsthrt .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3473,7 +3476,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#bwqehcoohy .gt_grand_summary_row {
+#cgodtsthrt .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3483,7 +3486,7 @@ Important
   padding-right: 5px;
 }
 
-#bwqehcoohy .gt_first_grand_summary_row {
+#cgodtsthrt .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3493,7 +3496,7 @@ Important
   border-top-color: #D3D3D3;
 }
 
-#bwqehcoohy .gt_last_grand_summary_row_top {
+#cgodtsthrt .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3503,11 +3506,11 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#bwqehcoohy .gt_striped {
+#cgodtsthrt .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#bwqehcoohy .gt_table_body {
+#cgodtsthrt .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3516,7 +3519,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#bwqehcoohy .gt_footnotes {
+#cgodtsthrt .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3530,7 +3533,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#bwqehcoohy .gt_footnote {
+#cgodtsthrt .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3539,7 +3542,7 @@ Important
   padding-right: 5px;
 }
 
-#bwqehcoohy .gt_sourcenotes {
+#cgodtsthrt .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3553,7 +3556,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#bwqehcoohy .gt_sourcenote {
+#cgodtsthrt .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3561,72 +3564,72 @@ Important
   padding-right: 5px;
 }
 
-#bwqehcoohy .gt_left {
+#cgodtsthrt .gt_left {
   text-align: left;
 }
 
-#bwqehcoohy .gt_center {
+#cgodtsthrt .gt_center {
   text-align: center;
 }
 
-#bwqehcoohy .gt_right {
+#cgodtsthrt .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#bwqehcoohy .gt_font_normal {
+#cgodtsthrt .gt_font_normal {
   font-weight: normal;
 }
 
-#bwqehcoohy .gt_font_bold {
+#cgodtsthrt .gt_font_bold {
   font-weight: bold;
 }
 
-#bwqehcoohy .gt_font_italic {
+#cgodtsthrt .gt_font_italic {
   font-style: italic;
 }
 
-#bwqehcoohy .gt_super {
+#cgodtsthrt .gt_super {
   font-size: 65%;
 }
 
-#bwqehcoohy .gt_footnote_marks {
+#cgodtsthrt .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#bwqehcoohy .gt_asterisk {
+#cgodtsthrt .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#bwqehcoohy .gt_indent_1 {
+#cgodtsthrt .gt_indent_1 {
   text-indent: 5px;
 }
 
-#bwqehcoohy .gt_indent_2 {
+#cgodtsthrt .gt_indent_2 {
   text-indent: 10px;
 }
 
-#bwqehcoohy .gt_indent_3 {
+#cgodtsthrt .gt_indent_3 {
   text-indent: 15px;
 }
 
-#bwqehcoohy .gt_indent_4 {
+#cgodtsthrt .gt_indent_4 {
   text-indent: 20px;
 }
 
-#bwqehcoohy .gt_indent_5 {
+#cgodtsthrt .gt_indent_5 {
   text-indent: 25px;
 }
 
-#bwqehcoohy .katex-display {
+#cgodtsthrt .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#bwqehcoohy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#cgodtsthrt div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -4033,14 +4036,14 @@ Important
 </div>
 </section>
 </section>
-<section id="wind-speed-caetité-ba-2025" class="level3">
-<h3 class="anchored" data-anchor-id="wind-speed-caetité-ba-2025">Wind speed, Caetité, BA, 2025</h3>
-<section id="observed-and-normal-4" class="level4">
-<h4 class="anchored" data-anchor-id="observed-and-normal-4">Observed and normal</h4>
+<section id="velocidade-do-vento-caetité-ba-2025" class="level3">
+<h3 class="anchored" data-anchor-id="velocidade-do-vento-caetité-ba-2025">Velocidade do vento, Caetité, BA, 2025</h3>
+<section id="observado-e-normal-4" class="level4">
+<h4 class="anchored" data-anchor-id="observado-e-normal-4">Observado e normal</h4>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2025 data</span></span>
+<summary>Código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dados de 2025</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>ws_data <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">18390794</span>, <span class="st">"wind_speed_mean_mean_2025.parquet"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"wind_speed_mean_mean"</span>) <span class="sc">|&gt;</span></span>
@@ -4048,20 +4051,20 @@ Important
 <span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>name) <span class="sc">|&gt;</span></span>
 <span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span>
 <span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="co"># normals</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Normais climatológicas</span></span>
 <span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>ws_normal <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(<span class="dv">18612340</span>, <span class="st">"ws_monthly_normal_n1981_2010.parquet"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
 <span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">1600204</span>) <span class="sc">|&gt;</span></span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="cell preview-image">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare data for graph</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Preparar dados para o gráfico</span></span>
 <span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>ws_normal_exp <span class="ot">&lt;-</span> ws_normal <span class="sc">|&gt;</span></span>
 <span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">as_date</span>(<span class="fu">paste0</span>(<span class="st">"2025-"</span>, month, <span class="st">"-01"</span>))) <span class="sc">|&gt;</span></span>
 <span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(month) <span class="sc">%&gt;%</span></span>
@@ -4078,19 +4081,19 @@ Important
 <span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">"normal_"</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">substr</span>(name, <span class="dv">8</span>, <span class="dv">100</span>))</span>
 <span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Gráfico</span></span>
 <span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> ws_data, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value)) <span class="sc">+</span></span>
 <span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> ws_normal_exp, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value, <span class="at">color =</span> name)) <span class="sc">+</span></span>
 <span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
 <span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Wind speed and monthly climatological normals, 2025"</span>,</span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Velocidade do vento e normais climatológicas mensais, 2025"</span>,</span>
 <span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Caetité, BA"</span>,</span>
 <span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Normal (1981-2010)"</span>,</span>
-<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Date"</span>,</span>
+<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Data"</span>,</span>
 <span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"m/s"</span></span>
 <span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb16-33"><a href="#cb16-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>, <span class="at">legend.direction =</span> <span class="st">"horizontal"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb16-33"><a href="#cb16-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>, <span class="at">legend.direction =</span> <span class="st">"horizontal"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -4101,14 +4104,14 @@ Important
 </div>
 </div>
 </section>
-<section id="indicators-4" class="level4">
-<h4 class="anchored" data-anchor-id="indicators-4">Indicators</h4>
+<section id="indicadores-4" class="level4">
+<h4 class="anchored" data-anchor-id="indicadores-4">Indicadores</h4>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load event-based indicators and filter for 2024</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregar indicadores baseados em eventos e filtrar o ano</span></span>
 <span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="fu">zen_file</span>(<span class="dv">18612340</span>, <span class="st">"ws_monthly_indi_n1981_2010.parquet"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">open_dataset</span>() <span class="sc">|&gt;</span></span>
 <span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">5001102</span>) <span class="sc">|&gt;</span></span>
@@ -4120,26 +4123,26 @@ Important
 <span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">where</span>(is.double),</span>
 <span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">decimals =</span> <span class="dv">2</span>,</span>
 <span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">use_seps =</span> <span class="cn">FALSE</span></span>
-<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
-<div id="htqznmtdyl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#htqznmtdyl table {
+<div id="icascexfzx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#icascexfzx table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#htqznmtdyl thead, #htqznmtdyl tbody, #htqznmtdyl tfoot, #htqznmtdyl tr, #htqznmtdyl td, #htqznmtdyl th {
+#icascexfzx thead, #icascexfzx tbody, #icascexfzx tfoot, #icascexfzx tr, #icascexfzx td, #icascexfzx th {
   border-style: none;
 }
 
-#htqznmtdyl p {
+#icascexfzx p {
   margin: 0;
   padding: 0;
 }
 
-#htqznmtdyl .gt_table {
+#icascexfzx .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -4165,12 +4168,12 @@ Important
   border-left-color: #D3D3D3;
 }
 
-#htqznmtdyl .gt_caption {
+#icascexfzx .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#htqznmtdyl .gt_title {
+#icascexfzx .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -4182,7 +4185,7 @@ Important
   border-bottom-width: 0;
 }
 
-#htqznmtdyl .gt_subtitle {
+#icascexfzx .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -4194,7 +4197,7 @@ Important
   border-top-width: 0;
 }
 
-#htqznmtdyl .gt_heading {
+#icascexfzx .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -4206,13 +4209,13 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#htqznmtdyl .gt_bottom_border {
+#icascexfzx .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#htqznmtdyl .gt_col_headings {
+#icascexfzx .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4227,7 +4230,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#htqznmtdyl .gt_col_heading {
+#icascexfzx .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4247,7 +4250,7 @@ Important
   overflow-x: hidden;
 }
 
-#htqznmtdyl .gt_column_spanner_outer {
+#icascexfzx .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4259,15 +4262,15 @@ Important
   padding-right: 4px;
 }
 
-#htqznmtdyl .gt_column_spanner_outer:first-child {
+#icascexfzx .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#htqznmtdyl .gt_column_spanner_outer:last-child {
+#icascexfzx .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#htqznmtdyl .gt_column_spanner {
+#icascexfzx .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4279,11 +4282,11 @@ Important
   width: 100%;
 }
 
-#htqznmtdyl .gt_spanner_row {
+#icascexfzx .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#htqznmtdyl .gt_group_heading {
+#icascexfzx .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4309,7 +4312,7 @@ Important
   text-align: left;
 }
 
-#htqznmtdyl .gt_empty_group_heading {
+#icascexfzx .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4324,15 +4327,15 @@ Important
   vertical-align: middle;
 }
 
-#htqznmtdyl .gt_from_md > :first-child {
+#icascexfzx .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#htqznmtdyl .gt_from_md > :last-child {
+#icascexfzx .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#htqznmtdyl .gt_row {
+#icascexfzx .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4351,7 +4354,7 @@ Important
   overflow-x: hidden;
 }
 
-#htqznmtdyl .gt_stub {
+#icascexfzx .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4364,7 +4367,7 @@ Important
   padding-right: 5px;
 }
 
-#htqznmtdyl .gt_stub_row_group {
+#icascexfzx .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4378,15 +4381,15 @@ Important
   vertical-align: top;
 }
 
-#htqznmtdyl .gt_row_group_first td {
+#icascexfzx .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#htqznmtdyl .gt_row_group_first th {
+#icascexfzx .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#htqznmtdyl .gt_summary_row {
+#icascexfzx .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4396,16 +4399,16 @@ Important
   padding-right: 5px;
 }
 
-#htqznmtdyl .gt_first_summary_row {
+#icascexfzx .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#htqznmtdyl .gt_first_summary_row.thick {
+#icascexfzx .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#htqznmtdyl .gt_last_summary_row {
+#icascexfzx .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4415,7 +4418,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#htqznmtdyl .gt_grand_summary_row {
+#icascexfzx .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4425,7 +4428,7 @@ Important
   padding-right: 5px;
 }
 
-#htqznmtdyl .gt_first_grand_summary_row {
+#icascexfzx .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4435,7 +4438,7 @@ Important
   border-top-color: #D3D3D3;
 }
 
-#htqznmtdyl .gt_last_grand_summary_row_top {
+#icascexfzx .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4445,11 +4448,11 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#htqznmtdyl .gt_striped {
+#icascexfzx .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#htqznmtdyl .gt_table_body {
+#icascexfzx .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4458,7 +4461,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#htqznmtdyl .gt_footnotes {
+#icascexfzx .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4472,7 +4475,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#htqznmtdyl .gt_footnote {
+#icascexfzx .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4481,7 +4484,7 @@ Important
   padding-right: 5px;
 }
 
-#htqznmtdyl .gt_sourcenotes {
+#icascexfzx .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4495,7 +4498,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#htqznmtdyl .gt_sourcenote {
+#icascexfzx .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4503,72 +4506,72 @@ Important
   padding-right: 5px;
 }
 
-#htqznmtdyl .gt_left {
+#icascexfzx .gt_left {
   text-align: left;
 }
 
-#htqznmtdyl .gt_center {
+#icascexfzx .gt_center {
   text-align: center;
 }
 
-#htqznmtdyl .gt_right {
+#icascexfzx .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#htqznmtdyl .gt_font_normal {
+#icascexfzx .gt_font_normal {
   font-weight: normal;
 }
 
-#htqznmtdyl .gt_font_bold {
+#icascexfzx .gt_font_bold {
   font-weight: bold;
 }
 
-#htqznmtdyl .gt_font_italic {
+#icascexfzx .gt_font_italic {
   font-style: italic;
 }
 
-#htqznmtdyl .gt_super {
+#icascexfzx .gt_super {
   font-size: 65%;
 }
 
-#htqznmtdyl .gt_footnote_marks {
+#icascexfzx .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#htqznmtdyl .gt_asterisk {
+#icascexfzx .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#htqznmtdyl .gt_indent_1 {
+#icascexfzx .gt_indent_1 {
   text-indent: 5px;
 }
 
-#htqznmtdyl .gt_indent_2 {
+#icascexfzx .gt_indent_2 {
   text-indent: 10px;
 }
 
-#htqznmtdyl .gt_indent_3 {
+#icascexfzx .gt_indent_3 {
   text-indent: 15px;
 }
 
-#htqznmtdyl .gt_indent_4 {
+#icascexfzx .gt_indent_4 {
   text-indent: 20px;
 }
 
-#htqznmtdyl .gt_indent_5 {
+#icascexfzx .gt_indent_5 {
   text-indent: 25px;
 }
 
-#htqznmtdyl .katex-display {
+#icascexfzx .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#htqznmtdyl div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#icascexfzx div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -5028,77 +5031,81 @@ Important
 </section>
 </section>
 </section>
-<section id="session-info" class="level2">
-<h2 class="anchored" data-anchor-id="session-info">Session info</h2>
+<section id="informações-da-sessão" class="level2">
+<h2 class="anchored" data-anchor-id="informações-da-sessão">Informações da sessão</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.5.2 (2025-10-31)
- os       macOS Tahoe 26.2
- system   aarch64, darwin20
+ version  R version 4.3.3 (2024-02-29)
+ os       Ubuntu 24.04.4 LTS
+ system   x86_64, linux-gnu
  ui       X11
  language (EN)
- collate  en_US.UTF-8
- ctype    en_US.UTF-8
+ collate  C.UTF-8
+ ctype    C.UTF-8
  tz       America/Sao_Paulo
- date     2026-02-12
- pandoc   3.6.3 @ /Applications/Positron.app/Contents/Resources/app/quarto/bin/tools/aarch64/ (via rmarkdown)
- quarto   1.8.27 @ /Applications/Positron.app/Contents/Resources/app/quarto/bin/quarto
+ date     2026-05-21
+ pandoc   3.1.3 @ /usr/bin/ (via rmarkdown)
+ quarto   1.8.26 @ /usr/local/bin/quarto
 
 ─ Packages ───────────────────────────────────────────────────────────────────
- package      * version  date (UTC) lib source
- arrow        * 22.0.0.1 2025-12-23 [1] CRAN (R 4.5.2)
- assertthat     0.2.1    2019-03-21 [1] CRAN (R 4.5.0)
- backports      1.5.0    2024-05-23 [1] CRAN (R 4.5.0)
- bit            4.6.0    2025-03-06 [1] CRAN (R 4.5.0)
- bit64          4.6.0-1  2025-01-16 [1] CRAN (R 4.5.0)
- checkmate      2.3.4    2026-02-03 [1] CRAN (R 4.5.2)
- cli            3.6.5    2025-04-23 [1] CRAN (R 4.5.0)
- digest         0.6.39   2025-11-19 [1] CRAN (R 4.5.2)
- dplyr        * 1.2.0    2026-02-03 [1] CRAN (R 4.5.2)
- evaluate       1.0.5    2025-08-27 [1] CRAN (R 4.5.0)
- farver         2.1.2    2024-05-13 [1] CRAN (R 4.5.0)
- fastmap        1.2.0    2024-05-15 [1] CRAN (R 4.5.0)
- fs             1.6.6    2025-04-12 [1] CRAN (R 4.5.0)
- generics       0.1.4    2025-05-09 [1] CRAN (R 4.5.0)
- ggplot2      * 4.0.2    2026-02-03 [1] CRAN (R 4.5.2)
- glue           1.8.0    2024-09-30 [1] CRAN (R 4.5.0)
- gt           * 1.3.0    2026-01-22 [1] CRAN (R 4.5.2)
- gtable         0.3.6    2024-10-25 [1] CRAN (R 4.5.0)
- htmltools      0.5.9    2025-12-04 [1] CRAN (R 4.5.2)
- htmlwidgets    1.6.4    2023-12-06 [1] CRAN (R 4.5.0)
- jsonlite       2.0.0    2025-03-27 [1] CRAN (R 4.5.0)
- knitr          1.51     2025-12-20 [1] CRAN (R 4.5.2)
- labeling       0.4.3    2023-08-29 [1] CRAN (R 4.5.0)
- lifecycle      1.0.5    2026-01-08 [1] CRAN (R 4.5.2)
- lubridate    * 1.9.5    2026-02-04 [1] CRAN (R 4.5.2)
- magrittr       2.0.4    2025-09-12 [1] CRAN (R 4.5.0)
- otel           0.2.0    2025-08-29 [1] CRAN (R 4.5.0)
- pillar         1.11.1   2025-09-17 [1] CRAN (R 4.5.0)
- pkgconfig      2.0.3    2019-09-22 [1] CRAN (R 4.5.0)
- purrr          1.2.1    2026-01-09 [1] CRAN (R 4.5.2)
- R6             2.6.1    2025-02-15 [1] CRAN (R 4.5.0)
- RColorBrewer   1.1-3    2022-04-03 [1] CRAN (R 4.5.0)
- rlang          1.1.7    2026-01-09 [1] CRAN (R 4.5.2)
- rmarkdown      2.30     2025-09-28 [1] CRAN (R 4.5.0)
- S7             0.2.1    2025-11-14 [1] CRAN (R 4.5.2)
- sass           0.4.10   2025-04-11 [1] CRAN (R 4.5.0)
- scales         1.4.0    2025-04-24 [1] CRAN (R 4.5.0)
- sessioninfo    1.2.3    2025-02-05 [1] CRAN (R 4.5.0)
- tibble         3.3.1    2026-01-11 [1] CRAN (R 4.5.2)
- tidyr        * 1.3.2    2025-12-19 [1] CRAN (R 4.5.2)
- tidyselect     1.2.1    2024-03-11 [1] CRAN (R 4.5.0)
- timechange     0.4.0    2026-01-29 [1] CRAN (R 4.5.2)
- vctrs          0.7.1    2026-01-23 [1] CRAN (R 4.5.2)
- withr          3.0.2    2024-10-28 [1] CRAN (R 4.5.0)
- xfun           0.56     2026-01-18 [1] CRAN (R 4.5.2)
- xml2           1.5.2    2026-01-17 [1] CRAN (R 4.5.2)
- yaml           2.3.12   2025-12-10 [1] CRAN (R 4.5.2)
- zendown      * 0.1.0    2024-05-21 [1] CRAN (R 4.5.0)
+ package      * version date (UTC) lib source
+ arrow        * 24.0.0  2026-04-29 [1] CRAN (R 4.3.3)
+ assertthat     0.2.1   2019-03-21 [1] CRAN (R 4.3.3)
+ backports      1.5.1   2026-04-03 [1] CRAN (R 4.3.3)
+ bit            4.6.0   2025-03-06 [1] CRAN (R 4.3.3)
+ bit64          4.8.0   2026-04-21 [1] CRAN (R 4.3.3)
+ checkmate      2.3.4   2026-02-03 [1] CRAN (R 4.3.3)
+ cli            3.6.6   2026-04-09 [1] CRAN (R 4.3.3)
+ dichromat      2.0-0.1 2022-05-02 [1] CRAN (R 4.3.3)
+ digest         0.6.39  2025-11-19 [1] CRAN (R 4.3.3)
+ dplyr        * 1.2.1   2026-04-03 [1] CRAN (R 4.3.3)
+ evaluate       1.0.5   2025-08-27 [1] CRAN (R 4.3.3)
+ farver         2.1.2   2024-05-13 [1] CRAN (R 4.3.3)
+ fastmap        1.2.0   2024-05-15 [1] CRAN (R 4.3.3)
+ fs             2.1.0   2026-04-18 [1] CRAN (R 4.3.3)
+ generics       0.1.4   2025-05-09 [1] CRAN (R 4.3.3)
+ ggplot2      * 4.0.3   2026-04-22 [1] CRAN (R 4.3.3)
+ glue           1.8.1   2026-04-17 [1] CRAN (R 4.3.3)
+ gt           * 1.3.0   2026-01-22 [1] CRAN (R 4.3.3)
+ gtable         0.3.6   2024-10-25 [1] CRAN (R 4.3.3)
+ htmltools      0.5.9   2025-12-04 [1] CRAN (R 4.3.3)
+ htmlwidgets    1.6.4   2023-12-06 [1] CRAN (R 4.3.3)
+ jsonlite       2.0.0   2025-03-27 [1] CRAN (R 4.3.3)
+ knitr          1.51    2025-12-20 [1] CRAN (R 4.3.3)
+ labeling       0.4.3   2023-08-29 [1] CRAN (R 4.3.3)
+ lifecycle      1.0.5   2026-01-08 [1] CRAN (R 4.3.3)
+ lubridate    * 1.9.5   2026-02-04 [1] CRAN (R 4.3.3)
+ magrittr       2.0.5   2026-04-04 [1] CRAN (R 4.3.3)
+ otel           0.2.0   2025-08-29 [1] CRAN (R 4.3.3)
+ pillar         1.11.1  2025-09-17 [1] CRAN (R 4.3.3)
+ pkgconfig      2.0.3   2019-09-22 [1] CRAN (R 4.3.3)
+ purrr          1.2.2   2026-04-10 [1] CRAN (R 4.3.3)
+ R6             2.6.1   2025-02-15 [1] CRAN (R 4.3.3)
+ RColorBrewer   1.1-3   2022-04-03 [1] CRAN (R 4.3.3)
+ rlang          1.2.0   2026-04-06 [1] CRAN (R 4.3.3)
+ rmarkdown      2.31    2026-03-26 [1] CRAN (R 4.3.3)
+ S7             0.2.2   2026-04-22 [1] CRAN (R 4.3.3)
+ sass           0.4.10  2025-04-11 [1] CRAN (R 4.3.3)
+ scales         1.4.0   2025-04-24 [1] CRAN (R 4.3.3)
+ sessioninfo    1.2.3   2025-02-05 [1] CRAN (R 4.3.3)
+ tibble         3.3.1   2026-01-11 [1] CRAN (R 4.3.3)
+ tidyr        * 1.3.2   2025-12-19 [1] CRAN (R 4.3.3)
+ tidyselect     1.2.1   2024-03-11 [1] CRAN (R 4.3.3)
+ timechange     0.4.0   2026-01-29 [1] CRAN (R 4.3.3)
+ vctrs          0.7.3   2026-04-11 [1] CRAN (R 4.3.3)
+ withr          3.0.2   2024-10-28 [1] CRAN (R 4.3.3)
+ xfun           0.57    2026-03-20 [1] CRAN (R 4.3.3)
+ xml2           1.5.2   2026-01-17 [1] CRAN (R 4.3.3)
+ yaml           2.3.12  2025-12-10 [1] CRAN (R 4.3.3)
+ zendown      * 0.1.0   2024-05-21 [1] CRAN (R 4.3.3)
 
- [1] /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/library
+ [1] /home/raphaelsaldanha/R/x86_64-pc-linux-gnu-library/4.3
+ [2] /usr/local/lib/R/site-library
+ [3] /usr/lib/R/site-library
+ [4] /usr/lib/R/library
  * ── Packages attached to the search path.
 
 ──────────────────────────────────────────────────────────────────────────────</code></pre>
@@ -5109,18 +5116,18 @@ Important
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-muñoz-sabater2021" class="csl-entry" role="listitem">
-Muñoz-Sabater, Joaquín, Emanuel Dutra, Anna Agustí-Panareda, et al. 2021. <span>“ERA5-Land: A State-of-the-Art Global Reanalysis Dataset for Land Applications.”</span> <em>Earth System Science Data</em> 13 (9): 4349–83. <a href="https://doi.org/10.5194/essd-13-4349-2021">https://doi.org/10.5194/essd-13-4349-2021</a>.
+Muñoz-Sabater, Joaquín, Emanuel Dutra, Anna Agustí-Panareda, Clément Albergel, Gabriele Arduini, Gianpaolo Balsamo, Souhail Boussetta, et al. 2021. <span>“ERA5-Land: A state-of-the-art global reanalysis dataset for land applications”</span>. <em>Earth System Science Data</em> 13 (9): 4349–83. <a href="https://doi.org/10.5194/essd-13-4349-2021">https://doi.org/10.5194/essd-13-4349-2021</a>.
 </div>
 <div id="ref-saldanhaZonalStatisticsDatasets2024" class="csl-entry" role="listitem">
-Saldanha, Raphael, Reza Akbarinia, Marcel Pedroso, et al. 2024. <span>“Zonal Statistics Datasets of Climate Indicators for <span>Brazilian</span> Municipalities.”</span> <em>Environmental Data Science</em> 3: e2. <a href="https://doi.org/10.1017/eds.2024.3">https://doi.org/10.1017/eds.2024.3</a>.
+Saldanha, Raphael, Reza Akbarinia, Marcel Pedroso, Victor Ribeiro, Carlos Cardoso, Eduardo H. M. Pena, Patrick Valduriez, e Fabio Porto. 2024. <span>“Zonal Statistics Datasets of Climate Indicators for <span>Brazilian</span> Municipalities”</span>. <em>Environmental Data Science</em> 3: e2. <a href="https://doi.org/10.1017/eds.2024.3">https://doi.org/10.1017/eds.2024.3</a>.
 </div>
 <div id="ref-wmoWMOGuidelinesCalculation2017" class="csl-entry" role="listitem">
-WMO. 2017. <em><span>WMO Guidelines</span> on the <span>Calculation</span> of <span>Climate Normals</span></em>. WMO.
+WMO. 2017. <em><span>WMO Guidelines</span> on the <span>Calculation</span> of <span>Climate Normals</span></em>. Geneva: WMO.
 </div>
 <div id="ref-xavier2022" class="csl-entry" role="listitem">
-Xavier, Alexandre C., Bridget R. Scanlon, Carey W. King, and Aline I. Alves. 2022. <span>“New Improved <span>Brazilian</span> Daily Weather Gridded Data (1961).”</span> <em>International Journal of Climatology</em>, ahead of print, December. <a href="https://doi.org/10.1002/joc.7731">https://doi.org/10.1002/joc.7731</a>.
+Xavier, Alexandre C., Bridget R. Scanlon, Carey W. King, e Aline I. Alves. 2022. <span>“New Improved <span>Brazilian</span> Daily Weather Gridded Data (1961)”</span>. <em>International Journal of Climatology</em>, dezembro. <a href="https://doi.org/10.1002/joc.7731">https://doi.org/10.1002/joc.7731</a>.
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -5148,12 +5155,12 @@ Xavier, Alexandre C., Bridget R. Scanlon, Carey W. King, and Aline I. Alves. 202
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Copiada");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Copiada");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
@@ -5545,7 +5552,7 @@ Xavier, Alexandre C., Bridget R. Scanlon, Carey W. King, and Aline I. Alves. 202
     script.dataset.emitMetadata = "0";
     script.dataset.inputPosition = "bottom";
     script.dataset.theme = getTheme();
-    script.dataset.lang = "en";
+    script.dataset.lang = "pt";
     script.crossOrigin = "anonymous";
     // Append the script to the desired div instead of at the end of the body
     document.getElementById("quarto-content").appendChild(script);

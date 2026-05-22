@@ -1,0 +1,69 @@
+/*-- scss:defaults --*/
+$presentation-heading-color: #14532d;
+$presentation-title-slide-text-align: left;
+$body-bg: #ffffff;
+$link-color: #166534;
+
+/*-- scss:rules --*/
+.reveal {
+  font-size: 34px;
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+  letter-spacing: -0.02em;
+}
+
+.reveal h2 {
+  border-bottom: 3px solid #d9e7dc;
+  padding-bottom: .18em;
+}
+
+.reveal .subtitle {
+  color: #475569;
+}
+
+.reveal .footer {
+  color: #64748b;
+}
+
+.reveal strong {
+  color: #14532d;
+}
+
+.reveal blockquote {
+  border-left: 8px solid #86a873;
+  background: #f5f8f3;
+  padding: .55em .8em;
+  box-shadow: none;
+  font-style: normal;
+}
+
+.reveal table {
+  font-size: .66em;
+}
+
+.reveal th {
+  color: #14532d;
+}
+
+.reveal .small {
+  font-size: .72em;
+  color: #475569;
+}
+
+.reveal .big {
+  font-size: 1.25em;
+  line-height: 1.25;
+  color: #14532d;
+  font-weight: 700;
+}
+
+.reveal .source {
+  font-size: .55em;
+  color: #64748b;
+  margin-top: 1.2em;
+}
+
+.reveal .compact li {
+  margin: .18em 0;
+}

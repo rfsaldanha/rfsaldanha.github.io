@@ -9,7 +9,7 @@
 <link>https://rfsaldanha.github.io/blog.html</link>
 <atom:link href="https://rfsaldanha.github.io/blog.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.9.37</generator>
+<generator>quarto-1.8.26</generator>
 <lastBuildDate>Tue, 11 Jun 2024 03:00:00 GMT</lastBuildDate>
 <item>
   <title>Handling 187 millions hospital admissions in Brazil with DuckDB</title>
@@ -203,7 +203,7 @@ font-style: inherit;">dbDisconnect</span>(con)</span></code></pre></div></div>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+Nota
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -216,7 +216,7 @@ Note
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+Dica
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -383,7 +383,7 @@ font-style: inherit;">head</span>(res_geral)</span></code></pre></div></div>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+Nota
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1092,15 +1092,15 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
 <div id="ref-fonsecaGeographicAccessibilityCancer2022" class="csl-entry">
-Fonseca, Bruna De Paula, Priscila Costa Albuquerque, Raphael De Freitas Saldanha, and Fabio Zicker. 2022. <span>“Geographic Accessibility to Cancer Treatment in <span>Brazil</span>: <span>A</span> Network Analysis.”</span> <em>The Lancet Regional Health - Americas</em> 7 (March): 100153. <a href="https://doi.org/10.1016/j.lana.2021.100153">https://doi.org/10.1016/j.lana.2021.100153</a>.
+Fonseca, Bruna De Paula, Priscila Costa Albuquerque, Raphael De Freitas Saldanha, e Fabio Zicker. 2022. <span>“Geographic Accessibility to Cancer Treatment in <span>Brazil</span>: <span>A</span> Network Analysis”</span>. <em>The Lancet Regional Health - Americas</em> 7 (março): 100153. <a href="https://doi.org/10.1016/j.lana.2021.100153">https://doi.org/10.1016/j.lana.2021.100153</a>.
 </div>
 <div id="ref-Saldanha2019a" class="csl-entry">
-Saldanha, Raphael de Freitas, Diego Ricardo Xavier, Keila de Morais Carnavalli, Kátia Lerner, and Christovam Barcellos. 2019. <span>“Estudo de an<span>á</span>lise de Rede Do Fluxo de Pacientes de c<span>â</span>ncer de Mama No <span>Brasil</span> Entre 2014 e 2016.”</span> <em>Cadernos de Sa<span>ú</span>de P<span>ú</span>blica</em> 35 (7). <a href="https://doi.org/10.1590/0102-311X00090918">https://doi.org/10.1590/0102-311X00090918</a>.
+Saldanha, Raphael de Freitas, Diego Ricardo Xavier, Keila de Morais Carnavalli, Kátia Lerner, e Christovam Barcellos. 2019. <span>“Estudo de An<span>á</span>lise de Rede Do Fluxo de Pacientes de C<span>â</span>ncer de Mama No <span>Brasil</span> Entre 2014 e 2016”</span>. <em>Cadernos de Sa<span>ú</span>de P<span>ú</span>blica</em> 35 (7). <a href="https://doi.org/10.1590/0102-311X00090918">https://doi.org/10.1590/0102-311X00090918</a>.
 </div>
 <div id="ref-Xavier2019" class="csl-entry">
-Xavier, Diego Ricardo, Ricardo Antunes Dantas de Oliveira, Christovam Barcellos, et al. 2019. <span>“As <span class="nocase">Regi<span class="nocase">õ</span>es</span> de <span class="nocase">Sa<span class="nocase">ú</span>de</span> No <span>Brasil</span> Segundo Interna<span>ç</span><span>õ</span>es: M<span>é</span>todo Para Apoio Na Regionaliza<span>ç</span><span>ã</span>o de Sa<span>ú</span>de.”</span> <em>Cadernos de Sa<span>ú</span>de P<span>ú</span>blica</em> 35 (suppl 2): 1–15. <a href="https://doi.org/10.1590/0102-311x00076118">https://doi.org/10.1590/0102-311x00076118</a>.
+Xavier, Diego Ricardo, Ricardo Antunes Dantas de Oliveira, Christovam Barcellos, Raphael de Freitas Saldanha, Walter Massa Ramalho, Josué Laguardia, e Francisco Viacava. 2019. <span>“As <span>Regi<span>õ</span>es</span> de <span>Sa<span>ú</span>de</span> No <span>Brasil</span> Segundo Interna<span>ç</span><span>õ</span>es: M<span>é</span>todo Para Apoio Na Regionaliza<span>ç</span><span>ã</span>o de Sa<span>ú</span>de”</span>. <em>Cadernos de Sa<span>ú</span>de P<span>ú</span>blica</em> 35 (suppl 2): 1–15. <a href="https://doi.org/10.1590/0102-311x00076118">https://doi.org/10.1590/0102-311x00076118</a>.
 </div>
 </div></section></div> ]]></description>
   <category>duckdb</category>
@@ -2433,7 +2433,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a> ]]></description>
   <category>climate</category>
   <guid>https://rfsaldanha.github.io/posts/persistent_heat.html</guid>
   <pubDate>Mon, 22 Apr 2024 03:00:00 GMT</pubDate>
@@ -2742,7 +2742,7 @@ font-style: inherit;">"..."</span>)</span></code></pre></div></div>
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a> ]]></description>
   <category>package</category>
   <category>data</category>
   <guid>https://rfsaldanha.github.io/posts/data_package_guide.html</guid>
@@ -4752,7 +4752,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a> ]]></description>
   <category>database</category>
   <category>parquet</category>
   <category>arrow</category>
@@ -4780,7 +4780,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+Nota
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -4952,7 +4952,7 @@ font-style: inherit;">273.15</span>)</span></code></pre></div></div>
 <p>To make a graph, we can set a municipality code for reference (e.g.&nbsp;Rio de Janeiro, RJ) and create a list object with all the necessary data. Then, we create a simple and nice ggplot ;-)</p>
 <div class="cell preview-image">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">code_ref <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
@@ -5200,7 +5200,7 @@ font-style: inherit;">NULL</span></span>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+Dica
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -5213,7 +5213,7 @@ Tip
 <h2 class="anchored" data-anchor-id="porto-velho-ro">Porto Velho, RO</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">code_ref <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
@@ -5460,7 +5460,7 @@ font-style: inherit;">NULL</span></span>
 <h2 class="anchored" data-anchor-id="manaus-am">Manaus, AM</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">code_ref <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
@@ -5707,7 +5707,7 @@ font-style: inherit;">NULL</span></span>
 <h2 class="anchored" data-anchor-id="rio-branco-ac">Rio Branco, AC</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1">code_ref <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
@@ -5954,7 +5954,7 @@ font-style: inherit;">NULL</span></span>
 <h2 class="anchored" data-anchor-id="campo-grande-ms">Campo Grande, MS</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1">code_ref <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
@@ -6201,7 +6201,7 @@ font-style: inherit;">NULL</span></span>
 <h2 class="anchored" data-anchor-id="macapá-ap">Macapá, AP</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1">code_ref <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
@@ -6448,7 +6448,7 @@ font-style: inherit;">NULL</span></span>
 <h2 class="anchored" data-anchor-id="brasília-df">Brasília, DF</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1">code_ref <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
@@ -6695,7 +6695,7 @@ font-style: inherit;">NULL</span></span>
 <h2 class="anchored" data-anchor-id="boa-vista-rr">Boa Vista, RR</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1">code_ref <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
@@ -6942,7 +6942,7 @@ font-style: inherit;">NULL</span></span>
 <h2 class="anchored" data-anchor-id="cuiabá-mt">Cuiabá, MT</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1">code_ref <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
@@ -7189,7 +7189,7 @@ font-style: inherit;">NULL</span></span>
 <h2 class="anchored" data-anchor-id="palmas-to">Palmas, TO</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1">code_ref <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
@@ -7436,7 +7436,7 @@ font-style: inherit;">NULL</span></span>
 <h2 class="anchored" data-anchor-id="são-paulo-sp">São Paulo, SP</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1">code_ref <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
@@ -7683,7 +7683,7 @@ font-style: inherit;">NULL</span></span>
 <h2 class="anchored" data-anchor-id="teresina-pi">Teresina, PI</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1">code_ref <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
@@ -7930,7 +7930,7 @@ font-style: inherit;">NULL</span></span>
 <h2 class="anchored" data-anchor-id="rio-de-janeiro-rj">Rio de Janeiro, RJ</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1">code_ref <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
@@ -8177,7 +8177,7 @@ font-style: inherit;">NULL</span></span>
 <h2 class="anchored" data-anchor-id="belém-pa">Belém, PA</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1">code_ref <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
@@ -8424,7 +8424,7 @@ font-style: inherit;">NULL</span></span>
 <h2 class="anchored" data-anchor-id="goiânia-go">Goiânia, GO</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1">code_ref <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
@@ -8671,7 +8671,7 @@ font-style: inherit;">NULL</span></span>
 <h2 class="anchored" data-anchor-id="salvador-ba">Salvador, BA</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1">code_ref <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
@@ -8918,7 +8918,7 @@ font-style: inherit;">NULL</span></span>
 <h2 class="anchored" data-anchor-id="florianópolis-sc">Florianópolis, SC</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1">code_ref <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
@@ -9165,7 +9165,7 @@ font-style: inherit;">NULL</span></span>
 <h2 class="anchored" data-anchor-id="são-luiz-ma">São Luiz, MA</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1">code_ref <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
@@ -9412,7 +9412,7 @@ font-style: inherit;">NULL</span></span>
 <h2 class="anchored" data-anchor-id="maceió-al">Maceió, AL</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1">code_ref <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
@@ -9659,7 +9659,7 @@ font-style: inherit;">NULL</span></span>
 <h2 class="anchored" data-anchor-id="porto-alegre-rs">Porto Alegre, RS</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1">code_ref <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
@@ -9906,7 +9906,7 @@ font-style: inherit;">NULL</span></span>
 <h2 class="anchored" data-anchor-id="curitiba-pr">Curitiba, PR</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1">code_ref <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
@@ -10153,7 +10153,7 @@ font-style: inherit;">NULL</span></span>
 <h2 class="anchored" data-anchor-id="belo-horizonte-mg">Belo Horizonte, MG</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1">code_ref <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
@@ -10400,7 +10400,7 @@ font-style: inherit;">NULL</span></span>
 <h2 class="anchored" data-anchor-id="fortaleza-ce">Fortaleza, CE</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1">code_ref <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
@@ -10647,7 +10647,7 @@ font-style: inherit;">NULL</span></span>
 <h2 class="anchored" data-anchor-id="recife-pe">Recife, PE</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1">code_ref <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
@@ -10894,7 +10894,7 @@ font-style: inherit;">NULL</span></span>
 <h2 class="anchored" data-anchor-id="joão-pessoa-pb">João Pessoa, PB</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1">code_ref <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
@@ -11141,7 +11141,7 @@ font-style: inherit;">NULL</span></span>
 <h2 class="anchored" data-anchor-id="aracaju-se">Aracaju, SE</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1">code_ref <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
@@ -11388,7 +11388,7 @@ font-style: inherit;">NULL</span></span>
 <h2 class="anchored" data-anchor-id="natal-rn">Natal, RN</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1">code_ref <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
@@ -11635,7 +11635,7 @@ font-style: inherit;">NULL</span></span>
 <h2 class="anchored" data-anchor-id="vitória-es">Vitória, ES</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1">code_ref <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
@@ -11882,7 +11882,7 @@ font-style: inherit;">NULL</span></span>
 <h2 class="anchored" data-anchor-id="nova-friburgo-rj">Nova Friburgo, RJ</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1">code_ref <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
@@ -12129,7 +12129,7 @@ font-style: inherit;">NULL</span></span>
 <h2 class="anchored" data-anchor-id="juiz-de-fora-mg">Juiz de Fora, MG</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1">code_ref <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
@@ -12375,7 +12375,7 @@ font-style: inherit;">NULL</span></span>
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a> ]]></description>
   <category>climate</category>
   <category>zonal statistics</category>
   <guid>https://rfsaldanha.github.io/posts/hot_2023.html</guid>
@@ -12443,7 +12443,7 @@ font-style: inherit;">FALSE</span>)</span></code></pre></div></div>
 <p>The <code>cod_cap</code> object (code folded bellow) is a data frame with Brazilian capitals name, codes and geographical coordinates.</p>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">cod_cap <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
@@ -13907,7 +13907,7 @@ loaded via a namespace (and not attached):
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a> ]]></description>
   <category>clustering</category>
   <category>time series</category>
   <category>dtwclust</category>
@@ -13938,7 +13938,7 @@ font-style: inherit;">library</span>(tidyverse)</span></code></pre></div></div>
 <p>The code chunk below has the CSV column types specification to read these files with the <code>{readr}</code> package. The chunk is folded to save screen space ;-)</p>
 <div class="cell">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">date_format <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="st" style="color: #20794D;
@@ -15765,7 +15765,7 @@ loaded via a namespace (and not attached):
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a> ]]></description>
   <category>covid19</category>
   <category>tidyrates</category>
   <guid>https://rfsaldanha.github.io/posts/std_br_covid_rates.html</guid>
@@ -15948,7 +15948,7 @@ font-style: inherit;">4</span>)</span></code></pre></div></div>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+Nota
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -16517,7 +16517,7 @@ loaded via a namespace (and not attached):
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a> ]]></description>
   <category>rle</category>
   <category>warm spell</category>
   <category>sequences</category>
@@ -17521,7 +17521,7 @@ loaded via a namespace (and not attached):
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a> ]]></description>
   <category>rates</category>
   <category>epidemiology</category>
   <category>tidyrates</category>
@@ -17606,7 +17606,7 @@ font-style: inherit;">"LOAD httpfs;"</span>)</span></code></pre></div></div>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Windows users
+<span class="screen-reader-only">Aviso</span>Windows users
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -17656,7 +17656,7 @@ $ year    &lt;int&gt; 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+Dica
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -17860,7 +17860,7 @@ loaded via a namespace (and not attached):
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a> ]]></description>
   <category>database</category>
   <category>duckdb</category>
   <category>parquet</category>
@@ -17985,7 +17985,7 @@ font-style: inherit;">collect</span>()</span></code></pre></div></div>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+Nota
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -18151,7 +18151,7 @@ loaded via a namespace (and not attached):
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a> ]]></description>
   <category>database</category>
   <category>sqlite</category>
   <category>duckdb</category>
@@ -18602,7 +18602,7 @@ loaded via a namespace (and not attached):
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a> ]]></description>
   <category>database</category>
   <category>sqlite</category>
   <guid>https://rfsaldanha.github.io/posts/some-tips-for-sqlite.html</guid>

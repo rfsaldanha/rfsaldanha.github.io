@@ -2,16 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Taxa de mortalidade específica por Acidente Vascular Cerebral – Raphael Saldanha</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -62,6 +59,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -90,14 +88,15 @@ div.csl-indent {
 <link href="../../logo.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-0c1497c822180f859fc410b87e91da95.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-9c801c0f987b87cb825544174f2aa3e8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -165,19 +164,19 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../projects.html"> 
-<span class="menu-text">Projects</span></a>
+<span class="menu-text">Projetos</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../code.html"> 
-<span class="menu-text">Packages &amp; Code</span></a>
+<span class="menu-text">Pacotes &amp; Código</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../data.html"> 
-<span class="menu-text">Datasets</span></a>
+<span class="menu-text">Dados</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../publications.html"> 
-<span class="menu-text">Publications</span></a>
+<span class="menu-text">Publicações</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../talks.html"> 
@@ -185,11 +184,15 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../photos/photos.html"> 
-<span class="menu-text">Photos</span></a>
+<span class="menu-text">Fotos</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../blog.html"> 
 <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../en/"> 
+<span class="menu-text">English</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="../../blog.xml"> <i class="bi bi-rss" role="img">
@@ -233,7 +236,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   <li><a href="#fontes" id="toc-fontes" class="nav-link" data-scroll-target="#fontes">Fontes</a></li>
   </ul></li>
   <li><a href="#agregações-computadas" id="toc-agregações-computadas" class="nav-link" data-scroll-target="#agregações-computadas">Agregações computadas</a></li>
-  <li><a href="#download" id="toc-download" class="nav-link" data-scroll-target="#download">Download</a></li>
+  <li><a href="#baixar-os-dados" id="toc-baixar-os-dados" class="nav-link" data-scroll-target="#baixar-os-dados">Baixar os dados</a></li>
   <li><a href="#gráfico" id="toc-gráfico" class="nav-link" data-scroll-target="#gráfico">Gráfico</a></li>
   <li><a href="#computação" id="toc-computação" class="nav-link" data-scroll-target="#computação">Computação</a></li>
   </ul>
@@ -266,8 +269,8 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <li><p>Anos de 2010 a 2021</p></li>
 </ul>
 </section>
-<section id="download" class="level2">
-<h2 class="anchored" data-anchor-id="download">Download</h2>
+<section id="baixar-os-dados" class="level2">
+<h2 class="anchored" data-anchor-id="baixar-os-dados">Baixar os dados</h2>
 <p><a href="https://doi.org/10.5281/zenodo.10950327"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.10950327.svg" class="img-fluid"></a></p>
 </section>
 <section id="gráfico" class="level2">
@@ -314,7 +317,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <div class="cell">
 <details class="code-fold">
 <summary>Código</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># UF of residence and year</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># UF de residência e ano</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>brindi<span class="sc">::</span><span class="fu">expand_indi_parquet</span>(</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">agg =</span> <span class="st">"uf_res"</span>, <span class="at">agg_time =</span> <span class="st">"year"</span>, </span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">anos =</span> years_range, </span>
@@ -334,7 +337,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">indi =</span> <span class="st">"indi_0002"</span></span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Health region of residence and year</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Região de saúde de residência e ano</span></span>
 <span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>brindi<span class="sc">::</span><span class="fu">expand_indi_parquet</span>(</span>
 <span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  <span class="at">agg =</span> <span class="st">"regsaude_res"</span>, <span class="at">agg_time =</span> <span class="st">"year"</span>, </span>
 <span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="at">anos =</span> years_range, </span>
@@ -354,7 +357,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>  <span class="at">indi =</span> <span class="st">"indi_0002"</span></span>
 <span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Municipality of residence and year</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Município de residência e ano</span></span>
 <span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>brindi<span class="sc">::</span><span class="fu">expand_indi_parquet</span>(</span>
 <span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>  <span class="at">agg =</span> <span class="st">"mun_res"</span>, <span class="at">agg_time =</span> <span class="st">"year"</span>, </span>
 <span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>  <span class="at">anos =</span> years_range, </span>
@@ -380,9 +383,9 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-OPAS2008" class="csl-entry" role="listitem">
-RIPSA. 2008. <em>Indicadores B<span>á</span>sicos Para a Sa<span>ú</span>de No <span>Brasil</span>: Conceitos e Aplica<span>ç</span><span>õ</span>es</em>. Organiza<span>ç</span><span>ã</span>o Pan-Americana da Sa<span>ú</span>de.
+RIPSA. 2008. <em>Indicadores B<span>á</span>sicos Para a Sa<span>ú</span>de No <span>Brasil</span>: Conceitos e Aplica<span>ç</span><span>õ</span>es</em>. Bras<span>í</span>lia: Organiza<span>ç</span><span>ã</span>o Pan-Americana da Sa<span>ú</span>de.
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -807,7 +810,7 @@ RIPSA. 2008. <em>Indicadores B<span>á</span>sicos Para a Sa<span>ú</span>de No
     script.dataset.emitMetadata = "0";
     script.dataset.inputPosition = "bottom";
     script.dataset.theme = getTheme();
-    script.dataset.lang = "en";
+    script.dataset.lang = "pt";
     script.crossOrigin = "anonymous";
     // Append the script to the desired div instead of at the end of the body
     document.getElementById("quarto-content").appendChild(script);

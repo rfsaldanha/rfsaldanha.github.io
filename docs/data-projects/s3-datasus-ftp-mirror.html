@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>S3 DataSUS FTP mirror – Raphael Saldanha</title>
+<title>Espelho S3 do FTP DataSUS – Raphael Saldanha</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -36,14 +33,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="../logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-0c1497c822180f859fc410b87e91da95.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-9c801c0f987b87cb825544174f2aa3e8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -58,17 +56,17 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
   }
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2M7VLSRDCB"></script>
@@ -99,8 +97,8 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
     <span class="navbar-title">Raphael Saldanha</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -111,19 +109,19 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../projects.html"> 
-<span class="menu-text">Projects</span></a>
+<span class="menu-text">Projetos</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../code.html"> 
-<span class="menu-text">Packages &amp; Code</span></a>
+<span class="menu-text">Pacotes &amp; Código</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../data.html"> 
-<span class="menu-text">Datasets</span></a>
+<span class="menu-text">Dados</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../publications.html"> 
-<span class="menu-text">Publications</span></a>
+<span class="menu-text">Publicações</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../talks.html"> 
@@ -131,11 +129,15 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../photos/photos.html"> 
-<span class="menu-text">Photos</span></a>
+<span class="menu-text">Fotos</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../blog.html"> 
 <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../en/"> 
+<span class="menu-text">English</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="../blog.xml"> <i class="bi bi-rss" role="img">
@@ -153,7 +155,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">S3 DataSUS FTP mirror</h1>
+      <h1 class="title">Espelho S3 do FTP DataSUS</h1>
                       </div>
   </div>
     
@@ -171,19 +173,19 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">Nesta página</h2>
    
   <ul>
-  <li><a href="#available-health-information-systems-and-files" id="toc-available-health-information-systems-and-files" class="nav-link active" data-scroll-target="#available-health-information-systems-and-files">Available health information systems and files</a></li>
-  <li><a href="#file-access" id="toc-file-access" class="nav-link" data-scroll-target="#file-access">File Access</a></li>
-  <li><a href="#mirror-update-and-files-tree" id="toc-mirror-update-and-files-tree" class="nav-link" data-scroll-target="#mirror-update-and-files-tree">Mirror update and files tree</a></li>
-  <li><a href="#how-to-access-a-file" id="toc-how-to-access-a-file" class="nav-link" data-scroll-target="#how-to-access-a-file">How to access a file?</a></li>
-  <li><a href="#update-logs" id="toc-update-logs" class="nav-link" data-scroll-target="#update-logs">Update logs</a>
+  <li><a href="#sistemas-de-informação-em-saúde-e-arquivos-disponíveis" id="toc-sistemas-de-informação-em-saúde-e-arquivos-disponíveis" class="nav-link active" data-scroll-target="#sistemas-de-informação-em-saúde-e-arquivos-disponíveis">Sistemas de informação em saúde e arquivos disponíveis</a></li>
+  <li><a href="#acesso-aos-arquivos" id="toc-acesso-aos-arquivos" class="nav-link" data-scroll-target="#acesso-aos-arquivos">Acesso aos arquivos</a></li>
+  <li><a href="#atualização-do-espelho-e-árvore-de-arquivos" id="toc-atualização-do-espelho-e-árvore-de-arquivos" class="nav-link" data-scroll-target="#atualização-do-espelho-e-árvore-de-arquivos">Atualização do espelho e árvore de arquivos</a></li>
+  <li><a href="#como-acessar-um-arquivo" id="toc-como-acessar-um-arquivo" class="nav-link" data-scroll-target="#como-acessar-um-arquivo">Como acessar um arquivo?</a></li>
+  <li><a href="#logs-de-atualização" id="toc-logs-de-atualização" class="nav-link" data-scroll-target="#logs-de-atualização">Logs de atualização</a>
   <ul class="collapse">
-  <li><a href="#how-to-access-an-old-update-log" id="toc-how-to-access-an-old-update-log" class="nav-link" data-scroll-target="#how-to-access-an-old-update-log">How to access an old update log?</a></li>
+  <li><a href="#como-acessar-um-log-de-atualização-antigo" id="toc-como-acessar-um-log-de-atualização-antigo" class="nav-link" data-scroll-target="#como-acessar-um-log-de-atualização-antigo">Como acessar um log de atualização antigo?</a></li>
   </ul></li>
   <li><a href="#cdn" id="toc-cdn" class="nav-link" data-scroll-target="#cdn">CDN</a></li>
-  <li><a href="#costs" id="toc-costs" class="nav-link" data-scroll-target="#costs">Costs</a></li>
+  <li><a href="#custos" id="toc-custos" class="nav-link" data-scroll-target="#custos">Custos</a></li>
   <li><a href="#script" id="toc-script" class="nav-link" data-scroll-target="#script">Script</a></li>
   </ul>
 </nav>
@@ -195,12 +197,12 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 
 
 
-<p>The Department of Informatics (DataSUS) of the Brazilian Health Ministry hosts microdata anonymized files from several health information systems, covering themes such as mortality, newborns, hospitalization, and transmissible diseases.</p>
-<p>Those files are hosted in a public FTP server, but its access is geographically restricted to Brazil.</p>
-<p>In order to offer an alternative way to access those files, I created a partial mirror of the FTP server in a S3 object storage architecture. This structure allows worldwide access, CDN distribution of files, and a redudancy in case of failure of the DataSUS FTP server.</p>
-<section id="available-health-information-systems-and-files" class="level2">
-<h2 class="anchored" data-anchor-id="available-health-information-systems-and-files">Available health information systems and files</h2>
-<p>Currently, the following health information systems are mirrored:</p>
+<p>O Departamento de Informática do SUS (DataSUS), do Ministério da Saúde, hospeda arquivos anonimizados de microdados de vários sistemas de informação em saúde, cobrindo temas como mortalidade, nascidos vivos, internações e doenças transmissíveis.</p>
+<p>Esses arquivos são hospedados em um servidor FTP público, mas o acesso é geograficamente restrito ao Brasil.</p>
+<p>Para oferecer uma forma alternativa de acesso, criei um espelho parcial do servidor FTP em uma arquitetura de armazenamento de objetos S3. Essa estrutura permite acesso mundial, distribuição por CDN e redundância em caso de falha do servidor FTP do DataSUS.</p>
+<section id="sistemas-de-informação-em-saúde-e-arquivos-disponíveis" class="level2">
+<h2 class="anchored" data-anchor-id="sistemas-de-informação-em-saúde-e-arquivos-disponíveis">Sistemas de informação em saúde e arquivos disponíveis</h2>
+<p>Atualmente, os seguintes sistemas de informação em saúde são espelhados:</p>
 <ul>
 <li>SIM – Sistema de Informações de Mortalidade</li>
 <li>SINASC – Sistema de Informações de Nascidos Vivos</li>
@@ -212,9 +214,9 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <li>Pasta Dados Abertos</li>
 </ul>
 </section>
-<section id="file-access" class="level2">
-<h2 class="anchored" data-anchor-id="file-access">File Access</h2>
-<p>The S3 mirror is available at this endpoint:</p>
+<section id="acesso-aos-arquivos" class="level2">
+<h2 class="anchored" data-anchor-id="acesso-aos-arquivos">Acesso aos arquivos</h2>
+<p>O espelho S3 está disponível neste endpoint:</p>
 <pre><code>https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com</code></pre>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -222,24 +224,24 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+Nota
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>The file structure at the S3 mirror follows the same directory structure of the FTP server.</li>
-<li>All files available at the FTP are mirrored, except expanded XML and CSV files.</li>
+<li>A estrutura de arquivos no espelho S3 segue a mesma estrutura de diretórios do servidor FTP.</li>
+<li>Todos os arquivos disponíveis no FTP são espelhados, exceto arquivos XML e CSV expandidos.</li>
 </ul>
 </div>
 </div>
 </section>
-<section id="mirror-update-and-files-tree" class="level2">
-<h2 class="anchored" data-anchor-id="mirror-update-and-files-tree">Mirror update and files tree</h2>
-<p>The mirror is synced daily at 3:00 am Brazilian time. On each update, some file lists are produced:</p>
+<section id="atualização-do-espelho-e-árvore-de-arquivos" class="level2">
+<h2 class="anchored" data-anchor-id="atualização-do-espelho-e-árvore-de-arquivos">Atualização do espelho e árvore de arquivos</h2>
+<p>O espelho é sincronizado diariamente às 3h, horário de Brasília. Em cada atualização, algumas listas de arquivos são produzidas:</p>
 <ul>
-<li><a href="https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_dirs_tree.txt">Directory tree</a></li>
-<li><a href="https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_files_tree.txt">Files tree</a></li>
-<li><a href="https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_full_path.txt">Full path list</a></li>
+<li><a href="https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_dirs_tree.txt">Árvore de diretórios</a></li>
+<li><a href="https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_files_tree.txt">Árvore de arquivos</a></li>
+<li><a href="https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_full_path.txt">Lista de caminhos completos</a></li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -247,50 +249,50 @@ Note
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+Dica
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The S3 bucket <strong>versioning</strong> option was <strong>enabled</strong> on November 7, 2024. Since then, the version history of all files (including deleted files) has been kept.</p>
+<p>A opção de <strong>versionamento</strong> do bucket S3 foi <strong>ativada</strong> em 7 de novembro de 2024. Desde então, o histórico de versões de todos os arquivos, incluindo arquivos excluídos, é mantido.</p>
 </div>
 </div>
 </section>
-<section id="how-to-access-a-file" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-access-a-file">How to access a file?</h2>
-<p>Check the desired file name at <a href="https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_full_path.txt">full path list</a> and append it to the endpoint access.</p>
-<p>Example: <a href="https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/SIM/CID10/DORES/DOBA2022.dbc">SIM file for Bahia, 2022</a></p>
+<section id="como-acessar-um-arquivo" class="level2">
+<h2 class="anchored" data-anchor-id="como-acessar-um-arquivo">Como acessar um arquivo?</h2>
+<p>Verifique o nome do arquivo desejado na <a href="https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_full_path.txt">lista de caminhos completos</a> e acrescente esse caminho ao endpoint de acesso.</p>
+<p>Exemplo: <a href="https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/SIM/CID10/DORES/DOBA2022.dbc">arquivo do SIM para Bahia, 2022</a></p>
 <pre><code>https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/SIM/CID10/DORES/DOBA2022.dbc</code></pre>
 </section>
-<section id="update-logs" class="level2">
-<h2 class="anchored" data-anchor-id="update-logs">Update logs</h2>
-<p>A log of the last update is provided and all update logs are stored in the folder <code>rclone-logs</code></p>
+<section id="logs-de-atualização" class="level2">
+<h2 class="anchored" data-anchor-id="logs-de-atualização">Logs de atualização</h2>
+<p>Um log da última atualização é disponibilizado, e todos os logs de atualização são armazenados na pasta <code>rclone-logs</code>.</p>
 <ul>
-<li><a href="https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_log.txt">Last update log</a></li>
-<li><a href="https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_logs.txt">All logs on rclone-logs folder</a></li>
+<li><a href="https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_log.txt">Log da última atualização</a></li>
+<li><a href="https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_logs.txt">Todos os logs na pasta rclone-logs</a></li>
 </ul>
-<section id="how-to-access-an-old-update-log" class="level3">
-<h3 class="anchored" data-anchor-id="how-to-access-an-old-update-log">How to access an old update log?</h3>
-<p>Fist, locate the log file name <a href="https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_logs.txt">here</a>, then access the file. Example:</p>
+<section id="como-acessar-um-log-de-atualização-antigo" class="level3">
+<h3 class="anchored" data-anchor-id="como-acessar-um-log-de-atualização-antigo">Como acessar um log de atualização antigo?</h3>
+<p>Primeiro, localize o nome do arquivo de log <a href="https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_logs.txt">aqui</a> e depois acesse o arquivo. Exemplo:</p>
 <pre><code>https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone-logs/rclone_datasus_log_2024-11-07_03:04:55.txt</code></pre>
 </section>
 </section>
 <section id="cdn" class="level2">
 <h2 class="anchored" data-anchor-id="cdn">CDN</h2>
-<p>The files are cached in a CDN (content delivery network) to increase transfer speeds. This cache is refreshed every hour. To access directly the file, without the CDN, remove the <code>cdn</code> from the address. Example:</p>
+<p>Os arquivos são armazenados em cache em uma CDN (content delivery network) para aumentar a velocidade de transferência. Esse cache é atualizado a cada hora. Para acessar diretamente o arquivo, sem a CDN, remova <code>cdn</code> do endereço. Exemplo:</p>
 <pre><code>https://datasus-ftp-mirror.nyc3.digitaloceanspaces.com/SIM/CID10/DORES/DOBA2022.dbc</code></pre>
 </section>
-<section id="costs" class="level2">
-<h2 class="anchored" data-anchor-id="costs">Costs</h2>
-<p>This S3 mirror is available for free use, but I have running costs for storage and transfer volume at Digital Ocean. Please use it carefully and consciously.</p>
+<section id="custos" class="level2">
+<h2 class="anchored" data-anchor-id="custos">Custos</h2>
+<p>Este espelho S3 está disponível para uso gratuito, mas há custos recorrentes de armazenamento e transferência na Digital Ocean. Use com cuidado e consciência.</p>
 </section>
 <section id="script" class="level2">
 <h2 class="anchored" data-anchor-id="script">Script</h2>
-<p>If you are curious to see how this works, check this <a href="https://github.com/rfsaldanha/rclone-datasus">code repository</a>.</p>
+<p>Se tiver curiosidade de ver como isso funciona, consulte este <a href="https://github.com/rfsaldanha/rclone-datasus">repositório de código</a>.</p>
 
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -316,12 +318,12 @@ Tip
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Copiada");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Copiada");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
@@ -713,7 +715,7 @@ Tip
     script.dataset.emitMetadata = "0";
     script.dataset.inputPosition = "bottom";
     script.dataset.theme = getTheme();
-    script.dataset.lang = "en";
+    script.dataset.lang = "pt";
     script.crossOrigin = "anonymous";
     // Append the script to the desired div instead of at the end of the body
     document.getElementById("quarto-content").appendChild(script);

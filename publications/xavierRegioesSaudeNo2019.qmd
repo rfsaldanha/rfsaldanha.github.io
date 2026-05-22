@@ -24,11 +24,11 @@ nocite: |
 
 ![](images/Screenshot from 2023-10-02 13-23-51.png)
 
-## Reference
+## Referência
 
 ::: {#refs}
 :::
 
-## Abstract
+## Resumo
 
-This study addressed health regionalization on various spatial scales based on patient flow. The article analyzed data through data linkage on the origin and destination of admissions at the municipal level in Brazil in 2016. The analysis is based on graph theory and uses a modularity algorithm that seeks to group municipalities in communities with a large number of interlinks. The algorithm optimizes the number of hospital admissions and discharges, taking patient flow into account. The results are shown, considering different political and administrative spatial structures. Considering patient flow without spatial restrictions, 29 communities were created in the country, compared to 64 communities when the boundaries of the major geographic regions were respected, and 164 when considering only patient flows within the respective states. The results show the importance of historically constituted regions, ignoring formal administrative boundaries, in order to implement access to health services. They also reveal adherence to administrative boundaries in many states of Brazil, demonstrating this spatial scale's importance in the context of access to hospital admissions. The methodology makes relevant contributions to regional health planning.
+Este estudo abordou a regionalização em saúde em várias escalas espaciais com base no fluxo de pacientes. O artigo analisou dados por meio de relacionamento de bases sobre origem e destino das internações em nível municipal no Brasil em 2016. A análise baseia-se na teoria dos grafos e usa um algoritmo de modularidade que busca agrupar municípios em comunidades com grande número de interligações. O algoritmo otimiza o número de internações e altas hospitalares, levando em conta o fluxo de pacientes. Os resultados são apresentados considerando diferentes estruturas político-administrativas espaciais. Considerando o fluxo de pacientes sem restrições espaciais, foram criadas 29 comunidades no país, em comparação com 64 comunidades quando os limites das grandes regiões geográficas foram respeitados, e 164 quando considerados apenas os fluxos de pacientes dentro dos respectivos estados. Os resultados mostram a importância de regiões historicamente constituídas, ignorando fronteiras administrativas formais, para implementar o acesso aos serviços de saúde. Também revelam aderência a limites administrativos em muitos estados do Brasil, demonstrando a importância dessa escala espacial no contexto do acesso às internações hospitalares. A metodologia oferece contribuições relevantes para o planejamento regional em saúde.
