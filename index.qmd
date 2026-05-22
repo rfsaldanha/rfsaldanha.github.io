@@ -23,11 +23,11 @@ about:
       href: "mailto:raphael.saldanha@fiocruz.br"
 ---
 
-Pesquisador da [Fiocruz](https://portal.fiocruz.br/) e egresso do [Inria](https://www.inria.fr/fr).
+Pesquisador em Saúde Pública da [Fiocruz](https://portal.fiocruz.br/), [ICICT](https://www.icict.fiocruz.br/), [LIS](https://www.icict.fiocruz.br/laboratorio-de-informacao-em-saude).
 
 Editor associado da [RECIIS](https://www.reciis.icict.fiocruz.br).
 
-Bolsista da área de [Clima & Saúde](https://pasteur-network.org/what-we-do/theory-of-change-pillars/epidemic-intelligence-preparedness-climate/) da Pasteur Network.
+Research fellow em [Clima & Saúde](#0) da Pasteur Network.
 
 Geógrafo da saúde e cientista de dados em saúde. Graduado em Geografia, especialista em Estatística, mestre em Saúde Coletiva e doutor em Informação em Saúde.
 

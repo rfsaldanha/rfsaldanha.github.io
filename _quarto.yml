@@ -45,7 +45,7 @@ website:
         href: data.qmd
       - text: "Publicações"
         href: publications.qmd
-      - text: "Talks"
+      - text: "Apresentações"
         href: talks.qmd
       - text: "Fotos"
         href: photos/photos.qmd
