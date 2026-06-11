@@ -7,7 +7,7 @@ categories: [dados, saude, aps, sisab]
 format:
   revealjs:
     theme: simple
-    css: mti_styles.css
+    css: icict_theme.css
     slide-number: true
     chalkboard: true
     preview-links: auto
