@@ -3420,7 +3420,7 @@
     "href": "talks/sisab_dados_aps.html#por-que-falar-de-sisab",
     "title": "Dados do SISAB",
     "section": "Por que falar de SISAB?",
-    "text": "Por que falar de SISAB?\n\nA APS é a principal porta de entrada do SUS, mas seus dados ainda são pouco usados na escala e na granularidade que poderiam.\n\nO SISAB/SIAPS reúne informações sobre:\n\n\nAtendimentos e visitas\nprodução registrada por equipes e serviços.\n\n\nProcedimentos\nações realizadas na rotina da APS.\n\n\nProblemas e condições\nmotivos de consulta, diagnósticos e condições avaliadas.\n\n\n\nEnfatizar que o valor do SISAB está na combinação entre abrangência nacional, periodicidade mensal e escala municipal. Ao mesmo tempo, os dados são registros administrativos e dependem da prática local de registro."
+    "text": "Por que falar de SISAB?\n\nA APS é a principal porta de entrada do SUS, mas seus dados ainda são pouco usados na escala e na granularidade que poderiam.\n\nO SISAB é um sistema legado, ainda em funcionamento, e continua sendo uma fonte importante para acompanhar a produção da APS. O SIAPS, embora seja o sistema mais recente, ainda não oferece acesso público a relatórios e dados abertos equivalentes.\nO SISAB/SIAPS reúne informações sobre:\n\n\nAtendimentos e visitas\nprodução registrada por equipes e serviços.\n\n\nProcedimentos\nações realizadas na rotina da APS.\n\n\nProblemas e condições\nmotivos de consulta, diagnósticos e condições avaliadas.\n\n\n\nEnfatizar que o valor do SISAB está na combinação entre abrangência nacional, periodicidade mensal e escala municipal. Ao mesmo tempo, os dados são registros administrativos e dependem da prática local de registro."
   },
   {
     "objectID": "talks/sisab_dados_aps.html#o-problema-de-acesso",
@@ -3547,5 +3547,12 @@
     "title": "Dados do SISAB",
     "section": "O que estes dados não respondem sozinhos?",
     "text": "O que estes dados não respondem sozinhos?\n\nRegistro administrativo não é sinônimo automático de acesso, cobertura, incidência ou qualidade do cuidado.\n\n\n\nNão mede sozinho acesso\nUma baixa contagem pode ser baixa demanda, baixa oferta, falha de registro ou combinação disso.\n\n\nNão mede sozinho incidência\nCID-10 e CIAP-2 indicam registros de atendimento, não necessariamente ocorrência real na população.\n\n\nNão mede sozinho qualidade\nMais registros podem indicar maior atividade, melhor registro ou mudanças operacionais.\n\n\n\nEste slide deve ser dito com calma. Ele protege a análise contra leituras simplistas e reforça que a base deve ser combinada com contexto local, metadados e outras fontes."
+  },
+  {
+    "objectID": "talks/sisab_dados_aps.html#objetivo-do-seminário",
+    "href": "talks/sisab_dados_aps.html#objetivo-do-seminário",
+    "title": "Dados do SISAB",
+    "section": "Objetivo do seminário",
+    "text": "Objetivo do seminário\n\nMostrar como os registros agregados do SISAB foram transformados em uma base aberta e útil para pesquisa, gestão e monitoramento da Atenção Primária à Saúde.\n\nEm 20 minutos:\n\nO que o SISAB registra;\nPor que o acesso ainda é difícil;\nComo os dados foram coletados e organizados;\nComo acessar, analisar e interpretar os resultados.\n\n\nAbrir dizendo que a apresentação é sobre infraestrutura de dados, não apenas sobre uma base específica. A ideia central é reduzir o trabalho manual e permitir análises reprodutíveis da APS municipal."
   }
 ]

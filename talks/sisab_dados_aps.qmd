@@ -24,18 +24,18 @@ execute:
   message: false
 ---
 
-## Objetivo da conversa
+## Objetivo do seminário
 
 ::: big
-Mostrar como transformar os registros agregados do SISAB em uma base aberta, auditável e útil para pesquisa, gestão e monitoramento da Atenção Primária à Saúde.
+Mostrar como os registros agregados do SISAB foram transformados em uma base aberta e útil para pesquisa, gestão e monitoramento da Atenção Primária à Saúde.
 :::
 
 Em 20 minutos:
 
-1.  o que o SISAB registra;
-2.  por que o acesso ainda é difícil;
-3.  como os dados foram coletados e organizados;
-4.  como acessar, analisar e interpretar os resultados.
+1.  O que o SISAB registra;
+2.  Por que o acesso ainda é difícil;
+3.  Como os dados foram coletados e organizados;
+4.  Como acessar, analisar e interpretar os resultados.
 
 ::: notes
 Abrir dizendo que a apresentação é sobre infraestrutura de dados, não apenas sobre uma base específica. A ideia central é reduzir o trabalho manual e permitir análises reprodutíveis da APS municipal.
@@ -47,7 +47,7 @@ Abrir dizendo que a apresentação é sobre infraestrutura de dados, não apenas
 A APS é a principal porta de entrada do SUS, mas seus dados ainda são pouco usados na escala e na granularidade que poderiam.
 :::
 
-O SISAB/SIAPS reúne informações sobre:
+O SISAB reúne informações sobre:
 
 :::::: threecols
 ::: colbox
