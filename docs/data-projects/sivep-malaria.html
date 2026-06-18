@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Bases de dados – Raphael Saldanha</title>
+<title>Dados do SIVEP-Malária – Raphael Saldanha</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,30 +20,63 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./logo.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9c801c0f987b87cb825544174f2aa3e8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-9c801c0f987b87cb825544174f2aa3e8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,35 +104,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Procurar"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2M7VLSRDCB"></script>
 
 <script type="text/javascript">
@@ -110,50 +114,21 @@ gtag('js', new Date());
 gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
 <body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./logo.png" alt="Raphael Saldanha" class="navbar-logo light-content">
-    <img src="./logo.png" alt="Raphael Saldanha" class="navbar-logo dark-content">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../logo.png" alt="Raphael Saldanha" class="navbar-logo light-content">
+    <img src="../logo.png" alt="Raphael Saldanha" class="navbar-logo dark-content">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Raphael Saldanha</span>
     </a>
   </div>
@@ -164,43 +139,43 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html"> 
+    <a class="nav-link" href="../cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
+    <a class="nav-link" href="../projects.html"> 
 <span class="menu-text">Projetos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./code.html"> 
+    <a class="nav-link" href="../code.html"> 
 <span class="menu-text">Pacotes &amp; Código</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./data.html" aria-current="page"> 
+    <a class="nav-link" href="../data.html"> 
 <span class="menu-text">Dados</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./publications.html"> 
+    <a class="nav-link" href="../publications.html"> 
 <span class="menu-text">Publicações</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./talks.html"> 
+    <a class="nav-link" href="../talks.html"> 
 <span class="menu-text">Apresentações</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./photos/photos.html"> 
+    <a class="nav-link" href="../photos/photos.html"> 
 <span class="menu-text">Fotos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html"> 
+    <a class="nav-link" href="../blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./en/"> 
+    <a class="nav-link" href="../en/"> 
 <span class="menu-text">English</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./blog.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../blog.xml"> <i class="bi bi-rss" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -212,334 +187,138 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Dados do SIVEP-Malária</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Nesta página</h2>
+   
+  <ul>
+  <li><a href="#fonte-dos-dados" id="toc-fonte-dos-dados" class="nav-link active" data-scroll-target="#fonte-dos-dados">Fonte dos dados</a></li>
+  <li><a href="#tratamento" id="toc-tratamento" class="nav-link" data-scroll-target="#tratamento">Tratamento</a></li>
+  <li><a href="#acesso-aos-dados" id="toc-acesso-aos-dados" class="nav-link" data-scroll-target="#acesso-aos-dados">Acesso aos dados</a></li>
+  <li><a href="#exemplo-de-uso-em-r" id="toc-exemplo-de-uso-em-r" class="nav-link" data-scroll-target="#exemplo-de-uso-em-r">Exemplo de uso em R</a></li>
+  <li><a href="#uso-responsável" id="toc-uso-responsável" class="nav-link" data-scroll-target="#uso-responsável">Uso responsável</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Bases de dados</h1>
-</div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p>O SIVEP-Malária é o sistema nacional de vigilância epidemiológica da malária no Brasil. Seus registros permitem acompanhar a ocorrência da doença, caracterizar notificações, investigar locais prováveis de infecção e apoiar a avaliação de ações de vigilância e controle, especialmente em territórios onde a malária permanece um problema persistente de saúde pública.</p>
+<p>Esta base organiza microdados de notificação do SIVEP-Malária em arquivos abertos, documentados e adequados para análises reprodutíveis. O objetivo é facilitar o uso dos dados por pesquisadores, gestores e equipes de vigilância, preservando a proveniência das respostas recebidas e tornando explícitas as etapas de tratamento.</p>
+<section id="fonte-dos-dados" class="level2">
+<h2 class="anchored" data-anchor-id="fonte-dos-dados">Fonte dos dados</h2>
+<p>Os dados foram obtidos por pedidos via Lei de Acesso à Informação (LAI) ao Ministério da Saúde, a partir do sistema nacional de vigilância da malária, no processo <code>25072.030306202615</code>.</p>
+<p>Os depósitos no Zenodo incluem os arquivos originais recebidos pela LAI, no padrão <code>NOTI[YY]_SIVEP.zip</code>, e as versões processadas geradas a partir deles. A série histórica cobre os anos de 2004 a 2024. Os dados de 2025 e 2026 foram disponibilizados em depósito separado por serem preliminares e sujeitos a atualizações mensais.</p>
+</section>
+<section id="tratamento" class="level2">
+<h2 class="anchored" data-anchor-id="tratamento">Tratamento</h2>
+<p>O processamento é mantido no repositório <a href="https://github.com/rfsaldanha/sivep_malaria"><code>sivep_malaria</code></a>. O fluxo padroniza nomes de variáveis, normaliza inconsistências de cabeçalho entre arquivos originais, converte variáveis categóricas codificadas para rótulos legíveis usando um dicionário de dados em formato processável por máquina, trata campos de data e adiciona variáveis derivadas de ano, mês e semana.</p>
+<p>O tratamento também enriquece as informações geográficas de notificação, residência e local provável de infecção com metadados de municípios e unidades da federação do IBGE. Isso facilita análises territoriais e reduz a necessidade de pós-processamentos repetidos por cada usuário.</p>
+<p>Para apoiar auditoria e reutilização, os depósitos incluem metadados como codebook, manifesto de publicação, checksums e relatório de valores não mapeados. O manifesto documenta seleção dos arquivos-fonte, contagens de linhas, diferenças de esquema entre anos, nomes dos arquivos de saída, datas de modificação das fontes e checksums MD5.</p>
+</section>
+<section id="acesso-aos-dados" class="level2">
+<h2 class="anchored" data-anchor-id="acesso-aos-dados">Acesso aos dados</h2>
+<p>Os arquivos processados estão disponíveis por ano nos formatos Parquet e CSV compactado. Os depósitos usam licença Creative Commons Attribution 4.0 International (CC BY 4.0).</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Período</th>
+<th>Depósito Zenodo</th>
+<th>Conteúdo principal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2004-2024</td>
+<td><a href="https://doi.org/10.5281/zenodo.20706957">10.5281/zenodo.20706957</a></td>
+<td>Arquivos originais da LAI, arquivos anuais processados em Parquet e CSV, metadados e documentação</td>
+</tr>
+<tr class="even">
+<td>2025-2026</td>
+<td><a href="https://doi.org/10.5281/zenodo.20706949">10.5281/zenodo.20706949</a></td>
+<td>Dados preliminares, com atualização mensal prevista, em Parquet e CSV</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="exemplo-de-uso-em-r" class="level2">
+<h2 class="anchored" data-anchor-id="exemplo-de-uso-em-r">Exemplo de uso em R</h2>
+<p>O exemplo abaixo baixa o arquivo Parquet preliminar de 2025 com o pacote <a href="https://rfsaldanha.github.io/zendown/">{zendown}</a>, lê os dados com <code>{arrow}</code> e cria uma série mensal de notificações de malária.</p>
+<div class="cell preview-image">
+<details class="code-fold">
+<summary>Código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(arrow)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(zendown)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>arquivo_malaria_2025 <span class="ot">&lt;-</span> <span class="fu">zen_file</span>(</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">deposit_id =</span> <span class="dv">20706949</span>,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">file_name =</span> <span class="st">"sivep_malaria_2025.parquet"</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>malaria_mes <span class="ot">&lt;-</span> <span class="fu">open_dataset</span>(arquivo_malaria_2025) <span class="sc">|&gt;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(dt_notif_month)) <span class="sc">|&gt;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(dt_notif_month) <span class="sc">|&gt;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">notificacoes =</span> <span class="fu">n</span>(), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>() <span class="sc">|&gt;</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> <span class="fu">as.Date</span>(<span class="fu">sprintf</span>(<span class="st">"2025-%02d-01"</span>, dt_notif_month))</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(data)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(malaria_mes, <span class="fu">aes</span>(<span class="at">x =</span> data, <span class="at">y =</span> notificacoes)) <span class="sc">+</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"#15616d"</span>, <span class="at">width =</span> <span class="dv">25</span>) <span class="sc">+</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">label_number</span>(<span class="at">big.mark =</span> <span class="st">"."</span>, <span class="at">decimal.mark =</span> <span class="st">","</span>)) <span class="sc">+</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_date</span>(<span class="at">date_breaks =</span> <span class="st">"1 month"</span>, <span class="at">date_labels =</span> <span class="st">"%b"</span>) <span class="sc">+</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Notificações de malária por mês de notificação"</span>,</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Brasil, 2025"</span>,</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Mês de notificação"</span>,</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Notificações"</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="sivep-malaria_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="uso-responsável" class="level2">
+<h2 class="anchored" data-anchor-id="uso-responsável">Uso responsável</h2>
+<p>Como os dados se originam de um sistema de notificação em saúde pública, seu uso requer cuidado na análise, redistribuição e vinculação com outras bases. Recomenda-se citar o registro Zenodo utilizado, a origem via LAI, a data de processamento e o repositório de código associado.</p>
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1779476883415" data-listing-reading-time-sort="1" data-listing-word-count-sort="140">
-<a href="./data-projects/brazil_inmet_alerts.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="data-projects/images/inmetrss.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Alertas RSS do INMET
-</h5>
-<div class="card-text listing-description delink">
-O INMET é a fonte oficial brasileira de previsões meteorológicas. Ele também mantém o ALERT-AS, um centro de alertas meteorológicos para o território brasileiro.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
 
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1779476883415" data-listing-reading-time-sort="2" data-listing-word-count-sort="366">
-<a href="./data-projects/brazil_ndvi.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="data-projects/images/ndvi.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Médias de NDVI para municípios brasileiros
-</h5>
-<div class="card-text listing-description delink">
-O Índice de Vegetação por Diferença Normalizada (NDVI) é um indicador que quantifica a cobertura e a saúde da vegetação medindo a diferença entre o infravermelho próximo…
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
+</section>
 
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1779476883415" data-listing-reading-time-sort="6" data-listing-word-count-sort="1083">
-<a href="./data-projects/brazil_air_pollutants.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="data-projects/images/air_pollutant_pm25.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Médias de poluentes atmosféricos para municípios brasileiros
-</h5>
-<div class="card-text listing-description delink">
-Poluentes atmosféricos, incluindo material particulado, dióxido de nitrogênio, dióxido de enxofre, ozônio e monóxido de carbono, são indicadores críticos em estudos de saúde…
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1779476883415" data-listing-reading-time-sort="4" data-listing-word-count-sort="682">
-<a href="./data-projects/brazil-climate-zonal-indicators.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="data-projects/images/zonal_brdwgd-01.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Estatísticas zonais de indicadores climáticos para municípios brasileiros
-</h5>
-<div class="card-text listing-description delink">
-Indicadores climáticos são usados em vários modelos estatísticos de diferentes áreas de pesquisa e são especialmente importantes para modelar a incidência de doenças…
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1779476883415" data-listing-reading-time-sort="17" data-listing-word-count-sort="3268">
-<a href="./data-projects/brazil_climate_event_based_indicators.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="data-projects/brazil_climate_event_based_indicators_files/figure-html/unnamed-chunk-3-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Indicadores climáticos baseados em eventos para análises em saúde pública
-</h5>
-<div class="card-text listing-description delink">
-A pesquisa em clima e saúde tradicionalmente representa a exposição ambiental usando variáveis meteorológicas nominais, como temperatura média ou precipitação total…
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="5" data-listing-file-modified-sort="1779476883416" data-listing-reading-time-sort="4" data-listing-word-count-sort="788">
-<a href="./data-projects/era5land-daily-latin-america.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="data-projects/era5land-daily-latin-america_files/figure-html/unnamed-chunk-1-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Agregados diários de indicadores selecionados do ERA5-Land para a América Latina
-</h5>
-<div class="card-text listing-description delink">
-A reanálise ERA5-Land, do Programa Copernicus, é uma excelente fonte de dados climáticos com cobertura global de áreas terrestres desde 1950 até o presente, em resolução…
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="6" data-listing-file-modified-sort="1779476883416" data-listing-reading-time-sort="4" data-listing-word-count-sort="779">
-<a href="./data-projects/era5land-daily-africa.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="data-projects/era5land-daily-africa_files/figure-html/unnamed-chunk-1-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Agregados diários de indicadores selecionados do ERA5-Land para a África
-</h5>
-<div class="card-text listing-description delink">
-A reanálise ERA5-Land, do Programa Copernicus, é uma excelente fonte de dados climáticos com cobertura global de áreas terrestres desde 1950 até o presente, em resolução…
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="7" data-listing-file-modified-sort="1779476883416" data-listing-reading-time-sort="3" data-listing-word-count-sort="477">
-<a href="./data-projects/s3-datasus-ftp-mirror.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./data-projects/images/s3datasus.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Espelho S3 do FTP DataSUS
-</h5>
-<div class="card-text listing-description delink">
-O Departamento de Informática do SUS (DataSUS), do Ministério da Saúde, hospeda arquivos anonimizados de microdados de vários sistemas de informação em saúde, cobrindo temas…
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="8" data-listing-file-modified-sort="1781013379356" data-listing-reading-time-sort="12" data-listing-word-count-sort="2350">
-<a href="./data-projects/dados-aps.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="data-projects/dados-aps_files/figure-html/unnamed-chunk-3-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Dados da Atenção Primária a Saúde
-</h5>
-<div class="card-text listing-description delink">
-A Atenção Primária à Saúde (APS) é a principal porta de entrada do SUS e produz continuamente informações importantes sobre atendimentos, visitas, procedimentos, problemas…
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="9" data-listing-file-modified-sort="1781811068136" data-listing-reading-time-sort="3" data-listing-word-count-sort="581">
-<a href="./data-projects/sivep-malaria.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="data-projects/sivep-malaria_files/figure-html/unnamed-chunk-1-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Dados do SIVEP-Malária
-</h5>
-<div class="card-text listing-description delink">
-O SIVEP-Malária é o sistema nacional de vigilância epidemiológica da malária no Brasil. Seus registros permitem acompanhar a ocorrência da doença, caracterizar notificações…
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="10" data-listing-file-modified-sort="1781811110653" data-listing-reading-time-sort="4" data-listing-word-count-sort="619">
-<a href="./data-projects/sivep-dda.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="data-projects/sivep-dda_files/figure-html/unnamed-chunk-1-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Dados do SIVEP-DDA
-</h5>
-<div class="card-text listing-description delink">
-O SIVEP-DDA é o sistema de vigilância epidemiológica das doenças diarreicas agudas no Brasil. Suas informações ajudam a acompanhar a ocorrência semanal de casos, identificar…
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="11" data-listing-file-modified-sort="1779476883416" data-listing-reading-time-sort="3" data-listing-word-count-sort="538">
-<a href="./data-projects/brazil_road_distances.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./data-projects/images/map_route.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Matriz de distâncias rodoviárias e duração de viagens para municípios brasileiros
-</h5>
-<div class="card-text listing-description delink">
-Informações de distância entre lugares são úteis para avaliar a proximidade e a interconexão entre regiões. A distância euclidiana entre dois lugares, embora simples e fácil…<strong></strong>
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="12" data-listing-file-modified-sort="1779476883416" data-listing-reading-time-sort="3" data-listing-word-count-sort="464">
-<a href="./data-projects/usa_road_distances.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./data-projects/images/map_route_usa.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Matriz de distâncias rodoviárias e duração de viagens para condados dos EUA
-</h5>
-<div class="card-text listing-description delink">
-Informações de distância entre lugares são úteis para avaliar a proximidade e a interconexão entre regiões. A distância euclidiana entre dois lugares, embora simples e fácil…<strong></strong>
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="13" data-listing-file-modified-sort="1779476883416" data-listing-reading-time-sort="1" data-listing-word-count-sort="23">
-<a href="./data-projects/health-indicators.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="data-projects/health_indicators/indi_0002_files/figure-html/unnamed-chunk-2-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Indicadores de saúde
-</h5>
-<div class="card-text listing-description delink">
-Indicadores de saúde calculados para municípios brasileiros, regiões de saúde e UFs, prontos para baixar em formato parquet. As definições estão em português.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="14" data-listing-file-modified-sort="1779476883416" data-listing-reading-time-sort="1" data-listing-word-count-sort="35">
-<a href="./data-projects/std_br_covid_rates_data.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="data-projects/images/unnamed-chunk-18-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Taxas de mortalidade por COVID-19 padronizadas por idade para municípios brasileiros
-</h5>
-<div class="card-text listing-description delink">
-Esta base apresenta taxas brutas e padronizadas por idade de mortalidade por COVID-19 para municípios brasileiros, de 2020 a 2022, por semanas epidemiológicas.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">Sem itens correspondentes</div>
-</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -940,6 +719,35 @@ Esta base apresenta taxas brutas e padronizadas por idade de mortalidade por COV
     }
   });
   </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="light">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "rfsaldanha/rfsaldanha.github.io";
+    script.dataset.repoId = "R_kgDOKaluJA";
+    script.dataset.category = "Announcements";
+    script.dataset.categoryId = "DIC_kwDOKaluJM4CauUS";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "bottom";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "pt";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
