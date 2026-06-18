@@ -2,7 +2,7 @@
 title: "Dados abertos para pesquisa"
 subtitle: "em atenção primária a saúde, malária e doenças diarreicas agudas"
 author: "Raphael Saldanha | Fiocruz"
-date: "2026-06-18"
+date: "2026-06-26"
 categories: [dados, saude, lai, sisab, sivep]
 format:
   revealjs:
@@ -27,15 +27,15 @@ execute:
 ## Objetivo
 
 ::: big
-Mostrar como dados administrativos do SUS podem sair de consultas fragmentadas, arquivos recebidos por LAI e rotinas manuais para repositórios abertos, auditáveis e reutilizáveis.
+Mostrar como dados do SUS podem ser obtidos por meio de consultas fragmentadas, arquivos recebidos por LAI e rotinas manuais e trabalhos em repositórios abertos, auditáveis e reutilizáveis.
 :::
 
-Em 30 minutos:
+Neste webnário:
 
-1.  por que SISAB, SIVEP-Malária e SIVEP-DDA importam;
-2.  quais barreiras ainda dificultam o acesso;
-3.  o que é a LAI e como ela entra nesse fluxo;
-4.  como transformar respostas e relatórios em repositórios de dados.
+1.  Por que SISAB, SIVEP-Malária e SIVEP-DDA importam;
+2.  Quais barreiras ainda dificultam o acesso;
+3.  O que é a LAI e como ela entra nesse fluxo;
+4.  Como transformar respostas e relatórios em repositórios de dados.
 
 ::: notes
 Abrir a apresentação dizendo que o tema não é apenas "baixar dados". O ponto central é construir infraestrutura pública de dados: organização, proveniência, documentação, versionamento e condições para reuso.
@@ -68,135 +68,33 @@ Juntos, eles aproximam três dimensões do SUS: cuidado cotidiano, vigilância d
 Usar este slide para mostrar que as bases têm naturezas distintas. O SISAB é mais próximo da rotina assistencial da APS. O SIVEP-Malária é vigilância epidemiológica com investigação de casos. O SIVEP-DDA é monitoramento agregado e sensível a surtos.
 :::
 
-## SISAB: o que ganha quando vira série aberta?
-
-::::: twocols
-::: left
-**Perguntas de cuidado**
-
--   como varia a produção da APS?
--   quais procedimentos aparecem mais?
--   quais problemas e condições são acompanhados?
--   onde há baixa intensidade de registro?
-:::
-
-::: right
-**Perguntas de gestão**
-
--   há municípios sem envio?
--   ocorreram quebras na série?
--   qual é a sazonalidade da produção?
--   como combinar APS com território e população?
-:::
-:::::
-
-::: callout
-O valor analítico aumenta quando as consultas pontuais do SISAB são convertidas em arquivos mensais, municipais e versionados.
-:::
-
-::: notes
-Retomar, se necessário, exemplos do seminário específico sobre SISAB. O público deve entender que a transformação em repositório permite perguntas repetíveis e comparáveis.
-:::
-
-## SIVEP-Malária: por que abrir melhor?
-
-:::::: threecols
-::: colbox
-**Eliminação**\
-casos importados, transmissão residual e resposta oportuna importam muito.
-:::
-
-::: colbox
-**Território**\
-a malária se concentra em áreas específicas, com forte relação com mobilidade, garimpo, fronteiras e populações remotas.
-:::
-
-::: colbox
-**Integração**\
-análises úteis combinam caso, local provável de infecção, tratamento, tempo e contexto ambiental.
-:::
-::::::
-
-::: callout
-O SIVEP Malária é mais adequado que o SINAN Malária para a vigilância da doença em áreas endêmicas, pois foi desenvolvido especificamente para registrar diagnóstico, espécie parasitária, local provável de infecção, tratamento e acompanhamento dos casos. Esses dados permitem análises mais detalhadas da transmissão e apoiam de forma mais direta as ações de controle da malária.
-:::
-
-::: notes
-Dizer que a malária é um ótimo exemplo de dado em que o detalhe territorial e temporal muda a capacidade de vigilância. A publicação responsável precisa equilibrar utilidade e proteção contra reidentificação.
-:::
-
-## SIVEP-DDA: vigilância sensível ao tempo
-
-::: quote
-Em doenças diarreicas agudas, o valor do dado está menos no evento isolado e mais no sinal: aumento, concentração, persistência e mudança de padrão.
-:::
-
-O SIVEP-DDA ajuda a observar:
-
--   comportamento semanal ou mensal de casos;
--   alterações compatíveis com surtos;
--   diferenças por município e faixa etária;
--   possíveis relações com água, saneamento, clima e desastres.
-
-::: notes
-Explicar que DDA é útil como vigilância sindrômica: nem sempre o agente etiológico está conhecido, mas o aumento de casos já pode demandar investigação e ação.
-:::
-
 ## O problema atual de acesso
 
-::::: twocols
-::: left
-**Quando existe transparência ativa**
-
--   páginas de consulta;
--   relatórios agregados;
--   downloads por recorte;
--   interfaces orientadas à visualização.
-:::
-
-::: right
-**Quando é preciso transparência passiva**
-
--   pedidos via LAI;
--   respostas em formatos variados;
--   prazos e recursos administrativos;
--   necessidade de auditar cada arquivo recebido.
-:::
-:::::
-
-::: callout
-O gargalo raramente é apenas "ter o dado". É obter o dado em forma analisável, consistente, documentada e reprodutível.
-:::
-
-::: notes
-Dar exemplos práticos: páginas que permitem consultar um município por vez, arquivos sem dicionário, respostas em planilhas diferentes, nomes de colunas que mudam, dados sobrepostos entre pedidos e ausência de identificador de versão.
-:::
-
-## Barreiras recorrentes
-
 :::::: threecols
 ::: colbox
-**Fragmentação**\
-cada sistema tem sua interface, regra de extração, granularidade e vocabulário.
+**SISAB**\
+Disponibilização oficial apenas por meio de relatórios agregados. Séries longas exigem muitas combinações de seleção.
+
+SIAPS não apresenta, até o momento, dados públicos disponíveis.
 :::
 
 ::: colbox
-**Formato**\
-planilhas, relatórios HTML, arquivos compactados e layouts heterogêneos exigem tratamento.
+**SIVEP-Malária**\
+Não disponibiliza publicamente dados desagrados, relatórios públicos ou painel de dados. Os dados do SINAN não abrangem igualmente todo o território nacional.
 :::
 
 ::: colbox
-**Proveniência**\
-sem rastrear pedido, arquivo, data e seleção, a base final perde auditabilidade.
+**SIVEP-DDA**\
+Disponibilização oficial apenas por meio de painel de visualização de dados agregados.
 :::
 ::::::
 
 ::: callout
-Um repositório de dados precisa guardar não só a tabela final, mas também a história de como ela foi obtida.
+Em todos os casos, o desafio não é apenas obter o arquivo de dados: é reconstruir série histórica, dicionário, proveniência, versão, limitações e regra de uso.
 :::
 
 ::: notes
-Este slide prepara a virada para arquitetura. A frase central: dados reutilizáveis dependem de método, não apenas de boa vontade.
+Detalhar que os problemas são diferentes. No SISAB, a barreira principal é escala de extração e ausência de CID/CIAP em transparência ativa. No SIVEP-Malária, a barreira é combinar utilidade epidemiológica com proteção e interpretação correta de variáveis codificadas. No SIVEP-DDA, a barreira é transformar um sistema de monitoramento sindrômico em séries analisáveis, sem apagar os recortes da vigilância.
 :::
 
 ## O que é a LAI?
@@ -216,18 +114,16 @@ Na prática, ela combina:
 Não transformar o slide em aula jurídica. A mensagem é que LAI é um instrumento de cidadania e também um mecanismo prático para completar lacunas de transparência ativa.
 :::
 
-## Box: dados via LAI podem ir para repositórios?
+## Dados via LAI podem ser publicados?
 
 ::: callout
-**Sim, quando a disponibilização respeita o conteúdo recebido e as restrições aplicáveis.**
+Dados obtidos por meio da LAI podem, em regra, ser disponibilizados em repositórios públicos, desde que não estejam sujeitos a sigilo, restrição legal ou condição expressa definida pelo órgão responsável. A Lei nº 12.527/2011 estabelece a publicidade como regra e o sigilo como exceção. A Política de Dados Abertos também orienta a abertura e a reutilização de bases públicas, favorecendo transparência, pesquisa, inovação e controle social.
 
-Dados obtidos pela LAI podem ser republicados em repositórios de dados quando são informações públicas, não estão sob sigilo, não expõem dados pessoais identificáveis ou sensíveis sem base adequada, e passam por revisão de agregação, anonimização ou supressão quando houver risco de reidentificação.
-
-Boas práticas: documentar o pedido, preservar a resposta original quando possível, registrar transformações, publicar dicionário de dados, informar limitações e manter contato para correções.
+O repositório deve identificar claramente o órgão produtor, o protocolo do pedido LAI e as transformações realizadas nos arquivos. Também é importante deixar explícito que o depositante não reivindica titularidade sobre os dados originais, mas disponibiliza uma versão documentada para fins de transparência, pesquisa e reprodutibilidade.
 :::
 
 ::: notes
-Este é o box solicitado. Falar com cuidado: a LAI dá acesso, mas a republicação exige responsabilidade. Em saúde, mesmo dados agregados podem ter risco quando células são pequenas, territórios são raros ou combinações permitem inferência.
+Explicar que receber dados por LAI não significa que qualquer republicação é automaticamente adequada. A LAI garante acesso a informações públicas; a LGPD e as regras de sigilo continuam relevantes. Em saúde, mesmo tabelas agregadas podem exigir supressão de células pequenas, redução de granularidade territorial ou temporal e documentação clara dos riscos residuais.
 :::
 
 ## LAI não é atalho: é parte da governança
@@ -236,45 +132,22 @@ Este é o box solicitado. Falar com cuidado: a LAI dá acesso, mas a republicaç
 ::: left
 **Antes do pedido**
 
--   definir granularidade mínima necessária;
--   pedir dados agregados quando bastam;
--   evitar identificadores pessoais;
--   prever dicionário e metadados.
+-   Seja específico e preciso no pedido;
+-   Definir granularidade temporal e espacial mínima necessária;
+-   Pedir dicionário de dados, metadados e critérios utilizados na extração dos dados.
 :::
 
 ::: right
 **Depois da resposta**
 
--   checar restrições indicadas pelo órgão;
--   avaliar risco de reidentificação;
--   padronizar sem apagar origem;
--   publicar com licença, DOI e documentação.
+-   Checar restrições indicadas pelo órgão;
+-   Padronizar sem apagar origem;
+-   Publicar com licença, DOI e documentação.
 :::
 :::::
 
 ::: notes
 Mostrar que a boa LAI começa com um pedido bem desenhado. Pedidos muito amplos podem gerar negativas, respostas difíceis ou riscos desnecessários.
-:::
-
-## Da resposta ao repositório
-
-```{mermaid}
-flowchart LR
-  A[Pedido LAI ou consulta publica] --> B[Recebimento bruto]
-  B --> C[Inventario e proveniencia]
-  C --> D[Validacao e padronizacao]
-  D --> E[Resolucao de sobreposicoes]
-  E --> F[Exportacao CSV e Parquet]
-  F --> G[Deposito com DOI]
-  G --> H[Documentacao e exemplos]
-```
-
-::: callout
-Cada etapa precisa ser repetível. Sem isso, o repositório vira apenas uma cópia bonita de uma planilha difícil.
-:::
-
-::: notes
-Percorrer rapidamente o fluxo. Ressaltar que o processamento não pode ser uma caixa-preta; ele precisa deixar rastros e permitir reprodução ou contestação.
 :::
 
 ## Três repositórios, um mesmo princípio
@@ -297,7 +170,7 @@ Este é o slide de síntese dos três projetos. Não prometer que os três têm 
 
 ::::: twocols
 ::: left
-**Coleta pública**
+**Coleta pública (*web scraping*)**
 
 -   iteração por competência;
 -   municípios, faixas etárias e sexo;
@@ -323,61 +196,27 @@ O SISAB combina transparência ativa e passiva: uma parte já está publicada, o
 Reaproveitar a experiência já documentada em sisab_scrapper e sisab_lai. O foco aqui é como o desenho resolve o problema de escala e de repetibilidade.
 :::
 
-## SIVEP-Malária: desenho do repositório
+## SIVEP-Malária e SIVEP-DDA: desenho dos repositórios
 
-:::::: threecols
+::::: threecols
+::: colbox
+**Dados**\
+Ambos obtidos pela LAI
+:::
+
 ::: colbox
 **Dicionários**\
-variáveis, categorias, códigos territoriais e mudanças de layout.
+Variáveis, categorias, códigos territoriais e layout de dados.
 :::
 
 ::: colbox
 **Harmonização**\
-nomes de campos, datas, localidades, classificação do caso e tratamento.
-:::
-
-::: colbox
-**Proteção**\
-controle de granularidade, células raras e variáveis potencialmente identificadoras.
-:::
-::::::
-
-::: callout
-Em malária, granularidade é poder analítico, mas também responsabilidade: local, tempo e população podem tornar casos reconhecíveis.
-:::
-
-::: notes
-Falar que o repositório precisa ser desenhado para pesquisa e vigilância sem expor indivíduos. Se a publicação for agregada, explicar o critério de agregação; se for microdado restrito, documentar o acesso e as regras.
-:::
-
-## SIVEP-DDA: desenho do repositório
-
-::::: twocols
-::: left
-**Estrutura temporal**
-
--   semana epidemiológica ou competência;
--   município, regional, UF;
--   faixa etária;
--   indicadores de casos e surtos.
-:::
-
-::: right
-**Uso analítico**
-
--   detecção de anomalias;
--   comparação histórica;
--   relação com saneamento e clima;
--   priorização de investigação local.
+Nomes de campos, datas, localidades, classificação do caso e tratamento.
 :::
 :::::
 
-::: callout
-O repositório deve facilitar análise rápida de sinais, mas deixar claro que o dado é sindrômico e depende da rotina de notificação.
-:::
-
 ::: notes
-Não exagerar conclusões. DDA é sensível a sub-registro, diferenças de vigilância e mudanças operacionais. O valor está em acompanhar padrão e mudança de padrão.
+Falar que o repositório precisa ser desenhado para pesquisa e vigilância sem expor indivíduos. Se a publicação for agregada, explicar o critério de agregação; se for microdado restrito, documentar o acesso e as regras.
 :::
 
 ## Padrão mínimo de publicação
@@ -427,97 +266,22 @@ O data paper descreve escopo, fonte, método de coleta, processamento, validaç�
 Explicar que o data paper não substitui o repositório: ele aumenta a confiança, facilita revisão por pares e cria uma referência acadêmica estável para quem reutiliza os dados.
 :::
 
-## Qualidade: o que testar?
-
-::::: twocols
-::: left
-**Integridade**
-
--   chaves territoriais válidas;
--   datas e competências coerentes;
--   valores não negativos;
--   duplicidades esperadas e inesperadas.
-:::
-
-::: right
-**Consistência**
-
--   totais comparáveis com fontes oficiais;
--   continuidade temporal;
--   categorias conhecidas;
--   mudanças de layout explicitadas.
-:::
-:::::
-
-::: callout
-Testes automatizados transformam curadoria em rotina, não em heroísmo artesanal.
-:::
-
-::: notes
-Este slide é importante para o público técnico. Mostrar que cada atualização deve rodar verificações antes da publicação.
-:::
-
-## O que estes dados não dizem sozinhos
-
-::: quote
-Registro administrativo não é sinônimo automático de acesso, incidência, qualidade ou risco real.
-:::
-
-Pontos de cautela:
-
--   sub-registro e diferenças locais de preenchimento;
--   mudanças de sistema, fluxo e definição;
--   atrasos de digitação e atualização;
--   interpretações inadequadas de contagem como evento populacional direto.
-
-::: notes
-Este é o slide de proteção interpretativa. Ele evita que a apresentação soe como defesa ingênua dos dados. O dado é útil justamente quando suas limitações são conhecidas.
-:::
-
-## Quem se beneficia?
-
-::::::: cards
-::: card
-**Gestão municipal**\
-acompanha produção, sinais de vigilância e vazios de informação.
-:::
-
-::: card
-**Vigilância em saúde**\
-observa padrões territoriais, temporais e populações prioritárias.
-:::
-
-::: card
-**Pesquisa**\
-reproduz análises, combina fontes e cita versões de dados.
-:::
-
-::: card
-**Controle social**\
-acessa informação pública em formato mais compreensível e reutilizável.
-:::
-:::::::
-
-::: notes
-Trazer a dimensão pública. Repositórios reduzem assimetria: não apenas equipes com tempo e conhecimento técnico conseguem usar os dados.
-:::
-
 ## Agenda de sustentabilidade
 
 :::::: threecols
 ::: colbox
 **Atualizar**\
-rotinas periódicas, logs, checagens e publicação de novas versões.
+Rotinas periódicas de web scrapping e pedidos LAI, logs, checagens e publicação de novas versões.
 :::
 
 ::: colbox
 **Documentar**\
-decisões de limpeza, mudanças de fonte, limitações e data papers.
+Decisões de limpeza, mudanças de fonte, limitações e data papers.
 :::
 
 ::: colbox
 **Institucionalizar**\
-aproximar repositórios derivados da transparência ativa oficial.
+Aproximar repositórios derivados da transparência ativa oficial.
 :::
 ::::::
 

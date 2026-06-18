@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.8.26">
 
   <meta name="author" content="Raphael Saldanha | Fiocruz">
-  <meta name="dcterms.date" content="2026-06-18">
+  <meta name="dcterms.date" content="2026-06-26">
   <title>Raphael Saldanha – Dados abertos para pesquisa</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -135,9 +135,6 @@
       margin-right: 0; 
     }
   </style>
-  <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -155,19 +152,19 @@ Raphael Saldanha | Fiocruz
 </div>
 </div>
 
-  <p class="date">2026-06-18</p>
+  <p class="date">2026-06-26</p>
 </section>
 <section id="objetivo" class="slide level2">
 <h2>Objetivo</h2>
 <div class="big">
-<p>Mostrar como dados administrativos do SUS podem sair de consultas fragmentadas, arquivos recebidos por LAI e rotinas manuais para repositórios abertos, auditáveis e reutilizáveis.</p>
+<p>Mostrar como dados do SUS podem ser obtidos por meio de consultas fragmentadas, arquivos recebidos por LAI e rotinas manuais e trabalhos em repositórios abertos, auditáveis e reutilizáveis.</p>
 </div>
-<p>Em 30 minutos:</p>
+<p>Neste webnário:</p>
 <ol type="1">
-<li>por que SISAB, SIVEP-Malária e SIVEP-DDA importam;</li>
-<li>quais barreiras ainda dificultam o acesso;</li>
-<li>o que é a LAI e como ela entra nesse fluxo;</li>
-<li>como transformar respostas e relatórios em repositórios de dados.</li>
+<li>Por que SISAB, SIVEP-Malária e SIVEP-DDA importam;</li>
+<li>Quais barreiras ainda dificultam o acesso;</li>
+<li>O que é a LAI e como ela entra nesse fluxo;</li>
+<li>Como transformar respostas e relatórios em repositórios de dados.</li>
 </ol>
 <aside class="notes">
 <p>Abrir a apresentação dizendo que o tema não é apenas “baixar dados”. O ponto central é construir infraestrutura pública de dados: organização, proveniência, documentação, versionamento e condições para reuso.</p>
@@ -220,180 +217,32 @@ acompanha doenças diarreicas agudas, apoiando alerta precoce, surtos e análise
           display:block!important;
       }</style></aside>
 </section>
-<section id="sisab-o-que-ganha-quando-vira-série-aberta" class="slide level2">
-<h2>SISAB: o que ganha quando vira série aberta?</h2>
-<div class="twocols">
-<div class="left">
-<p><strong>Perguntas de cuidado</strong></p>
-<ul>
-<li>como varia a produção da APS?</li>
-<li>quais procedimentos aparecem mais?</li>
-<li>quais problemas e condições são acompanhados?</li>
-<li>onde há baixa intensidade de registro?</li>
-</ul>
-</div>
-<div class="right">
-<p><strong>Perguntas de gestão</strong></p>
-<ul>
-<li>há municípios sem envio?</li>
-<li>ocorreram quebras na série?</li>
-<li>qual é a sazonalidade da produção?</li>
-<li>como combinar APS com território e população?</li>
-</ul>
-</div>
-</div>
-<div class="callout callout-none no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
-<p>O valor analítico aumenta quando as consultas pontuais do SISAB são convertidas em arquivos mensais, municipais e versionados.</p>
-</div>
-</div>
-</div>
-<aside class="notes">
-<p>Retomar, se necessário, exemplos do seminário específico sobre SISAB. O público deve entender que a transformação em repositório permite perguntas repetíveis e comparáveis.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="sivep-malária-por-que-abrir-melhor" class="slide level2">
-<h2>SIVEP-Malária: por que abrir melhor?</h2>
-<div class="threecols">
-<div class="colbox">
-<p><strong>Eliminação</strong><br>
-casos importados, transmissão residual e resposta oportuna importam muito.</p>
-</div>
-<div class="colbox">
-<p><strong>Território</strong><br>
-a malária se concentra em áreas específicas, com forte relação com mobilidade, garimpo, fronteiras e populações remotas.</p>
-</div>
-<div class="colbox">
-<p><strong>Integração</strong><br>
-análises úteis combinam caso, local provável de infecção, tratamento, tempo e contexto ambiental.</p>
-</div>
-</div>
-<div class="callout callout-none no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
-<p>O SIVEP Malária é mais adequado que o SINAN Malária para a vigilância da doença em áreas endêmicas, pois foi desenvolvido especificamente para registrar diagnóstico, espécie parasitária, local provável de infecção, tratamento e acompanhamento dos casos. Esses dados permitem análises mais detalhadas da transmissão e apoiam de forma mais direta as ações de controle da malária.</p>
-</div>
-</div>
-</div>
-<aside class="notes">
-<p>Dizer que a malária é um ótimo exemplo de dado em que o detalhe territorial e temporal muda a capacidade de vigilância. A publicação responsável precisa equilibrar utilidade e proteção contra reidentificação.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="sivep-dda-vigilância-sensível-ao-tempo" class="slide level2">
-<h2>SIVEP-DDA: vigilância sensível ao tempo</h2>
-<div class="quote">
-<p>Em doenças diarreicas agudas, o valor do dado está menos no evento isolado e mais no sinal: aumento, concentração, persistência e mudança de padrão.</p>
-</div>
-<p>O SIVEP-DDA ajuda a observar:</p>
-<ul>
-<li>comportamento semanal ou mensal de casos;</li>
-<li>alterações compatíveis com surtos;</li>
-<li>diferenças por município e faixa etária;</li>
-<li>possíveis relações com água, saneamento, clima e desastres.</li>
-</ul>
-<aside class="notes">
-<p>Explicar que DDA é útil como vigilância sindrômica: nem sempre o agente etiológico está conhecido, mas o aumento de casos já pode demandar investigação e ação.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
 <section id="o-problema-atual-de-acesso" class="slide level2">
 <h2>O problema atual de acesso</h2>
-<div class="twocols">
-<div class="left">
-<p><strong>Quando existe transparência ativa</strong></p>
-<ul>
-<li>páginas de consulta;</li>
-<li>relatórios agregados;</li>
-<li>downloads por recorte;</li>
-<li>interfaces orientadas à visualização.</li>
-</ul>
-</div>
-<div class="right">
-<p><strong>Quando é preciso transparência passiva</strong></p>
-<ul>
-<li>pedidos via LAI;</li>
-<li>respostas em formatos variados;</li>
-<li>prazos e recursos administrativos;</li>
-<li>necessidade de auditar cada arquivo recebido.</li>
-</ul>
-</div>
-</div>
-<div class="callout callout-none no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
-<p>O gargalo raramente é apenas “ter o dado”. É obter o dado em forma analisável, consistente, documentada e reprodutível.</p>
-</div>
-</div>
-</div>
-<aside class="notes">
-<p>Dar exemplos práticos: páginas que permitem consultar um município por vez, arquivos sem dicionário, respostas em planilhas diferentes, nomes de colunas que mudam, dados sobrepostos entre pedidos e ausência de identificador de versão.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="barreiras-recorrentes" class="slide level2">
-<h2>Barreiras recorrentes</h2>
 <div class="threecols">
 <div class="colbox">
-<p><strong>Fragmentação</strong><br>
-cada sistema tem sua interface, regra de extração, granularidade e vocabulário.</p>
+<p><strong>SISAB</strong><br>
+Disponibilização oficial apenas por meio de relatórios agregados. Séries longas exigem muitas combinações de seleção.</p>
+<p>SIAPS não apresenta, até o momento, dados públicos disponíveis.</p>
 </div>
 <div class="colbox">
-<p><strong>Formato</strong><br>
-planilhas, relatórios HTML, arquivos compactados e layouts heterogêneos exigem tratamento.</p>
+<p><strong>SIVEP-Malária</strong><br>
+Não disponibiliza publicamente dados desagrados, relatórios públicos ou painel de dados. Os dados do SINAN não abrangem igualmente todo o território nacional.</p>
 </div>
 <div class="colbox">
-<p><strong>Proveniência</strong><br>
-sem rastrear pedido, arquivo, data e seleção, a base final perde auditabilidade.</p>
+<p><strong>SIVEP-DDA</strong><br>
+Disponibilização oficial apenas por meio de painel de visualização de dados agregados.</p>
 </div>
 </div>
 <div class="callout callout-none no-icon callout-style-simple">
 <div class="callout-body">
 <div class="callout-content">
-<p>Um repositório de dados precisa guardar não só a tabela final, mas também a história de como ela foi obtida.</p>
+<p>Em todos os casos, o desafio não é apenas obter o arquivo de dados: é reconstruir série histórica, dicionário, proveniência, versão, limitações e regra de uso.</p>
 </div>
 </div>
 </div>
 <aside class="notes">
-<p>Este slide prepara a virada para arquitetura. A frase central: dados reutilizáveis dependem de método, não apenas de boa vontade.</p>
+<p>Detalhar que os problemas são diferentes. No SISAB, a barreira principal é escala de extração e ausência de CID/CIAP em transparência ativa. No SIVEP-Malária, a barreira é combinar utilidade epidemiológica com proteção e interpretação correta de variáveis codificadas. No SIVEP-DDA, a barreira é transformar um sistema de monitoramento sindrômico em séries analisáveis, sem apagar os recortes da vigilância.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -432,19 +281,18 @@ sem rastrear pedido, arquivo, data e seleção, a base final perde auditabilidad
           display:block!important;
       }</style></aside>
 </section>
-<section id="box-dados-via-lai-podem-ir-para-repositórios" class="slide level2">
-<h2>Box: dados via LAI podem ir para repositórios?</h2>
+<section id="dados-via-lai-podem-ser-publicados" class="slide level2">
+<h2>Dados via LAI podem ser publicados?</h2>
 <div class="callout callout-none no-icon callout-style-simple">
 <div class="callout-body">
 <div class="callout-content">
-<p><strong>Sim, quando a disponibilização respeita o conteúdo recebido e as restrições aplicáveis.</strong></p>
-<p>Dados obtidos pela LAI podem ser republicados em repositórios de dados quando são informações públicas, não estão sob sigilo, não expõem dados pessoais identificáveis ou sensíveis sem base adequada, e passam por revisão de agregação, anonimização ou supressão quando houver risco de reidentificação.</p>
-<p>Boas práticas: documentar o pedido, preservar a resposta original quando possível, registrar transformações, publicar dicionário de dados, informar limitações e manter contato para correções.</p>
+<p>Dados obtidos por meio da LAI podem, em regra, ser disponibilizados em repositórios públicos, desde que não estejam sujeitos a sigilo, restrição legal ou condição expressa definida pelo órgão responsável. A Lei nº 12.527/2011 estabelece a publicidade como regra e o sigilo como exceção. A Política de Dados Abertos também orienta a abertura e a reutilização de bases públicas, favorecendo transparência, pesquisa, inovação e controle social.</p>
+<p>O repositório deve identificar claramente o órgão produtor, o protocolo do pedido LAI e as transformações realizadas nos arquivos. Também é importante deixar explícito que o depositante não reivindica titularidade sobre os dados originais, mas disponibiliza uma versão documentada para fins de transparência, pesquisa e reprodutibilidade.</p>
 </div>
 </div>
 </div>
 <aside class="notes">
-<p>Este é o box solicitado. Falar com cuidado: a LAI dá acesso, mas a republicação exige responsabilidade. Em saúde, mesmo dados agregados podem ter risco quando células são pequenas, territórios são raros ou combinações permitem inferência.</p>
+<p>Explicar que receber dados por LAI não significa que qualquer republicação é automaticamente adequada. A LAI garante acesso a informações públicas; a LGPD e as regras de sigilo continuam relevantes. Em saúde, mesmo tabelas agregadas podem exigir supressão de células pequenas, redução de granularidade territorial ou temporal e documentação clara dos riscos residuais.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -463,66 +311,22 @@ sem rastrear pedido, arquivo, data e seleção, a base final perde auditabilidad
 <div class="left">
 <p><strong>Antes do pedido</strong></p>
 <ul>
-<li>definir granularidade mínima necessária;</li>
-<li>pedir dados agregados quando bastam;</li>
-<li>evitar identificadores pessoais;</li>
-<li>prever dicionário e metadados.</li>
+<li>Seja específico e preciso no pedido;</li>
+<li>Definir granularidade temporal e espacial mínima necessária;</li>
+<li>Pedir dicionário de dados, metadados e critérios utilizados na extração dos dados.</li>
 </ul>
 </div>
 <div class="right">
 <p><strong>Depois da resposta</strong></p>
 <ul>
-<li>checar restrições indicadas pelo órgão;</li>
-<li>avaliar risco de reidentificação;</li>
-<li>padronizar sem apagar origem;</li>
-<li>publicar com licença, DOI e documentação.</li>
+<li>Checar restrições indicadas pelo órgão;</li>
+<li>Padronizar sem apagar origem;</li>
+<li>Publicar com licença, DOI e documentação.</li>
 </ul>
 </div>
 </div>
 <aside class="notes">
 <p>Mostrar que a boa LAI começa com um pedido bem desenhado. Pedidos muito amplos podem gerar negativas, respostas difíceis ou riscos desnecessários.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="da-resposta-ao-repositório" class="slide level2">
-<h2>Da resposta ao repositório</h2>
-<div class="cell" data-reveal="true" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart LR
-  A[Pedido LAI ou consulta publica] --&gt; B[Recebimento bruto]
-  B --&gt; C[Inventario e proveniencia]
-  C --&gt; D[Validacao e padronizacao]
-  D --&gt; E[Resolucao de sobreposicoes]
-  E --&gt; F[Exportacao CSV e Parquet]
-  F --&gt; G[Deposito com DOI]
-  G --&gt; H[Documentacao e exemplos]
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-<div class="callout callout-none no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
-<p>Cada etapa precisa ser repetível. Sem isso, o repositório vira apenas uma cópia bonita de uma planilha difícil.</p>
-</div>
-</div>
-</div>
-<aside class="notes">
-<p>Percorrer rapidamente o fluxo. Ressaltar que o processamento não pode ser uma caixa-preta; ele precisa deixar rastros e permitir reprodução ou contestação.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -593,7 +397,7 @@ sem rastrear pedido, arquivo, data e seleção, a base final perde auditabilidad
 <h2>SISAB: desenho do repositório</h2>
 <div class="twocols">
 <div class="left">
-<p><strong>Coleta pública</strong></p>
+<p><strong>Coleta pública (<em>web scraping</em>)</strong></p>
 <ul>
 <li>iteração por competência;</li>
 <li>municípios, faixas etárias e sexo;</li>
@@ -632,74 +436,24 @@ sem rastrear pedido, arquivo, data e seleção, a base final perde auditabilidad
           display:block!important;
       }</style></aside>
 </section>
-<section id="sivep-malária-desenho-do-repositório" class="slide level2">
-<h2>SIVEP-Malária: desenho do repositório</h2>
+<section id="sivep-malária-e-sivep-dda-desenho-dos-repositórios" class="slide level2">
+<h2>SIVEP-Malária e SIVEP-DDA: desenho dos repositórios</h2>
 <div class="threecols">
 <div class="colbox">
+<p><strong>Dados</strong><br>
+Ambos obtidos pela LAI</p>
+</div>
+<div class="colbox">
 <p><strong>Dicionários</strong><br>
-variáveis, categorias, códigos territoriais e mudanças de layout.</p>
+Variáveis, categorias, códigos territoriais e layout de dados.</p>
 </div>
 <div class="colbox">
 <p><strong>Harmonização</strong><br>
-nomes de campos, datas, localidades, classificação do caso e tratamento.</p>
-</div>
-<div class="colbox">
-<p><strong>Proteção</strong><br>
-controle de granularidade, células raras e variáveis potencialmente identificadoras.</p>
-</div>
-</div>
-<div class="callout callout-none no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
-<p>Em malária, granularidade é poder analítico, mas também responsabilidade: local, tempo e população podem tornar casos reconhecíveis.</p>
-</div>
+Nomes de campos, datas, localidades, classificação do caso e tratamento.</p>
 </div>
 </div>
 <aside class="notes">
 <p>Falar que o repositório precisa ser desenhado para pesquisa e vigilância sem expor indivíduos. Se a publicação for agregada, explicar o critério de agregação; se for microdado restrito, documentar o acesso e as regras.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="sivep-dda-desenho-do-repositório" class="slide level2">
-<h2>SIVEP-DDA: desenho do repositório</h2>
-<div class="twocols">
-<div class="left">
-<p><strong>Estrutura temporal</strong></p>
-<ul>
-<li>semana epidemiológica ou competência;</li>
-<li>município, regional, UF;</li>
-<li>faixa etária;</li>
-<li>indicadores de casos e surtos.</li>
-</ul>
-</div>
-<div class="right">
-<p><strong>Uso analítico</strong></p>
-<ul>
-<li>detecção de anomalias;</li>
-<li>comparação histórica;</li>
-<li>relação com saneamento e clima;</li>
-<li>priorização de investigação local.</li>
-</ul>
-</div>
-</div>
-<div class="callout callout-none no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
-<p>O repositório deve facilitar análise rápida de sinais, mas deixar claro que o dado é sindrômico e depende da rotina de notificação.</p>
-</div>
-</div>
-</div>
-<aside class="notes">
-<p>Não exagerar conclusões. DDA é sensível a sub-registro, diferenças de vigilância e mudanças operacionais. O valor está em acompanhar padrão e mudança de padrão.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -781,123 +535,20 @@ DOI, versão, licença, citação recomendada e changelog.</p>
           display:block!important;
       }</style></aside>
 </section>
-<section id="qualidade-o-que-testar" class="slide level2">
-<h2>Qualidade: o que testar?</h2>
-<div class="twocols">
-<div class="left">
-<p><strong>Integridade</strong></p>
-<ul>
-<li>chaves territoriais válidas;</li>
-<li>datas e competências coerentes;</li>
-<li>valores não negativos;</li>
-<li>duplicidades esperadas e inesperadas.</li>
-</ul>
-</div>
-<div class="right">
-<p><strong>Consistência</strong></p>
-<ul>
-<li>totais comparáveis com fontes oficiais;</li>
-<li>continuidade temporal;</li>
-<li>categorias conhecidas;</li>
-<li>mudanças de layout explicitadas.</li>
-</ul>
-</div>
-</div>
-<div class="callout callout-none no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
-<p>Testes automatizados transformam curadoria em rotina, não em heroísmo artesanal.</p>
-</div>
-</div>
-</div>
-<aside class="notes">
-<p>Este slide é importante para o público técnico. Mostrar que cada atualização deve rodar verificações antes da publicação.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="o-que-estes-dados-não-dizem-sozinhos" class="slide level2">
-<h2>O que estes dados não dizem sozinhos</h2>
-<div class="quote">
-<p>Registro administrativo não é sinônimo automático de acesso, incidência, qualidade ou risco real.</p>
-</div>
-<p>Pontos de cautela:</p>
-<ul>
-<li>sub-registro e diferenças locais de preenchimento;</li>
-<li>mudanças de sistema, fluxo e definição;</li>
-<li>atrasos de digitação e atualização;</li>
-<li>interpretações inadequadas de contagem como evento populacional direto.</li>
-</ul>
-<aside class="notes">
-<p>Este é o slide de proteção interpretativa. Ele evita que a apresentação soe como defesa ingênua dos dados. O dado é útil justamente quando suas limitações são conhecidas.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="quem-se-beneficia" class="slide level2">
-<h2>Quem se beneficia?</h2>
-<div class="cards">
-<div class="card">
-<p><strong>Gestão municipal</strong><br>
-acompanha produção, sinais de vigilância e vazios de informação.</p>
-</div>
-<div class="card">
-<p><strong>Vigilância em saúde</strong><br>
-observa padrões territoriais, temporais e populações prioritárias.</p>
-</div>
-<div class="card">
-<p><strong>Pesquisa</strong><br>
-reproduz análises, combina fontes e cita versões de dados.</p>
-</div>
-<div class="card">
-<p><strong>Controle social</strong><br>
-acessa informação pública em formato mais compreensível e reutilizável.</p>
-</div>
-</div>
-<aside class="notes">
-<p>Trazer a dimensão pública. Repositórios reduzem assimetria: não apenas equipes com tempo e conhecimento técnico conseguem usar os dados.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
 <section id="agenda-de-sustentabilidade" class="slide level2">
 <h2>Agenda de sustentabilidade</h2>
 <div class="threecols">
 <div class="colbox">
 <p><strong>Atualizar</strong><br>
-rotinas periódicas, logs, checagens e publicação de novas versões.</p>
+Rotinas periódicas de web scrapping e pedidos LAI, logs, checagens e publicação de novas versões.</p>
 </div>
 <div class="colbox">
 <p><strong>Documentar</strong><br>
-decisões de limpeza, mudanças de fonte, limitações e data papers.</p>
+Decisões de limpeza, mudanças de fonte, limitações e data papers.</p>
 </div>
 <div class="colbox">
 <p><strong>Institucionalizar</strong><br>
-aproximar repositórios derivados da transparência ativa oficial.</p>
+Aproximar repositórios derivados da transparência ativa oficial.</p>
 </div>
 </div>
 <div class="callout callout-none no-icon callout-style-simple">
