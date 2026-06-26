@@ -3,8 +3,8 @@
     "objectID": "talks/zenith_seminar_2024.html#introduction",
     "href": "talks/zenith_seminar_2024.html#introduction",
     "title": "Disease and climate data fusion for modeling",
-    "section": "Introduction",
-    "text": "Introduction\n\nPostdoctoral researcher at Inria, Zenith team\nMaster’s at Public Health, Doctorate on Health Information\nData Science applied to Public Health"
+    "section": "",
+    "text": "Postdoctoral researcher at Inria, Zenith team\nMaster’s at Public Health, Doctorate on Health Information\nData Science applied to Public Health"
   },
   {
     "objectID": "talks/zenith_seminar_2024.html#climate-sensitive-diseases",
@@ -67,7 +67,7 @@
     "href": "talks/zenith_seminar_2024.html#era5-land-daily-datasets",
     "title": "Disease and climate data fusion for modeling",
     "section": "ERA5-Land Daily datasets",
-    "text": "ERA5-Land Daily datasets\n\n\n\nOpen data, available at Zenodo\n7,105 files, 658.7 GB\nReproducible R scripts\nPlans to continuously update this dataset and add more indicators\n\n\n\n\n\n\n\nhttps://rfsaldanha.github.io/data-projects/era5land-daily-latin-america.html"
+    "text": "ERA5-Land Daily datasets\n\n\n\nOpen data, available at Zenodo\n7,105 files, 658.7 GB\nReproducible R scripts\nPlans to continuously update this dataset and add more indicators\n\n\n\n\n\n\n\n\nhttps://rfsaldanha.github.io/data-projects/era5land-daily-latin-america.html"
   },
   {
     "objectID": "talks/zenith_seminar_2024.html#zonal-statistics",
@@ -95,7 +95,7 @@
     "href": "talks/zenith_seminar_2024.html#precipitation",
     "title": "Disease and climate data fusion for modeling",
     "section": "Precipitation",
-    "text": "Precipitation\n\n\n\n\n\n\n\n\n\n\n\n\nRio de Janeiro municipalities. January 1, 2010."
+    "text": "Precipitation\n\n\n\n\n\n\n\n\n\n\n\n\n\nRio de Janeiro municipalities. January 1, 2010."
   },
   {
     "objectID": "talks/zenith_seminar_2024.html#angra-dos-reis",
@@ -185,8 +185,8 @@
     "objectID": "talks/projeto_rio_doce.html#apresentação",
     "href": "talks/projeto_rio_doce.html#apresentação",
     "title": "Eixo Sala de Situação de Saúde",
-    "section": "Apresentação",
-    "text": "Apresentação\nApresentação realizada por Raphael Saldanha, em nome de Diego Ricardo Xavier.\n\nPergunta orientadora\nQuais são os desafios e potencialidades das análises de situação de saúde em pesquisas sobre desastres em barragens de mineração?\n\nA Sala de Situação não substitui os estudos epidemiológicos, toxicológicos ou de avaliação de risco. Ela conecta essas evidências ao território, ao SUS e à tomada de decisão.\n\nAbrir explicitando que a fala será feita em nome de Diego Ricardo Xavier. Sugestão: “Vou apresentar uma leitura sintética do eixo Sala de Situação de Saúde, enfatizando onde a experiência do Observatório de Clima e Saúde pode contribuir para a Rede Rio Doce.”"
+    "section": "",
+    "text": "Apresentação realizada por Raphael Saldanha, em nome de Diego Ricardo Xavier.\n\nPergunta orientadora\nQuais são os desafios e potencialidades das análises de situação de saúde em pesquisas sobre desastres em barragens de mineração?\n\nA Sala de Situação não substitui os estudos epidemiológicos, toxicológicos ou de avaliação de risco. Ela conecta essas evidências ao território, ao SUS e à tomada de decisão.\n\nAbrir explicitando que a fala será feita em nome de Diego Ricardo Xavier. Sugestão: “Vou apresentar uma leitura sintética do eixo Sala de Situação de Saúde, enfatizando onde a experiência do Observatório de Clima e Saúde pode contribuir para a Rede Rio Doce.”"
   },
   {
     "objectID": "talks/projeto_rio_doce.html#eixos-de-trabalho",
@@ -297,8 +297,8 @@
     "objectID": "talks/mti2026.html#uma-pergunta-para-começar",
     "href": "talks/mti2026.html#uma-pergunta-para-começar",
     "title": "Metodologias e impactos das mudanças climáticas sobre a saúde de corpos e territórios na Amazônia",
-    "section": "Uma pergunta para começar",
-    "text": "Uma pergunta para começar\n\nQuais sinais da mudança climática aparecem no território antes de aparecerem nos dados oficiais?\n\nPode ser a fumaça chegando, o rio baixando, a água mudando, o calor ficando insuportável, a escola suspendendo atividades ou a UBS recebendo mais pessoas com sintomas respiratórios.\n\n\n\nA proposta é aproximar os dados produzidos pelo Observatório de Clima e Saúde da Fiocruz com os saberes e práticas de monitoramento territorial independente.\n\n\n\n\nAbrir perguntando ao público: “Que sinais vocês monitoram no território?”. A apresentação deve reconhecer que o território já produz evidências, mesmo quando elas ainda não estão em bases oficiais."
+    "section": "",
+    "text": "Quais sinais da mudança climática aparecem no território antes de aparecerem nos dados oficiais?\n\nPode ser a fumaça chegando, o rio baixando, a água mudando, o calor ficando insuportável, a escola suspendendo atividades ou a UBS recebendo mais pessoas com sintomas respiratórios.\n\n\n\n\n\n\nA proposta é aproximar os dados produzidos pelo Observatório de Clima e Saúde da Fiocruz com os saberes e práticas de monitoramento territorial independente.\n\n\n\n\nAbrir perguntando ao público: “Que sinais vocês monitoram no território?”. A apresentação deve reconhecer que o território já produz evidências, mesmo quando elas ainda não estão em bases oficiais."
   },
   {
     "objectID": "talks/mti2026.html#impactos",
@@ -424,7 +424,7 @@
     "href": "talks/mti2026.html#o-que-pode-ser-feito-junto-com-a-rede-mti",
     "title": "Metodologias e impactos das mudanças climáticas sobre a saúde de corpos e territórios na Amazônia",
     "section": "O que pode ser feito junto com a Rede MTI?",
-    "text": "O que pode ser feito junto com a Rede MTI?\n\n\nA partir dos dados\n\noficinas de leitura de mapas;\nprotocolos simples de monitoramento;\nboletins territoriais;\npainéis por município ou região;\ncomparação entre previsão, exposição e saúde.\n\n\n\nA partir dos territórios\n\nvalidação comunitária dos indicadores;\ninclusão de relatos e sinais locais;\ndefinição de prioridades;\ncomunicação acessível para ação rápida;\nconstrução de evidências para incidência.\n\n\n\n\n\n\nO próximo passo é aproximar os dados produzidos pelo Observatório dos registros comunitários da Rede MTI."
+    "text": "O que pode ser feito junto com a Rede MTI?\n\n\nA partir dos dados\n\noficinas de leitura de mapas;\nprotocolos simples de monitoramento;\nboletins territoriais;\npainéis por município ou região;\ncomparação entre previsão, exposição e saúde.\n\n\n\nA partir dos territórios\n\nvalidação comunitária dos indicadores;\ninclusão de relatos e sinais locais;\ndefinição de prioridades;\ncomunicação acessível para ação rápida;\nconstrução de evidências para incidência.\n\n\n\n\n\n\n\n\n\nO próximo passo é aproximar os dados produzidos pelo Observatório dos registros comunitários da Rede MTI."
   },
   {
     "objectID": "talks/mti2026.html#conclusão",
@@ -444,8 +444,8 @@
     "objectID": "talks/isntd_conference_2023.html#introduction",
     "href": "talks/isntd_conference_2023.html#introduction",
     "title": "Disease and climate data fusion for modelling",
-    "section": "Introduction",
-    "text": "Introduction\n\nPostdoc researcher at Inria, a French research institute for digital science and technology\nBSC, Global Health Resilience collaborator\nFiocruz, Climate and Health Observatory"
+    "section": "",
+    "text": "Postdoc researcher at Inria, a French research institute for digital science and technology\nBSC, Global Health Resilience collaborator\nFiocruz, Climate and Health Observatory"
   },
   {
     "objectID": "talks/isntd_conference_2023.html#climate-sensitive-diseases",
@@ -535,8 +535,8 @@
     "objectID": "talks/dengue_class.html#the-case-itinerary",
     "href": "talks/dengue_class.html#the-case-itinerary",
     "title": "Dengue cases screening",
-    "section": "The case itinerary",
-    "text": "The case itinerary\n\nAfter a clinical assessement, a patient can be pointed as a suspected dengue/chikungunya case, based on its symptoms, clinical conditions and history (anamnesis)\n\nFever, arthralgia, myalgia, headache, and retroorbital pain\n\nThe suspected case is immediately notified to the health authorities (SINAN dataset)\nThe diagnosis must be verified to adequate the health treatment"
+    "section": "",
+    "text": "After a clinical assessement, a patient can be pointed as a suspected dengue/chikungunya case, based on its symptoms, clinical conditions and history (anamnesis)\n\nFever, arthralgia, myalgia, headache, and retroorbital pain\n\nThe suspected case is immediately notified to the health authorities (SINAN dataset)\nThe diagnosis must be verified to adequate the health treatment"
   },
   {
     "objectID": "talks/dengue_class.html#possible-case-classifications",
@@ -647,8 +647,8 @@
     "objectID": "talks/climate_br.html#overview",
     "href": "talks/climate_br.html#overview",
     "title": "Climate data for Brazilian municipalities",
-    "section": "Overview",
-    "text": "Overview\n\nClimate raw data sources: ground level and reanalysis\nData on Braziliam municipalities spatial unit\nClimatological normals and indicators"
+    "section": "",
+    "text": "Climate raw data sources: ground level and reanalysis\nData on Braziliam municipalities spatial unit\nClimatological normals and indicators"
   },
   {
     "objectID": "talks/climate_br.html#ground-level-climate-data",
@@ -669,7 +669,7 @@
     "href": "talks/climate_br.html#climate-data-for-brazilian-municipalities",
     "title": "Climate data for Brazilian municipalities",
     "section": "Climate data for Brazilian municipalities",
-    "text": "Climate data for Brazilian municipalities\n\nZonal statistics computation\nAdoption of exactextractr package for cell’s coverage weighted computations\nCreation of package zonalclim with helper functions to compute scalable zonal statistics with chunks strategy\nDAG system using the targets package to compute climate zonal statistics for Brazilian municipalities\nPublication on Environmental Data Science journal\n\nMore details here"
+    "text": "Climate data for Brazilian municipalities\n\nZonal statistics computation\nAdoption of exactextractr package for cell’s coverage weighted computations\nCreation of package {zonalclim} with helper functions to compute scalable zonal statistics with chunks strategy\nDAG system using the targets package to compute climate zonal statistics for Brazilian municipalities\nPublication on Environmental Data Science journal\n\nMore details here"
   },
   {
     "objectID": "talks/climate_br.html#example",
@@ -703,8 +703,8 @@
     "objectID": "talks/bda_subsets_2024.html#introduction",
     "href": "talks/bda_subsets_2024.html#introduction",
     "title": "Subset Models for Multivariate Time Series Forecast",
-    "section": "Introduction",
-    "text": "Introduction\n\nPreviously presented at MulTiSA workshop (ICDE 2024)\nAbundant multivariate time series, good opportunity for forecasting machine learning methods\nData may present intrinsic diversity of samples, affecting model’s performance on different parts of the input\nGlobal models: use all available time series\nLocal models: use only time series pertaining to each sample\nData subsets models: our proposal"
+    "section": "",
+    "text": "Previously presented at MulTiSA workshop (ICDE 2024)\nAbundant multivariate time series, good opportunity for forecasting machine learning methods\nData may present intrinsic diversity of samples, affecting model’s performance on different parts of the input\nGlobal models: use all available time series\nLocal models: use only time series pertaining to each sample\nData subsets models: our proposal"
   },
   {
     "objectID": "talks/bda_subsets_2024.html#case-example",
@@ -1032,8 +1032,8 @@
     "objectID": "pres/ird2024.html#about-me",
     "href": "pres/ird2024.html#about-me",
     "title": "Introduction and Research Proposal",
-    "section": "About me",
-    "text": "About me\n\nBrazilian from Rio de Janeiro\nHusband, father of two dogs and a cat\nLoves cycling and take pictures\nResearcher on Health Geography and Climate-Sensitive Diseases\nR developer"
+    "section": "",
+    "text": "Brazilian from Rio de Janeiro\nHusband, father of two dogs and a cat\nLoves cycling and take pictures\nResearcher on Health Geography and Climate-Sensitive Diseases\nR developer"
   },
   {
     "objectID": "pres/ird2024.html#academic-formation",
@@ -2495,8 +2495,8 @@
     "objectID": "pres/bsc2024.html#main-fields-of-work-and-projects",
     "href": "pres/bsc2024.html#main-fields-of-work-and-projects",
     "title": "Research Experience & Plans",
-    "section": "Main fields of work and projects",
-    "text": "Main fields of work and projects\n\nData handling tools: author of ten R packages to handle health and climate datasets and indicators.\n\n{microdatasus}, {brpop}, {tidyrates}, {zendown}, {zenstats}, {nseq}, {rspell}, {brclimr}, {zonalclim}, {opendenguedata}\n\nVisualization: malaria and COVID-19 interactive visualization dashboards (IRD-FR and Fiocruz-BR)\nAnalysis and modeling of climate-sensitive diseases (Fiocruz-BR, LNCC-BR, BSC, Inria-FR, IRD-FR)"
+    "section": "",
+    "text": "Data handling tools: author of ten R packages to handle health and climate datasets and indicators.\n\n{microdatasus}, {brpop}, {tidyrates}, {zendown}, {zenstats}, {nseq}, {rspell}, {brclimr}, {zonalclim}, {opendenguedata}\n\nVisualization: malaria and COVID-19 interactive visualization dashboards (IRD-FR and Fiocruz-BR)\nAnalysis and modeling of climate-sensitive diseases (Fiocruz-BR, LNCC-BR, BSC, Inria-FR, IRD-FR)"
   },
   {
     "objectID": "pres/bsc2024.html#health-and-climate-indicators",
@@ -2789,8 +2789,8 @@
     "objectID": "talks/bilis_2023.html#bilis",
     "href": "talks/bilis_2023.html#bilis",
     "title": "BILIS",
-    "section": "BILIS",
-    "text": "BILIS\n\nBanco de Indicadores do Laboratório de Informação em Saúde, ICICT\nA proposal to create an unified health indicators database"
+    "section": "",
+    "text": "Banco de Indicadores do Laboratório de Informação em Saúde, ICICT\nA proposal to create an unified health indicators database"
   },
   {
     "objectID": "talks/bilis_2023.html#motivation",
@@ -2852,8 +2852,8 @@
     "objectID": "talks/climate_health_workshop_2023.html#introduction",
     "href": "talks/climate_health_workshop_2023.html#introduction",
     "title": "Disease and climate data fusion for modelling",
-    "section": "Introduction",
-    "text": "Introduction\n\nPostdoctoral researcher at Inria, a French research institute for digital science and technology\nFiocruz, Climate and Health Observatory collaborator\nBSC, Global Health Resilience collaborator"
+    "section": "",
+    "text": "Postdoctoral researcher at Inria, a French research institute for digital science and technology\nFiocruz, Climate and Health Observatory collaborator\nBSC, Global Health Resilience collaborator"
   },
   {
     "objectID": "talks/climate_health_workshop_2023.html#climate-sensitive-diseases",
@@ -2930,7 +2930,7 @@
     "href": "talks/climate_health_workshop_2023.html#era5-land-daily-datasets",
     "title": "Disease and climate data fusion for modelling",
     "section": "ERA5-Land Daily datasets",
-    "text": "ERA5-Land Daily datasets\n\n\n\nOpen data, available at Zenodo\n7,105 files, 658.7 GB\nReproducible R scripts\nPlans to continuously update this dataset and add more indicators\n\n\n\n\n\n\n\nhttps://rfsaldanha.github.io/data-projects/era5land-daily-latin-america.html"
+    "text": "ERA5-Land Daily datasets\n\n\n\nOpen data, available at Zenodo\n7,105 files, 658.7 GB\nReproducible R scripts\nPlans to continuously update this dataset and add more indicators\n\n\n\n\n\n\n\n\nhttps://rfsaldanha.github.io/data-projects/era5land-daily-latin-america.html"
   },
   {
     "objectID": "talks/climate_health_workshop_2023.html#zonal-statistics",
@@ -2972,7 +2972,7 @@
     "href": "talks/climate_health_workshop_2023.html#precipitation",
     "title": "Disease and climate data fusion for modelling",
     "section": "Precipitation",
-    "text": "Precipitation\n\n\n\n\n\n\n\n\n\n\n\n\nRio de Janeiro municipalities. January 1, 2010."
+    "text": "Precipitation\n\n\n\n\n\n\n\n\n\n\n\n\n\nRio de Janeiro municipalities. January 1, 2010."
   },
   {
     "objectID": "talks/climate_health_workshop_2023.html#resolution-and-spatial-variability",
@@ -2999,8 +2999,8 @@
     "objectID": "talks/hpdasc_workshop_2024.html#context-of-climate-sensitive-diseases",
     "href": "talks/hpdasc_workshop_2024.html#context-of-climate-sensitive-diseases",
     "title": "Advances in climate features engineering and subsets modeling",
-    "section": "Context of Climate-Sensitive diseases",
-    "text": "Context of Climate-Sensitive diseases\n\nDirect relationship: floods, droughts, heat waves…\nIndirect relationship\n\n\n\n\n\n\n%%{\n  init: {\n    'theme': 'base',\n    'themeVariables': {\n      'fontSize': '30px'\n    }\n  }\n}%%\nflowchart LR\n\nclimate(Climate) --&gt; vector(Disease vectors) --&gt; health(Human health)\nclimate --&gt; health\nclimate --&gt; social(Social & economic \\n determinants) --&gt; health"
+    "section": "",
+    "text": "Direct relationship: floods, droughts, heat waves…\nIndirect relationship\n\n\n\n\n\n\n%%{\n  init: {\n    'theme': 'base',\n    'themeVariables': {\n      'fontSize': '30px'\n    }\n  }\n}%%\nflowchart LR\n\nclimate(Climate) --&gt; vector(Disease vectors) --&gt; health(Human health)\nclimate --&gt; health\nclimate --&gt; social(Social & economic \\n determinants) --&gt; health"
   },
   {
     "objectID": "talks/hpdasc_workshop_2024.html#a-time-lagged-relationship",
@@ -3042,7 +3042,7 @@
     "href": "talks/hpdasc_workshop_2024.html#precipitation",
     "title": "Advances in climate features engineering and subsets modeling",
     "section": "Precipitation",
-    "text": "Precipitation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRio de Janeiro municipalities. January 1, 2010."
+    "text": "Precipitation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRio de Janeiro municipalities. January 1, 2010."
   },
   {
     "objectID": "talks/hpdasc_workshop_2024.html#angra-dos-reis",
@@ -3104,22 +3104,22 @@
     "objectID": "talks/koro_mocambique_internet.html#fontes-oficiais-do-governo",
     "href": "talks/koro_mocambique_internet.html#fontes-oficiais-do-governo",
     "title": "Busca de sinais digitais sobre Síndrome de Koro em Moçambique",
-    "section": "Fontes oficiais do governo",
-    "text": "Fontes oficiais do governo\n\nNão há sinal claro de uma base pública oficial específica sobre Koro.\n\n\n\nMISAU / SIS-MA\nSistema nacional de informação em saúde, baseado em DHIS2, com dados agregados, vigilância e módulos de programas.\n\n\nINS / vigilância\nInstituto Nacional de Saúde, SIGILA e unidades de inquéritos/vigilância para eventos laboratoriais e epidemiológicos.\n\n\nINE\nCensos, projeções, estatísticas provinciais e denominadores populacionais para interpretar desigualdades territoriais.\n\n\nINCM / INTIC\nRegulação, qualidade de telecomunicações, indicadores TIC, cobertura e governança digital."
+    "section": "",
+    "text": "Não há sinal claro de uma base pública oficial específica sobre Koro.\n\n\n\nMISAU / SIS-MA\nSistema nacional de informação em saúde, baseado em DHIS2, com dados agregados, vigilância e módulos de programas.\n\n\nINS / vigilância\nInstituto Nacional de Saúde, SIGILA e unidades de inquéritos/vigilância para eventos laboratoriais e epidemiológicos.\n\n\nINE\nCensos, projeções, estatísticas provinciais e denominadores populacionais para interpretar desigualdades territoriais.\n\n\nINCM / INTIC\nRegulação, qualidade de telecomunicações, indicadores TIC, cobertura e governança digital."
   },
   {
     "objectID": "talks/koro_mocambique_internet.html#acesso-à-internet-base-nacional",
     "href": "talks/koro_mocambique_internet.html#acesso-à-internet-base-nacional",
     "title": "Busca de sinais digitais sobre Síndrome de Koro em Moçambique",
     "section": "Acesso à Internet: base nacional",
-    "text": "Acesso à Internet: base nacional\n\nEm outubro de 2025, Moçambique tinha cerca de 7,12 milhões de usuários de Internet, com penetração de 19,8%; 80,2% da população seguia offline segundo o DataReportal.\nHavia 19,1 milhões de conexões móveis celulares, equivalentes a 53,1% da população; nem toda conexão móvel inclui dados.\nA população era majoritariamente rural: 60% rural e 40% urbana em 2025.\nA Internet Society estima penetração nacional próxima de 21% e registra, em dados comparáveis de 2017, forte desigualdade urbano-rural: 18% urbana versus 3% rural.\n\n\n\n\nImplicação para Koro: sinais digitais tendem a super-representar centros urbanos, homens, pessoas com maior renda/escolaridade, usuários de smartphone e áreas cobertas por operadores móveis."
+    "text": "Acesso à Internet: base nacional\n\nEm outubro de 2025, Moçambique tinha cerca de 7,12 milhões de usuários de Internet, com penetração de 19,8%; 80,2% da população seguia offline segundo o DataReportal.\nHavia 19,1 milhões de conexões móveis celulares, equivalentes a 53,1% da população; nem toda conexão móvel inclui dados.\nA população era majoritariamente rural: 60% rural e 40% urbana em 2025.\nA Internet Society estima penetração nacional próxima de 21% e registra, em dados comparáveis de 2017, forte desigualdade urbano-rural: 18% urbana versus 3% rural.\n\n\n\n\n\n\n\nImplicação para Koro: sinais digitais tendem a super-representar centros urbanos, homens, pessoas com maior renda/escolaridade, usuários de smartphone e áreas cobertas por operadores móveis."
   },
   {
     "objectID": "talks/koro_mocambique_internet.html#cobertura-regional-leitura-operacional",
     "href": "talks/koro_mocambique_internet.html#cobertura-regional-leitura-operacional",
     "title": "Busca de sinais digitais sobre Síndrome de Koro em Moçambique",
     "section": "Cobertura regional: leitura operacional",
-    "text": "Cobertura regional: leitura operacional\n\n\n\n\n\nNorte\nNiassa: muito baixo. Cabo Delgado: muito baixo e instável. Nampula: médio nos centros urbanos, baixo no interior.\nCentro\nZambézia e Manica: baixo fora dos centros. Tete e Sofala: médio em corredores urbanos, mineração e Beira; baixo no interior.\nSul\nGaza: baixo fora de Xai-Xai. Inhambane: médio em centros e áreas turísticas. Maputo província e Cidade de Maputo: maior sinal digital.\n\n\n\nEste mapa cobre as dez províncias e a Cidade de Maputo, mas a classificação é deliberadamente operacional. Não há uma base pública recente, granular e completa de usuários de Internet por província; o quadro combina dados nacionais, ruralidade, infraestrutura móvel, conflito e evidências abertas sobre cobertura."
+    "text": "Cobertura regional: leitura operacional\n\n\n\n\n\nNorte\nNiassa: muito baixo. Cabo Delgado: muito baixo e instável. Nampula: médio nos centros urbanos, baixo no interior.\nCentro\nZambézia e Manica: baixo fora dos centros. Tete e Sofala: médio em corredores urbanos, mineração e Beira; baixo no interior.\nSul\nGaza: baixo fora de Xai-Xai. Inhambane: médio em centros e áreas turísticas. Maputo província e Cidade de Maputo: maior sinal digital.\n\n\n\n\nEste mapa cobre as dez províncias e a Cidade de Maputo, mas a classificação é deliberadamente operacional. Não há uma base pública recente, granular e completa de usuários de Internet por província; o quadro combina dados nacionais, ruralidade, infraestrutura móvel, conflito e evidências abertas sobre cobertura."
   },
   {
     "objectID": "talks/koro_mocambique_internet.html#redes-sociais-e-acesso-a-dados",
@@ -3140,7 +3140,7 @@
     "href": "talks/koro_mocambique_internet.html#uma-possível-estratégia",
     "title": "Busca de sinais digitais sobre Síndrome de Koro em Moçambique",
     "section": "Uma possível estratégia",
-    "text": "Uma possível estratégia\n\n\n1. Vocabulário vivo\nComeçar com Koro e expandir termos por província, idioma, metáforas locais e expressões usadas pela imprensa e redes.\n\n\n2. Fontes em camadas\nGDELT + busca web + páginas públicas + TikTok/YouTube + imprensa local + fontes institucionais e humanitárias.\n\n\n3. Triangulação territorial\nSeparar Maputo/sul urbano, centros de Nampula/Zambézia e norte rural/conflito para não confundir silêncio digital com ausência de evento.\n\n\n4. Ética e segurança\nEvitar identificação de pessoas e comunidades; tratar rumores como risco social, não como confirmação clínica.\n\n\n\n\n\nPrincipal conclusão: buscar Koro na Internet em Moçambique é menos uma pergunta sobre “onde há casos” e mais uma pergunta sobre onde há sinal digital observável."
+    "text": "Uma possível estratégia\n\n\n1. Vocabulário vivo\nComeçar com Koro e expandir termos por província, idioma, metáforas locais e expressões usadas pela imprensa e redes.\n\n\n2. Fontes em camadas\nGDELT + busca web + páginas públicas + TikTok/YouTube + imprensa local + fontes institucionais e humanitárias.\n\n\n3. Triangulação territorial\nSeparar Maputo/sul urbano, centros de Nampula/Zambézia e norte rural/conflito para não confundir silêncio digital com ausência de evento.\n\n\n4. Ética e segurança\nEvitar identificação de pessoas e comunidades; tratar rumores como risco social, não como confirmação clínica.\n\n\n\n\n\n\n\n\nPrincipal conclusão: buscar Koro na Internet em Moçambique é menos uma pergunta sobre “onde há casos” e mais uma pergunta sobre onde há sinal digital observável."
   },
   {
     "objectID": "talks/koro_mocambique_internet.html#fontes-principais",
@@ -3160,8 +3160,8 @@
     "objectID": "talks/multisa_subsets_2024.html#introduction",
     "href": "talks/multisa_subsets_2024.html#introduction",
     "title": "Subset Models for Multivariate Time Series Forecast",
-    "section": "Introduction",
-    "text": "Introduction\n\nAbundant multivariate time series, good opportunity for forecasting machine learning methods\nData may present intrinsic diversity of samples, affecting model’s performance on different parts of the input\nGlobal models: use all available time series\nLocal models: use only time series pertaining to each sample\nData subsets models: our proposal"
+    "section": "",
+    "text": "Abundant multivariate time series, good opportunity for forecasting machine learning methods\nData may present intrinsic diversity of samples, affecting model’s performance on different parts of the input\nGlobal models: use all available time series\nLocal models: use only time series pertaining to each sample\nData subsets models: our proposal"
   },
   {
     "objectID": "talks/multisa_subsets_2024.html#case-example",
@@ -3230,8 +3230,8 @@
     "objectID": "talks/rbras69_2025.html#raphael-saldanha",
     "href": "talks/rbras69_2025.html#raphael-saldanha",
     "title": "Democratização de acesso a dados de saúde, ambiente e clima com o R",
-    "section": "Raphael Saldanha",
-    "text": "Raphael Saldanha\n\n\n\nGeógrafo (UFJF)\nEspecialista em Métodos Estatísticos Computacionais (UFJF)\nMestre em Saúde Coletiva (UFJF)\nDoutor em Informação e Comunicação em Saúde (Fiocruz)\n\n\n\nAssistente de pesquisa na Fiocruz\nObservatório de Clima e Saúde\nPlataforma de Ciência de Dados Aplicada à Saúde (PCDaS)"
+    "section": "",
+    "text": "Geógrafo (UFJF)\nEspecialista em Métodos Estatísticos Computacionais (UFJF)\nMestre em Saúde Coletiva (UFJF)\nDoutor em Informação e Comunicação em Saúde (Fiocruz)\n\n\n\nAssistente de pesquisa na Fiocruz\nObservatório de Clima e Saúde\nPlataforma de Ciência de Dados Aplicada à Saúde (PCDaS)"
   },
   {
     "objectID": "talks/rbras69_2025.html#raphael-saldanha-e-o-r",
@@ -3427,7 +3427,7 @@
     "href": "talks/sisab_dados_aps.html#o-problema-de-acesso",
     "title": "Dados do SISAB",
     "section": "O problema de acesso",
-    "text": "O problema de acesso\n\n\nTransparência ativa\n\nrelatórios públicos no site do SISAB;\nconsultas por competência, município e categoria;\núteis para olhar casos pontuais;\npouco práticos para baixar séries longas.\n\n\n\nTransparência passiva\n\npedidos via LAI;\nnecessária para contagens por CID-10 e CIAP-2;\nrespostas podem ter formatos diferentes;\nexige tratamento de proveniência.\n\n\n\n\n\n\nO desafio é transformar relatórios e respostas administrativas em arquivos tabulares consistentes, versionáveis e reutilizáveis.\n\n\n\n\nExplicar a diferença: transparência ativa é o que já está publicado; transparência passiva é o que precisa ser pedido. O objetivo é aproximar as duas em uma base integrada."
+    "text": "O problema de acesso\n\n\nTransparência ativa\n\nrelatórios públicos no site do SISAB;\nconsultas por competência, município e categoria;\núteis para olhar casos pontuais;\npouco práticos para baixar séries longas.\n\n\n\nTransparência passiva\n\npedidos via LAI;\nnecessária para contagens por CID-10 e CIAP-2;\nrespostas podem ter formatos diferentes;\nexige tratamento de proveniência.\n\n\n\n\n\n\n\n\n\nO desafio é transformar relatórios e respostas administrativas em arquivos tabulares consistentes, versionáveis e reutilizáveis.\n\n\n\n\nExplicar a diferença: transparência ativa é o que já está publicado; transparência passiva é o que precisa ser pedido. O objetivo é aproximar as duas em uma base integrada."
   },
   {
     "objectID": "talks/sisab_dados_aps.html#o-que-foi-construído",
@@ -3441,7 +3441,7 @@
     "href": "talks/sisab_dados_aps.html#duas-fontes-duas-estratégias",
     "title": "Dados do SISAB",
     "section": "Duas fontes, duas estratégias",
-    "text": "Duas fontes, duas estratégias\n\n\n\n\n\n\n\n\nFonte\nO que entra\nEstratégia\n\n\n\n\nRelatórios públicos do SISAB\nprodução, procedimentos, problemas e condições avaliadas\nraspagem automatizada das consultas municipais mensais\n\n\nLei de Acesso à Informação\natendimentos por CID-10 e CIAP-2\npadronização de respostas, resolução de sobreposições e preservação de proveniência\n\n\n\n\n\n\nAs duas fontes não competem: elas se complementam. Uma mostra a produção pública agregada; a outra abre uma camada diagnóstica ainda ausente da transparência ativa.\n\n\n\n\nApontar que CID e CIAP são especialmente importantes para perguntas epidemiológicas e de organização do cuidado, mas precisam ser interpretados como registro assistencial, não como incidência direta."
+    "text": "Duas fontes, duas estratégias\n\n\n\n\n\n\n\n\nFonte\nO que entra\nEstratégia\n\n\n\n\nRelatórios públicos do SISAB\nprodução, procedimentos, problemas e condições avaliadas\nraspagem automatizada das consultas municipais mensais\n\n\nLei de Acesso à Informação\natendimentos por CID-10 e CIAP-2\npadronização de respostas, resolução de sobreposições e preservação de proveniência\n\n\n\n\n\n\n\n\n\nAs duas fontes não competem: elas se complementam. Uma mostra a produção pública agregada; a outra abre uma camada diagnóstica ainda ausente da transparência ativa.\n\n\n\n\nApontar que CID e CIAP são especialmente importantes para perguntas epidemiológicas e de organização do cuidado, mas precisam ser interpretados como registro assistencial, não como incidência direta."
   },
   {
     "objectID": "talks/sisab_dados_aps.html#repositórios-do-fluxo",
@@ -3469,21 +3469,21 @@
     "href": "talks/sisab_dados_aps.html#exemplo-1-produção-mensal",
     "title": "Dados do SISAB",
     "section": "Exemplo 1: produção mensal",
-    "text": "Exemplo 1: produção mensal\n\n\n\n\nUma série mensal permite detectar sazonalidade, rupturas e mudanças no padrão de registro da APS.\n\n\n\n\nUsar este slide para falar de séries nacionais mensais: sazonalidade, rupturas, mudanças de registro e possibilidades de comparação antes/depois. Reforçar que o gráfico é uma porta de entrada, não uma conclusão causal."
+    "text": "Exemplo 1: produção mensal\n\n\n\n\n\n\n\nUma série mensal permite detectar sazonalidade, rupturas e mudanças no padrão de registro da APS.\n\n\n\n\nUsar este slide para falar de séries nacionais mensais: sazonalidade, rupturas, mudanças de registro e possibilidades de comparação antes/depois. Reforçar que o gráfico é uma porta de entrada, não uma conclusão causal."
   },
   {
     "objectID": "talks/sisab_dados_aps.html#exemplo-2-cid-e-ciap-por-lai",
     "href": "talks/sisab_dados_aps.html#exemplo-2-cid-e-ciap-por-lai",
     "title": "Dados do SISAB",
     "section": "Exemplo 2: CID e CIAP por LAI",
-    "text": "Exemplo 2: CID e CIAP por LAI\n\n\n\n\nOs dados por CID-10 e CIAP-2 aproximam a análise da clínica e do motivo de consulta, desde que lidos como registros administrativos.\n\n\n\n\nExplicar o exemplo: CIAP-2 H01, dor de ouvidos, município de São Paulo em 2025. O objetivo é mostrar a granularidade possível, não discutir especificamente otalgia."
+    "text": "Exemplo 2: CID e CIAP por LAI\n\n\n\n\n\n\n\nOs dados por CID-10 e CIAP-2 aproximam a análise da clínica e do motivo de consulta, desde que lidos como registros administrativos.\n\n\n\n\nExplicar o exemplo: CIAP-2 H01, dor de ouvidos, município de São Paulo em 2025. O objetivo é mostrar a granularidade possível, não discutir especificamente otalgia."
   },
   {
     "objectID": "talks/sisab_dados_aps.html#exemplo-3-intensidade-de-registro",
     "href": "talks/sisab_dados_aps.html#exemplo-3-intensidade-de-registro",
     "title": "Dados do SISAB",
     "section": "Exemplo 3: intensidade de registro",
-    "text": "Exemplo 3: intensidade de registro\n\n\n\n\nA taxa por 100 habitantes ajuda a comparar intensidade de registro, mas não deve ser lida automaticamente como acesso, cobertura ou qualidade.\n\n\n\n\nApresentar a taxa de atendimentos individuais por 100 habitantes como indicador indireto de intensidade de registro no e-SUS AB. Dizer explicitamente que não mede cobertura assistencial nem adesão formal."
+    "text": "Exemplo 3: intensidade de registro\n\n\n\n\n\n\n\nA taxa por 100 habitantes ajuda a comparar intensidade de registro, mas não deve ser lida automaticamente como acesso, cobertura ou qualidade.\n\n\n\n\nApresentar a taxa de atendimentos individuais por 100 habitantes como indicador indireto de intensidade de registro no e-SUS AB. Dizer explicitamente que não mede cobertura assistencial nem adesão formal."
   },
   {
     "objectID": "talks/sisab_dados_aps.html#o-que-dá-para-perguntar",
@@ -3518,7 +3518,7 @@
     "href": "talks/sisab_dados_aps.html#para-onde-avançar",
     "title": "Dados do SISAB",
     "section": "Para onde avançar",
-    "text": "Para onde avançar\n\n\nAtualização mensal\nincorporar novas competências públicas e novos pedidos LAI.\n\n\nTransparência ativa\ndefender publicação direta de CID-10 e CIAP-2 no SISAB/SIAPS.\n\n\nFerramentas de uso\npainéis, auditorias, pacotes e análises reprodutíveis.\n\n\n\n\n\nA meta não é substituir o SISAB, mas criar uma ponte entre o sistema oficial, a transparência pública e o uso analítico dos dados.\n\n\n\n\nReforçar que o melhor cenário é a própria política de dados publicar essas camadas de forma ativa. Enquanto isso não ocorre, a base reduz barreiras de acesso."
+    "text": "Para onde avançar\n\n\nAtualização mensal\nincorporar novas competências públicas e novos pedidos LAI.\n\n\nTransparência ativa\ndefender publicação direta de CID-10 e CIAP-2 no SISAB/SIAPS.\n\n\nFerramentas de uso\npainéis, auditorias, pacotes e análises reprodutíveis.\n\n\n\n\n\n\n\n\nA meta não é substituir o SISAB, mas criar uma ponte entre o sistema oficial, a transparência pública e o uso analítico dos dados.\n\n\n\n\nReforçar que o melhor cenário é a própria política de dados publicar essas camadas de forma ativa. Enquanto isso não ocorre, a base reduz barreiras de acesso."
   },
   {
     "objectID": "talks/sisab_dados_aps.html#encerramento",
@@ -3552,15 +3552,15 @@
     "objectID": "talks/sisab_dados_aps.html#objetivo-do-seminário",
     "href": "talks/sisab_dados_aps.html#objetivo-do-seminário",
     "title": "Dados do SISAB",
-    "section": "Objetivo do seminário",
-    "text": "Objetivo do seminário\n\nMostrar como os registros agregados do SISAB foram transformados em uma base aberta e útil para pesquisa, gestão e monitoramento da Atenção Primária à Saúde.\n\nEm 20 minutos:\n\nO que o SISAB registra;\nPor que o acesso ainda é difícil;\nComo os dados foram coletados e organizados;\nComo acessar, analisar e interpretar os resultados.\n\n\nAbrir dizendo que a apresentação é sobre infraestrutura de dados, não apenas sobre uma base específica. A ideia central é reduzir o trabalho manual e permitir análises reprodutíveis da APS municipal."
+    "section": "",
+    "text": "Mostrar como os registros agregados do SISAB foram transformados em uma base aberta e útil para pesquisa, gestão e monitoramento da Atenção Primária à Saúde.\n\nEm 20 minutos:\n\nO que o SISAB registra;\nPor que o acesso ainda é difícil;\nComo os dados foram coletados e organizados;\nComo acessar, analisar e interpretar os resultados.\n\n\nAbrir dizendo que a apresentação é sobre infraestrutura de dados, não apenas sobre uma base específica. A ideia central é reduzir o trabalho manual e permitir análises reprodutíveis da APS municipal."
   },
   {
     "objectID": "talks/repositorios_sisab_sivep_lai.html#objetivo",
     "href": "talks/repositorios_sisab_sivep_lai.html#objetivo",
     "title": "Dados abertos para pesquisa",
-    "section": "Objetivo",
-    "text": "Objetivo\n\nMostrar como dados do SUS podem ser obtidos por meio de consultas fragmentadas, arquivos recebidos por LAI e rotinas manuais e trabalhos em repositórios abertos, auditáveis e reutilizáveis.\n\nNeste webnário:\n\nPor que SISAB, SIVEP-Malária e SIVEP-DDA importam;\nQuais barreiras ainda dificultam o acesso;\nO que é a LAI e como ela entra nesse fluxo;\nComo transformar respostas e relatórios em repositórios de dados.\n\n\nAbrir a apresentação dizendo que o tema não é apenas “baixar dados”. O ponto central é construir infraestrutura pública de dados: organização, proveniência, documentação, versionamento e condições para reuso."
+    "section": "",
+    "text": "Mostrar como dados do SUS podem ser obtidos por meio de consultas fragmentadas, arquivos recebidos por LAI e rotinas manuais e trabalhos em repositórios abertos, auditáveis e reutilizáveis.\n\nNeste webnário:\n\nPor que SISAB, SIVEP-Malária e SIVEP-DDA importam;\nQuais barreiras ainda dificultam o acesso;\nO que é a LAI e como ela entra nesse fluxo;\nComo transformar respostas e relatórios em repositórios de dados.\n\n\nAbrir a apresentação dizendo que o tema não é apenas “baixar dados”. O ponto central é construir infraestrutura pública de dados: organização, proveniência, documentação, versionamento e condições para reuso."
   },
   {
     "objectID": "talks/repositorios_sisab_sivep_lai.html#por-que-estes-três-sistemas",
@@ -3602,7 +3602,7 @@
     "href": "talks/repositorios_sisab_sivep_lai.html#o-problema-atual-de-acesso",
     "title": "Dados abertos para pesquisa",
     "section": "O problema atual de acesso",
-    "text": "O problema atual de acesso\n\n\nSISAB\nDisponibilização oficial apenas por meio de relatórios agregados. Séries longas exigem muitas combinações de seleção.\nSIAPS não apresenta, até o momento, dados públicos disponíveis.\n\n\nSIVEP-Malária\nNão disponibiliza publicamente dados desagrados, relatórios públicos ou painel de dados. Os dados do SINAN não abrangem igualmente todo o território nacional.\n\n\nSIVEP-DDA\nDisponibilização oficial apenas por meio de painel de visualização de dados agregados.\n\n\n\n\n\nEm todos os casos, o desafio não é apenas obter o arquivo de dados: é reconstruir série histórica, dicionário, proveniência, versão, limitações e regra de uso.\n\n\n\n\nDetalhar que os problemas são diferentes. No SISAB, a barreira principal é escala de extração e ausência de CID/CIAP em transparência ativa. No SIVEP-Malária, a barreira é combinar utilidade epidemiológica com proteção e interpretação correta de variáveis codificadas. No SIVEP-DDA, a barreira é transformar um sistema de monitoramento sindrômico em séries analisáveis, sem apagar os recortes da vigilância."
+    "text": "O problema atual de acesso\n\n\nSISAB\nDisponibilização oficial apenas por meio de relatórios agregados. Séries longas exigem muitas combinações de seleção.\nSIAPS não apresenta, até o momento, dados públicos disponíveis.\n\n\nSIVEP-Malária\nNão disponibiliza publicamente dados desagrados, relatórios públicos ou painel de dados. Os dados do SINAN não abrangem igualmente todo o território nacional.\n\n\nSIVEP-DDA\nDisponibilização oficial apenas por meio de painel de visualização de dados agregados.\n\n\n\n\n\n\n\n\nEm todos os casos, o desafio não é apenas obter o arquivo de dados: é reconstruir série histórica, dicionário, proveniência, versão, limitações e regra de uso.\n\n\n\n\nDetalhar que os problemas são diferentes. No SISAB, a barreira principal é escala de extração e ausência de CID/CIAP em transparência ativa. No SIVEP-Malária, a barreira é combinar utilidade epidemiológica com proteção e interpretação correta de variáveis codificadas. No SIVEP-DDA, a barreira é transformar um sistema de monitoramento sindrômico em séries analisáveis, sem apagar os recortes da vigilância."
   },
   {
     "objectID": "talks/repositorios_sisab_sivep_lai.html#barreiras-recorrentes",
@@ -3644,14 +3644,14 @@
     "href": "talks/repositorios_sisab_sivep_lai.html#três-repositórios-um-mesmo-princípio",
     "title": "Dados abertos para pesquisa",
     "section": "Três repositórios, um mesmo princípio",
-    "text": "Três repositórios, um mesmo princípio\n\n\n\n\n\n\n\n\nSistema\nEntrada principal\nSaída esperada\n\n\n\n\nSISAB\nrelatórios públicos e respostas LAI\nséries municipais mensais de produção, procedimentos, condições e CID/CIAP\n\n\nSIVEP-Malária\narquivos de vigilância e dicionários\nnotificações harmonizadas, com variáveis úteis para vigilância e análise territorial\n\n\nSIVEP-DDA\nregistros agregados de monitoramento\nséries territoriais por tempo, faixa etária e indicadores de ocorrência\n\n\n\n\n\n\nA implementação muda em cada sistema; o compromisso permanece: dados abertos, legíveis por máquina, documentados e auditáveis.\n\n\n\n\nEste é o slide de síntese dos três projetos. Não prometer que os três têm a mesma maturidade; dizer que eles compartilham uma arquitetura conceitual."
+    "text": "Três repositórios, um mesmo princípio\n\n\n\n\n\n\n\n\nSistema\nEntrada principal\nSaída esperada\n\n\n\n\nSISAB\nrelatórios públicos e respostas LAI\nséries municipais mensais de produção, procedimentos, condições e CID/CIAP\n\n\nSIVEP-Malária\narquivos de vigilância e dicionários\nnotificações harmonizadas, com variáveis úteis para vigilância e análise territorial\n\n\nSIVEP-DDA\nregistros agregados de monitoramento\nséries territoriais por tempo, faixa etária e indicadores de ocorrência\n\n\n\n\n\n\n\n\n\nA implementação muda em cada sistema; o compromisso permanece: dados abertos, legíveis por máquina, documentados e auditáveis.\n\n\n\n\nEste é o slide de síntese dos três projetos. Não prometer que os três têm a mesma maturidade; dizer que eles compartilham uma arquitetura conceitual."
   },
   {
     "objectID": "talks/repositorios_sisab_sivep_lai.html#sisab-desenho-do-repositório",
     "href": "talks/repositorios_sisab_sivep_lai.html#sisab-desenho-do-repositório",
     "title": "Dados abertos para pesquisa",
     "section": "SISAB: desenho do repositório",
-    "text": "SISAB: desenho do repositório\n\n\nColeta pública (web scraping)\n\niteração por competência;\nmunicípios, faixas etárias e sexo;\nprodução, procedimentos e condições;\nexportação anual.\n\n\n\nCamada LAI\n\nCID-10 e CIAP-2;\nmunicípio e competência;\npadronização de esquemas;\npreservação de pedido e arquivo-fonte.\n\n\n\n\n\n\nO SISAB combina transparência ativa e passiva: uma parte já está publicada, outra precisa ser solicitada e curada.\n\n\n\n\nReaproveitar a experiência já documentada em sisab_scrapper e sisab_lai. O foco aqui é como o desenho resolve o problema de escala e de repetibilidade."
+    "text": "SISAB: desenho do repositório\n\n\nColeta pública (web scraping)\n\niteração por competência;\nmunicípios, faixas etárias e sexo;\nprodução, procedimentos e condições;\nexportação anual.\n\n\n\nCamada LAI\n\nCID-10 e CIAP-2;\nmunicípio e competência;\npadronização de esquemas;\npreservação de pedido e arquivo-fonte.\n\n\n\n\n\n\n\n\n\nO SISAB combina transparência ativa e passiva: uma parte já está publicada, outra precisa ser solicitada e curada.\n\n\n\n\nReaproveitar a experiência já documentada em sisab_scrapper e sisab_lai. O foco aqui é como o desenho resolve o problema de escala e de repetibilidade."
   },
   {
     "objectID": "talks/repositorios_sisab_sivep_lai.html#sivep-malária-desenho-do-repositório",
@@ -3672,14 +3672,14 @@
     "href": "talks/repositorios_sisab_sivep_lai.html#padrão-mínimo-de-publicação",
     "title": "Dados abertos para pesquisa",
     "section": "Padrão mínimo de publicação",
-    "text": "Padrão mínimo de publicação\n\n\nArquivos\nCSV compactado para interoperabilidade e Parquet para análise eficiente.\n\n\nMetadados\ndicionário, período, filtros, origem, data de atualização e limitações.\n\n\nIdentificação\nDOI, versão, licença, citação recomendada e changelog.\n\n\n\n\n\nDados abertos não são apenas dados disponíveis: precisam ser encontráveis, citáveis, compreensíveis e reutilizáveis.\n\n\n\n\nConectar com Zenodo, GitHub e páginas de documentação. A ênfase é que repositórios de dados são produtos de informação, não anexos de projeto."
+    "text": "Padrão mínimo de publicação\n\n\nArquivos\nCSV compactado para interoperabilidade e Parquet para análise eficiente.\n\n\nMetadados\ndicionário, período, filtros, origem, data de atualização e limitações.\n\n\nIdentificação\nDOI, versão, licença, citação recomendada e changelog.\n\n\n\n\n\n\n\n\nDados abertos não são apenas dados disponíveis: precisam ser encontráveis, citáveis, compreensíveis e reutilizáveis.\n\n\n\n\nConectar com Zenodo, GitHub e páginas de documentação. A ênfase é que repositórios de dados são produtos de informação, não anexos de projeto."
   },
   {
     "objectID": "talks/repositorios_sisab_sivep_lai.html#data-papers-em-produção",
     "href": "talks/repositorios_sisab_sivep_lai.html#data-papers-em-produção",
     "title": "Dados abertos para pesquisa",
     "section": "Data papers em produção",
-    "text": "Data papers em produção\n\nCada conjunto de dados terá também um data paper para transformar a curadoria técnica em documentação científica citável.\n\nOs manuscritos estão sendo produzidos para:\n\nSISAB: séries municipais da APS, incluindo relatórios públicos e dados complementares via LAI;\nSIVEP-Malária: base harmonizada para vigilância, pesquisa e análise territorial da malária;\nSIVEP-DDA: séries de doenças diarreicas agudas para monitoramento temporal e territorial.\n\n\n\n\nO data paper descreve escopo, fonte, método de coleta, processamento, validação, estrutura dos arquivos, limitações e formas recomendadas de citação.\n\n\n\n\nExplicar que o data paper não substitui o repositório: ele aumenta a confiança, facilita revisão por pares e cria uma referência acadêmica estável para quem reutiliza os dados."
+    "text": "Data papers em produção\n\nCada conjunto de dados terá também um data paper para transformar a curadoria técnica em documentação científica citável.\n\nOs manuscritos estão sendo produzidos para:\n\nSISAB: séries municipais da APS, incluindo relatórios públicos e dados complementares via LAI;\nSIVEP-Malária: base harmonizada para vigilância, pesquisa e análise territorial da malária;\nSIVEP-DDA: séries de doenças diarreicas agudas para monitoramento temporal e territorial.\n\n\n\n\n\n\n\nO data paper descreve escopo, fonte, método de coleta, processamento, validação, estrutura dos arquivos, limitações e formas recomendadas de citação.\n\n\n\n\nExplicar que o data paper não substitui o repositório: ele aumenta a confiança, facilita revisão por pares e cria uma referência acadêmica estável para quem reutiliza os dados."
   },
   {
     "objectID": "talks/repositorios_sisab_sivep_lai.html#qualidade-o-que-testar",
@@ -3707,7 +3707,7 @@
     "href": "talks/repositorios_sisab_sivep_lai.html#agenda-de-sustentabilidade",
     "title": "Dados abertos para pesquisa",
     "section": "Agenda de sustentabilidade",
-    "text": "Agenda de sustentabilidade\n\n\nAtualizar\nRotinas periódicas de web scrapping e pedidos LAI, logs, checagens e publicação de novas versões.\n\n\nDocumentar\nDecisões de limpeza, mudanças de fonte, limitações e data papers.\n\n\nInstitucionalizar\nAproximar repositórios derivados da transparência ativa oficial.\n\n\n\n\n\nO melhor resultado de um repositório via LAI é deixar de depender da LAI porque o dado passa a ser publicado ativamente.\n\n\n\n\nEssa é uma frase forte para o fechamento: LAI resolve lacunas, mas a solução estrutural é transparência ativa de boa qualidade."
+    "text": "Agenda de sustentabilidade\n\n\nAtualizar\nRotinas periódicas de web scrapping e pedidos LAI, logs, checagens e publicação de novas versões.\n\n\nDocumentar\nDecisões de limpeza, mudanças de fonte, limitações e data papers.\n\n\nInstitucionalizar\nAproximar repositórios derivados da transparência ativa oficial.\n\n\n\n\n\n\n\n\nO melhor resultado de um repositório via LAI é deixar de depender da LAI porque o dado passa a ser publicado ativamente.\n\n\n\n\nEssa é uma frase forte para o fechamento: LAI resolve lacunas, mas a solução estrutural é transparência ativa de boa qualidade."
   },
   {
     "objectID": "talks/repositorios_sisab_sivep_lai.html#mensagem-final",
@@ -3728,14 +3728,14 @@
     "href": "talks/repositorios_sisab_sivep_lai.html#os-três-sistemas",
     "title": "Dados abertos para pesquisa",
     "section": "Os três sistemas",
-    "text": "Os três sistemas\n\n\nSISAB\nregistra a produção da Atenção Primária à Saúde, incluindo atendimentos, visitas, procedimentos e condições acompanhadas.\n\n\nSIVEP-Malária\norganiza notificações e investigação de casos de malária, fundamentais para vigilância e eliminação.\n\n\nSIVEP-DDA\nacompanha doenças diarreicas agudas, apoiando alerta precoce, surtos e análise territorial.\n\n\n\n\n\nJuntos, eles aproximam três dimensões do SUS: cuidado cotidiano, vigilância de doença transmissível endêmica e monitoramento sindrômico de eventos agudos.\n\n\n\n\nUsar este slide para mostrar que as bases têm naturezas distintas. O SISAB é mais próximo da rotina assistencial da APS. O SIVEP-Malária é vigilância epidemiológica com investigação de casos. O SIVEP-DDA é monitoramento agregado e sensível a surtos."
+    "text": "Os três sistemas\n\n\nSISAB\nregistra a produção da Atenção Primária à Saúde, incluindo atendimentos, visitas, procedimentos e condições acompanhadas.\n\n\nSIVEP-Malária\norganiza notificações e investigação de casos de malária, fundamentais para vigilância e eliminação.\n\n\nSIVEP-DDA\nacompanha doenças diarreicas agudas, apoiando alerta precoce, surtos e análise territorial.\n\n\n\n\n\n\n\n\nJuntos, eles aproximam três dimensões do SUS: cuidado cotidiano, vigilância de doença transmissível endêmica e monitoramento sindrômico de eventos agudos.\n\n\n\n\nUsar este slide para mostrar que as bases têm naturezas distintas. O SISAB é mais próximo da rotina assistencial da APS. O SIVEP-Malária é vigilância epidemiológica com investigação de casos. O SIVEP-DDA é monitoramento agregado e sensível a surtos."
   },
   {
     "objectID": "talks/repositorios_sisab_sivep_lai.html#dados-via-lai-podem-ser-publicados",
     "href": "talks/repositorios_sisab_sivep_lai.html#dados-via-lai-podem-ser-publicados",
     "title": "Dados abertos para pesquisa",
     "section": "Dados via LAI podem ser publicados?",
-    "text": "Dados via LAI podem ser publicados?\n\n\n\nDados obtidos por meio da LAI podem, em regra, ser disponibilizados em repositórios públicos, desde que não estejam sujeitos a sigilo, restrição legal ou condição expressa definida pelo órgão responsável. A Lei nº 12.527/2011 estabelece a publicidade como regra e o sigilo como exceção. A Política de Dados Abertos também orienta a abertura e a reutilização de bases públicas, favorecendo transparência, pesquisa, inovação e controle social.\nO repositório deve identificar claramente o órgão produtor, o protocolo do pedido LAI e as transformações realizadas nos arquivos. Também é importante deixar explícito que o depositante não reivindica titularidade sobre os dados originais, mas disponibiliza uma versão documentada para fins de transparência, pesquisa e reprodutibilidade.\n\n\n\n\nExplicar que receber dados por LAI não significa que qualquer republicação é automaticamente adequada. A LAI garante acesso a informações públicas; a LGPD e as regras de sigilo continuam relevantes. Em saúde, mesmo tabelas agregadas podem exigir supressão de células pequenas, redução de granularidade territorial ou temporal e documentação clara dos riscos residuais."
+    "text": "Dados via LAI podem ser publicados?\n\n\n\n\n\n\nDados obtidos por meio da LAI podem, em regra, ser disponibilizados em repositórios públicos, desde que não estejam sujeitos a sigilo, restrição legal ou condição expressa definida pelo órgão responsável. A Lei nº 12.527/2011 estabelece a publicidade como regra e o sigilo como exceção. A Política de Dados Abertos também orienta a abertura e a reutilização de bases públicas, favorecendo transparência, pesquisa, inovação e controle social.\nO repositório deve identificar claramente o órgão produtor, o protocolo do pedido LAI e as transformações realizadas nos arquivos. Também é importante deixar explícito que o depositante não reivindica titularidade sobre os dados originais, mas disponibiliza uma versão documentada para fins de transparência, pesquisa e reprodutibilidade.\n\n\n\n\nExplicar que receber dados por LAI não significa que qualquer republicação é automaticamente adequada. A LAI garante acesso a informações públicas; a LGPD e as regras de sigilo continuam relevantes. Em saúde, mesmo tabelas agregadas podem exigir supressão de células pequenas, redução de granularidade territorial ou temporal e documentação clara dos riscos residuais."
   },
   {
     "objectID": "talks/repositorios_sisab_sivep_lai.html#sivep-malária-e-sivep-dda-desenho-do-repositório",
@@ -3841,5 +3841,124 @@
     "title": "Dados do SIVEP-DDA",
     "section": "Exemplo de uso em R",
     "text": "Exemplo de uso em R\nO exemplo abaixo baixa o arquivo Parquet preliminar de 2025 com o pacote {zendown}, soma os casos registrados por faixa etária e cria uma série semanal de casos de doenças diarreicas agudas.\n\n\nCódigo\nlibrary(arrow)\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(zendown)\n\narquivo_dda_2025 &lt;- zen_file(\n  deposit_id = 20752301,\n  file_name = \"sivep_dda_2025.parquet\"\n)\n\ndda_semana &lt;- read_parquet(arquivo_dda_2025) |&gt;\n  mutate(\n    casos = rowSums(\n      pick(nu_m1ano, nu_1a4, nu_5a9, nu_10oumais, nu_faixign),\n      na.rm = TRUE\n    )\n  ) |&gt;\n  group_by(sem_epid_week) |&gt;\n  summarise(casos = sum(casos, na.rm = TRUE), .groups = \"drop\") |&gt;\n  arrange(sem_epid_week)\n\nggplot(dda_semana, aes(x = sem_epid_week, y = casos)) +\n  geom_line(color = \"#15616d\", linewidth = 0.8) +\n  geom_point(color = \"#15616d\", size = 1.4) +\n  scale_y_continuous(labels = scales::label_number(big.mark = \".\", decimal.mark = \",\")) +\n  labs(\n    title = \"Casos de DDA por semana epidemiológica\",\n    subtitle = \"Brasil, 2025\",\n    x = \"Semana epidemiológica\",\n    y = \"Casos\"\n  ) +\n  theme_bw()"
+  },
+  {
+    "objectID": "talks/zenith_seminar_2024.html",
+    "href": "talks/zenith_seminar_2024.html",
+    "title": "Disease and climate data fusion for modeling",
+    "section": "",
+    "text": "Postdoctoral researcher at Inria, Zenith team\nMaster’s at Public Health, Doctorate on Health Information\nData Science applied to Public Health"
+  },
+  {
+    "objectID": "talks/repositorios_sisab_sivep_lai.html",
+    "href": "talks/repositorios_sisab_sivep_lai.html",
+    "title": "Dados abertos para pesquisa",
+    "section": "",
+    "text": "Mostrar como dados do SUS podem ser obtidos por meio de consultas fragmentadas, arquivos recebidos por LAI e rotinas manuais e trabalhos em repositórios abertos, auditáveis e reutilizáveis.\n\nNeste webnário:\n\nPor que SISAB, SIVEP-Malária e SIVEP-DDA importam;\nQuais barreiras ainda dificultam o acesso;\nO que é a LAI e como ela entra nesse fluxo;\nComo transformar respostas e relatórios em repositórios de dados.\n\n\nAbrir a apresentação dizendo que o tema não é apenas “baixar dados”. O ponto central é construir infraestrutura pública de dados: organização, proveniência, documentação, versionamento e condições para reuso."
+  },
+  {
+    "objectID": "talks/projeto_rio_doce.html",
+    "href": "talks/projeto_rio_doce.html",
+    "title": "Eixo Sala de Situação de Saúde",
+    "section": "",
+    "text": "Apresentação realizada por Raphael Saldanha, em nome de Diego Ricardo Xavier.\n\nPergunta orientadora\nQuais são os desafios e potencialidades das análises de situação de saúde em pesquisas sobre desastres em barragens de mineração?\n\nA Sala de Situação não substitui os estudos epidemiológicos, toxicológicos ou de avaliação de risco. Ela conecta essas evidências ao território, ao SUS e à tomada de decisão.\n\nAbrir explicitando que a fala será feita em nome de Diego Ricardo Xavier. Sugestão: “Vou apresentar uma leitura sintética do eixo Sala de Situação de Saúde, enfatizando onde a experiência do Observatório de Clima e Saúde pode contribuir para a Rede Rio Doce.”"
+  },
+  {
+    "objectID": "talks/mti2026.html",
+    "href": "talks/mti2026.html",
+    "title": "Metodologias e impactos das mudanças climáticas sobre a saúde de corpos e territórios na Amazônia",
+    "section": "",
+    "text": "Quais sinais da mudança climática aparecem no território antes de aparecerem nos dados oficiais?\n\nPode ser a fumaça chegando, o rio baixando, a água mudando, o calor ficando insuportável, a escola suspendendo atividades ou a UBS recebendo mais pessoas com sintomas respiratórios.\n\n\n\n\n\n\nA proposta é aproximar os dados produzidos pelo Observatório de Clima e Saúde da Fiocruz com os saberes e práticas de monitoramento territorial independente.\n\n\n\n\nAbrir perguntando ao público: “Que sinais vocês monitoram no território?”. A apresentação deve reconhecer que o território já produz evidências, mesmo quando elas ainda não estão em bases oficiais."
+  },
+  {
+    "objectID": "talks/isntd_conference_2023.html",
+    "href": "talks/isntd_conference_2023.html",
+    "title": "Disease and climate data fusion for modelling",
+    "section": "",
+    "text": "Postdoc researcher at Inria, a French research institute for digital science and technology\nBSC, Global Health Resilience collaborator\nFiocruz, Climate and Health Observatory"
+  },
+  {
+    "objectID": "talks/dengue_class.html",
+    "href": "talks/dengue_class.html",
+    "title": "Dengue cases screening",
+    "section": "",
+    "text": "After a clinical assessement, a patient can be pointed as a suspected dengue/chikungunya case, based on its symptoms, clinical conditions and history (anamnesis)\n\nFever, arthralgia, myalgia, headache, and retroorbital pain\n\nThe suspected case is immediately notified to the health authorities (SINAN dataset)\nThe diagnosis must be verified to adequate the health treatment"
+  },
+  {
+    "objectID": "talks/climate_br.html",
+    "href": "talks/climate_br.html",
+    "title": "Climate data for Brazilian municipalities",
+    "section": "",
+    "text": "Climate raw data sources: ground level and reanalysis\nData on Braziliam municipalities spatial unit\nClimatological normals and indicators"
+  },
+  {
+    "objectID": "talks/bda_subsets_2024.html",
+    "href": "talks/bda_subsets_2024.html",
+    "title": "Subset Models for Multivariate Time Series Forecast",
+    "section": "",
+    "text": "Previously presented at MulTiSA workshop (ICDE 2024)\nAbundant multivariate time series, good opportunity for forecasting machine learning methods\nData may present intrinsic diversity of samples, affecting model’s performance on different parts of the input\nGlobal models: use all available time series\nLocal models: use only time series pertaining to each sample\nData subsets models: our proposal"
+  },
+  {
+    "objectID": "pres/bsc2024.html",
+    "href": "pres/bsc2024.html",
+    "title": "Research Experience & Plans",
+    "section": "",
+    "text": "Data handling tools: author of ten R packages to handle health and climate datasets and indicators.\n\n{microdatasus}, {brpop}, {tidyrates}, {zendown}, {zenstats}, {nseq}, {rspell}, {brclimr}, {zonalclim}, {opendenguedata}\n\nVisualization: malaria and COVID-19 interactive visualization dashboards (IRD-FR and Fiocruz-BR)\nAnalysis and modeling of climate-sensitive diseases (Fiocruz-BR, LNCC-BR, BSC, Inria-FR, IRD-FR)"
+  },
+  {
+    "objectID": "pres/ird2024.html",
+    "href": "pres/ird2024.html",
+    "title": "Introduction and Research Proposal",
+    "section": "",
+    "text": "Brazilian from Rio de Janeiro\nHusband, father of two dogs and a cat\nLoves cycling and take pictures\nResearcher on Health Geography and Climate-Sensitive Diseases\nR developer"
+  },
+  {
+    "objectID": "talks/bilis_2023.html",
+    "href": "talks/bilis_2023.html",
+    "title": "BILIS",
+    "section": "",
+    "text": "Banco de Indicadores do Laboratório de Informação em Saúde, ICICT\nA proposal to create an unified health indicators database"
+  },
+  {
+    "objectID": "talks/climate_health_workshop_2023.html",
+    "href": "talks/climate_health_workshop_2023.html",
+    "title": "Disease and climate data fusion for modelling",
+    "section": "",
+    "text": "Postdoctoral researcher at Inria, a French research institute for digital science and technology\nFiocruz, Climate and Health Observatory collaborator\nBSC, Global Health Resilience collaborator"
+  },
+  {
+    "objectID": "talks/hpdasc_workshop_2024.html",
+    "href": "talks/hpdasc_workshop_2024.html",
+    "title": "Advances in climate features engineering and subsets modeling",
+    "section": "",
+    "text": "Direct relationship: floods, droughts, heat waves…\nIndirect relationship\n\n\n\n\n\n\n%%{\n  init: {\n    'theme': 'base',\n    'themeVariables': {\n      'fontSize': '30px'\n    }\n  }\n}%%\nflowchart LR\n\nclimate(Climate) --&gt; vector(Disease vectors) --&gt; health(Human health)\nclimate --&gt; health\nclimate --&gt; social(Social & economic \\n determinants) --&gt; health"
+  },
+  {
+    "objectID": "talks/koro_mocambique_internet.html",
+    "href": "talks/koro_mocambique_internet.html",
+    "title": "Busca de sinais digitais sobre Síndrome de Koro em Moçambique",
+    "section": "",
+    "text": "Não há sinal claro de uma base pública oficial específica sobre Koro.\n\n\n\nMISAU / SIS-MA\nSistema nacional de informação em saúde, baseado em DHIS2, com dados agregados, vigilância e módulos de programas.\n\n\nINS / vigilância\nInstituto Nacional de Saúde, SIGILA e unidades de inquéritos/vigilância para eventos laboratoriais e epidemiológicos.\n\n\nINE\nCensos, projeções, estatísticas provinciais e denominadores populacionais para interpretar desigualdades territoriais.\n\n\nINCM / INTIC\nRegulação, qualidade de telecomunicações, indicadores TIC, cobertura e governança digital."
+  },
+  {
+    "objectID": "talks/multisa_subsets_2024.html",
+    "href": "talks/multisa_subsets_2024.html",
+    "title": "Subset Models for Multivariate Time Series Forecast",
+    "section": "",
+    "text": "Abundant multivariate time series, good opportunity for forecasting machine learning methods\nData may present intrinsic diversity of samples, affecting model’s performance on different parts of the input\nGlobal models: use all available time series\nLocal models: use only time series pertaining to each sample\nData subsets models: our proposal"
+  },
+  {
+    "objectID": "talks/rbras69_2025.html",
+    "href": "talks/rbras69_2025.html",
+    "title": "Democratização de acesso a dados de saúde, ambiente e clima com o R",
+    "section": "",
+    "text": "Geógrafo (UFJF)\nEspecialista em Métodos Estatísticos Computacionais (UFJF)\nMestre em Saúde Coletiva (UFJF)\nDoutor em Informação e Comunicação em Saúde (Fiocruz)\n\n\n\nAssistente de pesquisa na Fiocruz\nObservatório de Clima e Saúde\nPlataforma de Ciência de Dados Aplicada à Saúde (PCDaS)"
+  },
+  {
+    "objectID": "talks/sisab_dados_aps.html",
+    "href": "talks/sisab_dados_aps.html",
+    "title": "Dados do SISAB",
+    "section": "",
+    "text": "Mostrar como os registros agregados do SISAB foram transformados em uma base aberta e útil para pesquisa, gestão e monitoramento da Atenção Primária à Saúde.\n\nEm 20 minutos:\n\nO que o SISAB registra;\nPor que o acesso ainda é difícil;\nComo os dados foram coletados e organizados;\nComo acessar, analisar e interpretar os resultados.\n\n\nAbrir dizendo que a apresentação é sobre infraestrutura de dados, não apenas sobre uma base específica. A ideia central é reduzir o trabalho manual e permitir análises reprodutíveis da APS municipal."
   }
 ]

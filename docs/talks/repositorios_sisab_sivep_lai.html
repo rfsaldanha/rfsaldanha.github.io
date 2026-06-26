@@ -1,161 +1,229 @@
 <!DOCTYPE html>
-<html lang="pt-BR"><head>
-<link href="../logo.png" rel="icon" type="image/png">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Raphael Saldanha | Fiocruz">
+
+<title>Dados abertos para pesquisa – Raphael Saldanha</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.26">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0c1497c822180f859fc410b87e91da95.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2M7VLSRDCB"></script>
 
-  <meta name="author" content="Raphael Saldanha | Fiocruz">
-  <meta name="dcterms.date" content="2026-06-26">
-  <title>Raphael Saldanha – Dados abertos para pesquisa</title>
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
-  <style>
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
-      vertical-align: middle;
-    }
-  </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-0fde88a82f0356838740f155f1088782.css">
-  <link rel="stylesheet" href="icict_theme.css">
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2M7VLSRDCB"></script>
+<script type="text/javascript">
 
-  <script type="text/javascript">
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
+</script>
 
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
-  </script>
-  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-  <style type="text/css">
-    .reveal div.sourceCode {
-      margin: 0;
-      overflow: auto;
-    }
-    .reveal div.hanging-indent {
-      margin-left: 1em;
-      text-indent: -1em;
-    }
-    .reveal .slide:not(.center) {
-      height: 100%;
-    }
-    .reveal .slide.scrollable {
-      overflow-y: auto;
-    }
-    .reveal .footnotes {
-      height: 100%;
-      overflow-y: auto;
-    }
-    .reveal .slide .absolute {
-      position: absolute;
-      display: block;
-    }
-    .reveal .footnotes ol {
-      counter-reset: ol;
-      list-style-type: none; 
-      margin-left: 0;
-    }
-    .reveal .footnotes ol li:before {
-      counter-increment: ol;
-      content: counter(ol) ". "; 
-    }
-    .reveal .footnotes ol li > p:first-child {
-      display: inline-block;
-    }
-    .reveal .slide ul,
-    .reveal .slide ol {
-      margin-bottom: 0.5em;
-    }
-    .reveal .slide ul li,
-    .reveal .slide ol li {
-      margin-top: 0.4em;
-      margin-bottom: 0.2em;
-    }
-    .reveal .slide ul[role="tablist"] li {
-      margin-bottom: 0;
-    }
-    .reveal .slide ul li > *:first-child,
-    .reveal .slide ol li > *:first-child {
-      margin-block-start: 0;
-    }
-    .reveal .slide ul li > *:last-child,
-    .reveal .slide ol li > *:last-child {
-      margin-block-end: 0;
-    }
-    .reveal .slide .columns:nth-child(3) {
-      margin-block-start: 0.8em;
-    }
-    .reveal blockquote {
-      box-shadow: none;
-    }
-    .reveal .tippy-content>* {
-      margin-top: 0.2em;
-      margin-bottom: 0.7em;
-    }
-    .reveal .tippy-content>*:last-child {
-      margin-bottom: 0.2em;
-    }
-    .reveal .slide > img.stretch.quarto-figure-center,
-    .reveal .slide > img.r-stretch.quarto-figure-center {
-      display: block;
-      margin-left: auto;
-      margin-right: auto; 
-    }
-    .reveal .slide > img.stretch.quarto-figure-left,
-    .reveal .slide > img.r-stretch.quarto-figure-left  {
-      display: block;
-      margin-left: 0;
-      margin-right: auto; 
-    }
-    .reveal .slide > img.stretch.quarto-figure-right,
-    .reveal .slide > img.r-stretch.quarto-figure-right  {
-      display: block;
-      margin-left: auto;
-      margin-right: 0; 
-    }
-  </style>
+
 </head>
-<body class="quarto-light">
-  <div class="reveal">
-    <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Dados abertos para pesquisa</h1>
-  <p class="subtitle">em atenção primária a saúde, malária e doenças diarreicas agudas</p>
+<body class="nav-fixed quarto-light">
 
-<div class="quarto-title-authors">
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Raphael Saldanha | Fiocruz 
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../logo.png" alt="Raphael Saldanha" class="navbar-logo light-content">
+    <img src="../logo.png" alt="Raphael Saldanha" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Raphael Saldanha</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../cv.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../projects.html"> 
+<span class="menu-text">Projetos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../code.html"> 
+<span class="menu-text">Pacotes &amp; Código</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../data.html"> 
+<span class="menu-text">Dados</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../publications.html"> 
+<span class="menu-text">Publicações</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../talks.html"> 
+<span class="menu-text">Apresentações</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../photos/photos.html"> 
+<span class="menu-text">Fotos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../en/"> 
+<span class="menu-text">English</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../blog.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
 </div>
-</div>
-</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Nesta página</h2>
+   
+  <ul>
+  <li><a href="#objetivo" id="toc-objetivo" class="nav-link active" data-scroll-target="#objetivo">Objetivo</a></li>
+  <li><a href="#os-três-sistemas" id="toc-os-três-sistemas" class="nav-link" data-scroll-target="#os-três-sistemas">Os três sistemas</a></li>
+  <li><a href="#o-problema-atual-de-acesso" id="toc-o-problema-atual-de-acesso" class="nav-link" data-scroll-target="#o-problema-atual-de-acesso">O problema atual de acesso</a></li>
+  <li><a href="#o-que-é-a-lai" id="toc-o-que-é-a-lai" class="nav-link" data-scroll-target="#o-que-é-a-lai">O que é a LAI?</a></li>
+  <li><a href="#dados-via-lai-podem-ser-publicados" id="toc-dados-via-lai-podem-ser-publicados" class="nav-link" data-scroll-target="#dados-via-lai-podem-ser-publicados">Dados via LAI podem ser publicados?</a></li>
+  <li><a href="#lai-não-é-atalho-é-parte-da-governança" id="toc-lai-não-é-atalho-é-parte-da-governança" class="nav-link" data-scroll-target="#lai-não-é-atalho-é-parte-da-governança">LAI não é atalho: é parte da governança</a></li>
+  <li><a href="#três-repositórios-um-mesmo-princípio" id="toc-três-repositórios-um-mesmo-princípio" class="nav-link" data-scroll-target="#três-repositórios-um-mesmo-princípio">Três repositórios, um mesmo princípio</a></li>
+  <li><a href="#sisab-desenho-do-repositório" id="toc-sisab-desenho-do-repositório" class="nav-link" data-scroll-target="#sisab-desenho-do-repositório">SISAB: desenho do repositório</a></li>
+  <li><a href="#sivep-malária-e-sivep-dda-desenho-dos-repositórios" id="toc-sivep-malária-e-sivep-dda-desenho-dos-repositórios" class="nav-link" data-scroll-target="#sivep-malária-e-sivep-dda-desenho-dos-repositórios">SIVEP-Malária e SIVEP-DDA: desenho dos repositórios</a></li>
+  <li><a href="#padrão-mínimo-de-publicação" id="toc-padrão-mínimo-de-publicação" class="nav-link" data-scroll-target="#padrão-mínimo-de-publicação">Padrão mínimo de publicação</a></li>
+  <li><a href="#data-papers-em-produção" id="toc-data-papers-em-produção" class="nav-link" data-scroll-target="#data-papers-em-produção">Data papers em produção</a></li>
+  <li><a href="#agenda-de-sustentabilidade" id="toc-agenda-de-sustentabilidade" class="nav-link" data-scroll-target="#agenda-de-sustentabilidade">Agenda de sustentabilidade</a></li>
+  <li><a href="#mensagem-final" id="toc-mensagem-final" class="nav-link" data-scroll-target="#mensagem-final">Mensagem final</a></li>
+  <li><a href="#referências-e-links" id="toc-referências-e-links" class="nav-link" data-scroll-target="#referências-e-links">Referências e links</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Outros formatos</h2><ul><li><a href="repositorios_sisab_sivep_lai.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
 
-  <p class="date">2026-06-26</p>
-</section>
-<section id="objetivo" class="slide level2">
-<h2>Objetivo</h2>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Dados abertos para pesquisa</h1>
+<p class="subtitle lead">em atenção primária a saúde, malária e doenças diarreicas agudas</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">dados</div>
+    <div class="quarto-category">saude</div>
+    <div class="quarto-category">lai</div>
+    <div class="quarto-category">sisab</div>
+    <div class="quarto-category">sivep</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autor</div>
+    <div class="quarto-title-meta-contents">
+             <p>Raphael Saldanha | Fiocruz </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Data de Publicação</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">26 de junho de 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="objetivo" class="level2">
+<h2 class="anchored" data-anchor-id="objetivo">Objetivo</h2>
 <div class="big">
 <p>Mostrar como dados do SUS podem ser obtidos por meio de consultas fragmentadas, arquivos recebidos por LAI e rotinas manuais e trabalhos em repositórios abertos, auditáveis e reutilizáveis.</p>
 </div>
@@ -166,22 +234,12 @@ Raphael Saldanha | Fiocruz
 <li>O que é a LAI e como ela entra nesse fluxo;</li>
 <li>Como transformar respostas e relatórios em repositórios de dados.</li>
 </ol>
-<aside class="notes">
+<div class="notes">
 <p>Abrir a apresentação dizendo que o tema não é apenas “baixar dados”. O ponto central é construir infraestrutura pública de dados: organização, proveniência, documentação, versionamento e condições para reuso.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+</div>
 </section>
-<section id="os-três-sistemas" class="slide level2">
-<h2>Os três sistemas</h2>
+<section id="os-três-sistemas" class="level2">
+<h2 class="anchored" data-anchor-id="os-três-sistemas">Os três sistemas</h2>
 <div class="threecols">
 <div class="colbox">
 <p><strong>SISAB</strong><br>
@@ -196,29 +254,22 @@ organiza notificações e investigação de casos de malária, fundamentais para
 acompanha doenças diarreicas agudas, apoiando alerta precoce, surtos e análise territorial.</p>
 </div>
 </div>
-<div class="callout callout-none no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
 <p>Juntos, eles aproximam três dimensões do SUS: cuidado cotidiano, vigilância de doença transmissível endêmica e monitoramento sindrômico de eventos agudos.</p>
 </div>
 </div>
 </div>
-<aside class="notes">
+<div class="notes">
 <p>Usar este slide para mostrar que as bases têm naturezas distintas. O SISAB é mais próximo da rotina assistencial da APS. O SIVEP-Malária é vigilância epidemiológica com investigação de casos. O SIVEP-DDA é monitoramento agregado e sensível a surtos.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+</div>
 </section>
-<section id="o-problema-atual-de-acesso" class="slide level2">
-<h2>O problema atual de acesso</h2>
+<section id="o-problema-atual-de-acesso" class="level2">
+<h2 class="anchored" data-anchor-id="o-problema-atual-de-acesso">O problema atual de acesso</h2>
 <div class="threecols">
 <div class="colbox">
 <p><strong>SISAB</strong><br>
@@ -234,29 +285,22 @@ Não disponibiliza publicamente dados desagrados, relatórios públicos ou paine
 Disponibilização oficial apenas por meio de painel de visualização de dados agregados.</p>
 </div>
 </div>
-<div class="callout callout-none no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
 <p>Em todos os casos, o desafio não é apenas obter o arquivo de dados: é reconstruir série histórica, dicionário, proveniência, versão, limitações e regra de uso.</p>
 </div>
 </div>
 </div>
-<aside class="notes">
+<div class="notes">
 <p>Detalhar que os problemas são diferentes. No SISAB, a barreira principal é escala de extração e ausência de CID/CIAP em transparência ativa. No SIVEP-Malária, a barreira é combinar utilidade epidemiológica com proteção e interpretação correta de variáveis codificadas. No SIVEP-DDA, a barreira é transformar um sistema de monitoramento sindrômico em séries analisáveis, sem apagar os recortes da vigilância.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+</div>
 </section>
-<section id="o-que-é-a-lai" class="slide level2">
-<h2>O que é a LAI?</h2>
+<section id="o-que-é-a-lai" class="level2">
+<h2 class="anchored" data-anchor-id="o-que-é-a-lai">O que é a LAI?</h2>
 <div class="quote">
 <p>A Lei de Acesso à Informação, Lei nº 12.527/2011, regulamenta o direito constitucional de acesso às informações públicas.</p>
 </div>
@@ -267,46 +311,29 @@ Disponibilização oficial apenas por meio de painel de visualização de dados 
 <li><strong>regra de publicidade</strong>: sigilo deve ser exceção justificada;</li>
 <li><strong>proteção necessária</strong>: informações pessoais, sigilos legais e riscos de identificação devem ser tratados com cuidado.</li>
 </ul>
-<aside class="notes">
+<div class="notes">
 <p>Não transformar o slide em aula jurídica. A mensagem é que LAI é um instrumento de cidadania e também um mecanismo prático para completar lacunas de transparência ativa.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+</div>
 </section>
-<section id="dados-via-lai-podem-ser-publicados" class="slide level2">
-<h2>Dados via LAI podem ser publicados?</h2>
-<div class="callout callout-none no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
+<section id="dados-via-lai-podem-ser-publicados" class="level2">
+<h2 class="anchored" data-anchor-id="dados-via-lai-podem-ser-publicados">Dados via LAI podem ser publicados?</h2>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
 <p>Dados obtidos por meio da LAI podem, em regra, ser disponibilizados em repositórios públicos, desde que não estejam sujeitos a sigilo, restrição legal ou condição expressa definida pelo órgão responsável. A Lei nº 12.527/2011 estabelece a publicidade como regra e o sigilo como exceção. A Política de Dados Abertos também orienta a abertura e a reutilização de bases públicas, favorecendo transparência, pesquisa, inovação e controle social.</p>
 <p>O repositório deve identificar claramente o órgão produtor, o protocolo do pedido LAI e as transformações realizadas nos arquivos. Também é importante deixar explícito que o depositante não reivindica titularidade sobre os dados originais, mas disponibiliza uma versão documentada para fins de transparência, pesquisa e reprodutibilidade.</p>
 </div>
 </div>
 </div>
-<aside class="notes">
+<div class="notes">
 <p>Explicar que receber dados por LAI não significa que qualquer republicação é automaticamente adequada. A LAI garante acesso a informações públicas; a LGPD e as regras de sigilo continuam relevantes. Em saúde, mesmo tabelas agregadas podem exigir supressão de células pequenas, redução de granularidade territorial ou temporal e documentação clara dos riscos residuais.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+</div>
 </section>
-<section id="lai-não-é-atalho-é-parte-da-governança" class="slide level2">
-<h2>LAI não é atalho: é parte da governança</h2>
+<section id="lai-não-é-atalho-é-parte-da-governança" class="level2">
+<h2 class="anchored" data-anchor-id="lai-não-é-atalho-é-parte-da-governança">LAI não é atalho: é parte da governança</h2>
 <div class="twocols">
 <div class="left">
 <p><strong>Antes do pedido</strong></p>
@@ -325,23 +352,13 @@ Disponibilização oficial apenas por meio de painel de visualização de dados 
 </ul>
 </div>
 </div>
-<aside class="notes">
+<div class="notes">
 <p>Mostrar que a boa LAI começa com um pedido bem desenhado. Pedidos muito amplos podem gerar negativas, respostas difíceis ou riscos desnecessários.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+</div>
 </section>
-<section id="três-repositórios-um-mesmo-princípio" class="slide level2">
-<h2>Três repositórios, um mesmo princípio</h2>
-<table class="caption-top">
+<section id="três-repositórios-um-mesmo-princípio" class="level2">
+<h2 class="anchored" data-anchor-id="três-repositórios-um-mesmo-princípio">Três repositórios, um mesmo princípio</h2>
+<table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
 <col style="width: 33%">
@@ -372,29 +389,22 @@ Disponibilização oficial apenas por meio de painel de visualização de dados 
 </tr>
 </tbody>
 </table>
-<div class="callout callout-none no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
 <p>A implementação muda em cada sistema; o compromisso permanece: dados abertos, legíveis por máquina, documentados e auditáveis.</p>
 </div>
 </div>
 </div>
-<aside class="notes">
+<div class="notes">
 <p>Este é o slide de síntese dos três projetos. Não prometer que os três têm a mesma maturidade; dizer que eles compartilham uma arquitetura conceitual.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+</div>
 </section>
-<section id="sisab-desenho-do-repositório" class="slide level2">
-<h2>SISAB: desenho do repositório</h2>
+<section id="sisab-desenho-do-repositório" class="level2">
+<h2 class="anchored" data-anchor-id="sisab-desenho-do-repositório">SISAB: desenho do repositório</h2>
 <div class="twocols">
 <div class="left">
 <p><strong>Coleta pública (<em>web scraping</em>)</strong></p>
@@ -415,29 +425,22 @@ Disponibilização oficial apenas por meio de painel de visualização de dados 
 </ul>
 </div>
 </div>
-<div class="callout callout-none no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
 <p>O SISAB combina transparência ativa e passiva: uma parte já está publicada, outra precisa ser solicitada e curada.</p>
 </div>
 </div>
 </div>
-<aside class="notes">
+<div class="notes">
 <p>Reaproveitar a experiência já documentada em sisab_scrapper e sisab_lai. O foco aqui é como o desenho resolve o problema de escala e de repetibilidade.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+</div>
 </section>
-<section id="sivep-malária-e-sivep-dda-desenho-dos-repositórios" class="slide level2">
-<h2>SIVEP-Malária e SIVEP-DDA: desenho dos repositórios</h2>
+<section id="sivep-malária-e-sivep-dda-desenho-dos-repositórios" class="level2">
+<h2 class="anchored" data-anchor-id="sivep-malária-e-sivep-dda-desenho-dos-repositórios">SIVEP-Malária e SIVEP-DDA: desenho dos repositórios</h2>
 <div class="threecols">
 <div class="colbox">
 <p><strong>Dados</strong><br>
@@ -452,22 +455,12 @@ Variáveis, categorias, códigos territoriais e layout de dados.</p>
 Nomes de campos, datas, localidades, classificação do caso e tratamento.</p>
 </div>
 </div>
-<aside class="notes">
+<div class="notes">
 <p>Falar que o repositório precisa ser desenhado para pesquisa e vigilância sem expor indivíduos. Se a publicação for agregada, explicar o critério de agregação; se for microdado restrito, documentar o acesso e as regras.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+</div>
 </section>
-<section id="padrão-mínimo-de-publicação" class="slide level2">
-<h2>Padrão mínimo de publicação</h2>
+<section id="padrão-mínimo-de-publicação" class="level2">
+<h2 class="anchored" data-anchor-id="padrão-mínimo-de-publicação">Padrão mínimo de publicação</h2>
 <div class="threecols">
 <div class="colbox">
 <p><strong>Arquivos</strong><br>
@@ -482,29 +475,22 @@ dicionário, período, filtros, origem, data de atualização e limitações.</p
 DOI, versão, licença, citação recomendada e changelog.</p>
 </div>
 </div>
-<div class="callout callout-none no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
 <p>Dados abertos não são apenas dados disponíveis: precisam ser encontráveis, citáveis, compreensíveis e reutilizáveis.</p>
 </div>
 </div>
 </div>
-<aside class="notes">
+<div class="notes">
 <p>Conectar com Zenodo, GitHub e páginas de documentação. A ênfase é que repositórios de dados são produtos de informação, não anexos de projeto.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+</div>
 </section>
-<section id="data-papers-em-produção" class="slide level2">
-<h2>Data papers em produção</h2>
+<section id="data-papers-em-produção" class="level2">
+<h2 class="anchored" data-anchor-id="data-papers-em-produção">Data papers em produção</h2>
 <div class="quote">
 <p>Cada conjunto de dados terá também um data paper para transformar a curadoria técnica em documentação científica citável.</p>
 </div>
@@ -514,29 +500,22 @@ DOI, versão, licença, citação recomendada e changelog.</p>
 <li><strong>SIVEP-Malária</strong>: base harmonizada para vigilância, pesquisa e análise territorial da malária;</li>
 <li><strong>SIVEP-DDA</strong>: séries de doenças diarreicas agudas para monitoramento temporal e territorial.</li>
 </ul>
-<div class="callout callout-none no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
 <p>O data paper descreve escopo, fonte, método de coleta, processamento, validação, estrutura dos arquivos, limitações e formas recomendadas de citação.</p>
 </div>
 </div>
 </div>
-<aside class="notes">
+<div class="notes">
 <p>Explicar que o data paper não substitui o repositório: ele aumenta a confiança, facilita revisão por pares e cria uma referência acadêmica estável para quem reutiliza os dados.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+</div>
 </section>
-<section id="agenda-de-sustentabilidade" class="slide level2">
-<h2>Agenda de sustentabilidade</h2>
+<section id="agenda-de-sustentabilidade" class="level2">
+<h2 class="anchored" data-anchor-id="agenda-de-sustentabilidade">Agenda de sustentabilidade</h2>
 <div class="threecols">
 <div class="colbox">
 <p><strong>Atualizar</strong><br>
@@ -551,29 +530,22 @@ Decisões de limpeza, mudanças de fonte, limitações e data papers.</p>
 Aproximar repositórios derivados da transparência ativa oficial.</p>
 </div>
 </div>
-<div class="callout callout-none no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
 <p>O melhor resultado de um repositório via LAI é deixar de depender da LAI porque o dado passa a ser publicado ativamente.</p>
 </div>
 </div>
 </div>
-<aside class="notes">
+<div class="notes">
 <p>Essa é uma frase forte para o fechamento: LAI resolve lacunas, mas a solução estrutural é transparência ativa de boa qualidade.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+</div>
 </section>
-<section id="mensagem-final" class="slide level2">
-<h2>Mensagem final</h2>
+<section id="mensagem-final" class="level2">
+<h2 class="anchored" data-anchor-id="mensagem-final">Mensagem final</h2>
 <div class="big">
 <p>Construir repositórios para SISAB, SIVEP-Malária e SIVEP-DDA é transformar dados públicos em infraestrutura pública.</p>
 </div>
@@ -585,22 +557,12 @@ Aproximar repositórios derivados da transparência ativa oficial.</p>
 <li>atualização contínua;</li>
 <li>diálogo com gestores, pesquisadores e controle social.</li>
 </ul>
-<aside class="notes">
+<div class="notes">
 <p>Fechar retomando os quatro pedidos do seminário: importância, dificuldades, LAI e republicação. A mensagem deve ser afirmativa: abrir dados é política pública de informação.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+</div>
 </section>
-<section id="referências-e-links" class="slide level2">
-<h2>Referências e links</h2>
+<section id="referências-e-links" class="level2">
+<h2 class="anchored" data-anchor-id="referências-e-links">Referências e links</h2>
 <ul>
 <li>Lei nº 12.527/2011: <a href="https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm">planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm</a></li>
 <li>Portal Acesso à Informação: <a href="https://www.gov.br/acessoainformacao/pt-br">gov.br/acessoainformacao</a></li>
@@ -608,407 +570,443 @@ Aproximar repositórios derivados da transparência ativa oficial.</p>
 <li>Coleta SISAB: <a href="https://github.com/rfsaldanha/sisab_scrapper">github.com/rfsaldanha/sisab_scrapper</a></li>
 <li>Processamento SISAB via LAI: <a href="https://github.com/rfsaldanha/sisab_lai">github.com/rfsaldanha/sisab_lai</a></li>
 </ul>
-<aside class="notes">
+<div class="notes">
 <p>Manter o slide final simples. Caso haja perguntas jurídicas, reforçar que a apresentação não substitui análise jurídica de casos específicos; ela apresenta boas práticas gerais para dados públicos de saúde.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+</div>
 
 
 </section>
-    </div>
-  <div class="quarto-auto-generated-content" style="display: none;">
-<div class="footer footer-default">
-<p>Repositórios de dados | SISAB, SIVEP-Malária e SIVEP-DDA</p>
-</div>
-</div></div>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="../site_libs/revealjs/dist/reveal.js"></script>
-  <!-- reveal.js plugins -->
-  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
-  
-
-  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
-  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
-
-  <script>
-
-      // Full list of configuration options available at:
-      // https://revealjs.com/config/
-      Reveal.initialize({
-'controlsAuto': false,
-'previewLinksAuto': true,
-'pdfSeparateFragments': false,
-'autoAnimateEasing': "ease",
-'autoAnimateDuration': 1,
-'autoAnimateUnmatched': true,
-'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'chalkboard': {"buttons":true},
-'smaller': false,
- 
-        // Display controls in the bottom right corner
-        controls: true,
-
-        // Help the user learn the controls by providing hints, for example by
-        // bouncing the down arrow when they first encounter a vertical slide
-        controlsTutorial: false,
-
-        // Determines where controls appear, "edges" or "bottom-right"
-        controlsLayout: 'edges',
-
-        // Visibility rule for backwards navigation arrows; "faded", "hidden"
-        // or "visible"
-        controlsBackArrows: 'faded',
-
-        // Display a presentation progress bar
-        progress: true,
-
-        // Display the page number of the current slide
-        slideNumber: 'c/t',
-
-        // 'all', 'print', or 'speaker'
-        showSlideNumber: 'all',
-
-        // Add the current slide number to the URL hash so that reloading the
-        // page/copying the URL will return you to the same slide
-        hash: true,
-
-        // Start with 1 for the hash rather than 0
-        hashOneBasedIndex: false,
-
-        // Flags if we should monitor the hash and change slides accordingly
-        respondToHashChanges: true,
-
-        // Push each slide change to the browser history
-        history: true,
-
-        // Enable keyboard shortcuts for navigation
-        keyboard: true,
-
-        // Enable the slide overview mode
-        overview: true,
-
-        // Disables the default reveal.js slide layout (scaling and centering)
-        // so that you can use custom CSS layout
-        disableLayout: false,
-
-        // Vertical centering of slides
-        center: false,
-
-        // Enables touch navigation on devices with touch input
-        touch: true,
-
-        // Loop the presentation
-        loop: false,
-
-        // Change the presentation direction to be RTL
-        rtl: false,
-
-        // see https://revealjs.com/vertical-slides/#navigation-mode
-        navigationMode: 'linear',
-
-        // Randomizes the order of slides each time the presentation loads
-        shuffle: false,
-
-        // Turns fragments on and off globally
-        fragments: true,
-
-        // Flags whether to include the current fragment in the URL,
-        // so that reloading brings you to the same fragment position
-        fragmentInURL: false,
-
-        // Flags if the presentation is running in an embedded mode,
-        // i.e. contained within a limited portion of the screen
-        embedded: false,
-
-        // Flags if we should show a help overlay when the questionmark
-        // key is pressed
-        help: true,
-
-        // Flags if it should be possible to pause the presentation (blackout)
-        pause: true,
-
-        // Flags if speaker notes should be visible to all viewers
-        showNotes: false,
-
-        // Global override for autoplaying embedded media (null/true/false)
-        autoPlayMedia: null,
-
-        // Global override for preloading lazy-loaded iframes (null/true/false)
-        preloadIframes: null,
-
-        // Number of milliseconds between automatically proceeding to the
-        // next slide, disabled when set to 0, this value can be overwritten
-        // by using a data-autoslide attribute on your slides
-        autoSlide: 0,
-
-        // Stop auto-sliding after user input
-        autoSlideStoppable: true,
-
-        // Use this method for navigation when auto-sliding
-        autoSlideMethod: null,
-
-        // Specify the average time in seconds that you think you will spend
-        // presenting each slide. This is used to show a pacing timer in the
-        // speaker view
-        defaultTiming: null,
-
-        // Enable slide navigation via mouse wheel
-        mouseWheel: false,
-
-        // The display mode that will be used to show slides
-        display: 'block',
-
-        // Hide cursor if inactive
-        hideInactiveCursor: true,
-
-        // Time before the cursor is hidden (in ms)
-        hideCursorTime: 5000,
-
-        // Opens links in an iframe preview overlay
-        previewLinks: false,
-
-        // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'fade',
-
-        // Transition speed (default/fast/slow)
-        transitionSpeed: 'default',
-
-        // Transition style for full page slide backgrounds
-        // (none/fade/slide/convex/concave/zoom)
-        backgroundTransition: 'none',
-
-        // Number of slides away from the current that are visible
-        viewDistance: 3,
-
-        // Number of slides away from the current that are visible on mobile
-        // devices. It is advisable to set this to a lower number than
-        // viewDistance in order to save resources.
-        mobileViewDistance: 2,
-
-        // The "normal" size of the presentation, aspect ratio will be preserved
-        // when the presentation is scaled to fit different resolutions. Can be
-        // specified using percentage units.
-        width: 1280,
-
-        height: 720,
-
-        // Factor of the display size that should remain empty around the content
-        margin: 0.1,
-
-        math: {
-          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
-          config: 'TeX-AMS_HTML-full',
-          tex2jax: {
-            inlineMath: [['\\(','\\)']],
-            displayMath: [['\\[','\\]']],
-            balanceBraces: true,
-            processEscapes: false,
-            processRefs: true,
-            processEnvironments: true,
-            preview: 'TeX',
-            skipTags: ['script','noscript','style','textarea','pre','code'],
-            ignoreClass: 'tex2jax_ignore',
-            processClass: 'tex2jax_process'
-          },
-        },
-
-        // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
-
-          RevealMath,
-          RevealNotes,
-          RevealSearch,
-          RevealZoom
-        ]
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiada");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiada");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
       });
-    </script>
-    <script id="quarto-html-after-body" type="application/javascript">
-      window.document.addEventListener("DOMContentLoaded", function (event) {
-        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
-        tabsets.forEach(function(tabset) {
-          const tabby = new Tabby('#' + tabset.id);
-        });
-        const isCodeAnnotation = (el) => {
-          for (const clz of el.classList) {
-            if (clz.startsWith('code-annotation-')) {                     
-              return true;
-            }
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/rfsaldanha\.github\.io");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
           }
-          return false;
         }
-        const onCopySuccess = function(e) {
-          // button target
-          const button = e.trigger;
-          // don't keep focus
-          button.blur();
-          // flash "checked"
-          button.classList.add('code-copy-button-checked');
-          var currentTitle = button.getAttribute("title");
-          button.setAttribute("title", "Copiada");
-          let tooltip;
-          if (window.bootstrap) {
-            button.setAttribute("data-bs-toggle", "tooltip");
-            button.setAttribute("data-bs-placement", "left");
-            button.setAttribute("data-bs-title", "Copiada");
-            tooltip = new bootstrap.Tooltip(button, 
-              { trigger: "manual", 
-                customClass: "code-copy-button-tooltip",
-                offset: [0, -8]});
-            tooltip.show();    
-          }
-          setTimeout(function() {
-            if (tooltip) {
-              tooltip.hide();
-              button.removeAttribute("data-bs-title");
-              button.removeAttribute("data-bs-toggle");
-              button.removeAttribute("data-bs-placement");
-            }
-            button.setAttribute("title", currentTitle);
-            button.classList.remove('code-copy-button-checked');
-          }, 1000);
-          // clear code selection
-          e.clearSelection();
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
         }
-        const getTextToCopy = function(trigger) {
-          const outerScaffold = trigger.parentElement.cloneNode(true);
-          const codeEl = outerScaffold.querySelector('code');
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
           }
-          return codeEl.innerText;
         }
-        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-          text: getTextToCopy
-        });
-        clipboard.on('success', onCopySuccess);
-        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-            text: getTextToCopy,
-            container: window.document.getElementById('quarto-embedded-source-code-modal')
-          });
-          clipboardModal.on('success', onCopySuccess);
-        }
-          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-          var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp("https:\/\/rfsaldanha\.github\.io");
-          var isInternal = (href) => {
-              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-          }
-          // Inspect non-navigation links and adorn them if external
-         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-          for (var i=0; i<links.length; i++) {
-            const link = links[i];
-            if (!isInternal(link.href)) {
-              // undo the damage that might have been done by quarto-nav.js in the case of
-              // links that we want to consider external
-              if (link.dataset.originalHref !== undefined) {
-                link.href = link.dataset.originalHref;
-              }
-            }
-          }
-        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-          const config = {
-            allowHTML: true,
-            maxWidth: 500,
-            delay: 100,
-            arrow: false,
-            appendTo: function(el) {
-                return el.closest('section.slide') || el.parentElement;
-            },
-            interactive: true,
-            interactiveBorder: 10,
-            theme: 'light-border',
-            placement: 'bottom-start',
-          };
-          if (contentFn) {
-            config.content = contentFn;
-          }
-          if (onTriggerFn) {
-            config.onTrigger = onTriggerFn;
-          }
-          if (onUntriggerFn) {
-            config.onUntrigger = onUntriggerFn;
-          }
-            config['offset'] = [0,0];
-            config['maxWidth'] = 700;
-          window.tippy(el, config); 
-        }
-        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-        for (var i=0; i<noterefs.length; i++) {
-          const ref = noterefs[i];
-          tippyHover(ref, function() {
-            // use id or data attribute instead here
-            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-            try { href = new URL(href).hash; } catch {}
-            const id = href.replace(/^#\/?/, "");
-            const note = window.document.getElementById(id);
-            if (note) {
-              return note.innerHTML;
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
             } else {
-              return "";
+              container.appendChild(child.cloneNode(true));
+              break;
             }
-          });
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
         }
-        const findCites = (el) => {
-          const parentEl = el.parentElement;
-          if (parentEl) {
-            const cites = parentEl.dataset.cites;
-            if (cites) {
-              return {
-                el,
-                cites: cites.split(' ')
-              };
-            } else {
-              return findCites(el.parentElement)
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
             }
           } else {
-            return undefined;
-          }
-        };
-        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-        for (var i=0; i<bibliorefs.length; i++) {
-          const ref = bibliorefs[i];
-          const citeInfo = findCites(ref);
-          if (citeInfo) {
-            tippyHover(citeInfo.el, function() {
-              var popup = window.document.createElement('div');
-              citeInfo.cites.forEach(function(cite) {
-                var citeDiv = window.document.createElement('div');
-                citeDiv.classList.add('hanging-indent');
-                citeDiv.classList.add('csl-entry');
-                var biblioDiv = window.document.getElementById('ref-' + cite);
-                if (biblioDiv) {
-                  citeDiv.innerHTML = biblioDiv.innerHTML;
-                }
-                popup.appendChild(citeDiv);
-              });
-              return popup.innerHTML;
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
             });
           }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
         }
+      }, function(instance) {
       });
-      </script>
-    
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Copyright 2024, Raphael Saldanha</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/rfsaldanha">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://fosstodon.org/@rfsaldanha">
+      <i class="bi bi-mastodon" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
 
 </body></html>
