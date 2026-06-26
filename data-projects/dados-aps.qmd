@@ -24,19 +24,19 @@ As atualizações serão mensais. Novas competências serão incorporadas confor
 
 Os dados estão disponibilizados no Zenodo. Os depósitos estão organizados por ano ou período e contêm arquivos nos formatos CSV compactado e Parquet.
 
-| Período | Depósito Zenodo | Conteúdo principal |
-|------------------------|------------------------|------------------------|
-| 2014-2016 | [10.5281/zenodo.20597219](https://doi.org/10.5281/zenodo.20597219) | Produção, procedimentos e condições avaliadas do SISAB público |
-| 2017 | [10.5281/zenodo.20594700](https://doi.org/10.5281/zenodo.20594700) | SISAB público e atendimentos CID/CIAP via LAI |
-| 2018 | [10.5281/zenodo.20595666](https://doi.org/10.5281/zenodo.20595666) | SISAB público e atendimentos CID/CIAP via LAI |
-| 2019 | [10.5281/zenodo.20595800](https://doi.org/10.5281/zenodo.20595800) | SISAB público e atendimentos CID/CIAP via LAI |
-| 2020 | [10.5281/zenodo.20595848](https://doi.org/10.5281/zenodo.20595848) | SISAB público e atendimentos CID/CIAP via LAI |
-| 2021 | [10.5281/zenodo.20595931](https://doi.org/10.5281/zenodo.20595931) | SISAB público e atendimentos CID/CIAP via LAI |
-| 2022 | [10.5281/zenodo.20596062](https://doi.org/10.5281/zenodo.20596062) | SISAB público e atendimentos CID/CIAP via LAI |
-| 2023 | [10.5281/zenodo.20596123](https://doi.org/10.5281/zenodo.20596123) | SISAB público e atendimentos CID/CIAP via LAI |
-| 2024 | [10.5281/zenodo.20597035](https://doi.org/10.5281/zenodo.20597035) | SISAB público e atendimentos CID/CIAP via LAI |
-| 2025 | [10.5281/zenodo.20597086](https://doi.org/10.5281/zenodo.20597086) | SISAB público e atendimentos CID/CIAP via LAI |
-| 2026-01 a 2026-04 | [10.5281/zenodo.20597157](https://doi.org/10.5281/zenodo.20597157) | SISAB público e atendimentos CID/CIAP via LAI |
+| Período | Depósito Zenodo |
+|------------------------|------------------------|
+| 2014-2016 | [10.5281/zenodo.20597219](https://doi.org/10.5281/zenodo.20597219) |
+| 2017 | [10.5281/zenodo.20594700](https://doi.org/10.5281/zenodo.20594700) | 
+| 2018 | [10.5281/zenodo.20595666](https://doi.org/10.5281/zenodo.20595666) | 
+| 2019 | [10.5281/zenodo.20595800](https://doi.org/10.5281/zenodo.20595800) | 
+| 2020 | [10.5281/zenodo.20595848](https://doi.org/10.5281/zenodo.20595848) | 
+| 2021 | [10.5281/zenodo.20595931](https://doi.org/10.5281/zenodo.20595931) | 
+| 2022 | [10.5281/zenodo.20596062](https://doi.org/10.5281/zenodo.20596062) | 
+| 2023 | [10.5281/zenodo.20596123](https://doi.org/10.5281/zenodo.20596123) | 
+| 2024 | [10.5281/zenodo.20597035](https://zenodo.org/records/20850308) | 
+| 2025 | [10.5281/zenodo.20597086](https://zenodo.org/records/20597086) | 
+| 2026-01 a 2026-04 | [10.5281/zenodo.20597157](https://zenodo.org/records/20835065) | 
 
 ## Exemplo de análise em R
 
@@ -57,20 +57,20 @@ library(tidyr)
 library(zendown)
 
 depositos_producao <- tibble::tribble(
-  ~ano, ~deposit_id,
-  2014, 20597219,
-  2015, 20597219,
-  2016, 20597219,
-  2017, 20594700,
-  2018, 20595666,
-  2019, 20595800,
-  2020, 20595848,
-  2021, 20595931,
-  2022, 20596062,
-  2023, 20596123,
-  2024, 20597035,
-  2025, 20597086,
-  2026, 20597157
+  ~ano , ~deposit_id ,
+  2014 ,    20597219 ,
+  2015 ,    20597219 ,
+  2016 ,    20597219 ,
+  2017 ,    20594700 ,
+  2018 ,    20595666 ,
+  2019 ,    20595800 ,
+  2020 ,    20595848 ,
+  2021 ,    20595931 ,
+  2022 ,    20596062 ,
+  2023 ,    20596123 ,
+  2024 ,    20597035 ,
+  2025 ,    20597086 ,
+  2026 ,    20597157
 ) |>
   mutate(file_name = paste0("sisab_saude_producao_", ano, ".parquet"))
 
@@ -84,17 +84,17 @@ arquivos_producao <- depositos_producao |>
   )
 
 depositos_lai <- tibble::tribble(
-  ~ano, ~deposit_id,
-  2017, 20594700,
-  2018, 20595666,
-  2019, 20595800,
-  2020, 20595848,
-  2021, 20595931,
-  2022, 20596062,
-  2023, 20596123,
-  2024, 20597035,
-  2025, 20597086,
-  2026, 20597157
+  ~ano , ~deposit_id ,
+  2017 ,    20594700 ,
+  2018 ,    20595666 ,
+  2019 ,    20595800 ,
+  2020 ,    20595848 ,
+  2021 ,    20595931 ,
+  2022 ,    20596062 ,
+  2023 ,    20596123 ,
+  2024 ,    20597035 ,
+  2025 ,    20597086 ,
+  2026 ,    20597157
 ) |>
   mutate(file_name = paste0("sisab_saude_ciap_cid_", ano, ".parquet"))
 
@@ -153,7 +153,9 @@ serie_temporal <- arquivos_producao$path |>
 
 ggplot(serie_temporal, aes(x = data, y = total)) +
   geom_line(linewidth = 0.8, color = "#15616d") +
-  scale_y_continuous(labels = scales::label_number(big.mark = ".", decimal.mark = ",")) +
+  scale_y_continuous(
+    labels = scales::label_number(big.mark = ".", decimal.mark = ",")
+  ) +
   labs(
     title = "Produção mensal da Atenção Primária à Saúde no Brasil",
     x = "Competência",
@@ -199,7 +201,11 @@ resumo_h01_sp_2025 <- tibble::tibble(
     "Mês com menor quantidade"
   ),
   valor = c(
-    format(sum(atendimentos_h01_sp_2025$atendimentos), big.mark = ".", decimal.mark = ","),
+    format(
+      sum(atendimentos_h01_sp_2025$atendimentos),
+      big.mark = ".",
+      decimal.mark = ","
+    ),
     format(
       atendimentos_h01_sp_2025$atendimentos[
         which.max(atendimentos_h01_sp_2025$atendimentos)
@@ -240,7 +246,9 @@ ggplot(atendimentos_h01_sp_2025, aes(x = competencia_date, y = atendimentos)) +
   geom_line(color = "#2f4858", linewidth = 0.8) +
   geom_point(color = "#2f4858", size = 2) +
   scale_x_date(date_breaks = "1 month", date_labels = "%b/%Y") +
-  scale_y_continuous(labels = scales::label_number(big.mark = ".", decimal.mark = ",")) +
+  scale_y_continuous(
+    labels = scales::label_number(big.mark = ".", decimal.mark = ",")
+  ) +
   labs(
     title = "Atendimentos por dor de ouvidos (CIAP-2 H01) em São Paulo",
     subtitle = "Dados obtidos via LAI, 2025",
@@ -261,34 +269,34 @@ A classificação abaixo usa quatro grupos: municípios sem atendimentos individ
 #| message: false
 #| warning: false
 uf_lut <- tibble::tribble(
-  ~uf_code, ~uf,
-  11, "RO",
-  12, "AC",
-  13, "AM",
-  14, "RR",
-  15, "PA",
-  16, "AP",
-  17, "TO",
-  21, "MA",
-  22, "PI",
-  23, "CE",
-  24, "RN",
-  25, "PB",
-  26, "PE",
-  27, "AL",
-  28, "SE",
-  29, "BA",
-  31, "MG",
-  32, "ES",
-  33, "RJ",
-  35, "SP",
-  41, "PR",
-  42, "SC",
-  43, "RS",
-  50, "MS",
-  51, "MT",
-  52, "GO",
-  53, "DF"
+  ~uf_code , ~uf  ,
+        11 , "RO" ,
+        12 , "AC" ,
+        13 , "AM" ,
+        14 , "RR" ,
+        15 , "PA" ,
+        16 , "AP" ,
+        17 , "TO" ,
+        21 , "MA" ,
+        22 , "PI" ,
+        23 , "CE" ,
+        24 , "RN" ,
+        25 , "PB" ,
+        26 , "PE" ,
+        27 , "AL" ,
+        28 , "SE" ,
+        29 , "BA" ,
+        31 , "MG" ,
+        32 , "ES" ,
+        33 , "RJ" ,
+        35 , "SP" ,
+        41 , "PR" ,
+        42 , "SC" ,
+        43 , "RS" ,
+        50 , "MS" ,
+        51 , "MT" ,
+        52 , "GO" ,
+        53 , "DF"
 )
 
 populacao_municipal_2024 <- mun_pop_totals(source = "datasus2024") |>
@@ -363,7 +371,8 @@ resumo_adesao_uf <- adesao_esus_ab_2025 |>
     municipios = n(),
     mediana_atendimentos_100hab = median(atendimentos_100hab, na.rm = TRUE),
     percentual_alta = 100 * mean(classificacao_adesao == "Alta"),
-    percentual_sem_registro = 100 * mean(classificacao_adesao == "Sem registro"),
+    percentual_sem_registro = 100 *
+      mean(classificacao_adesao == "Sem registro"),
     .groups = "drop"
   ) |>
   arrange(desc(mediana_atendimentos_100hab)) |>
@@ -416,8 +425,16 @@ top_adesao_municipios <- adesao_esus_ab_2025 |>
   transmute(
     co_municipio_ibge,
     uf,
-    populacao_2024 = format(round(populacao_2024), big.mark = ".", decimal.mark = ","),
-    atendimentos_relatorio = format(atendimentos_relatorio, big.mark = ".", decimal.mark = ","),
+    populacao_2024 = format(
+      round(populacao_2024),
+      big.mark = ".",
+      decimal.mark = ","
+    ),
+    atendimentos_relatorio = format(
+      atendimentos_relatorio,
+      big.mark = ".",
+      decimal.mark = ","
+    ),
     atendimentos_100hab = round(atendimentos_100hab, 1),
     classificacao_adesao
   ) |>

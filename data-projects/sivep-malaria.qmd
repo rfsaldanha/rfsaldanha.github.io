@@ -24,10 +24,10 @@ Para apoiar auditoria e reutilização, os depósitos incluem metadados como cod
 
 Os arquivos processados estão disponíveis por ano nos formatos Parquet e CSV compactado. Os depósitos usam licença Creative Commons Attribution 4.0 International (CC BY 4.0).
 
-| Período | Depósito Zenodo | Conteúdo principal |
-|------------------------|------------------------|------------------------|
-| 2004-2024 | [10.5281/zenodo.20706957](https://doi.org/10.5281/zenodo.20706957) | Arquivos originais da LAI, arquivos anuais processados em Parquet e CSV, metadados e documentação |
-| 2025-2026 | [10.5281/zenodo.20706949](https://doi.org/10.5281/zenodo.20706949) | Dados preliminares, com atualização mensal prevista, em Parquet e CSV |
+| Período | Depósito Zenodo | 
+|------------------------|------------------------| 
+| 2004-2024 | [10.5281/zenodo.20706957](https://doi.org/10.5281/zenodo.20706957) | 
+| 2025-2026 | [10.5281/zenodo.20706949](https://doi.org/10.5281/zenodo.20706949) | 
 
 ## Exemplo de uso em R
 
@@ -61,7 +61,9 @@ malaria_mes <- open_dataset(arquivo_malaria_2025) |>
 
 ggplot(malaria_mes, aes(x = data, y = notificacoes)) +
   geom_col(fill = "#15616d", width = 25) +
-  scale_y_continuous(labels = scales::label_number(big.mark = ".", decimal.mark = ",")) +
+  scale_y_continuous(
+    labels = scales::label_number(big.mark = ".", decimal.mark = ",")
+  ) +
   scale_x_date(date_breaks = "1 month", date_labels = "%b") +
   labs(
     title = "Notificações de malária por mês de notificação",

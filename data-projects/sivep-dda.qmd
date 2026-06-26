@@ -28,10 +28,10 @@ Os produtos finais são organizados por ano nos formatos Parquet e CSV compactad
 
 Os arquivos processados estão disponíveis por ano nos formatos Parquet e CSV compactado. Os depósitos usam licença Creative Commons Attribution 4.0 International (CC BY 4.0).
 
-| Período | Depósito Zenodo | Conteúdo principal |
-|------------------------|------------------------|------------------------|
-| 2008-2024 | [10.5281/zenodo.20752238](https://doi.org/10.5281/zenodo.20752238) | Arquivos originais da LAI, arquivos anuais processados em Parquet e CSV, metadados e documentação |
-| 2025-2026 | [10.5281/zenodo.20752301](https://doi.org/10.5281/zenodo.20752301) | Dados preliminares, com atualização mensal prevista, em Parquet e CSV |
+| Período | Depósito Zenodo | 
+|------------------------|------------------------|
+| 2008-2024 | [10.5281/zenodo.20752238](https://doi.org/10.5281/zenodo.20752238) | 
+| 2025-2026 | [10.5281/zenodo.20752301](https://doi.org/10.5281/zenodo.20752301) | 
 
 ## Exemplo de uso em R
 
@@ -67,7 +67,9 @@ dda_semana <- read_parquet(arquivo_dda_2025) |>
 ggplot(dda_semana, aes(x = sem_epid_week, y = casos)) +
   geom_line(color = "#15616d", linewidth = 0.8) +
   geom_point(color = "#15616d", size = 1.4) +
-  scale_y_continuous(labels = scales::label_number(big.mark = ".", decimal.mark = ",")) +
+  scale_y_continuous(
+    labels = scales::label_number(big.mark = ".", decimal.mark = ",")
+  ) +
   labs(
     title = "Casos de DDA por semana epidemiológica",
     subtitle = "Brasil, 2025",

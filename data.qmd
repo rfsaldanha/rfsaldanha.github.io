@@ -2,6 +2,9 @@
 title: "Bases de dados"
 listing:
   contents:
+    - data-projects/dados-aps.qmd
+    - data-projects/sivep-malaria.qmd
+    - data-projects/sivep-dda.qmd    
     - data-projects/brazil_inmet_alerts.qmd
     - data-projects/brazil_ndvi.qmd
     - data-projects/brazil_air_pollutants.qmd
@@ -10,9 +13,6 @@ listing:
     - data-projects/era5land-daily-latin-america.qmd
     - data-projects/era5land-daily-africa.qmd
     - data-projects/s3-datasus-ftp-mirror.qmd
-    - data-projects/dados-aps.qmd
-    - data-projects/sivep-malaria.qmd
-    - data-projects/sivep-dda.qmd
     - data-projects/brazil_road_distances.qmd
     - data-projects/usa_road_distances.qmd
     - data-projects/health-indicators.qmd
