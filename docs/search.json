@@ -1614,7 +1614,7 @@
     "href": "data-projects/s3-datasus-ftp-mirror.html#como-acessar-um-arquivo",
     "title": "Espelho S3 do FTP DataSUS",
     "section": "Como acessar um arquivo?",
-    "text": "Como acessar um arquivo?\nVerifique o nome do arquivo desejado na lista de caminhos completos e acrescente esse caminho ao endpoint de acesso.\nExemplo: arquivo do SIM para Bahia, 2022\nhttps://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/SIM/CID10/DORES/DOBA2022.dbc"
+    "text": "Como acessar um arquivo?\nUse a árvore interativa acima para localizar o arquivo desejado e clique no link para baixar diretamente pelo CDN. Se preferir montar a URL manualmente, verifique o nome do arquivo na lista de caminhos completos e acrescente esse caminho ao endpoint de acesso.\nExemplo: arquivo do SIM para Bahia, 2022\nhttps://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/SIM/CID10/DORES/DOBA2022.dbc"
   },
   {
     "objectID": "data-projects/s3-datasus-ftp-mirror.html#logs-de-atualização",
@@ -3503,8 +3503,8 @@
     "objectID": "talks/sisab_dados_aps.html#objetivo-do-seminário",
     "href": "talks/sisab_dados_aps.html#objetivo-do-seminário",
     "title": "Dados do SISAB",
-    "section": "Objetivo do seminário",
-    "text": "Objetivo do seminário\n\nMostrar como os registros agregados do SISAB foram transformados em uma base aberta e útil para pesquisa, gestão e monitoramento da Atenção Primária à Saúde.\n\nEm 20 minutos:\n\nO que o SISAB registra;\nPor que o acesso ainda é difícil;\nComo os dados foram coletados e organizados;\nComo acessar, analisar e interpretar os resultados.\n\n\nAbrir dizendo que a apresentação é sobre infraestrutura de dados, não apenas sobre uma base específica. A ideia central é reduzir o trabalho manual e permitir análises reprodutíveis da APS municipal."
+    "section": "",
+    "text": "Mostrar como os registros agregados do SISAB foram transformados em uma base aberta e útil para pesquisa, gestão e monitoramento da Atenção Primária à Saúde.\n\nEm 20 minutos:\n\nO que o SISAB registra;\nPor que o acesso ainda é difícil;\nComo os dados foram coletados e organizados;\nComo acessar, analisar e interpretar os resultados.\n\n\nAbrir dizendo que a apresentação é sobre infraestrutura de dados, não apenas sobre uma base específica. A ideia central é reduzir o trabalho manual e permitir análises reprodutíveis da APS municipal."
   },
   {
     "objectID": "talks/sisab_dados_aps.html#por-que-falar-de-sisab",
@@ -3518,7 +3518,7 @@
     "href": "talks/sisab_dados_aps.html#o-problema-de-acesso",
     "title": "Dados do SISAB",
     "section": "O problema de acesso",
-    "text": "O problema de acesso\n\n\nTransparência ativa\n\nrelatórios públicos no site do SISAB;\nconsultas por competência, município e categoria;\núteis para olhar casos pontuais;\npouco práticos para baixar séries longas.\n\n\n\nTransparência passiva\n\npedidos via LAI;\nnecessária para contagens por CID-10 e CIAP-2;\nrespostas podem ter formatos diferentes;\nexige tratamento de proveniência.\n\n\n\n\n\n\nO desafio é transformar relatórios e respostas administrativas em arquivos tabulares consistentes, versionáveis e reutilizáveis.\n\n\n\n\nExplicar a diferença: transparência ativa é o que já está publicado; transparência passiva é o que precisa ser pedido. O objetivo é aproximar as duas em uma base integrada."
+    "text": "O problema de acesso\n\n\nTransparência ativa\n\nrelatórios públicos no site do SISAB;\nconsultas por competência, município e categoria;\núteis para olhar casos pontuais;\npouco práticos para baixar séries longas.\n\n\n\nTransparência passiva\n\npedidos via LAI;\nnecessária para contagens por CID-10 e CIAP-2;\nrespostas podem ter formatos diferentes;\nexige tratamento de proveniência.\n\n\n\n\n\n\n\n\n\nO desafio é transformar relatórios e respostas administrativas em arquivos tabulares consistentes, versionáveis e reutilizáveis.\n\n\n\n\nExplicar a diferença: transparência ativa é o que já está publicado; transparência passiva é o que precisa ser pedido. O objetivo é aproximar as duas em uma base integrada."
   },
   {
     "objectID": "talks/sisab_dados_aps.html#o-que-foi-construído",
@@ -3532,7 +3532,7 @@
     "href": "talks/sisab_dados_aps.html#duas-fontes-duas-estratégias",
     "title": "Dados do SISAB",
     "section": "Duas fontes, duas estratégias",
-    "text": "Duas fontes, duas estratégias\n\n\n\n\n\n\n\n\nFonte\nO que entra\nEstratégia\n\n\n\n\nRelatórios públicos do SISAB\nprodução, procedimentos, problemas e condições avaliadas\nraspagem automatizada das consultas municipais mensais\n\n\nLei de Acesso à Informação\natendimentos por CID-10 e CIAP-2\npadronização de respostas, resolução de sobreposições e preservação de proveniência\n\n\n\n\n\n\nAs duas fontes não competem: elas se complementam. Uma mostra a produção pública agregada; a outra abre uma camada diagnóstica ainda ausente da transparência ativa.\n\n\n\n\nApontar que CID e CIAP são especialmente importantes para perguntas epidemiológicas e de organização do cuidado, mas precisam ser interpretados como registro assistencial, não como incidência direta."
+    "text": "Duas fontes, duas estratégias\n\n\n\n\n\n\n\n\nFonte\nO que entra\nEstratégia\n\n\n\n\nRelatórios públicos do SISAB\nprodução, procedimentos, problemas e condições avaliadas\nraspagem automatizada das consultas municipais mensais\n\n\nLei de Acesso à Informação\natendimentos por CID-10 e CIAP-2\npadronização de respostas, resolução de sobreposições e preservação de proveniência\n\n\n\n\n\n\n\n\n\nAs duas fontes não competem: elas se complementam. Uma mostra a produção pública agregada; a outra abre uma camada diagnóstica ainda ausente da transparência ativa.\n\n\n\n\nApontar que CID e CIAP são especialmente importantes para perguntas epidemiológicas e de organização do cuidado, mas precisam ser interpretados como registro assistencial, não como incidência direta."
   },
   {
     "objectID": "talks/sisab_dados_aps.html#repositórios-do-fluxo",
@@ -3560,21 +3560,21 @@
     "href": "talks/sisab_dados_aps.html#exemplo-1-produção-mensal",
     "title": "Dados do SISAB",
     "section": "Exemplo 1: produção mensal",
-    "text": "Exemplo 1: produção mensal\n\n\n\n\nUma série mensal permite detectar sazonalidade, rupturas e mudanças no padrão de registro da APS.\n\n\n\n\nUsar este slide para falar de séries nacionais mensais: sazonalidade, rupturas, mudanças de registro e possibilidades de comparação antes/depois. Reforçar que o gráfico é uma porta de entrada, não uma conclusão causal."
+    "text": "Exemplo 1: produção mensal\n\n\n\n\n\n\n\nUma série mensal permite detectar sazonalidade, rupturas e mudanças no padrão de registro da APS.\n\n\n\n\nUsar este slide para falar de séries nacionais mensais: sazonalidade, rupturas, mudanças de registro e possibilidades de comparação antes/depois. Reforçar que o gráfico é uma porta de entrada, não uma conclusão causal."
   },
   {
     "objectID": "talks/sisab_dados_aps.html#exemplo-2-cid-e-ciap-por-lai",
     "href": "talks/sisab_dados_aps.html#exemplo-2-cid-e-ciap-por-lai",
     "title": "Dados do SISAB",
     "section": "Exemplo 2: CID e CIAP por LAI",
-    "text": "Exemplo 2: CID e CIAP por LAI\n\n\n\n\nOs dados por CID-10 e CIAP-2 aproximam a análise da clínica e do motivo de consulta, desde que lidos como registros administrativos.\n\n\n\n\nExplicar o exemplo: CIAP-2 H01, dor de ouvidos, município de São Paulo em 2025. O objetivo é mostrar a granularidade possível, não discutir especificamente otalgia."
+    "text": "Exemplo 2: CID e CIAP por LAI\n\n\n\n\n\n\n\nOs dados por CID-10 e CIAP-2 aproximam a análise da clínica e do motivo de consulta, desde que lidos como registros administrativos.\n\n\n\n\nExplicar o exemplo: CIAP-2 H01, dor de ouvidos, município de São Paulo em 2025. O objetivo é mostrar a granularidade possível, não discutir especificamente otalgia."
   },
   {
     "objectID": "talks/sisab_dados_aps.html#exemplo-3-intensidade-de-registro",
     "href": "talks/sisab_dados_aps.html#exemplo-3-intensidade-de-registro",
     "title": "Dados do SISAB",
     "section": "Exemplo 3: intensidade de registro",
-    "text": "Exemplo 3: intensidade de registro\n\n\n\n\nA taxa por 100 habitantes ajuda a comparar intensidade de registro, mas não deve ser lida automaticamente como acesso, cobertura ou qualidade.\n\n\n\n\nApresentar a taxa de atendimentos individuais por 100 habitantes como indicador indireto de intensidade de registro no e-SUS AB. Dizer explicitamente que não mede cobertura assistencial nem adesão formal."
+    "text": "Exemplo 3: intensidade de registro\n\n\n\n\n\n\n\nA taxa por 100 habitantes ajuda a comparar intensidade de registro, mas não deve ser lida automaticamente como acesso, cobertura ou qualidade.\n\n\n\n\nApresentar a taxa de atendimentos individuais por 100 habitantes como indicador indireto de intensidade de registro no e-SUS AB. Dizer explicitamente que não mede cobertura assistencial nem adesão formal."
   },
   {
     "objectID": "talks/sisab_dados_aps.html#que-decisões-podem-ser-apoiadas",
@@ -3616,7 +3616,7 @@
     "href": "talks/sisab_dados_aps.html#para-onde-avançar",
     "title": "Dados do SISAB",
     "section": "Para onde avançar",
-    "text": "Para onde avançar\n\n\nAtualização mensal\nincorporar novas competências públicas e novos pedidos LAI.\n\n\nTransparência ativa\ndefender publicação direta de CID-10 e CIAP-2 no SISAB/SIAPS.\n\n\nFerramentas de uso\npainéis, auditorias, pacotes e análises reprodutíveis.\n\n\n\n\n\nA meta não é substituir o SISAB, mas criar uma ponte entre o sistema oficial, a transparência pública e o uso analítico dos dados.\n\n\n\n\nReforçar que o melhor cenário é a própria política de dados publicar essas camadas de forma ativa. Enquanto isso não ocorre, a base reduz barreiras de acesso."
+    "text": "Para onde avançar\n\n\nAtualização mensal\nincorporar novas competências públicas e novos pedidos LAI.\n\n\nTransparência ativa\ndefender publicação direta de CID-10 e CIAP-2 no SISAB/SIAPS.\n\n\nFerramentas de uso\npainéis, auditorias, pacotes e análises reprodutíveis.\n\n\n\n\n\n\n\n\nA meta não é substituir o SISAB, mas criar uma ponte entre o sistema oficial, a transparência pública e o uso analítico dos dados.\n\n\n\n\nReforçar que o melhor cenário é a própria política de dados publicar essas camadas de forma ativa. Enquanto isso não ocorre, a base reduz barreiras de acesso."
   },
   {
     "objectID": "talks/sisab_dados_aps.html#encerramento",
@@ -3624,5 +3624,19 @@
     "title": "Dados do SISAB",
     "section": "Encerramento",
     "text": "Encerramento\n\nDados abertos da APS tornam o SISAB mais analisável, auditável e útil para decisões no SUS.\n\nLinks:\n\ndados e exemplos: rfsaldanha.github.io/data-projects/dados-aps.html\ncoleta pública: github.com/rfsaldanha/sisab_scrapper\nprocessamento LAI: github.com/rfsaldanha/sisab_lai\n\n\nMensagem final: não é só disponibilizar arquivos; é criar uma infraestrutura reprodutível para que mais pessoas possam perguntar coisas melhores sobre a APS."
+  },
+  {
+    "objectID": "data-projects/s3-datasus-ftp-mirror.html#explorar-arquivos-do-espelho",
+    "href": "data-projects/s3-datasus-ftp-mirror.html#explorar-arquivos-do-espelho",
+    "title": "Espelho S3 do FTP DataSUS",
+    "section": "Explorar arquivos do espelho",
+    "text": "Explorar arquivos do espelho\nUse a árvore abaixo para navegar pelos diretórios do espelho ou buscar um arquivo pelo nome/caminho. Os links apontam diretamente para os arquivos no CDN.\n\n  \n    Buscar arquivo\n    \n  \n  Carregando lista de arquivos...\n  \n  \n  \n    Esta interface precisa de JavaScript. Você ainda pode acessar a lista de caminhos completos."
+  },
+  {
+    "objectID": "talks/sisab_dados_aps.html",
+    "href": "talks/sisab_dados_aps.html",
+    "title": "Dados do SISAB",
+    "section": "",
+    "text": "Mostrar como os registros agregados do SISAB foram transformados em uma base aberta e útil para pesquisa, gestão e monitoramento da Atenção Primária à Saúde.\n\nEm 20 minutos:\n\nO que o SISAB registra;\nPor que o acesso ainda é difícil;\nComo os dados foram coletados e organizados;\nComo acessar, analisar e interpretar os resultados.\n\n\nAbrir dizendo que a apresentação é sobre infraestrutura de dados, não apenas sobre uma base específica. A ideia central é reduzir o trabalho manual e permitir análises reprodutíveis da APS municipal."
   }
 ]

@@ -2,16 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Espelho S3 do FTP DataSUS – Raphael Saldanha</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -36,14 +33,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="../logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-0c1497c822180f859fc410b87e91da95.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-9c801c0f987b87cb825544174f2aa3e8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -180,6 +178,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': true});
   <ul>
   <li><a href="#sistemas-de-informação-em-saúde-e-arquivos-disponíveis" id="toc-sistemas-de-informação-em-saúde-e-arquivos-disponíveis" class="nav-link active" data-scroll-target="#sistemas-de-informação-em-saúde-e-arquivos-disponíveis">Sistemas de informação em saúde e arquivos disponíveis</a></li>
   <li><a href="#acesso-aos-arquivos" id="toc-acesso-aos-arquivos" class="nav-link" data-scroll-target="#acesso-aos-arquivos">Acesso aos arquivos</a></li>
+  <li><a href="#explorar-arquivos-do-espelho" id="toc-explorar-arquivos-do-espelho" class="nav-link" data-scroll-target="#explorar-arquivos-do-espelho">Explorar arquivos do espelho</a></li>
   <li><a href="#atualização-do-espelho-e-árvore-de-arquivos" id="toc-atualização-do-espelho-e-árvore-de-arquivos" class="nav-link" data-scroll-target="#atualização-do-espelho-e-árvore-de-arquivos">Atualização do espelho e árvore de arquivos</a></li>
   <li><a href="#como-acessar-um-arquivo" id="toc-como-acessar-um-arquivo" class="nav-link" data-scroll-target="#como-acessar-um-arquivo">Como acessar um arquivo?</a></li>
   <li><a href="#logs-de-atualização" id="toc-logs-de-atualização" class="nav-link" data-scroll-target="#logs-de-atualização">Logs de atualização</a>
@@ -237,6 +236,371 @@ Nota
 </div>
 </div>
 </section>
+<section id="explorar-arquivos-do-espelho" class="level2">
+<h2 class="anchored" data-anchor-id="explorar-arquivos-do-espelho">Explorar arquivos do espelho</h2>
+<p>Use a árvore abaixo para navegar pelos diretórios do espelho ou buscar um arquivo pelo nome/caminho. Os links apontam diretamente para os arquivos no CDN.</p>
+<div id="datasus-browser" class="datasus-browser" data-index-url="https://datasus-ftp-mirror.nyc3.digitaloceanspaces.com/rclone_datasus_full_path.txt" data-cdn-base="https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com">
+  <div class="datasus-browser__toolbar">
+    <label class="datasus-browser__search-label" for="datasus-browser-search">Buscar arquivo</label>
+    <input id="datasus-browser-search" class="datasus-browser__search" type="search" placeholder="Ex.: DOBA2022.dbc, SIM/CID10 ou SINASC/NOV" autocomplete="off" disabled="">
+  </div>
+  <p id="datasus-browser-status" class="datasus-browser__status" role="status">Carregando lista de arquivos...</p>
+  <div id="datasus-browser-results" class="datasus-browser__results" hidden=""></div>
+  <div id="datasus-browser-tree" class="datasus-browser__tree" aria-label="Árvore de arquivos do espelho DataSUS"></div>
+  <noscript>
+    <p>Esta interface precisa de JavaScript. Você ainda pode acessar a <a href="https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_full_path.txt">lista de caminhos completos</a>.</p>
+  </noscript>
+</div>
+
+<style>
+.datasus-browser {
+  --datasus-border: #d8cfd0;
+  --datasus-muted: #64605f;
+  --datasus-bg: #ffffff;
+  --datasus-soft-bg: #f2f1ef;
+  --datasus-link: #697184;
+  border: 1px solid var(--datasus-border);
+  border-radius: 8px;
+  background: var(--datasus-bg);
+  padding: 1rem;
+  margin: 1.5rem 0;
+}
+
+.datasus-browser__toolbar {
+  display: grid;
+  gap: 0.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.datasus-browser__search-label {
+  font-weight: 800;
+}
+
+.datasus-browser__search {
+  width: 100%;
+  min-height: 2.5rem;
+  border: 1px solid var(--datasus-border);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  font: inherit;
+}
+
+.datasus-browser__search:disabled {
+  background: var(--datasus-soft-bg);
+  cursor: wait;
+}
+
+.datasus-browser__status {
+  color: var(--datasus-muted);
+  margin: 0.5rem 0 0.75rem;
+}
+
+.datasus-browser__tree,
+.datasus-browser__results {
+  max-height: 34rem;
+  overflow: auto;
+  border: 1px solid var(--datasus-border);
+  border-radius: 6px;
+  background: #fffff8;
+  padding: 0.5rem;
+}
+
+.datasus-browser__results[hidden],
+.datasus-browser__tree[hidden] {
+  display: none;
+}
+
+.datasus-browser__list,
+.datasus-browser__result-list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.datasus-browser__list .datasus-browser__list {
+  padding-left: 1.25rem;
+}
+
+.datasus-browser__item {
+  margin: 0.1rem 0;
+}
+
+.datasus-browser__folder,
+.datasus-browser__file,
+.datasus-browser__result-link {
+  align-items: baseline;
+  border-radius: 6px;
+  color: var(--datasus-link);
+  display: inline-flex;
+  gap: 0.35rem;
+  min-height: 1.75rem;
+  padding: 0.15rem 0.35rem;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.datasus-browser__folder {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+}
+
+.datasus-browser__folder:hover,
+.datasus-browser__folder:focus,
+.datasus-browser__file:hover,
+.datasus-browser__file:focus,
+.datasus-browser__result-link:hover,
+.datasus-browser__result-link:focus {
+  background: var(--datasus-soft-bg);
+  outline: none;
+}
+
+.datasus-browser__children {
+  margin: 0.1rem 0 0.2rem;
+}
+
+.datasus-browser__summary {
+  color: var(--datasus-muted);
+  margin: 0 0 0.5rem;
+}
+
+.datasus-browser__error {
+  border-left: 4px solid #ad7237;
+  padding-left: 0.75rem;
+}
+
+@media (max-width: 640px) {
+  .datasus-browser {
+    padding: 0.75rem;
+  }
+
+  .datasus-browser__tree,
+  .datasus-browser__results {
+    max-height: 28rem;
+  }
+}
+</style>
+
+<script>
+(function () {
+  const browser = document.getElementById("datasus-browser");
+  if (!browser) return;
+
+  const indexUrl = browser.dataset.indexUrl;
+  const cdnBase = browser.dataset.cdnBase;
+  const searchInput = document.getElementById("datasus-browser-search");
+  const status = document.getElementById("datasus-browser-status");
+  const treeContainer = document.getElementById("datasus-browser-tree");
+  const resultsContainer = document.getElementById("datasus-browser-results");
+  const maxResults = 250;
+
+  const root = createNode("", "");
+  let filePaths = [];
+  let searchTimer = null;
+
+  function createNode(name, path) {
+    return {
+      name: name,
+      path: path,
+      children: new Map(),
+      terminal: false
+    };
+  }
+
+  function normalizePath(line) {
+    const path = line.trim();
+    if (!path || path === "/" || !path.startsWith("/")) return null;
+    return path.replace(/\/+/g, "/");
+  }
+
+  function addPath(path) {
+    const parts = path.split("/").filter(Boolean);
+    let node = root;
+
+    parts.forEach(function (part, index) {
+      const childPath = "/" + parts.slice(0, index + 1).join("/");
+      if (!node.children.has(part)) {
+        node.children.set(part, createNode(part, childPath));
+      }
+      node = node.children.get(part);
+    });
+
+    node.terminal = true;
+  }
+
+  function sortNodes(nodes) {
+    return Array.from(nodes).sort(function (a, b) {
+      const aIsDir = a.children.size > 0;
+      const bIsDir = b.children.size > 0;
+      if (aIsDir !== bIsDir) return aIsDir ? -1 : 1;
+      return a.name.localeCompare(b.name, "pt-BR", { sensitivity: "base" });
+    });
+  }
+
+  function collectFiles(node) {
+    if (node.terminal && node.children.size === 0) {
+      filePaths.push(node.path);
+    }
+
+    node.children.forEach(collectFiles);
+  }
+
+  function fileUrl(path) {
+    return cdnBase + encodeURI(path).replace(/#/g, "%23");
+  }
+
+  function setStatus(message) {
+    status.textContent = message;
+  }
+
+  function renderTree() {
+    treeContainer.innerHTML = "";
+    treeContainer.appendChild(renderNodeList(root));
+  }
+
+  function renderNodeList(node) {
+    const list = document.createElement("ul");
+    list.className = "datasus-browser__list";
+
+    sortNodes(node.children.values()).forEach(function (child) {
+      const item = document.createElement("li");
+      item.className = "datasus-browser__item";
+
+      if (child.children.size > 0) {
+        item.appendChild(renderFolder(child));
+      } else {
+        item.appendChild(renderFile(child));
+      }
+
+      list.appendChild(item);
+    });
+
+    return list;
+  }
+
+  function renderFolder(node) {
+    const wrapper = document.createElement("div");
+    const button = document.createElement("button");
+    const children = document.createElement("div");
+
+    button.type = "button";
+    button.className = "datasus-browser__folder";
+    button.setAttribute("aria-expanded", "false");
+    button.textContent = "+ " + node.name;
+
+    children.className = "datasus-browser__children";
+    children.hidden = true;
+
+    button.addEventListener("click", function () {
+      const expanded = button.getAttribute("aria-expanded") === "true";
+      button.setAttribute("aria-expanded", String(!expanded));
+      button.textContent = (expanded ? "+ " : "- ") + node.name;
+      children.hidden = expanded;
+
+      if (!expanded && children.childNodes.length === 0) {
+        children.appendChild(renderNodeList(node));
+      }
+    });
+
+    wrapper.appendChild(button);
+    wrapper.appendChild(children);
+    return wrapper;
+  }
+
+  function renderFile(node) {
+    const link = document.createElement("a");
+    link.className = "datasus-browser__file";
+    link.href = fileUrl(node.path);
+    link.textContent = node.name;
+    return link;
+  }
+
+  function renderSearchResults(query) {
+    const normalizedQuery = query.trim().toLocaleLowerCase("pt-BR");
+    resultsContainer.innerHTML = "";
+
+    if (!normalizedQuery) {
+      resultsContainer.hidden = true;
+      treeContainer.hidden = false;
+      setStatus(filePaths.length.toLocaleString("pt-BR") + " arquivos carregados. Navegue pela árvore ou use a busca.");
+      return;
+    }
+
+    const matches = filePaths.filter(function (path) {
+      return path.toLocaleLowerCase("pt-BR").includes(normalizedQuery);
+    });
+
+    treeContainer.hidden = true;
+    resultsContainer.hidden = false;
+
+    if (matches.length === 0) {
+      setStatus("Nenhum arquivo encontrado para \"" + query + "\".");
+      resultsContainer.innerHTML = "<p class=\"datasus-browser__summary\">Tente buscar por parte do sistema, diretório, UF, ano ou extensão.</p>";
+      return;
+    }
+
+    const visibleMatches = matches.slice(0, maxResults);
+    const summary = document.createElement("p");
+    const list = document.createElement("ul");
+
+    summary.className = "datasus-browser__summary";
+    summary.textContent = matches.length.toLocaleString("pt-BR") + " resultado(s).";
+    if (matches.length > maxResults) {
+      summary.textContent += " Mostrando os primeiros " + maxResults.toLocaleString("pt-BR") + "; refine a busca para ver menos resultados.";
+    }
+
+    list.className = "datasus-browser__result-list";
+
+    visibleMatches.forEach(function (path) {
+      const item = document.createElement("li");
+      const link = document.createElement("a");
+
+      link.className = "datasus-browser__result-link";
+      link.href = fileUrl(path);
+      link.textContent = path;
+
+      item.appendChild(link);
+      list.appendChild(item);
+    });
+
+    setStatus("Busca ativa para \"" + query + "\".");
+    resultsContainer.appendChild(summary);
+    resultsContainer.appendChild(list);
+  }
+
+  searchInput.addEventListener("input", function () {
+    window.clearTimeout(searchTimer);
+    searchTimer = window.setTimeout(function () {
+      renderSearchResults(searchInput.value);
+    }, 150);
+  });
+
+  fetch(indexUrl)
+    .then(function (response) {
+      if (!response.ok) {
+        throw new Error("HTTP " + response.status);
+      }
+      return response.text();
+    })
+    .then(function (text) {
+      text.split(/\r?\n/).map(normalizePath).filter(Boolean).forEach(addPath);
+      collectFiles(root);
+      renderTree();
+      searchInput.disabled = false;
+      setStatus(filePaths.length.toLocaleString("pt-BR") + " arquivos carregados. Navegue pela árvore ou use a busca.");
+    })
+    .catch(function () {
+      treeContainer.innerHTML = "";
+      resultsContainer.hidden = true;
+      searchInput.disabled = true;
+      status.classList.add("datasus-browser__error");
+      status.innerHTML = "Não foi possível carregar a lista interativa agora. O navegador precisa ter permissão CORS para ler o TXT remoto. Acesse a <a href=\"" + indexUrl + "\">lista de caminhos completos</a> diretamente.";
+    });
+})();
+</script>
+</section>
 <section id="atualização-do-espelho-e-árvore-de-arquivos" class="level2">
 <h2 class="anchored" data-anchor-id="atualização-do-espelho-e-árvore-de-arquivos">Atualização do espelho e árvore de arquivos</h2>
 <p>O espelho é sincronizado diariamente às 3h, horário de Brasília. Em cada atualização, algumas listas de arquivos são produzidas:</p>
@@ -261,7 +625,7 @@ Dica
 </section>
 <section id="como-acessar-um-arquivo" class="level2">
 <h2 class="anchored" data-anchor-id="como-acessar-um-arquivo">Como acessar um arquivo?</h2>
-<p>Verifique o nome do arquivo desejado na <a href="https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_full_path.txt">lista de caminhos completos</a> e acrescente esse caminho ao endpoint de acesso.</p>
+<p>Use a árvore interativa acima para localizar o arquivo desejado e clique no link para baixar diretamente pelo CDN. Se preferir montar a URL manualmente, verifique o nome do arquivo na <a href="https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/rclone_datasus_full_path.txt">lista de caminhos completos</a> e acrescente esse caminho ao endpoint de acesso.</p>
 <p>Exemplo: <a href="https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/SIM/CID10/DORES/DOBA2022.dbc">arquivo do SIM para Bahia, 2022</a></p>
 <pre><code>https://datasus-ftp-mirror.nyc3.cdn.digitaloceanspaces.com/SIM/CID10/DORES/DOBA2022.dbc</code></pre>
 </section>
